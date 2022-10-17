@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-DfE Shiny template app
+Key Stage 5 Attainment and Single Year Entry Dashboard
   <br>
 </h1>
 
