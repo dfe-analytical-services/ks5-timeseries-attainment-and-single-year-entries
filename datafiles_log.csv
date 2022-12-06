@@ -3,3 +3,6 @@ data/la_maintained_schools_revenue_reserve_final.csv,published
 data/date_format.csv,published
 data/date_format.meta.csv,published
 data/some_unpublished_data.csv,unpublished
+data/alevel_attainmentV1.csv,published
+data/all_attainmentV1.csv,published
+data/all_level_timeseries_data_1996_to_2022V1.csv,published
