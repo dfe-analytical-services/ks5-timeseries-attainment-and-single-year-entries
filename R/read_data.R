@@ -11,15 +11,40 @@
 # to either add the file to .gitignore or add an entry for the file into 
 # datafiles_log.csv.
 
-read_revenue_data <- function(file='data/la_maintained_schools_revenue_reserve_final.csv'){
-  # This reads in an example file. For the purposes of this demo, we're using the 
-  # latest LA expenditure data downloaded from the EES release.
-  dfRevenue <- read.csv(file)
-  # The time period column name has some non-ascii characters so we're just going to rename it here.
-  colnames(dfRevenue)[1] <- "time_period"
-  dfRevenue <- dfRevenue %>% mutate(year = as.numeric(paste0("20",substr(format(time_period),5,6))),
-                                    area_name=case_when(geographic_level=='National' ~ country_name,
-                                           geographic_level=='Regional' ~ region_name,
-                                           TRUE ~ la_name))
-  return(dfRevenue)
+
+
+
+
+
+# This data is for a level subject single entry - academic year
+# Select the columns to be used 
+# Filter out total subjects 
+
+read_alevel_subject_data<-function(file="data/all_level_timeseries_data_1996_to_2022V1.csv") {
+  dfSubject <-read.csv(file)
+  dfSubject <-dfSubject 
+   
+  return (dfSubject)
+  
 }
+
+# This data is for Aggregate A level APS and grade by institution type 
+read_alevel_aps_data<-function(file="data/alevel_attainmentV1.csv") {
+  dfAlevelAps <-read.csv(file)
+  dfAlevelAps <-dfAlevelAps 
+    
+    return (dfAlevelAps)
+  
+}
+
+# This is the full attainment dataset  comprising of Alevel, applied general and tech level
+
+read_all_attainment_data<-function(file="data/all_attainmentV1.csv") {
+  dfAttainment <-read.csv(file)
+  dfAttainment <-dfAttainment  
+    
+    return (dfAttainment)
+  
+}
+
+ 

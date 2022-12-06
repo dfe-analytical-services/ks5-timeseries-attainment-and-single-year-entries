@@ -58,28 +58,11 @@
 
 ui <- function(input, output, session) {
   fluidPage(
-    title = tags$head(
-      tags$link(
-        rel = "shortcut icon",
-        href = "dfefavicon.png"
-      ),
-      # Add title for browser tabs
-      tags$title("DfE Shiny Template")
-    ),
-    tags$html(lang = "en"),
-    # Add meta description for search engines
-    meta() %>%
-      meta_general(
-        application_name = "DfE Shiny Template",
-        description = "DfE Shiny Template",
-        robots = "index,follow",
-        generator = "R-Shiny",
-        subject = "stats development",
-        rating = "General",
-        referrer = "no-referrer"
-      ),
+    title = tags$head(tags$link(
+      rel = "shortcut icon",
+      href = "dfefavicon.png"
+    )),
     shinyjs::useShinyjs(),
-    customDisconnectMessage(),
     useShinydashboard(),
     tags$head(includeHTML(("google-analytics.html"))),
     tags$head(
@@ -90,21 +73,19 @@ ui <- function(input, output, session) {
       )
     ),
     shinyGovstyle::header(
-      main_text = "",
+      main_text = "DfE",
       main_link = "https://www.gov.uk/government/organisations/department-for-education",
-      secondary_text = "DfE Shiny Template",
-      logo = "images/DfE_logo_primary.png",
-      logo_width = 96,
-      logo_height = 56
+      secondary_text = "16 to 18 time series attainment and single year entries",
+      logo = "images/DfE_logo.png"
     ),
     shinyGovstyle::banner(
       "beta banner",
       "beta",
       paste0(
-        "This Dashboard is in beta phase and we are still reviewing performance and reliability. ",
-        "In case of slowdown or connection issues due to high demand, we have produced two instances of this site which can be accessed at the following links: ",
-        "<a href=", site_primary, " id='link_site_1'>Site 1</a> and ",
-        "<a href=", site_overflow, " id='link_site_2'>Site 2</a>."
+        "This Dashboard is in beta phase and we are still reviewing performance and reliability. "
+        # "In case of slowdown or connection issues due to high demand, we have produced two instances of this site which can be accessed at the following links: ",
+        # "<a href=", site_primary, " id='link_site_1'>Site 1</a> and ",
+        # "<a href=", site_overflow, " id='link_site_2'>Site 2</a>."
       )
     ),
     shiny::navlistPanel(
@@ -113,7 +94,9 @@ ui <- function(input, output, session) {
       widths = c(2, 8),
       well = FALSE,
       homepage_panel(),
-      dashboard_panel(),
+      dashboard_panel_aps(),
+      dashboard_panel_sub_all(),
+      dashboard_panel_sub_fm(),
       a11y_panel(),
       support_links()
     ),
