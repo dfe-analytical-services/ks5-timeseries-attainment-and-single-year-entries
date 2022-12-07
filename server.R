@@ -187,32 +187,39 @@ server <- function(input, output, session) {
   })
   
   
-  output$alevelInstitute<-renderUI({
-    inType<-dfAlevelAps
-    
-    inType<-subset(
-      inType,
-    
-      
-      school_type_group %in% input$instituteGroup  &
-         characteristic_gender==input$allGender
-       )
-   
-    selectizeInput(inputId="alevelInstitute",
-                   label="Select up to 4 institution types",choices=unique(inType$school_type), multiple=T, options = list(maxItems = 4), 
-                   selected=c("All independent schools", "All schools and FE sector colleges"))
-    
-  })  
+  # output$alevelInstitute<-renderUI({
+  #   inType<-dfAlevelAps
+  #   
+  #   inType<-subset(
+  #     inType,
+  #   
+  #     
+  #     school_type_group %in% input$instituteGroup  &
+  #        characteristic_gender==input$allGender
+  #      )
+  #  
+  #   # selectizeInput(inputId="alevelInstitute",
+  #   #                label="Select up to 4 institution types",choices=unique(inType$school_type), multiple=T, options = list(maxItems = 4), 
+  #   #                selected=c("All independent schools", "All schools and FE sector colleges"))
+  #   # 
+  # })  
+  # 
   
   
+  # observeEvent(input$instituteGroup, {
+  #   freezeReactiveValue(input, "alevelInstitute")
+  #   updateSelectizeInput(inputId =  "alevelInstitute", choices=(filter(dfAlevelAps, school_type %in% input$alevelInstitute, characteristic_gender==input$allGender)))
+  # 
+  # })
+
+observeEvent(input$instituteGroup, {
+# updateSelectizeInput(input, "alevelInstitute")
+  updateSelectizeInput(session,"alevelInstitute", "Select up to 4 institution types", 
+                       choices=(dfAlevelAps$school_type[dfAlevelAps$school_type_group %in% input$instituteGroup]), 
+                       selected=c("All independent schools", "All schools and FE sector colleges"))
+
+})
   
-  observeEvent(input$instituteGroup, {
-    freezeReactiveValue(input, "alevelInstitute")
-    updateSelectizeInput(inputId = "alevelInstitute", choices=(filter(dfAlevelAps, school_type %in% input$alevelInstitute)))
-
-  })
-
-
   
   
   observeEvent(input$resetApsAll, {
