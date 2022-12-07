@@ -203,11 +203,18 @@ dashboard_panel_aps <- function() {
                              )),
             column(
               width=5, 
-                   uiOutput("alevelInstitute")
-                   ),
+              
+              selectizeInput(inputId="alevelInstitute",
+                             label="Select up to 4 institution types",choices=unique(dfAlevelAps$school_type), multiple=T, options = list(maxItems = 4), 
+                             selected=c("All independent schools", "All schools and FE sector colleges")),
+              
+              
+                # uiOutput("alevelInstitute"), 
+              br()
+               )),
             br(),
             
-            
+            fluidRow(
         column(
           width = 4,
           paste("Download full dataset:"), br(),
