@@ -230,10 +230,9 @@ dashboard_panel_aps <- function() {
                   column(4, uiOutput("headBox1")),
                   column(4, uiOutput("headBox2")),
                   column(4, uiOutput("headBox3")),
-                  br(),
                   column(
                     width = 8,
-                    box(
+                    column(
                       width = 12,
                       plotOutput("plotHeadline") %>% spinner()
                     )
@@ -268,7 +267,7 @@ dashboard_panel_aps <- function() {
                   h3("A level average point score (APS) per entry and grade by institution type"),
                   textOutput("textApsAll"),
                   uiOutput("boxapsAlevel", width = 2),
-                  box(
+                  column(
                     width = 12,
                     plotOutput("plotAlevelAps") %>% spinner()
                   )
@@ -296,7 +295,7 @@ dashboard_panel_aps <- function() {
                   textOutput("textGgap"),
 
                   # uiOutput("boxapsAlevel", width = 2),
-                  box(
+                  column(
                     width = 12,
                     plotlyOutput("plotGgap") %>% spinner()
                   )
@@ -318,14 +317,14 @@ dashboard_panel_aps <- function() {
                   # p("This is the standard paragraph style for adding guiding info around data content."),
                   column(
                     width = 6,
-                    box(
+                    column(
                       width = 12, p(""),
                       plotOutput("plotFemaleAlAPS") %>% spinner()
                     )
                   ),
                   column(
                     width = 6,
-                    box(
+                    column(
                       width = 12,
                       plotOutput("plotMaleAlAPS") %>% spinner()
                     )
@@ -449,12 +448,11 @@ dashboard_panel_sub_all <- function() {
                       label = "Download data",
                       icon = shiny::icon("download"),
                       class = "downloadButton"
-                    )
+                    ), 
                   )
                 ),
-                # valueBoxOutput("", width = 3),
                 # valueBoxOutput("boxapsGrade", width = 6),
-                box(
+                column(
                   width = 12,
                   plotlyOutput("plotAlevelSubject") %>% spinner(),
                   p("Notes: - Total English covers English literature, English language, English language and literature.
@@ -508,7 +506,7 @@ dashboard_panel_sub_all <- function() {
                     )
                   )
                 ),
-                box(
+                column(
                   width = 12,
                   plotlyOutput("plotResultAll") %>% spinner(),
                   p("Notes: - Total English covers English literature, English language, English language and literature.
@@ -621,9 +619,10 @@ dashboard_panel_sub_fm <- function() {
                     )
                   )
                 ),
+                br(),
                 # valueBoxOutput("", width = 3),
                 # valueBoxOutput("boxapsGrade", width = 6),
-                box(
+                column(
                   width = 12,
                   plotlyOutput("plotSubjectFm") %>% spinner(),
                   p("Notes: - Total English covers English literature, English language, English language and literature.
@@ -677,7 +676,8 @@ dashboard_panel_sub_fm <- function() {
                     )
                   )
                 ),
-                box(
+                br(),
+                column(
                   width = 12,
                   plotlyOutput("plotResultFm") %>% spinner(),
                   p("Notes: - Total English covers English literature, English language,  English language and literature.
