@@ -55,14 +55,14 @@
 #
 
 
-library(shinya11y)
+# library(shinya11y)
 ui <- function(input, output, session) {
   fluidPage(
     title = tags$head(tags$link(
       rel = "shortcut icon",
       href = "dfefavicon.png"
     )),
-    use_tota11y(),
+    # use_tota11y(),
     shinyjs::useShinyjs(),
     useShinydashboard(),
     tags$head(includeHTML(("google-analytics.html"))),
