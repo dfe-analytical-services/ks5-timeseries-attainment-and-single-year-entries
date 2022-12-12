@@ -1,0 +1,1345 @@
+{
+  "input": {
+    ".clientValue-default-plotlyCrosstalkOpts": {
+      "on": "plotly_click",
+      "persistent": false,
+      "dynamic": false,
+      "selectize": false,
+      "opacityDim": 0.2,
+      "selected": {
+        "opacity": 1
+      },
+      "debounce": 0,
+      "color": [
+
+      ]
+    },
+    "alevelInstitute": [
+      "All independent schools",
+      "All schools and FE sector colleges"
+    ],
+    "allGender": "All students",
+    "ees": 0,
+    "headlineAps": "All schools and FE sector colleges",
+    "instituteGroup": [
+      "All institutions",
+      "Independent schools"
+    ],
+    "link_to_alevelAllSubject_tab": 0,
+    "link_to_alevelFmSubject_tab": 0,
+    "link_to_headline_tab": 0,
+    "navlistPanel": "dashboard_fm",
+    "plotly_afterplot-A": "\"plotSubjectFm\"",
+    "resByAll": "`A*-A`",
+    "resByFm": "`A*-A`",
+    "resetApsAll": 0,
+    "resetEntries": 0,
+    "resetSubFm": 0,
+    "subByAll": "All students",
+    "subCompareAll": [
+      "Total English",
+      "Total Maths"
+    ],
+    "subjectFm": "Total English",
+    "tabsetpanels": "headline",
+    "tabsetpanels2": "alevelAllSubject",
+    "year_end": "2022",
+    "year_end_fm": "2022",
+    "year_start": "1996",
+    "year_start_fm": "1996"
+  },
+  "output": {
+    "headBox1": {
+      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>B<\/h3>\n        <p>A level average result equivalent to <strong>\n  38.77\n  points\n<\/strong>:<br/>All schools and FE sector colleges<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "headBox2": {
+      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>Dist-<\/h3>\n        <p>Applied general average result equivalent to <strong>\n  31.88\n  points\n<\/strong>:<br/>All schools and FE sector colleges<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "headBox3": {
+      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>Dist-<\/h3>\n        <p>Tech level average result equivalent to <strong>\n  30.61\n  points\n<\/strong>:<br/>All schools and FE sector colleges<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "plotAlevelSubject": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              3.30016053695135,
+              3.3003780648707,
+              3.30059548388996,
+              3.30081279411812,
+              3.30102999566398,
+              3.30124708863621,
+              3.3014640731433,
+              3.30168094929358,
+              3.30189771719521,
+              3.3021143769562,
+              3.3023309286844,
+              3.30254737248749,
+              3.30276370847298,
+              3.30297993674825,
+              3.30319605742049,
+              3.30341207059674,
+              3.30362797638389,
+              3.30384377488865,
+              3.3040594662176,
+              3.30427505047713,
+              3.30449052777349,
+              3.30470589821277,
+              3.30492116190089,
+              3.30513631894364,
+              3.30535136944662,
+              3.3055663135153,
+              3.30578115125498
+            ],
+            "y": [
+              72544,
+              80659,
+              80546,
+              77658,
+              74343,
+              73749,
+              72495,
+              72011,
+              72967,
+              76997,
+              78147,
+              77502,
+              80917,
+              83649,
+              84037,
+              83103,
+              82825,
+              83425,
+              78215,
+              81533,
+              76175,
+              71038,
+              65246,
+              57907,
+              59424,
+              56768,
+              53084
+            ],
+            "text": [
+              "year: 1996<br />entry_count: 72544<br />subject_name: Total English",
+              "year: 1997<br />entry_count: 80659<br />subject_name: Total English",
+              "year: 1998<br />entry_count: 80546<br />subject_name: Total English",
+              "year: 1999<br />entry_count: 77658<br />subject_name: Total English",
+              "year: 2000<br />entry_count: 74343<br />subject_name: Total English",
+              "year: 2001<br />entry_count: 73749<br />subject_name: Total English",
+              "year: 2002<br />entry_count: 72495<br />subject_name: Total English",
+              "year: 2003<br />entry_count: 72011<br />subject_name: Total English",
+              "year: 2004<br />entry_count: 72967<br />subject_name: Total English",
+              "year: 2005<br />entry_count: 76997<br />subject_name: Total English",
+              "year: 2006<br />entry_count: 78147<br />subject_name: Total English",
+              "year: 2007<br />entry_count: 77502<br />subject_name: Total English",
+              "year: 2008<br />entry_count: 80917<br />subject_name: Total English",
+              "year: 2009<br />entry_count: 83649<br />subject_name: Total English",
+              "year: 2010<br />entry_count: 84037<br />subject_name: Total English",
+              "year: 2011<br />entry_count: 83103<br />subject_name: Total English",
+              "year: 2012<br />entry_count: 82825<br />subject_name: Total English",
+              "year: 2013<br />entry_count: 83425<br />subject_name: Total English",
+              "year: 2014<br />entry_count: 78215<br />subject_name: Total English",
+              "year: 2015<br />entry_count: 81533<br />subject_name: Total English",
+              "year: 2016<br />entry_count: 76175<br />subject_name: Total English",
+              "year: 2017<br />entry_count: 71038<br />subject_name: Total English",
+              "year: 2018<br />entry_count: 65246<br />subject_name: Total English",
+              "year: 2019<br />entry_count: 57907<br />subject_name: Total English",
+              "year: 2020<br />entry_count: 59424<br />subject_name: Total English",
+              "year: 2021<br />entry_count: 56768<br />subject_name: Total English",
+              "year: 2022<br />entry_count: 53084<br />subject_name: Total English"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 3.77952755905512,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "Total English",
+            "legendgroup": "Total English",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              3.30016053695135,
+              3.3003780648707,
+              3.30059548388996,
+              3.30081279411812,
+              3.30102999566398,
+              3.30124708863621,
+              3.3014640731433,
+              3.30168094929358,
+              3.30189771719521,
+              3.3021143769562,
+              3.3023309286844,
+              3.30254737248749,
+              3.30276370847298,
+              3.30297993674825,
+              3.30319605742049,
+              3.30341207059674,
+              3.30362797638389,
+              3.30384377488865,
+              3.3040594662176,
+              3.30427505047713,
+              3.30449052777349,
+              3.30470589821277,
+              3.30492116190089,
+              3.30513631894364,
+              3.30535136944662,
+              3.3055663135153,
+              3.30578115125498
+            ],
+            "y": [
+              54125,
+              56050,
+              56589,
+              56100,
+              53674,
+              54157,
+              44156,
+              44453,
+              46017,
+              46034,
+              49805,
+              53331,
+              57618,
+              64517,
+              69803,
+              75546,
+              78077,
+              80567,
+              79036,
+              82026,
+              81532,
+              84226,
+              87531,
+              83132,
+              86021,
+              88244,
+              87064
+            ],
+            "text": [
+              "year: 1996<br />entry_count: 54125<br />subject_name: Total Maths",
+              "year: 1997<br />entry_count: 56050<br />subject_name: Total Maths",
+              "year: 1998<br />entry_count: 56589<br />subject_name: Total Maths",
+              "year: 1999<br />entry_count: 56100<br />subject_name: Total Maths",
+              "year: 2000<br />entry_count: 53674<br />subject_name: Total Maths",
+              "year: 2001<br />entry_count: 54157<br />subject_name: Total Maths",
+              "year: 2002<br />entry_count: 44156<br />subject_name: Total Maths",
+              "year: 2003<br />entry_count: 44453<br />subject_name: Total Maths",
+              "year: 2004<br />entry_count: 46017<br />subject_name: Total Maths",
+              "year: 2005<br />entry_count: 46034<br />subject_name: Total Maths",
+              "year: 2006<br />entry_count: 49805<br />subject_name: Total Maths",
+              "year: 2007<br />entry_count: 53331<br />subject_name: Total Maths",
+              "year: 2008<br />entry_count: 57618<br />subject_name: Total Maths",
+              "year: 2009<br />entry_count: 64517<br />subject_name: Total Maths",
+              "year: 2010<br />entry_count: 69803<br />subject_name: Total Maths",
+              "year: 2011<br />entry_count: 75546<br />subject_name: Total Maths",
+              "year: 2012<br />entry_count: 78077<br />subject_name: Total Maths",
+              "year: 2013<br />entry_count: 80567<br />subject_name: Total Maths",
+              "year: 2014<br />entry_count: 79036<br />subject_name: Total Maths",
+              "year: 2015<br />entry_count: 82026<br />subject_name: Total Maths",
+              "year: 2016<br />entry_count: 81532<br />subject_name: Total Maths",
+              "year: 2017<br />entry_count: 84226<br />subject_name: Total Maths",
+              "year: 2018<br />entry_count: 87531<br />subject_name: Total Maths",
+              "year: 2019<br />entry_count: 83132<br />subject_name: Total Maths",
+              "year: 2020<br />entry_count: 86021<br />subject_name: Total Maths",
+              "year: 2021<br />entry_count: 88244<br />subject_name: Total Maths",
+              "year: 2022<br />entry_count: 87064<br />subject_name: Total Maths"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 3.77952755905512,
+              "color": "rgba(244,106,37,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "Total Maths",
+            "legendgroup": "Total Maths",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "visible": false,
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 39.0247682302477,
+            "r": 7.30593607305936,
+            "b": 26.146395461464,
+            "l": 49.2154420921544
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 15.9402241594022
+          },
+          "title": {
+            "text": "<br />Entry count:<br /> All students",
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.2835201328352
+            },
+            "x": 0,
+            "xref": "paper"
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              3.29987950623617,
+              3.30606218197016
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "1995",
+              "2000",
+              "2005",
+              "2010",
+              "2015",
+              "2020"
+            ],
+            "tickvals": [
+              3.29994290002277,
+              3.30102999566398,
+              3.3021143769562,
+              3.30319605742049,
+              3.30427505047713,
+              3.30535136944662
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "1995",
+              "2000",
+              "2005",
+              "2010",
+              "2015",
+              "2020"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0.66417600664176,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 12.7521793275218
+            },
+            "tickangle": -300,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 1.32835201328352,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "",
+              "font": {
+                "color": null,
+                "family": null,
+                "size": 0
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -4412.2,
+              92656.2
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "25,000",
+              "50,000",
+              "75,000"
+            ],
+            "tickvals": [
+              0,
+              25000,
+              50000,
+              75000
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "25,000",
+              "50,000",
+              "75,000"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0.66417600664176,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 12.7521793275218
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 1.32835201328352,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 15.9402241594022
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.88976377952756,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 12.7521793275218
+            },
+            "title": {
+              "text": "",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 15.9402241594022
+              }
+            },
+            "orientation": "v",
+            "x": 0.99,
+            "y": 0.5
+          },
+          "hovermode": "closest",
+          "barmode": "relative"
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.2,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "plotHeadline": {
+      "src": "[image data sha1: c6436d5f602fb6ffcf80587f219aa12db881bd61]",
+      "width": 358,
+      "height": 400,
+      "alt": "Plot object",
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 2015.205,
+              "right": 2022.795,
+              "bottom": -2.08,
+              "top": 43.68
+            },
+            "mapping": {
+              "fill": "cert_type",
+              "x": "year",
+              "y": "aps",
+              "group": "cert_type"
+            },
+            "range": {
+              "left": 37.4944349315068,
+              "right": 352.520547945206,
+              "bottom": 310.002420033347,
+              "top": 55.9988252197582
+            }
+          }
+        ],
+        "dims": {
+          "width": 358,
+          "height": 400
+        }
+      }
+    },
+    "plotSubjectFm": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              3.30016053695135,
+              3.3003780648707,
+              3.30059548388996,
+              3.30081279411812,
+              3.30102999566398,
+              3.30124708863621,
+              3.3014640731433,
+              3.30168094929358,
+              3.30189771719521,
+              3.3021143769562,
+              3.3023309286844,
+              3.30254737248749,
+              3.30276370847298,
+              3.30297993674825,
+              3.30319605742049,
+              3.30341207059674,
+              3.30362797638389,
+              3.30384377488865,
+              3.3040594662176,
+              3.30427505047713,
+              3.30449052777349,
+              3.30470589821277,
+              3.30492116190089,
+              3.30513631894364,
+              3.30535136944662,
+              3.3055663135153,
+              3.30578115125498
+            ],
+            "y": [
+              50115,
+              55711,
+              56334,
+              54697,
+              52450,
+              51989,
+              50272,
+              50495,
+              50655,
+              53241,
+              53924,
+              53537,
+              55788,
+              57538,
+              58599,
+              58607,
+              59051,
+              59990,
+              56249,
+              58720,
+              55576,
+              52120,
+              48291,
+              43888,
+              45068,
+              43062,
+              40082
+            ],
+            "text": [
+              "year: 1996<br />entry_count: 50115<br />characteristic_gender: Female",
+              "year: 1997<br />entry_count: 55711<br />characteristic_gender: Female",
+              "year: 1998<br />entry_count: 56334<br />characteristic_gender: Female",
+              "year: 1999<br />entry_count: 54697<br />characteristic_gender: Female",
+              "year: 2000<br />entry_count: 52450<br />characteristic_gender: Female",
+              "year: 2001<br />entry_count: 51989<br />characteristic_gender: Female",
+              "year: 2002<br />entry_count: 50272<br />characteristic_gender: Female",
+              "year: 2003<br />entry_count: 50495<br />characteristic_gender: Female",
+              "year: 2004<br />entry_count: 50655<br />characteristic_gender: Female",
+              "year: 2005<br />entry_count: 53241<br />characteristic_gender: Female",
+              "year: 2006<br />entry_count: 53924<br />characteristic_gender: Female",
+              "year: 2007<br />entry_count: 53537<br />characteristic_gender: Female",
+              "year: 2008<br />entry_count: 55788<br />characteristic_gender: Female",
+              "year: 2009<br />entry_count: 57538<br />characteristic_gender: Female",
+              "year: 2010<br />entry_count: 58599<br />characteristic_gender: Female",
+              "year: 2011<br />entry_count: 58607<br />characteristic_gender: Female",
+              "year: 2012<br />entry_count: 59051<br />characteristic_gender: Female",
+              "year: 2013<br />entry_count: 59990<br />characteristic_gender: Female",
+              "year: 2014<br />entry_count: 56249<br />characteristic_gender: Female",
+              "year: 2015<br />entry_count: 58720<br />characteristic_gender: Female",
+              "year: 2016<br />entry_count: 55576<br />characteristic_gender: Female",
+              "year: 2017<br />entry_count: 52120<br />characteristic_gender: Female",
+              "year: 2018<br />entry_count: 48291<br />characteristic_gender: Female",
+              "year: 2019<br />entry_count: 43888<br />characteristic_gender: Female",
+              "year: 2020<br />entry_count: 45068<br />characteristic_gender: Female",
+              "year: 2021<br />entry_count: 43062<br />characteristic_gender: Female",
+              "year: 2022<br />entry_count: 40082<br />characteristic_gender: Female"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 3.77952755905512,
+              "color": "rgba(162,133,209,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "Female",
+            "legendgroup": "Female",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              3.30016053695135,
+              3.3003780648707,
+              3.30059548388996,
+              3.30081279411812,
+              3.30102999566398,
+              3.30124708863621,
+              3.3014640731433,
+              3.30168094929358,
+              3.30189771719521,
+              3.3021143769562,
+              3.3023309286844,
+              3.30254737248749,
+              3.30276370847298,
+              3.30297993674825,
+              3.30319605742049,
+              3.30341207059674,
+              3.30362797638389,
+              3.30384377488865,
+              3.3040594662176,
+              3.30427505047713,
+              3.30449052777349,
+              3.30470589821277,
+              3.30492116190089,
+              3.30513631894364,
+              3.30535136944662,
+              3.3055663135153,
+              3.30578115125498
+            ],
+            "y": [
+              22429,
+              24948,
+              24212,
+              22961,
+              21893,
+              21760,
+              22223,
+              21516,
+              22312,
+              23756,
+              24223,
+              23965,
+              25129,
+              26111,
+              25438,
+              24496,
+              23774,
+              23435,
+              21966,
+              22813,
+              20599,
+              18918,
+              16955,
+              14019,
+              14356,
+              13705,
+              13002
+            ],
+            "text": [
+              "year: 1996<br />entry_count: 22429<br />characteristic_gender: Male",
+              "year: 1997<br />entry_count: 24948<br />characteristic_gender: Male",
+              "year: 1998<br />entry_count: 24212<br />characteristic_gender: Male",
+              "year: 1999<br />entry_count: 22961<br />characteristic_gender: Male",
+              "year: 2000<br />entry_count: 21893<br />characteristic_gender: Male",
+              "year: 2001<br />entry_count: 21760<br />characteristic_gender: Male",
+              "year: 2002<br />entry_count: 22223<br />characteristic_gender: Male",
+              "year: 2003<br />entry_count: 21516<br />characteristic_gender: Male",
+              "year: 2004<br />entry_count: 22312<br />characteristic_gender: Male",
+              "year: 2005<br />entry_count: 23756<br />characteristic_gender: Male",
+              "year: 2006<br />entry_count: 24223<br />characteristic_gender: Male",
+              "year: 2007<br />entry_count: 23965<br />characteristic_gender: Male",
+              "year: 2008<br />entry_count: 25129<br />characteristic_gender: Male",
+              "year: 2009<br />entry_count: 26111<br />characteristic_gender: Male",
+              "year: 2010<br />entry_count: 25438<br />characteristic_gender: Male",
+              "year: 2011<br />entry_count: 24496<br />characteristic_gender: Male",
+              "year: 2012<br />entry_count: 23774<br />characteristic_gender: Male",
+              "year: 2013<br />entry_count: 23435<br />characteristic_gender: Male",
+              "year: 2014<br />entry_count: 21966<br />characteristic_gender: Male",
+              "year: 2015<br />entry_count: 22813<br />characteristic_gender: Male",
+              "year: 2016<br />entry_count: 20599<br />characteristic_gender: Male",
+              "year: 2017<br />entry_count: 18918<br />characteristic_gender: Male",
+              "year: 2018<br />entry_count: 16955<br />characteristic_gender: Male",
+              "year: 2019<br />entry_count: 14019<br />characteristic_gender: Male",
+              "year: 2020<br />entry_count: 14356<br />characteristic_gender: Male",
+              "year: 2021<br />entry_count: 13705<br />characteristic_gender: Male",
+              "year: 2022<br />entry_count: 13002<br />characteristic_gender: Male"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 3.77952755905512,
+              "color": "rgba(61,61,61,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "Male",
+            "legendgroup": "Male",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "visible": false,
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 39.0247682302477,
+            "r": 7.30593607305936,
+            "b": 25.0837138508371,
+            "l": 46.027397260274
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 14.6118721461187
+          },
+          "title": {
+            "text": " <br /> Entry count<br /> Total English",
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.2835201328352
+            },
+            "x": 0,
+            "xref": "paper"
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              3.29987950623617,
+              3.30606218197016
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "1995",
+              "2000",
+              "2005",
+              "2010",
+              "2015",
+              "2020"
+            ],
+            "tickvals": [
+              3.29994290002277,
+              3.30102999566398,
+              3.3021143769562,
+              3.30319605742049,
+              3.30427505047713,
+              3.30535136944662
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "1995",
+              "2000",
+              "2005",
+              "2010",
+              "2015",
+              "2020"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0.66417600664176,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": -300,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 1.32835201328352,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.2835201328352
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -2999.5,
+              62989.5
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "20,000",
+              "40,000",
+              "60,000"
+            ],
+            "tickvals": [
+              0,
+              20000,
+              40000,
+              60000
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "20,000",
+              "40,000",
+              "60,000"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0.66417600664176,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 1.32835201328352,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.88976377952756,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "title": {
+              "text": "",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              }
+            },
+            "orientation": "v",
+            "x": 0.99,
+            "y": 0.5
+          },
+          "hovermode": "x, unified",
+          "barmode": "relative"
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.2,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "tabHeadline": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Year<\/th>\n      <th>Academic year<\/th>\n      <th>Institution type<\/th>\n      <th>Number of students<\/th>\n      <th>APS per entry<\/th>\n      <th>APS per entry grade<\/th>\n      <th>Qualification<\/th>\n      <th>Version<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "infor": false,
+          "paging": false,
+          "searching": false,
+          "stripClasses": false,
+          "lengthChange": false,
+          "scrollY": "260px",
+          "scrollX": true,
+          "scrollCollapse": true,
+          "rownames": false,
+          "dom": "Bfrtip",
+          "buttons": [
+            "copy",
+            "csv",
+            "excel"
+          ],
+          "class": "display",
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.12.1",
+          "src": {
+            "href": "dt-core-1.12.1"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.12.1",
+          "src": {
+            "href": "jszip-1.12.1"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.12.1",
+          "src": {
+            "href": "dt-ext-buttons-1.12.1"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "textHeadline": "The boxes display the latest average results in 2021/22 for A level, applied general and tech level.\nBar chart shows the average results from 2015/16 to 2021/22 for  All schools and FE sector colleges  in England. To view results, click on the drop-down box beside the bar chart and select one institution type.",
+    "textSubAll": "The line chart shows the A level exam entries from  1996 to  2022 for  Total English, Total Maths in England for  All students .  To compare trend and changes over time, select type of students required, select up to 4 subjects and start year from the drop-down menus.",
+    "textSubFm": "The line chart shows the A level  exam entries for female and male on  Total English  from  1996 to  2022  in England.\n          To view changes over time, select required subject and start year from the drop-down menus at the top of the page. "
+  },
+  "export": {
+
+  }
+}
