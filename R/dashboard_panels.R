@@ -179,14 +179,10 @@ dashboard_panel_aps <- function() {
                   inputId = "alevelInstitute",
                   label = "Select up to 4 institution types", choices = unique(dfAlevelAps$school_type), multiple = T, options = list(maxItems = 4),
                   selected = c("All independent schools", "All schools and FE sector colleges")
-                ),
-
-
+                )
                 # uiOutput("alevelInstitute"),
-                br()
               )
             ),
-            br(),
             fluidRow(
               column(
                 width = 4,
@@ -230,9 +226,11 @@ dashboard_panel_aps <- function() {
                   width = 12,
                   h3(" Headline figures and time series for level 3 attainment"),
                   textOutput("textHeadline"),
+                  br(),
                   column(4, uiOutput("headBox1")),
                   column(4, uiOutput("headBox2")),
                   column(4, uiOutput("headBox3")),
+                  br(),
                   column(
                     width = 8,
                     box(
