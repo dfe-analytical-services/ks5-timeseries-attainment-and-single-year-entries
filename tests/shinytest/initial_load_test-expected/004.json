@@ -608,8 +608,8 @@
       ]
     },
     "plotHeadline": {
-      "src": "[image data sha1: 33aa62fb4385a9c2b70e807143afd4be6e5098b1]",
-      "width": 338,
+      "src": "[image data sha1: c6436d5f602fb6ffcf80587f219aa12db881bd61]",
+      "width": 358,
       "height": 400,
       "alt": "Plot object",
       "coordmap": {
@@ -638,15 +638,15 @@
               "group": "cert_type"
             },
             "range": {
-              "left": 39.150673348464,
-              "right": 332.520449566345,
-              "bottom": 307.367158760044,
-              "top": 57.9903416667945
+              "left": 37.4944349315068,
+              "right": 352.520547945206,
+              "bottom": 310.002420033347,
+              "top": 55.9988252197582
             }
           }
         ],
         "dims": {
-          "width": 338,
+          "width": 358,
           "height": 400
         }
       }

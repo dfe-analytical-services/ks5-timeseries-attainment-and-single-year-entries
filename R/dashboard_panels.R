@@ -431,7 +431,7 @@ dashboard_panel_sub_all <- function() {
         column(
           width = 12,
           tabsetPanel(
-            id = "tabsetpanels2",
+            id = "tabsetpanels_all",
             tabPanel(
               value = "alevelAllSubject",
               "Subject entries by all",
@@ -448,7 +448,7 @@ dashboard_panel_sub_all <- function() {
                       label = "Download data",
                       icon = shiny::icon("download"),
                       class = "downloadButton"
-                    ), 
+                    ),
                   )
                 ),
                 # valueBoxOutput("boxapsGrade", width = 6),
