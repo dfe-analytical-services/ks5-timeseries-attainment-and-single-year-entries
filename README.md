@@ -1,20 +1,9 @@
 <h1 align="center">
   <br>
-Key Stage 5 Attainment and Single Year Entry Dashboard
+16 to 18 Time series attainment and single year entry dashboard
   <br>
 </h1>
 
-**Before using this template, please contact the Statistics Development Team (statistics.development@education.gov.uk) to discuss your plans for setting up a DfE dashboard.**
-
----
-
-This template repository is for making accessible apps for published statistics in DfE. It includes a basic accessible shiny app with DfE styling, as well as templates for additional best practice documents like this README script, pull request templates and codes of conduct for contributing.
-
-To use this template, click the green "use this template" button at the top of the repo. This will create a copy for you to work off of. 
-
-Please delete this header section when you are writing up the README file for your own app.
-
-Please contact statistics.DEVELOPMENT@education.gov.uk if you have any questions, or raise an issue on here if you have spotted something specific that we should change.
 
 <p align="center">
   <a href="#introduction">Introduction</a> |
@@ -28,29 +17,23 @@ Please contact statistics.DEVELOPMENT@education.gov.uk if you have any questions
 
 ## Introduction 
 
-Give a brief overview of what your app is for here. 
+This dashboard allows users to explore time series data for 16 to 18 qualifications in England, with breakdowns by institution type 
+(for average result/grade) and gender (for both A level average result/grade, and A level entries and grades in individual subjects).
 
-Add links to where each version of your app is deployed - e.g.
-
-- Production - https://rsconnect/rsc/dfe-published-data-qa
-- Pre-production - https://rsconnect-pp/rsc/dfe-published-data-qa
-- Development - https://rsconnect-pp/rsc/dev-dfe-published-data-qa
+It brings together figures compiled from the current and previous versions of the ‘A level and other 16 to 18 results’ statistical release.
 
 
 ---
 
 ## Requirements
 
-You should list out the software and programming skills needed, as well as any access requirements = e.g.
-
-
 ### i. Software requirements (for running locally)
 
-- Installation of R Studio 1.2.5033 or higher
+- Installation of R Studio 2022.07.2+576 or higher
 
-- Installation of R 3.6.2 or higher
+- Installation of R 4.2.1 or higher
 
-- Installation of RTools40 or higher
+- Installation of RTools42 or higher
 
 ### ii. Programming skills required (for editing or troubleshooting)
 
@@ -58,16 +41,9 @@ You should list out the software and programming skills needed, as well as any a
 
 - Particularly [R Shiny](https://shiny.rstudio.com/)
 
-### iii. Access requirements
-
-- Access to the Stats Development Team SQL modelling area (MA_SDT_NS_DATA) in T1PRANMSQL\SQLPROD,60125. Request access from Cam Race and forward on your request to the PDR mailbox (PupilData.REPOSITORY@education.gov.uk)
-  
 ---
 
 ## How to use
-
-You should clearly lay out the steps needed to run your code here - generally, they will be similar to the below for Shiny apps:
-
 
 ### Running the app locally
 
@@ -86,19 +62,22 @@ Package control is handled using renv. As in the steps above, you will need to r
 
 ### Tests
 
-UI tests have been created using shinytest that test the app loads, that content appears correctly when different inputs are selected, and that tab content displays as expected. More should be added over time as extra features are added.
+UI tests have been created using shinytest that check the app loads, that content appears correctly when different inputs are selected, and that tab content displays as expected. More should be added over time as extra features are added.
 
 GitHub Actions provide CI by running the automated tests and checks for code styling. The yaml files for these workflows can be found in the .github/workflows folder.
 
 The function run_tests_locally() is created in the Rprofile script and is available in the RStudio console at all times to run both the unit and ui tests.
 
+
 ### Deployment
 
 - The app is deployed to the department's shinyapps.io subscription using GitHub actions. The yaml file for this can be found in the .github/workflows folder.
 
+
 ### Navigation
 
 In general all .r files will have a usable outline, so make use of that for navigation if in RStudio: `Ctrl-Shift-O`.
+
 
 ### Code styling 
 
@@ -109,18 +88,17 @@ The function tidy_code() is created in the Rprofile script and therefore is alwa
 
 ## How to contribute
 
-Details on how to contribute to the app should go here, e.g.
-
 ### Flagging issues
 
 If you spot any issues with the application, please flag it in the "Issues" tab of this repository, and label as a bug.
 
 ### Merging pull requests
 
-Only members of the Statistics Development team can merge pull requests. Add lauraselby, cjrace and sarahmwong as requested reviewers, and the team will review before merging.
+Only members of the 16-18 accountability data and development team can merge pull requests. Add patithomas, cjrace, and rmbielby as a requested reviewers, and the team will review before merging.
 
 ---
 
 ## Contact
 
-Add contact details of how to get in touch with your team.
+Email
+Attainment.STATISTICS@education.gov.uk

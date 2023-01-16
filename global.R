@@ -11,6 +11,7 @@
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
+shhh(library(shinya11y))
 shhh(library(shinyjs))
 shhh(library(tools))
 shhh(library(testthat))
@@ -20,6 +21,7 @@ shhh(library(shinyWidgets))
 shhh(library(shinyGovstyle))
 shhh(library(shinycssloaders))
 shhh(library(dplyr))
+shhh(library(tidyr))
 shhh(library(ggplot2))
 shhh(library(plotly))
 shhh(library(DT))
@@ -27,6 +29,10 @@ shhh(library(xfun))
 shhh(library(hrbrthemes))
 shhh(library(gridExtra))
 shhh(library(forcats))
+shhh(library(ggrepel))
+
+
+
 
 
 # Functions ---------------------------------------------------------------------------------
@@ -81,10 +87,10 @@ first_xter_up<-function(x) {
   x
 }
 
-
-spinner<-function(output){
-  shinycssloaders::withSpinner(output,color="#33CCFF", size = 3)
-}
+# 
+# spinner<-function(output){
+#   shinycssloaders::withSpinner(output, color.background = "#e9f0ff",color="#1d70b8",  size = 1)
+# }
 
 
 
@@ -149,11 +155,16 @@ dfAlevelSubject<- dfAlevelSubjectRaw%>%
 
 
 
-AlevelSubjects <-dfAlevelSubject %>%
+subjectByAll <-dfAlevelSubject %>%
   group_by(subject_name, characteristic_gender) %>%
   arrange (year, .by_group=TRUE) %>%
   filter(!subject_name %in% c("Total subjects", "Other communication studies", "Other social studies", "Home economics"), n()>7)%>% 
   ungroup()
+
+# Filter out female and male
+
+subjectByGender<-subjectByAll %>%
+  filter(characteristic_gender != "All students") 
 
 # Filter home economics for all students 
 homeEconomics<- dfAlevelSubject %>%
@@ -161,14 +172,24 @@ homeEconomics<- dfAlevelSubject %>%
 
 # Bind home economics all students to a level subjects 
 
-subjectByAll <- rbind(AlevelSubjects, homeEconomics)
+# subjectBind <- rbind(subjectByAll, homeEconomics)
+# 
+# subjectPivot<-subjectBind %>%
+#   pivot_longer(
+#     cols = starts_with("A*"), 
+#     names_to="grade",
+#     #names_prefix="A*",
+#     values_to="percent"
+#   )
+#  
+# subjectAll<-subjectPivot %>%
+#   #filter(characteristic_gender=="All students") %>%
+#   group_by(subject_name, characteristic_gender, grade) %>%
+#   arrange (year, .by_group=TRUE) %>%
+#   ungroup()
 
 
-  
 
-
-subjectByGender<-subjectByAll %>%
-  filter(characteristic_gender != "All students") 
 
 
 
@@ -189,7 +210,7 @@ dfAlevelAps<-data %>%
                              "Mainstream free schools, free school 16-19, university technical colleges (UTCs), city technology colleges (CTCs) and studio schools",
                              "Free Schools, University Technical Colleges (UTCs) and Studio Schools", "All special schools", "Comprehensive Schools", 
                              "Mainstream free schools, university technical colleges (UTCs) and studio schools", "Modern Schools",
-                             "Selective Schools", "Independent special schools")) %>%
+                             "Selective Schools")) %>%
   # filter(year>=2013) %>%
   mutate(aps_grade_2016_2022=as.factor(aps_grade_2016_2022),
          aps_grade_2013_2015=as.factor(aps_grade_2013_2015),
@@ -213,10 +234,8 @@ choicesGender<-unique(dfAlevelAps$characteristic_gender)
 
 
 fmGap<-dfAlevelAps %>%
-
-
-  select(year, time_period, school_type, school_type_group, characteristic_gender, number_of_students, aps_2016_2022, version) %>%
-  filter(characteristic_gender!="All students" |  school_type != "Independent special schools" | year>=2016 )
+  select(year, time_period, school_type, school_type_group, characteristic_gender, number_of_students, aps_2016_2022, version) 
+  
 
 female_male<- fmGap %>%
   filter(characteristic_gender!="All students" & year >=2016) %>%
@@ -227,7 +246,6 @@ female_male<- fmGap %>%
   ungroup()
 
 
-# select 
 fmDiff<- female_male%>%
   filter(characteristic_gender=="Female") %>%
   select(year, time_period, school_type, school_type_group, number_of_students, aps_2016_2022, gender_gap, version) %>%

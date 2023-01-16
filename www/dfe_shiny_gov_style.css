@@ -32,9 +32,7 @@ a:visited {
 }
 
 
-html {
-  background-color: #f3f2f1;
-}
+
 
 a {
   color: 	#1d70b8;
@@ -71,8 +69,7 @@ a:active {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
   line-height: 1.1428571429;
-  background-color: #f3f2f1 !important;
-  color: #1d70b8;
+  background-color: #f3f2f1 !important; 
   font-size: 15px;
   border-color: #1d70b8;
   text-decoration: none
@@ -123,6 +120,7 @@ a:active {
   text-decoration: none
 }
 
+
 .well {
     min-height: 90vh;
     padding: 19px;
@@ -135,6 +133,12 @@ a:active {
     color: #fff;
 }
 
+.selectize-control.multi
+.selectize-input.disabled > div, .selector-control.multi
+.selectize-input.disabled > div.active {
+    color:     #767676;
+    background: #ffffff;
+} 
 
 /* Full screen plots */
 /* Adapted from https://stackoverflow.com/questions/69042546/is-there-a-way-to-create-a-full-screen-popup-window-of-a-plotly-chart-in-r */

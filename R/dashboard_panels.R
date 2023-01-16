@@ -5,7 +5,7 @@ homepage_panel <- function() {
       gov_row(
         column(
           12,
-          h1("16 to 18  time series attainment and single year entries (draft)"),
+          h1("16 to 18  time series attainment and single year entry (draft)"),
           br(),
           br()
         ),
@@ -26,9 +26,8 @@ homepage_panel <- function() {
                 class = "panel-body",
                 tags$div(
                   title = "",
-                  p("This dashboard covers time series data and charts on 16 to 18 attainment and A level
-                  subject entries at national level with current focus on:"), 
-                  
+                  p("This dashboard allows users to explore time series data for 16 to 18 qualifications in England.  
+                    It brings together figures compiled from the current and previous versions of the ‘A level and other 16 to 18 results’ statistical release with focus on:"), 
                   p("1.  Attainment by Institution types covering Average point score (APS) and grades for A level, applied general and tech level qualifications."), 
                   p("2a.  Subject entries and cumulative percentage grades for A level single academic year from 1995/96 to 2020/21 by all students; and"), 
                   p("2b. Subject entries and cumulative percentage grades by gender."),
@@ -40,14 +39,15 @@ homepage_panel <- function() {
                 br(),
                 tags$div(
                   title="Headline attainment and A level time series by institution type",
-                  h4(actionLink("link_to_headline_tab", "Headline attainment and A level result by institution type")),
+                  h3(actionLink("link_to_headline_tab", "Headline attainment and A level result by institution type")),
                   p("The headline boxes show the latest average result for A level, applied general and tech level qualifications for all students.  The bar chart shows the yearly trend from 2015/16 to 2021/22.  "),
                  
                   p("Drop-down box within the chart area allows for selection of one institution type.  To view latest results and trend, click on the drop-down box and  select institution type required."),
                   
                   
                   h4("APS for A level by all & gender"),
-                  p("The line charts display the yearly trend and grades for all students and by gender, while the female - male gender gap shows the average point difference ."    
+                  p("The line charts display the yearly trend and grades for all students and by gender, while the female - male gender gap shows the average point difference.
+                   To view and explore trend click and select up to four institution groups and institution types from the drop-down menus."    
                   ),
                 
                 br(),
@@ -55,7 +55,7 @@ homepage_panel <- function() {
                 
                 tags$div(
                   title="(A level subject entries and cumulative grades - single academic year by all",
-                  h4(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and result by all")),
+                  h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and result by all")),
                   p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2021/22. 
                   The drop-down menus at the top of the page allows for the selection and comparison of up to four subjects 
                   and cumulative grades.")
@@ -65,14 +65,14 @@ homepage_panel <- function() {
                 br(),
                 tags$div(
                   title="(A level subject entries and cumulative grades - single academic year by gender",
-                  h4(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result by gender")),
+                  h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result by gender")),
                   p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2021/22.  
                   Select one subject from the dropdown menu at the top of the page, followed by the start year to view changes over time. End year remains at 2022."),
                   
-                  h4("Table output and Data download"),
+                  h3("Table output and Data download"),
                   
                   p("Data on selected institution types, A level subjects entries and results can be  downloaded using the download button. 
-                    Full dataset can be downloaded by clicking the download button at the top of the page.  Note that full dataset on subject entries and results includes breakdown of subjects starting from 2015/16. "),
+                    Full dataset can be downloaded by clicking the download button at the top of the page.  Full dataset on subject entries and results includes breakdown of subjects starting from 2015/16. "),
                   
                   
                 ))
@@ -100,7 +100,7 @@ homepage_panel <- function() {
                 tags$div(
                   
                     title="Attainment by institution type",
-                    h4("Attainment by institution type"),
+                    h3("Attainment by institution type"),
                   
                   p("Headline attainment is the average point score (APS) per entry also expressed as a grade. 
                   Coverage includes A level, applied general and tech level qualifications.  A level APS per entry started in 2012/13 with 
@@ -122,7 +122,7 @@ homepage_panel <- function() {
                 tags$div(
                   
                   title="Comparing institution types",
-                  h4("Comparing institution types"),
+                  h3("Comparing institution types"),
                   
                   p("The dropdown menu at the top of the page for A level APS per entry allows for the selection of up to four 
                   institution types.  Care should be taken when comparing across institution types due to significant
@@ -133,7 +133,7 @@ homepage_panel <- function() {
                 tags$div(
                   
                   title="A level subject entry and cumulative grade",
-                  h4("A level subject entry and cumulative grade"),
+                  h3("A level subject entry and cumulative grade"),
                   
                   p("The subject entries and cumulative grades covered on the dashboard are based on 
                   subjects grouped from 1995/96 to 2021/22. More detailed breakdowns of some subjects from 2015/16
@@ -196,17 +196,17 @@ dashboard_panel_aps <- function() {
             
             column(
               width = 5,
-              selectizeInput(inputId = "instituteGroup", label = "Select institution group - maximum 4",
+              selectizeInput(inputId = "instituteGroup", label = "Select up to 4 institution groups",
                              choices = sort(unique(dfAlevelAps$school_type_group)),
                              multiple = T,
-                             options = list(maxItems = 4), selected=c("Independent schools", "All institutions")
+                             options = list(maxItems = 4), selected=c("All independent schools","All state-funded schools")
                              )),
             column(
               width=5, 
               
               selectizeInput(inputId="alevelInstitute",
                              label="Select up to 4 institution types",choices=unique(dfAlevelAps$school_type), multiple=T, options = list(maxItems = 4), 
-                             selected=c("All independent schools", "All schools and FE sector colleges")),
+                             selected=c("All independent schools","All state-funded schools")),
               
               
                 # uiOutput("alevelInstitute"), 
@@ -217,7 +217,7 @@ dashboard_panel_aps <- function() {
             fluidRow(
         column(
           width = 4,
-          paste("Download full dataset:"), br(),
+          p(strong("Download full dataset")), 
           downloadButton(
             outputId = "downloadDataAps",
             label= "Download data",
@@ -244,7 +244,7 @@ dashboard_panel_aps <- function() {
         
         column(
           width=4, 
-          paste("Reset chart selection"), br(),
+          p(strong ("Reset chart selection")), 
           align = "right",
                         actionButton(inputId = "resetApsAll", label = 'Reset selections', icon = icon("fas fa-arrows-rotate"))
             )
@@ -267,7 +267,7 @@ dashboard_panel_aps <- function() {
                                  width=12,
                                  
                                  
-                                 h3(" Headline figures and time series for level 3 attainment"),
+                                 h3(" Headline figures and time series for level 3 attainment, all students"),
                                  textOutput("textHeadline"),
                                  column(4, uiOutput("headBox1"
                                     )
@@ -285,7 +285,7 @@ dashboard_panel_aps <- function() {
                                    
                                    box(
                                      width=12,
-                                   plotOutput("plotHeadline") %>% spinner()
+                                   plotOutput("plotHeadline") #%>% spinner()
                                    )
                                   ),
                                  column(
@@ -321,7 +321,7 @@ dashboard_panel_aps <- function() {
                                  uiOutput("boxapsAlevel", width = 2),
                                  box(
                                    width=12,
-                                   plotOutput("plotAlevelAps") %>% spinner()
+                                   plotOutput("plotAlevelAps") #%>% spinner()
                                    )
                                  ),
                                column(
@@ -340,7 +340,7 @@ dashboard_panel_aps <- function() {
                              ),
                            
                            tabPanel(
-                             "A level female - male gender gap", value="ggap",
+                             "A level gender gap", value="ggap",
                              fluidRow(
                                column(
                                  width=12,
@@ -350,7 +350,7 @@ dashboard_panel_aps <- function() {
                                 # uiOutput("boxapsAlevel", width = 2),
                                  box(
                                    width=12,
-                                   plotlyOutput("plotGgap") %>% spinner()
+                                   plotlyOutput("plotGgap") #%>% spinner()
                                  )
                                )
                                
@@ -372,14 +372,14 @@ dashboard_panel_aps <- function() {
                                    width=6,
                                    box(
                                      width=12, p(""),
-                                     plotOutput("plotFemaleAlAPS") %>% spinner()
+                                     plotOutput("plotFemaleAlAPS") #%>% spinner()
                                      )
                                    ),
                                  column(
                                    width=6,
                                    box(
                                      width=12,
-                                     plotOutput("plotMaleAlAPS") %>% spinner()
+                                     plotOutput("plotMaleAlAPS")# %>% spinner()
                                      )
                                    ),
                                 column(
@@ -422,7 +422,7 @@ dashboard_panel_sub_all <- function() {
       gov_row(
         column(
           width=12,
-          h2("A level subject entry and result by all students, female and male in England from 1995/6 to 2021/22")
+          h2("A level subject entry and result by all students, female and male in England from 1995/96 to 2021/22")
         ),
         column(
           width=12,
@@ -436,7 +436,7 @@ dashboard_panel_sub_all <- function() {
                 width = 3,
                 selectInput(inputId = "subByAll",
                             label = "Select students",
-                            choices =  unique(dfAlevelSubject$characteristic_gender)%>%
+                            choices =  unique(subjectByAll$characteristic_gender)%>%
                               sort(), selected = "All students"
                 )
               ),
@@ -452,30 +452,30 @@ dashboard_panel_sub_all <- function() {
               
               
               column(
-                width = 2, align = 'center',
+                width = 2, 
                 selectInput(inputId = 'year_start',
                             label = "Select start year",
-                            choices = seq(1996, latest_year, 1), 
+                            choices = seq(1996, 2018, 1), 
                             selected = 1996
                 ) 
               ), 
               
               column(
-                width = 2, align = 'center',
+                width = 2, 
                 selectInput(inputId = 'year_end',
                             label = " End year",
-                            choices = latest_year
-                          #  choices = seq(1996, latest_year, 1),  
-                            #selected = latest_year
-                )
-              ),
-              
-              
-              
+                            choices = latest_year),
+                         
+               
+              br()
+            )),
+          br(),
+          
+          fluidRow(
               
               column(
-                width = 6,
-                paste("Download full dataset:"), br(),
+                width = 4,
+                p(strong("Download full dataset")),
                 downloadButton(
                   outputId = "downloadDataSubject",
                   label= "Download data",
@@ -486,8 +486,21 @@ dashboard_panel_sub_all <- function() {
               ),
               
               column(
-                width=6, 
-                paste("Reset chart selection"), br(),
+                width=4,
+                p(strong("For more tables and metadata")),
+                actionButton(inputId='ees', 
+                             label="Visit Explore Education Statistics", 
+                             icon = icon("th"), 
+                             onclick ="window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",
+                             style = "width:100%;white-space:normal;"
+                             
+                             
+                )
+              ),
+              
+              column(
+                width=4, 
+                p(strong ("Reset chart selection")), 
                 align = "right",
                 actionButton(inputId = "resetEntries", label = 'Reset selections', icon = icon("sync")
                 ))
@@ -522,8 +535,8 @@ dashboard_panel_sub_all <- function() {
                             #valueBoxOutput("", width = 3),
                             # valueBoxOutput("boxapsGrade", width = 6),
                             box(
-                              width=12,
-                              plotlyOutput("plotAlevelSubject") %>% spinner(), 
+                              width=12, 
+                              plotlyOutput("plotAlevelSubject"),#%>% spinner(), 
                               p("Notes: - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
@@ -550,6 +563,11 @@ dashboard_panel_sub_all <- function() {
                                        class = "well",
                                        style = "min-height: 100%; height: 100%; overflow-y: visible",
                                        
+                                       # selectInput(inputId = "resByAll", label = "Select cumulative result:",
+                                       #                choices = sort(unique(subjectAll$grade)),
+                                       #                selected="A*-A"
+                                       # )))),
+                                       
                                       
                                            selectInput(inputId="resByAll",
                                           "Select cumulative result",
@@ -557,7 +575,8 @@ dashboard_panel_sub_all <- function() {
                                                        "A*-B" = "`A*-B`",
                                                        "A*-C" = "`A*-C`",
                                                        "A*-D" = "`A*-D`",
-                                                       "A*-E" = "`A*-E`"))))), br(),
+                                                       "A*-E" = "`A*-E`"))))),
+                      br(),
                         fluidRow(
                         column(
                               width=12,
@@ -574,7 +593,7 @@ dashboard_panel_sub_all <- function() {
                         
                               box(
                                 width=12,
-                                plotlyOutput("plotResultAll") %>% spinner(),
+                                plotlyOutput("plotResultAll"),# %>% spinner(),
                                 p("Notes: - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
@@ -611,7 +630,7 @@ dashboard_panel_sub_fm <- function() {
       gov_row(
         column(
           width=12,
-          h2("A level subject entry and result - single academic year by gender in England from 1995/6 to 2021/22")
+          h2("A level subject entry and result - single academic year by gender in England from 1995/96 to 2021/22")
         ),
         column(
           width=12,
@@ -633,7 +652,7 @@ dashboard_panel_sub_fm <- function() {
               
               
               column(
-                width = 3, align = 'center',
+                width = 3, 
                 selectInput(inputId = 'year_start_fm',
                             label = "Select start year",
                             choices = seq(1996, latest_year, 1), 
@@ -643,7 +662,7 @@ dashboard_panel_sub_fm <- function() {
               
               
               column(
-                width = 3, align = 'center',
+                width = 3, 
                 selectInput(inputId = 'year_end_fm',
                             label = " End year",
                             choices = latest_year, 
@@ -657,8 +676,8 @@ dashboard_panel_sub_fm <- function() {
               
               
               column(
-                width = 6,
-                paste("Download full dataset:"), br(),
+                width = 4,
+                p(strong("Download full dataset")),
                 downloadButton(
                   outputId = "downloadDataSubjectFm",
                   label= "Download data",
@@ -669,8 +688,21 @@ dashboard_panel_sub_fm <- function() {
               ),
               
               column(
-                width=6, 
-                paste("Reset chart selection"), br(),
+                width=4,
+                p(strong("For more tables and metadata")),
+                actionButton(inputId='ees', 
+                             label="Visit Explore Education Statistics", 
+                             icon = icon("th"), 
+                             onclick ="window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",
+                             style = "width:100%;white-space:normal;"
+                             
+                             
+                )
+              ),
+              
+              column(
+                width=4, 
+                p(strong("Reset chart selection")), 
                 align = "right",
                 actionButton(inputId = "resetSubFm", label = 'Reset selections', icon = icon("sync")
                 ))
@@ -705,7 +737,7 @@ dashboard_panel_sub_fm <- function() {
                                    # valueBoxOutput("boxapsGrade", width = 6),
                                    box(
                                      width=12,
-                                     plotlyOutput("plotSubjectFm") %>% spinner(), 
+                                     plotlyOutput("plotSubjectFm"), #%>% spinner(), 
                                      p("Notes: - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
@@ -755,7 +787,7 @@ dashboard_panel_sub_fm <- function() {
                               ))),
                             box(
                               width=12,
-                              plotlyOutput("plotResultFm") %>% spinner(),
+                              plotlyOutput("plotResultFm"),# %>% spinner(),
                               p("Notes: - Total English covers English literature, English language,  English language and literature. 
                                 - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                 - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 

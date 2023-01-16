@@ -15,7 +15,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2022,202122,Sixth form colleges,FE sector colleges,All students,33061,38.1207,B-,Provisional,Alevel
 2022,202122,Sponsored academies - mainstream,State-funded schools,All students,19117,33.9391,C+,Provisional,Alevel
 2022,202122,Studio schools,State-funded schools,All students,284,30.0916,C,Provisional,Alevel
-2022,202122,University Technical Colleges (UTCs),State-funded schools,All students,1464,27.7473,C-,Provisional,Alevel
+2022,202122,University technical colleges (UTCs),State-funded schools,All students,1464,27.7473,C-,Provisional,Alevel
 2022,202122,All FE sector colleges,FE sector colleges,Female,32497,36.9172,B-,Provisional,Alevel
 2022,202122,All independent schools,Independent schools,Female,17113,46.2832,A-,Provisional,Alevel
 2022,202122,All schools,All schools,Female,123822,40.0394,B,Provisional,Alevel
@@ -32,7 +32,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2022,202122,Sixth form colleges,FE sector colleges,Female,19324,38.9867,B,Provisional,Alevel
 2022,202122,Sponsored academies - mainstream,State-funded schools,Female,10377,34.7483,C+,Provisional,Alevel
 2022,202122,Studio schools,State-funded schools,Female,128,30.3053,C,Provisional,Alevel
-2022,202122,University Technical Colleges (UTCs),State-funded schools,Female,484,28.1925,C-,Provisional,Alevel
+2022,202122,University technical colleges (UTCs),State-funded schools,Female,484,28.1925,C-,Provisional,Alevel
 2022,202122,All FE sector colleges,FE sector colleges,Male,22009,35.1735,B-,Provisional,Alevel
 2022,202122,All independent schools,Independent schools,Male,17550,44.6355,B+,Provisional,Alevel
 2022,202122,All schools,All schools,Male,106283,38.5553,B,Provisional,Alevel
@@ -49,7 +49,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2022,202122,Sixth form colleges,FE sector colleges,Male,13737,36.928,B-,Provisional,Alevel
 2022,202122,Sponsored academies - mainstream,State-funded schools,Male,8740,32.9783,C+,Provisional,Alevel
 2022,202122,Studio schools,State-funded schools,Male,156,29.8944,C,Provisional,Alevel
-2022,202122,University Technical Colleges (UTCs),State-funded schools,Male,980,27.5252,C-,Provisional,Alevel
+2022,202122,University technical colleges (UTCs),State-funded schools,Male,980,27.5252,C-,Provisional,Alevel
 2021,202021,All FE sector colleges,FE sector colleges,All students,54083,38.5087,B,Provisional,Alevel
 2021,202021,All independent schools,Independent schools,All students,34555,49.3454,A,Provisional,Alevel
 2021,202021,All schools,All schools,All students,217677,42.3235,B+,Provisional,Alevel
@@ -66,7 +66,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2021,202021,Sixth form colleges,FE sector colleges,All students,33751,39.4422,B,Provisional,Alevel
 2021,202021,Sponsored academies - mainstream,State-funded schools,All students,17696,38.5285,B,Provisional,Alevel
 2021,202021,Studio schools,State-funded schools,All students,255,37.8671,B-,Provisional,Alevel
-2021,202021,University Technical Colleges (UTCs),State-funded schools,All students,1256,36.0091,B-,Provisional,Alevel
+2021,202021,University technical colleges (UTCs),State-funded schools,All students,1256,36.0091,B-,Provisional,Alevel
 2021,202021,All FE sector colleges,FE sector colleges,Female,32101,39.5115,B,Provisional,Alevel
 2021,202021,All independent schools,Independent schools,Female,17144,50.5511,A,Provisional,Alevel
 2021,202021,All schools,All schools,Female,117815,43.2954,B+,Provisional,Alevel
@@ -83,7 +83,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2021,202021,Sixth form colleges,FE sector colleges,Female,19667,40.5674,B,Provisional,Alevel
 2021,202021,Sponsored academies - mainstream,State-funded schools,Female,9826,39.6188,B,Provisional,Alevel
 2021,202021,Studio schools,State-funded schools,Female,94,41.9888,B+,Provisional,Alevel
-2021,202021,University Technical Colleges (UTCs),State-funded schools,Female,403,38.474,B,Provisional,Alevel
+2021,202021,University technical colleges (UTCs),State-funded schools,Female,403,38.474,B,Provisional,Alevel
 2021,202021,All FE sector colleges,FE sector colleges,Male,21982,37.0646,B-,Provisional,Alevel
 2021,202021,All independent schools,Independent schools,Male,17410,48.1189,A-,Provisional,Alevel
 2021,202021,All schools,All schools,Male,99861,41.1844,B,Provisional,Alevel
@@ -100,7 +100,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2021,202021,Sixth form colleges,FE sector colleges,Male,14084,37.8943,B-,Provisional,Alevel
 2021,202021,Sponsored academies - mainstream,State-funded schools,Male,7870,37.1746,B-,Provisional,Alevel
 2021,202021,Studio schools,State-funded schools,Male,161,35.6068,B-,Provisional,Alevel
-2021,202021,University Technical Colleges (UTCs),State-funded schools,Male,853,34.8591,C+,Provisional,Alevel
+2021,202021,University technical colleges (UTCs),State-funded schools,Male,853,34.8591,C+,Provisional,Alevel
 2020,201920,All FE sector colleges,FE sector colleges,All students,57963,36.596,B-,Provisional,Alevel
 2020,201920,All independent schools,Independent schools,All students,34836,46.4127,A-,Provisional,Alevel
 2020,201920,All schools,All schools,All students,215072,40.2177,B,Provisional,Alevel
@@ -117,7 +117,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2020,201920,Sixth form colleges,FE sector colleges,All students,34659,38.2146,B-,Provisional,Alevel
 2020,201920,Sponsored academies - mainstream,State-funded schools,All students,18103,36.1329,B-,Provisional,Alevel
 2020,201920,Studio schools,State-funded schools,All students,271,36.7416,B-,Provisional,Alevel
-2020,201920,University Technical Colleges (UTCs),State-funded schools,All students,1185,33.4449,C+,Provisional,Alevel
+2020,201920,University technical colleges (UTCs),State-funded schools,All students,1185,33.4449,C+,Provisional,Alevel
 2020,201920,All FE sector colleges,FE sector colleges,Female,34266,37.3959,B-,Provisional,Alevel
 2020,201920,All independent schools,Independent schools,Female,17629,47.3903,A-,Provisional,Alevel
 2020,201920,All schools,All schools,Female,117004,40.9614,B,Provisional,Alevel
@@ -134,7 +134,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2020,201920,Sixth form colleges,FE sector colleges,Female,20071,39.1414,B,Provisional,Alevel
 2020,201920,Sponsored academies - mainstream,State-funded schools,Female,10174,36.9905,B-,Provisional,Alevel
 2020,201920,Studio schools,State-funded schools,Female,140,39.2308,B,Provisional,Alevel
-2020,201920,University Technical Colleges (UTCs),State-funded schools,Female,351,34.4081,C+,Provisional,Alevel
+2020,201920,University technical colleges (UTCs),State-funded schools,Female,351,34.4081,C+,Provisional,Alevel
 2020,201920,All FE sector colleges,FE sector colleges,Male,23697,35.4471,B-,Provisional,Alevel
 2020,201920,All independent schools,Independent schools,Male,17203,45.3796,A-,Provisional,Alevel
 2020,201920,All schools,All schools,Male,98064,39.3276,B,Provisional,Alevel
@@ -151,7 +151,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2020,201920,Sixth form colleges,FE sector colleges,Male,14588,36.9547,B-,Provisional,Alevel
 2020,201920,Sponsored academies - mainstream,State-funded schools,Male,7929,35.0113,B-,Provisional,Alevel
 2020,201920,Studio schools,State-funded schools,Male,131,33.6028,C+,Provisional,Alevel
-2020,201920,University Technical Colleges (UTCs),State-funded schools,Male,834,33.0651,C+,Provisional,Alevel
+2020,201920,University technical colleges (UTCs),State-funded schools,Male,834,33.0651,C+,Provisional,Alevel
 2019,201819,All FE sector colleges,FE sector colleges,All students,66025,31.5806,C,Provisional,Alevel
 2019,201819,All independent schools,Independent schools,All students,36670,40.9235,B,Provisional,Alevel
 2019,201819,All schools,All schools,All students,228647,34.2785,C+,Provisional,Alevel
@@ -168,7 +168,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2019,201819,Sixth form colleges,FE sector colleges,All students,40882,33.5725,C+,Provisional,Alevel
 2019,201819,Sponsored academies - mainstream,State-funded schools,All students,20172,28.19,C-,Provisional,Alevel
 2019,201819,Studio schools,State-funded schools,All students,354,25.3853,C-,Provisional,Alevel
-2019,201819,University Technical Colleges (UTCs),State-funded schools,All students,1297,22.9089,D+,Provisional,Alevel
+2019,201819,University technical colleges (UTCs),State-funded schools,All students,1297,22.9089,D+,Provisional,Alevel
 2019,201819,All FE sector colleges,FE sector colleges,Female,38624,32.1905,C+,Provisional,Alevel
 2019,201819,All independent schools,Independent schools,Female,18187,41.7931,B+,Provisional,Alevel
 2019,201819,All schools,All schools,Female,122210,34.8821,C+,Provisional,Alevel
@@ -185,7 +185,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2019,201819,Sixth form colleges,FE sector colleges,Female,23465,34.1918,C+,Provisional,Alevel
 2019,201819,Sponsored academies - mainstream,State-funded schools,Female,10870,29.1085,C,Provisional,Alevel
 2019,201819,Studio schools,State-funded schools,Female,137,25.8876,C-,Provisional,Alevel
-2019,201819,University Technical Colleges (UTCs),State-funded schools,Female,364,24.4033,D+,Provisional,Alevel
+2019,201819,University technical colleges (UTCs),State-funded schools,Female,364,24.4033,D+,Provisional,Alevel
 2019,201819,All FE sector colleges,FE sector colleges,Male,27401,30.7129,C,Provisional,Alevel
 2019,201819,All independent schools,Independent schools,Male,18482,40.0404,B,Provisional,Alevel
 2019,201819,All schools,All schools,Male,106436,33.5718,C+,Provisional,Alevel
@@ -202,7 +202,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2019,201819,Sixth form colleges,FE sector colleges,Male,17417,32.7285,C+,Provisional,Alevel
 2019,201819,Sponsored academies - mainstream,State-funded schools,Male,9302,27.0743,C-,Provisional,Alevel
 2019,201819,Studio schools,State-funded schools,Male,217,25.0815,C-,Provisional,Alevel
-2019,201819,University Technical Colleges (UTCs),State-funded schools,Male,933,22.2753,D+,Provisional,Alevel
+2019,201819,University technical colleges (UTCs),State-funded schools,Male,933,22.2753,D+,Provisional,Alevel
 2018,201718,All FE sector colleges,FE sector colleges,All students,76552,31.13,C,Revised,Alevel
 2018,201718,All independent schools,Independent schools,All students,36532,41.31,B,Revised,Alevel
 2018,201718,All schools,All schools,All students,232035,33.87,C+,Revised,Alevel
@@ -372,7 +372,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2022,202122,Sixth form colleges,FE sector colleges,All students,1588,34.9535,Dist,Provisional,Tech level
 2022,202122,Sponsored academies - mainstream,State-funded schools,All students,1607,33.9447,Dist,Provisional,Tech level
 2022,202122,Studio schools,State-funded schools,All students,135,30.5835,Dist-,Provisional,Tech level
-2022,202122,University Technical Colleges (UTCs),State-funded schools,All students,1313,32.7248,Dist-,Provisional,Tech level
+2022,202122,University technical colleges (UTCs),State-funded schools,All students,1313,32.7248,Dist-,Provisional,Tech level
 2022,202122,All FE sector colleges,FE sector colleges,Female,9823,29.4096,Merit+,Provisional,Tech level
 2022,202122,All independent schools,Independent schools,Female,46,39.7131,Dist+,Provisional,Tech level
 2022,202122,All schools,All schools,Female,2748,37.0954,Dist+,Provisional,Tech level
@@ -389,7 +389,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2022,202122,Sixth form colleges,FE sector colleges,Female,483,35.8653,Dist,Provisional,Tech level
 2022,202122,Sponsored academies - mainstream,State-funded schools,Female,493,34.9533,Dist,Provisional,Tech level
 2022,202122,Studio schools,State-funded schools,Female,32,28.4127,Merit+,Provisional,Tech level
-2022,202122,University Technical Colleges (UTCs),State-funded schools,Female,209,37.224,Dist+,Provisional,Tech level
+2022,202122,University technical colleges (UTCs),State-funded schools,Female,209,37.224,Dist+,Provisional,Tech level
 2022,202122,All FE sector colleges,FE sector colleges,Male,7966,28.5486,Merit+,Provisional,Tech level
 2022,202122,All independent schools,Independent schools,Male,135,32.9082,Dist-,Provisional,Tech level
 2022,202122,All schools,All schools,Male,6546,33.9556,Dist,Provisional,Tech level
@@ -406,7 +406,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2022,202122,Sixth form colleges,FE sector colleges,Male,1105,34.5216,Dist,Provisional,Tech level
 2022,202122,Sponsored academies - mainstream,State-funded schools,Male,1114,33.4294,Dist,Provisional,Tech level
 2022,202122,Studio schools,State-funded schools,Male,103,31.3208,Dist-,Provisional,Tech level
-2022,202122,University Technical Colleges (UTCs),State-funded schools,Male,1104,31.9499,Dist-,Provisional,Tech level
+2022,202122,University technical colleges (UTCs),State-funded schools,Male,1104,31.9499,Dist-,Provisional,Tech level
 2021,202021,All FE sector colleges,FE sector colleges,All students,12198,29.9315,Merit+,Provisional,Tech level
 2021,202021,All independent schools,Independent schools,All students,120,36.9914,Dist+,Provisional,Tech level
 2021,202021,All schools,All schools,All students,8150,35.7248,Dist,Provisional,Tech level
@@ -423,7 +423,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2021,202021,Sixth form colleges,FE sector colleges,All students,777,38.5425,Dist+,Provisional,Tech level
 2021,202021,Sponsored academies - mainstream,State-funded schools,All students,1594,34.8922,Dist,Provisional,Tech level
 2021,202021,Studio schools,State-funded schools,All students,139,31.2041,Dist-,Provisional,Tech level
-2021,202021,University Technical Colleges (UTCs),State-funded schools,All students,1080,33.0669,Dist-,Provisional,Tech level
+2021,202021,University technical colleges (UTCs),State-funded schools,All students,1080,33.0669,Dist-,Provisional,Tech level
 2021,202021,All FE sector colleges,FE sector colleges,Female,7873,30.8462,Dist-,Provisional,Tech level
 2021,202021,All independent schools,Independent schools,Female,31,38.7209,Dist+,Provisional,Tech level
 2021,202021,All schools,All schools,Female,2540,37.7394,Dist+,Provisional,Tech level
@@ -440,7 +440,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2021,202021,Sixth form colleges,FE sector colleges,Female,307,39.4595,Dist+,Provisional,Tech level
 2021,202021,Sponsored academies - mainstream,State-funded schools,Female,479,35.9835,Dist,Provisional,Tech level
 2021,202021,Studio schools,State-funded schools,Female,41,31.7576,Dist-,Provisional,Tech level
-2021,202021,University Technical Colleges (UTCs),State-funded schools,Female,219,35.9614,Dist,Provisional,Tech level
+2021,202021,University technical colleges (UTCs),State-funded schools,Female,219,35.9614,Dist,Provisional,Tech level
 2021,202021,All FE sector colleges,FE sector colleges,Male,4325,28.2347,Merit+,Provisional,Tech level
 2021,202021,All independent schools,Independent schools,Male,89,36.4259,Dist,Provisional,Tech level
 2021,202021,All schools,All schools,Male,5610,34.7623,Dist,Provisional,Tech level
@@ -457,7 +457,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2021,202021,Sixth form colleges,FE sector colleges,Male,470,37.9142,Dist+,Provisional,Tech level
 2021,202021,Sponsored academies - mainstream,State-funded schools,Male,1115,34.3762,Dist,Provisional,Tech level
 2021,202021,Studio schools,State-funded schools,Male,98,30.9446,Dist-,Provisional,Tech level
-2021,202021,University Technical Colleges (UTCs),State-funded schools,Male,861,32.3556,Dist-,Provisional,Tech level
+2021,202021,University technical colleges (UTCs),State-funded schools,Male,861,32.3556,Dist-,Provisional,Tech level
 2020,201920,All FE sector colleges,FE sector colleges,All students,14286,27.5366,Merit+,Provisional,Tech level
 2020,201920,All independent schools,Independent schools,All students,85,32.4228,Dist-,Provisional,Tech level
 2020,201920,All schools,All schools,All students,8015,34.686,Dist,Provisional,Tech level
@@ -474,7 +474,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2020,201920,Sixth form colleges,FE sector colleges,All students,766,35.5915,Dist,Provisional,Tech level
 2020,201920,Sponsored academies - mainstream,State-funded schools,All students,1483,34.6982,Dist,Provisional,Tech level
 2020,201920,Studio schools,State-funded schools,All students,153,31.6555,Dist-,Provisional,Tech level
-2020,201920,University Technical Colleges (UTCs),State-funded schools,All students,1113,32.5915,Dist-,Provisional,Tech level
+2020,201920,University technical colleges (UTCs),State-funded schools,All students,1113,32.5915,Dist-,Provisional,Tech level
 2020,201920,All FE sector colleges,FE sector colleges,Female,9945,28.3851,Merit+,Provisional,Tech level
 2020,201920,All independent schools,Independent schools,Female,24,34.3697,Dist,Provisional,Tech level
 2020,201920,All schools,All schools,Female,2465,36.8579,Dist+,Provisional,Tech level
@@ -491,7 +491,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2020,201920,Sixth form colleges,FE sector colleges,Female,305,36.3867,Dist,Provisional,Tech level
 2020,201920,Sponsored academies - mainstream,State-funded schools,Female,466,35.9617,Dist,Provisional,Tech level
 2020,201920,Studio schools,State-funded schools,Female,50,30.4787,Dist-,Provisional,Tech level
-2020,201920,University Technical Colleges (UTCs),State-funded schools,Female,197,37.8634,Dist+,Provisional,Tech level
+2020,201920,University technical colleges (UTCs),State-funded schools,Female,197,37.8634,Dist+,Provisional,Tech level
 2020,201920,All FE sector colleges,FE sector colleges,Male,4341,25.6235,Merit,Provisional,Tech level
 2020,201920,All independent schools,Independent schools,Male,61,31.6556,Dist-,Provisional,Tech level
 2020,201920,All schools,All schools,Male,5550,33.6453,Dist,Provisional,Tech level
@@ -508,7 +508,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2020,201920,Sixth form colleges,FE sector colleges,Male,461,35.0028,Dist,Provisional,Tech level
 2020,201920,Sponsored academies - mainstream,State-funded schools,Male,1017,34.0423,Dist,Provisional,Tech level
 2020,201920,Studio schools,State-funded schools,Male,103,32.1951,Dist-,Provisional,Tech level
-2020,201920,University Technical Colleges (UTCs),State-funded schools,Male,916,31.507,Dist-,Provisional,Tech level
+2020,201920,University technical colleges (UTCs),State-funded schools,Male,916,31.507,Dist-,Provisional,Tech level
 2019,201819,All FE sector colleges,FE sector colleges,All students,12667,26.7524,Merit+,Provisional,Tech level
 2019,201819,All independent schools,Independent schools,All students,45,29.5276,Merit+,Provisional,Tech level
 2019,201819,All schools,All schools,All students,7077,32.1009,Dist-,Provisional,Tech level
@@ -525,7 +525,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2019,201819,Sixth form colleges,FE sector colleges,All students,667,34.5649,Dist,Provisional,Tech level
 2019,201819,Sponsored academies - mainstream,State-funded schools,All students,1483,31.1728,Dist-,Provisional,Tech level
 2019,201819,Studio schools,State-funded schools,All students,160,30.3333,Dist-,Provisional,Tech level
-2019,201819,University Technical Colleges (UTCs),State-funded schools,All students,855,31.1067,Dist-,Provisional,Tech level
+2019,201819,University technical colleges (UTCs),State-funded schools,All students,855,31.1067,Dist-,Provisional,Tech level
 2019,201819,All FE sector colleges,FE sector colleges,Female,8971,27.1258,Merit+,Provisional,Tech level
 2019,201819,All independent schools,Independent schools,Female,8,23.4783,Merit,Provisional,Tech level
 2019,201819,All schools,All schools,Female,2119,33.2842,Dist-,Provisional,Tech level
@@ -542,7 +542,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2019,201819,Sixth form colleges,FE sector colleges,Female,290,35.0103,Dist,Provisional,Tech level
 2019,201819,Sponsored academies - mainstream,State-funded schools,Female,466,31.2859,Dist-,Provisional,Tech level
 2019,201819,Studio schools,State-funded schools,Female,37,34.0476,Dist,Provisional,Tech level
-2019,201819,University Technical Colleges (UTCs),State-funded schools,Female,129,33.8672,Dist,Provisional,Tech level
+2019,201819,University technical colleges (UTCs),State-funded schools,Female,129,33.8672,Dist,Provisional,Tech level
 2019,201819,All FE sector colleges,FE sector colleges,Male,3696,25.8888,Merit,Provisional,Tech level
 2019,201819,All independent schools,Independent schools,Male,37,30.8654,Dist-,Provisional,Tech level
 2019,201819,All schools,All schools,Male,4958,31.5429,Dist-,Provisional,Tech level
@@ -559,7 +559,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2019,201819,Sixth form colleges,FE sector colleges,Male,377,34.2301,Dist,Provisional,Tech level
 2019,201819,Sponsored academies - mainstream,State-funded schools,Male,1017,31.1134,Dist-,Provisional,Tech level
 2019,201819,Studio schools,State-funded schools,Male,123,29.2992,Merit+,Provisional,Tech level
-2019,201819,University Technical Colleges (UTCs),State-funded schools,Male,726,30.6448,Dist-,Provisional,Tech level
+2019,201819,University technical colleges (UTCs),State-funded schools,Male,726,30.6448,Dist-,Provisional,Tech level
 2018,201718,All FE sector colleges,FE sector colleges,All students,7017,25.6,Merit,Revised,Tech level
 2018,201718,All FE sector colleges,FE sector colleges,Female,5229,26.26,Merit,Revised,Tech level
 2018,201718,All FE sector colleges,FE sector colleges,Male,1788,23.45,Merit,Revised,Tech level
@@ -608,9 +608,9 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2018,201718,Studio schools,State-funded schools,All students,133,27.29,Merit+,Revised,Tech level
 2018,201718,Studio schools,State-funded schools,Male,97,27.01,Merit+,Revised,Tech level
 2018,201718,Studio schools,State-funded schools,Female,36,28.01,Merit+,Revised,Tech level
-2018,201718,University Technical Colleges (UTCs),State-funded schools,All students,734,30.41,Dist-,Revised,Tech level
-2018,201718,University Technical Colleges (UTCs),State-funded schools,Male,643,30.1,Dist-,Revised,Tech level
-2018,201718,University Technical Colleges (UTCs),State-funded schools,Female,91,32.67,Dist-,Revised,Tech level
+2018,201718,University technical colleges (UTCs),State-funded schools,All students,734,30.41,Dist-,Revised,Tech level
+2018,201718,University technical colleges (UTCs),State-funded schools,Male,643,30.1,Dist-,Revised,Tech level
+2018,201718,University technical colleges (UTCs),State-funded schools,Female,91,32.67,Dist-,Revised,Tech level
 2017,201617,All FE sector colleges,FE sector colleges,All students,52225,31.13,Dist-,Revised,Tech level
 2017,201617,All FE sector colleges,FE sector colleges,Female,23696,31.8,Dist-,Revised,Tech level
 2017,201617,All FE sector colleges,FE sector colleges,Male,28529,30.61,Dist-,Revised,Tech level
@@ -659,9 +659,9 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2017,201617,Studio schools,State-funded schools,All students,222,33.69,Dist,Revised,Tech level
 2017,201617,Studio schools,State-funded schools,Female,56,34.19,Dist,Revised,Tech level
 2017,201617,Studio schools,State-funded schools,Male,166,33.53,Dist,Revised,Tech level
-2017,201617,University Technical Colleges (UTCs),State-funded schools,All students,1218,36.47,Dist,Revised,Tech level
-2017,201617,University Technical Colleges (UTCs),State-funded schools,Female,197,39.32,Dist+,Revised,Tech level
-2017,201617,University Technical Colleges (UTCs),State-funded schools,Male,1021,35.98,Dist,Revised,Tech level
+2017,201617,University technical colleges (UTCs),State-funded schools,All students,1218,36.47,Dist,Revised,Tech level
+2017,201617,University technical colleges (UTCs),State-funded schools,Female,197,39.32,Dist+,Revised,Tech level
+2017,201617,University technical colleges (UTCs),State-funded schools,Male,1021,35.98,Dist,Revised,Tech level
 2016,201516,All FE sector colleges,FE sector colleges,All students,57020,29.73,Merit+,Revised,Tech level
 2016,201516,All FE sector colleges,FE sector colleges,Female,24315,30.92,Dist-,Revised,Tech level
 2016,201516,All FE sector colleges,FE sector colleges,Male,32705,28.9,Merit+,Revised,Tech level
@@ -710,9 +710,9 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2016,201516,Studio schools,State-funded schools,All students,268,32.73,Dist-,Revised,Tech level
 2016,201516,Studio schools,State-funded schools,Female,70,33.44,Dist,Revised,Tech level
 2016,201516,Studio schools,State-funded schools,Male,198,32.51,Dist-,Revised,Tech level
-2016,201516,University Technical Colleges (UTCs),State-funded schools,All students,848,35.73,Dist,Revised,Tech level
-2016,201516,University Technical Colleges (UTCs),State-funded schools,Female,111,37.61,Dist+,Revised,Tech level
-2016,201516,University Technical Colleges (UTCs),State-funded schools,Male,737,35.48,Dist,Revised,Tech level
+2016,201516,University technical colleges (UTCs),State-funded schools,All students,848,35.73,Dist,Revised,Tech level
+2016,201516,University technical colleges (UTCs),State-funded schools,Female,111,37.61,Dist+,Revised,Tech level
+2016,201516,University technical colleges (UTCs),State-funded schools,Male,737,35.48,Dist,Revised,Tech level
 2022,202122,All FE sector colleges,FE sector colleges,All students,48807,30.2545,Dist-,Provisional,Applied general
 2022,202122,All independent schools,Independent schools,All students,2189,36.539,Dist,Provisional,Applied general
 2022,202122,All schools,All schools,All students,69837,33.3582,Dist,Provisional,Applied general
@@ -729,7 +729,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2022,202122,Sixth form colleges,FE sector colleges,All students,17698,33.6112,Dist,Provisional,Applied general
 2022,202122,Sponsored academies - mainstream,State-funded schools,All students,11878,32.8882,Dist-,Provisional,Applied general
 2022,202122,Studio schools,State-funded schools,All students,378,30.2788,Dist-,Provisional,Applied general
-2022,202122,University Technical Colleges (UTCs),State-funded schools,All students,993,32.5131,Dist-,Provisional,Applied general
+2022,202122,University technical colleges (UTCs),State-funded schools,All students,993,32.5131,Dist-,Provisional,Applied general
 2022,202122,All FE sector colleges,FE sector colleges,Female,26983,31.7519,Dist-,Provisional,Applied general
 2022,202122,All independent schools,Independent schools,Female,852,39.4185,Dist+,Provisional,Applied general
 2022,202122,All schools,All schools,Female,37572,34.5354,Dist,Provisional,Applied general
@@ -746,7 +746,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2022,202122,Sixth form colleges,FE sector colleges,Female,10488,34.9108,Dist,Provisional,Applied general
 2022,202122,Sponsored academies - mainstream,State-funded schools,Female,6116,34.0328,Dist,Provisional,Applied general
 2022,202122,Studio schools,State-funded schools,Female,195,30.2813,Dist-,Provisional,Applied general
-2022,202122,University Technical Colleges (UTCs),State-funded schools,Female,413,34.2216,Dist,Provisional,Applied general
+2022,202122,University technical colleges (UTCs),State-funded schools,Female,413,34.2216,Dist,Provisional,Applied general
 2022,202122,All FE sector colleges,FE sector colleges,Male,21824,28.5418,Merit+,Provisional,Applied general
 2022,202122,All independent schools,Independent schools,Male,1337,34.8428,Dist,Provisional,Applied general
 2022,202122,All schools,All schools,Male,32265,32.0084,Dist-,Provisional,Applied general
@@ -763,7 +763,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2022,202122,Sixth form colleges,FE sector colleges,Male,7210,31.8215,Dist-,Provisional,Applied general
 2022,202122,Sponsored academies - mainstream,State-funded schools,Male,5762,31.6948,Dist-,Provisional,Applied general
 2022,202122,Studio schools,State-funded schools,Male,183,30.2755,Dist-,Provisional,Applied general
-2022,202122,University Technical Colleges (UTCs),State-funded schools,Male,580,30.9141,Dist-,Provisional,Applied general
+2022,202122,University technical colleges (UTCs),State-funded schools,Male,580,30.9141,Dist-,Provisional,Applied general
 2021,202021,All FE sector colleges,FE sector colleges,All students,26809,30.2302,Dist-,Provisional,Applied general
 2021,202021,All independent schools,Independent schools,All students,1935,35.7944,Dist,Provisional,Applied general
 2021,202021,All schools,All schools,All students,59502,34.1874,Dist,Provisional,Applied general
@@ -780,7 +780,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2021,202021,Sixth form colleges,FE sector colleges,All students,8558,33.4383,Dist,Provisional,Applied general
 2021,202021,Sponsored academies - mainstream,State-funded schools,All students,10645,34.0894,Dist,Provisional,Applied general
 2021,202021,Studio schools,State-funded schools,All students,333,31.6264,Dist-,Provisional,Applied general
-2021,202021,University Technical Colleges (UTCs),State-funded schools,All students,849,32.6889,Dist-,Provisional,Applied general
+2021,202021,University technical colleges (UTCs),State-funded schools,All students,849,32.6889,Dist-,Provisional,Applied general
 2021,202021,All FE sector colleges,FE sector colleges,Female,15071,32.2028,Dist-,Provisional,Applied general
 2021,202021,All independent schools,Independent schools,Female,760,37.9687,Dist+,Provisional,Applied general
 2021,202021,All schools,All schools,Female,31940,35.816,Dist,Provisional,Applied general
@@ -797,7 +797,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2021,202021,Sixth form colleges,FE sector colleges,Female,5217,34.801,Dist,Provisional,Applied general
 2021,202021,Sponsored academies - mainstream,State-funded schools,Female,5621,35.8657,Dist,Provisional,Applied general
 2021,202021,Studio schools,State-funded schools,Female,177,33.2526,Dist-,Provisional,Applied general
-2021,202021,University Technical Colleges (UTCs),State-funded schools,Female,328,34.6216,Dist,Provisional,Applied general
+2021,202021,University technical colleges (UTCs),State-funded schools,Female,328,34.6216,Dist,Provisional,Applied general
 2021,202021,All FE sector colleges,FE sector colleges,Male,11738,27.8683,Merit+,Provisional,Applied general
 2021,202021,All independent schools,Independent schools,Male,1175,34.5082,Dist,Provisional,Applied general
 2021,202021,All schools,All schools,Male,27562,32.3459,Dist-,Provisional,Applied general
@@ -814,7 +814,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2021,202021,Sixth form colleges,FE sector colleges,Male,3341,31.3795,Dist-,Provisional,Applied general
 2021,202021,Sponsored academies - mainstream,State-funded schools,Male,5024,32.1437,Dist-,Provisional,Applied general
 2021,202021,Studio schools,State-funded schools,Male,156,29.2816,Merit+,Provisional,Applied general
-2021,202021,University Technical Colleges (UTCs),State-funded schools,Male,521,31.1705,Dist-,Provisional,Applied general
+2021,202021,University technical colleges (UTCs),State-funded schools,Male,521,31.1705,Dist-,Provisional,Applied general
 2020,201920,All FE sector colleges,FE sector colleges,All students,25964,28.1972,Merit+,Provisional,Applied general
 2020,201920,All independent schools,Independent schools,All students,1538,33.2179,Dist-,Provisional,Applied general
 2020,201920,All schools,All schools,All students,54100,32.7477,Dist-,Provisional,Applied general
@@ -831,7 +831,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2020,201920,Sixth form colleges,FE sector colleges,All students,7349,31.4745,Dist-,Provisional,Applied general
 2020,201920,Sponsored academies - mainstream,State-funded schools,All students,10016,33.5889,Dist,Provisional,Applied general
 2020,201920,Studio schools,State-funded schools,All students,320,31.9131,Dist-,Provisional,Applied general
-2020,201920,University Technical Colleges (UTCs),State-funded schools,All students,699,30.8934,Dist-,Provisional,Applied general
+2020,201920,University technical colleges (UTCs),State-funded schools,All students,699,30.8934,Dist-,Provisional,Applied general
 2020,201920,All FE sector colleges,FE sector colleges,Female,14345,30.0423,Dist-,Provisional,Applied general
 2020,201920,All independent schools,Independent schools,Female,572,35.8406,Dist,Provisional,Applied general
 2020,201920,All schools,All schools,Female,28692,34.2348,Dist,Provisional,Applied general
@@ -848,7 +848,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2020,201920,Sixth form colleges,FE sector colleges,Female,4429,32.87,Dist-,Provisional,Applied general
 2020,201920,Sponsored academies - mainstream,State-funded schools,Female,5272,35.0693,Dist,Provisional,Applied general
 2020,201920,Studio schools,State-funded schools,Female,177,33.7393,Dist,Provisional,Applied general
-2020,201920,University Technical Colleges (UTCs),State-funded schools,Female,256,33.1624,Dist-,Provisional,Applied general
+2020,201920,University technical colleges (UTCs),State-funded schools,Female,256,33.1624,Dist-,Provisional,Applied general
 2020,201920,All FE sector colleges,FE sector colleges,Male,11619,26.0406,Merit,Provisional,Applied general
 2020,201920,All independent schools,Independent schools,Male,966,31.7842,Dist-,Provisional,Applied general
 2020,201920,All schools,All schools,Male,25408,31.0869,Dist-,Provisional,Applied general
@@ -865,7 +865,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2020,201920,Sixth form colleges,FE sector colleges,Male,2920,29.4134,Merit+,Provisional,Applied general
 2020,201920,Sponsored academies - mainstream,State-funded schools,Male,4744,31.9557,Dist-,Provisional,Applied general
 2020,201920,Studio schools,State-funded schools,Male,143,29.3422,Merit+,Provisional,Applied general
-2020,201920,University Technical Colleges (UTCs),State-funded schools,Male,443,29.1959,Merit+,Provisional,Applied general
+2020,201920,University technical colleges (UTCs),State-funded schools,Male,443,29.1959,Merit+,Provisional,Applied general
 2019,201819,All FE sector colleges,FE sector colleges,All students,22190,26.7735,Merit+,Provisional,Applied general
 2019,201819,All independent schools,Independent schools,All students,1009,30.5492,Dist-,Provisional,Applied general
 2019,201819,All schools,All schools,All students,43633,29.2365,Merit+,Provisional,Applied general
@@ -882,7 +882,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2019,201819,Sixth form colleges,FE sector colleges,All students,6611,29.1396,Merit+,Provisional,Applied general
 2019,201819,Sponsored academies - mainstream,State-funded schools,All students,8899,29.3337,Merit+,Provisional,Applied general
 2019,201819,Studio schools,State-funded schools,All students,294,27.5515,Merit+,Provisional,Applied general
-2019,201819,University Technical Colleges (UTCs),State-funded schools,All students,679,30.5106,Dist-,Provisional,Applied general
+2019,201819,University technical colleges (UTCs),State-funded schools,All students,679,30.5106,Dist-,Provisional,Applied general
 2019,201819,All FE sector colleges,FE sector colleges,Female,12356,28.3525,Merit+,Provisional,Applied general
 2019,201819,All independent schools,Independent schools,Female,450,32.6619,Dist-,Provisional,Applied general
 2019,201819,All schools,All schools,Female,22458,30.5926,Dist-,Provisional,Applied general
@@ -899,7 +899,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2019,201819,Sixth form colleges,FE sector colleges,Female,3831,30.2703,Dist-,Provisional,Applied general
 2019,201819,Sponsored academies - mainstream,State-funded schools,Female,4468,30.5881,Dist-,Provisional,Applied general
 2019,201819,Studio schools,State-funded schools,Female,147,29.1655,Merit+,Provisional,Applied general
-2019,201819,University Technical Colleges (UTCs),State-funded schools,Female,248,33.0227,Dist-,Provisional,Applied general
+2019,201819,University technical colleges (UTCs),State-funded schools,Female,248,33.0227,Dist-,Provisional,Applied general
 2019,201819,All FE sector colleges,FE sector colleges,Male,9834,24.8463,Merit,Provisional,Applied general
 2019,201819,All independent schools,Independent schools,Male,559,28.9812,Merit+,Provisional,Applied general
 2019,201819,All schools,All schools,Male,21175,27.77,Merit+,Provisional,Applied general
@@ -916,7 +916,7 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2019,201819,Sixth form colleges,FE sector colleges,Male,2780,27.6091,Merit+,Provisional,Applied general
 2019,201819,Sponsored academies - mainstream,State-funded schools,Male,4431,28.0112,Merit+,Provisional,Applied general
 2019,201819,Studio schools,State-funded schools,Male,147,25.6835,Merit,Provisional,Applied general
-2019,201819,University Technical Colleges (UTCs),State-funded schools,Male,431,28.7701,Merit+,Provisional,Applied general
+2019,201819,University technical colleges (UTCs),State-funded schools,Male,431,28.7701,Merit+,Provisional,Applied general
 2018,201718,Other FE sector colleges,FE sector colleges,All students,6175,25.19,Merit,Revised,Applied general
 2018,201718,Sixth form colleges,FE sector colleges,All students,4492,28.41,Merit+,Revised,Applied general
 2018,201718,Sixth form colleges,FE sector colleges,Female,2505,29.63,Merit+,Revised,Applied general
@@ -962,9 +962,9 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2018,201718,Sponsored academies - mainstream,State-funded schools,Female,3832,30.17,Dist-,Revised,Applied general
 2018,201718,Sponsored academies - mainstream,State-funded schools,Male,3678,27.4,Merit+,Revised,Applied general
 2018,201718,Studio schools,State-funded schools,Male,149,29.27,Merit+,Revised,Applied general
-2018,201718,University Technical Colleges (UTCs),State-funded schools,All students,537,29.94,Merit+,Revised,Applied general
-2018,201718,University Technical Colleges (UTCs),State-funded schools,Female,177,33.85,Dist,Revised,Applied general
-2018,201718,University Technical Colleges (UTCs),State-funded schools,Male,360,27.5,Merit+,Revised,Applied general
+2018,201718,University technical colleges (UTCs),State-funded schools,All students,537,29.94,Merit+,Revised,Applied general
+2018,201718,University technical colleges (UTCs),State-funded schools,Female,177,33.85,Dist,Revised,Applied general
+2018,201718,University technical colleges (UTCs),State-funded schools,Male,360,27.5,Merit+,Revised,Applied general
 2018,201718,All state-funded schools and colleges,All state-funded,All students,45245,28.43,Merit+,Revised,Applied general
 2018,201718,All state-funded schools and colleges,All state-funded,Female,23825,29.8,Merit+,Revised,Applied general
 2018,201718,All state-funded schools and colleges,All state-funded,Male,21420,26.84,Merit+,Revised,Applied general
@@ -1013,9 +1013,9 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2017,201617,Studio schools,State-funded schools,All students,389,35.83,Dist,Revised,Applied general
 2017,201617,Studio schools,State-funded schools,Female,202,38.83,Dist+,Revised,Applied general
 2017,201617,Studio schools,State-funded schools,Male,187,32.02,Dist-,Revised,Applied general
-2017,201617,University Technical Colleges (UTCs),State-funded schools,All students,501,36.43,Dist,Revised,Applied general
-2017,201617,University Technical Colleges (UTCs),State-funded schools,Female,192,40.3,Dist+,Revised,Applied general
-2017,201617,University Technical Colleges (UTCs),State-funded schools,Male,309,32.89,Dist-,Revised,Applied general
+2017,201617,University technical colleges (UTCs),State-funded schools,All students,501,36.43,Dist,Revised,Applied general
+2017,201617,University technical colleges (UTCs),State-funded schools,Female,192,40.3,Dist+,Revised,Applied general
+2017,201617,University technical colleges (UTCs),State-funded schools,Male,309,32.89,Dist-,Revised,Applied general
 2017,201617,All state-funded schools and colleges,All state-funded,All students,122282,35.69,Dist,Revised,Applied general
 2017,201617,All state-funded schools and colleges,All state-funded,Female,62012,37.66,Dist+,Revised,Applied general
 2017,201617,All state-funded schools and colleges,All state-funded,Male,60270,33.57,Dist,Revised,Applied general
@@ -1064,9 +1064,9 @@ year,time_period,school_type,school_type_group,characteristic_gender,number_of_s
 2016,201516,Studio schools,State-funded schools,All students,378,32.43,Dist-,Revised,Applied general
 2016,201516,Studio schools,State-funded schools,Female,201,35.13,Dist,Revised,Applied general
 2016,201516,Studio schools,State-funded schools,Male,177,28.61,Merit+,Revised,Applied general
-2016,201516,University Technical Colleges (UTCs),State-funded schools,All students,400,32.32,Dist-,Revised,Applied general
-2016,201516,University Technical Colleges (UTCs),State-funded schools,Female,132,35.81,Dist,Revised,Applied general
-2016,201516,University Technical Colleges (UTCs),State-funded schools,Male,268,29.67,Merit+,Revised,Applied general
+2016,201516,University technical colleges (UTCs),State-funded schools,All students,400,32.32,Dist-,Revised,Applied general
+2016,201516,University technical colleges (UTCs),State-funded schools,Female,132,35.81,Dist,Revised,Applied general
+2016,201516,University technical colleges (UTCs),State-funded schools,Male,268,29.67,Merit+,Revised,Applied general
 2016,201516,All state-funded schools and colleges,All state-funded,All students,124269,34.66,Dist,Revised,Applied general
 2016,201516,All state-funded schools and colleges,All state-funded,Female,62341,36.67,Dist+,Revised,Applied general
 2016,201516,All state-funded schools and colleges,All state-funded,Male,61928,32.54,Dist-,Revised,Applied general

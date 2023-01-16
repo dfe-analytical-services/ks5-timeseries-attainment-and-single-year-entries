@@ -58,6 +58,7 @@
 
 ui <- function(input, output, session) {
   fluidPage(
+   # use_tota11y(),
     title = tags$head(tags$link(
       rel = "shortcut icon",
       href = "dfefavicon.png"
@@ -75,7 +76,7 @@ ui <- function(input, output, session) {
     shinyGovstyle::header(
       main_text = "DfE",
       main_link = "https://www.gov.uk/government/organisations/department-for-education",
-      secondary_text = "16 to 18 time series attainment and single year entries",
+      secondary_text = "16 to 18 time series attainment and single year entry",
       logo = "images/DfE_logo.png"
     ),
     shinyGovstyle::banner(

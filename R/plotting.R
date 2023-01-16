@@ -37,11 +37,10 @@ createTimeSeriesHeadline <- function(dfAps, allAps){
 # Joint plot function for  Alevel Aps from 2013  
 
 createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
-  validate(need(instType, message="To view charts select required student type from the drop-down menus at the top of the page, then choose 
-  between 1 and 4 institution groups followed by institution types."))
+  validate(need(dfAps$school_type, message="To view charts select type of students, select between 1 and 4 institution groups and institution types from the drop-down menus at the top page"))
   
   fig1<-ggplot(dfAps, aes(x=year_2013_2015, y=aps_2013_2015,
-                             color=school_type)) +
+                          color=fct_reorder2(school_type, year_2013_2015, aps_2013_2015))) +
     geom_line(stat="identity", size=1.5) +
     geom_curve(aes(x=2015.5, y=50, xend=2015, yend=45),
                arrow = arrow(length=unit(0.03, "npc"), type="closed"),
@@ -53,7 +52,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     scale_x_continuous(breaks=seq(2013,2015,1)) +
     scale_colour_manual(
       #"school type",
-      breaks = unique(dfAps$school_type),
+    #  breaks = unique(dfAps$school_type),
       values = gss_colour_pallette) +
     theme_classic()+
     labs(x="", y="")+
@@ -65,7 +64,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
           axis.line = element_line( size = 1.0)
           )
 
-  fig2<-ggplot(dfAps,  aes(x= year_2016_2022, y= aps_2016_2022, color= school_type)) +
+  fig2<-ggplot(dfAps,  aes(x= year_2016_2022, y= aps_2016_2022, color=fct_reorder2(school_type, year_2016_2022, aps_2016_2022 ))) +
     geom_line(stat="identity", size=1.5) +
     geom_curve(aes(x=2016.5, y=50, xend=2016, yend=45),  curvature=.3,
                arrow = arrow(length=unit(0.03, "npc"), type="closed"),
@@ -115,7 +114,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
 
 
 createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
-  validate(need(instType, message="To view charts select between 1 and 4 institution groups and institution types from the drop-down menus at the top page."))
+  validate(need(dfAps$school_type, message="To view chart select between 1 and 4 institution groups and institution types from the drop-down menus at the top page."))
   # 
   # fmFig<-ggplot(dfAps, aes(x=year_2016_2022, y=aps_2016_2022,
   #                         color=school_type)) +
@@ -133,6 +132,7 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
                  color="black", size=.05, angle=90 )+
       
       geom_label(aes(label=aps_grade_2016_2022, y=aps_2016_2022), show.legend=F)+
+     # geom_label_repel(aes(label=school_type), nudge_x = 1, na.rm=TRUE)+
       
       ggtitle(paste0("Average point score and grade \n", fmGender)) + #from 2016 to 2021") +
       coord_cartesian(ylim=c(10,60)) +
@@ -162,13 +162,16 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
 
 
 
-createGenderGap<- function(dfGgap, instGroup, instType){
-  validate(need(dfGgap$school_type, message="To view chart select between 1 and 4 institution groups and institution types from the drop-down menus at the top page."))
+createGenderGap<- function(dfAps, instGroup, instType){
+  validate(need(dfAps$school_type, message="To view chart select between 1 and 4 institution groups and institution types from the drop-down menus at the top page."))
   
+  fig<-dfAps %>%
+    rename(Year="year", Gender_gap="gender_gap", Institution_type="school_type")
  
-  fig<- ggplot(dfGgap, aes(x=year,
-                           y=gender_gap,
-                           color=school_type
+  fig<- ggplot(fig, aes(x=Year,
+                           y=Gender_gap,
+                           color=Institution_type
+                          #color=fct_reorder2(school_type, year, gender_gap)
                            )) +
     geom_line(stat="identity", size=1) +
     # geom_point(size=1)+
@@ -176,7 +179,7 @@ createGenderGap<- function(dfGgap, instGroup, instType){
     scale_y_continuous(labels=scales::comma) +
     scale_colour_manual(
      # "school type",
-     #breaks = unique(dfGgap$school_type),
+    #breaks = unique(dfAps$school_type),
      values = gss_colour_pallette) +
     labs(x="", y="", color="")+
     geom_hline(yintercept= 0, linetype='dot', col="navy", vjust=.80)+
@@ -195,10 +198,14 @@ createGenderGap<- function(dfGgap, instGroup, instType){
           axis.line = element_line( size = 1.0)) 
    # expand_limits(x=0, y=0)
 
-    ggplotly(fig)%>%
-      layout(legend=list(orientation="v", x=.99, y=.5))
+    ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
+      config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
+                                         "resetScale2d", "hoverCompareCartesian",
+              "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE, 
+              toImageButtonOptions = list(format="svg", text="Download chart") ) %>%
+      layout(legend=list(orientation="v", x=.99, y=.5), hovermode="x")
     
-    fig
+    #fig
   
   
 }
@@ -207,32 +214,44 @@ createGenderGap<- function(dfGgap, instGroup, instType){
 
 ##### Plot function for A level subject entries - for all ########################
 
-createTimeSeriesSubject<- function(dfSubject, subAll){
+createTimeSeriesSubject<- function(dfSubject, subAll, subName){
   validate(need(dfSubject$subject_name, message=" To view chart select type of students and up to 4 subjects from the drop-down menus. Finally select a start year."))
 
-  fig<-ggplot(dfSubject, aes(x=year,
-                         y=entry_count,
-                         color=subject_name
-                        #color=fct_reorder2(subject_name, year, entry_count)
+ fig<-dfSubject %>%
+   rename(Year="year", Entry_count="entry_count", Subject="subject_name")
+ #end_year<-fig %>% group_by(Subject, characteristic_gender) %>% filter(Year==max(Year))
+ 
+ fig<-ggplot(fig,
+              aes(x=Year,
+                  y=Entry_count,
+                 color=Subject,
+                 shape=Subject
+                # group=Subject
+                # color=fct_reorder2(Subject, Year, Entry_count)
                         )) +
-   
-    geom_line(stat="identity", size=1) +
+
+    geom_line(stat="identity", size=.5) +
+    geom_point(stat="identity", size=1.5, show.legend=F)+
 
 
-    scale_x_log10() +
+    #scale_x_log10(labels = dfSubject$year, breaks = dfSubject$year) +
+    scale_x_log10(breaks = seq(1996, 2022, 2)) +
     scale_y_continuous(labels=scales::comma) +
     scale_colour_manual(
-      "",
-     # breaks = unique(dfSubject$subject_name),
+
+
+     # breaks = unique(dfSubject$Subject),
       values = gss_colour_pallette) +
 
 
     labs(x="", y="", color="")+
+   #geom_text(data=end_year, aes(label=Subject, x=Year+0.5, y=Entry_count, color=Subject))+
+   
     theme_classic() +
 
-    theme(legend.position ="bottom",
+    theme(#legend.position ="",
           text = element_text(size = 12),
-          legend.direction = "vertical",
+        #  legend.direction = "vertical",
           plot.title=element_text(size=10),
           axis.text.x = element_text(angle = 300),
           axis.title.x = element_blank(),
@@ -240,49 +259,81 @@ createTimeSeriesSubject<- function(dfSubject, subAll){
           axis.line = element_line( size = 1.0)) +
    expand_limits(x=0, y=0) +
    ggtitle(paste0("\nEntry count:\n ",  subAll))
+ ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
+   config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
+                                      "resetScale2d", "hoverCompareCartesian", "lasso2d", "drawrect", "select2d",
+                                      "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE) %>%
+             layout(legend=list(orientation="v", x=.99, y=.5),
+                    hovermode="x")
 
- ggplotly(fig)%>%
-    layout(legend=list(orientation="v", x=.99, y=.5))
-
+#fig
 
 }
-  
+
+
 
 
 ##  plot for A level subject  cumulative results
 
-createTimeSeriesResult<- function(dfResult, resAll, subAll, subName){
-  validate(need(dfResult$subject_name, message="To view chart select type of students and up to 4 subjects from the drop-down menus. Select a cumulative percentage grade and finally select a start year."))
- 
-  fig<-ggplot(
-    dfResult, aes_string(x="year", y=resAll, color="subject_name")) +
-    geom_line(size=1)+
-    scale_x_log10() +
+
+
+createTimeSeriesResult<- function(dfSubject, subAll, resAll, subName){
+  validate(need(dfSubject$subject_name, message="To view chart select type of students and up to 4 subjects from the drop-down menus. Select a cumulative percentage grade and finally select a start year."))
+
+  fig<-dfSubject %>%
+    rename(Year="year", Subject="subject_name")
+
+
+  fig<-ggplot(fig, aes_string(x="Year", y=resAll, color="Subject", shape="Subject")) +
+  # fig<-
+  #   ggplot(fig, aes(x=Year,
+  #                    y=Percentage,
+  #                    color=Subject,
+  #                    shape=Subject
+
+
+                   # color=fct_reorder2(Subject, Year, Percentage)
+               #  )) +
+    geom_line(stat="identity", size=.5, show.legend=F) +
+    geom_point(stat= "identity", size=1.5, show.legend=F)+
+
+    # scale_x_log10(labels = dfResult$year, breaks = dfResult$year) +
+    scale_x_log10(breaks = seq(1996, 2022, 2)) +
     scale_y_continuous(labels=scales::comma) +
-    scale_colour_manual( 
-      "",
-    #breaks = unique(dfResult$subject_name),
-    values = gss_colour_pallette) +
+    scale_colour_manual(
+      # breaks = unique(dfSubject$Subject),
+      values = gss_colour_pallette) +
     labs(x="", y="", color="")+
     theme_classic() +
-    annotate ("rect", xmin= 2019.5, xmax=2021, ymin=5, ymax=100, alpha=.2)+
+    annotate ("rect", xmin= 2020, xmax=2021, ymin=5, ymax=100, alpha=.2)+
     theme(#legend.position ="centre",
+
+      legend.title = element_blank(),
       text = element_text(size = 12),
-          plot.title=element_text(size=10),
-          axis.text.x = element_text(angle = 300),
-          axis.title.x = element_blank(),
-          axis.title.y = element_text(margin = margin(r = 10)),
-          axis.line = element_line( size = 1.0)) +
+      plot.title=element_text(size=10),
+      axis.text.x = element_text(angle = 300),
+      axis.title.x = element_blank(),
+      axis.title.y = element_text(margin = margin(r = 10)),
+      axis.line = element_line( size = 1.0)) +
     expand_limits(x=0, y=0) +
-    ggtitle(paste0("\nCumulative percentage: ", resAll, "\n", subAll ))
-  ggplotly(fig)  %>%
-    layout(legend=list(orientation="v", x=.99, y=.5),
-           hovermode="x, unified")
+   ggtitle(paste0("\nCumulative percentage: ", resAll, "\n", subAll ))
   
- # fig
-  
-  
+   ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
+     config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
+                                        "resetScale2d", "hoverCompareCartesian", "drawrect", "select2d","lasso2d",
+                                        "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE) %>%
+     layout(legend=list(orientation="v", x=.99, y=.5),
+            hovermode="x")#+
+    #geom_text_repel(data=end_year, aes(x=Year, y=Percentage, color=Subject, label=Subject))
+
+
+  # fig
+
+
 }
+
+
+
 
 
 
@@ -294,14 +345,19 @@ createTimeSeriesResult<- function(dfResult, resAll, subAll, subName){
 
 
 createTimeSeriesSubjectFm<- function(dfSubjectFm, subByFm){
-  validate(need(subByFm, message="To view chart select one subject and a start year from the drop-down menus at the top of the page."))
+  validate(need(dfSubjectFm$subject_name, message="To view chart select one subject and a start year from the drop-down menus at the top of the page."))
   
+  
+  fig<-dfSubjectFm %>%
+    rename(Year="year", Entry_count= "entry_count", Subject="subject_name", Gender="characteristic_gender") 
   fig<-ggplot(
-    dfSubjectFm, aes(x=year, y=entry_count, 
-                   color=characteristic_gender)) +
-    geom_line(stat="identity", size=1)+
-    #geom_point(size=1)+
-    scale_x_log10() +
+    fig, aes(x=Year, y=Entry_count, 
+                   color=Gender)) +
+    geom_line(stat="identity", size=.5)+
+    geom_point(size=1.5)+
+  
+   # scale_x_log10(labels = dfSubjectFm$year, breaks = dfSubjectFm$year) +
+    scale_x_log10(breaks = seq(1996, 2022, 2)) +
     scale_y_continuous(labels=scales::comma) +
     
     scale_color_manual(
@@ -312,12 +368,8 @@ createTimeSeriesSubjectFm<- function(dfSubjectFm, subByFm){
     #geom_vline(xintercept= 2004, linetype='dot', col="navy", vjust=.80) +
     theme_classic() +
     theme(legend.position= "",
-          
-        
-          legend.box.background=element_blank(),
-          legend.key= element_blank(),
-          legend.justification = "right",
-          
+          text = element_text(size = 12),
+          legend.title = element_blank(),
            plot.title=element_text(size=10),
             axis.text.x = element_text(angle = 300),
             axis.title.x = element_text(size=10),
@@ -326,9 +378,14 @@ createTimeSeriesSubjectFm<- function(dfSubjectFm, subByFm){
     expand_limits(x=0, y=0) +
     ggtitle(paste0(" \n Entry count\n ",  subByFm))
   
-  ggplotly(fig)  %>%
+#  ggplotly(fig)  %>%
+    
+   ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
+    config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
+                                       "resetScale2d", "hoverCompareCartesian",  "drawrect", "select2d","lasso2d",
+                                       "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE) %>%
     layout(legend=list(orientation="v", x=.99, y=.5),
-           hovermode="x, unified")
+           hovermode="x")
   
  # fig
 
@@ -339,25 +396,20 @@ createTimeSeriesSubjectFm<- function(dfSubjectFm, subByFm){
 
 createTimeSeriesResultFm <- function(dfSubjectFm, subByFm,resByFm){
   
- validate(need(resByFm, message=" To view chart select one subject and cumulative percentage grade from the drop-down menus and finally select a start year"))
-  
+ validate(need(dfSubjectFm$subject_name, message=" To view chart select one subject and cumulative percentage grade from the drop-down menus and finally select a start year"))
+  fig<-dfSubjectFm %>%
+    rename(Year="year", Subject="subject_name", Gender="characteristic_gender") 
  
-  fig<-ggplot(
-    dfSubjectFm, aes_string(x="year", y=resByFm, color="characteristic_gender")) +
-  #  dfSubjectFm, aes(x=.data[[year]], y=.data[[resByFm]], color=.data[[characteristic_gender]])) +
-    geom_line(stat="identity", size=1)+
-   # geom_point(size=1)+
-    
+  fig<-ggplot(fig, aes_string(x="Year", y=resByFm, color="Gender")) +
+  
+    geom_line(stat="identity", size=.5)+
+    geom_point(size=1.5)+
     scale_color_manual(values=c("#A285D1", "#3D3D3D"))+
-    
-    
-    scale_x_log10() +
+    scale_x_log10(breaks = seq(1996, 2022, 2)) +
     labs(x="", y="", color="")+
     theme_classic() +
     annotate ("rect", xmin= 2020, xmax=2021, ymin=5, ymax=100, alpha=.2)+
-    # annotate (geom="text", x=2015, y=2, 
-    #           label="Centre assessment grade 2019/20 \n & teacher assessed grade 2020/21", 
-    #           color="black", size=3, vjust=-.3, hjust=0)+
+    
     
     theme(axis.text=element_text(size=8),
           axis.title=element_text(size=10),
@@ -368,9 +420,12 @@ createTimeSeriesResultFm <- function(dfSubjectFm, subByFm,resByFm){
     expand_limits(x=0, y=0) +
     ggtitle(paste0("\n Cumulative percentage: ",resByFm, "\n ", subByFm ))
   
-  ggplotly(fig) %>%
+  ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
+    config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
+                                       "resetScale2d", "hoverCompareCartesian","drawrect", "select2d", "lasso2d",
+                                       "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE) %>%
     layout(legend=list(orientation="v", x=.99, y=.5),
-           hovermode="x, unified")
+           hovermode="x")
   
   #fig
   

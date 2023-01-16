@@ -103,7 +103,7 @@ server <- function(input, output, session) {
     req(grade)
     lapply(seq_along(latest), function(i) {
       fluidRow(
-        valueBox(value=grade[i], subtitle=HTML(paste0('Applied general average result equivalent to ',  strong(latest[i],'points'),':', br(), input$headlineAps[i])), width=12,
+        valueBox(value=grade[i], subtitle=HTML(paste0('Applied general average result equivalent to ',  strong(latest[i],'points'),': ', input$headlineAps[i])), width=12,
                  color = "blue")
       )
     })
@@ -216,24 +216,24 @@ observeEvent(input$instituteGroup, {
 # updateSelectizeInput(input, "alevelInstitute")
   updateSelectizeInput(session,"alevelInstitute", "Select up to 4 institution types", 
                        choices=(dfAlevelAps$school_type[dfAlevelAps$school_type_group %in% input$instituteGroup]), 
-                       selected=c("All independent schools", "All schools and FE sector colleges"))
+                       selected=c("All independent schools","All state-funded schools"))
 
 })
   
   
   
   observeEvent(input$resetApsAll, {
-    updateSelectizeInput(session, "instituteGroup", selected = c("Independent schools", "All institutions"))
-    updateSelectizeInput(session, "alevelInstitute", selected=c("All independent schools","All schools and FE sector colleges"))
+    updateSelectizeInput(session, "instituteGroup", selected = c("All independent schools","All state-funded schools"))
+    updateSelectizeInput(session, "alevelInstitute", selected=c("All independent schools","All state-funded schools"))
     updateSelectizeInput(session, "allGender", selected = "All students")
   })
   
   output$plotAlevelAps <- renderPlot({
-    createApsTimeSeries(reactiveType()%>%
-                          mutate(
-                            school_type=fct_reorder2(school_type, year_2013_2015, aps_2013_2015),
-                            school_type=fct_reorder2(school_type, year_2016_2022, aps_2016_2022)
-                                 ), 
+    createApsTimeSeries(reactiveType(),#%>%
+                          # mutate(
+                          #   school_type=fct_reorder2(school_type, year_2013_2015, aps_2013_2015),
+                          #   school_type=fct_reorder2(school_type, year_2016_2022, aps_2016_2022)
+                                 
                         allGender=input$allGender, 
                             instType=input$alevelInstitute,
                         instGroup= input$instituteGroup
@@ -355,28 +355,27 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
   })
   
   output$textApsAll<-renderText({
-    val<-paste(input$alevelInstitute, collapse=", ")
+    val<-glue::glue_collapse(input$alevelInstitute, ", ", last=" and ")
     val1<-paste(input$allGender, collapse=", ")
     paste("The line charts display the average points and grades achieved by students throughout 16 to 18 study for ", val," in England.  Point scale changed to a simpler scale in 2015/16, but grades remain unchanged. 
           The shaded area shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG) 
-          awarded in 2019/20 and 2020/21 respectively. To view charts, select type of students required, 
+          awarded in 2019/20 and 2020/21 respectively. To view charts, select student type,  
           select up to 4 institution groups and institution types from the drop-down menus at the top of the page.
           Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.")
   })
   
   output$textGgap<-renderText({
-    val<-paste(input$alevelInstitute, collapse=",")
-   # val1<-paste(input$allGender, collapse=", ")
-    paste("The line chart shows the female - male average points difference (gender gap) from 2015/16 to 2021/22 in England  for ", val, ". To view chart, 
+    val<-glue::glue_collapse(input$alevelInstitute, ", ", last=" and ")
+   paste("The line chart shows the female - male average points difference (gender gap) from 2015/16 to 2021/22 in England  for ", val, ". To view chart, 
           select up to 4 institution groups and institution types from the drop-down menus at the top of the page.")
   })
   
   
   output$textApsFm<-renderText({
-    val<-paste(input$alevelInstitute, collapse=", ")
+    val<-glue::glue_collapse(input$alevelInstitute, ", ", last=" and ") 
     val1<-paste(input$allGender, collapse=", ")
-    paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England. Point scale changed to a simpler scale in 2015/16, but grades remained unchanged.
+    paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England. 
           The shaded area shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG) 
           awarded in 2019/20 and 2020/21 respectively.  To view charts, 
           select up to 4 institution groups and institution types from the drop-down menus at the top of the page.")
@@ -392,16 +391,19 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
  
     
   reactiveSubject<-reactive({
-    subjName<-subjectByAll 
+    subjName<-subjectByAll
      
     subjName<-subset(
       subjName, 
       subject_name  %in% input$subCompareAll &
         characteristic_gender == input$subByAll &
+       # grade == input$resByAll &
         between(year, as.numeric(input$year_start), as.numeric(input$year_end)))
     
     subjName
   })
+  
+  
   
   
   observeEvent(input$resetEntries, {
@@ -416,13 +418,14 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
   #                                                   choices = seq(ifelse(input$year_start == latest_year, latest_year, as.numeric(input$year_start)), latest_year, 1),
   #                                                   selected = input$year_end) })
   observeEvent(input$year_end, {updateSelectInput(session, "year_start", label = NULL, 
-                                                  choices = seq(1996, ifelse(input$year_end == 1996, 1996, as.numeric(input$year_end)), 1),
+                                                  choices = seq(1996, ifelse(input$year_end == 1996, 1996, as.integer(2018)), 1),
                                                   selected = input$year_start) })
   
   
   output$plotAlevelSubject <- renderPlotly({
     createTimeSeriesSubject(reactiveSubject(),# %>%
                             #mutate(subject_name=fct_reorder2(subject_name, year, entry_count)), 
+                            subName=input$subCompareAll,
                             subAll=input$subByAll
                         
     )
@@ -434,6 +437,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
                            subName=input$subCompareAll,
                            subAll=input$subByAll,
                            resAll=input$resByAll
+                          
                            
     )
   })
@@ -476,7 +480,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
   #                                                   choices = seq(ifelse(input$year_start_fm == latest_year, latest_year, as.numeric(input$year_start_fm)), latest_year, 1),
   #                                                   selected = input$year_end_fm) })
   observeEvent(input$year_end_fm, {updateSelectInput(session, "year_start_fm", label = NULL, 
-                                                  choices = seq(1996, ifelse(input$year_end_fm == 1996, 1996, as.numeric(input$year_end_fm)), 1),
+                                                  choices = seq(1996, ifelse(input$year_end_fm == 1996, 1996, as.integer(2018)), 1),
                                                   selected = input$year_start_fm) })
   
   observeEvent(input$resetSubFm, {
@@ -493,23 +497,22 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
   
   
   output$textSubAll<-renderText({
-    val<-paste(input$subCompareAll, collapse=", ")
+    val<-glue::glue_collapse(input$subCompareAll, ", ", last=" and ")
     val1<-paste(input$year_start, collapse=", ")
     val2<-paste(input$year_end, collapse=", ")
     val3<-paste(input$subByAll, collapse=",")
    
-    paste("The line chart shows the A level exam entries from " , val1, "to ", val2,  
-         "for ", val, "in England for ", val3, ".  To compare trend and changes over time, select type of students required, select up to 4 subjects and start year from the drop-down menus." )
+    paste("The line chart shows the A level exam entries for ", val, "from  ", val1, "to ", val2, "in England for ", val3, ".  To compare trend and changes over time, select student type, select up to 4 subjects and start year from the drop-down menus." )
   })
   
   
   output$textSubResultAll<-renderText({
-    val<-paste(input$subCompareAll, collapse=", ")
+    val<-glue::glue_collapse(input$subCompareAll, ", ", last=" and ")
     val1<-paste(input$year_start, collapse=", ")
     val2<-paste(input$year_end, collapse=", ")
     val3<-paste(input$subByAll, collapse=",")
-    paste("The line chart shows the A level cumulative percentage grades on ", val, "\n from " , val1, "to ", val2, 
-          "in England for ", val3,".  The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG) 
+    paste("The line chart shows the A level cumulative percentage grades for", val, "\n from " , val1, "to ", val2, " for ", 
+          val3,  " in England.   The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG) 
           awarded in 2019/20 and 2020/21 respectively. To compare trend and changes over time, select up to 4 subjects, select start year  and a cumulative grade from the drop-down menus.")
   })
   
@@ -684,8 +687,8 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
                 select(
                   Year                 = year,
                   `Academic year`      = time_period,
+                 # `Institution group`  = school_type_group,
                   `Institution type`   = school_type,
-                  `Institution group`  = school_type_group,
                   `Characteristic gender` = characteristic_gender,
                   `Number of students` = number_of_students,
                   `APS per entry 2016-2022`      = aps_2016_2022,
