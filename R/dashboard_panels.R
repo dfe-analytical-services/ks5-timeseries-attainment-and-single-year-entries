@@ -47,7 +47,8 @@ homepage_panel <- function() {
                   
                   h4("APS for A level by all & gender"),
                   p("The line charts display the yearly trend and grades for all students and by gender, while the female - male gender gap shows the average point difference.
-                   To view and explore trend click and select up to four institution groups and institution types from the drop-down menus."    
+                   To view and explore trend  first select the institituion group followed by the institution type covered within each group.
+                  Up to four institution groups and types can be selected from the drop-down menus."    
                   ),
                 
                 br(),
@@ -57,7 +58,7 @@ homepage_panel <- function() {
                   title="(A level subject entries and cumulative grades - single academic year by all",
                   h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and result by all")),
                   p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2021/22. 
-                  The drop-down menus at the top of the page allows for the selection and comparison of up to four subjects 
+                 The drop-down menus at the top of the page allows for the selection and comparison of up to four subjects 
                   and cumulative grades.")
                   
                 ),
@@ -126,7 +127,7 @@ homepage_panel <- function() {
                   
                   p("The dropdown menu at the top of the page for A level APS per entry allows for the selection of up to four 
                   institution types.  Care should be taken when comparing across institution types due to significant
-                  differences in cohort sizes: for example, there are very low numbers of students in free schools,
+                  differences in cohort sizes, for example there are very low numbers of students in free schools,
                   16-19 free schools, university technical colleges and studio schools compared with other institution types.")
                 ),
                 

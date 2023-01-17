@@ -202,7 +202,7 @@ createGenderGap<- function(dfAps, instGroup, instType){
       config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
                                          "resetScale2d", "hoverCompareCartesian",
               "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE, 
-              toImageButtonOptions = list(format="svg", text="Download chart") ) %>%
+              toImageButtonOptions = list(format="svg") ) %>%
       layout(legend=list(orientation="v", x=.99, y=.5), hovermode="x")
     
     #fig
