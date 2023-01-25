@@ -286,7 +286,7 @@ dashboard_panel_aps <- function() {
                                    
                                    box(
                                      width=12,
-                                   plotOutput("plotHeadline") #%>% spinner()
+                                   plotOutput("plotHeadline") %>% spinner()
                                    )
                                   ),
                                  column(
@@ -322,7 +322,7 @@ dashboard_panel_aps <- function() {
                                  uiOutput("boxapsAlevel", width = 2),
                                  box(
                                    width=12,
-                                   plotOutput("plotAlevelAps") #%>% spinner()
+                                   plotOutput("plotAlevelAps") %>% spinner()
                                    )
                                  ),
                                column(
@@ -351,7 +351,7 @@ dashboard_panel_aps <- function() {
                                 # uiOutput("boxapsAlevel", width = 2),
                                  box(
                                    width=12,
-                                   plotlyOutput("plotGgap") #%>% spinner()
+                                   plotlyOutput("plotGgap") %>% spinner()
                                  )
                                )
                                
@@ -373,14 +373,14 @@ dashboard_panel_aps <- function() {
                                    width=6,
                                    box(
                                      width=12, p(""),
-                                     plotOutput("plotFemaleAlAPS") #%>% spinner()
+                                     plotOutput("plotFemaleAlAPS") %>% spinner()
                                      )
                                    ),
                                  column(
                                    width=6,
                                    box(
                                      width=12,
-                                     plotOutput("plotMaleAlAPS")# %>% spinner()
+                                     plotOutput("plotMaleAlAPS") %>% spinner()
                                      )
                                    ),
                                 column(
@@ -537,7 +537,7 @@ dashboard_panel_sub_all <- function() {
                             # valueBoxOutput("boxapsGrade", width = 6),
                             box(
                               width=12, 
-                              plotlyOutput("plotAlevelSubject"),#%>% spinner(), 
+                              plotlyOutput("plotAlevelSubject")%>% spinner(), 
                               p("Notes: - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
@@ -594,7 +594,7 @@ dashboard_panel_sub_all <- function() {
                         
                               box(
                                 width=12,
-                                plotlyOutput("plotResultAll"),# %>% spinner(),
+                                plotlyOutput("plotResultAll")%>% spinner(),
                                 p("Notes: - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
@@ -738,7 +738,7 @@ dashboard_panel_sub_fm <- function() {
                                    # valueBoxOutput("boxapsGrade", width = 6),
                                    box(
                                      width=12,
-                                     plotlyOutput("plotSubjectFm"), #%>% spinner(), 
+                                     plotlyOutput("plotSubjectFm")%>% spinner(), 
                                      p("Notes: - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
@@ -788,7 +788,7 @@ dashboard_panel_sub_fm <- function() {
                               ))),
                             box(
                               width=12,
-                              plotlyOutput("plotResultFm"),# %>% spinner(),
+                              plotlyOutput("plotResultFm") %>% spinner(),
                               p("Notes: - Total English covers English literature, English language,  English language and literature. 
                                 - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                 - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
