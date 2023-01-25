@@ -87,10 +87,11 @@ first_xter_up<-function(x) {
   x
 }
 
-# 
-# spinner<-function(output){
-#   shinycssloaders::withSpinner(output, color.background = "#e9f0ff",color="#1d70b8",  size = 1)
-# }
+
+spinner<-function(output){
+  shinycssloaders::withSpinner(output, size = getOption("spinner.size", default = 1))
+                            
+}
 
 
 
