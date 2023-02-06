@@ -165,8 +165,7 @@ homepage_panel <- function() {
 dashboard_panel_aps <- function() {
   tabPanel(
     value = "dashboard",
-    "Dashboard: 
-    \n 1. Headline attainment & A level by institution type",
+    "1. Headline attainment & A level by institution type",
     
     # Define UI for application that draws a histogram
     
