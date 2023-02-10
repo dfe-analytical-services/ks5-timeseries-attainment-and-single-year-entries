@@ -140,6 +140,8 @@ a:active {
     background: #ffffff;
 } 
 
+
+
 /* Full screen plots */
 /* Adapted from https://stackoverflow.com/questions/69042546/is-there-a-way-to-create-a-full-screen-popup-window-of-a-plotly-chart-in-r */
 .plot-zoom {

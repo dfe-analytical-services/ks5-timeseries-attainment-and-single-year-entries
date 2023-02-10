@@ -183,9 +183,6 @@ createGenderGap<- function(dfAps, instGroup, instType){
      values = gss_colour_pallette) +
     labs(x="", y="", color="")+
     geom_hline(yintercept= 0, linetype='dot', col="navy", vjust=.80)+
-    
-  #  geom_text(aes(label=gender_gap, y=gender_gap), hjust="top", vjust=-0.5, size=5,  angle=45, show.legend=F)+
-    
     ggtitle(paste0("\nFemale-male average points difference (gender gap)")) +
     theme_classic() +
     theme(#legend.position ="bottom",
@@ -196,18 +193,16 @@ createGenderGap<- function(dfAps, instGroup, instType){
           axis.title.x = element_blank(),
           axis.title.y = element_text(margin = margin(r = 10)),
           axis.line = element_line( size = 1.0)) 
-   # expand_limits(x=0, y=0)
+   
 
     ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
-      config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
+      
+      config(modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
                                          "resetScale2d", "hoverCompareCartesian",
               "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE, 
-              toImageButtonOptions = list(format="svg") ) %>%
-      layout(legend=list(orientation="v", x=.99, y=.5), hovermode="x")
-    
-    #fig
-  
-  
+             toImageButtonOptions = list(format="svg", filename="apsGgap_image")) %>%
+      layout(legend=list(orientation="v", x=.99, y=.5), hovermode ="x")
+ 
 }
 
 
@@ -238,20 +233,11 @@ createTimeSeriesSubject<- function(dfSubject, subAll, subName){
     scale_x_log10(breaks = seq(1996, 2022, 2)) +
     scale_y_continuous(labels=scales::comma) +
     scale_colour_manual(
-
-
-     # breaks = unique(dfSubject$Subject),
-      values = gss_colour_pallette) +
-
-
+    values = gss_colour_pallette) +
     labs(x="", y="", color="")+
-   #geom_text(data=end_year, aes(label=Subject, x=Year+0.5, y=Entry_count, color=Subject))+
-   
     theme_classic() +
 
-    theme(#legend.position ="",
-          text = element_text(size = 12),
-        #  legend.direction = "vertical",
+    theme(text = element_text(size = 12),
           plot.title=element_text(size=10),
           axis.text.x = element_text(angle = 300),
           axis.title.x = element_blank(),
@@ -260,13 +246,11 @@ createTimeSeriesSubject<- function(dfSubject, subAll, subName){
    expand_limits(x=0, y=0) +
    ggtitle(paste0("\nEntry count:\n ",  subAll))
  ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
-   config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
-                                      "resetScale2d", "hoverCompareCartesian", "lasso2d", "drawrect", "select2d",
-                                      "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE) %>%
+   config(modeBarButtons=list(list("toImage")), displaylogo=FALSE,
+           toImageButtonOptions = list(format="svg", filename="subjectAll_image")) %>%
              layout(legend=list(orientation="v", x=.99, y=.5),
                     hovermode="x")
 
-#fig
 
 }
 
@@ -321,28 +305,18 @@ createTimeSeriesResult<- function(dfSubject, subAll, resAll, subName){
    ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
      config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
                                         "resetScale2d", "hoverCompareCartesian", "drawrect", "select2d","lasso2d",
-                                        "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE) %>%
+                                        "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE, 
+             toImageButtonOptions = list(format="svg", filename="resultAll_image")) %>%
      layout(legend=list(orientation="v", x=.99, y=.5),
             hovermode="x")#+
     #geom_text_repel(data=end_year, aes(x=Year, y=Percentage, color=Subject, label=Subject))
-
-
-  # fig
 
 
 }
 
 
 
-
-
-
-
-
-  
  ######### Plot for subject entries A level gender ########
-
-
 
 createTimeSeriesSubjectFm<- function(dfSubjectFm, subByFm){
   validate(need(dfSubjectFm$subject_name, message="To view chart select one subject and a start year from the drop-down menus at the top of the page."))
@@ -355,8 +329,6 @@ createTimeSeriesSubjectFm<- function(dfSubjectFm, subByFm){
                    color=Gender)) +
     geom_line(stat="identity", size=.5)+
     geom_point(size=1.5)+
-  
-   # scale_x_log10(labels = dfSubjectFm$year, breaks = dfSubjectFm$year) +
     scale_x_log10(breaks = seq(1996, 2022, 2)) +
     scale_y_continuous(labels=scales::comma) +
     
@@ -377,17 +349,14 @@ createTimeSeriesSubjectFm<- function(dfSubjectFm, subByFm){
             axis.line = element_line( size = 1.0))+
     expand_limits(x=0, y=0) +
     ggtitle(paste0(" \n Entry count\n ",  subByFm))
-  
-#  ggplotly(fig)  %>%
-    
+
    ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
     config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
                                        "resetScale2d", "hoverCompareCartesian",  "drawrect", "select2d","lasso2d",
-                                       "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE) %>%
-    layout(legend=list(orientation="v", x=.99, y=.5),
+                                       "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE,
+            toImageButtonOptions = list(format="svg", filename="subjectFm_image"))%>%
+     layout(legend=list(orientation="v", x=.99, y=.5),
            hovermode="x")
-  
- # fig
 
 
 } 
@@ -423,12 +392,11 @@ createTimeSeriesResultFm <- function(dfSubjectFm, subByFm,resByFm){
   ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
     config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
                                        "resetScale2d", "hoverCompareCartesian","drawrect", "select2d", "lasso2d",
-                                       "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE) %>%
+                                       "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE,
+            toImageButtonOptions = list(format="svg", filename="resultFm_image")) %>%
     layout(legend=list(orientation="v", x=.99, y=.5),
            hovermode="x")
-  
-  #fig
-  
+ 
 } 
 
 

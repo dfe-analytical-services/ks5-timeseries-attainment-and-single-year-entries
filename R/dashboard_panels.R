@@ -5,7 +5,7 @@ homepage_panel <- function() {
       gov_row(
         column(
           12,
-          h1("16 to 18  time series attainment and single year entry (draft)"),
+          h1("16 to 18  time series attainment and single year entry"),
           br(),
           br()
         ),
@@ -110,7 +110,8 @@ homepage_panel <- function() {
                   and a grade E is given 10 points (U/fail is given 0 points in both old and current point scales).  
                   This is shown in the A level APS panel for all students.  A level APS per entry is presented across 2 charts,
                   scaled such that a change of one grade appears the same for both the old and current points scale.
-                  Applied general and tech level APS per entry started in 2015/16 with a points scale between 0-50."),
+                  Applied general and tech level APS per entry started in 2015/16 with a points scale between 0-50."
+                    ),
                   
                   p("Full details of the headline attainment measure can be found in the "),
                   tags$a(href = "https://www.gov.uk/government/publications/16-to-19-accountability-headline-measures-technical-guide", 
@@ -393,7 +394,7 @@ dashboard_panel_aps <- function() {
                                     )
                                   )
                                   ),
-                                dataTableOutput("tabGap")
+                                dataTableOutput("tabFm")
                                 
                                 
               
@@ -522,7 +523,9 @@ dashboard_panel_sub_all <- function() {
                           column(
                             width=12,
                             h3("A level subject entry - single academic year"),
-                            textOutput("textSubAll"), br(),
+                            textOutput("textSubAll"),  
+                            
+                            br(),
                             
                             column(
                               width = 6,
@@ -532,18 +535,27 @@ dashboard_panel_sub_all <- function() {
                                 label= "Download data",
                                 icon = shiny::icon("download"),
                                 class = "downloadButton"
-                              ))),
+                              )
+                              # column(width=6, align="right",
+                              #        paste("Download chart"), br(),
+                              #        downloadButton(
+                              #          outputId="downloadPlotFmGap",
+                              #        label="Download chart"
+                              #        ))
+                              )),
+                            
                             #valueBoxOutput("", width = 3),
                             # valueBoxOutput("boxapsGrade", width = 6),
                             box(
                               width=12, 
-                              plotlyOutput("plotAlevelSubject")%>% spinner(), 
+                              plotlyOutput("plotAlevelSubject")%>% spinner(),
                               p("Notes: - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
                                   - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies. 
                                   - STEM subjects cover Biology, Chemistry, Physics, Total maths, Further mathematics and Computer science. 
                                   - Total Music includes Music and Music technology.")
+                             
                               )
                             )
                         
@@ -591,11 +603,14 @@ dashboard_panel_sub_all <- function() {
                                   class = "downloadButton"
                                   
                                 ) )),
+                        # column(width=6, align="right", actionButton(inputId = "moreInfo",
+                        #                                             label = "click here for more information on chart"), 
+                        #        bsPopover("moreInfo", "add chart info here", option=list(container="body", placement="right")))),
                         
                               box(
                                 width=12,
                                 plotlyOutput("plotResultAll")%>% spinner(),
-                                p("Notes: - Total English covers English literature, English language, English language and literature. 
+                                p("Notes: A* grade was first awarded in 2010. - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
                                   - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies. 
@@ -789,7 +804,7 @@ dashboard_panel_sub_fm <- function() {
                             box(
                               width=12,
                               plotlyOutput("plotResultFm") %>% spinner(),
-                              p("Notes: - Total English covers English literature, English language,  English language and literature. 
+                              p("Notes: A* grade was first awarded  in 2010. - Total English covers English literature, English language,  English language and literature. 
                                 - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                 - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
                                 - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies. 

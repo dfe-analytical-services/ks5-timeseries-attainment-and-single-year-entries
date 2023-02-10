@@ -158,11 +158,11 @@ server <- function(input, output, session) {
                      scrollY='260px',
                      scrollX=T,
                      scrollCollapse=T,
-                     rownames=F,
                      dom='Bfrtip',
                      buttons=(c('copy', 'csv', 'excel')),
-                     class="display")
-              )
+                     class="display")),
+                rownames=FALSE
+              
     )
     
     
@@ -187,30 +187,7 @@ server <- function(input, output, session) {
   })
   
   
-  # output$alevelInstitute<-renderUI({
-  #   inType<-dfAlevelAps
-  #   
-  #   inType<-subset(
-  #     inType,
-  #   
-  #     
-  #     school_type_group %in% input$instituteGroup  &
-  #        characteristic_gender==input$allGender
-  #      )
-  #  
-  #   # selectizeInput(inputId="alevelInstitute",
-  #   #                label="Select up to 4 institution types",choices=unique(inType$school_type), multiple=T, options = list(maxItems = 4), 
-  #   #                selected=c("All independent schools", "All schools and FE sector colleges"))
-  #   # 
-  # })  
-  # 
   
-  
-  # observeEvent(input$instituteGroup, {
-  #   freezeReactiveValue(input, "alevelInstitute")
-  #   updateSelectizeInput(inputId =  "alevelInstitute", choices=(filter(dfAlevelAps, school_type %in% input$alevelInstitute, characteristic_gender==input$allGender)))
-  # 
-  # })
 
 observeEvent(input$instituteGroup, {
 # updateSelectizeInput(input, "alevelInstitute")
@@ -320,7 +297,7 @@ observeEvent(input$instituteGroup, {
   
   
   # Data table for headline page
-  output$tabGap<- renderDataTable({
+  output$tabFm<- renderDataTable({
     datatable(selectedGgapData(),
               extens ='Buttons',
               options=( 
@@ -331,12 +308,11 @@ observeEvent(input$instituteGroup, {
                      scrollY='260px',
                      scrollX=T,
                      scrollCollapse=T,
-                     rownames=F,
                      dom='Bfrtip',
                      buttons=(c('copy', 'csv', 'excel')),
-                     class="display")
+                     class="display")),
+                rownames=FALSE
               )
-    )
     
     
   })
@@ -349,7 +325,8 @@ observeEvent(input$instituteGroup, {
   output$textHeadline<-renderText({
     val<-paste(input$headlineAps, collapse=",")
     # val1<-paste(input$allGender, collapse=", ")
-    paste("The boxes display the latest average results in 2021/22 for A level, applied general and tech level.
+    paste("The boxes display the latest average results in 2021/22 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general 
+    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables. 
 Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in England. To view results, click on the drop-down box beside the bar chart and select one institution type. 
 " )
   })
@@ -357,18 +334,15 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
   output$textApsAll<-renderText({
     val<-glue::glue_collapse(input$alevelInstitute, ", ", last=" and ")
     val1<-paste(input$allGender, collapse=", ")
-    paste("The line charts display the average points and grades achieved by students throughout 16 to 18 study for ", val," in England.  Point scale changed to a simpler scale in 2015/16, but grades remain unchanged. 
+    paste("The line charts display the average points and grades achieved by students throughout 16 to 18 study for ", val," in England.  The points changed to a simpler scale in 2015/16, but grades remain unchanged. 
           The shaded area shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG) 
-          awarded in 2019/20 and 2020/21 respectively. To view charts, select student type,  
-          select up to 4 institution groups and institution types from the drop-down menus at the top of the page.
-          Care should be taken when comparing across institution types due to significant
+          awarded in 2019/20 and 2020/21 respectively. Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.")
   })
   
   output$textGgap<-renderText({
     val<-glue::glue_collapse(input$alevelInstitute, ", ", last=" and ")
-   paste("The line chart shows the female - male average points difference (gender gap) from 2015/16 to 2021/22 in England  for ", val, ". To view chart, 
-          select up to 4 institution groups and institution types from the drop-down menus at the top of the page.")
+   paste("The line chart shows the female - male average points difference (gender gap) from 2015/16 to 2021/22  for ", val, "in England.")
   })
   
   
@@ -377,8 +351,8 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
     val1<-paste(input$allGender, collapse=", ")
     paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England. 
           The shaded area shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG) 
-          awarded in 2019/20 and 2020/21 respectively.  To view charts, 
-          select up to 4 institution groups and institution types from the drop-down menus at the top of the page.")
+          awarded in 2019/20 and 2020/21 respectively.  Care should be taken when comparing across institution types due to significant
+                  differences in cohort sizes.")
   })
   
   
@@ -426,10 +400,11 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
     createTimeSeriesSubject(reactiveSubject(),# %>%
                             #mutate(subject_name=fct_reorder2(subject_name, year, entry_count)), 
                             subName=input$subCompareAll,
-                            subAll=input$subByAll
-                        
-    )
+                            subAll=input$subByAll    )
+   
   })
+
+ # addPopover (session, 'moreInfo', 'click here for more information on chart', content=paste0("A* started in 2010.</p><p>", trigger = 'click'))
   
   output$plotResultAll<-renderPlotly({
     createTimeSeriesResult(reactiveSubject(),
@@ -502,7 +477,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
     val2<-paste(input$year_end, collapse=", ")
     val3<-paste(input$subByAll, collapse=",")
    
-    paste("The line chart shows the A level exam entries for ", val, "from  ", val1, "to ", val2, "in England for ", val3, ".  To compare trend and changes over time, select student type, select up to 4 subjects and start year from the drop-down menus." )
+    paste("The line chart shows the A level exam entries for ", val, "from  ", val1, "to ", val2, " for ", val3, " in England. " )
   })
   
   
@@ -513,7 +488,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
     val3<-paste(input$subByAll, collapse=",")
     paste("The line chart shows the A level cumulative percentage grades for", val, "\n from " , val1, "to ", val2, " for ", 
           val3,  " in England.   The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG) 
-          awarded in 2019/20 and 2020/21 respectively. To compare trend and changes over time, select up to 4 subjects, select start year  and a cumulative grade from the drop-down menus.")
+          awarded in 2019/20 and 2020/21 respectively.")
   })
   
   
@@ -527,8 +502,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
     val2<-paste(input$year_end_fm, collapse=", ")
    
     paste("The line chart shows the A level  exam entries for female and male on ", val, " from " , val1, "to ", val2,  
-          " in England. 
-          To view changes over time, select required subject and start year from the drop-down menus at the top of the page. " )
+          " in England. " )
   })
   
   
@@ -539,8 +513,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
   
     paste("The line chart shows the A level cumulative percentage grades for female and male on ", val, "\n from " , val1, " to ", val2, 
           " in England.  The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG) 
-          awarded in 2019/20 and 2020/21 respectively.
-          To view changes over time, select one subject, start year and a cumulative grade from the drop-down menus.")
+          awarded in 2019/20 and 2020/21 respectively.")
   })
   
 
@@ -605,8 +578,8 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
   )
   
   
-  
-  
+  ######### Insert notes for 2010 ##### 
+
   
   # Download  subject entry and cumulative result for all subject from top panel 
   
@@ -703,10 +676,10 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
                            scrollY='260px',
                            scrollX=T,
                            scrollCollapse=T,
-                           rownames=F, 
                            dom='Bfrtip',
                            buttons=(c('copy', 'csv', 'excel')),
-                           class="display")
+                           class="display"),
+              rownames=FALSE
               
     )
   })
@@ -725,7 +698,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
                            scrollY='260px',
                            scrollX=T,
                            scrollCollapse=T,
-                           rownames=F,
+                           rownames=FALSE,
                            autoWidth=TRUE,
                            server = TRUE)
                            
@@ -775,8 +748,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val,  " in En
       
     })
   
- 
-
+  
   # Stop app ---------------------------------------------------------------------------------
 
   session$onSessionEnded(function() {
