@@ -1,0 +1,42 @@
+{
+  "input": {
+    "alevelInstitute": [
+      "All independent schools",
+      "All state-funded schools"
+    ],
+    "allGender": "All students",
+    "ees": 0,
+    "headlineAps": "All schools and FE sector colleges",
+    "instituteGroup": [
+      "All independent schools",
+      "All state-funded schools"
+    ],
+    "link_to_alevelAllSubject_tab": 0,
+    "link_to_alevelFmSubject_tab": 0,
+    "link_to_headline_tab": 0,
+    "navlistPanel": "Homepage",
+    "resByAll": "`A*-A`",
+    "resByFm": "`A*-A`",
+    "resetApsAll": 0,
+    "resetEntries": 0,
+    "resetSubFm": 0,
+    "subByAll": "All students",
+    "subCompareAll": [
+      "Total English",
+      "Total Maths"
+    ],
+    "subjectFm": "Total English",
+    "tabsetpanels": "headline",
+    "tabsetpanels2": "alevelAllSubject",
+    "year_end": "2022",
+    "year_end_fm": "2022",
+    "year_start": "1996",
+    "year_start_fm": "1996"
+  },
+  "output": {
+
+  },
+  "export": {
+
+  }
+}

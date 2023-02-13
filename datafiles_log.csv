@@ -6,3 +6,7 @@ data/some_unpublished_data.csv,unpublished
 data/alevel_attainmentV1.csv,published
 data/all_attainmentV1.csv,published
 data/all_level_timeseries_data_1996_to_2022V1.csv,published
+data/aps_gender_gapV2.csv,unpublished
+data/all_level_timeseries_data_1996_to_2022V2.csv,unpublished
+data/all_attainmentV2.csv,unpublished
+data/alevel_attainmentV2.csv,unpublished
