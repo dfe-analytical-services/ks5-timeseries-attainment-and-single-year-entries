@@ -512,10 +512,7 @@ dashboard_panel_sub_all <- function() {
         
         column(
           width=12,
-          tabsetPanel(id = "tabsetpanels2",
-                      
-                      
-                      
+          tabsetPanel(id = "tabsetpanels2a",
                       tabPanel(value= "alevelAllSubject",
                         "Subject entries by all",
                         fluidRow(
@@ -722,7 +719,7 @@ dashboard_panel_sub_fm <- function() {
         
         column(
           width=12,
-          tabsetPanel(id = "tabsetpanels2",
+          tabsetPanel(id = "tabsetpanels2b",
                       
                       
                       
