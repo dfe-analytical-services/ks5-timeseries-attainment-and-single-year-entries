@@ -57,10 +57,10 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     theme_classic()+
     labs(x="", y="")+
     theme(legend.position= "none",
-          text = element_text(size = 12),
+          text = element_text(size = 14),
           axis.text.x = element_text(angle = 300),
           axis.title.x = element_blank(),
-          axis.title.y = element_text(margin = margin(r = 12)),
+          axis.title.y = element_text(margin = margin(r = 14)),
           axis.line = element_line( size = 1.0)
           )
 
@@ -95,10 +95,10 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     theme(
       legend.position = c(.8,.15),
       legend.title=element_blank(),
-      text = element_text(size = 12),
+      text = element_text(size = 14),
       axis.text.x = element_text(angle = 300),
       axis.title.x = element_blank(),
-      axis.title.y = element_text(margin = margin(r = 12)),
+      axis.title.y = element_text(margin = margin(r = 14)),
       axis.line = element_line( size = 1.0)
             
     )
@@ -150,10 +150,10 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
       theme(legend.position = "bottom",
             legend.direction = "vertical",
             legend.title=element_blank(),
-            text = element_text(size = 12),
+            text = element_text(size = 14),
             axis.text.x = element_text(angle = 300),
             axis.title.x = element_blank(),
-            axis.title.y = element_text(margin = margin(r = 12)),
+            axis.title.y = element_text(margin = margin(r = 14)),
             axis.line = element_line( size = 1.0)+
              expand_limits(x=0, y=0)) 
   fmFig
