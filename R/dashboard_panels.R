@@ -29,7 +29,7 @@ homepage_panel <- function() {
                   p("This dashboard allows users to explore time series data for 16 to 18 qualifications in England.  
                     It brings together figures compiled from the current and previous versions of the ‘A level and other 16 to 18 results’ statistical release with focus on:"), 
                   p("1.  Attainment by Institution types covering Average point score (APS) and grades for A level, applied general and tech level qualifications."), 
-                  p("2a.  Subject entries and cumulative percentage grades for A level single academic year from 1995/96 to 2020/21 by all students; and"), 
+                  p("2a.  Subject entries and cumulative percentage grades for A level single academic year from 1995/96 to 2021/22 by all students; and"), 
                   p("2b. Subject entries and cumulative percentage grades by gender."),
                   p("The drop-down menus at the top of the page or within the chart area 
                     allow for selection of one or more institution types, subjects and results where applicable.")
@@ -535,11 +535,11 @@ dashboard_panel_sub_all <- function() {
                                 label= "Download data",
                                 icon = shiny::icon("download"),
                                 class = "downloadButton"
-                              )
+                              ),
                               # column(width=6, align="right",
                               #        paste("Download chart"), br(),
                               #        downloadButton(
-                              #          outputId="downloadPlotFmGap",
+                              #          outputId="downloadPlotSubAll",
                               #        label="Download chart"
                               #        ))
                               )),
@@ -549,6 +549,7 @@ dashboard_panel_sub_all <- function() {
                             box(
                               width=12, 
                               plotlyOutput("plotAlevelSubject")%>% spinner(),
+                              
                               p("Notes: - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
@@ -576,12 +577,7 @@ dashboard_panel_sub_all <- function() {
                                        class = "well",
                                        style = "min-height: 100%; height: 100%; overflow-y: visible",
                                        
-                                       # selectInput(inputId = "resByAll", label = "Select cumulative result:",
-                                       #                choices = sort(unique(subjectAll$grade)),
-                                       #                selected="A*-A"
-                                       # )))),
                                        
-                                      
                                            selectInput(inputId="resByAll",
                                           "Select cumulative result",
                                           choices=list("A*-A" = "`A*-A`",
@@ -603,13 +599,11 @@ dashboard_panel_sub_all <- function() {
                                   class = "downloadButton"
                                   
                                 ) )),
-                        # column(width=6, align="right", actionButton(inputId = "moreInfo",
-                        #                                             label = "click here for more information on chart"), 
-                        #        bsPopover("moreInfo", "add chart info here", option=list(container="body", placement="right")))),
-                        
+                              
                               box(
                                 width=12,
                                 plotlyOutput("plotResultAll")%>% spinner(),
+                               
                                 p("Notes: A* grade was first awarded in 2010. - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
