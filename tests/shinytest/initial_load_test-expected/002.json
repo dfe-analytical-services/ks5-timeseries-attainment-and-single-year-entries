@@ -1,0 +1,243 @@
+{
+  "input": {
+    "alevelInstitute": [
+      "All independent schools",
+      "All state-funded schools"
+    ],
+    "allGender": "All students",
+    "ees": 0,
+    "headlineAps": "All schools and FE sector colleges",
+    "instituteGroup": [
+      "All independent schools",
+      "All state-funded schools"
+    ],
+    "link_to_alevelAllSubject_tab": 0,
+    "link_to_alevelFmSubject_tab": 0,
+    "link_to_headline_tab": 0,
+    "navlistPanel": "dashboard",
+    "resByAll": "`A*-A`",
+    "resByFm": "`A*-A`",
+    "resetApsAll": 0,
+    "resetEntries": 0,
+    "resetSubFm": 0,
+    "subByAll": "All students",
+    "subCompareAll": [
+      "Total English",
+      "Total Maths"
+    ],
+    "subjectFm": "Total English",
+    "tabsetpanels": "headline",
+    "tabsetpanels2": "alevelAllSubject",
+    "year_end": "2022",
+    "year_end_fm": "2022",
+    "year_start": "1996",
+    "year_start_fm": "1996"
+  },
+  "output": {
+    "headBox1": {
+      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>B<\/h3>\n        <p>A level average result equivalent to <strong>\n  38.87\n  points\n<\/strong>:<br/>All schools and FE sector colleges<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "headBox2": {
+      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>Dist-<\/h3>\n        <p>Applied general average result equivalent to <strong>\n  31.98\n  points\n<\/strong>: All schools and FE sector colleges<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "headBox3": {
+      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>Dist-<\/h3>\n        <p>Tech level average result equivalent to <strong>\n  30.56\n  points\n<\/strong>:<br/>All schools and FE sector colleges<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "plotHeadline": {
+      "src": "[image data sha1: cfa0867c94be41eed727e653f5cf4d3e2b26948a]",
+      "width": 337.546875,
+      "height": 400,
+      "alt": "Plot object",
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 2015.205,
+              "right": 2022.795,
+              "bottom": -2.083,
+              "top": 43.743
+            },
+            "mapping": {
+              "fill": "cert_type",
+              "x": "year",
+              "y": "aps",
+              "group": "cert_type"
+            },
+            "range": {
+              "left": 37.4944349315069,
+              "right": 331.520547945206,
+              "bottom": 310.002420033347,
+              "top": 55.9988252197582
+            }
+          }
+        ],
+        "dims": {
+          "width": 337.546875,
+          "height": 400
+        }
+      }
+    },
+    "tabHeadline": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Academic year<\/th>\n      <th>Institution type<\/th>\n      <th>Number of students<\/th>\n      <th>APS per entry<\/th>\n      <th>APS per entry grade<\/th>\n      <th>Qualification<\/th>\n      <th>Version<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "infor": false,
+          "paging": false,
+          "searching": false,
+          "stripClasses": false,
+          "lengthChange": false,
+          "scrollY": "260px",
+          "scrollX": true,
+          "scrollCollapse": true,
+          "dom": "Bfrtip",
+          "buttons": [
+            "copy",
+            "csv",
+            "excel"
+          ],
+          "class": "display",
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                0,
+                1,
+                3,
+                4
+              ]
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.12.1",
+          "src": {
+            "href": "dt-core-1.12.1"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.12.1",
+          "src": {
+            "href": "jszip-1.12.1"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.12.1",
+          "src": {
+            "href": "dt-ext-buttons-1.12.1"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "textHeadline": "The boxes display the latest average results in 2021/22 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general\n    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.\nBar chart shows the average results from 2015/16 to 2021/22 for  All schools and FE sector colleges  in England. To view results, click on the drop-down box beside the bar chart and select one institution type."
+  },
+  "export": {
+
+  }
+}
