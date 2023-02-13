@@ -232,7 +232,7 @@ dashboard_panel_aps <- function() {
         column(
           width=4,
           p(strong("For more tables and metadata")),
-          actionButton(inputId='ees', 
+          actionButton(inputId='ees_1', 
                        label="Visit Explore Education Statistics", 
                        icon = icon("th"), 
                        onclick ="window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",
@@ -489,7 +489,7 @@ dashboard_panel_sub_all <- function() {
               column(
                 width=4,
                 p(strong("For more tables and metadata")),
-                actionButton(inputId='ees', 
+                actionButton(inputId='ees_2a', 
                              label="Visit Explore Education Statistics", 
                              icon = icon("th"), 
                              onclick ="window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",
@@ -696,7 +696,7 @@ dashboard_panel_sub_fm <- function() {
               column(
                 width=4,
                 p(strong("For more tables and metadata")),
-                actionButton(inputId='ees', 
+                actionButton(inputId='ees_2b', 
                              label="Visit Explore Education Statistics", 
                              icon = icon("th"), 
                              onclick ="window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",

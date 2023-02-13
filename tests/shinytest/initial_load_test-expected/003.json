@@ -19,7 +19,9 @@
       "All state-funded schools"
     ],
     "allGender": "All students",
-    "ees": 0,
+    "ees_1": 0,
+    "ees_2a": 0,
+    "ees_2b": 0,
     "headlineAps": "All schools and FE sector colleges",
     "instituteGroup": [
       "All independent schools",
