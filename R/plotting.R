@@ -47,7 +47,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
                color="black", size=.05, angle=45 )+
     
     geom_label(aes(label=aps_grade_2013_2015, y=aps_2013_2015), show.legend=F)+
-    ggtitle("\nAPS & grade\n2012/13 to 2014/15\n", allGender) +
+    ggtitle("\nAPS & grade\n2012/13 to 2014/15\n") +
     coord_cartesian(ylim=c(150,300)) +
     scale_x_continuous(breaks=seq(2013,2015,1)) +
     scale_colour_manual(
