@@ -42,7 +42,7 @@ support_links <- function() {
     h2("Give us feedback"),
     "This dashboard is a new service that we are developing. If you have any feedback or suggestions for improvements, please submit them using our ",
     a(
-      href = "https://forms.office.com",
+      href = "https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-R8br5kOJwpKmQ9sOpVastBUNk1QNlJJR09PRTVDR1BMTlI4OVJINkpDNy4u",
       "feedback form", .noWS = c("after")
     ), ".", br(),
     "If you spot any errors or bugs while using this dashboard, please screenshot and email them to ",

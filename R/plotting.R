@@ -57,10 +57,12 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     theme_classic()+
     labs(x="", y="")+
     theme(legend.position= "none",
-          text = element_text(size = 14),
-          axis.text.x = element_text(angle = 300),
-          axis.title.x = element_blank(),
-          axis.title.y = element_text(margin = margin(r = 14)),
+          text = element_text(size = 12),
+          axis.text=element_text(size=12),
+          axis.title=element_text(size=12),
+         # axis.text.x = element_text(angle = 300),
+          # axis.title.x = element_blank(),
+          # axis.title.y = element_text(margin = margin(r = 14)),
           axis.line = element_line( size = 1.0)
           )
 
@@ -95,10 +97,12 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     theme(
       legend.position = c(.8,.15),
       legend.title=element_blank(),
-      text = element_text(size = 14),
-      axis.text.x = element_text(angle = 300),
-      axis.title.x = element_blank(),
-      axis.title.y = element_text(margin = margin(r = 14)),
+      text = element_text(size = 12),
+      axis.text=element_text(size=12),
+      axis.title=element_text(size=12),
+     # axis.text.x = element_text(angle = 300),
+      # axis.title.x = element_blank(),
+      # axis.title.y = element_text(margin = margin(r = 14)),
       axis.line = element_line( size = 1.0)
             
     )
@@ -136,7 +140,7 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
       
       ggtitle(paste0("Average point score and grade \n", fmGender)) + #from 2016 to 2021") +
       coord_cartesian(ylim=c(10,60)) +
-      #scale_x_continuous(breaks=seq(2016,2022,1)) +
+      scale_x_continuous(breaks=seq(2016,2022,1)) +
       scale_colour_manual(
       #"school type",
       breaks = unique(dfAps$school_type),
@@ -150,10 +154,12 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
       theme(legend.position = "bottom",
             legend.direction = "vertical",
             legend.title=element_blank(),
-            text = element_text(size = 14),
+            text = element_text(size = 12),
+            axis.text=element_text(size=12),
+            axis.title=element_text(size=12),
             axis.text.x = element_text(angle = 300),
-            axis.title.x = element_blank(),
-            axis.title.y = element_text(margin = margin(r = 14)),
+            # axis.title.x = element_blank(),
+            # axis.title.y = element_text(margin = margin(r = 14)),
             axis.line = element_line( size = 1.0)+
              expand_limits(x=0, y=0)) 
   fmFig
@@ -175,7 +181,8 @@ createGenderGap<- function(dfAps, instGroup, instType){
                            )) +
     geom_line(stat="identity", size=1) +
     # geom_point(size=1)+
-    scale_x_log10() +
+    scale_x_continuous(breaks=seq(2016,2022,1)) +
+    #scale_x_log10() +
     scale_y_continuous(labels=scales::comma) +
     scale_colour_manual(
      # "school type",
@@ -189,7 +196,7 @@ createGenderGap<- function(dfAps, instGroup, instType){
           text = element_text(size = 12),
           legend.direction = "vertical",
           plot.title=element_text(size=10),
-          axis.text.x = element_text(angle = 300),
+         # axis.text.x = element_text(angle = 300),
           axis.title.x = element_blank(),
           axis.title.y = element_text(margin = margin(r = 10)),
           axis.line = element_line( size = 1.0)) 
