@@ -47,7 +47,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
                color="black", size=.05, angle=45 )+
     
     geom_label(aes(label=aps_grade_2013_2015, y=aps_2013_2015), show.legend=F)+
-    ggtitle("\nAPS & grade\n2012/13 to 2014/15\n") +
+    ggtitle("\nAPS & grade\n2012/13 to 2014/15\n", allGender) +
     coord_cartesian(ylim=c(150,300)) +
     scale_x_continuous(breaks=seq(2013,2015,1)) +
     scale_colour_manual(
@@ -57,11 +57,11 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     theme_classic()+
     labs(x="", y="")+
     theme(legend.position= "none",
-          text = element_text(size = 12),
+          text = element_text(size = 10),
           axis.text=element_text(size=12),
-          axis.title=element_text(size=12),
+          axis.title=element_text(size=10),
           #legend.text=element_text(size=12), legend.title=element_blank(),
-         # axis.text.x = element_text(angle = 300),
+          axis.text.x = element_text(angle = 300),
           # axis.title.x = element_blank(),
           # axis.title.y = element_text(margin = margin(r = 14)),
           axis.line = element_line( size = 1.0)
@@ -98,11 +98,11 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     theme(
       legend.position = c(.8,.15),
       legend.title=element_blank(),
-      text = element_text(size = 12),
+      text = element_text(size = 10),
       axis.text=element_text(size=12),
-      axis.title=element_text(size=12),
+      axis.title=element_text(size=10),
       legend.text=element_text(size=12), 
-     # axis.text.x = element_text(angle = 300),
+      axis.text.x = element_text(angle = 300),
       # axis.title.x = element_blank(),
       # axis.title.y = element_text(margin = margin(r = 14)),
       axis.line = element_line( size = 1.0)
@@ -156,9 +156,9 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
       theme(legend.position = "bottom",
             legend.direction = "vertical",
             legend.title=element_blank(),
-            text = element_text(size = 12),
+            text = element_text(size = 10),
             axis.text=element_text(size=12),
-            axis.title=element_text(size=12),
+            axis.title=element_text(size=10),
             legend.text=element_text(size=12),
             axis.text.x = element_text(angle = 300),
             # axis.title.x = element_blank(),
@@ -199,7 +199,7 @@ createGenderGap<- function(dfAps, instGroup, instType){
           text = element_text(size = 12),
           legend.direction = "vertical",
           plot.title=element_text(size=10),
-         # axis.text.x = element_text(angle = 300),
+          axis.text.x = element_text(angle = 300),
           axis.title.x = element_blank(),
           axis.title.y = element_text(margin = margin(r = 10)),
           axis.line = element_line( size = 1.0)) 
