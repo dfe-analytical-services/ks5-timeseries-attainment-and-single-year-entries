@@ -10,7 +10,7 @@ a11y_panel <- function() {
             and have actively developed this application with accessibilty in mind."),
       h2("WCAG 2.1 compliance"),
       br("We follow the reccomendations of the ", a(href = "https://www.w3.org/TR/WCAG21/", "WCAG 2.1 requirements. ", onclick = "ga('send', 'event', 'click', 'link', 'IKnow', 1)"), "This application has been checked using the ", a(href = "https://github.com/ewenme/shinya11y", "Shinya11y tool "), ", which did not detect accessibility issues.
-             This application also fully passes the accessibility audits checked by the ", a(href = "https://developers.google.com/web/tools/lighthouse", "Google Developer Lighthouse tool"), ". This means that this application:"),
+             This application also passes the accessibility audits checked by the ", a(href = "https://developers.google.com/web/tools/lighthouse", "Google Developer Lighthouse tool"), ". This means that this application:"),
       tags$div(tags$ul(
         tags$li("uses colours that have sufficient contrast"),
         tags$li("allows you to zoom in up to 300% without the text spilling off the screen"),
@@ -25,7 +25,7 @@ a11y_panel <- function() {
       h2("Feedback"),
       br(
         "If you have any feedback on how we could further improve the accessibility of this application, please contact us at",
-        a(href = "mailto:email@education.gov.uk", "email@education.gov.uk")
+        a(href = "mailto:attainment.statistics@education.gov.uk", "attainment.statistics@education.gov.uk")
       )
     )
     )
@@ -49,8 +49,8 @@ support_links <- function() {
     a(href = "mailto:attainment.statistics@education.gov.uk", "attainment.statistics@education.gov.uk", .noWS = c("after")), ".",
     br(),
     h2("Find more information on the data"),
-    "The data used to produce the dashboard, along with methodological information can be found in the ",
-    a(href = "https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results", "A level and other 16 to 18 results publication on Explore Education Statistics", .noWS = c("after")),
+    "Data on A level and other 16 to 18 results along with methodological information can be found on",
+    a(href = "https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results", "Explore Education Statistics", .noWS = c("after")),
     ".",
     br(),
     h2("Contact us"),
