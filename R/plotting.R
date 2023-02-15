@@ -151,7 +151,7 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
       theme_classic() +
       annotate ("rect", xmin= 2020, xmax=2021, ymin=25, ymax=50, alpha=.2)+
       annotate (geom="text", x= 2017, y=55, label="Centre assessment grade 2019/20 ", color="black",size=4, vjust=-.3, hjust=0)+
-      annotate (geom="text", x= 2018, y=60, label="Teacher assessed grade 2020/21 ", color="black",size=4, vjust=-.3, hjust=0)+
+      annotate (geom="text", x= 2018.5, y=60, label="Teacher assessed grade 2020/21 ", color="black",size=4, vjust=-.3, hjust=0)+
       
       theme(legend.position = "bottom",
             legend.direction = "vertical",
