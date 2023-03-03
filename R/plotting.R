@@ -25,7 +25,7 @@ createTimeSeriesHeadline <- function(dfAps, allAps){
           axis.text=element_text(size=12),
           axis.title=element_text(size=12),
           # plot.margin=margin(rep(15,4)),
-          axis.text.x = element_text(angle=45, hjust=1), legend.text=element_text(size=12), legend.title=element_blank()) + 
+          axis.text.x = element_text(angle=300, hjust=1), legend.text=element_text(size=12), legend.title=element_blank()) + 
     expand_limits(x=2016, y=0)
   
   fig
@@ -37,7 +37,7 @@ createTimeSeriesHeadline <- function(dfAps, allAps){
 # Joint plot function for  Alevel Aps from 2013  
 
 createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
-  validate(need(dfAps$school_type, message="To view charts select type of students, select between 1 and 4 institution groups and institution types from the drop-down menus at the top page"))
+  validate(need(dfAps$school_type, message="To view charts select type of students and up to 4 institution types from the drop-down menus at the top page"))
   
   fig1<-ggplot(dfAps, aes(x=year_2013_2015, y=aps_2013_2015,
                           color=fct_reorder2(school_type, year_2013_2015, aps_2013_2015))) +
@@ -52,11 +52,12 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     scale_x_continuous(breaks=seq(2013,2015,1)) +
     scale_colour_manual(
       #"school type",
-    #  breaks = unique(dfAps$school_type),
+      breaks = unique(dfAps$school_type),
       values = gss_colour_pallette) +
     theme_classic()+
     labs(x="", y="")+
     theme(legend.position= "none",
+         # legend.position = c(.8,.15),
           text = element_text(size = 10),
           axis.text=element_text(size=12),
           axis.title=element_text(size=10),
@@ -91,7 +92,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
   
     labs(x="", y="", color="")+
     theme_classic() +
-    annotate (geom="text", x= 2016.5, y=45, label="Average point score (APS) - point scale \n changed in 2015/16 but APS as grades remain unchanged ", color="black",size=4, vjust=-.3, hjust=0)+
+    annotate (geom="text", x= 2016.5, y=45, label="Average point score (APS) - point scale \n changed in 2015/16 but average grade remains consistent", color="black",size=4, vjust=-.3, hjust=0)+
     annotate ("rect", xmin= 2020, xmax=2021, ymin=25, ymax=50, alpha=.2)+
     annotate (geom="text", x= 2019, y=55, label="Centre assessment grade 2019/20 ", color="black",size=4, vjust=-.3, hjust=0)+
     annotate (geom="text", x= 2019.5, y=60, label="Teacher assessed grade 2020/21 ", color="black",size=4, vjust=-.3, hjust=0)+
@@ -120,7 +121,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
 
 
 createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
-  validate(need(dfAps$school_type, message="To view chart select between 1 and 4 institution groups and institution types from the drop-down menus at the top page."))
+  validate(need(dfAps$school_type, message="To view chart select between 1 and 4 institution types from the drop-down menus at the top page."))
   # 
   # fmFig<-ggplot(dfAps, aes(x=year_2016_2022, y=aps_2016_2022,
   #                         color=school_type)) +
@@ -129,11 +130,11 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
   fmFig<-ggplot(dfAps, aes(x=year_2016_2022, y=aps_2016_2022,
                            color=fct_reorder2(school_type, year_2016_2022, aps_2016_2022 ))) +
     geom_line(stat="identity", size=1.5) +
-    geom_curve(aes(x=2020.5, y=59, xend=2021, yend=52),  curvature=-.3,
+    geom_curve(aes(x=2020.5, y=55, xend=2021, yend=52),  curvature=-.3,
                  arrow = arrow(length=unit(0.03, "npc"), type="closed"),
                  color="black", size=.05, angle=90 )+
       
-      geom_curve(aes(x=2019.5, y=55, xend=2020, yend=50),  curvature=-.3,
+      geom_curve(aes(x=2019.5, y=53, xend=2020, yend=50),  curvature=-.3,
                  arrow = arrow(length=unit(0.03, "npc"), type="closed"),
                  color="black", size=.05, angle=90 )+
       
@@ -150,8 +151,8 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
       labs(x="", y="", color="")+
       theme_classic() +
       annotate ("rect", xmin= 2020, xmax=2021, ymin=25, ymax=50, alpha=.2)+
-      annotate (geom="text", x= 2017, y=55, label="Centre assessment grade 2019/20 ", color="black",size=4, vjust=-.3, hjust=0)+
-      annotate (geom="text", x= 2018.5, y=60, label="Teacher assessed grade 2020/21 ", color="black",size=4, vjust=-.3, hjust=0)+
+      annotate (geom="text", x= 2017, y=53, label="Centre assessment grade 2019/20 ", color="black",size=4, vjust=-.3, hjust=0)+
+      annotate (geom="text", x= 2018.5, y=56, label="Teacher assessed grade 2020/21 ", color="black",size=4, vjust=-.3, hjust=0)+
       
       theme(legend.position = "bottom",
             legend.direction = "vertical",
@@ -172,7 +173,7 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
 
 
 createGenderGap<- function(dfAps, instGroup, instType){
-  validate(need(dfAps$school_type, message="To view chart select between 1 and 4 institution groups and institution types from the drop-down menus at the top page."))
+  validate(need(dfAps$school_type, message="To view chart select between 1 and 4 institution types from the drop-down menus at the top page."))
   
   fig<-dfAps %>%
     rename(Year="year", Gender_gap="gender_gap", Institution_type="school_type")
@@ -211,7 +212,7 @@ createGenderGap<- function(dfAps, instGroup, instType){
                                          "resetScale2d", "hoverCompareCartesian",
               "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE, 
              toImageButtonOptions = list(format="svg", filename="apsGgap_image")) %>%
-      layout(legend=list(orientation="v", x=.99, y=.5), hovermode ="x")
+      layout(legend=list(orientation="h", x=.1, y=-.5), hovermode ="x")
  
 }
 
@@ -258,7 +259,7 @@ createTimeSeriesSubject<- function(dfSubject, subAll, subName){
  ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
    config(modeBarButtons=list(list("toImage")), displaylogo=FALSE,
            toImageButtonOptions = list(format="svg", filename="subjectAll_image")) %>%
-             layout(legend=list(orientation="v", x=.99, y=.5),
+             layout(legend=list(orientation="h", x=.1, y=-.5),
                     hovermode="x")
 
 
@@ -317,7 +318,7 @@ createTimeSeriesResult<- function(dfSubject, subAll, resAll, subName){
                                         "resetScale2d", "hoverCompareCartesian", "drawrect", "select2d","lasso2d",
                                         "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE, 
              toImageButtonOptions = list(format="svg", filename="resultAll_image")) %>%
-     layout(legend=list(orientation="v", x=.99, y=.5),
+     layout(legend=list(orientation="h", x=.1, y=-.5),
             hovermode="x")#+
     #geom_text_repel(data=end_year, aes(x=Year, y=Percentage, color=Subject, label=Subject))
 
@@ -365,7 +366,7 @@ createTimeSeriesSubjectFm<- function(dfSubjectFm, subByFm){
                                        "resetScale2d", "hoverCompareCartesian",  "drawrect", "select2d","lasso2d",
                                        "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE,
             toImageButtonOptions = list(format="svg", filename="subjectFm_image"))%>%
-     layout(legend=list(orientation="v", x=.99, y=.5),
+     layout(legend=list(orientation="h", x=.5, y=-.5),
            hovermode="x")
 
 
@@ -404,8 +405,9 @@ createTimeSeriesResultFm <- function(dfSubjectFm, subByFm,resByFm){
                                        "resetScale2d", "hoverCompareCartesian","drawrect", "select2d", "lasso2d",
                                        "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE,
             toImageButtonOptions = list(format="svg", filename="resultFm_image")) %>%
-    layout(legend=list(orientation="v", x=.99, y=.5),
-           hovermode="x")
+    layout(legend=list(orientation="h", x=.5, y=-.5),
+           hovermode="x") %>%
+    style(hoverlabel=list(bgcolor="none", bordercolor="none"))
  
 } 
 

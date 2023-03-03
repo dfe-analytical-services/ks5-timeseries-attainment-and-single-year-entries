@@ -11,7 +11,7 @@
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
-# shhh(library(shinya11y))
+#shhh(library(shinya11y))
 shhh(library(shinyjs))
 shhh(library(tools))
 shhh(library(testthat))
@@ -29,9 +29,6 @@ shhh(library(xfun))
 shhh(library(hrbrthemes))
 shhh(library(gridExtra))
 shhh(library(forcats))
-
-
-
 
 
 
@@ -157,8 +154,7 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
     version = as.factor(version)
   )
 
-# A="perc_a_grade_achieved", B="perc_b_grade_achieved", C="perc_c_grade_achieved",
-# D="perc_d_grade_achieved", E="perc_e_grade_achieved",
+
 
 
 subjectByAll <- dfAlevelSubject %>%
@@ -175,27 +171,6 @@ subjectByGender <- subjectByAll %>%
 # Filter home economics for all students
 homeEconomics <- dfAlevelSubject %>%
   filter(subject_name == "Home economics" & characteristic_gender == "All students")
-
-# Bind home economics all students to a level subjects
-
-# subjectBind <- rbind(subjectByAll, homeEconomics)
-#
-# subjectPivot<-subjectBind %>%
-#   pivot_longer(
-#     cols = starts_with("A*"),
-#     names_to="grade",
-#     #names_prefix="A*",
-#     values_to="percent"
-#   )
-#
-# subjectAll<-subjectPivot %>%
-#   #filter(characteristic_gender=="All students") %>%
-#   group_by(subject_name, characteristic_gender, grade) %>%
-#   arrange (year, .by_group=TRUE) %>%
-#   ungroup()
-
-
-
 
 
 
@@ -223,12 +198,16 @@ dfAlevelAps <- data %>%
     characteristic_gender = as.factor(characteristic_gender),
     school_type = as.factor(school_type),
     school_type_group = as.factor(school_type_group),
-    version = as.factor(version)
+    version = as.factor(version),
+    school_type = as.factor(recode(school_type, "All schools and FE sector colleges" = "All Institutions",
+                                                "All state-funded schools and colleges" = "All state-funded"))
   )
 
 choicesSchool_type_group <- unique(dfAlevelAps$school_type_group)
 choicesSchool_type <- unique(dfAlevelAps$school_type_type)
 choicesGender <- unique(dfAlevelAps$characteristic_gender)
+
+
 
 
 # Create gender gap between female and male using long width
@@ -238,28 +217,9 @@ choicesGender <- unique(dfAlevelAps$characteristic_gender)
 
 dfApsGenderGap <- read_alevel_aps_gendergap_data()
 fmDiff <- dfApsGenderGap %>%
-  mutate(gender_gap = round(as.numeric(gender_gap), 1))
-
-# fmGap<-dfAlevelAps %>%
-#   select(year, time_period, school_type, school_type_group, characteristic_gender, number_of_students, aps_2016_2022, version)
-#
-#
-# female_male<- fmGap %>%
-#   filter(characteristic_gender!="All students" & year >=2016) %>%
-#   group_by(school_type_group, school_type, year) %>%
-#   arrange(school_type, .by_group = TRUE) %>%
-#   mutate(aps_2016_2022,
-#          gender_gap =  aps_2016_2022[characteristic_gender =="Female"] - aps_2016_2022[characteristic_gender=="Male"])%>%
-#   ungroup()
-
-#
-# fmDiff<- female_male%>%
-#   filter(characteristic_gender=="Female") %>%
-#   select(year, time_period, school_type, school_type_group, number_of_students, aps_2016_2022, gender_gap, version) %>%
-#   mutate(
-#     gender_gap=round(gender_gap,1)
-#   )
-
+  mutate(gender_gap = round(as.numeric(gender_gap), 1),
+         school_type = as.factor(recode(school_type, "All schools and FE sector colleges" = "All Institutions",
+                                        "All state-funded schools and colleges" = "All state-funded")) )
 
 
 
@@ -283,7 +243,9 @@ dfAttainment <- dfAttainment %>%
     aps_grade = as.factor(aps_grade),
     characteristic_gender = as.factor(characteristic_gender),
     version = as.factor(version),
-    cert_type = as.factor(cert_type)
+    cert_type = as.factor(cert_type),
+    school_type = as.factor(recode(school_type, "All schools and FE sector colleges" = "All Institutions",
+                                                "All state-funded schools and colleges" = "All state-funded")) 
   ) %>%
   group_by(school_type, cert_type) %>%
   arrange(year, .by_group = TRUE) %>%

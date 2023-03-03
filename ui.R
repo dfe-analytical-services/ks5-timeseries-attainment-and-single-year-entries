@@ -101,8 +101,10 @@ ui <- function(input, output, session) {
       dashboard_panel_aps(),
       dashboard_panel_sub_all(),
       dashboard_panel_sub_fm(),
+      flow_panel(),
       a11y_panel(),
-      support_links()
+      support_links(),
+      
     ),
     tags$script(
       src = "script.js"
