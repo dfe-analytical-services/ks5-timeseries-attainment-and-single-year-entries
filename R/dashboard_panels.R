@@ -166,7 +166,7 @@ homepage_panel <- function() {
 dashboard_panel_aps <- function() {
   tabPanel(
     value = "dashboard",
-    "1. Headline attainment & A level by institution type",
+    "Attainment: APS per entry and average result",
     
     # Define UI for application that draws a histogram
     
@@ -181,12 +181,12 @@ dashboard_panel_aps <- function() {
           width=12,
           div(
             class = "well",
-            style = "min-height: 100%; height: 100%; overflow-y: visible",
+            style = "min-height: 100%; height: 100%; overflow-y: visible ",
             shinyjs::useShinyjs(),
             fluidRow(
               
               column(
-                width = 2,
+                width = 4,
                 
                 selectizeInput(inputId = "allGender",
                              label = "Select students",
@@ -195,24 +195,30 @@ dashboard_panel_aps <- function() {
                 )
               ),
             
+            
+            
             column(
-              width = 5,
-              selectizeInput(inputId = "instituteGroup", label = "Select up to 4 institution groups",
-                             choices = sort(unique(dfAlevelAps$school_type_group)),
-                             multiple = T,
-                             options = list(maxItems = 4), selected=c("All independent schools","All state-funded schools")
-                             )),
-            column(
-              width=5, 
+              width=8,
               
-              selectizeInput(inputId="alevelInstitute",
-                             label="Select up to 4 institution types",choices=unique(dfAlevelAps$school_type), multiple=T, options = list(maxItems = 4), 
-                             selected=c("All independent schools","All state-funded schools")),
               
+              selectizeInput("alevelInstitute", "Select up to 4 institution types", choices=list(
+                
+                `Institution types` = c("All Institutions", "All schools", "All state-funded",
+                                        "All FE sector colleges", "All independent schools", "All state-funded schools"),
+                `All FE sector colleges` = c("Sixth form colleges", "Other FE sector colleges"),
+                `All independent schools` = c("Independent schools", "Independent special schools"),
+                `All state-funded schools` = c("Free schools", "Free schools 16-19", "LA maintained mainstream schools",
+                                               "Studio schools", "Converter academies - mainstream", "Sponsored academies - mainstream",
+                                               "University technical colleges (UTCs)")), multiple=TRUE, options = list(maxItems = 4),  
+                selected = c("All FE sector colleges", "All state-funded schools"))
+              
+             
+              )
+            ),
               
                 # uiOutput("alevelInstitute"), 
-              br()
-               )),
+              br(),
+              
             br(),
             
             fluidRow(
@@ -265,6 +271,7 @@ dashboard_panel_aps <- function() {
                              
                              fluidRow(
                                column(
+                                
                                  width=12,
                                  
                                  
@@ -299,7 +306,7 @@ dashboard_panel_aps <- function() {
                                          width=12,
                                          selectInput(inputId="headlineAps",
                                                      "Select institution type",
-                                                     choices=sort(unique(dfAttainment$school_type)), selected=c("All schools and FE sector colleges"))
+                                                     choices=sort(unique(dfAttainment$school_type)), selected=c("All Institutions"))
                                          )
                                        )
                                      ) 
@@ -312,14 +319,15 @@ dashboard_panel_aps <- function() {
                             ),
                            
                            tabPanel(
-                             "A level by all", value="alevel_all",
+                             "A level APS by all", value="alevel_all",
                              fluidRow(
                                column(
                                  width=12,
                                  h3("A level average point score (APS) per entry and grade by institution type"),
-                                 textOutput("textApsAll"),
+                                # textOutput("textApsAll"),
+                                 htmlOutput("textApsAll"),
                                  
-                                 uiOutput("boxapsAlevel", width = 2),
+                                # uiOutput("boxapsAlevel", width = 2),
                                  box(
                                    width=12,
                                    plotOutput("plotAlevelAps") %>% spinner()
@@ -327,9 +335,7 @@ dashboard_panel_aps <- function() {
                                  ),
                                column(
                                  width=12,
-                                 # div(
-                                 #   class = "well",
-                                 #   style = "min-height: 100%; height: 100%; overflow-y: visible",
+                              
                                    fluidRow(
                                      column(width=12
                                      )     
@@ -341,14 +347,14 @@ dashboard_panel_aps <- function() {
                              ),
                            
                            tabPanel(
-                             "A level gender gap", value="ggap",
+                             "A level APS gender gap", value="ggap",
                              fluidRow(
                                column(
                                  width=12,
                                  h3("A level female - male average points difference by institution type from 2015/16 to 2021/22 in England"),
                                  textOutput("textGgap"),
                                  
-                                # uiOutput("boxapsAlevel", width = 2),
+                                 #htmlOutput("boxapsAlevel", width = 2),
                                  box(
                                    width=12,
                                    plotlyOutput("plotGgap") %>% spinner()
@@ -360,7 +366,7 @@ dashboard_panel_aps <- function() {
                            
                            
                            tabPanel(
-                             "A level by gender", value="alevel_fm",
+                             "A level APS by gender", value="alevel_fm",
                              fluidRow(
                                column(
                                  width=12,
@@ -414,7 +420,7 @@ dashboard_panel_aps <- function() {
 dashboard_panel_sub_all <- function() {
   tabPanel(
     value = "dashboard_alse",
-    "  2a.  A level subject entry and result by all",
+    "Attainment: A level entries and grade distribution",
     
     # Define UI for application that draws a histogram
     
@@ -531,7 +537,7 @@ dashboard_panel_sub_all <- function() {
                                 label= "Download data",
                                 icon = shiny::icon("download"),
                                 class = "downloadButton"
-                              ),
+                              )
                               # column(width=6, align="right",
                               #        paste("Download chart"), br(),
                               #        downloadButton(
@@ -546,7 +552,9 @@ dashboard_panel_sub_all <- function() {
                               width=12, 
                               plotlyOutput("plotAlevelSubject")%>% spinner(),
                               
-                              p("Notes: - Total English covers English literature, English language, English language and literature. 
+                              p("Notes: Year as covered on the chart refers to the academic year in which students completed 16-18 study 
+                                (i.e., 2022 means 2021/22).
+                                  - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
                                   - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies. 
@@ -627,7 +635,7 @@ dashboard_panel_sub_all <- function() {
 dashboard_panel_sub_fm <- function() {
   tabPanel(
     value = "dashboard_fm",
-    "  2b.  A level subject entry and result by gender",
+    "Attainment: A level entries and grade distribution by gender",
     
     # Define UI for application that draws a histogram
     
@@ -744,7 +752,8 @@ dashboard_panel_sub_fm <- function() {
                                    box(
                                      width=12,
                                      plotlyOutput("plotSubjectFm")%>% spinner(), 
-                                     p("Notes: - Total English covers English literature, English language, English language and literature. 
+                                     p("Notes: Year as covered on the chart refers to the academic year in which students completed 16-18 study 
+                                     (i.e., 2022 means 2021/22). - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
                                   - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies. 
