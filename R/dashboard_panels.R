@@ -5,7 +5,7 @@ homepage_panel <- function() {
       gov_row(
         column(
           12,
-          h1("16 to 18  time series attainment and single year entry"),
+          h1("16 to 18  time series attainment and single year entry dashboard"),
           br(),
           br()
         ),
@@ -203,12 +203,12 @@ dashboard_panel_aps <- function() {
               
               selectizeInput("alevelInstitute", "Select up to 4 institution types", choices=list(
                 
-                `Institution types` = c("All Institutions", "All schools", "All state-funded",
-                                        "All FE sector colleges", "All independent schools", "All state-funded schools"),
-                `All FE sector colleges` = c("Sixth form colleges", "Other FE sector colleges"),
+                `Institution types` = c("All Institutions", "All FE sector colleges", "All independent schools",  "All schools", "All state-funded",
+                                        "All state-funded schools"),
+                `All FE sector colleges` = c("Other FE sector colleges", "Sixth form colleges"),
                 `All independent schools` = c("Independent schools", "Independent special schools"),
-                `All state-funded schools` = c("Free schools", "Free schools 16-19", "LA maintained mainstream schools",
-                                               "Studio schools", "Converter academies - mainstream", "Sponsored academies - mainstream",
+                `All state-funded schools` = c("Converter academies - mainstream", "Free schools", "Free schools 16-19", "LA maintained mainstream schools",
+                                               "Sponsored academies - mainstream", "Studio schools", 
                                                "University technical colleges (UTCs)")), multiple=TRUE, options = list(maxItems = 4),  
                 selected = c("All FE sector colleges", "All state-funded schools"))
               
