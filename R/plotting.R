@@ -212,7 +212,8 @@ createGenderGap<- function(dfAps, instGroup, instType){
                                          "resetScale2d", "hoverCompareCartesian",
               "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE, 
              toImageButtonOptions = list(format="svg", filename="apsGgap_image")) %>%
-      layout(legend=list(orientation="h", x=.1, y=-.5), hovermode ="x")
+      layout(legend=list(orientation="h", x=.1, y=-.5), hovermode ="x",
+             xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE))
  
 }
 
@@ -260,7 +261,8 @@ createTimeSeriesSubject<- function(dfSubject, subAll, subName){
    config(modeBarButtons=list(list("toImage")), displaylogo=FALSE,
            toImageButtonOptions = list(format="svg", filename="subjectAll_image")) %>%
              layout(legend=list(orientation="h", x=.1, y=-.5),
-                    hovermode="x")
+                    hovermode="x",
+                    xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE))
 
 
 }
@@ -319,7 +321,8 @@ createTimeSeriesResult<- function(dfSubject, subAll, resAll, subName){
                                         "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE, 
              toImageButtonOptions = list(format="svg", filename="resultAll_image")) %>%
      layout(legend=list(orientation="h", x=.1, y=-.5),
-            hovermode="x")#+
+            hovermode="x",
+            xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE))#+
     #geom_text_repel(data=end_year, aes(x=Year, y=Percentage, color=Subject, label=Subject))
 
 
@@ -366,12 +369,12 @@ createTimeSeriesSubjectFm<- function(dfSubjectFm, subByFm){
                                        "resetScale2d", "hoverCompareCartesian",  "drawrect", "select2d","lasso2d",
                                        "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE,
             toImageButtonOptions = list(format="svg", filename="subjectFm_image"))%>%
-     layout(legend=list(orientation="h", x=.5, y=-.5),
-           hovermode="x")
+     layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE),
+            legend=list(orientation="h", x=.4, y=-.5),
+            hovermode="x")
 
 
 } 
-
 
 
 createTimeSeriesResultFm <- function(dfSubjectFm, subByFm,resByFm){
@@ -389,8 +392,7 @@ createTimeSeriesResultFm <- function(dfSubjectFm, subByFm,resByFm){
     labs(x="", y="", color="")+
     theme_classic() +
     annotate ("rect", xmin= 2020, xmax=2021, ymin=5, ymax=100, alpha=.2)+
-    
-    
+   
     theme(axis.text=element_text(size=8),
           axis.title=element_text(size=10),
           plot.title=element_text(size=10),
@@ -405,9 +407,13 @@ createTimeSeriesResultFm <- function(dfSubjectFm, subByFm,resByFm){
                                        "resetScale2d", "hoverCompareCartesian","drawrect", "select2d", "lasso2d",
                                        "hoverClosestCartesian", "toggleSpikelines"), displaylogo=FALSE,
             toImageButtonOptions = list(format="svg", filename="resultFm_image")) %>%
-    layout(legend=list(orientation="h", x=.5, y=-.5),
-           hovermode="x") %>%
-    style(hoverlabel=list(bgcolor="none", bordercolor="none"))
+   
+    layout(
+           xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE),
+           legend=list(orientation="h", x=.4, y=-.5),
+           hovermode="x") 
+   
+   
  
 } 
 
