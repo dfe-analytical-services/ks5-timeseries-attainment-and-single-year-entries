@@ -29,7 +29,7 @@ shhh(library(xfun))
 shhh(library(hrbrthemes))
 shhh(library(gridExtra))
 shhh(library(forcats))
-
+shhh(library(patchwork))
 
 
 # Functions ---------------------------------------------------------------------------------
@@ -149,12 +149,19 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
   mutate(
     entry_count = as.numeric(entry_count),
     thousand_entries = as.numeric(entry_count / 1000),
+    #`A*` = as.numeric(`A*`),
+    `A*-A` = as.numeric(`A*-A`),
+    `A*-B` = as.numeric(`A*-B`),
+    `A*-C` = as.numeric(`A*-C`),
+    `A*-D` = as.numeric(`A*-D`),
+    `A*-E` = as.numeric(`A*-E`),
     subject_name = as.factor(subject_name),
     characteristic_gender = as.factor(characteristic_gender),
     version = as.factor(version)
   )
 
-
+# A="perc_a_grade_achieved", B="perc_b_grade_achieved", C="perc_c_grade_achieved",
+# D="perc_d_grade_achieved", E="perc_e_grade_achieved",
 
 
 subjectByAll <- dfAlevelSubject %>%
@@ -171,6 +178,27 @@ subjectByGender <- subjectByAll %>%
 # Filter home economics for all students
 homeEconomics <- dfAlevelSubject %>%
   filter(subject_name == "Home economics" & characteristic_gender == "All students")
+
+# Bind home economics all students to a level subjects
+
+# subjectBind <- rbind(subjectByAll, homeEconomics)
+#
+# subjectPivot<-subjectBind %>%
+#   pivot_longer(
+#     cols = starts_with("A*"),
+#     names_to="grade",
+#     #names_prefix="A*",
+#     values_to="percent"
+#   )
+#
+# subjectAll<-subjectPivot %>%
+#   #filter(characteristic_gender=="All students") %>%
+#   group_by(subject_name, characteristic_gender, grade) %>%
+#   arrange (year, .by_group=TRUE) %>%
+#   ungroup()
+
+
+
 
 
 
@@ -208,6 +236,25 @@ choicesSchool_type <- unique(dfAlevelAps$school_type_type)
 choicesGender <- unique(dfAlevelAps$characteristic_gender)
 
 
+################################
+# x<-as.vector(levels(dfAlevelAps$school_type_group))
+# alevelInstitute<-function(x){
+#   for(i in 1:length(x)){
+#     if(i==1) {
+#       savelist <-c()
+#       newlist<-list(list(value=x[i], label=x[i]))
+#       savelist<-c(savelist, newlist)
+#     }else{
+#       newlist<-list(list(value=x[i], label=x[i]))
+#       savelist<-c(savelist, newlist)
+#       
+#     }
+#       }
+#   return(savelist)
+# }
+
+
+
 
 
 # Create gender gap between female and male using long width
@@ -224,16 +271,41 @@ fmDiff <- dfApsGenderGap %>%
 
 
 
+
+# fmGap<-dfAlevelAps %>%
+#   select(year, time_period, school_type, school_type_group, characteristic_gender, number_of_students, aps_2016_2022, version)
+#
+#
+# female_male<- fmGap %>%
+#   filter(characteristic_gender!="All students" & year >=2016) %>%
+#   group_by(school_type_group, school_type, year) %>%
+#   arrange(school_type, .by_group = TRUE) %>%
+#   mutate(aps_2016_2022,
+#          gender_gap =  aps_2016_2022[characteristic_gender =="Female"] - aps_2016_2022[characteristic_gender=="Male"])%>%
+#   ungroup()
+
+#
+# fmDiff<- female_male%>%
+#   filter(characteristic_gender=="Female") %>%
+#   select(year, time_period, school_type, school_type_group, number_of_students, aps_2016_2022, gender_gap, version) %>%
+#   mutate(
+#     gender_gap=round(gender_gap,1)
+#   )
+
+
+
+
+
 ########################################################################################################
 
 
 # Read in attainment data for alevel, applied general and techlevel
 
-dfAttainment <- read_all_attainment_data()
+dfAttainmentRaw <- read_all_attainment_data()
 
 
 # Select  all students and data to factors and numeric
-dfAttainment <- dfAttainment %>%
+dfAttainment <- dfAttainmentRaw %>%
   filter(characteristic_gender == "All students") %>%
   mutate(
     school_type = as.factor(school_type),
