@@ -12,7 +12,7 @@ createTimeSeriesHeadline <- function(dfAps, allAps){
     
     geom_text(aes(label=aps_grade, group=cert_type),  position=position_dodge(0.9), vjust=.4, hjust="top",  size=5, color="white", angle=90, show.legend=F)+
     
-    ggtitle("Average point score and grade \n ", allAps ) +
+    ggtitle("Average point score and grade:  ",allAps ) +
     #  coord_cartesian(ylim=c(10,60)) +
     scale_x_continuous(breaks=seq(2016,2022,1)) +
     scale_fill_manual(values =c('#12436D','#28A197','#801650'))+
@@ -47,24 +47,28 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
                color="black", size=.05, angle=45 )+
     
     geom_label(aes(label=aps_grade_2013_2015, y=aps_2013_2015), show.legend=F)+
-    ggtitle("\nAPS & grade\n2012/13 to 2014/15\n") +
+   # ggtitle("\nAPS & grade\n2012/13 to 2014/15\n") +
     coord_cartesian(ylim=c(150,300)) +
+   # coord_cartesia (xlim=c(150,300)) +
+    scale_y_continuous(limits=c(150, 300)) +
     scale_x_continuous(breaks=seq(2013,2015,1)) +
     scale_colour_manual(
-      #"school type",
+      "",
       breaks = unique(dfAps$school_type),
       values = gss_colour_pallette) +
+    
+  #  ylab(paste0("Average point score & grade  - ", allGender)) +
     theme_classic()+
-    labs(x="", y="")+
+    #labs(x="", y="APS & grade", allGender)+
+   
     theme(legend.position= "none",
-         # legend.position = c(.8,.15),
-          text = element_text(size = 10),
+          text = element_text(size = 12),
           axis.text=element_text(size=12),
-          axis.title=element_text(size=10),
+          #axis.title=element_text(size=10),
           #legend.text=element_text(size=12), legend.title=element_blank(),
           axis.text.x = element_text(angle = 300),
-          # axis.title.x = element_blank(),
-          # axis.title.y = element_text(margin = margin(r = 14)),
+          axis.title.x = element_blank(),
+          axis.title.y = element_blank(),
           axis.line = element_line( size = 1.0)
           )
 
@@ -82,8 +86,9 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
                arrow = arrow(length=unit(0.03, "npc"), type="closed"),
                color="black", size=.05, angle=90 )+
     geom_label(aes(label=aps_grade_2016_2022, y=aps_2016_2022), show.legend=F)+
-    ggtitle(paste0("\n APS & grade 2015/16 to 2021/22 \n", allGender)) + 
+   # ggtitle(paste0("\n APS & grade 2015/16 to 2021/22 \n", allGender)) + 
     coord_cartesian(ylim=c(10,60)) +
+    scale_y_continuous(limits=c(10,60)) +
     scale_x_continuous(breaks=seq(2016,2022,1)) +
     scale_colour_manual(
       "",
@@ -99,7 +104,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     theme(
       legend.position = c(.8,.15),
       legend.title=element_blank(),
-      text = element_text(size = 10),
+      text = element_text(size = 12),
       axis.text=element_text(size=12),
       axis.title=element_text(size=10),
       legend.text=element_text(size=12), 
@@ -107,10 +112,10 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
       # axis.title.x = element_blank(),
       # axis.title.y = element_text(margin = margin(r = 14)),
       axis.line = element_line( size = 1.0)
-            
     )
 
-  finalFig<-grid.arrange(fig1,fig2, widths=c(0.7,2), ncol=2)
+  finalFig<-(fig1+fig2 + plot_layout(widths=c(0.7,2)) &
+               ggtitle(paste0("Average point score and grade \n", allGender)) )
 
   return(finalFig)
 
@@ -157,7 +162,7 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
       theme(legend.position = "bottom",
             legend.direction = "vertical",
             legend.title=element_blank(),
-            text = element_text(size = 10),
+            text = element_text(size = 12),
             axis.text=element_text(size=12),
             axis.title=element_text(size=10),
             legend.text=element_text(size=12),
@@ -391,12 +396,16 @@ createTimeSeriesResultFm <- function(dfSubjectFm, subByFm,resByFm){
     scale_x_log10(breaks = seq(1996, 2022, 2)) +
     labs(x="", y="", color="")+
     theme_classic() +
-    annotate ("rect", xmin= 2020, xmax=2021, ymin=5, ymax=100, alpha=.2)+
+   # geom_rect(data=fig, aes(NULL, NULL, xmin=2020, xmax=2021, ymin=5, ymax=100))+
+    #geom_text(data=fig, aes(x=2019, y=55, label='Cag'))+
+    #annotate (geom="text", x= 2019, y=55, label="Centre assessment grade 2019/20 ", color="black",size=4, vjust=-.3, hjust=0)+)
+    annotate ("rect", xmin= 2020, xmax=2021, ymin=5, ymax=100, alpha=.2, show.legend=F)+
    
-    theme(axis.text=element_text(size=8),
+    theme(axis.text=element_text(size=10),
           axis.title=element_text(size=10),
           plot.title=element_text(size=10),
-          axis.text.x = element_text(angle=45, hjust=1),
+          axis.text.x = element_text(angle = 300),
+          #axis.text.x = element_text(angle=45, hjust=1),
           legend.text=element_text(size=10),legend.title=element_text(size=10)) +
     
     expand_limits(x=0, y=0) +
