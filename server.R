@@ -192,8 +192,6 @@ server <- function(input, output, session) {
   })
   
 
-
-     
   
   observeEvent(input$resetApsAll, {
   
@@ -673,7 +671,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
     datatable(
       reactiveType() %>%
         select(
-          Year = year,
+         # Year = year,
           `Academic year` = time_period,
           # `Institution group`  = school_type_group,
           `Institution type` = school_type,
@@ -743,12 +741,19 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
 
 
 
-  # Download the underlying data button
+  # output$downloadDataAps<-downloadHandler(
+  #   filename="timeseries_aggregated_attainment_institution_app_data.csv",
+  #   content=function(file) {
+  #     write.csv(level3Attainment, file,row.names=FALSE)
+  #   }
+  # )
+  
+ # Download the underlying data button
   output$downloadDataAps <- downloadHandler(
     filename = "attainment_data.csv",
     content = function(file) {
       if (input$tabsetpanels == "headline") {
-        write.csv(dfAttainment, file, row.names = FALSE)
+        write.csv(dfAttainmentRaw, file, row.names = FALSE)
       } else {
         write.csv(dfAlevelAps, file, row.names = FALSE)
       }
