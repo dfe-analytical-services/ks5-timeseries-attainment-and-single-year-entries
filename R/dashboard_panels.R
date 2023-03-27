@@ -201,22 +201,24 @@ dashboard_panel_aps <- function() {
               width=8,
               
               
+            
+              
               selectizeInput("alevelInstitute", "Select up to 4 institution types", choices=list(
-                
+
                 `Institution types` = c("All Institutions", "All FE sector colleges", "All independent schools",  "All schools", "All state-funded",
                                         "All state-funded schools"),
                 `All FE sector colleges` = c("Other FE sector colleges", "Sixth form colleges"),
                 `All independent schools` = c("Independent schools", "Independent special schools"),
                 `All state-funded schools` = c("Converter academies - mainstream", "Free schools", "Free schools 16-19", "LA maintained mainstream schools",
-                                               "Sponsored academies - mainstream", "Studio schools", 
-                                               "University technical colleges (UTCs)")), multiple=TRUE, options = list(maxItems = 4),  
+                                               "Sponsored academies - mainstream", "Studio schools",
+                                               "University technical colleges (UTCs)")), multiple=TRUE, options = list(maxItems = 4),
                 selected = c("All FE sector colleges", "All state-funded schools"))
-              
-             
+
+
               )
             ),
               
-                # uiOutput("alevelInstitute"), 
+                
               br(),
               
             br(),
@@ -538,16 +540,10 @@ dashboard_panel_sub_all <- function() {
                                 icon = shiny::icon("download"),
                                 class = "downloadButton"
                               )
-                              # column(width=6, align="right",
-                              #        paste("Download chart"), br(),
-                              #        downloadButton(
-                              #          outputId="downloadPlotSubAll",
-                              #        label="Download chart"
-                              #        ))
+                            
                               )),
                             
-                            #valueBoxOutput("", width = 3),
-                            # valueBoxOutput("boxapsGrade", width = 6),
+                          
                             box(
                               width=12, 
                               plotlyOutput("plotAlevelSubject")%>% spinner(),
