@@ -26,54 +26,50 @@ homepage_panel <- function() {
                 class = "panel-body",
                 tags$div(
                   title = "",
+                  br(),
                   p("This dashboard allows users to explore time series data for 16 to 18 qualifications in England.  
-                    It brings together figures compiled from the current and previous versions of the ‘A level and other 16 to 18 results’ statistical release with focus on:"), 
-                  p("1.  Attainment by Institution types covering Average point score (APS) and grades for A level, applied general and tech level qualifications."), 
-                  p("2a.  Subject entries and cumulative percentage grades for A level single academic year from 1995/96 to 2021/22 by all students; and"), 
-                  p("2b. Subject entries and cumulative percentage grades by gender."),
-                  p("The drop-down menus at the top of the page or within the chart area 
-                    allow for selection of one or more institution types, subjects and results where applicable.")
+                    It brings together figures compiled from the current and previous versions of the ‘A level and other 16 to 18 results’ statistical release with focus on:") 
                   
                   ),
-                  
-                br(),
+               
                 tags$div(
                   title="Headline attainment and A level time series by institution type",
                   h3(actionLink("link_to_headline_tab", "Headline attainment and A level result by institution type")),
                   p("The headline boxes show the latest average result for A level, applied general and tech level qualifications for all students.  The bar chart shows the yearly trend from 2015/16 to 2021/22.  "),
+                  
+                  p("The year in tables/charts is the academic year in which students completed 16-18 study (i.e. 2022 means 2021/22). 16-18 study normally lasts either 2 or 3 years, and attainment accounts for all entries during that period."),
                  
                   p("Drop-down box within the chart area allows for selection of one institution type.  To view latest results and trend, click on the drop-down box and  select institution type required."),
                   
-                  
+                 
                   h4("APS for A level by all & gender"),
-                  p("The line charts display the yearly trend and grades for all students and by gender, while the female - male gender gap shows the average point difference.
-                   To view and explore trend  first select the institituion group followed by the institution type covered within each group.
-                  Up to four institution groups and types can be selected from the drop-down menus."    
+                  p("The line charts display the yearly trend and grades for all students and by gender, while the female - male gender gap shows the difference in average point score.
+                   To view and explore trend select up to four institution types from the drop-down menu at the top of the page."    
                   ),
-                
-                br(),
-                
-                
+                       
                 tags$div(
-                  title="(A level subject entries and cumulative grades - single academic year by all",
+                  title="(A level subject entries and result by all",
                   h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and result by all")),
                   p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2021/22. 
                  The drop-down menus at the top of the page allows for the selection and comparison of up to four subjects 
-                  and cumulative grades.")
+                  and cumulative grades.
+                    "),
+                  p("The data refers to all entries by 16-18 year olds in the year stated (where 2022 means 2021/22 academic year).")
                   
                 ),
-                
-                br(),
+             
                 tags$div(
-                  title="(A level subject entries and cumulative grades - single academic year by gender",
+                  title="(A level subject entries and result by gender",
                   h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result by gender")),
                   p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2021/22.  
-                  Select one subject from the dropdown menu at the top of the page, followed by the start year to view changes over time. End year remains at 2022."),
-                  
-                  h3("Table output and Data download"),
-                  
-                  p("Data on selected institution types, A level subjects entries and results can be  downloaded using the download button. 
-                    Full dataset can be downloaded by clicking the download button at the top of the page.  Full dataset on subject entries and results includes breakdown of subjects starting from 2015/16. "),
+                  Select one subject from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available)."),
+                  p(""), br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br()
                   
                   
                 ))
@@ -99,7 +95,6 @@ homepage_panel <- function() {
                 class = "panel-body",
                 
                 tags$div(
-                  
                     title="Attainment by institution type",
                     h3("Attainment by institution type"),
                   
@@ -116,10 +111,8 @@ homepage_panel <- function() {
                   p("Full details of the headline attainment measure can be found in the "),
                   tags$a(href = "https://www.gov.uk/government/publications/16-to-19-accountability-headline-measures-technical-guide", 
                          "technical guidance (16 to 18 accountability headline measures - GOV.UK)")
-                    
 
                 ),
-                
                 
                 tags$div(
                   
@@ -148,13 +141,7 @@ homepage_panel <- function() {
                 p("•	Total Classical studies covers Latin, Greek, Classical civilisation, and Other classical studies"),
                 p("•	STEM subjects cover Biology, Chemistry, Physics, Total maths, Further mathematics and Computer science. "),
                 p("•	Total Music includes Music and Music technology."),
-                
-                p("Year as covered on the charts refers to the academic year in which students completed 16-18 study 
-                (i.e., 2022 means 2021/22). A student's 16-18 study normally lasts
-                  either 2 or 3 years and APS per entry will incorporate all entries during that period. "),
-                
-                p("Detailed information on data sources and methodology  can be found on"),
-                  tags$a(href = "https://explore-education-statistics.service.gov.uk/methodology/a-level-and-other-16-to-18-results-methodology", "Explore education statistics website") 
+                p("The data refers to all entries by 16-18 year olds in the year stated (where 2022 means 2021/22 academic year).") 
              
             ))
             ) 
