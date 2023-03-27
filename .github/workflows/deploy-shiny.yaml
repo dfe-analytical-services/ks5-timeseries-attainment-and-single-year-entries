@@ -30,6 +30,20 @@ jobs:
         with:
           r-version: 4.2.1
           use-public-rspm: true
+          
+      - name: Set env vars (dev)
+        if: endsWith(github.ref, '/development')
+        run: |
+          echo "SHINYAPP_NAME='dev-dfe-ks5-timeseries-attainment-and-single-year-entries'" >> $GITHUB_ENV
+          echo "SHINYAPP_OVERFLOW_NAME='dev-dfe-ks5-timeseries-attainment-and-single-year-entries-overflow'">> $GITHUB_ENV
+      - name: Set env vars (prod)
+        if: endsWith(github.ref, '/main')
+        run: |
+          echo "SHINYAPP_NAME='dfe-ks5-timeseries-attainment-and-single-year-entries'">> $GITHUB_ENV
+          echo "SHINYAPP_OVERFLOW_NAME='dfe-ks5-timeseries-attainment-and-single-year-entries-overflow'">> $GITHUB_ENV
+
+          
+          
 
       - name: Cache R packages
         if: runner.os != 'Windows'
@@ -66,4 +80,5 @@ jobs:
         run: >
           Rscript
           -e "rsconnect::setAccountInfo(name = 'department-for-education', token = '${{secrets.SHINYAPPS_TOKEN}}', secret = '${{secrets.SHINYAPPS_SECRET}}')"
-          -e "rsconnect::deployApp()"
+          -e "rsconnect::deployApp(appName=${{env.SHINYAPP_NAME}})"
+          -e "rsconnect::deployApp(appName=${{env.SHINYAPP_OVERFLOW_NAME}})"
