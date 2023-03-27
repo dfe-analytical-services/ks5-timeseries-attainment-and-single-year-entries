@@ -53,32 +53,15 @@ server <- function(input, output, session) {
   #  Disable top panel on institution type and group for headline
   #  Disable top panel on type of students for Female and Male
 
-  observe({
-    validate(need(!is.null(input$tabsetpanels), ""))
-    if (input$tabsetpanels == "headline") {
-      disable("alevelInstitute")
-    } else {
-      enable("alevelInstitute")
-    }
-  })
-
-  observe({
-    validate(need(!is.null(input$tabsetpanels), ""))
-    if (input$tabsetpanels == "alevel_fm" || input$tabsetpanels == "headline" || input$tabsetpanels == "ggap") {
-      disable("allGender")
-    } else {
-      enable("allGender")
-    }
-  })
 
 
   # Add value box for A level
   output$headBox1 <- renderUI({
     latest <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Alevel", school_type == input$headlineAps))$aps
+      filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps
 
     grade <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Alevel", school_type == input$headlineAps))$aps_grade
+      filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps_grade
     req(grade)
     lapply(seq_along(latest), function(i) {
       fluidRow(
@@ -172,6 +155,26 @@ server <- function(input, output, session) {
       rownames = FALSE
     )
   })
+  
+  
+  
+  observe({
+    validate(need(!is.null(input$tabsetpanels), ""))
+    if (input$tabsetpanels == "headline") {
+      disable("alevelInstitute")
+    } else {
+      enable("alevelInstitute")
+    }
+  })
+  
+  observe({
+    validate(need(!is.null(input$tabsetpanels), ""))
+    if (input$tabsetpanels == "alevel_fm" || input$tabsetpanels == "headline" || input$tabsetpanels == "ggap") {
+      disable("allGender")
+    } else {
+      enable("allGender")
+    }
+  })
 
 
 
@@ -191,7 +194,7 @@ server <- function(input, output, session) {
     inType
   })
   
-
+  
   
   observeEvent(input$resetApsAll, {
   
@@ -327,7 +330,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
     HTML(paste("A level average point score (APS) per entry was first published in 2012/13 with a scale of 0-300.  
     The points changed to 0-60 scale in 2015/16, but average grade remains consistent. APS is presented across 2 charts, 
     scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).", br(),  "  
-    The charts display the APS and grades achieved by students throughout 16 to 18 study for  ", val, " in England from 2012/13 to 2021/22. 
+    The charts display the APS and grades achieved by students throughout 16 to 18 study for  ", val, " in England. 
     Up to four institution types can be selected from the drop-down menu. Care should be taken when comparing across institution types due to significant differences in cohort sizes.
            For breakdown of institution types, see flow diagram on left panel.  "))
   })
@@ -404,7 +407,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
     )
   })
 
-  # addPopover (session, 'moreInfo', 'click here for more information on chart', content=paste0("A* started in 2010.</p><p>", trigger = 'click'))
+
 
   output$plotResultAll <- renderPlotly({
     createTimeSeriesResult(reactiveSubject(),
@@ -585,7 +588,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
   )
 
 
-  ######### Insert notes for 2010 #####
+ 
 
 
   # Download  subject entry and cumulative result for all subject from top panel
