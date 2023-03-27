@@ -674,7 +674,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
     datatable(
       reactiveType() %>%
         select(
-         # Year = year,
+          Year = year,
           `Academic year` = time_period,
           # `Institution group`  = school_type_group,
           `Institution type` = school_type,
