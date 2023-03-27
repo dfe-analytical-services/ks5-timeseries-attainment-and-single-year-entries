@@ -27,7 +27,7 @@ shhh(library(plotly))
 shhh(library(DT))
 shhh(library(xfun))
 shhh(library(hrbrthemes))
-shhh(library(gridExtra))
+#shhh(library(gridExtra))
 shhh(library(forcats))
 shhh(library(patchwork))
 
@@ -116,8 +116,8 @@ appLoadingCSS <- "
 }
 "
 
-site_primary <- "https://department-for-education.shinyapps.io/dfe-shiny-template/"
-site_overflow <- "https://department-for-education.shinyapps.io/dfe-shiny-template-overflow/"
+site_primary <- "https://department-for-education.shinyapps.io/dfe-ks5-timeseries-attainment-and-single-year-entries/"
+site_overflow <- "https://department-for-education.shinyapps.io/dfe-ks5-timeseries-attainment-and-single-year-entries-overflow/"
 
 source("R/support_links.R")
 source("R/read_data.R")
@@ -142,14 +142,11 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
     `A*-B` = "perc_astar_b_grade_achieved", `A*-C` = "perc_astar_c_grade_achieved",
     `A*-D` = "perc_astar_d_grade_achieved", `A*-E` = "perc_astar_e_grade_achieved", version = "data_version"
   ) %>%
-  select(
-    time_period, year, subject_name, characteristic_gender, `A*-A`,
-    `A*-B`, `A*-C`, `A*-D`, `A*-E`, entry_count, version
-  ) %>%
+  select(time_period, year, subject_name, characteristic_gender, `A*-A`,
+    `A*-B`, `A*-C`, `A*-D`, `A*-E`, entry_count, version) %>%
   mutate(
     entry_count = as.numeric(entry_count),
     thousand_entries = as.numeric(entry_count / 1000),
-    #`A*` = as.numeric(`A*`),
     `A*-A` = as.numeric(`A*-A`),
     `A*-B` = as.numeric(`A*-B`),
     `A*-C` = as.numeric(`A*-C`),
@@ -159,9 +156,6 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
     characteristic_gender = as.factor(characteristic_gender),
     version = as.factor(version)
   )
-
-# A="perc_a_grade_achieved", B="perc_b_grade_achieved", C="perc_c_grade_achieved",
-# D="perc_d_grade_achieved", E="perc_e_grade_achieved",
 
 
 subjectByAll <- dfAlevelSubject %>%
@@ -178,28 +172,6 @@ subjectByGender <- subjectByAll %>%
 # Filter home economics for all students
 homeEconomics <- dfAlevelSubject %>%
   filter(subject_name == "Home economics" & characteristic_gender == "All students")
-
-# Bind home economics all students to a level subjects
-
-# subjectBind <- rbind(subjectByAll, homeEconomics)
-#
-# subjectPivot<-subjectBind %>%
-#   pivot_longer(
-#     cols = starts_with("A*"),
-#     names_to="grade",
-#     #names_prefix="A*",
-#     values_to="percent"
-#   )
-#
-# subjectAll<-subjectPivot %>%
-#   #filter(characteristic_gender=="All students") %>%
-#   group_by(subject_name, characteristic_gender, grade) %>%
-#   arrange (year, .by_group=TRUE) %>%
-#   ungroup()
-
-
-
-
 
 
 #####################################################################################################
@@ -236,27 +208,6 @@ choicesSchool_type <- unique(dfAlevelAps$school_type_type)
 choicesGender <- unique(dfAlevelAps$characteristic_gender)
 
 
-################################
-# x<-as.vector(levels(dfAlevelAps$school_type_group))
-# alevelInstitute<-function(x){
-#   for(i in 1:length(x)){
-#     if(i==1) {
-#       savelist <-c()
-#       newlist<-list(list(value=x[i], label=x[i]))
-#       savelist<-c(savelist, newlist)
-#     }else{
-#       newlist<-list(list(value=x[i], label=x[i]))
-#       savelist<-c(savelist, newlist)
-#       
-#     }
-#       }
-#   return(savelist)
-# }
-
-
-
-
-
 # Create gender gap between female and male using long width
 # Expect similar result on gender gap column for female an male
 # Use data from 2015/16
@@ -267,32 +218,6 @@ fmDiff <- dfApsGenderGap %>%
   mutate(gender_gap = round(as.numeric(gender_gap), 1),
          school_type = as.factor(recode(school_type, "All schools and FE sector colleges" = "All Institutions",
                                         "All state-funded schools and colleges" = "All state-funded")) )
-
-
-
-
-
-# fmGap<-dfAlevelAps %>%
-#   select(year, time_period, school_type, school_type_group, characteristic_gender, number_of_students, aps_2016_2022, version)
-#
-#
-# female_male<- fmGap %>%
-#   filter(characteristic_gender!="All students" & year >=2016) %>%
-#   group_by(school_type_group, school_type, year) %>%
-#   arrange(school_type, .by_group = TRUE) %>%
-#   mutate(aps_2016_2022,
-#          gender_gap =  aps_2016_2022[characteristic_gender =="Female"] - aps_2016_2022[characteristic_gender=="Male"])%>%
-#   ungroup()
-
-#
-# fmDiff<- female_male%>%
-#   filter(characteristic_gender=="Female") %>%
-#   select(year, time_period, school_type, school_type_group, number_of_students, aps_2016_2022, gender_gap, version) %>%
-#   mutate(
-#     gender_gap=round(gender_gap,1)
-#   )
-
-
 
 
 
@@ -317,8 +242,8 @@ dfAttainment <- dfAttainmentRaw %>%
     version = as.factor(version),
     cert_type = as.factor(cert_type),
     school_type = as.factor(recode(school_type, "All schools and FE sector colleges" = "All Institutions",
-                                                "All state-funded schools and colleges" = "All state-funded")) 
-  ) %>%
+                                                "All state-funded schools and colleges" = "All state-funded")),
+    cert_type = as.factor(recode(cert_type, "Alevel" = "A level"))) %>%
   group_by(school_type, cert_type) %>%
-  arrange(year, .by_group = TRUE) %>%
+  arrange(desc(year), .by_group = TRUE) %>%
   ungroup()
