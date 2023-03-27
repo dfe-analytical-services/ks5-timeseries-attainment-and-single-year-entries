@@ -43,8 +43,7 @@ customDisconnectMessage <- function(refresh = "Refresh page",
         tags$p("Please contact",
                tags$a(href="mailto:statistics.development@education.gov.uk","statistics.development@education.gov.uk"),
                "with details of any problems with this resource.")
-        #  ),
-        # htmltools::tags$p("If this persists, you can view tables and data via the ",htmltools::tags$a(href ='https://explore-education-statistics.service.gov.uk/find-statistics/pupil-attendance-in-schools', "Pupil attendance in schools")," release on Explore Education Statistics and please contact statistics.development@education.gov.uk with details of what you were trying to do.")
+        
       )
     ),
     htmltools::tags$div(id = "ss-overlay", style = "display: none;"),
