@@ -116,8 +116,8 @@ appLoadingCSS <- "
 }
 "
 
-site_primary <- "https://department-for-education.shinyapps.io/dfe-ks5-timeseries-attainment-and-single-year-entries/"
-site_overflow <- "https://department-for-education.shinyapps.io/dfe-ks5-timeseries-attainment-and-single-year-entries-overflow/"
+site_primary <- "https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries/"
+site_overflow <- "https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries-overflow/"
 
 source("R/support_links.R")
 source("R/read_data.R")
