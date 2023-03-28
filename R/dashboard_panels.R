@@ -68,7 +68,6 @@ homepage_panel <- function() {
                   br(),
                   br(),
                   br(),
-                  br(),
                   br()
                   
                   
