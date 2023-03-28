@@ -34,13 +34,13 @@ jobs:
       - name: Set env vars (dev)
         if: endsWith(github.ref, '/development')
         run: |
-          echo "SHINYAPP_NAME='dev-dfe-ks5-timeseries-attainment-and-single-year-entries'" >> $GITHUB_ENV
-          echo "SHINYAPP_OVERFLOW_NAME='dev-dfe-ks5-timeseries-attainment-and-single-year-entries-overflow'">> $GITHUB_ENV
+          echo "SHINYAPP_NAME='dev-ks5-timeseries-attainment-and-single-year-entries'" >> $GITHUB_ENV
+          echo "SHINYAPP_OVERFLOW_NAME='dev-ks5-timeseries-attainment-and-single-year-entries-overflow'">> $GITHUB_ENV
       - name: Set env vars (prod)
         if: endsWith(github.ref, '/main')
         run: |
-          echo "SHINYAPP_NAME='dfe-ks5-timeseries-attainment-and-single-year-entries'">> $GITHUB_ENV
-          echo "SHINYAPP_OVERFLOW_NAME='dfe-ks5-timeseries-attainment-and-single-year-entries-overflow'">> $GITHUB_ENV
+          echo "SHINYAPP_NAME='ks5-timeseries-attainment-and-single-year-entries'">> $GITHUB_ENV
+          echo "SHINYAPP_OVERFLOW_NAME='ks5-timeseries-attainment-and-single-year-entries-overflow'">> $GITHUB_ENV
 
           
           
