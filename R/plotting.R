@@ -252,7 +252,7 @@ createTimeSeriesSubject<- function(dfSubject, subAll, subName){
           axis.title.y = element_text(margin = margin(r = 10)),
           axis.line = element_line( size = 1.0)) +
    expand_limits(x=0, y=0) +
-   ggtitle(paste0("\nEntry count:\n ",  subAll))
+   ggtitle(paste0("\nA level entry count:\n ",  subAll))
  ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
    config(modeBarButtons=list(list("toImage")), displaylogo=FALSE,
            toImageButtonOptions = list(format="svg", filename="subjectAll_image")) %>%
@@ -301,7 +301,7 @@ createTimeSeriesResult<- function(dfSubject, subAll, resAll, subName){
       axis.title.y = element_text(margin = margin(r = 10)),
       axis.line = element_line( size = 1.0)) +
     expand_limits(x=0, y=0) +
-   ggtitle(paste0("\nCumulative percentage: ", resAll, "\n", subAll ))
+   ggtitle(paste0("\nA level cumulative percentage: ", resAll, "\n", subAll ))
   
    ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
      config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
@@ -348,7 +348,7 @@ createTimeSeriesSubjectFm<- function(dfSubjectFm, subByFm){
             axis.title.y = element_text(margin = margin(r = 12)),
             axis.line = element_line( size = 1.0))+
     expand_limits(x=0, y=0) +
-    ggtitle(paste0(" \n Entry count\n ",  subByFm))
+    ggtitle(paste0(" \n A level entry count\n ",  subByFm))
 
    ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
     config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
@@ -390,7 +390,7 @@ createTimeSeriesResultFm <- function(dfSubjectFm, subByFm,resByFm){
           legend.text=element_text(size=10),legend.title=element_text(size=10)) +
     
     expand_limits(x=0, y=0) +
-    ggtitle(paste0("\n Cumulative percentage: ",resByFm, "\n ", subByFm ))
+    ggtitle(paste0("\n A level cumulative percentage: ",resByFm, "\n ", subByFm ))
   
   ggplotly(fig, tooltip = c("x", "y", "colour"))%>%
     config (modeBarButtonsToRemove = c("zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
