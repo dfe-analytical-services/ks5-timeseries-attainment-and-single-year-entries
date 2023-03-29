@@ -10,7 +10,7 @@ createTimeSeriesHeadline <- function(dfAps, allAps){
     dfAps, aes(x=year, y=aps, group=cert_type)) +
     geom_col(aes(fill=cert_type), width=0.9, position=position_dodge())+  
     
-    geom_text(aes(label=aps_grade, group=cert_type),  position=position_dodge(0.9), vjust=.4, hjust="top",  size=5, color="white", angle=90, show.legend=F)+
+    geom_text(aes(label=aps_grade, group=cert_type),  position=position_dodge(0.9), hjust="top",  size=5, color="white", angle=90, show.legend=F)+
     
     ggtitle("Average point score and grade:  ",allAps ) +
     #  coord_cartesian(ylim=c(10,60)) +
@@ -86,7 +86,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
                arrow = arrow(length=unit(0.03, "npc"), type="closed"),
                color="black", size=.05, angle=90 )+
     geom_label(aes(label=aps_grade_2016_2022, y=aps_2016_2022), show.legend=F)+
-   # ggtitle(paste0("\n APS & grade 2015/16 to 2021/22 \n", allGender)) + 
+    ggtitle(paste0("\n APS & grade 2015/16 to 2021/22 \n", allGender)) + 
     coord_cartesian(ylim=c(10,60)) +
     scale_y_continuous(limits=c(10,60)) +
     scale_x_continuous(breaks=seq(2016,2022,1)) +
@@ -115,7 +115,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     )
 
   finalFig<-(fig1+fig2 + plot_layout(widths=c(0.7,2)) &
-               ggtitle(paste0("Average point score and grade \n", allGender)) )
+               ggtitle(paste0("APS and grade \n", allGender)) )
 
   return(finalFig)
 
@@ -287,15 +287,7 @@ createTimeSeriesResult<- function(dfSubject, subAll, resAll, subName){
 
 
   fig<-ggplot(fig, aes_string(x="Year", y=resAll, color="Subject", shape="Subject")) +
-  # fig<-
-  #   ggplot(fig, aes(x=Year,
-  #                    y=Percentage,
-  #                    color=Subject,
-  #                    shape=Subject
-
-
-                   # color=fct_reorder2(Subject, Year, Percentage)
-               #  )) +
+  
     geom_line(stat="identity", size=.5, show.legend=F) +
     geom_point(stat= "identity", size=1.5, show.legend=F)+
 
@@ -327,9 +319,7 @@ createTimeSeriesResult<- function(dfSubject, subAll, resAll, subName){
              toImageButtonOptions = list(format="svg", filename="resultAll_image")) %>%
      layout(legend=list(orientation="h", x=.1, y=-.5),
             hovermode="x",
-            xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE))#+
-    #geom_text_repel(data=end_year, aes(x=Year, y=Percentage, color=Subject, label=Subject))
-
+            xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE))
 
 }
 
