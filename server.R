@@ -169,6 +169,15 @@ server <- function(input, output, session) {
   
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
+    if (input$tabsetpanels == "headline") {
+      disable("resetApsAll")
+    } else {
+      enable("resetApsAll")
+    }
+  })
+  
+  observe({
+    validate(need(!is.null(input$tabsetpanels), ""))
     if (input$tabsetpanels == "alevel_fm" || input$tabsetpanels == "headline" || input$tabsetpanels == "ggap") {
       disable("allGender")
     } else {
