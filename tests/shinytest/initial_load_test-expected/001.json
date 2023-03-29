@@ -1,18 +1,14 @@
 {
   "input": {
     "alevelInstitute": [
-      "All independent schools",
+      "All FE sector colleges",
       "All state-funded schools"
     ],
     "allGender": "All students",
     "ees_1": 0,
     "ees_2a": 0,
     "ees_2b": 0,
-    "headlineAps": "All schools and FE sector colleges",
-    "instituteGroup": [
-      "All independent schools",
-      "All state-funded schools"
-    ],
+    "headlineAps": "All Institutions",
     "link_to_alevelAllSubject_tab": 0,
     "link_to_alevelFmSubject_tab": 0,
     "link_to_headline_tab": 0,

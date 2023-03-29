@@ -15,18 +15,14 @@
       ]
     },
     "alevelInstitute": [
-      "All independent schools",
+      "All FE sector colleges",
       "All state-funded schools"
     ],
     "allGender": "All students",
     "ees_1": 0,
     "ees_2a": 0,
     "ees_2b": 0,
-    "headlineAps": "All schools and FE sector colleges",
-    "instituteGroup": [
-      "All independent schools",
-      "All state-funded schools"
-    ],
+    "headlineAps": "All Institutions",
     "link_to_alevelAllSubject_tab": 0,
     "link_to_alevelFmSubject_tab": 0,
     "link_to_headline_tab": 0,
@@ -53,19 +49,19 @@
   },
   "output": {
     "headBox1": {
-      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>B<\/h3>\n        <p>A level average result equivalent to <strong>\n  38.87\n  points\n<\/strong>:<br/>All schools and FE sector colleges<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>B<\/h3>\n        <p><strong>Average A level result <\/strong>  equivalent to <strong>\n  38.87\n  points:   \n<\/strong>All Institutions<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
     },
     "headBox2": {
-      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>Dist-<\/h3>\n        <p>Applied general average result equivalent to <strong>\n  31.98\n  points\n<\/strong>: All schools and FE sector colleges<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>Dist-<\/h3>\n        <p><strong>Average applied general result<\/strong>  equivalent to <strong>\n  31.98\n  points:   \n<\/strong>All Institutions<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
     },
     "headBox3": {
-      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>Dist-<\/h3>\n        <p>Tech level average result equivalent to <strong>\n  30.56\n  points\n<\/strong>:<br/>All schools and FE sector colleges<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>Dist-<\/h3>\n        <p><strong>Average tech level result<\/strong>  equivalent to <strong>\n  30.56\n  points:   \n<\/strong>All Institutions<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
@@ -427,7 +423,8 @@
                 "size": 0
               }
             },
-            "hoverformat": ".2f"
+            "hoverformat": ".2f",
+            "fixedrange": true
           },
           "yaxis": {
             "domain": [
@@ -489,7 +486,8 @@
                 "size": 15.9402241594022
               }
             },
-            "hoverformat": ".2f"
+            "hoverformat": ".2f",
+            "fixedrange": true
           },
           "shapes": [
             {
@@ -528,9 +526,9 @@
                 "size": 15.9402241594022
               }
             },
-            "orientation": "v",
-            "x": 0.99,
-            "y": 0.5
+            "orientation": "h",
+            "x": 0.1,
+            "y": -0.5
           },
           "hovermode": "x",
           "barmode": "relative"
@@ -666,7 +664,7 @@
       ]
     },
     "plotHeadline": {
-      "src": "[image data sha1: cfa0867c94be41eed727e653f5cf4d3e2b26948a]",
+      "src": "[image data sha1: 2226f4251c23c93c0adfa0ba73015e410eac3e03]",
       "width": 337.546875,
       "height": 400,
       "alt": "Plot object",
@@ -698,8 +696,8 @@
             "range": {
               "left": 37.4944349315069,
               "right": 331.520547945206,
-              "bottom": 310.002420033347,
-              "top": 55.9988252197582
+              "bottom": 308.039453885818,
+              "top": 40.4468252197582
             }
           }
         ],
@@ -1066,7 +1064,8 @@
                 "size": 13.2835201328352
               }
             },
-            "hoverformat": ".2f"
+            "hoverformat": ".2f",
+            "fixedrange": true
           },
           "yaxis": {
             "domain": [
@@ -1128,7 +1127,8 @@
                 "size": 15.9402241594022
               }
             },
-            "hoverformat": ".2f"
+            "hoverformat": ".2f",
+            "fixedrange": true
           },
           "shapes": [
             {
@@ -1167,9 +1167,9 @@
                 "size": 0
               }
             },
-            "orientation": "v",
-            "x": 0.99,
-            "y": 0.5
+            "orientation": "h",
+            "x": 0.4,
+            "y": -0.5
           },
           "hovermode": "x",
           "barmode": "relative"
@@ -1454,7 +1454,7 @@
         }
       ]
     },
-    "textHeadline": "The boxes display the latest average results in 2021/22 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general\n    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.\nBar chart shows the average results from 2015/16 to 2021/22 for  All schools and FE sector colleges  in England. To view results, click on the drop-down box beside the bar chart and select one institution type.",
+    "textHeadline": "The boxes display the latest average results in 2021/22 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general\n    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.\nBar chart shows the average results from 2015/16 to 2021/22 for  All Institutions  in England. To view results, click on the drop-down box beside the bar chart and select one institution type.",
     "textSubAll": "The line chart shows the A level exam entries for  Total English and Total Maths from   1996 to  2022  for  All students  in England. ",
     "textSubFm": "The line chart shows the A level  exam entries for female and male on  Total English  from  1996 to  2022  in England. "
   },
