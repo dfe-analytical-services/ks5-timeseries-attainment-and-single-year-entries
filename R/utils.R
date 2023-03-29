@@ -36,8 +36,8 @@ customDisconnectMessage <- function(refresh = "Refresh page",
         },
         if(!is.null(publication_name)){
           tags$p("All the data used in this dashboard can also be viewed or downloaded via the ",
-                 tags$a(href=publication_link,
-                        publication_name),
+                 tags$a(href="https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22",
+                        "A level and other 16 to 18 results "),
                  "on Explore Education Statistics."
           )},
         tags$p("Please contact",
