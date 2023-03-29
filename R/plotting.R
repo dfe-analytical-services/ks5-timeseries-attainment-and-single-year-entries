@@ -39,8 +39,9 @@ createTimeSeriesHeadline <- function(dfAps, allAps){
 createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
   validate(need(dfAps$school_type, message="To view charts select type of students and up to 4 institution types from the drop-down menus at the top page"))
   
-  fig1<-ggplot(dfAps, aes(x=year_2013_2015, y=aps_2013_2015,
-                          color=fct_reorder2(school_type, year_2013_2015, aps_2013_2015))) +
+  
+  fig1<-ggplot(dfAps, aes(x=year_2013_2015, y=aps_2013_2015, color=school_type))+
+                         
     geom_line(stat="identity", size=1.5) +
     geom_curve(aes(x=2015.5, y=50, xend=2015, yend=45),
                arrow = arrow(length=unit(0.03, "npc"), type="closed"),
@@ -64,15 +65,13 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
     theme(legend.position= "none",
           text = element_text(size = 12),
           axis.text=element_text(size=12),
-          #axis.title=element_text(size=10),
-          #legend.text=element_text(size=12), legend.title=element_blank(),
           axis.text.x = element_text(angle = 300),
           axis.title.x = element_blank(),
           axis.title.y = element_blank(),
           axis.line = element_line( size = 1.0)
           )
 
-  fig2<-ggplot(dfAps,  aes(x= year_2016_2022, y= aps_2016_2022, color=fct_reorder2(school_type, year_2016_2022, aps_2016_2022 ))) +
+  fig2<-ggplot(dfAps,  aes(x= year_2016_2022, y= aps_2016_2022, color= school_type))+ 
     geom_line(stat="identity", size=1.5) +
     geom_curve(aes(x=2016.5, y=50, xend=2016, yend=45),  curvature=.3,
                arrow = arrow(length=unit(0.03, "npc"), type="closed"),
@@ -109,8 +108,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
       axis.title=element_text(size=10),
       legend.text=element_text(size=12), 
       axis.text.x = element_text(angle = 300),
-      # axis.title.x = element_blank(),
-      # axis.title.y = element_text(margin = margin(r = 14)),
+      
       axis.line = element_line( size = 1.0)
     )
 
@@ -127,13 +125,9 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender){
 
 createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
   validate(need(dfAps$school_type, message="To view chart select between 1 and 4 institution types from the drop-down menus at the top page."))
-  # 
-  # fmFig<-ggplot(dfAps, aes(x=year_2016_2022, y=aps_2016_2022,
-  #                         color=school_type)) +
-  
-  
-  fmFig<-ggplot(dfAps, aes(x=year_2016_2022, y=aps_2016_2022,
-                           color=fct_reorder2(school_type, year_2016_2022, aps_2016_2022 ))) +
+ 
+  fmFig<-ggplot(dfAps, aes(x=year_2016_2022, y=aps_2016_2022, 
+                           color=school_type)) + 
     geom_line(stat="identity", size=1.5) +
     geom_curve(aes(x=2020.5, y=55, xend=2021, yend=52),  curvature=-.3,
                  arrow = arrow(length=unit(0.03, "npc"), type="closed"),
@@ -144,9 +138,9 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
                  color="black", size=.05, angle=90 )+
       
       geom_label(aes(label=aps_grade_2016_2022, y=aps_2016_2022), show.legend=F)+
-     # geom_label_repel(aes(label=school_type), nudge_x = 1, na.rm=TRUE)+
+     
       
-      ggtitle(paste0("Average point score and grade \n", fmGender)) + #from 2016 to 2021") +
+      ggtitle(paste0("Average point score and grade \n", fmGender)) + 
       coord_cartesian(ylim=c(10,60)) +
       scale_x_continuous(breaks=seq(2016,2022,1)) +
       scale_colour_manual(
@@ -167,8 +161,6 @@ createApsFmTimeSeries <- function(dfAps, instGroup, instType, fmGender){
             axis.title=element_text(size=10),
             legend.text=element_text(size=12),
             axis.text.x = element_text(angle = 300),
-            # axis.title.x = element_blank(),
-            # axis.title.y = element_text(margin = margin(r = 14)),
             axis.line = element_line( size = 1.0)+
              expand_limits(x=0, y=0)) 
   fmFig
@@ -186,7 +178,6 @@ createGenderGap<- function(dfAps, instGroup, instType){
   fig<- ggplot(fig, aes(x=Year,
                            y=Gender_gap,
                            color=Institution_type
-                          #color=fct_reorder2(school_type, year, gender_gap)
                            )) +
     geom_line(stat="identity", size=1) +
     # geom_point(size=1)+
