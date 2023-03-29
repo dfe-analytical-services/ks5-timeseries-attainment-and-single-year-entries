@@ -108,7 +108,6 @@ ui <- function(input, output, session) {
       flow_panel(),
       a11y_panel(),
       support_links(),
-      
     ),
     tags$script(
       src = "script.js"

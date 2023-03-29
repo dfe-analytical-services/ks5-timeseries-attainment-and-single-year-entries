@@ -66,7 +66,7 @@ server <- function(input, output, session) {
     lapply(seq_along(latest), function(i) {
       fluidRow(
         valueBox(
-          value = grade[i], subtitle = HTML(paste0(strong("Average A level result "), "  equivalent to ", strong(latest[i], "points:   "), input$headlineAps[i])), width = 12, 
+          value = grade[i], subtitle = HTML(paste0(strong("Average A level result "), "  equivalent to ", strong(latest[i], "points:   "), input$headlineAps[i])), width = 12,
           color = "blue"
         )
       )
@@ -77,17 +77,15 @@ server <- function(input, output, session) {
   output$headBox2 <- renderUI({
     latest <- (reactiveHeadline() %>%
       filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps
-    result<-"Average applied general result"
+    result <- "Average applied general result"
     grade <- (reactiveHeadline() %>%
       filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps_grade
     req(grade)
     lapply(seq_along(latest), function(i) {
       fluidRow(
         valueBox(
-          value= grade[i], subtitle = HTML(paste0(strong("Average applied general result"), "  equivalent to ", strong(latest[i], "points:   "), input$headlineAps[i])), width = 12,  
-          color = "blue" 
-            
-                
+          value = grade[i], subtitle = HTML(paste0(strong("Average applied general result"), "  equivalent to ", strong(latest[i], "points:   "), input$headlineAps[i])), width = 12,
+          color = "blue"
         )
       )
     })
@@ -155,9 +153,9 @@ server <- function(input, output, session) {
       rownames = FALSE
     )
   })
-  
-  
-  
+
+
+
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
     if (input$tabsetpanels == "headline") {
@@ -166,7 +164,7 @@ server <- function(input, output, session) {
       enable("alevelInstitute")
     }
   })
-  
+
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
     if (input$tabsetpanels == "headline") {
@@ -175,7 +173,7 @@ server <- function(input, output, session) {
       enable("resetApsAll")
     }
   })
-  
+
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
     if (input$tabsetpanels == "alevel_fm" || input$tabsetpanels == "headline" || input$tabsetpanels == "ggap") {
@@ -195,18 +193,17 @@ server <- function(input, output, session) {
     inType <- subset(
       inType,
       school_type %in% input$alevelInstitute &
-       
+
         characteristic_gender == input$allGender
     )
 
 
     inType
   })
-  
-  
-  
+
+
+
   observeEvent(input$resetApsAll, {
-  
     updateSelectizeInput(session, "alevelInstitute", selected = c("All FE sector colleges", "All state-funded schools"))
     updateSelectizeInput(session, "allGender", selected = "All students")
   })
@@ -215,7 +212,6 @@ server <- function(input, output, session) {
     createApsTimeSeries(reactiveType(),
       allGender = input$allGender,
       instType = input$alevelInstitute
-     
     )
   })
 
@@ -227,8 +223,8 @@ server <- function(input, output, session) {
     inType <- dfAlevelAps
     inType <- subset(
       inType,
-      school_type %in% input$alevelInstitute 
-      )
+      school_type %in% input$alevelInstitute
+    )
     inType
   })
 
@@ -236,10 +232,8 @@ server <- function(input, output, session) {
   output$plotFemaleAlAPS <- renderPlot({
     createApsFmTimeSeries(
       reactiveFmAps() %>%
-        filter(characteristic_gender == "Female" & year > 2015), 
-      
+        filter(characteristic_gender == "Female" & year > 2015),
       fmGender = "Female",
-     
       instType = input$alevelInstitute
     )
   })
@@ -248,9 +242,8 @@ server <- function(input, output, session) {
   output$plotMaleAlAPS <- renderPlot({
     createApsFmTimeSeries(
       reactiveFmAps() %>%
-        filter(characteristic_gender == "Male" & year > 2015), 
+        filter(characteristic_gender == "Male" & year > 2015),
       fmGender = "Male",
-     
       instType = input$alevelInstitute
     )
   })
@@ -265,8 +258,7 @@ server <- function(input, output, session) {
     gGap <- fmDiff
     gGap <- subset(
       gGap,
-      school_type %in% input$alevelInstitute 
-      
+      school_type %in% input$alevelInstitute
     )
     gGap
   })
@@ -274,7 +266,6 @@ server <- function(input, output, session) {
 
   output$plotGgap <- renderPlotly({
     createGenderGap(reactiveGgap(),
-     
       instType = input$alevelInstitute
     )
   })
@@ -283,7 +274,6 @@ server <- function(input, output, session) {
     gGap <- dfAlevelAps %>%
       filter(characteristic_gender != "All students" & year >= 2016)
     gGap <- subset(gGap, school_type %in% input$alevelInstitute) %>%
-    
       select(
         Year = year,
         `Academic year` = time_period,
@@ -333,20 +323,20 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
 ")
   })
 
-  output$textApsAll <- renderText({ 
+  output$textApsAll <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
     val1 <- paste(input$allGender, collapse = ", ")
-    HTML(paste("A level average point score (APS) per entry was first published in 2012/13 with a scale of 0-300.  
-    The points changed to 0-60 scale in 2015/16, but average grade remains consistent. APS is presented across 2 charts, 
-    scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).", br(),  "  
-    The charts display the APS and grades achieved by students throughout 16 to 18 study for  ", val, " in England. 
+    HTML(paste("A level average point score (APS) per entry was first published in 2012/13 with a scale of 0-300.
+    The points changed to 0-60 scale in 2015/16, but average grade remains consistent. APS is presented across 2 charts,
+    scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).", br(), "
+    The charts display the APS and grades achieved by students throughout 16 to 18 study for  ", val, " in England.
     Up to four institution types can be selected from the drop-down menu. Care should be taken when comparing across institution types due to significant differences in cohort sizes.
            For breakdown of institution types, see flow diagram on left panel.  "))
   })
 
   output$textGgap <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
-    
+
     paste("The line chart shows the female - male average points difference (gender gap) from 2015/16 to 2021/22  for ", val, " in England from 2015/16 to 2021/22.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.")
@@ -356,8 +346,8 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
   output$textApsFm <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
     val1 <- paste(input$allGender, collapse = ", ")
-    
-        paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England from 2015/16 to 2021/22.
+
+    paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England from 2015/16 to 2021/22.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.  For breakdown of institution types, see flow diagram on left panel.")
   })
@@ -597,7 +587,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
   )
 
 
- 
+
 
 
   # Download  subject entry and cumulative result for all subject from top panel
@@ -741,7 +731,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
     updateTabsetPanel(session, "navlistPanel", selected = "dashboard")
   })
 
- 
+
   observeEvent(input$link_to_alevelFmSubject_tab, {
     updateTabsetPanel(session, "navlistPanel", selected = "dashboard_fm")
   })
@@ -759,8 +749,8 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
   #     write.csv(level3Attainment, file,row.names=FALSE)
   #   }
   # )
-  
- # Download the underlying data button
+
+  # Download the underlying data button
   output$downloadDataAps <- downloadHandler(
     filename = "attainment_data.csv",
     content = function(file) {

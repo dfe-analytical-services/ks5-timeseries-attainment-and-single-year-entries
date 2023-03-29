@@ -11,7 +11,7 @@
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
-#shhh(library(shinya11y))
+# shhh(library(shinya11y))
 shhh(library(shinyjs))
 shhh(library(tools))
 shhh(library(testthat))
@@ -27,7 +27,7 @@ shhh(library(plotly))
 shhh(library(DT))
 shhh(library(xfun))
 shhh(library(hrbrthemes))
-#shhh(library(gridExtra))
+# shhh(library(gridExtra))
 shhh(library(forcats))
 shhh(library(patchwork))
 
@@ -144,8 +144,10 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
     `A*-B` = "perc_astar_b_grade_achieved", `A*-C` = "perc_astar_c_grade_achieved",
     `A*-D` = "perc_astar_d_grade_achieved", `A*-E` = "perc_astar_e_grade_achieved", version = "data_version"
   ) %>%
-  select(time_period, year, subject_name, characteristic_gender, `A*-A`,
-    `A*-B`, `A*-C`, `A*-D`, `A*-E`, entry_count, version) %>%
+  select(
+    time_period, year, subject_name, characteristic_gender, `A*-A`,
+    `A*-B`, `A*-C`, `A*-D`, `A*-E`, entry_count, version
+  ) %>%
   mutate(
     entry_count = as.numeric(entry_count),
     thousand_entries = as.numeric(entry_count / 1000),
@@ -201,8 +203,10 @@ dfAlevelAps <- data %>%
     school_type = as.factor(school_type),
     school_type_group = as.factor(school_type_group),
     version = as.factor(version),
-    school_type = as.factor(recode(school_type, "All schools and FE sector colleges" = "All Institutions",
-                                                "All state-funded schools and colleges" = "All state-funded"))
+    school_type = as.factor(recode(school_type,
+      "All schools and FE sector colleges" = "All Institutions",
+      "All state-funded schools and colleges" = "All state-funded"
+    ))
   )
 
 # choicesSchool_type_group <- unique(dfAlevelAps$school_type_group)
@@ -217,9 +221,13 @@ dfAlevelAps <- data %>%
 
 dfApsGenderGap <- read_alevel_aps_gendergap_data()
 fmDiff <- dfApsGenderGap %>%
-  mutate(gender_gap = round(as.numeric(gender_gap), 1),
-         school_type = as.factor(recode(school_type, "All schools and FE sector colleges" = "All Institutions",
-                                        "All state-funded schools and colleges" = "All state-funded")) )
+  mutate(
+    gender_gap = round(as.numeric(gender_gap), 1),
+    school_type = as.factor(recode(school_type,
+      "All schools and FE sector colleges" = "All Institutions",
+      "All state-funded schools and colleges" = "All state-funded"
+    ))
+  )
 
 
 
@@ -243,9 +251,12 @@ dfAttainment <- dfAttainmentRaw %>%
     characteristic_gender = as.factor(characteristic_gender),
     version = as.factor(version),
     cert_type = as.factor(cert_type),
-    school_type = as.factor(recode(school_type, "All schools and FE sector colleges" = "All Institutions",
-                                                "All state-funded schools and colleges" = "All state-funded")),
-    cert_type = as.factor(recode(cert_type, "Alevel" = "A level"))) %>%
+    school_type = as.factor(recode(school_type,
+      "All schools and FE sector colleges" = "All Institutions",
+      "All state-funded schools and colleges" = "All state-funded"
+    )),
+    cert_type = as.factor(recode(cert_type, "Alevel" = "A level"))
+  ) %>%
   group_by(school_type, cert_type) %>%
   arrange(desc(year), .by_group = TRUE) %>%
   ungroup()
