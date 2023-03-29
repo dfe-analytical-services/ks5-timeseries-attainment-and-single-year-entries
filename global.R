@@ -203,9 +203,9 @@ dfAlevelAps <- data %>%
                                                 "All state-funded schools and colleges" = "All state-funded"))
   )
 
-choicesSchool_type_group <- unique(dfAlevelAps$school_type_group)
-choicesSchool_type <- unique(dfAlevelAps$school_type_type)
-choicesGender <- unique(dfAlevelAps$characteristic_gender)
+# choicesSchool_type_group <- unique(dfAlevelAps$school_type_group)
+# choicesSchool_type <- unique(dfAlevelAps$school_type_type)
+# choicesGender <- unique(dfAlevelAps$characteristic_gender)
 
 
 # Create gender gap between female and male using long width
@@ -228,7 +228,6 @@ fmDiff <- dfApsGenderGap %>%
 
 dfAttainmentRaw <- read_all_attainment_data()
 
-
 # Select  all students and data to factors and numeric
 dfAttainment <- dfAttainmentRaw %>%
   filter(characteristic_gender == "All students") %>%
@@ -236,7 +235,8 @@ dfAttainment <- dfAttainmentRaw %>%
     school_type = as.factor(school_type),
     school_type_group = as.factor(school_type_group),
     number_of_students = as.integer(number_of_students),
-    aps = round(as.numeric(aps), 2),
+    aps = as.numeric(aps),
+    aps = round(aps, 2),
     aps_grade = as.factor(aps_grade),
     characteristic_gender = as.factor(characteristic_gender),
     version = as.factor(version),
