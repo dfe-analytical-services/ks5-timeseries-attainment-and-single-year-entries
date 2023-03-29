@@ -37,7 +37,7 @@ homepage_panel <- function() {
                   h3(actionLink("link_to_headline_tab", "Headline attainment and A level result by institution type")),
                   p("The headline boxes show the latest average result for A level, applied general and tech level qualifications for all students.  The bar chart shows the yearly trend from 2015/16 to 2021/22.  "),
                   
-                  p("The year in tables/charts is the academic year in which students completed 16-18 study (i.e. 2022 means 2021/22). 16-18 study normally lasts either 2 or 3 years, and attainment accounts for all entries during that period."),
+                  p("The year in tables/charts is the academic year in which students completed 16-18 study (i.e. 2022 means 2021/22). 16-18 study normally lasts either 2 or 3 years and attainment accounts for all entries during that period."),
                  
                   p("Drop-down box within the chart area allows for selection of one institution type.  To view latest results and trend, click on the drop-down box and  select institution type required."),
                   
@@ -51,7 +51,7 @@ homepage_panel <- function() {
                   title="(A level subject entries and result by all",
                   h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and result by all")),
                   p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2021/22. 
-                 The drop-down menus at the top of the page allows for the selection and comparison of up to four subjects 
+                 Drop-down menus at the top of the page allows for the selection and comparison of up to four subjects 
                   and cumulative grades.
                     "),
                   p("The data refers to all entries by 16-18 year olds in the year stated (where 2022 means 2021/22 academic year).")
@@ -228,7 +228,7 @@ dashboard_panel_aps <- function() {
           p(strong("For more tables and metadata")),
           actionButton(inputId='ees_1', 
                        label="Visit Explore Education Statistics", 
-                       icon = icon("th"), 
+                       icon = icon("table-cells"), 
                        onclick ="window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",
                        style = "width:100%;white-space:normal;"
           
@@ -485,7 +485,7 @@ dashboard_panel_sub_all <- function() {
                 p(strong("For more tables and metadata")),
                 actionButton(inputId='ees_2a', 
                              label="Visit Explore Education Statistics", 
-                             icon = icon("th"), 
+                             icon = icon("table-cells"), 
                              onclick ="window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",
                              style = "width:100%;white-space:normal;"
                              
@@ -497,7 +497,7 @@ dashboard_panel_sub_all <- function() {
                 width=4, 
                 p(strong ("Reset chart selection")), 
                 align = "right",
-                actionButton(inputId = "resetEntries", label = 'Reset selections', icon = icon("sync")
+                actionButton(inputId = "resetEntries", label = 'Reset selections', icon = icon("fas fa-arrows-rotate")
                 ))
             )
             
@@ -688,7 +688,7 @@ dashboard_panel_sub_fm <- function() {
                 p(strong("For more tables and metadata")),
                 actionButton(inputId='ees_2b', 
                              label="Visit Explore Education Statistics", 
-                             icon = icon("th"), 
+                             icon = icon("table-cells"), 
                              onclick ="window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",
                              style = "width:100%;white-space:normal;"
                              
@@ -700,7 +700,7 @@ dashboard_panel_sub_fm <- function() {
                 width=4, 
                 p(strong("Reset chart selection")), 
                 align = "right",
-                actionButton(inputId = "resetSubFm", label = 'Reset selections', icon = icon("sync")
+                actionButton(inputId = "resetSubFm", label = 'Reset selections', icon = icon("fas fa-arrows-rotate")
                 ))
             )
             
