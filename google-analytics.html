@@ -10,6 +10,13 @@ The tracking number below MUST be replaced with a unique number, contact the sta
 */
     gtag('config', 'G-C9DQ5CPBCR');
   
+  $(document).on('shiny:disconnected', function(e) {
+    gtag('event', 'disconnect', { 
+      'event_label' : 'Disconnect',
+      'event_category' : 'Disconnect'
+    });
+  });
+
   $(document).on('change', 'select#selectPhase', function(e) {
     gtag('event', 'select phase', {'event_category' : 'choose Phase',
     'event_label' : document.querySelector('select#selectPhase').value
