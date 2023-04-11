@@ -21,7 +21,7 @@
 # Filter out total subjects 
 
 read_alevel_subject_data<-function(file="data/all_level_timeseries_data_1996_to_2022V2.csv") {
-  dfSubject <-read.csv(file)
+  dfSubject <-read_csv(file, show_col_types = FALSE)
   dfSubject <-dfSubject 
    
   return (dfSubject)
@@ -30,7 +30,7 @@ read_alevel_subject_data<-function(file="data/all_level_timeseries_data_1996_to_
 
 # This data is for Aggregate A level APS and grade by institution type 
 read_alevel_aps_data<-function(file="data/alevel_attainmentV2.csv") {
-  dfAlevelAps <-read.csv(file)
+  dfAlevelAps <-read_csv(file, show_col_types = FALSE)
   dfAlevelAps <-dfAlevelAps 
     
     return (dfAlevelAps)
@@ -39,7 +39,7 @@ read_alevel_aps_data<-function(file="data/alevel_attainmentV2.csv") {
 
 # This data is for A level APS gender gap by institution type 
 read_alevel_aps_gendergap_data<-function(file="data/aps_gender_gapV2.csv") {
-  dfApsGenderGap <-read.csv(file)
+  dfApsGenderGap <-read_csv(file, show_col_types = FALSE)
   dfApsGenderGap <-dfApsGenderGap 
   
   return (dfApsGenderGap)
@@ -49,7 +49,7 @@ read_alevel_aps_gendergap_data<-function(file="data/aps_gender_gapV2.csv") {
 # This is the full attainment dataset  comprising of Alevel, applied general and tech level
 
 read_all_attainment_data<-function(file="data/all_attainmentV2.csv") {
-  dfAttainment <-read.csv(file)
+  dfAttainment <-read_csv(file, show_col_types = FALSE)
   dfAttainment <-dfAttainment  
     
     return (dfAttainment)
