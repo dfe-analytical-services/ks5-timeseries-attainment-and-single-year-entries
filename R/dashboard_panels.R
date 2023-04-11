@@ -265,16 +265,15 @@ dashboard_panel_aps <- function() {
                                  
                                  h3(" Headline figures and time series for level 3 attainment, all students"),
                                  textOutput("textHeadline"),
-                                 column(4, uiOutput("headBox1"
-                                    )
+                                 fluidRow(
+                                 valueBoxOutput("headBox1" , width=4
+                                    
                                    ),
-                                 column(4, uiOutput("headBox2"
-                                    )
+                                 valueBoxOutput("headBox2" , width=4
+                                    
                                   ),
-                                 column(4, uiOutput("headBox3")),
-                                        
-                                 
-                                
+                                 valueBoxOutput("headBox3", width=4
+                                                          )),
                                  
                                  column(
                                    width=8,
@@ -534,8 +533,7 @@ dashboard_panel_sub_all <- function() {
                               width=12, 
                               plotlyOutput("plotAlevelSubject")%>% spinner(),
                               
-                              p("Notes: Year as covered on the chart refers to the academic year in which students completed 16-18 study 
-                                (i.e., 2022 means 2021/22).
+                              p("Notes: 
                                   - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
@@ -734,8 +732,8 @@ dashboard_panel_sub_fm <- function() {
                                    box(
                                      width=12,
                                      plotlyOutput("plotSubjectFm")%>% spinner(), 
-                                     p("Notes: Year as covered on the chart refers to the academic year in which students completed 16-18 study 
-                                     (i.e., 2022 means 2021/22). - Total English covers English literature, English language, English language and literature. 
+                                     p("Notes: 
+                                  - Total English covers English literature, English language, English language and literature. 
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths. 
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages. 
                                   - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies. 
