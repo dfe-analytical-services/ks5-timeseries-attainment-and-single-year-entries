@@ -33,10 +33,9 @@ server <- function(input, output, session) {
   # Reactive for headline attainment
 
   reactiveHeadline <- reactive({
-    headlineData <- dfAttainment
-    headlineData <- subset(
-      headlineData,
-      school_type == input$headlineAps
+    headlineData <- dfAttainment %>%
+      filter(
+        school_type == input$headlineAps
     )
   })
 
@@ -52,63 +51,63 @@ server <- function(input, output, session) {
 
   #  Disable top panel on institution type and group for headline
   #  Disable top panel on type of students for Female and Male
-
-
+  
+  
 
   # Add value box for A level
-  output$headBox1 <- renderUI({
+  output$headBox1 <- renderValueBox({
     latest <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps
-
+                 filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps
     grade <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps_grade
-    req(grade)
-    lapply(seq_along(latest), function(i) {
-      fluidRow(
-        valueBox(
-          value = grade[i], subtitle = HTML(paste0(strong("Average A level result "), "  equivalent to ", strong(latest[i], "points:   "), input$headlineAps[i])), width = 12,
-          color = "blue"
-        )
-      )
-    })
+                filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps_grade
+    valueBox(
+      value = grade, subtitle = paste0("Average A level result   equivalent to ", latest, " points:   ", input$headlineAps), #width = 12,
+      color = "blue"
+    )
+    
+         
+        # valueBox(
+        #   value = grade, subtitle = HTML(paste0(strong("Average A level result "), "  equivalent to ", strong(latest, "points:   "), input$headlineAps)), #width = 12,
+        #   color = "blue"
+        # )
+      
+      #)
+   # })
   })
 
   # Add value box for Applied general
-  output$headBox2 <- renderUI({
+  output$headBox2 <- renderValueBox({
     latest <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps
-    result <- "Average applied general result"
+                 filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps
+    #result <- "Average applied general result"
     grade <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps_grade
-    req(grade)
-    lapply(seq_along(latest), function(i) {
-      fluidRow(
-        valueBox(
-          value = grade[i], subtitle = HTML(paste0(strong("Average applied general result"), "  equivalent to ", strong(latest[i], "points:   "), input$headlineAps[i])), width = 12,
-          color = "blue"
-        )
-      )
-    })
+                filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps_grade
+    valueBox(
+      value = grade, subtitle = paste0("Average applied general result  equivalent to ", latest, "  points:   ", input$headlineAps), 
+      color = "blue"
+    )
+        # valueBox(
+        #   value = grade, subtitle = HTML(paste0(strong("Average applied general result"), "  equivalent to ", strong(latest, "points:   "), input$headlineAps)), 
+        #   color = "blue"
+        # )
+    
+    
   })
 
 
   #  Add Value box for Tech level
 
-  output$headBox3 <- renderUI({
+  output$headBox3 <- renderValueBox({
     latest <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps
-
+                 filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps
     grade <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps_grade
-    req(grade)
-    lapply(seq_along(grade), function(i) {
-      fluidRow(
-        valueBox(
-          value = grade[i], subtitle = HTML(paste0(strong("Average tech level result"), "  equivalent to ", strong(latest[i], "points:   "), input$headlineAps[i])), width = 12,
-          color = "blue"
+                filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps_grade
+    valueBox(
+      value = grade, subtitle = paste0("Average tech level result  equivalent to ", latest, "  points:   ", input$headlineAps), 
+      color = "blue"
         )
-      )
-    })
+     # )
+    #})
   })
 
   # Create reactive for Headline data
@@ -399,8 +398,7 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
 
 
   output$plotAlevelSubject <- renderPlotly({
-    createTimeSeriesSubject(reactiveSubject(), # %>%
-      # mutate(subject_name=fct_reorder2(subject_name, year, entry_count)),
+    createTimeSeriesSubject(reactiveSubject(), #
       subName = input$subCompareAll,
       subAll = input$subByAll
     )
@@ -769,3 +767,4 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
     stopApp()
   })
 }
+
