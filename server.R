@@ -25,7 +25,41 @@ server <- function(input, output, session) {
 
   hide(id = "loading-content", anim = TRUE, animType = "fade")
   show("app-content")
-
+  
+  # The template uses bookmarking to store input choices in the url. You can
+  # exclude specific inputs using the list here:
+  setBookmarkExclude(c("cookies", "link_to_app_content_tab"))
+  
+  observe({
+    # Trigger this observer every time an input changes
+    reactiveValuesToList(input)
+    session$doBookmark()
+  })
+  
+  onBookmarked(function(url) {
+    updateQueryString(url)
+  })
+  
+  observe({
+    if (input$navlistPanel == "dashboard") {
+      change_window_title(
+        session,
+        paste0(
+          #site_title, " - ",
+          input$alevelInstitute, ", ",
+          input$allGender
+        )
+      )
+    } else {
+      change_window_title(
+        session,
+        paste0(
+          #site_title, " - ",
+          input$navlistPanel
+        )
+      )
+    }
+  })
 
 
 
@@ -158,9 +192,18 @@ server <- function(input, output, session) {
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
     if (input$tabsetpanels == "headline") {
-      disable("alevelInstitute")
+      hide("alevelInstitute")
     } else {
-      enable("alevelInstitute")
+      show("alevelInstitute")
+    }
+  })
+  
+  observe({
+    validate(need(!is.null(input$tabsetpanels), ""))
+    if (input$tabsetpanels == "headline") {
+      hide("allGender")
+    } else {
+      show("allGender")
     }
   })
 
@@ -175,7 +218,7 @@ server <- function(input, output, session) {
 
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
-    if (input$tabsetpanels == "alevel_fm" || input$tabsetpanels == "headline" || input$tabsetpanels == "ggap") {
+    if (input$tabsetpanels == "alevel_fm" || input$tabsetpanels == "ggap") {
       disable("allGender")
     } else {
       enable("allGender")
@@ -318,7 +361,7 @@ server <- function(input, output, session) {
     # val1<-paste(input$allGender, collapse=", ")
     paste("The boxes display the latest average results in 2021/22 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general
     and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
-Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in England. To view results, click on the drop-down box beside the bar chart and select one institution type.
+Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
 ")
   })
 
@@ -667,42 +710,42 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
 
 
   # Data table for headline page
-  output$tabApsAll <- renderDataTable({
-    datatable(
-      reactiveType() %>%
-        select(
-          Year = year,
-          `Academic year` = time_period,
-          # `Institution group`  = school_type_group,
-          `Institution type` = school_type,
-          `Characteristic gender` = characteristic_gender,
-          `Number of students` = number_of_students,
-          `APS per entry 2016-2022` = aps_2016_2022,
-          `APS per entry grade 2016-2022` = aps_grade_2016_2022,
-          `APS per entry 2013-2015` = aps_2013_2015,
-          `APS per entry grade 2013-2015` = aps_grade_2013_2015,
-          Version = version
-        ),
-      options = list(
-        infor = F, paging = F,
-        searching = F,
-        stripClasses = F,
-        lengthChange = F,
-        scrollY = "260px",
-        scrollX = T,
-        scrollCollapse = T,
-        dom = "Bfrtip",
-        buttons = (c("copy", "csv", "excel")),
-        class = "display"
-      ),
-      rownames = FALSE
-    )
-  })
+    output$tabApsAll <- renderDataTable({
+      datatable(
+        reactiveType() %>%
+          select(
+            Year = year,
+            `Academic year` = time_period,
+            # `Institution group`  = school_type_group,
+            `Institution type` = school_type,
+            `Characteristic gender` = characteristic_gender,
+            `Number of students` = number_of_students,
+            `APS per entry 2016-2022` = aps_2016_2022,
+            `APS per entry grade 2016-2022` = aps_grade_2016_2022,
+            `APS per entry 2013-2015` = aps_2013_2015,
+            `APS per entry grade 2013-2015` = aps_grade_2013_2015,
+            Version = version
+            ),
+        extens = "Buttons",
+        options = (
+          list(
+            infor = F, paging = F,
+            searching = F,
+            stripClasses = F,
+            lengthChange = F,
+            scrollY = "260px",
+            scrollX = T,
+            scrollCollapse = T,
+            dom = "Bfrtip",
+            buttons = (c("copy", "csv", "excel")),
+            class = "display"
+          )),
+        rownames = FALSE
+      )
+    })
 
-
-
-
-
+   
+  
   output$resall <- renderDataTable({
     datatable(selected_subAll(),
       options = list(
@@ -741,13 +784,6 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
 
 
 
-  # output$downloadDataAps<-downloadHandler(
-  #   filename="timeseries_aggregated_attainment_institution_app_data.csv",
-  #   content=function(file) {
-  #     write.csv(level3Attainment, file,row.names=FALSE)
-  #   }
-  # )
-
   # Download the underlying data button
   output$downloadDataAps <- downloadHandler(
     filename = "attainment_data.csv",
@@ -759,7 +795,17 @@ Bar chart shows the average results from 2015/16 to 2021/22 for ", val, " in Eng
       }
     }
   )
-
+  
+  # Add input IDs here that are within the relevant drop down boxes to create dynamic text
+  output$dropdown_label <- renderText({
+    if (input$tabsetpanels == "headline") {
+      paste0("Click to download full headline dataset")#)input$downloadDataAps)
+      } else{ paste0("Click to select institution types from the drop-down menu and further options")# input$alevelInstitute, )
+      }
+  })
+                     
+                     
+   
 
   # Stop app ---------------------------------------------------------------------------------
 

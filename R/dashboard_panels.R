@@ -165,12 +165,15 @@ dashboard_panel_aps <- function() {
         ),
         column(
           width=12,
-          div(
-            class = "well",
-            style = "min-height: 100%; height: 100%; overflow-y: visible ",
-            shinyjs::useShinyjs(),
-            fluidRow(
-              
+          expandable(
+            inputId = "details", label = textOutput("dropdown_label"), contents =
+              div(
+                id = "div_a",
+                class = "well",
+                style = "min-height: 100%; height: 100%; overflow-y: visible",
+          
+      
+          gov_row(
               column(
                 width = 4,
                 
@@ -185,9 +188,6 @@ dashboard_panel_aps <- function() {
             
             column(
               width=8,
-              
-              
-            
               
               selectizeInput("alevelInstitute", "Select up to 4 institution types", choices=list(
 
@@ -204,10 +204,7 @@ dashboard_panel_aps <- function() {
               )
             ),
               
-                
-              br(),
-              
-            br(),
+           
             
             fluidRow(
         column(
@@ -244,7 +241,7 @@ dashboard_panel_aps <- function() {
                         actionButton(inputId = "resetApsAll", label = 'Reset selections', icon = icon("fas fa-arrows-rotate"))
             )
             )
-        )
+        ))
         
         ),
         
@@ -264,40 +261,44 @@ dashboard_panel_aps <- function() {
                                  
                                  
                                  h3(" Headline figures and time series for level 3 attainment, all students"),
-                                 textOutput("textHeadline"),
                                  fluidRow(
-                                 valueBoxOutput("headBox1" , width=4
-                                    
+                                   valueBoxOutput("headBox1" , width=4
+                                                  
                                    ),
-                                 valueBoxOutput("headBox2" , width=4
-                                    
+                                   valueBoxOutput("headBox2" , width=4
+                                                  
+                                   ),
+                                   valueBoxOutput("headBox3", width=4
+                                   )),
+                                column(
+                                  width= 8, textOutput("textHeadline")), 
+                                  column(
+                                    width=4,
+                                    div(
+                                      class = "well",
+                                      style = "min-height: 100%; height: 100%; overflow-y: visible",
+                                      fluidRow(
+                                        column(
+                                          width=12,
+                                          selectInput(inputId="headlineAps",
+                                                      "Select institution type",
+                                                      choices=sort(unique(dfAttainment$school_type)), selected=c("All Institutions"))
+                                        )
+                                      )
+                                    ) 
                                   ),
-                                 valueBoxOutput("headBox3", width=4
-                                                          )),
+                                
                                  
                                  column(
-                                   width=8,
+                                   width=12,
                                    
                                    box(
                                      width=12,
-                                   plotOutput("plotHeadline") %>% spinner()
+                                     plotOutput("plotHeadline") %>% spinner()
                                    )
                                   ),
-                                 column(
-                                   width=4,
-                                   div(
-                                     class = "well",
-                                     style = "min-height: 100%; height: 100%; overflow-y: visible",
-                                     fluidRow(
-                                       column(
-                                         width=12,
-                                         selectInput(inputId="headlineAps",
-                                                     "Select institution type",
-                                                     choices=sort(unique(dfAttainment$school_type)), selected=c("All Institutions"))
-                                         )
-                                       )
-                                     ) 
-                                ),
+                                
+                                # ),
                                    
                                 dataTableOutput("tabHeadline")
                                
@@ -305,7 +306,7 @@ dashboard_panel_aps <- function() {
                               )
                             ),
                            
-                           tabPanel(
+                          tabPanel(
                              "A level APS by all", value="alevel_all",
                              fluidRow(
                                column(
@@ -315,22 +316,21 @@ dashboard_panel_aps <- function() {
                                  htmlOutput("textApsAll"),
                                  
                                 # uiOutput("boxapsAlevel", width = 2),
-                                 box(
-                                   width=12,
-                                   plotOutput("plotAlevelAps") %>% spinner()
-                                   )
+                                
+                                
+                                column(
+                                  width=12,
+                                  
+                                  box(
+                                  width=12,
+                                  plotOutput("plotAlevelAps") %>% spinner()
+                                  )
                                  ),
-                               column(
-                                 width=12,
-                              
-                                   fluidRow(
-                                     column(width=12
-                                     )     
-                                     )
-                                   ),
-                                   dataTableOutput("tabApsAll")
-                              )
-                             #dataTableOutput("tabApsAll")
+                               dataTableOutput("tabApsAll")
+                               
+                                 )
+                               )
+                                  #
                              ),
                            
                            tabPanel(
@@ -401,6 +401,13 @@ dashboard_panel_aps <- function() {
           
   
 }
+
+
+
+#############################################
+
+
+
 
 
 
@@ -609,6 +616,12 @@ dashboard_panel_sub_all <- function() {
   
   
 }
+
+
+
+
+
+
 
 
 
