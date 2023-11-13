@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "http://cran.rstudio.com"
+        "URL": "https://packagemanager.posit.co/cran/latest"
       }
     ]
   },
@@ -808,19 +808,6 @@
         "rlang"
       ]
     },
-    "metathis": {
-      "Package": "metathis",
-      "Version": "1.1.3",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "30e2fd0e30b9f23dbee30e460997efe5",
-      "Requirements": [
-        "htmltools",
-        "knitr",
-        "magrittr",
-        "purrr"
-      ]
-    },
     "mgcv": {
       "Package": "mgcv",
       "Version": "1.8-42",
@@ -1212,6 +1199,17 @@
         "xtable"
       ]
     },
+    "shinyBS": {
+      "Package": "shinyBS",
+      "Version": "0.61.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "e44255f073ecdc26ba6bc2ce3fcf174d",
+      "Requirements": [
+        "htmltools",
+        "shiny"
+      ]
+    },
     "shinyGovstyle": {
       "Package": "shinyGovstyle",
       "Version": "0.0.8",
@@ -1239,19 +1237,6 @@
         "rlang",
         "sass",
         "shiny"
-      ]
-    },
-    "shinyalert": {
-      "Package": "shinyalert",
-      "Version": "3.0.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "2fd42421abd79dcaf0855fa1d21599a3",
-      "Requirements": [
-        "htmltools",
-        "knitr",
-        "shiny",
-        "uuid"
       ]
     },
     "shinycssloaders": {
@@ -1531,14 +1516,6 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "1fe17157424bb09c48a8b3b550c753bc",
-      "Requirements": []
-    },
-    "uuid": {
-      "Package": "uuid",
-      "Version": "1.1-0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "f1cb46c157d080b729159d407be83496",
       "Requirements": []
     },
     "vctrs": {
