@@ -54,6 +54,9 @@ a:active {
   text-decoration: underline
 }
 
+/* This line sets the main area width. Originally set to 66.667% in the GDS 
+template. 80% works well here to reduce white space on the right hand side.*/
+.col-sm-8{ width: 80%}
 
 .container-fluid {
   padding: 0px;
@@ -123,7 +126,7 @@ a:active {
 
 .well {
     min-height: 90vh;
-    padding: 19px;
+    padding: 19px;    
     margin-bottom: 20px;
     background-color: #1d70b8;
     border: 1px solid #e3e3e3;
@@ -131,6 +134,7 @@ a:active {
     -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
     box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
     color: #fff;
+    font-size: 15px;
 }
 
 .selectize-control.multi
