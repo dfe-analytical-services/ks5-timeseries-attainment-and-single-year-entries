@@ -35,9 +35,9 @@ homepage_panel <- function() {
                 tags$div(
                   title="Headline attainment and A level time series by institution type",
                   h3(actionLink("link_to_headline_tab", "Headline attainment and A level result by institution type")),
-                  p("The headline boxes show the latest average result for A level, applied general and tech level qualifications for all students.  The bar chart shows the yearly trend from 2015/16 to 2021/22.  "),
+                  p("The headline boxes show the latest average result for A level, applied general and tech level qualifications for all students.  The chart shows the yearly trend from 2015/16 to 2022/23.  "),
                   
-                  p("The year in tables/charts is the academic year in which students completed 16-18 study (i.e. 2022 means 2021/22). 16-18 study normally lasts either 2 or 3 years and attainment accounts for all entries during that period."),
+                  p("The year in tables/charts is the academic year in which students completed 16-18 study (i.e. 2023 means 2022/23). 16-18 study normally lasts either 2 or 3 years and attainment accounts for all entries during that period."),
                  
                   p("Drop-down box within the chart area allows for selection of one institution type.  To view latest results and trend, click on the drop-down box and  select institution type required."),
                   
@@ -50,18 +50,18 @@ homepage_panel <- function() {
                 tags$div(
                   title="(A level subject entries and result by all",
                   h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and result by all")),
-                  p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2021/22. 
+                  p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2022/23. 
                  Drop-down menus at the top of the page allows for the selection and comparison of up to four subjects 
                   and cumulative grades.
                     "),
-                  p("The data refers to all entries by 16-18 year olds in the year stated (where 2022 means 2021/22 academic year).")
+                  p("The data refers to all entries by 16-18 year olds in the year stated (where 2023 means 2022/23 academic year).")
                   
                 ),
              
                 tags$div(
                   title="(A level subject entries and result by gender",
                   h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result by gender")),
-                  p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2021/22.  
+                  p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2022/23.  
                   Select one subject from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available)."),
                   p(""), br(),
                   br(),
@@ -130,7 +130,7 @@ homepage_panel <- function() {
                   h3("A level subject entry and cumulative grade"),
                   
                   p("The subject entries and cumulative grades covered on the dashboard are based on 
-                  subjects grouped from 1995/96 to 2021/22. More detailed breakdowns of some subjects from 2015/16
+                  subjects grouped from 1995/96 to 2022/23. More detailed breakdowns of some subjects from 2015/16
                   are available via the full dataset download  button at the top of the page."),
                 
                 h4("Subject definitions"),
@@ -140,7 +140,7 @@ homepage_panel <- function() {
                 p("•	Total Classical studies covers Latin, Greek, Classical civilisation, and Other classical studies"),
                 p("•	STEM subjects cover Biology, Chemistry, Physics, Total maths, Further mathematics and Computer science. "),
                 p("•	Total Music includes Music and Music technology."),
-                p("The data refers to all entries by 16-18 year olds in the year stated (where 2022 means 2021/22 academic year).") 
+                p("The data refers to all entries by 16-18 year olds in the year stated (where 2022 means 2022/23 academic year).") 
              
             ))
             ) 
@@ -162,15 +162,18 @@ dashboard_panel_aps <- function() {
         column(
           width=12,
         h2("Headline attainment and A level time series by institution type in England")
-        ),
-        column(
+        )),
+      column(
           width=12,
-          div(
-            class = "well",
-            style = "min-height: 100%; height: 100%; overflow-y: visible ",
-            shinyjs::useShinyjs(),
-            fluidRow(
-              
+          expandable(
+            inputId = "details", label = textOutput("dropdown_label"), contents =
+              div(
+                id = "div_a",
+                class = "well",
+                style = "min-height: 100%; height: 100%; overflow-y: visible",
+          
+      
+          gov_row(
               column(
                 width = 4,
                 
@@ -185,9 +188,6 @@ dashboard_panel_aps <- function() {
             
             column(
               width=8,
-              
-              
-            
               
               selectizeInput("alevelInstitute", "Select up to 4 institution types", choices=list(
 
@@ -204,10 +204,7 @@ dashboard_panel_aps <- function() {
               )
             ),
               
-                
-              br(),
-              
-            br(),
+           
             
             fluidRow(
         column(
@@ -243,8 +240,8 @@ dashboard_panel_aps <- function() {
           align = "right",
                         actionButton(inputId = "resetApsAll", label = 'Reset selections', icon = icon("fas fa-arrows-rotate"))
             )
-            )
-        )
+            
+        ))
         
         ),
         
@@ -263,41 +260,51 @@ dashboard_panel_aps <- function() {
                                  width=12,
                                  
                                  
-                                 h3(" Headline figures and time series for level 3 attainment, all students"),
-                                 textOutput("textHeadline"),
-                                 fluidRow(
-                                 valueBoxOutput("headBox1" , width=4
-                                    
+                                 h3(" 2023 Average result and time series for level 3 attainment, all students"),
+                                 fluidRow( 
+                                   valueBoxOutput("headBox1" , width=4
+                                                  
+                                                  
+                                                  
                                    ),
-                                 valueBoxOutput("headBox2" , width=4
-                                    
+                                    bsTooltip("headBox1", "Average A level grade", placement="top", trigger="hover", options=NULL),
+                                    valueBoxOutput("headBox2" , width=4
+
+                                   ),
+                                   
+                                   bsTooltip("headBox2", "Average grade, Applied general", placement="top", trigger="hover", options=NULL),
+                                   valueBoxOutput("headBox3", width=4
+                                   ),
+                                   bsTooltip("headBox3", "Average grade, Tech Level", placement="top", trigger="hover", options=NULL)),
+                                column(
+                                  width= 8, textOutput("textHeadline")), 
+                                  column(
+                                    width=4,
+                                    div(
+                                      class = "well",
+                                      style = "min-height: 100%; height: 100%; overflow-y: visible",
+                                      fluidRow(
+                                        column(
+                                          width=12,
+                                          selectInput(inputId="headlineAps",
+                                                      "Select institution type",
+                                                      choices=sort(unique(dfAttainment$school_type)), selected=c("All Institutions"))
+                                        )
+                                      )
+                                    ) 
                                   ),
-                                 valueBoxOutput("headBox3", width=4
-                                                          )),
+                                
                                  
                                  column(
-                                   width=8,
+                                   width=12,
                                    
                                    box(
                                      width=12,
-                                   plotOutput("plotHeadline") %>% spinner()
+                                     plotlyOutput("plotHeadline") %>% spinner()
                                    )
                                   ),
-                                 column(
-                                   width=4,
-                                   div(
-                                     class = "well",
-                                     style = "min-height: 100%; height: 100%; overflow-y: visible",
-                                     fluidRow(
-                                       column(
-                                         width=12,
-                                         selectInput(inputId="headlineAps",
-                                                     "Select institution type",
-                                                     choices=sort(unique(dfAttainment$school_type)), selected=c("All Institutions"))
-                                         )
-                                       )
-                                     ) 
-                                ),
+                                
+                                # ),
                                    
                                 dataTableOutput("tabHeadline")
                                
@@ -305,7 +312,7 @@ dashboard_panel_aps <- function() {
                               )
                             ),
                            
-                           tabPanel(
+                          tabPanel(
                              "A level APS by all", value="alevel_all",
                              fluidRow(
                                column(
@@ -315,22 +322,21 @@ dashboard_panel_aps <- function() {
                                  htmlOutput("textApsAll"),
                                  
                                 # uiOutput("boxapsAlevel", width = 2),
-                                 box(
-                                   width=12,
-                                   plotOutput("plotAlevelAps") %>% spinner()
-                                   )
+                                
+                                
+                                column(
+                                  width=12,
+                                  
+                                  box(
+                                  width=12,
+                                  plotOutput("plotAlevelAps") %>% spinner()
+                                  )
                                  ),
-                               column(
-                                 width=12,
-                              
-                                   fluidRow(
-                                     column(width=12
-                                     )     
-                                     )
-                                   ),
-                                   dataTableOutput("tabApsAll")
-                              )
-                             #dataTableOutput("tabApsAll")
+                               dataTableOutput("tabApsAll")
+                               
+                                 )
+                               )
+                                  #
                              ),
                            
                            tabPanel(
@@ -338,7 +344,7 @@ dashboard_panel_aps <- function() {
                              fluidRow(
                                column(
                                  width=12,
-                                 h3("A level female - male average points difference by institution type from 2015/16 to 2021/22 in England"),
+                                 h3("A level female - male average points difference by institution type from 2015/16 to 2022/23 in England"),
                                  textOutput("textGgap"),
                                  
                                  #htmlOutput("boxapsAlevel", width = 2),
@@ -357,7 +363,7 @@ dashboard_panel_aps <- function() {
                              fluidRow(
                                column(
                                  width=12,
-                                 h3("A level average result for female and male by Institution type"), 
+                                 h3("A level average point score and grade for female and male by Institution type"), 
                                  column(width=12,
                                         textOutput("textApsFm")),
                                  
@@ -404,10 +410,17 @@ dashboard_panel_aps <- function() {
 
 
 
+#############################################
+
+
+
+
+
+
 dashboard_panel_sub_all <- function() {
   tabPanel(
     value = "dashboard_alse",
-    "Attainment: A level entries and grade distribution",
+    "A level subject entries and grade: comparison by subject",
     
     # Define UI for application that draws a histogram
     
@@ -416,7 +429,7 @@ dashboard_panel_sub_all <- function() {
       gov_row(
         column(
           width=12,
-          h2("A level subject entry and result by all students, female and male in England from 1995/96 to 2021/22")
+          h2("A level single entry and grade distribution:  Comparison by subject, England from 1995/96 to 2022/23")
         ),
         column(
           width=12,
@@ -511,7 +524,7 @@ dashboard_panel_sub_all <- function() {
                         fluidRow(
                           column(
                             width=12,
-                            h3("A level subject entry - single academic year"),
+                            h3("A level single academic year:  Comparison by subject"),
                             textOutput("textSubAll"),  
                             
                             br(),
@@ -612,10 +625,16 @@ dashboard_panel_sub_all <- function() {
 
 
 
+
+
+
+
+
+
 dashboard_panel_sub_fm <- function() {
   tabPanel(
     value = "dashboard_fm",
-    "Attainment: A level entries and grade distribution by gender",
+    "A level entries and grade: comparison by gender",
     
     # Define UI for application that draws a histogram
     
@@ -624,7 +643,7 @@ dashboard_panel_sub_fm <- function() {
       gov_row(
         column(
           width=12,
-          h2("A level subject entry and result - single academic year by gender in England from 1995/96 to 2021/22")
+          h2("A level single entry and grade distribution: comparison by gender, England from 1995/96 to 2022/23")
         ),
         column(
           width=12,
