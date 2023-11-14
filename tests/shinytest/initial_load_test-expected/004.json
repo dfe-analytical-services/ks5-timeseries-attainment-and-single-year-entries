@@ -1,19 +1,5 @@
 {
   "input": {
-    ".clientValue-default-plotlyCrosstalkOpts": {
-      "on": "plotly_click",
-      "persistent": false,
-      "dynamic": false,
-      "selectize": false,
-      "opacityDim": 0.2,
-      "selected": {
-        "opacity": 1
-      },
-      "debounce": 0,
-      "color": [
-
-      ]
-    },
     "alevelInstitute": [
       "All FE sector colleges",
       "All state-funded schools"
@@ -22,10 +8,6 @@
     "cookieAccept": 0,
     "cookieLink": 0,
     "cookieReject": 0,
-    "cookies": {
-      "_ga_C9DQ5CPBCR": "GS1.1.1699987918.1.0.1699987918.0.0.0",
-      "_ga": "GA1.1.74608125.1699987919"
-    },
     "ees_1": 0,
     "ees_2a": 0,
     "ees_2b": 0,
@@ -36,7 +18,6 @@
     "link_to_alevelFmSubject_tab": 0,
     "link_to_headline_tab": 0,
     "navlistPanel": "dashboard_fm",
-    "plotly_afterplot-A": "\"plotSubjectFm\"",
     "resByAll": "`A*-A`",
     "resByFm": "`A*-A`",
     "resetApsAll": 0,
@@ -1972,8 +1953,5 @@
     "textHeadline": "The boxes display the latest provisional average grades in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general\n    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.\nThe chart shows the average point score from 2015/16 to 2022/23 for  All Institutions  in England. To view results, click on the drop-down box and select one institution type.",
     "textSubAll": "The line chart shows the A level exam entries for  Total English and Total Maths from   1996 to  2023  for  All students  in England. ",
     "textSubFm": "The line chart shows the A level  exam entries for female and male on  Total English  from  1996 to  2023  in England. "
-  },
-  "export": {
-
   }
 }

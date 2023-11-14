@@ -8,10 +8,6 @@
     "cookieAccept": 0,
     "cookieLink": 0,
     "cookieReject": 0,
-    "cookies": {
-      "_ga_C9DQ5CPBCR": "GS1.1.1699987918.1.0.1699987918.0.0.0",
-      "_ga": "GA1.1.74608125.1699987919"
-    },
     "ees_1": 0,
     "ees_2a": 0,
     "ees_2b": 0,
@@ -42,9 +38,6 @@
     "year_start_fm": "1996"
   },
   "output": {
-
-  },
-  "export": {
 
   }
 }
