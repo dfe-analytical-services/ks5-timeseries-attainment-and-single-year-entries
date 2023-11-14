@@ -33,6 +33,7 @@ shhh(library(hrbrthemes))
 shhh(library(forcats))
 shhh(library(patchwork))
 shhh(library(readr))
+shhh(library(dfeshiny))
 
 
 # Functions ---------------------------------------------------------------------------------
@@ -45,26 +46,7 @@ shhh(library(readr))
 cs_num <- function(value) {
   format(value, big.mark = ",", trim = TRUE)
 }
-
-# tidy_code_function -------------------------------------------------------------------------------
-# Code to tidy up the scripts.
-
-tidy_code_function <- function() {
-  message("----------------------------------------")
-  message("App scripts")
-  message("----------------------------------------")
-  app_scripts <- eval(styler::style_dir(recursive = FALSE)$changed)
-  message("Test scripts")
-  message("----------------------------------------")
-  test_scripts <- eval(styler::style_dir("tests/", filetype = "r")$changed)
-  script_changes <- c(app_scripts, test_scripts)
-  return(script_changes)
-}
-
-
 # Code to convert data to numeric
-
-
 to_numeric <- function(df, variables) {
   for (variable in variables) {
     df[[variable]] <- (suppressWarnings(as.numeric(df[[variable]])))
