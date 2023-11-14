@@ -5,10 +5,19 @@
       "All state-funded schools"
     ],
     "allGender": "All students",
+    "cookieAccept": 0,
+    "cookieLink": 0,
+    "cookieReject": 0,
+    "cookies": {
+      "_ga_C9DQ5CPBCR": "GS1.1.1699987918.1.0.1699987918.0.0.0",
+      "_ga": "GA1.1.74608125.1699987919"
+    },
     "ees_1": 0,
     "ees_2a": 0,
     "ees_2b": 0,
     "headlineAps": "All Institutions",
+    "hideAccept": 0,
+    "hideReject": 0,
     "link_to_alevelAllSubject_tab": 0,
     "link_to_alevelFmSubject_tab": 0,
     "link_to_headline_tab": 0,
@@ -27,8 +36,8 @@
     "tabsetpanels": "headline",
     "tabsetpanels2a": "alevelAllSubject",
     "tabsetpanels2b": "alevelFmSubject",
-    "year_end": "2022",
-    "year_end_fm": "2022",
+    "year_end": "2023",
+    "year_end_fm": "2023",
     "year_start": "1996",
     "year_start_fm": "1996"
   },

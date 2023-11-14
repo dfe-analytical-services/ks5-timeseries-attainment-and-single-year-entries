@@ -155,8 +155,8 @@ subjectByAll <- dfAlevelSubject %>%
 
 # Filter out female and male
 
-subjectByGender <- subjectByAll #%>%
- # filter(characteristic_gender != "All students")
+subjectByGender <- subjectByAll # %>%
+# filter(characteristic_gender != "All students")
 
 # Filter home economics for all students
 homeEconomics <- dfAlevelSubject %>%

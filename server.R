@@ -25,17 +25,17 @@ server <- function(input, output, session) {
 
   hide(id = "loading-content", anim = TRUE, animType = "fade")
   show("app-content")
-  
+
   # The template uses bookmarking to store input choices in the url. You can
   # exclude specific inputs using the list here:
   setBookmarkExclude(c("cookies", "link_to_app_content_tab"))
-  
+
   observe({
     # Trigger this observer every time an input changes
     reactiveValuesToList(input)
     session$doBookmark()
   })
-  
+
   onBookmarked(function(url) {
     updateQueryString(url)
   })
@@ -45,7 +45,7 @@ server <- function(input, output, session) {
       change_window_title(
         session,
         paste0(
-          #site_title, " - ",
+          # site_title, " - ",
           input$alevelInstitute, ", ",
           input$allGender
         )
@@ -54,13 +54,13 @@ server <- function(input, output, session) {
       change_window_title(
         session,
         paste0(
-          #site_title, " - ",
+          # site_title, " - ",
           input$navlistPanel
         )
       )
     }
   })
-  
+
   observeEvent(input$cookies, {
     if (!is.null(input$cookies)) {
       if (!("dfe_analytics" %in% names(input$cookies))) {
@@ -85,7 +85,7 @@ server <- function(input, output, session) {
       shinyjs::hide(id = "cookieMain")
     }
   })
-  
+
   # Need these set of observeEvent to create a path through the cookie banner
   observeEvent(input$cookieAccept, {
     msg <- list(
@@ -97,7 +97,7 @@ server <- function(input, output, session) {
     shinyjs::show(id = "cookieAcceptDiv")
     shinyjs::hide(id = "cookieMain")
   })
-  
+
   observeEvent(input$cookieReject, {
     msg <- list(
       name = "dfe_analytics",
@@ -108,15 +108,15 @@ server <- function(input, output, session) {
     shinyjs::show(id = "cookieRejectDiv")
     shinyjs::hide(id = "cookieMain")
   })
-  
+
   observeEvent(input$hideAccept, {
     shinyjs::toggle(id = "cookieDiv")
   })
-  
+
   observeEvent(input$hideReject, {
     shinyjs::toggle(id = "cookieDiv")
   })
-  
+
   observeEvent(input$remove, {
     shinyjs::toggle(id = "cookieMain")
     msg <- list(name = "dfe_analytics", value = "denied")
@@ -124,11 +124,11 @@ server <- function(input, output, session) {
     session$sendCustomMessage("analytics-consent", msg)
     print(input$cookies)
   })
-  
+
   cookies_data <- reactive({
     input$cookies
   })
-  
+
   output$cookie_status <- renderText({
     cookie_text_stem <- "To better understand the reach of our dashboard tools, this site uses cookies to identify numbers of unique users as part of Google Analytics. You have chosen to"
     cookie_text_tail <- "the use of cookies on this website."
@@ -144,13 +144,13 @@ server <- function(input, output, session) {
       "Cookies consent has not been confirmed."
     }
   })
-  
+
   observeEvent(input$cookieLink, {
     # Need to link here to where further info is located.  You can
     # updateTabsetPanel to have a cookie page for instance
     updateTabsetPanel(session, "navlistPanel", selected = "Support and feedback")
   })
-  
+
 
   # Reactive for headline attainment
 
@@ -158,7 +158,7 @@ server <- function(input, output, session) {
     headlineData <- dfAttainment %>%
       filter(
         school_type == input$headlineAps
-    )
+      )
   })
 
 
@@ -173,41 +173,34 @@ server <- function(input, output, session) {
 
   #  Disable top panel on institution type and group for headline
   #  Disable top panel on type of students for Female and Male
-  
- 
+
+
 
   # Add value box for A level
   output$headBox1 <- renderValueBox({
-  
-    
     latest <- (reactiveHeadline() %>%
-                 filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps
+      filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps
     grade <- (reactiveHeadline() %>%
-                filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps_grade
-    
+      filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps_grade
+
     valueBox(
-      
-      value = grade, subtitle = paste0("Average A level grade  equivalent to ", latest, " points:   " , input$headlineAps), #width = 12,
+      value = grade, subtitle = paste0("Average A level grade  equivalent to ", latest, " points:   ", input$headlineAps), # width = 12,
       color = "blue"
     )
-    
-        
   })
 
 
   # Add value box for Applied general
   output$headBox2 <- renderValueBox({
     latest <- (reactiveHeadline() %>%
-                 filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps
-    #result <- "Average applied general result"
+      filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps
+    # result <- "Average applied general result"
     grade <- (reactiveHeadline() %>%
-                filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps_grade
+      filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps_grade
     valueBox(
-      value = grade, subtitle = paste0("Average applied general grade equivalent to ", latest, "  points:   " , input$headlineAps), 
+      value = grade, subtitle = paste0("Average applied general grade equivalent to ", latest, "  points:   ", input$headlineAps),
       color = "blue"
     )
-       
-    
   })
 
 
@@ -215,14 +208,13 @@ server <- function(input, output, session) {
 
   output$headBox3 <- renderValueBox({
     latest <- (reactiveHeadline() %>%
-                 filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps
+      filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps
     grade <- (reactiveHeadline() %>%
-                filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps_grade
+      filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps_grade
     valueBox(
-      value = grade, subtitle = paste0("Average tech level grade equivalent to ", latest, "  points:   " , input$headlineAps), 
+      value = grade, subtitle = paste0("Average tech level grade equivalent to ", latest, "  points:   ", input$headlineAps),
       color = "blue"
-        )
-     
+    )
   })
 
   # Create reactive for Headline data
@@ -268,7 +260,7 @@ server <- function(input, output, session) {
     )
   })
 
-# Hide the tabpanel that are not relevant
+  # Hide the tabpanel that are not relevant
 
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
@@ -278,7 +270,7 @@ server <- function(input, output, session) {
       show("alevelInstitute")
     }
   })
-  
+
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
     if (input$tabsetpanels == "headline") {
@@ -442,7 +434,7 @@ server <- function(input, output, session) {
     # val1<-paste(input$allGender, collapse=", ")
     paste("The boxes display the latest provisional average grades in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general
     and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
-The chart shows the average point score from 2015/16 to 2022/23 for " , val, " in England. To view results, click on the drop-down box and select one institution type.
+The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
 ")
   })
 
@@ -791,42 +783,42 @@ The chart shows the average point score from 2015/16 to 2022/23 for " , val, " i
 
 
   # Data table for headline page
-    output$tabApsAll <- renderDataTable({
-      datatable(
-        reactiveType() %>%
-          select(
-            Year = year,
-            `Academic year` = time_period,
-            # `Institution group`  = school_type_group,
-            `Institution type` = school_type,
-            `Characteristic gender` = characteristic_gender,
-            `Number of students` = number_of_students,
-            `APS per entry` = aps_2016_2022,
-            `APS per entry grade 2016-2023` = aps_grade_2016_2022,
-            `APS per entry 2013-2015` = aps_2013_2015,
-            `APS per entry grade 2013-2015` = aps_grade_2013_2015,
-            Version = version
-            ),
-        extens = "Buttons",
-        options = (
-          list(
-            infor = F, paging = F,
-            searching = F,
-            stripClasses = F,
-            lengthChange = F,
-            scrollY = "260px",
-            scrollX = T,
-            scrollCollapse = T,
-            dom = "Bfrtip",
-            buttons = (c("copy", "csv", "excel")),
-            class = "display"
-          )),
-        rownames = FALSE
-      )
-    })
+  output$tabApsAll <- renderDataTable({
+    datatable(
+      reactiveType() %>%
+        select(
+          Year = year,
+          `Academic year` = time_period,
+          # `Institution group`  = school_type_group,
+          `Institution type` = school_type,
+          `Characteristic gender` = characteristic_gender,
+          `Number of students` = number_of_students,
+          `APS per entry` = aps_2016_2022,
+          `APS per entry grade 2016-2023` = aps_grade_2016_2022,
+          `APS per entry 2013-2015` = aps_2013_2015,
+          `APS per entry grade 2013-2015` = aps_grade_2013_2015,
+          Version = version
+        ),
+      extens = "Buttons",
+      options = (
+        list(
+          infor = F, paging = F,
+          searching = F,
+          stripClasses = F,
+          lengthChange = F,
+          scrollY = "260px",
+          scrollX = T,
+          scrollCollapse = T,
+          dom = "Bfrtip",
+          buttons = (c("copy", "csv", "excel")),
+          class = "display"
+      )),
+      rownames = FALSE
+    )
+  })
 
-   
-  
+
+
   output$resall <- renderDataTable({
     datatable(selected_subAll(),
       options = list(
@@ -876,17 +868,18 @@ The chart shows the average point score from 2015/16 to 2022/23 for " , val, " i
       }
     }
   )
-  
+
   # Add input IDs here that are within the relevant drop down boxes to create dynamic text
   output$dropdown_label <- renderText({
     if (input$tabsetpanels == "headline") {
-      paste0("Click to download full headline dataset")#)input$downloadDataAps)
-      } else{ paste0("Click to select institution types from the drop-down menu and further options")# input$alevelInstitute, )
-      }
+      paste0("Click to download full headline dataset") # )input$downloadDataAps)
+    } else {
+      paste0("Click to select institution types from the drop-down menu and further options") # input$alevelInstitute, )
+    }
   })
-                     
-                     
-   
+
+
+
 
   # Stop app ---------------------------------------------------------------------------------
 
@@ -894,4 +887,3 @@ The chart shows the average point score from 2015/16 to 2022/23 for " , val, " i
     stopApp()
   })
 }
-

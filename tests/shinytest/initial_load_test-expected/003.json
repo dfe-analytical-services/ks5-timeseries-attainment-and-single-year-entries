@@ -19,10 +19,19 @@
       "All state-funded schools"
     ],
     "allGender": "All students",
+    "cookieAccept": 0,
+    "cookieLink": 0,
+    "cookieReject": 0,
+    "cookies": {
+      "_ga_C9DQ5CPBCR": "GS1.1.1699987918.1.0.1699987918.0.0.0",
+      "_ga": "GA1.1.74608125.1699987919"
+    },
     "ees_1": 0,
     "ees_2a": 0,
     "ees_2b": 0,
     "headlineAps": "All Institutions",
+    "hideAccept": 0,
+    "hideReject": 0,
     "link_to_alevelAllSubject_tab": 0,
     "link_to_alevelFmSubject_tab": 0,
     "link_to_headline_tab": 0,
@@ -42,26 +51,27 @@
     "tabsetpanels": "headline",
     "tabsetpanels2a": "alevelAllSubject",
     "tabsetpanels2b": "alevelFmSubject",
-    "year_end": "2022",
-    "year_end_fm": "2022",
+    "year_end": "2023",
+    "year_end_fm": "2023",
     "year_start": "1996",
     "year_start_fm": "1996"
   },
   "output": {
+    "dropdown_label": "Click to download full headline dataset",
     "headBox1": {
-      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>B<\/h3>\n        <p><strong>Average A level result <\/strong>  equivalent to <strong>\n  38.87\n  points:   \n<\/strong>All Institutions<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>B<\/h3>\n    <p>Average A level grade  equivalent to 38.87 points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
     },
     "headBox2": {
-      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>Dist-<\/h3>\n        <p><strong>Average applied general result<\/strong>  equivalent to <strong>\n  31.98\n  points:   \n<\/strong>All Institutions<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Dist-<\/h3>\n    <p>Average applied general grade equivalent to 31.98  points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
     },
     "headBox3": {
-      "html": "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <div class=\"small-box bg-blue\">\n      <div class=\"inner\">\n        <h3>Dist-<\/h3>\n        <p><strong>Average tech level result<\/strong>  equivalent to <strong>\n  30.56\n  points:   \n<\/strong>All Institutions<\/p>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Dist-<\/h3>\n    <p>Average tech level grade equivalent to 30.56  points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
@@ -71,33 +81,33 @@
         "data": [
           {
             "x": [
-              3.30016053695135,
-              3.3003780648707,
-              3.30059548388996,
-              3.30081279411812,
-              3.30102999566398,
-              3.30124708863621,
+              3.3001605369513523,
+              3.3003780648707024,
+              3.3005954838899636,
+              3.3008127941181171,
+              3.3010299956639813,
+              3.3012470886362113,
               3.3014640731433,
-              3.30168094929358,
-              3.30189771719521,
-              3.3021143769562,
-              3.3023309286844,
-              3.30254737248749,
-              3.30276370847298,
-              3.30297993674825,
-              3.30319605742049,
-              3.30341207059674,
-              3.30362797638389,
-              3.30384377488865,
-              3.3040594662176,
-              3.30427505047713,
-              3.30449052777349,
-              3.30470589821277,
-              3.30492116190089,
-              3.30513631894364,
-              3.30535136944662,
-              3.3055663135153,
-              3.30578115125498
+              3.3016809492935764,
+              3.301897717195208,
+              3.3021143769562009,
+              3.3023309286843991,
+              3.3025473724874854,
+              3.3027637084729817,
+              3.3029799367482493,
+              3.3031960574204891,
+              3.303412070596742,
+              3.3036279763838898,
+              3.3038437748886547,
+              3.3040594662175993,
+              3.3042750504771283,
+              3.3044905277734875,
+              3.3047058982127653,
+              3.3049211619008916,
+              3.3051363189436391,
+              3.3053513694466239,
+              3.3055663135153042,
+              3.3057811512549824
             ],
             "y": [
               72544,
@@ -158,9 +168,9 @@
               "Year: 2022<br />Entry_count: 53084<br />Subject: Total English"
             ],
             "type": "scatter",
-            "mode": "lines+markers",
+            "mode": "lines",
             "line": {
-              "width": 1.88976377952756,
+              "width": 3.7795275590551185,
               "color": "rgba(18,67,109,1)",
               "dash": "solid"
             },
@@ -171,48 +181,37 @@
             "xaxis": "x",
             "yaxis": "y",
             "hoverinfo": "text",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(18,67,109,1)",
-              "opacity": 1,
-              "size": 5.66929133858268,
-              "symbol": "circle",
-              "line": {
-                "width": 1.88976377952756,
-                "color": "rgba(18,67,109,1)"
-              }
-            },
             "frame": null
           },
           {
             "x": [
-              3.30016053695135,
-              3.3003780648707,
-              3.30059548388996,
-              3.30081279411812,
-              3.30102999566398,
-              3.30124708863621,
+              3.3001605369513523,
+              3.3003780648707024,
+              3.3005954838899636,
+              3.3008127941181171,
+              3.3010299956639813,
+              3.3012470886362113,
               3.3014640731433,
-              3.30168094929358,
-              3.30189771719521,
-              3.3021143769562,
-              3.3023309286844,
-              3.30254737248749,
-              3.30276370847298,
-              3.30297993674825,
-              3.30319605742049,
-              3.30341207059674,
-              3.30362797638389,
-              3.30384377488865,
-              3.3040594662176,
-              3.30427505047713,
-              3.30449052777349,
-              3.30470589821277,
-              3.30492116190089,
-              3.30513631894364,
-              3.30535136944662,
-              3.3055663135153,
-              3.30578115125498
+              3.3016809492935764,
+              3.301897717195208,
+              3.3021143769562009,
+              3.3023309286843991,
+              3.3025473724874854,
+              3.3027637084729817,
+              3.3029799367482493,
+              3.3031960574204891,
+              3.303412070596742,
+              3.3036279763838898,
+              3.3038437748886547,
+              3.3040594662175993,
+              3.3042750504771283,
+              3.3044905277734875,
+              3.3047058982127653,
+              3.3049211619008916,
+              3.3051363189436391,
+              3.3053513694466239,
+              3.3055663135153042,
+              3.3057811512549824
             ],
             "y": [
               54125,
@@ -273,9 +272,9 @@
               "Year: 2022<br />Entry_count: 87066<br />Subject: Total Maths"
             ],
             "type": "scatter",
-            "mode": "lines+markers",
+            "mode": "lines",
             "line": {
-              "width": 1.88976377952756,
+              "width": 3.7795275590551185,
               "color": "rgba(244,106,37,1)",
               "dash": "solid"
             },
@@ -286,17 +285,6 @@
             "xaxis": "x",
             "yaxis": "y",
             "hoverinfo": "text",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(244,106,37,1)",
-              "opacity": 1,
-              "size": 5.66929133858268,
-              "symbol": "triangle-up",
-              "line": {
-                "width": 1.88976377952756,
-                "color": "rgba(244,106,37,1)"
-              }
-            },
             "frame": null
           },
           {
@@ -305,30 +293,29 @@
             "xaxis": "x",
             "yaxis": "y",
             "hoverinfo": "text",
-            "mode": "",
             "frame": null
           }
         ],
         "layout": {
           "margin": {
-            "t": 39.0247682302477,
-            "r": 7.30593607305936,
-            "b": 26.146395461464,
-            "l": 49.2154420921544
+            "t": 39.02476823024768,
+            "r": 7.3059360730593621,
+            "b": 26.14639546146396,
+            "l": 49.21544209215444
           },
           "plot_bgcolor": "rgba(255,255,255,1)",
           "paper_bgcolor": "rgba(255,255,255,1)",
           "font": {
             "color": "rgba(0,0,0,1)",
             "family": "",
-            "size": 15.9402241594022
+            "size": 15.940224159402243
           },
           "title": {
-            "text": "<br />Entry count:<br /> All students",
+            "text": "<br />A level entry count:<br /> All students",
             "font": {
               "color": "rgba(0,0,0,1)",
               "family": "",
-              "size": 13.2835201328352
+              "size": 13.283520132835198
             },
             "x": 0,
             "xref": "paper"
@@ -342,8 +329,8 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              3.29987950623617,
-              3.30606218197016
+              3.2998795062361705,
+              3.3060621819701641
             ],
             "tickmode": "array",
             "ticktext": [
@@ -363,20 +350,20 @@
               "2022"
             ],
             "tickvals": [
-              3.30016053695135,
-              3.30059548388996,
-              3.30102999566398,
+              3.3001605369513523,
+              3.3005954838899636,
+              3.3010299956639813,
               3.3014640731433,
-              3.30189771719521,
-              3.3023309286844,
-              3.30276370847298,
-              3.30319605742049,
-              3.30362797638389,
-              3.3040594662176,
-              3.30449052777349,
-              3.30492116190089,
-              3.30535136944662,
-              3.30578115125498
+              3.301897717195208,
+              3.3023309286843991,
+              3.3027637084729817,
+              3.3031960574204891,
+              3.3036279763838898,
+              3.3040594662175993,
+              3.3044905277734875,
+              3.3049211619008916,
+              3.3053513694466239,
+              3.3057811512549824
             ],
             "categoryorder": "array",
             "categoryarray": [
@@ -398,8 +385,8 @@
             "nticks": null,
             "ticks": "outside",
             "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.65296803652968,
-            "tickwidth": 0.66417600664176,
+            "ticklen": 3.6529680365296811,
+            "tickwidth": 0.66417600664176002,
             "showticklabels": true,
             "tickfont": {
               "color": "rgba(77,77,77,1)",
@@ -435,8 +422,8 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              -4413.2,
-              92677.2
+              -4413.1999999999998,
+              92677.199999999997
             ],
             "tickmode": "array",
             "ticktext": [
@@ -448,7 +435,7 @@
             "tickvals": [
               0,
               25000,
-              50000,
+              49999.999999999993,
               75000
             ],
             "categoryorder": "array",
@@ -461,8 +448,8 @@
             "nticks": null,
             "ticks": "outside",
             "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.65296803652968,
-            "tickwidth": 0.66417600664176,
+            "ticklen": 3.6529680365296811,
+            "tickwidth": 0.66417600664176002,
             "showticklabels": true,
             "tickfont": {
               "color": "rgba(77,77,77,1)",
@@ -483,7 +470,7 @@
               "font": {
                 "color": "rgba(0,0,0,1)",
                 "family": "",
-                "size": 15.9402241594022
+                "size": 15.940224159402243
               }
             },
             "hoverformat": ".2f",
@@ -512,7 +499,7 @@
           "legend": {
             "bgcolor": "rgba(255,255,255,1)",
             "bordercolor": "transparent",
-            "borderwidth": 1.88976377952756,
+            "borderwidth": 1.8897637795275593,
             "font": {
               "color": "rgba(0,0,0,1)",
               "family": "",
@@ -523,11 +510,11 @@
               "font": {
                 "color": "rgba(0,0,0,1)",
                 "family": "",
-                "size": 15.9402241594022
+                "size": 15.940224159402243
               }
             },
             "orientation": "h",
-            "x": 0.1,
+            "x": 0.10000000000000001,
             "y": -0.5
           },
           "hovermode": "x",
@@ -555,7 +542,7 @@
           "persistent": false,
           "dynamic": false,
           "selectize": false,
-          "opacityDim": 0.2,
+          "opacityDim": 0.20000000000000001,
           "selected": {
             "opacity": 1
           },
@@ -664,48 +651,492 @@
       ]
     },
     "plotHeadline": {
-      "src": "[image data sha1: 2226f4251c23c93c0adfa0ba73015e410eac3e03]",
-      "width": 337.546875,
-      "height": 400,
-      "alt": "Plot object",
-      "coordmap": {
-        "panels": [
+      "x": {
+        "data": [
           {
-            "panel": 1,
-            "row": 1,
-            "col": 1,
-            "panel_vars": {
-
+            "x": [
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "y": [
+              31.789999999999999,
+              32.390000000000001,
+              33.329999999999998,
+              34.009999999999998,
+              39.640000000000001,
+              41.659999999999997,
+              38.869999999999997
+            ],
+            "text": [
+              "Year: 2016<br />APS: 31.79<br />Qualification: A level",
+              "Year: 2017<br />APS: 32.39<br />Qualification: A level",
+              "Year: 2018<br />APS: 33.33<br />Qualification: A level",
+              "Year: 2019<br />APS: 34.01<br />Qualification: A level",
+              "Year: 2020<br />APS: 39.64<br />Qualification: A level",
+              "Year: 2021<br />APS: 41.66<br />Qualification: A level",
+              "Year: 2022<br />APS: 38.87<br />Qualification: A level"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 3.7795275590551185,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
             },
-            "log": {
-              "x": null,
-              "y": null
+            "hoveron": "points",
+            "name": "A level",
+            "legendgroup": "A level",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "y": [
+              34.689999999999998,
+              35.719999999999999,
+              28.449999999999999,
+              28.91,
+              31.25,
+              32.689999999999998,
+              31.98
+            ],
+            "text": [
+              "Year: 2016<br />APS: 34.69<br />Qualification: Applied general",
+              "Year: 2017<br />APS: 35.72<br />Qualification: Applied general",
+              "Year: 2018<br />APS: 28.45<br />Qualification: Applied general",
+              "Year: 2019<br />APS: 28.91<br />Qualification: Applied general",
+              "Year: 2020<br />APS: 31.25<br />Qualification: Applied general",
+              "Year: 2021<br />APS: 32.69<br />Qualification: Applied general",
+              "Year: 2022<br />APS: 31.98<br />Qualification: Applied general"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 3.7795275590551185,
+              "color": "rgba(40,161,151,1)",
+              "dash": "solid"
             },
-            "domain": {
-              "left": 2015.205,
-              "right": 2022.795,
-              "bottom": -2.083,
-              "top": 43.743
+            "hoveron": "points",
+            "name": "Applied general",
+            "legendgroup": "Applied general",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "y": [
+              30.77,
+              32.259999999999998,
+              28.100000000000001,
+              28.640000000000001,
+              29.93,
+              31.68,
+              30.559999999999999
+            ],
+            "text": [
+              "Year: 2016<br />APS: 30.77<br />Qualification: Tech level",
+              "Year: 2017<br />APS: 32.26<br />Qualification: Tech level",
+              "Year: 2018<br />APS: 28.10<br />Qualification: Tech level",
+              "Year: 2019<br />APS: 28.64<br />Qualification: Tech level",
+              "Year: 2020<br />APS: 29.93<br />Qualification: Tech level",
+              "Year: 2021<br />APS: 31.68<br />Qualification: Tech level",
+              "Year: 2022<br />APS: 30.56<br />Qualification: Tech level"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 3.7795275590551185,
+              "color": "rgba(128,22,80,1)",
+              "dash": "solid"
             },
-            "mapping": {
-              "fill": "cert_type",
-              "x": "year",
-              "y": "aps",
-              "group": "cert_type"
-            },
-            "range": {
-              "left": 37.4944349315069,
-              "right": 331.520547945206,
-              "bottom": 308.039453885818,
-              "top": 40.4468252197582
-            }
+            "hoveron": "points",
+            "name": "Tech level",
+            "legendgroup": "Tech level",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "visible": false,
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
           }
         ],
-        "dims": {
-          "width": 337.546875,
-          "height": 400
+        "layout": {
+          "margin": {
+            "t": 39.02476823024768,
+            "r": 7.3059360730593621,
+            "b": 26.14639546146396,
+            "l": 23.711083437110844
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 15.940224159402243
+          },
+          "title": {
+            "text": "<br /> Average point score:   All Institutions",
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "x": 0,
+            "xref": "paper"
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              2015.7,
+              2022.3
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2016",
+              "2017",
+              "2018",
+              "2019",
+              "2020",
+              "2021",
+              "2022"
+            ],
+            "tickvals": [
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2016",
+              "2017",
+              "2018",
+              "2019",
+              "2020",
+              "2021",
+              "2022"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.6529680365296811,
+            "tickwidth": 0.66417600664176002,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 12.7521793275218
+            },
+            "tickangle": -300,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 1.32835201328352,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f",
+            "fixedrange": true
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -3,
+              63
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "20",
+              "40",
+              "60"
+            ],
+            "tickvals": [
+              0,
+              20,
+              40,
+              60
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "20",
+              "40",
+              "60"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.6529680365296811,
+            "tickwidth": 0.66417600664176002,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 12.7521793275218
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 1.32835201328352,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 15.940224159402243
+              }
+            },
+            "hoverformat": ".2f",
+            "fixedrange": true
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.8897637795275593,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 12.7521793275218
+            },
+            "title": {
+              "text": "",
+              "font": {
+                "color": null,
+                "family": null,
+                "size": 0
+              }
+            },
+            "orientation": "h",
+            "x": 0.20000000000000001,
+            "y": 0.29999999999999999
+          },
+          "hovermode": "x",
+          "barmode": "relative"
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "modeBarButtonsToRemove": [
+            "zoom2d",
+            "zoomIn2d",
+            "zoomOut2d",
+            "pan2d",
+            "autoScale2d",
+            "resetScale2d",
+            "hoverCompareCartesian",
+            "drawrect",
+            "select2d",
+            "lasso2d",
+            "hoverClosestCartesian",
+            "toggleSpikelines"
+          ],
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "svg",
+            "filename": "headlineAttain_image"
+          }
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
         }
-      }
+      ]
     },
     "tabHeadline": {
       "x": {
@@ -783,9 +1214,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-core-1.12.1"
+            "href": "dt-core-1.13.4"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -800,9 +1231,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "jszip-1.12.1"
+            "href": "jszip-1.13.4"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -814,9 +1245,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.12.1",
+          "version": "1.13.4",
           "src": {
-            "href": "dt-ext-buttons-1.12.1"
+            "href": "dt-ext-buttons-1.13.4"
           },
           "meta": null,
           "script": [
@@ -846,8 +1277,8 @@
         }
       ]
     },
-    "textHeadline": "The boxes display the latest average results in 2021/22 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general\n    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.\nBar chart shows the average results from 2015/16 to 2021/22 for  All Institutions  in England. To view results, click on the drop-down box beside the bar chart and select one institution type.",
-    "textSubAll": "The line chart shows the A level exam entries for  Total English and Total Maths from   1996 to  2022  for  All students  in England. "
+    "textHeadline": "The boxes display the latest provisional average grades in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general\n    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.\nThe chart shows the average point score from 2015/16 to 2022/23 for  All Institutions  in England. To view results, click on the drop-down box and select one institution type.",
+    "textSubAll": "The line chart shows the A level exam entries for  Total English and Total Maths from   1996 to  2023  for  All students  in England. "
   },
   "export": {
 
