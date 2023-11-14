@@ -17,9 +17,11 @@ shhh(library(tools))
 shhh(library(testthat))
 shhh(library(shinytest))
 shhh(library(shinydashboard))
+shhh(library(shinytitle))
 shhh(library(shinyWidgets))
 shhh(library(shinyGovstyle))
 shhh(library(shinycssloaders))
+shhh(library(shinyBS))
 shhh(library(dplyr))
 shhh(library(tidyr))
 shhh(library(ggplot2))
@@ -31,6 +33,7 @@ shhh(library(hrbrthemes))
 shhh(library(forcats))
 shhh(library(patchwork))
 shhh(library(readr))
+shhh(library(dfeshiny))
 
 
 # Functions ---------------------------------------------------------------------------------
@@ -43,26 +46,7 @@ shhh(library(readr))
 cs_num <- function(value) {
   format(value, big.mark = ",", trim = TRUE)
 }
-
-# tidy_code_function -------------------------------------------------------------------------------
-# Code to tidy up the scripts.
-
-tidy_code_function <- function() {
-  message("----------------------------------------")
-  message("App scripts")
-  message("----------------------------------------")
-  app_scripts <- eval(styler::style_dir(recursive = FALSE)$changed)
-  message("Test scripts")
-  message("----------------------------------------")
-  test_scripts <- eval(styler::style_dir("tests/", filetype = "r")$changed)
-  script_changes <- c(app_scripts, test_scripts)
-  return(script_changes)
-}
-
-
 # Code to convert data to numeric
-
-
 to_numeric <- function(df, variables) {
   for (variable in variables) {
     df[[variable]] <- (suppressWarnings(as.numeric(df[[variable]])))
@@ -132,7 +116,7 @@ source("R/read_data.R")
 # Create new column for thousand entries
 
 
-latest_year <- 2022
+latest_year <- 2023
 
 dfAlevelSubjectRaw <- read_alevel_subject_data()
 
@@ -166,13 +150,13 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
 subjectByAll <- dfAlevelSubject %>%
   group_by(subject_name, characteristic_gender) %>%
   arrange(year, .by_group = TRUE) %>%
-  filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics"), n() > 7) %>%
+  filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics"), n() > 8) %>%
   ungroup()
 
 # Filter out female and male
 
-subjectByGender <- subjectByAll %>%
-  filter(characteristic_gender != "All students")
+subjectByGender <- subjectByAll # %>%
+# filter(characteristic_gender != "All students")
 
 # Filter home economics for all students
 homeEconomics <- dfAlevelSubject %>%
@@ -193,7 +177,7 @@ dfAlevelAps <- data %>%
   ) %>%
   select(
     time_period, year, school_type, school_type_group, number_of_students, aps_2016_2022, aps_2013_2015, aps_grade_2016_2022, aps_grade_2013_2015,
-    characteristic_gender, time_period, year, year_2013_2015, year_2016_2022, version
+    characteristic_gender, time_period, year_2016_2022, year_2013_2015, version
   ) %>%
   mutate(
     aps_grade_2016_2022 = as.factor(aps_grade_2016_2022),
