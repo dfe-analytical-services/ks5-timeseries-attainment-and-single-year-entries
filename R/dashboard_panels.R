@@ -41,7 +41,7 @@ homepage_panel <- function() {
                    To view and explore trend select up to four institution types from the drop-down menu at the top of the page."),
                   tags$div(
                     title = "(A level subject entries and result by all",
-                    h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and result by all")),
+                    h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and grade: Comparison by subject")),
                     p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2022/23.
                  Drop-down menus at the top of the page allows for the selection and comparison of up to four subjects
                   and cumulative grades.
@@ -49,8 +49,8 @@ homepage_panel <- function() {
                     p("The data refers to all entries by 16-18 year olds in the year stated (where 2023 means 2022/23 academic year).")
                   ),
                   tags$div(
-                    title = "(A level subject entries and result by gender",
-                    h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result by gender")),
+                    title = "(A level subject entry and result by gender",
+                    h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result: Comparison by gender")),
                     p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2022/23.
                   Select one subject from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available)."),
                     p(""), br(),
@@ -118,7 +118,7 @@ homepage_panel <- function() {
                   p("•	Total Classical studies covers Latin, Greek, Classical civilisation, and Other classical studies"),
                   p("•	STEM subjects cover Biology, Chemistry, Physics, Total maths, Further mathematics and Computer science. "),
                   p("•	Total Music includes Music and Music technology."),
-                  p("The data refers to all entries by 16-18 year olds in the year stated (where 2022 means 2022/23 academic year).")
+                  p("The data refers to all entries by 16-18 year olds in the year stated (where 2023 means 2022/23 academic year).")
                 )
               )
             )
@@ -224,14 +224,14 @@ dashboard_panel_aps <- function() {
               fluidRow(
                 column(
                   width = 12,
-                  h3(" 2023 Average result and time series for level 3 attainment, all students"),
+                  h3(" 2023 Average results and time series for level 3 attainment, all students"),
                   fluidRow(
                     valueBoxOutput("headBox1", width = 4),
-                    bsTooltip("headBox1", "Average A level result", placement = "top", trigger = "hover", options = NULL),
+                    bsTooltip("headBox1", "Average result - A level", placement = "top", trigger = "hover", options = NULL),
                     valueBoxOutput("headBox2", width = 4),
-                    bsTooltip("headBox2", "Average result, Applied general", placement = "top", trigger = "hover", options = NULL),
+                    bsTooltip("headBox2", "Average result - Applied general", placement = "top", trigger = "hover", options = NULL),
                     valueBoxOutput("headBox3", width = 4),
-                    bsTooltip("headBox3", "Average result, Tech Level", placement = "top", trigger = "hover", options = NULL)
+                    bsTooltip("headBox3", "Average result - Tech Level", placement = "top", trigger = "hover", options = NULL)
                   ),
                   column(
                     width = 9, textOutput("textHeadline")
@@ -369,7 +369,7 @@ dashboard_panel_aps <- function() {
 dashboard_panel_sub_all <- function() {
   tabPanel(
     value = "dashboard_alse",
-    "A level subject entries and grade: comparison by subject",
+    "A level subject entry and grade: comparison by subject",
 
     # Define UI for application that draws a histogram
 
@@ -567,7 +567,7 @@ dashboard_panel_sub_all <- function() {
 dashboard_panel_sub_fm <- function() {
   tabPanel(
     value = "dashboard_fm",
-    "A level entry and grade: comparison by gender",
+    "A level subject entry and grade: comparison by gender",
 
     # Define UI for application that draws a histogram
 
