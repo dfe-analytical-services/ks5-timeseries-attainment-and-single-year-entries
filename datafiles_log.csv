@@ -10,3 +10,7 @@ data/aps_gender_gapV2.csv,unpublished
 data/all_level_timeseries_data_1996_to_2022V2.csv,unpublished
 data/all_attainmentV2.csv,unpublished
 data/alevel_attainmentV2.csv,unpublished
+data/alevel_attainment_with_prov2023.csv,unpublished
+data/all_alevel_timeseries_data_1996_to_2023.csv,unpublished
+data/all_attainment_with_prov2023.csv,unpublished
+data/aps_gender_gap_with_prov2023.csv,unpublished

@@ -33,7 +33,7 @@ shhh(library(hrbrthemes))
 shhh(library(forcats))
 shhh(library(patchwork))
 shhh(library(readr))
-#shhh(library(dfeshiny))
+shhh(library(dfeshiny))
 
 
 # Functions ---------------------------------------------------------------------------------
