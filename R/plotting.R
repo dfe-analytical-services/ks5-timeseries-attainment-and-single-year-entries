@@ -45,12 +45,10 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
   fig <- ggplot(
     fig, aes(x = Year, y = APS, group = Qualification, color = Qualification)
   ) +
-    
     geom_line(stat = "identity", linewidth = 1) +
     scale_color_manual(values = c("#12436D", "#28A197", "#801650")) +
     # scale_x_log10(breaks = seq(2016, 2023, 2)) +
     labs(x = "", y = "", color = "") +
-
     coord_cartesian(ylim = c(0, 60)) +
     scale_x_continuous(breaks = seq(2016, 2023, 1)) +
     theme_classic() +
@@ -66,7 +64,7 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
     ) +
     expand_limits(x = 2016, y = 0) +
     ggtitle(paste0("\n Average point score:   ", allAps))
-  
+
   ggplotly(fig, tooltip = c("x", "y", "colour")) %>%
     config(
       modeBarButtonsToRemove = c(
@@ -81,8 +79,6 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
       legend = list(orientation = "h", x = .1, y = .2), #-.3),
       hovermode = "x"
     )
-
-  
 }
 
 
@@ -93,11 +89,11 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
 
 createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
   validate(need(dfAps$school_type, message = "To view charts select type of students and up to 4 institution types from the drop-down menus at the top page"))
-  
-  fig2<-dfAps%>%
+
+  fig2 <- dfAps %>%
     filter(year >= 2016)
-  
- 
+
+
   fig1 <- ggplot(dfAps, aes(x = year_2013_2015, y = aps_2013_2015, color = school_type)) +
     geom_line(stat = "identity", linewidth = 1.5) +
     geom_curve(aes(x = 2015.5, y = 50, xend = 2015, yend = 45),
@@ -337,12 +333,12 @@ createTimeSeriesResult <- function(dfSubjectA, subAll, resAll, subName) {
   validate(need(dfSubjectA$subject_name, message = "To view chart select type of students, select up to 4 subjects and start year from the drop-down menus at the top of the page.  Finally select cumulative grade"))
 
 
-  
+
   fig <- dfSubjectA %>%
     rename(Year = "year", Subject = "subject_name")
 
 
-  fig <- ggplot(fig, aes_string(x="Year",  y=resAll, color="Subject")) +
+  fig <- ggplot(fig, aes_string(x = "Year", y = resAll, color = "Subject")) +
     geom_line(stat = "identity", linewidth = 1, show.legend = F) +
     #   geom_point(stat= "identity", size=1.5, show.legend=F)+
     scale_x_log10(breaks = seq(1996, 2023, 2)) +
@@ -443,7 +439,7 @@ createTimeSeriesResultFm <- function(dfSubjectG, subByFm, resByFm) {
   fig <- dfSubjectG %>%
     rename(Year = "year", Subject = "subject_name", Gender = "characteristic_gender")
 
-  fig <- ggplot(fig, aes_string("Year", y=resByFm, color = "Gender")) +
+  fig <- ggplot(fig, aes_string("Year", y = resByFm, color = "Gender")) +
     geom_line(stat = "identity", linewidth = 1) +
     # geom_point(size=1.5)+
     scale_color_manual(values = c("#3D3D3D", "#F46A25", "#12436D")) +

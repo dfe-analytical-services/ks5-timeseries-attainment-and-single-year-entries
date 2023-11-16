@@ -184,7 +184,7 @@ server <- function(input, output, session) {
       filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps_grade
 
     valueBox(
-      value = grade, subtitle = paste0("Average A level result  equivalent to ", latest, " points:   " , input$headlineAps), # width = 12,
+      value = grade, subtitle = paste0("Average A level result  equivalent to ", latest, " points:   ", input$headlineAps), # width = 12,
       color = "blue"
     )
   })
@@ -198,7 +198,7 @@ server <- function(input, output, session) {
     grade <- (reactiveHeadline() %>%
       filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps_grade
     valueBox(
-      value = grade, subtitle = paste0("Average applied general result equivalent to ", latest, "  points:   " , input$headlineAps),
+      value = grade, subtitle = paste0("Average applied general result equivalent to ", latest, "  points:   ", input$headlineAps),
       color = "blue"
     )
   })
@@ -212,7 +212,7 @@ server <- function(input, output, session) {
     grade <- (reactiveHeadline() %>%
       filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps_grade
     valueBox(
-      value = grade, subtitle = paste0("Average tech level result equivalent to ", latest, "  points:   " , input$headlineAps),
+      value = grade, subtitle = paste0("Average tech level result equivalent to ", latest, "  points:   ", input$headlineAps),
       color = "blue"
     )
   })
@@ -433,9 +433,9 @@ server <- function(input, output, session) {
     val <- paste(input$headlineAps, collapse = ",")
     # val1<-paste(input$allGender, collapse=", ")
     paste("The boxes display the latest provisional average results in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general
-    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables. 
+    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
     Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.
-    
+
     The chart shows the APS from 2015/16 to 2022/23 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
 ")
   })

@@ -11,7 +11,7 @@
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
-#shhh(library(shinya11y))
+# shhh(library(shinya11y))
 shhh(library(shinyjs))
 shhh(library(tools))
 shhh(library(testthat))
@@ -33,7 +33,7 @@ shhh(library(hrbrthemes))
 shhh(library(forcats))
 shhh(library(patchwork))
 shhh(library(readr))
-#shhh(library(dfeshiny))
+shhh(library(dfeshiny))
 
 
 # Functions ---------------------------------------------------------------------------------
@@ -177,9 +177,10 @@ dfAlevelAps <- data %>%
   ) %>%
   select(
     time_period, year, school_type, school_type_group, number_of_students, aps_2016_2023, aps_2013_2015, aps_grade_2016_2023, aps_grade_2013_2015,
-    characteristic_gender, time_period, year_2016_2023, year_2013_2015, version) %>%
+    characteristic_gender, time_period, year_2016_2023, year_2013_2015, version
+  ) %>%
   mutate(
-    year_2016_2023=year,
+    year_2016_2023 = year,
     aps_grade_2016_2023 = as.factor(aps_grade_2016_2023),
     aps_grade_2013_2015 = as.factor(aps_grade_2013_2015),
     aps_2016_2023 = round(as.numeric(aps_2016_2023), 2),
