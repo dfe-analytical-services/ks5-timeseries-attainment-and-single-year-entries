@@ -66,6 +66,17 @@ ui <- function(input, output, session) {
     shinyjs::useShinyjs(),
     customDisconnectMessage(),
     useShinydashboard(),
+    # Setting up cookie consent based on a cookie recording the consent:
+    # https://book.javascript-for-r.com/shiny-cookies.html
+    tags$head(
+      tags$script(
+        src = paste0(
+          "https://cdn.jsdelivr.net/npm/js-cookie@rc/",
+          "dist/js.cookie.min.js"
+        )
+      ),
+      tags$script(src = "cookie-consent.js")
+    ),
     tags$head(includeHTML(("google-analytics.html"))),
     tags$head(
       tags$link(
@@ -74,6 +85,7 @@ ui <- function(input, output, session) {
         href = "dfe_shiny_gov_style.css"
       )
     ),
+    shinyGovstyle::cookieBanner("KS5 attainment and single year entry"),
     shinyGovstyle::header(
       main_text = "",
       main_link = "https://www.gov.uk/government/organisations/department-for-education",
