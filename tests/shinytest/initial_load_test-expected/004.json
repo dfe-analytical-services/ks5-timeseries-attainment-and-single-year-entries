@@ -38,21 +38,21 @@
     "year_start_fm": "1996"
   },
   "output": {
-    "dropdown_label": "Click to download full headline dataset",
+    "dropdown_label": "Click to download full dataset",
     "headBox1": {
-      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>B<\/h3>\n    <p>Average A level grade  equivalent to 38.87 points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>B-<\/h3>\n    <p>Average A level result  equivalent to 35.16 points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
     },
     "headBox2": {
-      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Dist-<\/h3>\n    <p>Average applied general grade equivalent to 31.98  points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Merit+<\/h3>\n    <p>Average applied general result equivalent to 29.56  points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
     },
     "headBox3": {
-      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Dist-<\/h3>\n    <p>Average tech level grade equivalent to 30.56  points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Merit+<\/h3>\n    <p>Average tech level result equivalent to 28.51  points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
@@ -88,7 +88,8 @@
               3.3051363189436391,
               3.3053513694466239,
               3.3055663135153042,
-              3.3057811512549824
+              3.3057811512549824,
+              3.3059958827708047
             ],
             "y": [
               72544,
@@ -117,7 +118,8 @@
               57908,
               59431,
               56768,
-              53084
+              53084,
+              53021
             ],
             "text": [
               "Year: 1996<br />Entry_count: 72544<br />Subject: Total English",
@@ -146,7 +148,8 @@
               "Year: 2019<br />Entry_count: 57908<br />Subject: Total English",
               "Year: 2020<br />Entry_count: 59431<br />Subject: Total English",
               "Year: 2021<br />Entry_count: 56768<br />Subject: Total English",
-              "Year: 2022<br />Entry_count: 53084<br />Subject: Total English"
+              "Year: 2022<br />Entry_count: 53084<br />Subject: Total English",
+              "Year: 2023<br />Entry_count: 53021<br />Subject: Total English"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -192,7 +195,8 @@
               3.3051363189436391,
               3.3053513694466239,
               3.3055663135153042,
-              3.3057811512549824
+              3.3057811512549824,
+              3.3059958827708047
             ],
             "y": [
               54125,
@@ -221,7 +225,8 @@
               83137,
               86073,
               88264,
-              87066
+              87066,
+              88274
             ],
             "text": [
               "Year: 1996<br />Entry_count: 54125<br />Subject: Total Maths",
@@ -250,7 +255,8 @@
               "Year: 2019<br />Entry_count: 83137<br />Subject: Total Maths",
               "Year: 2020<br />Entry_count: 86073<br />Subject: Total Maths",
               "Year: 2021<br />Entry_count: 88264<br />Subject: Total Maths",
-              "Year: 2022<br />Entry_count: 87066<br />Subject: Total Maths"
+              "Year: 2022<br />Entry_count: 87066<br />Subject: Total Maths",
+              "Year: 2023<br />Entry_count: 88274<br />Subject: Total Maths"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -292,7 +298,7 @@
             "size": 15.940224159402243
           },
           "title": {
-            "text": "<br />A level entry count:<br /> All students",
+            "text": "<br />A level entry count:  All students",
             "font": {
               "color": "rgba(0,0,0,1)",
               "family": "",
@@ -310,8 +316,8 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              3.2998795062361705,
-              3.3060621819701641
+              3.2998687696603795,
+              3.3062876500617775
             ],
             "tickmode": "array",
             "ticktext": [
@@ -403,8 +409,8 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              -4413.1999999999998,
-              92677.199999999997
+              -4413.6999999999998,
+              92687.699999999997
             ],
             "tickmode": "array",
             "ticktext": [
@@ -415,8 +421,8 @@
             ],
             "tickvals": [
               0,
-              25000,
-              49999.999999999993,
+              25000.000000000004,
+              50000,
               75000
             ],
             "categoryorder": "array",
@@ -642,7 +648,8 @@
               2019,
               2020,
               2021,
-              2022
+              2022,
+              2023
             ],
             "y": [
               31.789999999999999,
@@ -651,7 +658,8 @@
               34.009999999999998,
               39.640000000000001,
               41.659999999999997,
-              38.869999999999997
+              38.869999999999997,
+              35.159999999999997
             ],
             "text": [
               "Year: 2016<br />APS: 31.79<br />Qualification: A level",
@@ -660,7 +668,8 @@
               "Year: 2019<br />APS: 34.01<br />Qualification: A level",
               "Year: 2020<br />APS: 39.64<br />Qualification: A level",
               "Year: 2021<br />APS: 41.66<br />Qualification: A level",
-              "Year: 2022<br />APS: 38.87<br />Qualification: A level"
+              "Year: 2022<br />APS: 38.87<br />Qualification: A level",
+              "Year: 2023<br />APS: 35.16<br />Qualification: A level"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -686,7 +695,8 @@
               2019,
               2020,
               2021,
-              2022
+              2022,
+              2023
             ],
             "y": [
               34.689999999999998,
@@ -695,7 +705,8 @@
               28.91,
               31.25,
               32.689999999999998,
-              31.98
+              31.98,
+              29.559999999999999
             ],
             "text": [
               "Year: 2016<br />APS: 34.69<br />Qualification: Applied general",
@@ -704,7 +715,8 @@
               "Year: 2019<br />APS: 28.91<br />Qualification: Applied general",
               "Year: 2020<br />APS: 31.25<br />Qualification: Applied general",
               "Year: 2021<br />APS: 32.69<br />Qualification: Applied general",
-              "Year: 2022<br />APS: 31.98<br />Qualification: Applied general"
+              "Year: 2022<br />APS: 31.98<br />Qualification: Applied general",
+              "Year: 2023<br />APS: 29.56<br />Qualification: Applied general"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -730,7 +742,8 @@
               2019,
               2020,
               2021,
-              2022
+              2022,
+              2023
             ],
             "y": [
               30.77,
@@ -739,7 +752,8 @@
               28.640000000000001,
               29.93,
               31.68,
-              30.559999999999999
+              30.559999999999999,
+              28.510000000000002
             ],
             "text": [
               "Year: 2016<br />APS: 30.77<br />Qualification: Tech level",
@@ -748,7 +762,8 @@
               "Year: 2019<br />APS: 28.64<br />Qualification: Tech level",
               "Year: 2020<br />APS: 29.93<br />Qualification: Tech level",
               "Year: 2021<br />APS: 31.68<br />Qualification: Tech level",
-              "Year: 2022<br />APS: 30.56<br />Qualification: Tech level"
+              "Year: 2022<br />APS: 30.56<br />Qualification: Tech level",
+              "Year: 2023<br />APS: 28.51<br />Qualification: Tech level"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -808,8 +823,8 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              2015.7,
-              2022.3
+              2015.6500000000001,
+              2023.3499999999999
             ],
             "tickmode": "array",
             "ticktext": [
@@ -819,7 +834,8 @@
               "2019",
               "2020",
               "2021",
-              "2022"
+              "2022",
+              "2023"
             ],
             "tickvals": [
               2016,
@@ -828,7 +844,8 @@
               2019,
               2020,
               2021,
-              2022
+              2022,
+              2023
             ],
             "categoryorder": "array",
             "categoryarray": [
@@ -838,7 +855,8 @@
               "2019",
               "2020",
               "2021",
-              "2022"
+              "2022",
+              "2023"
             ],
             "nticks": null,
             "ticks": "outside",
@@ -972,8 +990,8 @@
               }
             },
             "orientation": "h",
-            "x": 0.20000000000000001,
-            "y": 0.29999999999999999
+            "x": 0.10000000000000001,
+            "y": 0.20000000000000001
           },
           "hovermode": "x",
           "barmode": "relative"
@@ -1150,7 +1168,8 @@
               3.3051363189436391,
               3.3053513694466239,
               3.3055663135153042,
-              3.3057811512549824
+              3.3057811512549824,
+              3.3059958827708047
             ],
             "y": [
               72544,
@@ -1179,7 +1198,8 @@
               57908,
               59431,
               56768,
-              53084
+              53084,
+              53021
             ],
             "text": [
               "Year: 1996<br />Entry_count: 72544<br />Gender: All students",
@@ -1208,7 +1228,8 @@
               "Year: 2019<br />Entry_count: 57908<br />Gender: All students",
               "Year: 2020<br />Entry_count: 59431<br />Gender: All students",
               "Year: 2021<br />Entry_count: 56768<br />Gender: All students",
-              "Year: 2022<br />Entry_count: 53084<br />Gender: All students"
+              "Year: 2022<br />Entry_count: 53084<br />Gender: All students",
+              "Year: 2023<br />Entry_count: 53021<br />Gender: All students"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -1254,7 +1275,8 @@
               3.3051363189436391,
               3.3053513694466239,
               3.3055663135153042,
-              3.3057811512549824
+              3.3057811512549824,
+              3.3059958827708047
             ],
             "y": [
               50115,
@@ -1283,7 +1305,8 @@
               43888,
               45074,
               43062,
-              40082
+              40082,
+              40078
             ],
             "text": [
               "Year: 1996<br />Entry_count: 50115<br />Gender: Female",
@@ -1312,7 +1335,8 @@
               "Year: 2019<br />Entry_count: 43888<br />Gender: Female",
               "Year: 2020<br />Entry_count: 45074<br />Gender: Female",
               "Year: 2021<br />Entry_count: 43062<br />Gender: Female",
-              "Year: 2022<br />Entry_count: 40082<br />Gender: Female"
+              "Year: 2022<br />Entry_count: 40082<br />Gender: Female",
+              "Year: 2023<br />Entry_count: 40078<br />Gender: Female"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -1358,7 +1382,8 @@
               3.3051363189436391,
               3.3053513694466239,
               3.3055663135153042,
-              3.3057811512549824
+              3.3057811512549824,
+              3.3059958827708047
             ],
             "y": [
               22429,
@@ -1387,7 +1412,8 @@
               14020,
               14357,
               13705,
-              13002
+              13002,
+              12943
             ],
             "text": [
               "Year: 1996<br />Entry_count: 22429<br />Gender: Male",
@@ -1416,7 +1442,8 @@
               "Year: 2019<br />Entry_count: 14020<br />Gender: Male",
               "Year: 2020<br />Entry_count: 14357<br />Gender: Male",
               "Year: 2021<br />Entry_count: 13705<br />Gender: Male",
-              "Year: 2022<br />Entry_count: 13002<br />Gender: Male"
+              "Year: 2022<br />Entry_count: 13002<br />Gender: Male",
+              "Year: 2023<br />Entry_count: 12943<br />Gender: Male"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -1458,7 +1485,7 @@
             "size": 15.940224159402243
           },
           "title": {
-            "text": " <br /> A level entry count<br /> Total English",
+            "text": " <br /> A level entry count:  Total English",
             "font": {
               "color": "rgba(0,0,0,1)",
               "family": "",
@@ -1476,8 +1503,8 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              3.2998795062361705,
-              3.3060621819701641
+              3.2998687696603795,
+              3.3062876500617775
             ],
             "tickmode": "array",
             "ticktext": [
@@ -1950,7 +1977,7 @@
         }
       ]
     },
-    "textHeadline": "The boxes display the latest provisional average grades in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general\n    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.\nThe chart shows the average point score from 2015/16 to 2022/23 for  All Institutions  in England. To view results, click on the drop-down box and select one institution type.",
+    "textHeadline": "The boxes display the latest provisional average results in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general\n    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.\n    Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.\n\n    The chart shows the APS from 2015/16 to 2022/23 for  All Institutions  in England. To view results, click on the drop-down box and select one institution type.",
     "textSubAll": "The line chart shows the A level exam entries for  Total English and Total Maths from   1996 to  2023  for  All students  in England. ",
     "textSubFm": "The line chart shows the A level  exam entries for female and male on  Total English  from  1996 to  2023  in England. "
   }
