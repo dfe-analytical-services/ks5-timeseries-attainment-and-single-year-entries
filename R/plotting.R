@@ -37,6 +37,7 @@
 # }
 
 
+
 createTimeSeriesHeadline <- function(dfAps, allAps) {
   fig <- dfAps %>%
     rename(Year = "year", APS = "aps", Qualification = "cert_type")
@@ -44,23 +45,12 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
   fig <- ggplot(
     fig, aes(x = Year, y = APS, group = Qualification, color = Qualification)
   ) +
-    # fig1<-ggplot(dfAps, aes(x=year_2013_2015, y=aps_2013_2015,
-    #                        color=fct_reorder2(school_type, year_2013_2015, aps_2013_2015))) +
-
-    # geom_col(aes(fill=cert_type), width=0.9, position=position_dodge())+
     geom_line(stat = "identity", linewidth = 1) +
     scale_color_manual(values = c("#12436D", "#28A197", "#801650")) +
     # scale_x_log10(breaks = seq(2016, 2023, 2)) +
     labs(x = "", y = "", color = "") +
-
-    # geom_text(aes(label=aps_grade, group=cert_type),  position=position_dodge(0.9), vjust=.5, hjust ="top",  size=5, color="black",  show.legend=F, angle=90)+
-
-    # ggtitle(paste0("\n Average point score and grade: \n ", allAps))+
     coord_cartesian(ylim = c(0, 60)) +
     scale_x_continuous(breaks = seq(2016, 2023, 1)) +
-    # scale_fill_manual(values =c('#12436D','#28A197','#801650'))+
-    # labs(x="", y="")+
-
     theme_classic() +
     theme(
       legend.position = "",
@@ -86,32 +76,10 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
     ) %>%
     layout(
       xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE),
-      legend = list(orientation = "h", x = .2, y = .3), #-.3),
+      legend = list(orientation = "h", x = .1, y = .2), #-.3),
       hovermode = "x"
     )
-
-  # return(fig)
-  # ggplotly(fig)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -121,6 +89,9 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
 
 createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
   validate(need(dfAps$school_type, message = "To view charts select type of students and up to 4 institution types from the drop-down menus at the top page"))
+
+  fig2 <- dfAps %>%
+    filter(year >= 2016)
 
 
   fig1 <- ggplot(dfAps, aes(x = year_2013_2015, y = aps_2013_2015, color = school_type)) +
@@ -150,7 +121,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
       axis.line = element_line(size = 1.0)
     )
 
-  fig2 <- ggplot(dfAps, aes(x = year_2016_2022, y = aps_2016_2022, color = school_type)) +
+  fig2 <- ggplot(fig2, aes(x = year_2016_2023, y = aps_2016_2023, color = school_type)) +
     geom_line(stat = "identity", linewidth = 1.5) +
     geom_curve(aes(x = 2016.5, y = 48, xend = 2016, yend = 45),
       curvature = .3,
@@ -167,8 +138,8 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
       arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
       color = "black", size = .05, angle = 90
     ) +
-    geom_label(aes(label = aps_grade_2016_2022, y = aps_2016_2022), show.legend = F) +
-    ggtitle(paste0("\n APS & grade 2015/16 to 2021/22 \n", allGender)) +
+    geom_label(aes(label = aps_grade_2016_2023, y = aps_2016_2023), show.legend = F) +
+    ggtitle(paste0("\n APS & grade 2015/16 to 2022/23:  ", allGender)) +
     coord_cartesian(ylim = c(10, 60)) +
     scale_y_continuous(limits = c(10, 60)) +
     scale_x_continuous(breaks = seq(2016, 2023, 1)) +
@@ -208,7 +179,7 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmGender) {
   validate(need(dfApsFm$school_type, message = "To view chart select between 1 and 4 institution types from the drop-down menu at the top page."))
 
   fmFig <- ggplot(dfApsFm, aes(
-    x = year, y = aps_2016_2022,
+    x = year, y = aps_2016_2023,
     color = school_type
   )) +
     geom_line(stat = "identity", linewidth = 1.5) +
@@ -222,8 +193,8 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmGender) {
       arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
       color = "black", size = .05, angle = 90
     ) +
-    geom_label(aes(label = aps_grade_2016_2022, y = aps_2016_2022), show.legend = F) +
-    ggtitle(paste0("Average point score and grade \n", fmGender)) +
+    geom_label(aes(label = aps_grade_2016_2023, y = aps_2016_2023), show.legend = F) +
+    ggtitle(paste0("Average point score and grade:  ", fmGender)) +
     coord_cartesian(ylim = c(10, 60)) +
     scale_x_continuous(breaks = seq(2016, 2023, 1)) +
     scale_colour_manual(
@@ -338,7 +309,7 @@ createTimeSeriesSubject <- function(dfSubjectA, subAll, subName) {
       axis.line = element_line(size = 1.0)
     ) +
     expand_limits(x = 0, y = 0) +
-    ggtitle(paste0("\nA level entry count:\n ", subAll))
+    ggtitle(paste0("\nA level entry count:  ", subAll))
   ggplotly(fig, tooltip = c("x", "y", "colour")) %>%
     config(
       modeBarButtons = list(list("toImage")), displaylogo = FALSE,
@@ -361,11 +332,13 @@ createTimeSeriesSubject <- function(dfSubjectA, subAll, subName) {
 createTimeSeriesResult <- function(dfSubjectA, subAll, resAll, subName) {
   validate(need(dfSubjectA$subject_name, message = "To view chart select type of students, select up to 4 subjects and start year from the drop-down menus at the top of the page.  Finally select cumulative grade"))
 
+
+
   fig <- dfSubjectA %>%
     rename(Year = "year", Subject = "subject_name")
 
 
-  fig <- ggplot(fig, aes_string(x = "Year", y = resAll, color = "Subject", shape = "Subject")) +
+  fig <- ggplot(fig, aes_string(x = "Year", y = resAll, color = "Subject")) +
     geom_line(stat = "identity", linewidth = 1, show.legend = F) +
     #   geom_point(stat= "identity", size=1.5, show.legend=F)+
     scale_x_log10(breaks = seq(1996, 2023, 2)) +
@@ -442,7 +415,7 @@ createTimeSeriesSubjectFm <- function(dfSubjectG, subByFm) {
       axis.line = element_line(size = 1.0)
     ) +
     expand_limits(x = 0, y = 0) +
-    ggtitle(paste0(" \n A level entry count\n ", subByFm))
+    ggtitle(paste0(" \n A level entry count:  ", subByFm))
 
   ggplotly(fig, tooltip = c("x", "y", "colour")) %>%
     config(
@@ -466,7 +439,7 @@ createTimeSeriesResultFm <- function(dfSubjectG, subByFm, resByFm) {
   fig <- dfSubjectG %>%
     rename(Year = "year", Subject = "subject_name", Gender = "characteristic_gender")
 
-  fig <- ggplot(fig, aes_string(x = "Year", y = resByFm, color = "Gender")) +
+  fig <- ggplot(fig, aes_string("Year", y = resByFm, color = "Gender")) +
     geom_line(stat = "identity", linewidth = 1) +
     # geom_point(size=1.5)+
     scale_color_manual(values = c("#3D3D3D", "#F46A25", "#12436D")) +
