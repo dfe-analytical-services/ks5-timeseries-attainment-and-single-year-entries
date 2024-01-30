@@ -5,7 +5,7 @@ homepage_panel <- function() {
       gov_row(
         column(
           12,
-          h1("16 to 18  time series attainment and single year entry dashboard"),
+          h1("16 to 18 time series attainment and single year entry dashboard"),
           br(),
           br()
         ),
@@ -40,8 +40,15 @@ homepage_panel <- function() {
                   p("The line charts display the yearly trend and grades for all students and by gender, while the female - male gender gap shows the difference in average point score.
                    To view and explore trend select up to four institution types from the drop-down menu at the top of the page."),
                   tags$div(
-                    title = "(A level subject entries and result by all",
+                    title = "(A level students entering maths and science by gender",
+                    h3(actionLink("link_to_alevelMathsScience_tab", "A level students entering maths and science by gender")),
+                    p("The line chart shows the yearly trend in the proportion of A level students entering maths and science  from 2009/10 to 2022/23 (end of 16-18 study). 
+                  Select one subject or combination from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available).")
+                    ),
+                  tags$div(
+                    title = "(A level subject entry and grade: comparison by subject",
                     h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and grade: Comparison by subject")),
+
                     p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2022/23.
                  Drop-down menus at the top of the page allows for the selection and comparison of up to four subjects
                   and cumulative grades.
@@ -49,9 +56,11 @@ homepage_panel <- function() {
                     p("The data refers to all entries by 16-18 year olds in the year stated (where 2023 means 2022/23 academic year).")
                   ),
                   tags$div(
-                    title = "(A level subject entry and result by gender",
+                    title = "A level subject entry and result: comparison by gender",
+
                     h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result: Comparison by gender")),
                     p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2022/23.
+
                   Select one subject from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available)."),
                     p(""), br(),
                     br(),
@@ -133,7 +142,7 @@ homepage_panel <- function() {
 dashboard_panel_aps <- function() {
   tabPanel(
     value = "dashboard",
-    "Attainment: APS per entry and average result",
+    "Attainment: APS per entry & average result (end of 16-18 study)",
 
     # Define UI for application that draws a histogram
 
@@ -200,7 +209,7 @@ dashboard_panel_aps <- function() {
                       inputId = "ees_1",
                       label = "Visit Explore Education Statistics",
                       icon = icon("table-cells"),
-                      onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",
+                      onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2022-23', '_blank')",
                       style = "width:100%;white-space:normal;"
                     )
                   ),
@@ -369,7 +378,9 @@ dashboard_panel_aps <- function() {
 dashboard_panel_sub_all <- function() {
   tabPanel(
     value = "dashboard_alse",
-    "A level subject entry and grade: comparison by subject",
+
+    "A level subject entry & grade: comparison by subject (single academic year)",
+
 
     # Define UI for application that draws a histogram
 
@@ -442,7 +453,7 @@ dashboard_panel_sub_all <- function() {
                   inputId = "ees_2a",
                   label = "Visit Explore Education Statistics",
                   icon = icon("table-cells"),
-                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",
+                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2022-23', '_blank')",
                   style = "width:100%;white-space:normal;"
                 )
               ),
@@ -567,7 +578,9 @@ dashboard_panel_sub_all <- function() {
 dashboard_panel_sub_fm <- function() {
   tabPanel(
     value = "dashboard_fm",
-    "A level subject entry and grade: comparison by gender",
+
+    "A level entry & result: comparison by gender (single academic year)",
+
 
     # Define UI for application that draws a histogram
 
@@ -629,7 +642,7 @@ dashboard_panel_sub_fm <- function() {
                   inputId = "ees_2b",
                   label = "Visit Explore Education Statistics",
                   icon = icon("table-cells"),
-                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2021-22', '_blank')",
+                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2022-23', '_blank')",
                   style = "width:100%;white-space:normal;"
                 )
               ),
@@ -742,3 +755,152 @@ dashboard_panel_sub_fm <- function() {
     )
   )
 }
+
+
+
+############## Maths and science #################
+
+dashboard_panel_ms <- function() {
+  tabPanel(
+    value = "dashboard_ms",
+    "A level maths & science: comparison by gender (end of 16-18 study)",
+    
+    # Define UI for application that draws a histogram
+    
+    # Sidebar with a slider input for number of bins
+    gov_main_layout(
+      gov_row(
+        column(
+          width = 12,
+          h2("A level maths and science entry (end of 16 to 18 study): comparison by gender, England from 2009/10 to 2022/23")
+        ),
+        column(
+          width = 12,
+          div(
+            class = "well",
+            style = "min-height: 100%; height: 100%; overflow-y: visible",
+            gov_row(
+              column(
+                width = 6,
+                
+                selectizeInput("subjectMs", "Select one subject or combination",
+                               choices = list(
+                                 `Single subject` = list(
+                                   "Biology", "Chemistry", "Computer science", "Further maths", "Maths",
+                                   "Physics"
+                                 ),
+                                 
+                                 `Combination` = list("One maths/science subject", "Two maths/science subjects",
+                                   "Three maths/science subjects", "Four maths/science subjects", "Zero maths/science subjects")), selected = c("Maths")
+                                   
+                )
+              ),
+              column(
+                width = 3,
+                selectInput(
+                  inputId = "year_start_ms",
+                  label = "Select start year",
+                  choices = seq(2010, latest_year, 1),
+                  selected = 2010
+                )
+              ),
+              column(
+                width = 3,
+                selectInput(
+                  inputId = "year_end_ms",
+                  label = " End year",
+                  choices = latest_year,
+                  # choices = seq(1996, latest_year, 1),
+                  selected = latest_year
+                )
+              ),
+              column(
+                width = 4,
+                p(strong("Download full dataset")),
+                downloadButton(
+                  outputId = "downloadDataSubjectMs",
+                  label = "Download data",
+                  icon = shiny::icon("download"),
+                  class = "downloadButton"
+                )
+              ),
+              column(
+                width = 4,
+                p(strong("For more tables and metadata")),
+                actionButton(
+                  inputId = "ees_3",
+                  label = "Visit Explore Education Statistics",
+                  icon = icon("table-cells"),
+                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2022-23', '_blank')",
+                  style = "width:100%;white-space:normal;"
+                )
+              ),
+              column(
+                width = 4,
+                p(strong("Reset chart selection")),
+                align = "right",
+                actionButton(inputId = "resetSubMs", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
+                )
+              
+              )
+          )
+        )
+     
+
+        ),
+        column(
+          width = 12,
+          tabsetPanel(
+            id = "tabsetpanel3",
+            tabPanel(
+              value = "alevelMsSubject",
+              "Maths and Science",
+              fluidRow(
+                column(
+                  width = 12,
+                  h3("A level maths and science: Comparison by gender"),
+                  textOutput("textSubMs"), br()
+                  # column(
+                  #   width = 6,
+                  #   paste("Download chart data:"), br(),
+                  #   downloadButton(
+                  #     outputId = "downloadSubMs",
+                  #     label = "Download data",
+                  #     icon = shiny::icon("download"),
+                  #     class = "downloadButton"
+                  #   )
+                  # )
+                ),
+                # valueBoxOutput("", width = 3),
+                # valueBoxOutput("boxapsGrade", width = 6),
+                box(
+                  width = 12,
+                  plotlyOutput("plotSubjectMs") %>% spinner()
+                  
+               
+                )
+              ),
+              
+              column(
+                width = 12,
+                # div(
+                #   class = "well",
+                #   style = "min-height: 100%; height: 100%; overflow-y: visible",
+                fluidRow(
+                  column(width = 12),
+                  p("Note: The number of students from 2009/10 to 2017/18 has been calculated from rounded data, so less precise than the number of students from 
+                2018/19 to 2022/23")
+                  
+                )
+              ),
+              
+              dataTableOutput("tabMs"),
+              
+            
+            )
+          )
+        )
+    )
+  )  
+}
+  

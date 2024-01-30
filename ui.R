@@ -115,6 +115,7 @@ ui <- function(input, output, session) {
       well = FALSE,
       homepage_panel(),
       dashboard_panel_aps(),
+      dashboard_panel_ms(),
       dashboard_panel_sub_all(),
       dashboard_panel_sub_fm(),
       flow_panel(),
