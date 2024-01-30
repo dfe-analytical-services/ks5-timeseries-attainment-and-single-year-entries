@@ -52,48 +52,6 @@
         "lattice"
       ]
     },
-    "R.cache": {
-      "Package": "R.cache",
-      "Version": "0.16.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "fe539ca3f8efb7410c3ae2cf5fe6c0f8",
-      "Requirements": [
-        "R.methodsS3",
-        "R.oo",
-        "R.utils",
-        "digest"
-      ]
-    },
-    "R.methodsS3": {
-      "Package": "R.methodsS3",
-      "Version": "1.8.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "278c286fd6e9e75d0c2e8f731ea445c8",
-      "Requirements": []
-    },
-    "R.oo": {
-      "Package": "R.oo",
-      "Version": "1.26.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "4fed809e53ddb5407b3da3d0f572e591",
-      "Requirements": [
-        "R.methodsS3"
-      ]
-    },
-    "R.utils": {
-      "Package": "R.utils",
-      "Version": "2.12.3",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "3dc2829b790254bfba21e60965787651",
-      "Requirements": [
-        "R.methodsS3",
-        "R.oo"
-      ]
-    },
     "R6": {
       "Package": "R6",
       "Version": "2.5.1",
@@ -360,23 +318,6 @@
         "R6",
         "cli",
         "rprojroot"
-      ]
-    },
-    "dfeshiny": {
-      "Package": "dfeshiny",
-      "Version": "0.1.1",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteUsername": "dfe-analytical-services",
-      "RemoteRepo": "dfeshiny",
-      "RemoteRef": "main",
-      "RemoteSha": "437c6e4c60b5eb9c1f55333588b65110d47b7ba2",
-      "RemoteHost": "api.github.com",
-      "Hash": "b3f1cac9ab18652447e842b04f702959",
-      "Requirements": [
-        "shiny",
-        "shinyGovstyle",
-        "styler"
       ]
     },
     "diffobj": {
@@ -829,10 +770,10 @@
     },
     "mgcv": {
       "Package": "mgcv",
-      "Version": "1.9-0",
+      "Version": "1.9-1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "086028ca0460d0c368028d3bda58f31b",
+      "Hash": "110ee9d83b496279960e162ac97764ce",
       "Requirements": [
         "Matrix",
         "nlme"
@@ -1394,23 +1335,6 @@
         "rlang",
         "stringi",
         "vctrs"
-      ]
-    },
-    "styler": {
-      "Package": "styler",
-      "Version": "1.10.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "d61238fd44fc63c8adf4565efe8eb682",
-      "Requirements": [
-        "R.cache",
-        "cli",
-        "magrittr",
-        "purrr",
-        "rlang",
-        "rprojroot",
-        "vctrs",
-        "withr"
       ]
     },
     "sys": {
