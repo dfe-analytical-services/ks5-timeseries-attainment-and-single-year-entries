@@ -13,7 +13,7 @@ shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
 # shhh(library(shinya11y))
 shhh(library(shinyjs))
-#shhh(library(tools))
+# shhh(library(tools))
 shhh(library(testthat))
 shhh(library(shinytest))
 shhh(library(shinydashboard))
@@ -33,7 +33,7 @@ shhh(library(hrbrthemes))
 shhh(library(forcats))
 shhh(library(patchwork))
 shhh(library(readr))
-#shhh(library(dfeshiny))
+# shhh(library(dfeshiny))
 
 
 # Functions ---------------------------------------------------------------------------------
@@ -178,11 +178,10 @@ dfAlevelAps <- data %>%
   ) %>%
   select(
     time_period, year, school_type, school_type_group, number_of_students, aps_2016_2023, aps_2013_2015, aps_grade_2016_2023, aps_grade_2013_2015,
-
-    characteristic_gender, time_period, year, year_2013_2015, version) %>%
-  
+    characteristic_gender, time_period, year, year_2013_2015, version
+  ) %>%
   mutate(
-     aps_grade_2016_2023 = as.factor(aps_grade_2016_2023),
+    aps_grade_2016_2023 = as.factor(aps_grade_2016_2023),
     aps_grade_2013_2015 = as.factor(aps_grade_2013_2015),
     aps_2016_2023 = round(as.numeric(aps_2016_2023), 2),
     aps_2013_2015 = round(as.numeric(aps_2013_2015), 2),
@@ -191,8 +190,8 @@ dfAlevelAps <- data %>%
     school_type_group = as.factor(school_type_group),
     version = as.factor(version),
     school_type = as.factor(recode(school_type,
-                                   "All schools and FE sector colleges" = "All Institutions",
-                                   "All state-funded schools and colleges" = "All state-funded"
+      "All schools and FE sector colleges" = "All Institutions",
+      "All state-funded schools and colleges" = "All state-funded"
     ))
   )
 
@@ -211,8 +210,8 @@ fmDiff <- dfApsGenderGap %>%
   mutate(
     gender_gap = round(as.numeric(gender_gap), 1),
     school_type = as.factor(recode(school_type,
-                                   "All schools and FE sector colleges" = "All Institutions",
-                                   "All state-funded schools and colleges" = "All state-funded"
+      "All schools and FE sector colleges" = "All Institutions",
+      "All state-funded schools and colleges" = "All state-funded"
     ))
   )
 
@@ -239,8 +238,8 @@ dfAttainment <- dfAttainmentRaw %>%
     version = as.factor(version),
     cert_type = as.factor(cert_type),
     school_type = as.factor(recode(school_type,
-                                   "All schools and FE sector colleges" = "All Institutions",
-                                   "All state-funded schools and colleges" = "All state-funded"
+      "All schools and FE sector colleges" = "All Institutions",
+      "All state-funded schools and colleges" = "All state-funded"
     )),
     cert_type = as.factor(recode(cert_type, "Alevel" = "A level"))
   ) %>%
@@ -255,10 +254,10 @@ dfAttainment <- dfAttainmentRaw %>%
 
 dfMsRaw <- read_all_ms_data()
 
-dfMs<-dfMsRaw%>%
-  mutate(subject=as.factor(subject),
-         characteristic_gender=as.factor(characteristic_gender),
-         version=as.factor(version))%>%
-  filter(!subject %in% c("Five Maths/Science subjects" , "Six Maths/Science subjects", "Total Students"))
-  
-  
+dfMs <- dfMsRaw %>%
+  mutate(
+    subject = as.factor(subject),
+    characteristic_gender = as.factor(characteristic_gender),
+    version = as.factor(version)
+  ) %>%
+  filter(!subject %in% c("Five Maths/Science subjects", "Six Maths/Science subjects", "Total Students"))
