@@ -178,10 +178,11 @@ dfAlevelAps <- data %>%
   ) %>%
   select(
     time_period, year, school_type, school_type_group, number_of_students, aps_2016_2023, aps_2013_2015, aps_grade_2016_2023, aps_grade_2013_2015,
-    characteristic_gender, time_period, year, year_2013_2015, version
-  ) %>%
+
+    characteristic_gender, time_period, year, year_2013_2015, version) %>%
+  
   mutate(
-    aps_grade_2016_2023 = as.factor(aps_grade_2016_2023),
+     aps_grade_2016_2023 = as.factor(aps_grade_2016_2023),
     aps_grade_2013_2015 = as.factor(aps_grade_2013_2015),
     aps_2016_2023 = round(as.numeric(aps_2016_2023), 2),
     aps_2013_2015 = round(as.numeric(aps_2013_2015), 2),

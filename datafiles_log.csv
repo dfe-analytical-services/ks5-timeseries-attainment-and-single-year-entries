@@ -4,3 +4,7 @@ all_attainment_with_rev2023.csv,unpublished
 all_alevel_timeseries_data_1996_to_2023rev.csv,unpublished
 aps_gender_gap_with_rev2023.csv,unpublished
 maths_science_2010_2023rev.csv,unpublished
+data/alevel_attainment_with_prov2023.csv,published
+data/all_alevel_timeseries_data_1996_to_2023.csv,published
+data/all_attainment_with_prov2023.csv,published
+data/aps_gender_gap_with_prov2023.csv,published

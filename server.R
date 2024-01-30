@@ -184,7 +184,7 @@ server <- function(input, output, session) {
       filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps_grade
 
     valueBox(
-      value = grade, subtitle = paste0("Average A level grade  equivalent to ", latest, " points:   ", input$headlineAps), # width = 12,
+      value = grade, subtitle = paste0("Average A level result  equivalent to ", latest, " points:   ", input$headlineAps), # width = 12,
       color = "blue"
     )
   })
@@ -198,7 +198,7 @@ server <- function(input, output, session) {
     grade <- (reactiveHeadline() %>%
       filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps_grade
     valueBox(
-      value = grade, subtitle = paste0("Average applied general grade equivalent to ", latest, "  points:   ", input$headlineAps),
+      value = grade, subtitle = paste0("Average applied general result equivalent to ", latest, "  points:   ", input$headlineAps),
       color = "blue"
     )
   })
@@ -212,7 +212,7 @@ server <- function(input, output, session) {
     grade <- (reactiveHeadline() %>%
       filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps_grade
     valueBox(
-      value = grade, subtitle = paste0("Average tech level grade equivalent to ", latest, "  points:   ", input$headlineAps),
+      value = grade, subtitle = paste0("Average tech level result equivalent to ", latest, "  points:   ", input$headlineAps),
       color = "blue"
     )
   })
@@ -432,9 +432,12 @@ server <- function(input, output, session) {
   output$textHeadline <- renderText({
     val <- paste(input$headlineAps, collapse = ",")
     # val1<-paste(input$allGender, collapse=", ")
+
     paste("The boxes display the latest revised average grades in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general
     and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
-The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
+    Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.
+
+    The chart shows the APS from 2015/16 to 2022/23 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
 ")
   })
 
@@ -507,7 +510,7 @@ The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in
   observeEvent(input$year_end, {
     updateSelectInput(session, "year_start",
       label = NULL,
-      choices = seq(1996, ifelse(input$year_end == 1996, 1996, as.integer(2018)), 1),
+      choices = seq(1996, ifelse(input$year_end == 1996, 1996, as.integer(2019)), 1),
       selected = input$year_start
     )
   })
@@ -566,7 +569,7 @@ The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in
   observeEvent(input$year_end_fm, {
     updateSelectInput(session, "year_start_fm",
       label = NULL,
-      choices = seq(1996, ifelse(input$year_end_fm == 1996, 1996, as.integer(2018)), 1),
+      choices = seq(1996, ifelse(input$year_end_fm == 1996, 1996, as.integer(2019)), 1),
       selected = input$year_start_fm
     )
   })
@@ -794,7 +797,7 @@ The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in
           `Characteristic gender` = characteristic_gender,
           `Number of students` = number_of_students,
           `APS per entry` = aps_2016_2023,
-          `APS per entry grade 2016-2023` = aps_grade_2016_2023,
+          `APS per entry grade` = aps_grade_2016_2023,
           `APS per entry 2013-2015` = aps_2013_2015,
           `APS per entry grade 2013-2015` = aps_grade_2013_2015,
           Version = version
@@ -1060,9 +1063,9 @@ The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in
   # Add input IDs here that are within the relevant drop down boxes to create dynamic text
   output$dropdown_label <- renderText({
     if (input$tabsetpanels == "headline") {
-      paste0("Click to download full headline dataset") # )input$downloadDataAps)
+      paste0("Click to download full dataset") # )input$downloadDataAps)
     } else {
-      paste0("Click to select institution types from the drop-down menu and further options") # input$alevelInstitute, )
+      paste0("Click to select up to 4 institution types from the drop-down menu and further options") # input$alevelInstitute, )
     }
   })
 

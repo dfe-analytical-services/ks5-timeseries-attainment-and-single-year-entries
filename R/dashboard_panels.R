@@ -39,16 +39,16 @@ homepage_panel <- function() {
                   h4("APS for A level by all & gender"),
                   p("The line charts display the yearly trend and grades for all students and by gender, while the female - male gender gap shows the difference in average point score.
                    To view and explore trend select up to four institution types from the drop-down menu at the top of the page."),
-                  
                   tags$div(
                     title = "(A level students entering maths and science by gender",
                     h3(actionLink("link_to_alevelMathsScience_tab", "A level students entering maths and science by gender")),
                     p("The line chart shows the yearly trend in the proportion of A level students entering maths and science  from 2009/10 to 2022/23 (end of 16-18 study). 
-                  Select one subject or combination from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available).")),
-                  
+                  Select one subject or combination from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available).")
+                    ),
                   tags$div(
-                    title = "(A level subject entry and result by all",
-                    h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and result by all")),
+                    title = "(A level subject entry and grade: comparison by subject",
+                    h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and grade: Comparison by subject")),
+
                     p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2022/23.
                  Drop-down menus at the top of the page allows for the selection and comparison of up to four subjects
                   and cumulative grades.
@@ -56,9 +56,11 @@ homepage_panel <- function() {
                     p("The data refers to all entries by 16-18 year olds in the year stated (where 2023 means 2022/23 academic year).")
                   ),
                   tags$div(
-                    title = "(A level subject entry and result by gender",
-                    h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result by gender")),
-                    p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female, male and all students from 1995/96 to 2022/23.
+                    title = "A level subject entry and result: comparison by gender",
+
+                    h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result: Comparison by gender")),
+                    p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2022/23.
+
                   Select one subject from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available)."),
                     p(""), br(),
                     br(),
@@ -231,14 +233,14 @@ dashboard_panel_aps <- function() {
               fluidRow(
                 column(
                   width = 12,
-                  h3(" 2023 Average result and time series for level 3 attainment, all students"),
+                  h3(" 2023 Average results and time series for level 3 attainment, all students"),
                   fluidRow(
                     valueBoxOutput("headBox1", width = 4),
-                    bsTooltip("headBox1", "Average A level result", placement = "top", trigger = "hover", options = NULL),
+                    bsTooltip("headBox1", "Average result - A level", placement = "top", trigger = "hover", options = NULL),
                     valueBoxOutput("headBox2", width = 4),
-                    bsTooltip("headBox2", "Average result, Applied general", placement = "top", trigger = "hover", options = NULL),
+                    bsTooltip("headBox2", "Average result - Applied general", placement = "top", trigger = "hover", options = NULL),
                     valueBoxOutput("headBox3", width = 4),
-                    bsTooltip("headBox3", "Average result, Tech Level", placement = "top", trigger = "hover", options = NULL)
+                    bsTooltip("headBox3", "Average result - Tech Level", placement = "top", trigger = "hover", options = NULL)
                   ),
                   column(
                     width = 9, textOutput("textHeadline")
@@ -376,7 +378,9 @@ dashboard_panel_aps <- function() {
 dashboard_panel_sub_all <- function() {
   tabPanel(
     value = "dashboard_alse",
-    "A level entry & result: comparison by subject (single academic year)",
+
+    "A level subject entry & grade: comparison by subject (single academic year)",
+
 
     # Define UI for application that draws a histogram
 
@@ -574,7 +578,9 @@ dashboard_panel_sub_all <- function() {
 dashboard_panel_sub_fm <- function() {
   tabPanel(
     value = "dashboard_fm",
+
     "A level entry & result: comparison by gender (single academic year)",
+
 
     # Define UI for application that draws a histogram
 
@@ -837,8 +843,8 @@ dashboard_panel_ms <- function() {
                 )
               
               )
-              )
-        ),
+          )
+        )
      
 
         ),
@@ -853,7 +859,7 @@ dashboard_panel_ms <- function() {
                 column(
                   width = 12,
                   h3("A level maths and science: Comparison by gender"),
-                  textOutput("textSubMs"), br(),
+                  textOutput("textSubMs"), br()
                   # column(
                   #   width = 6,
                   #   paste("Download chart data:"), br(),
@@ -869,7 +875,7 @@ dashboard_panel_ms <- function() {
                 # valueBoxOutput("boxapsGrade", width = 6),
                 box(
                   width = 12,
-                  plotlyOutput("plotSubjectMs") %>% spinner(),
+                  plotlyOutput("plotSubjectMs") %>% spinner()
                   
                
                 )
