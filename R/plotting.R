@@ -70,7 +70,7 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
       axis.text.x = element_text(angle = 300),
       axis.title.x = element_text(size = 10),
       axis.title.y = element_text(margin = margin(r = 12)),
-      axis.line = element_line(size = 1.0)
+      axis.line = element_line(linewidth =1.0)
     ) +
     expand_limits(x = 2016, y = 0) +
     ggtitle(paste0("\n Average point score:   ", allAps))
@@ -100,27 +100,13 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Joint plot function for  Alevel Aps from 2013
 
 createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
   validate(need(dfAps$school_type, message = "To view charts select type of students and up to 4 institution types from the drop-down menus at the top page"))
+  
+  fig2<-dfAps%>%
+    filter(year>=2016)
 
 
   fig1 <- ggplot(dfAps, aes(x = year_2013_2015, y = aps_2013_2015, color = school_type)) +
@@ -150,7 +136,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
       axis.line = element_line(size = 1.0)
     )
 
-  fig2 <- ggplot(dfAps, aes(x = year_2016_2022, y = aps_2016_2022, color = school_type)) +
+  fig2 <- ggplot(fig2, aes(x = year, y = aps_2016_2023, color = school_type)) +
     geom_line(stat = "identity", linewidth = 1.5) +
     geom_curve(aes(x = 2016.5, y = 48, xend = 2016, yend = 45),
       curvature = .3,
@@ -167,7 +153,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
       arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
       color = "black", size = .05, angle = 90
     ) +
-    geom_label(aes(label = aps_grade_2016_2022, y = aps_2016_2022), show.legend = F) +
+    geom_label(aes(label = aps_grade_2016_2023, y = aps_2016_2023), show.legend = F) +
     ggtitle(paste0("\n APS & grade 2015/16 to 2021/22 \n", allGender)) +
     coord_cartesian(ylim = c(10, 60)) +
     scale_y_continuous(limits = c(10, 60)) +
@@ -191,7 +177,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
       axis.title = element_text(size = 12),
       legend.text = element_text(size = 12),
       axis.text.x = element_text(angle = 300),
-      axis.line = element_line(size = 1.0)
+      axis.line = element_line(linewidth = 1.0)
     )
 
   finalFig <- (fig1 + fig2 + plot_layout(widths = c(0.7, 2)) &
@@ -208,7 +194,7 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmGender) {
   validate(need(dfApsFm$school_type, message = "To view chart select between 1 and 4 institution types from the drop-down menu at the top page."))
 
   fmFig <- ggplot(dfApsFm, aes(
-    x = year, y = aps_2016_2022,
+    x = year, y = aps_2016_2023,
     color = school_type
   )) +
     geom_line(stat = "identity", linewidth = 1.5) +
@@ -222,7 +208,7 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmGender) {
       arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
       color = "black", size = .05, angle = 90
     ) +
-    geom_label(aes(label = aps_grade_2016_2022, y = aps_2016_2022), show.legend = F) +
+    geom_label(aes(label = aps_grade_2016_2023, y = aps_2016_2023), show.legend = F) +
     ggtitle(paste0("Average point score and grade \n", fmGender)) +
     coord_cartesian(ylim = c(10, 60)) +
     scale_x_continuous(breaks = seq(2016, 2023, 1)) +
@@ -245,7 +231,7 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmGender) {
       axis.title = element_text(size = 12),
       legend.text = element_text(size = 12),
       axis.text.x = element_text(angle = 300),
-      axis.line = element_line(size = 1.0) +
+      axis.line = element_line(linewidth = 1.0) +
         expand_limits(x = 0, y = 0)
     )
   fmFig
@@ -283,7 +269,7 @@ createGenderGap <- function(dfApsGap, instGroup, instType) {
       axis.text.x = element_text(angle = 300),
       axis.title.x = element_blank(),
       axis.title.y = element_text(margin = margin(r = 10)),
-      axis.line = element_line(size = 1.0)
+      axis.line = element_line(linewidth = 1.0)
     )
   ggplotly(fig, tooltip = c("x", "y", "colour")) %>%
     config(
@@ -335,7 +321,7 @@ createTimeSeriesSubject <- function(dfSubjectA, subAll, subName) {
       axis.text.x = element_text(angle = 300),
       axis.title.x = element_blank(),
       axis.title.y = element_text(margin = margin(r = 10)),
-      axis.line = element_line(size = 1.0)
+      axis.line = element_line(linewidth = 1.0)
     ) +
     expand_limits(x = 0, y = 0) +
     ggtitle(paste0("\nA level entry count:\n ", subAll))
@@ -384,7 +370,7 @@ createTimeSeriesResult <- function(dfSubjectA, subAll, resAll, subName) {
       axis.text.x = element_text(angle = 300),
       axis.title.x = element_blank(),
       axis.title.y = element_text(margin = margin(r = 10)),
-      axis.line = element_line(size = 1.0)
+      axis.line = element_line(linewidth = 1.0)
     ) +
     expand_limits(x = 0, y = 0) +
     ggtitle(paste0("\nA level cumulative percentage: ", resAll, "\n", subAll))
@@ -439,7 +425,7 @@ createTimeSeriesSubjectFm <- function(dfSubjectG, subByFm) {
       axis.text.x = element_text(angle = 300),
       axis.title.x = element_text(size = 10),
       axis.title.y = element_text(margin = margin(r = 12)),
-      axis.line = element_line(size = 1.0)
+      axis.line = element_line(linewidth = 1.0)
     ) +
     expand_limits(x = 0, y = 0) +
     ggtitle(paste0(" \n A level entry count\n ", subByFm))
@@ -499,3 +485,58 @@ createTimeSeriesResultFm <- function(dfSubjectG, subByFm, resByFm) {
       hovermode = "x"
     )
 }
+
+
+############################ Plot maths and science  ###############################################
+
+createTimeSeriesSubjectMs <- function(dfSubjectMs, subByMs) {
+  validate(need(dfSubjectMs$subject, message = "To view chart select one subject and a start year from the drop-down menus at the top of the page."))
+  
+  
+  fig <- dfSubjectMs %>%
+    rename(Year = "year", Percent = "percent_entered", Subject = "subject", Gender = "characteristic_gender")
+  fig <- ggplot(
+    fig, aes(
+      x = Year, y = Percent,
+      color = Gender
+    )
+  ) +
+    geom_line(stat = "identity", linewidth = 1) +
+    # geom_point(size=1.5)+
+    scale_x_log10(breaks = seq(2010, 2023, 1)) +
+    scale_y_continuous(labels = scales::comma) +
+    scale_color_manual(
+      # breaks = (dfSubjectG$charateristic_gender),
+      values = c("#3D3D3D", "#F46A25", "#12436D")
+    ) +
+    labs(x = "", y = "", color = "") +
+    theme_classic() +
+    theme(
+      legend.position = "",
+      text = element_text(size = 12),
+      legend.title = element_blank(),
+      plot.title = element_text(size = 10),
+      axis.text.x = element_text(angle = 300),
+      axis.title.x = element_text(size = 10),
+      axis.title.y = element_text(margin = margin(r = 12)),
+      axis.line = element_line(linewidth = 1.0)
+    ) +
+    expand_limits(x = 0, y = 0) +
+    ggtitle(paste0(" \n A level percent entry: " , subByMs))
+  
+  ggplotly(fig, tooltip = c("x", "y", "colour")) %>%
+    config(
+      modeBarButtonsToRemove = c(
+        "zoom2d", "zoomIn2d", "zoomOut2d", "pan2d", "autoScale2d",
+        "resetScale2d", "hoverCompareCartesian", "drawrect", "select2d", "lasso2d",
+        "hoverClosestCartesian", "toggleSpikelines"
+      ), displaylogo = FALSE,
+      toImageButtonOptions = list(format = "svg", filename = "subjectMs_image")
+    ) %>%
+    layout(
+      xaxis = list(fixedrange = TRUE), yaxis = list(fixedrange = TRUE),
+      legend = list(orientation = "h", x = .2, y = -.3),
+      hovermode = "x"
+    )
+}
+
