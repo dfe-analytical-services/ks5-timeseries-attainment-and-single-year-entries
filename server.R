@@ -395,8 +395,8 @@ server <- function(input, output, session) {
         `Institution type` = school_type,
         `Characteristic gender` = characteristic_gender,
         `Number of students` = number_of_students,
-        `APS per entry` = aps_2016_2022,
-        `APS per entry grade` = aps_grade_2016_2022,
+        `APS per entry` = aps_2016_2023,
+        `APS per entry grade` = aps_grade_2016_2023,
         Version = version
       )
   })
@@ -432,7 +432,7 @@ server <- function(input, output, session) {
   output$textHeadline <- renderText({
     val <- paste(input$headlineAps, collapse = ",")
     # val1<-paste(input$allGender, collapse=", ")
-    paste("The boxes display the latest provisional average grades in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general
+    paste("The boxes display the latest revised average grades in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general
     and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
 The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
 ")
@@ -535,11 +535,11 @@ The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in
 
 
   reactiveSubjectFm <- reactive({
-    subjNameFm <- subjectByGender
+    subjNameFm <- subjectByGender #dfMs
 
     subjNameFm <- subset(
       subjNameFm,
-      subject_name == input$subjectFm &
+      subject_name == input$subjectFm & #subjectMs
 
         between(year, as.numeric(input$year_start_fm), as.numeric(input$year_end_fm))
     )
@@ -615,8 +615,8 @@ The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in
     val2 <- paste(input$year_end_fm, collapse = ", ")
 
     paste(
-      "The line chart shows the A level  exam entries for female and male on ", val, " from ", val1, "to ", val2,
-      " in England. "
+      "The line chart shows the A level  exam entries on ", val, " from ", val1, "to ", val2,
+      " for female, male and all students in England. "
     )
   })
 
@@ -627,8 +627,8 @@ The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in
     val2 <- paste(input$year_end_fm, collapse = ", ")
 
     paste(
-      "The line chart shows the A level cumulative percentage grades for female and male on ", val, "\n from ", val1, " to ", val2,
-      " in England.  The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
+      "The line chart shows the A level cumulative percentage grades on ", val, "\n from ", val1, " to ", val2,
+      " for female, male and all students in England.  The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
           awarded in 2019/20 and 2020/21 respectively."
     )
   })
@@ -793,8 +793,8 @@ The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in
           `Institution type` = school_type,
           `Characteristic gender` = characteristic_gender,
           `Number of students` = number_of_students,
-          `APS per entry` = aps_2016_2022,
-          `APS per entry grade 2016-2023` = aps_grade_2016_2022,
+          `APS per entry` = aps_2016_2023,
+          `APS per entry grade 2016-2023` = aps_grade_2016_2023,
           `APS per entry 2013-2015` = aps_2013_2015,
           `APS per entry grade 2013-2015` = aps_grade_2013_2015,
           Version = version
@@ -837,6 +837,190 @@ The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in
   })
 
 
+  
+  
+  #######  Maths and science
+  
+  
+  reactiveSubjectMs <- reactive({
+    subjNameMs <- dfMs
+    
+    subjNameMs <- subset(
+      subjNameMs,
+      subject == input$subjectMs & #subjectMs
+        
+        between(year, as.numeric(input$year_start_ms), as.numeric(input$year_end_ms))
+    )
+    
+    subjNameMs
+  })
+  
+  output$plotSubjectMs <- renderPlotly({
+    createTimeSeriesSubjectMs(reactiveSubjectMs(),
+                              subByMs = input$subjectMs
+    )
+  })
+  
+ 
+  # observeEvent(input$year_start_fm, {updateSelectInput(session, "year_end_fm", label = NULL,
+  #                                                   choices = seq(ifelse(input$year_start_fm == latest_year, latest_year, as.numeric(input$year_start_fm)), latest_year, 1),
+  #                                                   selected = input$year_end_fm) })
+  observeEvent(input$year_end_ms, {
+    updateSelectInput(session, "year_start_ms",
+                      label = NULL,
+                      choices = seq(2010, ifelse(input$year_end_ms == 2010, 2010, as.integer(2018)), 1),
+                      selected = input$year_start_ms
+    )
+  })
+  
+  observeEvent(input$resetSubMs, {
+    updateSelectInput(session, "subjectMs", selected = "Maths")
+    updateSelectInput(session, "year_start_ms", selected = 2010)
+    updateSelectInput(session, "year_end_ms", selected = latest_year)
+    
+  })
+  
+  
+  
+  output$textSubMs <- renderText({
+    val <- paste(input$subjectMs, collapse = ",")
+    val1 <- paste(input$year_start_ms, collapse = ", ")
+    val2 <- paste(input$year_end_ms, collapse = ", ")
+    
+    paste(
+      "The line chart shows the proportion of A level students that entered   ", val, " from ", val1, "to ", val2, "for female, male and all students in England."
+     
+    )
+  })
+  
+  
+  
+  # 
+  # output$textResFm <- renderText({
+  #   val <- paste(input$subjectFm, collapse = ", ")
+  #   val1 <- paste(input$year_start_fm, collapse = ", ")
+  #   val2 <- paste(input$year_end_fm, collapse = ", ")
+  #   
+  #   paste(
+  #     "The line chart shows the A level cumulative percentage grades for female and male on ", val, "\n from ", val1, " to ", val2,
+  #     " in England.  The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
+  #         awarded in 2019/20 and 2020/21 respectively."
+  #   )
+  # })
+  # 
+  
+  
+  # Download selected subjects
+  
+  
+  
+  
+  
+  
+  
+  # Download  subject entry and cumulative result for all subject from top panel
+  
+ 
+  
+  output$downloadDataSubjectMs <- downloadHandler(
+    filename = "alevel_maths_science_data.csv",
+    content = function(file) {
+      data <- dfMsRaw
+      write.csv(data, file, row.names = FALSE)
+    }
+  )
+  
+  
+  
+  # Download  selected subject entries by gender
+  selectedSubMs <- reactive({
+    subjName <- dfMs %>%
+      select(
+        year, time_period, subject,
+        characteristic_gender, percent_entered, number_of_students, version
+      )
+    subjName <- subset(
+      subjName,
+      subject_name == input$subjectMs &
+        
+        between(year, as.numeric(input$year_start_ms), as.numeric(input$year_end_ms))
+    )
+    
+    subjName
+  })
+  
+  
+  
+  selectedMsData <- reactive({
+    msData <- dfMs
+    msData <- subset(
+      msData,
+      subject == input$subjectMs) %>%
+      select(
+        Year = year,
+        `Time period` = time_period,
+        `Characteristic gender` = characteristic_gender,
+        Subject = subject,
+        `Proportion of students` = percent_entered,
+        `Number of students` = number_of_students,
+        Version = version)
+      
+  })
+  
+  
+  output$tabMs <- renderDataTable({
+    datatable(selectedMsData(),
+              extens = "Buttons",
+              options = (
+                list(
+                  infor = F, paging = F,
+                  searching = F,
+                  stripClasses = F,
+                  lengthChange = F,
+                  scrollY = "260px",
+                  scrollX = T,
+                  scrollCollapse = T,
+                  dom = "Bfrtip",
+                  buttons = (c("copy", "csv", "excel")),
+                  class = "display"
+                )),
+              rownames = FALSE
+    )
+  })
+  
+
+  
+  # 
+  # 
+  # output$resall <- renderDataTable({
+  #   datatable(selected_subAll(),
+  #             options = list(
+  #               infor = T, paging = F,
+  #               searching = F,
+  #               stripClasses = F,
+  #               lengthChange = F,
+  #               scrollY = "260px",
+  #               scrollX = T,
+  #               scrollCollapse = T,
+  #               rownames = FALSE,
+  #               autoWidth = TRUE,
+  #               server = TRUE
+  #             )
+  #   )
+  # })
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
@@ -853,6 +1037,10 @@ The chart shows the average point score from 2015/16 to 2022/23 for ", val, " in
 
   observeEvent(input$link_to_alevelAllSubject_tab, {
     updateTabsetPanel(session, "navlistPanel", selected = "dashboard_alse")
+  })
+  
+  observeEvent(input$link_to_alevelMathsScience_tab, {
+    updateTabsetPanel(session, "navlistPanel", selected = "dashboard_ms")
   })
 
 
