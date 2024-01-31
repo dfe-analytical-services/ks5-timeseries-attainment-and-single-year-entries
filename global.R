@@ -11,7 +11,7 @@
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
-# shhh(library(shinya11y))
+#shhh(library(shinya11y))
 shhh(library(shinyjs))
 # shhh(library(tools))
 shhh(library(testthat))
@@ -29,7 +29,6 @@ shhh(library(plotly))
 shhh(library(DT))
 shhh(library(xfun))
 shhh(library(hrbrthemes))
-# shhh(library(gridExtra))
 shhh(library(forcats))
 shhh(library(patchwork))
 shhh(library(readr))
@@ -250,14 +249,14 @@ dfAttainment <- dfAttainmentRaw %>%
 
 #############################################################################################################
 # Maths Science attainment
-
-
-dfMsRaw <- read_all_ms_data()
-
-dfMs <- dfMsRaw %>%
-  mutate(
-    subject = as.factor(subject),
-    characteristic_gender = as.factor(characteristic_gender),
-    version = as.factor(version)
-  ) %>%
-  filter(!subject %in% c("Five Maths/Science subjects", "Six Maths/Science subjects", "Total Students"))
+# 
+# 
+# dfMsRaw <- read_all_ms_data()
+# 
+# dfMs <- dfMsRaw %>%
+#   mutate(
+#     subject = as.factor(subject),
+#     characteristic_gender = as.factor(characteristic_gender),
+#     version = as.factor(version)
+#   ) %>%
+#   filter(!subject %in% c("Five Maths/Science subjects", "Six Maths/Science subjects", "Total Students"))
