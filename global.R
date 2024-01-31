@@ -11,7 +11,7 @@
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
-#shhh(library(shinya11y))
+# shhh(library(shinya11y))
 shhh(library(shinyjs))
 # shhh(library(tools))
 shhh(library(testthat))
@@ -32,7 +32,7 @@ shhh(library(hrbrthemes))
 shhh(library(forcats))
 shhh(library(patchwork))
 shhh(library(readr))
-# shhh(library(dfeshiny))
+shhh(library(dfeshiny))
 
 
 # Functions ---------------------------------------------------------------------------------
@@ -249,10 +249,10 @@ dfAttainment <- dfAttainmentRaw %>%
 
 #############################################################################################################
 # Maths Science attainment
-# 
-# 
+#
+#
 # dfMsRaw <- read_all_ms_data()
-# 
+#
 # dfMs <- dfMsRaw %>%
 #   mutate(
 #     subject = as.factor(subject),
