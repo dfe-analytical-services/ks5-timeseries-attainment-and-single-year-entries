@@ -28,7 +28,7 @@ homepage_panel <- function() {
                   title = "",
                   br(),
                   p("This dashboard allows users to explore time series data for 16 to 18 qualifications in England.
-                    It brings together figures compiled from the current and previous versions of the <U+2018>A level and other 16 to 18 results<U+2019> statistical release with focus on:")
+                    It brings together figures compiled from the current and previous versions of the (A level and other 16 to 18 results) statistical release with focus on:")
                 ),
                 tags$div(
                   title = "Headline attainment and A level time series by institution type",
@@ -47,7 +47,7 @@ homepage_panel <- function() {
                   ),
                   tags$div(
                     title = "(A level subject entry and grade: comparison by subject",
-                    h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and grade: Comparison by subject")),
+                    h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and grade: comparison by subject")),
                     p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2022/23.
                  Drop-down menus at the top of the page allows for the selection and comparison of up to four subjects
                   and cumulative grades.
@@ -56,7 +56,7 @@ homepage_panel <- function() {
                   ),
                   tags$div(
                     title = "A level subject entry and result: comparison by gender",
-                    h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result: Comparison by gender")),
+                    h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result: comparison by gender")),
                     p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2022/23.
 
                   Select one subject from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available)."),
@@ -575,7 +575,7 @@ dashboard_panel_sub_all <- function() {
 dashboard_panel_sub_fm <- function() {
   tabPanel(
     value = "dashboard_fm",
-    "A level entry & result: comparison by gender (single academic year)",
+    "A level subject entry & result: comparison by gender (single academic year)",
 
 
     # Define UI for application that draws a histogram
@@ -585,7 +585,7 @@ dashboard_panel_sub_fm <- function() {
       gov_row(
         column(
           width = 12,
-          h2("A level single entry and grade distribution: comparison by gender, England from 1995/96 to 2022/23")
+          h2("A level subject entry and grade distribution: comparison by gender, England from 1995/96 to 2022/23")
         ),
         column(
           width = 12,
@@ -853,19 +853,7 @@ dashboard_panel_ms <- function() {
                 width = 12,
                 h3("A level maths and science: Comparison by gender"),
                 textOutput("textSubMs"), br()
-                # column(
-                #   width = 6,
-                #   paste("Download chart data:"), br(),
-                #   downloadButton(
-                #     outputId = "downloadSubMs",
-                #     label = "Download data",
-                #     icon = shiny::icon("download"),
-                #     class = "downloadButton"
-                #   )
-                # )
               ),
-              # valueBoxOutput("", width = 3),
-              # valueBoxOutput("boxapsGrade", width = 6),
               box(
                 width = 12,
                 plotlyOutput("plotSubjectMs") %>% spinner()
@@ -873,9 +861,6 @@ dashboard_panel_ms <- function() {
             ),
             column(
               width = 12,
-              # div(
-              #   class = "well",
-              #   style = "min-height: 100%; height: 100%; overflow-y: visible",
               fluidRow(
                 column(width = 12),
                 p("Note: The number of students from 2009/10 to 2017/18 has been calculated from rounded data, so less precise than the number of students from
