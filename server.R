@@ -953,7 +953,8 @@ server <- function(input, output, session) {
 
 
   selectedMsData <- reactive({
-    msData <- dfMs
+    # msData <- dfMs
+    msData <- reactiveSubjectMs()
     msData <- subset(
       msData,
       subject == input$subjectMs
@@ -1052,7 +1053,7 @@ server <- function(input, output, session) {
     filename = "attainment_data.csv",
     content = function(file) {
       if (input$tabsetpanels == "headline") {
-        write.csv(dfAttainmentRaw, file, row.names = FALSE)
+        write.csv(dfAttainment, file, row.names = FALSE)
       } else {
         write.csv(dfAlevelAps, file, row.names = FALSE)
       }

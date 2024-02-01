@@ -27,10 +27,10 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
       axis.text.x = element_text(angle = 300),
       axis.title.x = element_text(size = 10),
       axis.title.y = element_text(margin = margin(r = 12)),
-      axis.line = element_line(linewidth =1.0)
+      axis.line = element_line(linewidth = 1.0)
     ) +
     expand_limits(x = 2016, y = 0) +
-    ggtitle(paste0("\n Average point score:   ", allAps))
+    ggtitle(paste0("\n Average point score (All students) :   ", allAps))
 
   ggplotly(fig, tooltip = c("x", "y", "colour")) %>%
     config(
@@ -55,9 +55,9 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
 
 createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
   validate(need(dfAps$school_type, message = "To view charts select type of students and up to 4 institution types from the drop-down menus at the top page"))
-  
-  fig2<-dfAps%>%
-    filter(year>=2016)
+
+  fig2 <- dfAps %>%
+    filter(year >= 2016)
 
 
   fig1 <- ggplot(dfAps, aes(x = year_2013_2015, y = aps_2013_2015, color = school_type)) +
@@ -79,8 +79,8 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
     theme_classic() +
     theme(
       legend.position = "none",
-      text = element_text(size = 12),
-      axis.text = element_text(size = 12),
+      text = element_text(size = 14),
+      axis.text = element_text(size = 14),
       axis.text.x = element_text(angle = 300),
       axis.title.x = element_blank(),
       axis.title.y = element_blank(),
@@ -106,9 +106,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
       color = "black", size = .05, angle = 90
     ) +
     geom_label(aes(label = aps_grade_2016_2023, y = aps_2016_2023), show.legend = F) +
-
     ggtitle(paste0("\n APS & grade 2015/16 to 2022/23:  ", allGender)) +
-
     coord_cartesian(ylim = c(10, 60)) +
     scale_y_continuous(limits = c(10, 60)) +
     scale_x_continuous(breaks = seq(2016, 2023, 1)) +
@@ -127,7 +125,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
       legend.position = c(.7, .15),
       legend.title = element_blank(),
       text = element_text(size = 12),
-      axis.text = element_text(size = 12),
+      axis.text = element_text(size = 14),
       axis.title = element_text(size = 12),
       legend.text = element_text(size = 12),
       axis.text.x = element_text(angle = 300),
@@ -163,9 +161,7 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmGender) {
       color = "black", size = .05, angle = 90
     ) +
     geom_label(aes(label = aps_grade_2016_2023, y = aps_2016_2023), show.legend = F) +
-
     ggtitle(paste0("Average point score and grade:  ", fmGender)) +
-
     coord_cartesian(ylim = c(10, 60)) +
     scale_x_continuous(breaks = seq(2016, 2023, 1)) +
     scale_colour_manual(
@@ -183,7 +179,7 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmGender) {
       legend.direction = "vertical",
       legend.title = element_blank(),
       text = element_text(size = 12),
-      axis.text = element_text(size = 12),
+      axis.text = element_text(size = 14),
       axis.title = element_text(size = 12),
       legend.text = element_text(size = 12),
       axis.text.x = element_text(angle = 300),
@@ -449,8 +445,8 @@ createTimeSeriesResultFm <- function(dfSubjectG, subByFm, resByFm) {
 
 createTimeSeriesSubjectMs <- function(dfSubjectMs, subByMs) {
   validate(need(dfSubjectMs$subject, message = "To view chart select one subject and a start year from the drop-down menus at the top of the page."))
-  
-  
+
+
   fig <- dfSubjectMs %>%
     rename(Year = "year", Percent = "percent_entered", Subject = "subject", Gender = "characteristic_gender")
   fig <- ggplot(
@@ -480,8 +476,8 @@ createTimeSeriesSubjectMs <- function(dfSubjectMs, subByMs) {
       axis.line = element_line(linewidth = 1.0)
     ) +
     expand_limits(x = 0, y = 0) +
-    ggtitle(paste0(" \n A level percent entry: " , subByMs))
-  
+    ggtitle(paste0(" \n A level percent entry: ", subByMs))
+
   ggplotly(fig, tooltip = c("x", "y", "colour")) %>%
     config(
       modeBarButtonsToRemove = c(
@@ -497,4 +493,3 @@ createTimeSeriesSubjectMs <- function(dfSubjectMs, subByMs) {
       hovermode = "x"
     )
 }
-
