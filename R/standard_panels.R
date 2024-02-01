@@ -19,14 +19,17 @@ a11y_panel <- function() {
           )),
           h2("Limitations"),
           br("We recognise that there are still potential issues with accessibility in this application, but we will continue
-             to review updates to technology available to us to keep improving accessibility for all of our users.For
+             to review updates to technology available to us to keep improving accessibility for all of our users. For
              example, these are known issues that we will continue to monitor and improve:"),
           tags$li("Keyboard navigation through the interactive charts is currently limited, and some features are unavailable for keyboard only users"),
           tags$li("Line colours on charts may not line up with the legends. "),
           h2("Feedback"),
           br(
             "If you have any feedback on how we could further improve the accessibility of this application, please contact us at",
-            a(href = "mailto:attainment.statistics@education.gov.uk", "attainment.statistics@education.gov.uk")
+            a(href = "mailto:attainment.statistics@education.gov.uk", "attainment.statistics@education.gov.uk"), " or through our ", a(
+              href = "https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-R8br5kOJwpKmQ9sOpVastBUNk1QNlJJR09PRTVDR1BMTlI4OVJINkpDNy4u",
+              "feedback form", .noWS = c("after")
+            ), ".", br(),
           )
         )
       )

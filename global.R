@@ -13,7 +13,7 @@ shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
 # shhh(library(shinya11y))
 shhh(library(shinyjs))
-shhh(library(tools))
+# shhh(library(tools))
 shhh(library(testthat))
 shhh(library(shinytest))
 shhh(library(shinydashboard))
@@ -29,7 +29,6 @@ shhh(library(plotly))
 shhh(library(DT))
 shhh(library(xfun))
 shhh(library(hrbrthemes))
-# shhh(library(gridExtra))
 shhh(library(forcats))
 shhh(library(patchwork))
 shhh(library(readr))
@@ -169,6 +168,7 @@ homeEconomics <- dfAlevelSubject %>%
 # Read in  A level aggregate APS and grade by institution type
 
 
+
 data <- read_alevel_aps_data()
 dfAlevelAps <- data %>%
   rename(
@@ -177,10 +177,9 @@ dfAlevelAps <- data %>%
   ) %>%
   select(
     time_period, year, school_type, school_type_group, number_of_students, aps_2016_2023, aps_2013_2015, aps_grade_2016_2023, aps_grade_2013_2015,
-    characteristic_gender, time_period, year_2016_2023, year_2013_2015, version
+    characteristic_gender, time_period, year, year_2013_2015, version
   ) %>%
   mutate(
-    year_2016_2023 = year,
     aps_grade_2016_2023 = as.factor(aps_grade_2016_2023),
     aps_grade_2013_2015 = as.factor(aps_grade_2013_2015),
     aps_2016_2023 = round(as.numeric(aps_2016_2023), 2),
@@ -246,3 +245,18 @@ dfAttainment <- dfAttainmentRaw %>%
   group_by(school_type, cert_type) %>%
   arrange(desc(year), .by_group = TRUE) %>%
   ungroup()
+
+
+#############################################################################################################
+# Maths Science attainment
+#
+#
+dfMsRaw <- read_all_ms_data()
+
+dfMs <- dfMsRaw %>%
+  mutate(
+    subject = as.factor(subject),
+    characteristic_gender = as.factor(characteristic_gender),
+    version = as.factor(version)
+  ) %>%
+  filter(!subject %in% c("Five Maths/Science subjects", "Six Maths/Science subjects", "Total Students"))
