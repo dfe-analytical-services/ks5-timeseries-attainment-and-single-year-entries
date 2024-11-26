@@ -11,7 +11,7 @@
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
-# shhh(library(shinya11y))
+#shhh(library(shinya11y))
 shhh(library(shinyjs))
 # shhh(library(tools))
 shhh(library(testthat))
@@ -33,6 +33,7 @@ shhh(library(forcats))
 shhh(library(patchwork))
 shhh(library(readr))
 shhh(library(dfeshiny))
+
 
 
 # Functions ---------------------------------------------------------------------------------
@@ -115,7 +116,7 @@ source("R/read_data.R")
 # Create new column for thousand entries
 
 
-latest_year <- 2023
+latest_year <- 2024  # this is mainly used by A level subject entries and Maths and Science to allow selection of year
 
 dfAlevelSubjectRaw <- read_alevel_subject_data()
 
@@ -123,13 +124,13 @@ dfAlevelSubjectRaw <- read_alevel_subject_data()
 
 dfAlevelSubject <- dfAlevelSubjectRaw %>%
   rename(
-    characteristic_gender = "characteristic_value", `A*` = "perc_astar_grade_achieved",
+    characteristic_value = "characteristic_value", `A*` = "perc_astar_grade_achieved",
     `A*-A` = "perc_astar_a_grade_achieved",
     `A*-B` = "perc_astar_b_grade_achieved", `A*-C` = "perc_astar_c_grade_achieved",
     `A*-D` = "perc_astar_d_grade_achieved", `A*-E` = "perc_astar_e_grade_achieved", version = "data_version"
   ) %>%
   select(
-    time_period, year, subject_name, characteristic_gender, `A*-A`,
+    time_period, year, subject_name, characteristic_value, `A*-A`,
     `A*-B`, `A*-C`, `A*-D`, `A*-E`, entry_count, version
   ) %>%
   mutate(
@@ -141,25 +142,25 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
     `A*-D` = as.numeric(`A*-D`),
     `A*-E` = as.numeric(`A*-E`),
     subject_name = as.factor(subject_name),
-    characteristic_gender = as.factor(characteristic_gender),
+    characteristic_value = as.factor(characteristic_value),
     version = as.factor(version)
   )
 
 
 subjectByAll <- dfAlevelSubject %>%
-  group_by(subject_name, characteristic_gender) %>%
+  group_by(subject_name, characteristic_value) %>%
   arrange(year, .by_group = TRUE) %>%
   filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics"), n() > 8) %>%
   ungroup()
 
 # Filter out female and male
 
-subjectByGender <- subjectByAll # %>%
-# filter(characteristic_gender != "All students")
+subjectBySex <- subjectByAll # %>%
+# filter(characteristic_sex != "All students")
 
 # Filter home economics for all students
 homeEconomics <- dfAlevelSubject %>%
-  filter(subject_name == "Home economics" & characteristic_gender == "All students")
+  filter(subject_name == "Home economics" & characteristic_value == "All students")
 
 
 #####################################################################################################
@@ -172,44 +173,44 @@ homeEconomics <- dfAlevelSubject %>%
 data <- read_alevel_aps_data()
 dfAlevelAps <- data %>%
   rename(
-    aps_2016_2023 = "aps_per_entry", aps_grade_2016_2023 = "aps_per_entry_grade", aps_2013_2015 = "aps_per_entry_2013_2015",
+    aps_2016_2024 = "aps_per_entry", aps_grade_2016_2024 = "aps_per_entry_grade", aps_2013_2015 = "aps_per_entry_2013_2015",
     aps_grade_2013_2015 = "aps_per_entry_grade_2013_2015"
   ) %>%
   select(
-    time_period, year, school_type, school_type_group, number_of_students, aps_2016_2023, aps_2013_2015, aps_grade_2016_2023, aps_grade_2013_2015,
-    characteristic_gender, time_period, year, year_2013_2015, version
+    time_period, year, establishment_type, establishment_type_group, number_of_students, aps_2016_2024, aps_2013_2015, aps_grade_2016_2024, aps_grade_2013_2015,
+    characteristic_sex, time_period, year, year_2013_2015, version
   ) %>%
   mutate(
-    aps_grade_2016_2023 = as.factor(aps_grade_2016_2023),
+    aps_grade_2016_2024 = as.factor(aps_grade_2016_2024),
     aps_grade_2013_2015 = as.factor(aps_grade_2013_2015),
-    aps_2016_2023 = round(as.numeric(aps_2016_2023), 2),
+    aps_2016_2024 = round(as.numeric(aps_2016_2024), 2),
     aps_2013_2015 = round(as.numeric(aps_2013_2015), 2),
-    characteristic_gender = as.factor(characteristic_gender),
-    school_type = as.factor(school_type),
-    school_type_group = as.factor(school_type_group),
+    characteristic_sex = as.factor(characteristic_sex),
+    establishment_type = as.factor(establishment_type),
+    establishment_type_group = as.factor(establishment_type_group),
     version = as.factor(version),
-    school_type = as.factor(recode(school_type,
-      "All schools and FE sector colleges" = "All Institutions",
+    establishment_type = as.factor(recode(establishment_type,
+    #  "All schools and FE sector colleges" = "All institutions",
       "All state-funded schools and colleges" = "All state-funded"
     ))
   )
 
-# choicesSchool_type_group <- unique(dfAlevelAps$school_type_group)
-# choicesSchool_type <- unique(dfAlevelAps$school_type_type)
-# choicesGender <- unique(dfAlevelAps$characteristic_gender)
+# choicesestablishment_type_group <- unique(dfAlevelAps$establishment_type_group)
+# choicesestablishment_type <- unique(dfAlevelAps$establishment_type_type)
+# choicessex <- unique(dfAlevelAps$characteristic_sex)
 
 
-# Create gender gap between female and male using long width
-# Expect similar result on gender gap column for female an male
+# Create sex gap between female and male using long width
+# Expect similar result on sex gap column for female an male
 # Use data from 2015/16
 
 
-dfApsGenderGap <- read_alevel_aps_gendergap_data()
-fmDiff <- dfApsGenderGap %>%
+dfApsSexGap <- read_alevel_aps_sexgap_data()  
+fmDiff <- dfApsSexGap %>%
   mutate(
-    gender_gap = round(as.numeric(gender_gap), 1),
-    school_type = as.factor(recode(school_type,
-      "All schools and FE sector colleges" = "All Institutions",
+    sex_gap = round(as.numeric(sex_gap), 1),
+    establishment_type = as.factor(recode(establishment_type,
+    #  "All schools and FE sector colleges" = "All institutions",
       "All state-funded schools and colleges" = "All state-funded"
     ))
   )
@@ -225,24 +226,24 @@ dfAttainmentRaw <- read_all_attainment_data()
 
 # Select  all students and data to factors and numeric
 dfAttainment <- dfAttainmentRaw %>%
-  filter(characteristic_gender == "All students") %>%
+  filter(characteristic_sex == "All students") %>%
   mutate(
-    school_type = as.factor(school_type),
-    school_type_group = as.factor(school_type_group),
+    establishment_type = as.factor(establishment_type),
+    establishment_type_group = as.factor(establishment_type_group),
     number_of_students = as.integer(number_of_students),
     aps = as.numeric(aps),
     aps = round(aps, 2),
     aps_grade = as.factor(aps_grade),
-    characteristic_gender = as.factor(characteristic_gender),
+    characteristic_sex = as.factor(characteristic_sex),
     version = as.factor(version),
     cert_type = as.factor(cert_type),
-    school_type = as.factor(recode(school_type,
-      "All schools and FE sector colleges" = "All Institutions",
+    establishment_type = as.factor(recode(establishment_type,
+      #"All schools and FE sector colleges" = "All Institutions",
       "All state-funded schools and colleges" = "All state-funded"
     )),
     cert_type = as.factor(recode(cert_type, "Alevel" = "A level"))
   ) %>%
-  group_by(school_type, cert_type) %>%
+  group_by(establishment_type, cert_type) %>%
   arrange(desc(year), .by_group = TRUE) %>%
   ungroup()
 
@@ -256,7 +257,7 @@ dfMsRaw <- read_all_ms_data()
 dfMs <- dfMsRaw %>%
   mutate(
     subject = as.factor(subject),
-    characteristic_gender = as.factor(characteristic_gender),
+    characteristic_value = as.factor(characteristic_value),
     version = as.factor(version)
   ) %>%
   filter(!subject %in% c("Five Maths/Science subjects", "Six Maths/Science subjects", "Total Students"))
