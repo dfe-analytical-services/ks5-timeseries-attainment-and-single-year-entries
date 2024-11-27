@@ -17,7 +17,7 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
     # scale_x_log10(breaks = seq(2016, 2023, 2)) +
     labs(x = "", y = "", color = "") +
     coord_cartesian(ylim = c(0, 60)) +
-    scale_x_continuous(breaks = seq(2016, 2023, 1)) +
+    scale_x_continuous(breaks = seq(2016, 2024, 1)) +
     theme_classic() +
     theme(
       legend.position = "",
@@ -53,14 +53,14 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
 
 # Joint plot function for  Alevel Aps from 2013
 
-createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
-  validate(need(dfAps$school_type, message = "To view charts select type of students and up to 4 institution types from the drop-down menus at the top page"))
+createApsTimeSeries <- function(dfAps, instGroup, instType, allSex) {
+  validate(need(dfAps$establishment_type, message = "To view charts select type of students and up to 4 institution types from the drop-down menus at the top page"))
 
   fig2 <- dfAps %>%
     filter(year >= 2016)
 
 
-  fig1 <- ggplot(dfAps, aes(x = year_2013_2015, y = aps_2013_2015, color = school_type)) +
+  fig1 <- ggplot(dfAps, aes(x = year_2013_2015, y = aps_2013_2015, color = establishment_type)) +
     geom_line(stat = "identity", linewidth = 1.5) +
     geom_curve(aes(x = 2015.5, y = 50, xend = 2015, yend = 45),
       arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
@@ -73,7 +73,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
     scale_x_continuous(breaks = seq(2013, 2015, 1)) +
     scale_colour_manual(
       "",
-      breaks = unique(dfAps$school_type),
+      breaks = unique(dfAps$establishment_type),
       values = gss_colour_pallette
     ) +
     theme_classic() +
@@ -88,7 +88,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
     )
 
 
-  fig2 <- ggplot(fig2, aes(x = year, y = aps_2016_2023, color = school_type)) +
+  fig2 <- ggplot(fig2, aes(x = year, y = aps_2016_2024, color = establishment_type)) +
     geom_line(stat = "identity", linewidth = 1.5) +
     geom_curve(aes(x = 2016.5, y = 48, xend = 2016, yend = 45),
       curvature = .3,
@@ -105,14 +105,14 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
       arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
       color = "black", size = .05, angle = 90
     ) +
-    geom_label(aes(label = aps_grade_2016_2023, y = aps_2016_2023), show.legend = F) +
-    ggtitle(paste0("\n APS & grade 2015/16 to 2022/23:  ", allGender)) +
+    geom_label(aes(label = aps_grade_2016_2024, y = aps_2016_2024), show.legend = F) +
+    ggtitle(paste0("\n APS & grade 2015/16 to 2023/24:  ", allSex)) +
     coord_cartesian(ylim = c(10, 60)) +
     scale_y_continuous(limits = c(10, 60)) +
-    scale_x_continuous(breaks = seq(2016, 2023, 1)) +
+    scale_x_continuous(breaks = seq(2016, 2024, 1)) +
     scale_colour_manual(
       "",
-      breaks = unique(dfAps$school_type),
+      breaks = unique(dfAps$establishment_type),
       values = gss_colour_pallette
     ) +
     labs(x = "", y = "", color = "") +
@@ -133,21 +133,21 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allGender) {
     )
 
   finalFig <- (fig1 + fig2 + plot_layout(widths = c(0.7, 2)) &
-    ggtitle(paste0("APS and grade \n", allGender)))
+    ggtitle(paste0("APS and grade \n", allSex)))
 
   return(finalFig)
 }
 
 
-################################################## Plot function for APS by gender and gender gap ##################################
+################################################## Plot function for APS by sex and sex gap ##################################
 
 
-createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmGender) {
-  validate(need(dfApsFm$school_type, message = "To view chart select between 1 and 4 institution types from the drop-down menu at the top page."))
+createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmSex) {
+  validate(need(dfApsFm$establishment_type, message = "To view chart select between 1 and 4 institution types from the drop-down menu at the top page."))
 
   fmFig <- ggplot(dfApsFm, aes(
-    x = year, y = aps_2016_2023,
-    color = school_type
+    x = year, y = aps_2016_2024,
+    color = establishment_type
   )) +
     geom_line(stat = "identity", linewidth = 1.5) +
     geom_curve(aes(x = 2019.5, y = 53, xend = 2020, yend = 50),
@@ -160,13 +160,13 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmGender) {
       arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
       color = "black", size = .05, angle = 90
     ) +
-    geom_label(aes(label = aps_grade_2016_2023, y = aps_2016_2023), show.legend = F) +
-    ggtitle(paste0("Average point score and grade:  ", fmGender)) +
+    geom_label(aes(label = aps_grade_2016_2024, y = aps_2016_2024), show.legend = F) +
+    ggtitle(paste0("Average point score and grade:  ", fmSex)) +
     coord_cartesian(ylim = c(10, 60)) +
-    scale_x_continuous(breaks = seq(2016, 2023, 1)) +
+    scale_x_continuous(breaks = seq(2016, 2024, 1)) +
     scale_colour_manual(
-      # "school type",
-      breaks = unique(dfApsFm$school_type),
+      # "establishment type",
+      breaks = unique(dfApsFm$establishment_type),
       values = gss_colour_pallette
     ) +
     labs(x = "", y = "", color = "") +
@@ -191,28 +191,28 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmGender) {
 
 
 
-createGenderGap <- function(dfApsGap, instGroup, instType) {
-  validate(need(dfApsGap$school_type, message = "To view chart select between 1 and 4 institution types from the drop-down menu at the top page."))
+createSexGap <- function(dfApsGap, instGroup, instType) {
+  validate(need(dfApsGap$establishment_type, message = "To view chart select between 1 and 4 institution types from the drop-down menu at the top page."))
 
   fig <- dfApsGap %>%
-    rename(Year = "year", Gender_gap = "gender_gap", Institution_type = "school_type")
+    rename(Year = "year", Sex_gap = "sex_gap", Institution_type = "establishment_type")
 
   fig <- ggplot(fig, aes(
     x = Year,
-    y = Gender_gap,
+    y = Sex_gap,
     color = Institution_type
   )) +
     geom_line(stat = "identity", linewidth = 1) +
-    scale_x_continuous(breaks = seq(2016, 2023, 1)) +
+    scale_x_continuous(breaks = seq(2016, 2024, 1)) +
     scale_y_continuous(labels = scales::comma) +
     scale_colour_manual(
-      # "school type",
-      # breaks = unique(dfApsGap$school_type),
+      # "establishment type",
+      # breaks = unique(dfApsGap$establishment_type),
       values = gss_colour_pallette
     ) +
     labs(x = "", y = "", color = "") +
     geom_hline(yintercept = 0, linetype = "dot", col = "navy") +
-    ggtitle(paste0("\nFemale-male average points difference (gender gap)")) +
+    ggtitle(paste0("\nFemale-male average points difference (Sex gap)")) +
     theme_classic() +
     theme( # legend.position ="bottom",
       text = element_text(size = 12),
@@ -260,7 +260,7 @@ createTimeSeriesSubject <- function(dfSubjectA, subAll, subName) {
     geom_line(stat = "identity", linewidth = 1) +
     # geom_point(stat="identity", size=1.5, show.legend=F)+
 
-    scale_x_log10(breaks = seq(1996, 2023, 2)) +
+    scale_x_log10(breaks = seq(1996, 2024, 2)) +
     scale_y_continuous(labels = scales::comma) +
     scale_colour_manual(
       values = gss_colour_pallette
@@ -308,7 +308,7 @@ createTimeSeriesResult <- function(dfSubjectA, subAll, resAll, subName) {
   fig <- ggplot(fig, aes_string(x = "Year", y = resAll, color = "Subject")) +
     geom_line(stat = "identity", linewidth = 1, show.legend = F) +
     #   geom_point(stat= "identity", size=1.5, show.legend=F)+
-    scale_x_log10(breaks = seq(1996, 2023, 2)) +
+    scale_x_log10(breaks = seq(1996, 2024, 2)) +
     scale_y_continuous(labels = scales::comma) +
     scale_colour_manual(
       # breaks = unique(dfSubjectA$Subject),
@@ -347,26 +347,26 @@ createTimeSeriesResult <- function(dfSubjectA, subAll, resAll, subName) {
 
 
 
-############################################# Plot for subject entries and results A level gender #####################################################
+############################################# Plot for subject entries and results A level sex #####################################################
 
 createTimeSeriesSubjectFm <- function(dfSubjectG, subByFm) {
   validate(need(dfSubjectG$subject_name, message = "To view chart select one subject and a start year from the drop-down menus at the top of the page."))
 
 
   fig <- dfSubjectG %>%
-    rename(Year = "year", Entry_count = "entry_count", Subject = "subject_name", Gender = "characteristic_gender")
+    rename(Year = "year", Entry_count = "entry_count", Subject = "subject_name", Sex = "characteristic_value")
   fig <- ggplot(
     fig, aes(
       x = Year, y = Entry_count,
-      color = Gender
+      color = Sex
     )
   ) +
     geom_line(stat = "identity", linewidth = 1) +
     # geom_point(size=1.5)+
-    scale_x_log10(breaks = seq(1996, 2023, 2)) +
+    scale_x_log10(breaks = seq(1996, 2024, 2)) +
     scale_y_continuous(labels = scales::comma) +
     scale_color_manual(
-      # breaks = (dfSubjectG$charateristic_gender),
+      # breaks = (dfSubjectG$charateristic_sex),
       values = c("#3D3D3D", "#F46A25", "#12436D")
     ) +
     labs(x = "", y = "", color = "") +
@@ -404,13 +404,13 @@ createTimeSeriesSubjectFm <- function(dfSubjectG, subByFm) {
 createTimeSeriesResultFm <- function(dfSubjectG, subByFm, resByFm) {
   validate(need(dfSubjectG$subject_name, message = " To view chart select one subject and a start year from the drop-down menus and finally select cumulative grade"))
   fig <- dfSubjectG %>%
-    rename(Year = "year", Subject = "subject_name", Gender = "characteristic_gender")
+    rename(Year = "year", Subject = "subject_name", Sex = "characteristic_value")
 
-  fig <- ggplot(fig, aes_string("Year", y = resByFm, color = "Gender")) +
+  fig <- ggplot(fig, aes_string("Year", y = resByFm, color = "Sex")) +
     geom_line(stat = "identity", linewidth = 1) +
     # geom_point(size=1.5)+
     scale_color_manual(values = c("#3D3D3D", "#F46A25", "#12436D")) +
-    scale_x_log10(breaks = seq(1996, 2023, 2)) +
+    scale_x_log10(breaks = seq(1996, 2024, 2)) +
     labs(x = "", y = "", color = "") +
     theme_classic() +
     annotate("rect", xmin = 2020, xmax = 2021, ymin = 5, ymax = 100, alpha = .2) +
@@ -448,19 +448,19 @@ createTimeSeriesSubjectMs <- function(dfSubjectMs, subByMs) {
 
 
   fig <- dfSubjectMs %>%
-    rename(Year = "year", Percent = "percent_entered", Subject = "subject", Gender = "characteristic_gender")
+    rename(Year = "year", Percent = "percent_entered", Subject = "subject", Sex = "characteristic_value")
   fig <- ggplot(
     fig, aes(
       x = Year, y = Percent,
-      color = Gender
+      color = Sex
     )
   ) +
     geom_line(stat = "identity", linewidth = 1) +
     # geom_point(size=1.5)+
-    scale_x_log10(breaks = seq(2010, 2023, 1)) +
+    scale_x_log10(breaks = seq(2010, 2024, 1)) +
     scale_y_continuous(labels = scales::comma) +
     scale_color_manual(
-      # breaks = (dfSubjectG$charateristic_gender),
+      # breaks = (dfSubjectG$charateristic_sex),
       values = c("#3D3D3D", "#F46A25", "#12436D")
     ) +
     labs(x = "", y = "", color = "") +

@@ -1,6 +1,12 @@
 homepage_panel <- function() {
   tabPanel(
     "Homepage",
+    modalDialog(
+      title = "Missing data",
+      "The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.",
+      size = "l",
+      easyClose = FALSE
+    ),
     gov_main_layout(
       gov_row(
         column(
@@ -9,6 +15,7 @@ homepage_panel <- function() {
           br(),
           br()
         ),
+
 
         ## Left panel -------------------------------------------------------
 
@@ -33,31 +40,31 @@ homepage_panel <- function() {
                 tags$div(
                   title = "Headline attainment and A level time series by institution type",
                   h3(actionLink("link_to_headline_tab", "Headline attainment and A level result by institution type")),
-                  p("The headline boxes show the latest average result for A level, applied general and tech level qualifications for all students.  The chart shows the yearly trend from 2015/16 to 2022/23.  "),
-                  p("The year in tables/charts is the academic year in which students completed 16-18 study (i.e. 2023 means 2022/23). 16-18 study normally lasts either 2 or 3 years and attainment accounts for all entries during that period."),
+                  p(" The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication."),
+                  p("The year in tables/charts is the academic year in which students completed 16-18 study (i.e. 2024 means 2023/24). 16-18 study normally lasts either 2 or 3 years and attainment accounts for all entries during that period."),
                   p("Drop-down box within the chart area allows for selection of one institution type.  To view latest results and trend, click on the drop-down box and  select institution type required."),
-                  h4("APS for A level by all & gender"),
-                  p("The line charts display the yearly trend and grades for all students and by gender, while the female - male gender gap shows the difference in average point score.
+                  h4("APS for A level by all & sex"),
+                  p("The line charts display the yearly trend and grades for all students and by sex, while the female - male sex gap shows the difference in average point score.
                    To view and explore trend select up to four institution types from the drop-down menu at the top of the page."),
                   tags$div(
-                    title = "(A level students entering maths and science by gender",
-                    h3(actionLink("link_to_alevelMathsScience_tab", "A level students entering maths and science by gender")),
-                    p("The line chart shows the yearly trend in the proportion of A level students entering maths and science  from 2009/10 to 2022/23 (end of 16-18 study).
+                    title = "(A level students entering maths and science by sex",
+                    h3(actionLink("link_to_alevelMathsScience_tab", "A level students entering maths and science by sex")),
+                    p("The line chart shows the yearly trend in the proportion of A level students entering maths and science  from 2009/10 to 2023/24 (end of 16-18 study).
                   Select one subject or combination from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available).")
                   ),
                   tags$div(
                     title = "(A level subject entry and grade: comparison by subject",
                     h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and grade: comparison by subject")),
-                    p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2022/23.
+                    p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2023/24.
                  Drop-down menus at the top of the page allows for the selection and comparison of up to four subjects
                   and cumulative grades.
                     "),
-                    p("The data refers to all entries by 16-18 year olds in the year stated (where 2023 means 2022/23 academic year).")
+                    p("The data refers to all entries by 16-18 year olds in the year stated (where 2024 means 2023/24 academic year).")
                   ),
                   tags$div(
-                    title = "A level subject entry and result: comparison by gender",
-                    h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result: comparison by gender")),
-                    p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2022/23.
+                    title = "A level subject entry and result: comparison by sex",
+                    h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result: comparison by sex")),
+                    p("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2023/24.
 
                   Select one subject from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available)."),
                     p(""), br(),
@@ -116,7 +123,7 @@ homepage_panel <- function() {
                   title = "A level subject entry and cumulative grade",
                   h3("A level subject entry and cumulative grade"),
                   p("The subject entries and cumulative grades covered on the dashboard are based on
-                  subjects grouped from 1995/96 to 2022/23. More detailed breakdowns of some subjects from 2015/16
+                  subjects grouped from 1995/96 to 2023/24. More detailed breakdowns of some subjects from 2015/16
                   are available via the full dataset download  button at the top of the page."),
                   h4("Subject definitions"),
                   p("Total English covers English literature, English language, English language and literature. "),
@@ -125,7 +132,7 @@ homepage_panel <- function() {
                   p("Total Classical studies covers Latin, Greek, Classical civilisation, and Other classical studies"),
                   p("STEM subjects cover Biology, Chemistry, Physics, Total maths, Further mathematics and Computer science. "),
                   p("Total Music includes Music and Music technology."),
-                  p("The data refers to all entries by 16-18 year olds in the year stated (where 2023 means 2022/23 academic year).")
+                  p("The data refers to all entries by 16-18 year olds in the year stated (where 2024 means 2023/24 academic year).")
                 )
               )
             )
@@ -163,9 +170,9 @@ dashboard_panel_aps <- function() {
                   column(
                     width = 3,
                     selectizeInput(
-                      inputId = "allGender",
+                      inputId = "allSex",
                       label = "Select students",
-                      choices = unique(dfAlevelAps$characteristic_gender) %>%
+                      choices = unique(dfAlevelAps$characteristic_sex) %>%
                         sort(), selected = "All students"
                     )
                   ),
@@ -174,7 +181,7 @@ dashboard_panel_aps <- function() {
                     selectizeInput("alevelInstitute", "Select up to 4 institution types",
                       choices = list(
                         `Institution types` = c(
-                          "All Institutions", "All FE sector colleges", "All independent schools", "All schools", "All state-funded",
+                          "All institutions", "All FE sector colleges", "All independent schools", "All schools", "All state-funded",
                           "All state-funded schools"
                         ),
                         `All FE sector colleges` = c("Other FE sector colleges", "Sixth form colleges"),
@@ -207,7 +214,7 @@ dashboard_panel_aps <- function() {
                       inputId = "ees_1",
                       label = "Visit Explore Education Statistics",
                       icon = icon("table-cells"),
-                      onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2022-23', '_blank')",
+                      onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2023-24', '_blank')",
                       style = "width:100%;white-space:normal;"
                     )
                   ),
@@ -231,14 +238,14 @@ dashboard_panel_aps <- function() {
               fluidRow(
                 column(
                   width = 12,
-                  h3(" 2023 Average results and time series for level 3 attainment, all students"),
+                  h3(" 2024 Average results and time series for level 3 attainment, all students"),
                   fluidRow(
-                    valueBoxOutput("headBox1", width = 4),
-                    bsTooltip("headBox1", "Average result - A level", placement = "top", trigger = "hover", options = NULL),
-                    valueBoxOutput("headBox2", width = 4),
-                    bsTooltip("headBox2", "Average result - Applied general", placement = "top", trigger = "hover", options = NULL),
-                    valueBoxOutput("headBox3", width = 4),
-                    bsTooltip("headBox3", "Average result - Tech Level", placement = "top", trigger = "hover", options = NULL)
+                    valueBoxOutput("headBox1", width = 12),
+                    bsTooltip("headBox1", "Average result - A level", placement = "top", trigger = "hover", options = NULL)
+                    # valueBoxOutput("headBox2", width = 4),
+                    # bsTooltip("headBox2", "Average result - Applied general", placement = "top", trigger = "hover", options = NULL),
+                    # valueBoxOutput("headBox3", width = 4),
+                    # bsTooltip("headBox3", "Average result - Tech Level", placement = "top", trigger = "hover", options = NULL)
                   ),
                   column(
                     width = 9, textOutput("textHeadline")
@@ -254,7 +261,7 @@ dashboard_panel_aps <- function() {
                           selectInput(
                             inputId = "headlineAps",
                             "Select institution type",
-                            choices = sort(unique(dfAttainment$school_type)), selected = c("All Institutions")
+                            choices = sort(unique(dfAttainment$establishment_type)), selected = c("All Institutions")
                           )
                         )
                       )
@@ -300,12 +307,12 @@ dashboard_panel_aps <- function() {
               #
             ),
             tabPanel(
-              "A level APS gender gap",
+              "A level APS sex gap",
               value = "ggap",
               fluidRow(
                 column(
                   width = 12,
-                  h3("A level female - male average points difference by institution type from 2015/16 to 2022/23 in England"),
+                  h3("A level female - male average points difference by institution type from 2015/16 to 2023/24 in England"),
                   textOutput("textGgap"),
 
                   # htmlOutput("boxapsAlevel", width = 2),
@@ -317,7 +324,7 @@ dashboard_panel_aps <- function() {
               )
             ),
             tabPanel(
-              "A level APS by gender",
+              "A level APS by sex",
               value = "alevel_fm",
               fluidRow(
                 column(
@@ -386,7 +393,7 @@ dashboard_panel_sub_all <- function() {
       gov_row(
         column(
           width = 12,
-          h2("A level single entry and grade distribution:  Comparison by subject, England from 1995/96 to 2022/23")
+          h2("A level single entry and grade distribution:  Comparison by subject, England from 1995/96 to 2023/24")
         ),
         column(
           width = 12,
@@ -399,7 +406,7 @@ dashboard_panel_sub_all <- function() {
                 selectInput(
                   inputId = "subByAll",
                   label = "Select students",
-                  choices = unique(subjectByAll$characteristic_gender) %>%
+                  choices = unique(subjectByAll$characteristic_value) %>%
                     sort(), selected = "All students"
                 )
               ),
@@ -450,7 +457,7 @@ dashboard_panel_sub_all <- function() {
                   inputId = "ees_2a",
                   label = "Visit Explore Education Statistics",
                   icon = icon("table-cells"),
-                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2022-23', '_blank')",
+                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2023-24', '_blank')",
                   style = "width:100%;white-space:normal;"
                 )
               ),
@@ -575,7 +582,7 @@ dashboard_panel_sub_all <- function() {
 dashboard_panel_sub_fm <- function() {
   tabPanel(
     value = "dashboard_fm",
-    "A level subject entry & result: comparison by gender (single academic year)",
+    "A level subject entry & result: comparison by sex (single academic year)",
 
 
     # Define UI for application that draws a histogram
@@ -585,7 +592,7 @@ dashboard_panel_sub_fm <- function() {
       gov_row(
         column(
           width = 12,
-          h2("A level subject entry and grade distribution: comparison by gender, England from 1995/96 to 2022/23")
+          h2("A level subject entry and grade distribution: comparison by sex, England from 1995/96 to 2023/24")
         ),
         column(
           width = 12,
@@ -597,7 +604,7 @@ dashboard_panel_sub_fm <- function() {
                 width = 6,
                 selectizeInput(
                   inputId = "subjectFm", label = "Select a subject:",
-                  choices = sort(unique(subjectByGender$subject_name)),
+                  choices = sort(unique(subjectBySex$subject_name)),
                   multiple = F,
                   selected = c("Total English")
                 )
@@ -638,7 +645,7 @@ dashboard_panel_sub_fm <- function() {
                   inputId = "ees_2b",
                   label = "Visit Explore Education Statistics",
                   icon = icon("table-cells"),
-                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2022-23', '_blank')",
+                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2023-24', '_blank')",
                   style = "width:100%;white-space:normal;"
                 )
               ),
@@ -657,11 +664,11 @@ dashboard_panel_sub_fm <- function() {
             id = "tabsetpanels2b",
             tabPanel(
               value = "alevelFmSubject",
-              "Subject entries by gender",
+              "Subject entries by sex",
               fluidRow(
                 column(
                   width = 12,
-                  h3("A level subject: Comparison by gender"),
+                  h3("A level subject: Comparison by sex"),
                   textOutput("textSubFm"), br(),
                   column(
                     width = 6,
@@ -690,11 +697,11 @@ dashboard_panel_sub_fm <- function() {
               )
             ),
             tabPanel(
-              "Cumulative results by gender",
+              "Cumulative results by sex",
               fluidRow(
                 column(
                   width = 9,
-                  h3("A level cumulative percentage grade by subject and gender"),
+                  h3("A level cumulative percentage grade by subject and sex"),
                   textOutput("textResFm")
                 ),
                 column(
@@ -759,7 +766,7 @@ dashboard_panel_sub_fm <- function() {
 dashboard_panel_ms <- function() {
   tabPanel(
     value = "dashboard_ms",
-    "A level maths & science: comparison by gender (end of 16-18 study)",
+    "A level maths & science: comparison by sex (end of 16-18 study)",
 
     # Define UI for application that draws a histogram
 
@@ -768,7 +775,7 @@ dashboard_panel_ms <- function() {
       gov_row(
         column(
           width = 12,
-          h2("A level maths and science entry (end of 16 to 18 study): comparison by gender, England from 2009/10 to 2022/23")
+          h2("A level maths and science entry (end of 16 to 18 study): comparison by sex, England from 2009/10 to 2023/24")
         ),
         column(
           width = 12,
@@ -827,7 +834,7 @@ dashboard_panel_ms <- function() {
                   inputId = "ees_3",
                   label = "Visit Explore Education Statistics",
                   icon = icon("table-cells"),
-                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2022-23', '_blank')",
+                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2023-24', '_blank')",
                   style = "width:100%;white-space:normal;"
                 )
               ),
@@ -851,7 +858,7 @@ dashboard_panel_ms <- function() {
             fluidRow(
               column(
                 width = 12,
-                h3("A level maths and science: Comparison by gender"),
+                h3("A level maths and science: Comparison by sex"),
                 textOutput("textSubMs"), br()
               ),
               box(
@@ -864,10 +871,10 @@ dashboard_panel_ms <- function() {
               fluidRow(
                 column(width = 12),
                 p("Note: The number of students from 2009/10 to 2017/18 has been calculated from rounded data, so less precise than the number of students from
-                2018/19 to 2022/23")
+                2018/19 to 2023/24")
               )
             ),
-            dataTableOutput("tabMs"),
+            dataTableOutput("tabMs")
           )
         )
       )

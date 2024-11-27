@@ -11,7 +11,7 @@
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
-#shhh(library(shinya11y))
+# shhh(library(shinya11y))
 shhh(library(shinyjs))
 # shhh(library(tools))
 shhh(library(testthat))
@@ -76,6 +76,7 @@ spinner <- function(output) {
 
 
 
+
 # Source scripts ---------------------------------------------------------------------------------
 
 # Source any scripts here. Scripts may be needed to process data before it gets to the server file.
@@ -116,7 +117,7 @@ source("R/read_data.R")
 # Create new column for thousand entries
 
 
-latest_year <- 2024  # this is mainly used by A level subject entries and Maths and Science to allow selection of year
+latest_year <- 2024 # this is mainly used by A level subject entries and Maths and Science to allow selection of year
 
 dfAlevelSubjectRaw <- read_alevel_subject_data()
 
@@ -190,7 +191,7 @@ dfAlevelAps <- data %>%
     establishment_type_group = as.factor(establishment_type_group),
     version = as.factor(version),
     establishment_type = as.factor(recode(establishment_type,
-    #  "All schools and FE sector colleges" = "All institutions",
+      #  "All schools and FE sector colleges" = "All institutions",
       "All state-funded schools and colleges" = "All state-funded"
     ))
   )
@@ -205,12 +206,12 @@ dfAlevelAps <- data %>%
 # Use data from 2015/16
 
 
-dfApsSexGap <- read_alevel_aps_sexgap_data()  
+dfApsSexGap <- read_alevel_aps_sexgap_data()
 fmDiff <- dfApsSexGap %>%
   mutate(
     sex_gap = round(as.numeric(sex_gap), 1),
     establishment_type = as.factor(recode(establishment_type,
-    #  "All schools and FE sector colleges" = "All institutions",
+      #  "All schools and FE sector colleges" = "All institutions",
       "All state-funded schools and colleges" = "All state-funded"
     ))
   )
@@ -238,7 +239,7 @@ dfAttainment <- dfAttainmentRaw %>%
     version = as.factor(version),
     cert_type = as.factor(cert_type),
     establishment_type = as.factor(recode(establishment_type,
-      #"All schools and FE sector colleges" = "All Institutions",
+      # "All schools and FE sector colleges" = "All Institutions",
       "All state-funded schools and colleges" = "All state-funded"
     )),
     cert_type = as.factor(recode(cert_type, "Alevel" = "A level"))
