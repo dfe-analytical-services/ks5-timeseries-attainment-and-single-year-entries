@@ -1519,6 +1519,31 @@
       ],
       "Hash": "a414c1bb2eb6e2a920742d3ebce84962"
     },
+    "shinytest2": {
+      "Package": "shinytest2",
+      "Version": "0.3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R6",
+        "callr",
+        "checkmate",
+        "chromote",
+        "cpp11",
+        "crayon",
+        "fs",
+        "globals",
+        "httr",
+        "jsonlite",
+        "pingr",
+        "rlang",
+        "rmarkdown",
+        "shiny",
+        "testthat",
+        "withr"
+      ],
+      "Hash": "a414c1bb2eb6e2a920742d3ebce84962"
+    },
     "shinytitle": {
       "Package": "shinytitle",
       "Version": "0.1.0",
@@ -1792,6 +1817,19 @@
         "tibble"
       ],
       "Hash": "c7d3fd6d29ab077cbac8f0e2751449e6"
+    },
+    "websocket": {
+      "Package": "websocket",
+      "Version": "1.4.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "AsioHeaders",
+        "R6",
+        "cpp11",
+        "later"
+      ],
+      "Hash": "e77c5569354172d0d04d54a9dec89e33"
     },
     "websocket": {
       "Package": "websocket",
