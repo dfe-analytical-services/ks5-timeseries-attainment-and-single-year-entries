@@ -31,9 +31,9 @@ It brings together figures compiled from the current and previous versions of th
 
 - Installation of R Studio 2023.12.0+369 or higher
 
-- Installation of R 4.3.2 or higher
+- Installation of R 4.4.2 or higher
 
-- Installation of RTools43 or higher
+- Installation of RTools44 or higher
 
 ### ii. Programming skills required (for editing or troubleshooting)
 

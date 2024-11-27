@@ -151,7 +151,7 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
 subjectByAll <- dfAlevelSubject %>%
   group_by(subject_name, characteristic_value) %>%
   arrange(year, .by_group = TRUE) %>%
-  filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics"), n() > 8) %>%
+  filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics"), n() > 9) %>%
   ungroup()
 
 # Filter out female and male
