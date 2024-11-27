@@ -433,7 +433,7 @@ server <- function(input, output, session) {
     val <- paste(input$headlineAps, collapse = ",")
     # val1<-paste(input$allSex, collapse=", ")
 
-    paste("The box display the latest revised average grades in 2023/24 for A level. The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.
+    paste("The box displays the latest revised average grades in 2023/24 for A level result. The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.
     In 2018, there was a large drop in the number of applied general and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
     Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.
 
