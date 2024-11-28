@@ -228,7 +228,7 @@ server <- function(input, output, session) {
       select(
         Year = year,
         `Academic year` = time_period,
-        `Institution type` = establishment_type,
+        `Establishment type` = establishment_type,
         `Number of students` = number_of_students,
         `APS per entry` = aps,
         `APS per entry grade` = aps_grade,
@@ -392,7 +392,7 @@ server <- function(input, output, session) {
       select(
         Year = year,
         `Academic year` = time_period,
-        `Institution type` = establishment_type,
+        `Establishment type` = establishment_type,
         `Characteristic sex` = characteristic_sex,
         `Number of students` = number_of_students,
         `APS per entry` = aps_2016_2024,
@@ -433,7 +433,7 @@ server <- function(input, output, session) {
     val <- paste(input$headlineAps, collapse = ",")
     # val1<-paste(input$allSex, collapse=", ")
 
-    paste("The box display the latest revised average grades in 2023/24 for A level. The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.
+    paste("The box displays the latest revised average grade in 2023/24 for A level result. The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.
     In 2018, there was a large drop in the number of applied general and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
     Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.
 
@@ -793,7 +793,7 @@ server <- function(input, output, session) {
           Year = year,
           `Academic year` = time_period,
           # `Institution group`  = establishment_type_group,
-          `Institution type` = establishment_type,
+          `Establishment type` = establishment_type,
           `Characteristic sex` = characteristic_sex,
           `Number of students` = number_of_students,
           `APS per entry` = aps_2016_2024,
@@ -1053,9 +1053,9 @@ server <- function(input, output, session) {
     filename = "attainment_data.csv",
     content = function(file) {
       if (input$tabsetpanels == "headline") {
-        write.csv(dfAttainment, file, row.names = FALSE)
+        write.csv(headline_download, file, row.names = FALSE)
       } else {
-        write.csv(dfAlevelAps, file, row.names = FALSE)
+        write.csv(alevel_attain_download, file, row.names = FALSE)
       }
     }
   )

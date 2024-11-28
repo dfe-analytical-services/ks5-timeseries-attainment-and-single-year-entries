@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.4.0",
+    "Version": "4.4.2",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -9,6 +9,13 @@
     ]
   },
   "Packages": {
+    "AsioHeaders": {
+      "Package": "AsioHeaders",
+      "Version": "1.22.1-2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "85bf3bd8fa58da21a22d84fd4f4ef0a8"
+    },
     "DT": {
       "Package": "DT",
       "Version": "0.33",
@@ -175,16 +182,6 @@
       ],
       "Hash": "cad6cf7f1d5f6e906700b9d3e718c796"
     },
-    "assertthat": {
-      "Package": "assertthat",
-      "Version": "0.2.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "tools"
-      ],
-      "Hash": "50c838a310445e954bc13f26f26a6ecf"
-    },
     "backports": {
       "Package": "backports",
       "Version": "1.5.0",
@@ -304,6 +301,26 @@
       ],
       "Hash": "0e14e01ce07e7c88fd25de6d4260d26b"
     },
+    "chromote": {
+      "Package": "chromote",
+      "Version": "0.3.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R6",
+        "curl",
+        "fastmap",
+        "jsonlite",
+        "later",
+        "magrittr",
+        "processx",
+        "promises",
+        "rlang",
+        "utils",
+        "websocket"
+      ],
+      "Hash": "5532726015b620830baae59aa689ea52"
+    },
     "cli": {
       "Package": "cli",
       "Version": "3.6.2",
@@ -324,6 +341,16 @@
         "utils"
       ],
       "Hash": "3f038e5ac7f41d4ac41ce658c85e3042"
+    },
+    "codetools": {
+      "Package": "codetools",
+      "Version": "0.2-20",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "61e097f35917d342622f21cdc79c256e"
     },
     "colorspace": {
       "Package": "colorspace",
@@ -402,18 +429,6 @@
       ],
       "Hash": "8ee9ac56ef633d0c7cab8b2ca87d683e"
     },
-    "debugme": {
-      "Package": "debugme",
-      "Version": "1.2.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "crayon",
-        "grDevices"
-      ],
-      "Hash": "62e5354b9a514d3a2e1d68311956a8f7"
-    },
     "desc": {
       "Package": "desc",
       "Version": "1.4.3",
@@ -432,11 +447,11 @@
       "Version": "0.5.1.9000",
       "Source": "GitHub",
       "RemoteType": "github",
-      "RemoteHost": "api.github.com",
       "RemoteUsername": "dfe-analytical-services",
       "RemoteRepo": "dfeshiny",
       "RemoteRef": "main",
       "RemoteSha": "ceab34a1cac64d9734247de905b0fdcf9eea9174",
+      "RemoteHost": "api.github.com",
       "Requirements": [
         "R",
         "RCurl",
@@ -683,6 +698,17 @@
         "withr"
       ],
       "Hash": "44c6a2f8202d5b7e878ea274b1092426"
+    },
+    "globals": {
+      "Package": "globals",
+      "Version": "0.16.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "codetools"
+      ],
+      "Hash": "2580567908cafd4f187c1e5a91e98b7f"
     },
     "glue": {
       "Package": "glue",
@@ -1005,13 +1031,6 @@
       ],
       "Hash": "2bcca3848e4734eb3b16103bc9aa4b8e"
     },
-    "parsedate": {
-      "Package": "parsedate",
-      "Version": "1.3.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "7f5024cc7af45eeecef657fa62beb568"
-    },
     "patchwork": {
       "Package": "patchwork",
       "Version": "1.3.0",
@@ -1138,16 +1157,6 @@
       ],
       "Hash": "a1ac5c03ad5ad12b9d1597e00e23c3dd"
     },
-    "png": {
-      "Package": "png",
-      "Version": "0.1-8",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "bd54ba8a0a5faded999a7aab6e46b374"
-    },
     "praise": {
       "Package": "praise",
       "Version": "1.0.0",
@@ -1267,13 +1276,6 @@
       ],
       "Hash": "9de96463d2117f6ac49980577939dfb3"
     },
-    "rematch": {
-      "Package": "rematch",
-      "Version": "2.0.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "cbff1b666c6fa6d21202f07e2318d4f1"
-    },
     "rematch2": {
       "Package": "rematch2",
       "Version": "2.1.2",
@@ -1337,13 +1339,6 @@
         "R"
       ],
       "Hash": "4c8415e0ec1e29f3f4f6fc108bef0144"
-    },
-    "rstudioapi": {
-      "Package": "rstudioapi",
-      "Version": "0.16.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "96710351d642b70e8f02ddeb237c46a7"
     },
     "sass": {
       "Package": "sass",
@@ -1499,34 +1494,55 @@
       ],
       "Hash": "802e4786b353a4bb27116957558548d5"
     },
-    "shinytest": {
-      "Package": "shinytest",
-      "Version": "1.6.1",
+    "shinytest2": {
+      "Package": "shinytest2",
+      "Version": "0.3.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R6",
+        "callr",
+        "checkmate",
+        "chromote",
+        "cpp11",
+        "crayon",
+        "fs",
+        "globals",
+        "httr",
+        "jsonlite",
+        "pingr",
+        "rlang",
+        "rmarkdown",
+        "shiny",
+        "testthat",
+        "withr"
+      ],
+      "Hash": "a414c1bb2eb6e2a920742d3ebce84962"
+    },
+    "shinytest2": {
+      "Package": "shinytest2",
+      "Version": "0.3.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R6",
-        "assertthat",
         "callr",
+        "checkmate",
+        "chromote",
+        "cpp11",
         "crayon",
-        "debugme",
-        "digest",
-        "htmlwidgets",
-        "httpuv",
+        "fs",
+        "globals",
         "httr",
         "jsonlite",
-        "parsedate",
         "pingr",
-        "rematch",
         "rlang",
-        "rstudioapi",
+        "rmarkdown",
         "shiny",
         "testthat",
-        "utils",
-        "webdriver",
         "withr"
       ],
-      "Hash": "47528912d55d13cbcf59fde00d03edd8"
+      "Hash": "a414c1bb2eb6e2a920742d3ebce84962"
     },
     "shinytitle": {
       "Package": "shinytitle",
@@ -1537,17 +1553,6 @@
         "shiny"
       ],
       "Hash": "12a2972d88910692c1a125d6e1e95d51"
-    },
-    "showimage": {
-      "Package": "showimage",
-      "Version": "1.0.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "png",
-        "tools"
-      ],
-      "Hash": "841927b226db842d24d9c288c99ed27b"
     },
     "sourcetools": {
       "Package": "sourcetools",
@@ -1813,24 +1818,31 @@
       ],
       "Hash": "c7d3fd6d29ab077cbac8f0e2751449e6"
     },
-    "webdriver": {
-      "Package": "webdriver",
-      "Version": "1.0.6",
+    "websocket": {
+      "Package": "websocket",
+      "Version": "1.4.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
+        "AsioHeaders",
         "R6",
-        "base64enc",
-        "callr",
-        "curl",
-        "debugme",
-        "httr",
-        "jsonlite",
-        "showimage",
-        "utils",
-        "withr"
+        "cpp11",
+        "later"
       ],
-      "Hash": "adc1e0db3ac0d75dcdb4b8179e7ca796"
+      "Hash": "e77c5569354172d0d04d54a9dec89e33"
+    },
+    "websocket": {
+      "Package": "websocket",
+      "Version": "1.4.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "AsioHeaders",
+        "R6",
+        "cpp11",
+        "later"
+      ],
+      "Hash": "e77c5569354172d0d04d54a9dec89e33"
     },
     "withr": {
       "Package": "withr",

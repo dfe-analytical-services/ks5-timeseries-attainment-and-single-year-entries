@@ -15,7 +15,7 @@ shhh(library(shiny))
 shhh(library(shinyjs))
 # shhh(library(tools))
 shhh(library(testthat))
-shhh(library(shinytest))
+shhh(library(shinytest2))
 shhh(library(shinydashboard))
 shhh(library(shinytitle))
 shhh(library(shinyWidgets))
@@ -102,6 +102,7 @@ appLoadingCSS <- "
 }
 "
 
+site_title <- "16 to 18 time series attainment and single year entry"
 site_primary <- "https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries/"
 site_overflow <- "https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries-overflow/"
 sites_list <- c(site_primary, site_overflow) # We can add further mirrors where necessary. Each one can generally handle about 2,500 users simultaneously
@@ -151,7 +152,7 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
 subjectByAll <- dfAlevelSubject %>%
   group_by(subject_name, characteristic_value) %>%
   arrange(year, .by_group = TRUE) %>%
-  filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics"), n() > 8) %>%
+  filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics"), n() > 9) %>%
   ungroup()
 
 # Filter out female and male
@@ -170,6 +171,8 @@ homeEconomics <- dfAlevelSubject %>%
 # Read in  A level aggregate APS and grade by institution type
 
 
+
+alevel_attain_download <- read_alevel_aps_data()
 
 data <- read_alevel_aps_data()
 dfAlevelAps <- data %>%
@@ -222,6 +225,25 @@ fmDiff <- dfApsSexGap %>%
 
 
 # Read in attainment data for alevel, applied general and techlevel
+
+
+headline_download <- read_all_attainment_data()
+
+headline_download <- headline_download %>%
+  mutate(
+    time_identifier = "Academic year",
+    geographic_level = "National",
+    country_code = "E92000001",
+    country_name = "England"
+  ) %>%
+  select(time_period, time_identifier, geographic_level, country_code, country_name, version,
+    establishment_type, establishment_type_group, characteristic_sex, number_of_students,
+    aps_per_entry = aps,
+    aps_per_entry_grade = aps_grade, version, qualification_type = cert_type, year
+  ) %>%
+  arrange(desc(time_period))
+
+
 
 dfAttainmentRaw <- read_all_attainment_data()
 
