@@ -1,0 +1,1459 @@
+time_period,time_identifier,geographic_level,country_code,country_name,characteristic_value,subject,percent_entered,number_of_students,version,year
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & physics & computer science,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & physics & computer science,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & physics & computer science,0,1,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & physics & computer science,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & physics & computer science,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & physics & computer science,0,2,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & physics & computer science,0,0,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & physics & computer science,0,1,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & physics & computer science,0,1,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & computer science,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & computer science,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & computer science,0,2,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & physics,0,17,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & physics,0,25,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & physics,0,42,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & biology & physics & computer science,0,0,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & biology & physics & computer science,0,1,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & biology & physics & computer science,0,1,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & physics & computer science,0,1,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & physics & computer science,0,16,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & physics & computer science,0,17,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Biology & chemistry & physics & computer science,0,1,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Biology & chemistry & physics & computer science,0,4,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Biology & chemistry & physics & computer science,0,5,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & computer science,0,0,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & computer science,0,3,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & computer science,0,3,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & physics,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & physics,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & physics,0,44,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & biology & physics & computer science,0,0,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & biology & physics & computer science,0,2,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & biology & physics & computer science,0,2,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & chemistry & physics & computer science,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & chemistry & physics & computer science,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & chemistry & physics & computer science,0,19,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & computer science,0,33,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & computer science,0,49,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & computer science,0,82,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & physics,0.2,285,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & physics,0.3,375,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & physics,0.2,661,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & biology & physics & computer science,0,3,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & biology & physics & computer science,0,11,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & biology & physics & computer science,0,14,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & chemistry & physics & computer science,0,22,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & chemistry & physics & computer science,0,61,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & chemistry & physics & computer science,0,83,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry,0.3,491,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry,0.3,463,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry,0.3,955,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & biology & computer science,0,7,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & biology & computer science,0,17,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & biology & computer science,0,24,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & biology & physics,0,67,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & biology & physics,0.1,115,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & biology & physics,0.1,182,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & computer science,0,31,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & computer science,0.1,109,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & computer science,0,140,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & physics,0.4,695,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & physics,1.6,2085,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & physics,1,2782,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & physics & computer science,0.2,288,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & physics & computer science,1.4,1871,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & physics & computer science,0.7,2159,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Biology & chemistry & computer science,0.1,124,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Biology & chemistry & computer science,0.2,244,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Biology & chemistry & computer science,0.1,368,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Biology & chemistry & physics,0.5,820,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Biology & chemistry & physics,0.7,938,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Biology & chemistry & physics,0.6,1760,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Biology & physics & computer science,0,12,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Biology & physics & computer science,0,57,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Biology & physics & computer science,0,69,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Chemistry & physics & computer science,0,28,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Chemistry & physics & computer science,0.1,128,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Chemistry & physics & computer science,0.1,156,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry,0.3,493,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry,0.4,465,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry,0.3,959,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & biology & computer science,0,7,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & biology & computer science,0,18,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & biology & computer science,0,25,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & biology & physics,0,68,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & biology & physics,0.1,116,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & biology & physics,0.1,184,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & chemistry & computer science,0,31,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & chemistry & computer science,0.1,111,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & chemistry & computer science,0,142,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & chemistry & physics,0.4,698,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & chemistry & physics,1.6,2097,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & chemistry & physics,1,2797,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & physics & computer science,0.2,289,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & physics & computer science,1.4,1876,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & physics & computer science,0.7,2165,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & biology & chemistry,6.5,10239,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & biology & chemistry,5.9,7801,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & biology & chemistry,6.2,18042,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & biology & computer science,0.1,121,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & biology & computer science,0.2,264,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & biology & computer science,0.1,385,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & biology & physics,0.4,702,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & biology & physics,1,1372,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & biology & physics,0.7,2075,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & chemistry & computer science,0.1,220,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & chemistry & computer science,0.4,541,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & chemistry & computer science,0.3,762,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & chemistry & physics,1.5,2309,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & chemistry & physics,4.9,6531,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & chemistry & physics,3,8844,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & biology,0.4,666,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & biology,0.5,667,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & biology,0.5,1334,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry,1,1542,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry,2.3,3123,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry,1.6,4668,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & computer science,0.4,637,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & computer science,2.3,3123,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & computer science,1.3,3760,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths & physics,1.4,2241,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths & physics,6.1,8054,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths & physics,3.5,10297,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & physics & computer science,0.5,819,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & physics & computer science,4.3,5742,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & physics & computer science,2.3,6561,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Biology & chemistry,15.4,24367,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Biology & chemistry,10.3,13718,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Biology & chemistry,13.1,38091,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Biology & computer science,0.2,308,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Biology & computer science,0.6,736,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Biology & computer science,0.4,1044,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Biology & physics,0.9,1439,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Biology & physics,1.8,2351,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Biology & physics,1.3,3792,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Chemistry & computer science,0.2,344,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Chemistry & computer science,0.7,904,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Chemistry & computer science,0.4,1249,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Chemistry & physics,1.9,2965,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Chemistry & physics,5.6,7414,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Chemistry & physics,3.6,10384,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & biology,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & biology,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & biology,0.5,1339,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & chemistry,1,1546,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & chemistry,2.4,3140,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & chemistry,1.6,4689,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & computer science,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & computer science,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & computer science,1.3,3767,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths & physics,1.4,2247,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths & physics,6.1,8085,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths & physics,3.5,10334,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & biology,8.5,13509,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & biology,8.3,11081,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & biology,8.4,24592,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & chemistry,9.3,14793,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & chemistry,12.8,16978,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & chemistry,10.9,31780,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & computer science,1.5,2322,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & computer science,8.4,11224,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & computer science,4.6,13548,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & further maths,2.8,4442,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & further maths,9,11997,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & further maths,5.6,16443,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths & physics,4.7,7475,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths & physics,20,26591,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths & physics,11.7,34070,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Physics & computer science,0.6,876,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Physics & computer science,4.7,6271,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Physics & computer science,2.5,7147,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Maths,22.1,35088,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Maths,44.9,59717,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Maths,32.5,94818,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Further maths,2.8,4459,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Further maths,9.1,12052,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Further maths,5.7,16515,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Biology,25.8,40936,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Biology,17.8,23728,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Biology,22.2,64672,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Chemistry,19.2,30440,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Chemistry,18.2,24159,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Chemistry,18.7,54612,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Physics,5.6,8862,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Physics,22.3,29665,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Physics,13.2,38533,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Computer science,2.1,3310,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Computer science,11.6,15482,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Computer science,6.4,18794,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Zero maths/science subjects,58.8,93278,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Zero maths/science subjects,40.9,54327,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Zero maths/science subjects,50.6,147615,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Six maths/science subjects,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Six maths/science subjects,NA,NA,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Six maths/science subjects,0,1,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,18,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Five maths/science subjects,0,42,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Five maths/science subjects,0,60,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Four maths/science subjects,1.2,1870,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Four maths/science subjects,3.8,5031,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Four maths/science subjects,2.4,6905,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Three maths/science subjects,10.3,16348,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Three maths/science subjects,21,27913,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Three maths/science subjects,15.2,44268,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Two maths/science subjects,24.9,39562,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Two maths/science subjects,40,53196,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Two maths/science subjects,31.8,92773,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,One maths/science subject,41.2,65297,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,One maths/science subject,59.1,78620,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,One maths/science subject,49.4,143937,Provisional,2024
+202324,Academic year,National,E92000001,England,Female,Total students,100,158575,Provisional,2024
+202324,Academic year,National,E92000001,England,Male,Total students,100,132947,Provisional,2024
+202324,Academic year,National,E92000001,England,All students,Total students,100,291552,Provisional,2024
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & physics & computer science,NA,NA,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & physics & computer science,NA,NA,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & physics & computer science,0,1,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & physics & computer science,0,0,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & physics & computer science,0,1,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & physics & computer science,0,1,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & physics & computer science,0,0,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & physics & computer science,0,1,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & physics & computer science,0,1,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & computer science,NA,NA,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & computer science,NA,NA,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & computer science,0,2,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & physics,0,14,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & physics,0,39,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & physics,0,53,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & biology & physics & computer science,NA,NA,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & biology & physics & computer science,NA,NA,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & biology & physics & computer science,0,2,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & physics & computer science,0,4,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & physics & computer science,0,28,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & physics & computer science,0,32,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Biology & chemistry & physics & computer science,0,1,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Biology & chemistry & physics & computer science,0,6,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Biology & chemistry & physics & computer science,0,7,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & computer science,0,0,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & computer science,0,2,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & computer science,0,2,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & physics,NA,NA,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & physics,NA,NA,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & physics,0,54,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & biology & physics & computer science,0,0,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & biology & physics & computer science,0,2,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & biology & physics & computer science,0,2,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & chemistry & physics & computer science,0,6,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & chemistry & physics & computer science,0,28,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & chemistry & physics & computer science,0,34,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & computer science,0,20,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & computer science,0,33,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & computer science,0,53,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & physics,0.2,266,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & physics,0.3,395,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & physics,0.2,661,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & biology & physics & computer science,0,1,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & biology & physics & computer science,0,10,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & biology & physics & computer science,0,11,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & chemistry & physics & computer science,0,16,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & chemistry & physics & computer science,0.1,99,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & chemistry & physics & computer science,0,115,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry,0.3,438,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry,0.3,437,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry,0.3,875,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & biology & computer science,0,5,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & biology & computer science,0,19,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & biology & computer science,0,24,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & biology & physics,0,65,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & biology & physics,0.1,140,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & biology & physics,0.1,205,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & computer science,0,29,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & computer science,0.1,97,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & computer science,0,126,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & physics,0.4,613,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & physics,1.4,1876,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & physics,0.9,2489,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & physics & computer science,0.1,183,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & physics & computer science,1,1387,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & physics & computer science,0.5,1570,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Biology & chemistry & computer science,0.1,90,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Biology & chemistry & computer science,0.2,270,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Biology & chemistry & computer science,0.1,360,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Biology & chemistry & physics,0.5,868,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Biology & chemistry & physics,0.9,1161,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Biology & chemistry & physics,0.7,2029,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Biology & physics & computer science,0,10,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Biology & physics & computer science,0,50,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Biology & physics & computer science,0,60,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Chemistry & physics & computer science,0,24,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Chemistry & physics & computer science,0.1,163,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Chemistry & physics & computer science,0.1,187,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry,0.3,440,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry,0.3,438,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry,0.3,878,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & biology & computer science,0,5,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & biology & computer science,0,19,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & biology & computer science,0,24,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & biology & physics,0,65,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & biology & physics,0.1,141,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & biology & physics,0.1,206,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & chemistry & computer science,0,31,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & chemistry & computer science,0.1,97,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & chemistry & computer science,0,128,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & chemistry & physics,0.4,616,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & chemistry & physics,1.4,1885,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & chemistry & physics,0.9,2501,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & physics & computer science,0.1,185,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & physics & computer science,1.1,1390,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & physics & computer science,0.5,1575,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & biology & chemistry,6.1,9688,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & biology & chemistry,5.5,7301,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & biology & chemistry,5.9,16989,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & biology & computer science,0.1,98,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & biology & computer science,0.2,263,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & biology & computer science,0.1,361,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & biology & physics,0.4,655,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & biology & physics,1,1361,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & biology & physics,0.7,2016,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & chemistry & computer science,0.1,151,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & chemistry & computer science,0.4,548,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & chemistry & computer science,0.2,699,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & chemistry & physics,1.3,2057,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & chemistry & physics,4.5,6009,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & chemistry & physics,2.8,8066,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & biology,0.4,612,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & biology,0.5,643,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & biology,0.4,1255,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry,0.9,1397,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry,2.1,2814,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry,1.5,4211,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & computer science,0.3,403,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & computer science,1.8,2337,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & computer science,0.9,2740,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths & physics,1.1,1808,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths & physics,4.9,6490,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths & physics,2.9,8298,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & physics & computer science,0.3,538,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & physics & computer science,3.6,4701,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & physics & computer science,1.8,5239,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Biology & chemistry,15.2,24090,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Biology & chemistry,10.5,13857,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Biology & chemistry,13.1,37947,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Biology & computer science,0.2,254,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Biology & computer science,0.6,806,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Biology & computer science,0.4,1060,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Biology & physics,0.9,1446,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Biology & physics,1.9,2524,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Biology & physics,1.4,3970,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Chemistry & computer science,0.2,260,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Chemistry & computer science,0.7,976,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Chemistry & computer science,0.4,1236,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Chemistry & physics,1.8,2811,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Chemistry & physics,5.4,7160,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Chemistry & physics,3.4,9971,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & biology,0.4,614,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & biology,0.5,644,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & biology,0.4,1258,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & chemistry,0.9,1403,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & chemistry,2.1,2825,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & chemistry,1.5,4228,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & computer science,0.3,407,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & computer science,1.8,2341,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & computer science,0.9,2748,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths & physics,1.1,1816,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths & physics,4.9,6516,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths & physics,2.9,8332,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & biology,8.1,12831,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & biology,7.9,10400,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & biology,8,23231,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & chemistry,8.7,13807,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & chemistry,11.9,15748,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & chemistry,10.2,29555,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & computer science,1.1,1687,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & computer science,7.2,9571,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & computer science,3.9,11258,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & further maths,2.4,3838,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & further maths,7.5,9860,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & further maths,4.7,13698,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths & physics,4,6307,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths & physics,17.4,23011,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths & physics,10.1,29318,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Physics & computer science,0.4,584,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Physics & computer science,4,5245,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Physics & computer science,2,5829,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Maths,20.3,32016,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Maths,40.5,53611,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Maths,29.5,85627,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Further maths,2.4,3864,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Further maths,7.5,9905,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Further maths,4.7,13769,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Biology,26.2,41406,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Biology,18,23791,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Biology,22.5,65197,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Chemistry,18.9,29821,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Chemistry,18.1,23912,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Chemistry,18.5,53733,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Physics,4.9,7697,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Physics,20,26457,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Physics,11.8,34154,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Computer science,1.6,2570,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Computer science,10.9,14451,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Computer science,5.9,17021,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Zero maths/science subjects,59.9,94779,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Zero maths/science subjects,43.9,57989,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Zero maths/science subjects,52.6,152771,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Six maths/science subjects,NA,NA,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Six maths/science subjects,NA,NA,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Six maths/science subjects,0,1,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,18,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Five maths/science subjects,0.1,68,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Five maths/science subjects,0,86,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Four maths/science subjects,1,1585,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Four maths/science subjects,3.2,4289,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Four maths/science subjects,2,5874,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Three maths/science subjects,9.4,14878,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Three maths/science subjects,18.8,24796,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Three maths/science subjects,13.7,39674,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Two maths/science subjects,23.8,37572,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Two maths/science subjects,36.9,48748,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Two maths/science subjects,29.7,86320,Revised,2023
+202223,Academic year,National,E92000001,England,Female,One maths/science subject,40.1,63321,Revised,2023
+202223,Academic year,National,E92000001,England,Male,One maths/science subject,56.1,74225,Revised,2023
+202223,Academic year,National,E92000001,England,All students,One maths/science subject,47.4,137546,Revised,2023
+202223,Academic year,National,E92000001,England,Female,Total students,100,158100,Revised,2023
+202223,Academic year,National,E92000001,England,Male,Total students,100,132214,Revised,2023
+202223,Academic year,National,E92000001,England,All students,Total students,100,290317,Revised,2023
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & computer science,NA,NA,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & computer science,NA,NA,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & computer science,0,1,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & physics,0,13,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & physics,0,18,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & physics,0,31,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & biology & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & biology & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & biology & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & physics & computer science,0,4,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & physics & computer science,0,8,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & physics & computer science,0,12,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Biology & chemistry & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Biology & chemistry & physics & computer science,0,5,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Biology & chemistry & physics & computer science,0,5,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & computer science,0,1,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & computer science,0,1,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & physics,0,14,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & physics,0,26,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & physics,0,40,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & biology & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & biology & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & biology & physics & computer science,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & chemistry & physics & computer science,NA,NA,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & chemistry & physics & computer science,NA,NA,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & chemistry & physics & computer science,0,13,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & computer science,0,5,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & computer science,0,30,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & computer science,0,35,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & physics,0.2,306,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & physics,0.3,413,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & physics,0.3,719,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & biology & physics & computer science,0,1,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & biology & physics & computer science,0,5,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & biology & physics & computer science,0,6,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & chemistry & physics & computer science,0,13,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & chemistry & physics & computer science,0.1,73,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & chemistry & physics & computer science,0,86,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry,0.2,343,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry,0.3,338,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry,0.2,681,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & biology & computer science,0,1,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & biology & computer science,0,12,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & biology & computer science,0,13,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & biology & physics,0,61,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & biology & physics,0.1,110,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & biology & physics,0.1,171,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & computer science,0,28,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & computer science,0.1,80,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & computer science,0,108,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & physics,0.4,596,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & physics,1.3,1720,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & physics,0.8,2316,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & physics & computer science,0.1,167,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & physics & computer science,0.9,1167,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & physics & computer science,0.5,1334,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Biology & chemistry & computer science,0,67,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Biology & chemistry & computer science,0.2,202,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Biology & chemistry & computer science,0.1,269,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Biology & chemistry & physics,0.6,922,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Biology & chemistry & physics,0.9,1119,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Biology & chemistry & physics,0.7,2041,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Biology & physics & computer science,0,9,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Biology & physics & computer science,0,44,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Biology & physics & computer science,0,53,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Chemistry & physics & computer science,0,19,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Chemistry & physics & computer science,0.1,147,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Chemistry & physics & computer science,0.1,166,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry,0.3,401,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry,0.3,394,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry,0.3,795,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & biology & computer science,0,2,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & biology & computer science,0,14,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & biology & computer science,0,16,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & biology & physics,0,70,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & biology & physics,0.1,128,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & biology & physics,0.1,198,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & chemistry & computer science,0,30,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & chemistry & computer science,0.1,91,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & chemistry & computer science,0,121,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & chemistry & physics,0.4,659,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & chemistry & physics,1.5,1924,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & chemistry & physics,0.9,2583,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & physics & computer science,0.1,195,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & physics & computer science,1,1329,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & physics & computer science,0.5,1524,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & biology & chemistry,6,9276,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & biology & chemistry,5.3,6794,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & biology & chemistry,5.7,16071,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & biology & computer science,0,67,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & biology & computer science,0.2,221,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & biology & computer science,0.1,288,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & biology & physics,0.5,745,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & biology & physics,1.2,1472,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & biology & physics,0.8,2217,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & chemistry & computer science,0.1,149,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & chemistry & computer science,0.4,509,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & chemistry & computer science,0.2,658,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & chemistry & physics,1.4,2123,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & chemistry & physics,4.8,6077,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & chemistry & physics,2.9,8200,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & biology,0.3,520,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & biology,0.4,520,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & biology,0.4,1040,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry,0.8,1256,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry,2,2539,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry,1.3,3795,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & computer science,0.2,351,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & computer science,1.5,1931,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & computer science,0.8,2282,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths & physics,1.1,1729,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths & physics,4.7,6076,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths & physics,2.8,7805,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & physics & computer science,0.3,491,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & physics & computer science,3.4,4331,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & physics & computer science,1.7,4822,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Biology & chemistry,14.6,22686,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Biology & chemistry,10,12754,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Biology & chemistry,12.5,35442,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Biology & computer science,0.1,216,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Biology & computer science,0.5,673,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Biology & computer science,0.3,889,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Biology & physics,1,1608,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Biology & physics,2,2610,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Biology & physics,1.5,4218,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Chemistry & computer science,0.2,256,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Chemistry & computer science,0.7,890,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Chemistry & computer science,0.4,1146,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Chemistry & physics,1.9,2965,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Chemistry & physics,5.8,7373,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Chemistry & physics,3.6,10338,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & biology,0.4,604,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & biology,0.5,596,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & biology,0.4,1200,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & chemistry,0.9,1405,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & chemistry,2.2,2830,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & chemistry,1.5,4235,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & computer science,0.3,399,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & computer science,1.7,2162,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & computer science,0.9,2561,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths & physics,1.2,1917,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths & physics,5.3,6719,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths & physics,3,8636,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & biology,8.1,12567,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & biology,7.9,10071,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & biology,8,22639,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & chemistry,8.7,13535,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & chemistry,12,15327,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & chemistry,10.2,28863,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & computer science,0.9,1424,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & computer science,6.6,8399,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & computer science,3.5,9823,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & further maths,2.3,3533,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & further maths,7.1,9062,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & further maths,4.4,12595,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths & physics,4.1,6356,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths & physics,18.1,23194,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths & physics,10.4,29550,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Physics & computer science,0.4,579,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Physics & computer science,3.9,4969,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Physics & computer science,2,5548,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Maths,20.2,31445,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Maths,40.9,52337,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Maths,29.5,83783,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Further maths,2.5,3904,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Further maths,7.8,9968,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Further maths,4.9,13872,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Biology,25.8,40136,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Biology,17.9,22875,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Biology,22.2,63013,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Chemistry,18.4,28713,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Chemistry,18.1,23132,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Chemistry,18.3,51847,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Physics,5.2,8098,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Physics,21.3,27243,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Physics,12.5,35341,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Computer science,1.4,2244,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Computer science,9.8,12550,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Computer science,5.2,14794,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Zero maths/science subjects,60.2,93761,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Zero maths/science subjects,43.4,55565,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Zero maths/science subjects,52.6,149327,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Six maths/science subjects,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Six maths/science subjects,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Six maths/science subjects,0,0,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,17,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Five maths/science subjects,0,27,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Five maths/science subjects,0,44,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Four maths/science subjects,0.9,1471,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Four maths/science subjects,3,3881,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Four maths/science subjects,1.9,5352,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Three maths/science subjects,9.3,14566,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Three maths/science subjects,18.8,24057,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Three maths/science subjects,13.6,38624,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Two maths/science subjects,23.4,36437,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Two maths/science subjects,37.3,47764,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Two maths/science subjects,29.7,84203,Revised,2022
+202122,Academic year,National,E92000001,England,Female,One maths/science subject,39.8,62049,Revised,2022
+202122,Academic year,National,E92000001,England,Male,One maths/science subject,56.6,72376,Revised,2022
+202122,Academic year,National,E92000001,England,All students,One maths/science subject,47.4,134427,Revised,2022
+202122,Academic year,National,E92000001,England,Female,Total students,100,155810,Revised,2022
+202122,Academic year,National,E92000001,England,Male,Total students,100,127941,Revised,2022
+202122,Academic year,National,E92000001,England,All students,Total students,100,283754,Revised,2022
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & physics,0,14,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & physics,0,22,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & physics,0,36,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & biology & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & biology & physics & computer science,0,4,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & biology & physics & computer science,0,4,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & physics & computer science,0,4,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & physics & computer science,0,6,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & physics & computer science,0,10,Final,2021
+202021,Academic year,National,E92000001,England,Female,Biology & chemistry & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Male,Biology & chemistry & physics & computer science,0,2,Final,2021
+202021,Academic year,National,E92000001,England,All students,Biology & chemistry & physics & computer science,0,2,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & physics,NA,NA,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & physics,NA,NA,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & physics,0,37,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & biology & physics & computer science,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & biology & physics & computer science,0,4,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & biology & physics & computer science,0,4,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & chemistry & physics & computer science,NA,NA,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & chemistry & physics & computer science,NA,NA,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & chemistry & physics & computer science,0,11,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & computer science,0,20,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & computer science,0,24,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & computer science,0,44,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & physics,0.2,324,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & physics,0.3,416,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & physics,0.3,740,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & biology & physics & computer science,0,1,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & biology & physics & computer science,0,16,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & biology & physics & computer science,0,17,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & chemistry & physics & computer science,0,13,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & chemistry & physics & computer science,0.1,61,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & chemistry & physics & computer science,0,74,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry,0.3,464,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry,0.3,410,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry,0.3,874,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & biology & computer science,0,3,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & biology & computer science,0,18,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & biology & computer science,0,21,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & biology & physics,0,67,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & biology & physics,0.1,130,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & biology & physics,0.1,197,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & computer science,0,23,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & computer science,0.1,78,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & computer science,0,101,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & physics,0.5,679,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & physics,1.8,2155,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & physics,1.1,2834,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & physics & computer science,0.1,202,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & physics & computer science,1,1186,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & physics & computer science,0.5,1388,Final,2021
+202021,Academic year,National,E92000001,England,Female,Biology & chemistry & computer science,0.1,75,Final,2021
+202021,Academic year,National,E92000001,England,Male,Biology & chemistry & computer science,0.1,145,Final,2021
+202021,Academic year,National,E92000001,England,All students,Biology & chemistry & computer science,0.1,220,Final,2021
+202021,Academic year,National,E92000001,England,Female,Biology & chemistry & physics,0.6,930,Final,2021
+202021,Academic year,National,E92000001,England,Male,Biology & chemistry & physics,0.9,1024,Final,2021
+202021,Academic year,National,E92000001,England,All students,Biology & chemistry & physics,0.7,1954,Final,2021
+202021,Academic year,National,E92000001,England,Female,Biology & physics & computer science,0,4,Final,2021
+202021,Academic year,National,E92000001,England,Male,Biology & physics & computer science,0,46,Final,2021
+202021,Academic year,National,E92000001,England,All students,Biology & physics & computer science,0,50,Final,2021
+202021,Academic year,National,E92000001,England,Female,Chemistry & physics & computer science,0,21,Final,2021
+202021,Academic year,National,E92000001,England,Male,Chemistry & physics & computer science,0.1,109,Final,2021
+202021,Academic year,National,E92000001,England,All students,Chemistry & physics & computer science,0,130,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry,0.3,466,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry,0.3,411,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry,0.3,877,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & biology & computer science,0,3,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & biology & computer science,0,18,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & biology & computer science,0,21,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & biology & physics,NA,NA,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & biology & physics,NA,NA,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & biology & physics,0.1,199,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & chemistry & computer science,0,23,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & chemistry & computer science,0.1,79,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & chemistry & computer science,0,102,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & chemistry & physics,0.5,682,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & chemistry & physics,1.8,2169,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & chemistry & physics,1.1,2851,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & physics & computer science,0.1,203,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & physics & computer science,1,1190,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & physics & computer science,0.5,1393,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & biology & chemistry,6.6,9772,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & biology & chemistry,5.8,6971,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & biology & chemistry,6.3,16743,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & biology & computer science,0.1,74,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & biology & computer science,0.2,226,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & biology & computer science,0.1,300,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & biology & physics,0.5,799,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & biology & physics,1.3,1560,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & biology & physics,0.9,2359,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & chemistry & computer science,0.1,139,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & chemistry & computer science,0.4,453,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & chemistry & computer science,0.2,592,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & chemistry & physics,1.6,2370,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & chemistry & physics,5.9,7093,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & chemistry & physics,3.5,9463,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & biology,0.4,638,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & biology,0.5,623,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & biology,0.5,1261,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry,1.1,1567,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry,2.6,3139,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry,1.8,4706,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & computer science,0.2,363,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & computer science,1.7,1981,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & computer science,0.9,2344,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths & physics,1.3,1978,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths & physics,5.8,6991,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths & physics,3.4,8969,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & physics & computer science,0.3,502,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & physics & computer science,3.4,4047,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & physics & computer science,1.7,4549,Final,2021
+202021,Academic year,National,E92000001,England,Female,Biology & chemistry,14.8,21826,Final,2021
+202021,Academic year,National,E92000001,England,Male,Biology & chemistry,10.3,12356,Final,2021
+202021,Academic year,National,E92000001,England,All students,Biology & chemistry,12.8,34182,Final,2021
+202021,Academic year,National,E92000001,England,Female,Biology & computer science,0.1,179,Final,2021
+202021,Academic year,National,E92000001,England,Male,Biology & computer science,0.5,562,Final,2021
+202021,Academic year,National,E92000001,England,All students,Biology & computer science,0.3,741,Final,2021
+202021,Academic year,National,E92000001,England,Female,Biology & physics,1.1,1609,Final,2021
+202021,Academic year,National,E92000001,England,Male,Biology & physics,2.2,2626,Final,2021
+202021,Academic year,National,E92000001,England,All students,Biology & physics,1.6,4235,Final,2021
+202021,Academic year,National,E92000001,England,Female,Chemistry & computer science,0.1,219,Final,2021
+202021,Academic year,National,E92000001,England,Male,Chemistry & computer science,0.6,709,Final,2021
+202021,Academic year,National,E92000001,England,All students,Chemistry & computer science,0.3,928,Final,2021
+202021,Academic year,National,E92000001,England,Female,Chemistry & physics,2.1,3139,Final,2021
+202021,Academic year,National,E92000001,England,Male,Chemistry & physics,6.8,8127,Final,2021
+202021,Academic year,National,E92000001,England,All students,Chemistry & physics,4.2,11266,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & biology,0.4,640,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & biology,0.5,625,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & biology,0.5,1265,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & chemistry,1.1,1572,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & chemistry,2.6,3156,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & chemistry,1.8,4728,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & computer science,0.2,364,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & computer science,1.7,1985,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & computer science,0.9,2349,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths & physics,1.3,1986,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths & physics,5.9,7019,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths & physics,3.4,9005,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & biology,9,13272,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & biology,8.5,10229,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & biology,8.8,23501,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & chemistry,9.8,14445,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & chemistry,14,16746,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & chemistry,11.7,31191,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & computer science,0.9,1298,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & computer science,6.3,7538,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & computer science,3.3,8836,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & further maths,2.8,4090,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & further maths,8.5,10154,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & further maths,5.3,14244,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths & physics,4.6,6771,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths & physics,20.3,24281,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths & physics,11.6,31052,Final,2021
+202021,Academic year,National,E92000001,England,Female,Physics & computer science,0.4,537,Final,2021
+202021,Academic year,National,E92000001,England,Male,Physics & computer science,3.7,4423,Final,2021
+202021,Academic year,National,E92000001,England,All students,Physics & computer science,1.9,4960,Final,2021
+202021,Academic year,National,E92000001,England,Female,Maths,22.4,33023,Final,2021
+202021,Academic year,National,E92000001,England,Male,Maths,43.8,52520,Final,2021
+202021,Academic year,National,E92000001,England,All students,Maths,32,85544,Final,2021
+202021,Academic year,National,E92000001,England,Female,Further maths,2.8,4113,Final,2021
+202021,Academic year,National,E92000001,England,Male,Further maths,8.5,10193,Final,2021
+202021,Academic year,National,E92000001,England,All students,Further maths,5.3,14306,Final,2021
+202021,Academic year,National,E92000001,England,Female,Biology,25.8,38116,Final,2021
+202021,Academic year,National,E92000001,England,Male,Biology,18.1,21689,Final,2021
+202021,Academic year,National,E92000001,England,All students,Biology,22.4,59805,Final,2021
+202021,Academic year,National,E92000001,England,Female,Chemistry,19,28038,Final,2021
+202021,Academic year,National,E92000001,England,Male,Chemistry,19.7,23664,Final,2021
+202021,Academic year,National,E92000001,England,All students,Chemistry,19.3,51702,Final,2021
+202021,Academic year,National,E92000001,England,Female,Physics,5.6,8198,Final,2021
+202021,Academic year,National,E92000001,England,Male,Physics,23,27575,Final,2021
+202021,Academic year,National,E92000001,England,All students,Physics,13.4,35773,Final,2021
+202021,Academic year,National,E92000001,England,Female,Computer science,1.3,1855,Final,2021
+202021,Academic year,National,E92000001,England,Male,Computer science,8.9,10718,Final,2021
+202021,Academic year,National,E92000001,England,All students,Computer science,4.7,12573,Final,2021
+202021,Academic year,National,E92000001,England,Female,Zero maths/science subjects,59.2,87325,Final,2021
+202021,Academic year,National,E92000001,England,Male,Zero maths/science subjects,41.8,50153,Final,2021
+202021,Academic year,National,E92000001,England,All students,Zero maths/science subjects,51.4,137478,Final,2021
+202021,Academic year,National,E92000001,England,Female,Six maths/science subjects,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Male,Six maths/science subjects,0,0,Final,2021
+202021,Academic year,National,E92000001,England,All students,Six maths/science subjects,0,0,Final,2021
+202021,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,18,Final,2021
+202021,Academic year,National,E92000001,England,Male,Five maths/science subjects,0,32,Final,2021
+202021,Academic year,National,E92000001,England,All students,Five maths/science subjects,0,50,Final,2021
+202021,Academic year,National,E92000001,England,Female,Four maths/science subjects,1.2,1743,Final,2021
+202021,Academic year,National,E92000001,England,Male,Four maths/science subjects,3.7,4401,Final,2021
+202021,Academic year,National,E92000001,England,All students,Four maths/science subjects,2.3,6144,Final,2021
+202021,Academic year,National,E92000001,England,Female,Three maths/science subjects,10.4,15340,Final,2021
+202021,Academic year,National,E92000001,England,Male,Three maths/science subjects,20.9,25011,Final,2021
+202021,Academic year,National,E92000001,England,All students,Three maths/science subjects,15.1,40351,Final,2021
+202021,Academic year,National,E92000001,England,Female,Two maths/science subjects,24.4,35966,Final,2021
+202021,Academic year,National,E92000001,England,Male,Two maths/science subjects,39.4,47183,Final,2021
+202021,Academic year,National,E92000001,England,All students,Two maths/science subjects,31.1,83149,Final,2021
+202021,Academic year,National,E92000001,England,Female,One maths/science subject,40.8,60276,Final,2021
+202021,Academic year,National,E92000001,England,Male,One maths/science subject,58.2,69732,Final,2021
+202021,Academic year,National,E92000001,England,All students,One maths/science subject,48.6,130009,Final,2021
+202021,Academic year,National,E92000001,England,Female,Total students,100,147601,Final,2021
+202021,Academic year,National,E92000001,England,Male,Total students,100,119885,Final,2021
+202021,Academic year,National,E92000001,England,All students,Total students,100,267487,Final,2021
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry & physics,0,15,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry & physics,0,33,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry & physics,0,48,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & biology & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & biology & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & biology & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & physics & computer science,0,2,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & physics & computer science,0,12,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & physics & computer science,0,14,Final,2020
+201920,Academic year,National,E92000001,England,Female,Biology & chemistry & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Male,Biology & chemistry & physics & computer science,0,3,Final,2020
+201920,Academic year,National,E92000001,England,All students,Biology & chemistry & physics & computer science,0,3,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry & physics,0,16,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry & physics,0,34,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry & physics,0,50,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & biology & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & biology & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & biology & physics & computer science,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & chemistry & physics & computer science,0,2,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & chemistry & physics & computer science,0,12,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & chemistry & physics & computer science,0,14,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & computer science,0,13,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & computer science,0,17,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & computer science,0,30,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & biology & chemistry & physics,0.2,299,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & biology & chemistry & physics,0.4,420,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & biology & chemistry & physics,0.3,719,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & biology & physics & computer science,0,1,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & biology & physics & computer science,0,8,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & biology & physics & computer science,0,9,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & chemistry & physics & computer science,0,12,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & chemistry & physics & computer science,0.1,68,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & chemistry & physics & computer science,0,80,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & biology & chemistry,0.2,348,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & biology & chemistry,0.3,345,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & biology & chemistry,0.3,693,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & biology & computer science,0,3,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & biology & computer science,0,7,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & biology & computer science,0,10,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & biology & physics,0,49,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & biology & physics,0.1,124,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & biology & physics,0.1,173,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & computer science,0,26,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & computer science,0,56,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & computer science,0,82,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry & physics,0.5,685,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry & physics,1.8,2055,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry & physics,1,2740,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & physics & computer science,0.1,136,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & physics & computer science,0.8,937,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & physics & computer science,0.4,1073,Final,2020
+201920,Academic year,National,E92000001,England,Female,Biology & chemistry & computer science,0,53,Final,2020
+201920,Academic year,National,E92000001,England,Male,Biology & chemistry & computer science,0.1,141,Final,2020
+201920,Academic year,National,E92000001,England,All students,Biology & chemistry & computer science,0.1,194,Final,2020
+201920,Academic year,National,E92000001,England,Female,Biology & chemistry & physics,0.6,869,Final,2020
+201920,Academic year,National,E92000001,England,Male,Biology & chemistry & physics,0.9,1016,Final,2020
+201920,Academic year,National,E92000001,England,All students,Biology & chemistry & physics,0.7,1885,Final,2020
+201920,Academic year,National,E92000001,England,Female,Biology & physics & computer science,0,2,Final,2020
+201920,Academic year,National,E92000001,England,Male,Biology & physics & computer science,0,39,Final,2020
+201920,Academic year,National,E92000001,England,All students,Biology & physics & computer science,0,41,Final,2020
+201920,Academic year,National,E92000001,England,Female,Chemistry & physics & computer science,0,12,Final,2020
+201920,Academic year,National,E92000001,England,Male,Chemistry & physics & computer science,0.1,127,Final,2020
+201920,Academic year,National,E92000001,England,All students,Chemistry & physics & computer science,0.1,139,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & biology & chemistry,0.2,351,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & biology & chemistry,0.3,347,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & biology & chemistry,0.3,698,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & biology & computer science,0,3,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & biology & computer science,0,7,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & biology & computer science,0,10,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & biology & physics,0,50,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & biology & physics,0.1,125,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & biology & physics,0.1,175,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & chemistry & computer science,0,26,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & chemistry & computer science,0,56,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & chemistry & computer science,0,82,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & chemistry & physics,0.5,691,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & chemistry & physics,1.8,2068,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & chemistry & physics,1.1,2759,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & physics & computer science,0.1,137,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & physics & computer science,0.8,941,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & physics & computer science,0.4,1078,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & biology & chemistry,6.8,9818,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & biology & chemistry,5.9,6873,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & biology & chemistry,6.4,16691,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & biology & computer science,0,58,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & biology & computer science,0.1,161,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & biology & computer science,0.1,219,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & biology & physics,0.5,670,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & biology & physics,1.3,1514,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & biology & physics,0.8,2184,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & chemistry & computer science,0.1,119,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & chemistry & computer science,0.3,394,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & chemistry & computer science,0.2,513,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & chemistry & physics,1.6,2381,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & chemistry & physics,6,6957,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & chemistry & physics,3.6,9338,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & biology,0.3,501,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & biology,0.5,533,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & biology,0.4,1034,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & chemistry,1,1436,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & chemistry,2.5,2907,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & chemistry,1.7,4343,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & computer science,0.2,297,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & computer science,1.4,1610,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & computer science,0.7,1907,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths & physics,1.4,1967,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths & physics,5.7,6662,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths & physics,3.3,8629,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & physics & computer science,0.3,388,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & physics & computer science,3.1,3628,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & physics & computer science,1.5,4016,Final,2020
+201920,Academic year,National,E92000001,England,Female,Biology & chemistry,14.3,20718,Final,2020
+201920,Academic year,National,E92000001,England,Male,Biology & chemistry,10,11692,Final,2020
+201920,Academic year,National,E92000001,England,All students,Biology & chemistry,12.4,32410,Final,2020
+201920,Academic year,National,E92000001,England,Female,Biology & computer science,0.1,145,Final,2020
+201920,Academic year,National,E92000001,England,Male,Biology & computer science,0.4,461,Final,2020
+201920,Academic year,National,E92000001,England,All students,Biology & computer science,0.2,606,Final,2020
+201920,Academic year,National,E92000001,England,Female,Biology & physics,1,1421,Final,2020
+201920,Academic year,National,E92000001,England,Male,Biology & physics,2.1,2501,Final,2020
+201920,Academic year,National,E92000001,England,All students,Biology & physics,1.5,3922,Final,2020
+201920,Academic year,National,E92000001,England,Female,Chemistry & computer science,0.1,179,Final,2020
+201920,Academic year,National,E92000001,England,Male,Chemistry & computer science,0.6,659,Final,2020
+201920,Academic year,National,E92000001,England,All students,Chemistry & computer science,0.3,838,Final,2020
+201920,Academic year,National,E92000001,England,Female,Chemistry & physics,2.1,3081,Final,2020
+201920,Academic year,National,E92000001,England,Male,Chemistry & physics,6.9,8006,Final,2020
+201920,Academic year,National,E92000001,England,All students,Chemistry & physics,4.2,11087,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & biology,0.3,504,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & biology,0.5,535,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & biology,0.4,1039,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & chemistry,1,1449,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & chemistry,2.5,2922,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & chemistry,1.7,4371,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & computer science,0.2,299,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & computer science,1.4,1615,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & computer science,0.7,1914,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths & physics,1.4,1978,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths & physics,5.7,6692,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths & physics,3.3,8670,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & biology,9.2,13366,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & biology,8.6,10074,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & biology,9,23440,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & chemistry,10,14483,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & chemistry,14.1,16428,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & chemistry,11.8,30911,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & computer science,0.8,1108,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & computer science,5.8,6781,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & computer science,3,7890,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & further maths,2.7,3953,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & further maths,8.3,9700,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & further maths,5.2,13653,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths & physics,4.5,6498,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths & physics,19.8,23096,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths & physics,11.3,29594,Final,2020
+201920,Academic year,National,E92000001,England,Female,Physics & computer science,0.3,414,Final,2020
+201920,Academic year,National,E92000001,England,Male,Physics & computer science,3.4,4014,Final,2020
+201920,Academic year,National,E92000001,England,All students,Physics & computer science,1.7,4428,Final,2020
+201920,Academic year,National,E92000001,England,Female,Maths,22.7,33026,Final,2020
+201920,Academic year,National,E92000001,England,Male,Maths,43.9,51167,Final,2020
+201920,Academic year,National,E92000001,England,All students,Maths,32.2,84194,Final,2020
+201920,Academic year,National,E92000001,England,Female,Further maths,2.7,3979,Final,2020
+201920,Academic year,National,E92000001,England,Male,Further maths,8.4,9750,Final,2020
+201920,Academic year,National,E92000001,England,All students,Further maths,5.2,13729,Final,2020
+201920,Academic year,National,E92000001,England,Female,Biology,25.2,36560,Final,2020
+201920,Academic year,National,E92000001,England,Male,Biology,17.6,20548,Final,2020
+201920,Academic year,National,E92000001,England,All students,Biology,21.8,57108,Final,2020
+201920,Academic year,National,E92000001,England,Female,Chemistry,18.5,26807,Final,2020
+201920,Academic year,National,E92000001,England,Male,Chemistry,19.5,22715,Final,2020
+201920,Academic year,National,E92000001,England,All students,Chemistry,18.9,49522,Final,2020
+201920,Academic year,National,E92000001,England,Female,Physics,5.3,7743,Final,2020
+201920,Academic year,National,E92000001,England,Male,Physics,22.5,26197,Final,2020
+201920,Academic year,National,E92000001,England,All students,Physics,13,33940,Final,2020
+201920,Academic year,National,E92000001,England,Female,Computer science,1.1,1658,Final,2020
+201920,Academic year,National,E92000001,England,Male,Computer science,8.4,9788,Final,2020
+201920,Academic year,National,E92000001,England,All students,Computer science,4.4,11447,Final,2020
+201920,Academic year,National,E92000001,England,Female,Zero maths/science subjects,59.8,86841,Final,2020
+201920,Academic year,National,E92000001,England,Male,Zero maths/science subjects,42.5,49478,Final,2020
+201920,Academic year,National,E92000001,England,All students,Zero maths/science subjects,52.1,136321,Final,2020
+201920,Academic year,National,E92000001,England,Female,Six maths/science subjects,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Male,Six maths/science subjects,0,0,Final,2020
+201920,Academic year,National,E92000001,England,All students,Six maths/science subjects,0,0,Final,2020
+201920,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,17,Final,2020
+201920,Academic year,National,E92000001,England,Male,Five maths/science subjects,0,45,Final,2020
+201920,Academic year,National,E92000001,England,All students,Five maths/science subjects,0,62,Final,2020
+201920,Academic year,National,E92000001,England,Female,Four maths/science subjects,1,1522,Final,2020
+201920,Academic year,National,E92000001,England,Male,Four maths/science subjects,3.4,3906,Final,2020
+201920,Academic year,National,E92000001,England,All students,Four maths/science subjects,2.1,5428,Final,2020
+201920,Academic year,National,E92000001,England,Female,Three maths/science subjects,10.4,15161,Final,2020
+201920,Academic year,National,E92000001,England,Male,Three maths/science subjects,20.7,24118,Final,2020
+201920,Academic year,National,E92000001,England,All students,Three maths/science subjects,15,39279,Final,2020
+201920,Academic year,National,E92000001,England,Female,Two maths/science subjects,23.8,34640,Final,2020
+201920,Academic year,National,E92000001,England,Male,Two maths/science subjects,38.7,45042,Final,2020
+201920,Academic year,National,E92000001,England,All students,Two maths/science subjects,30.4,79683,Final,2020
+201920,Academic year,National,E92000001,England,Female,One maths/science subject,40.2,58433,Final,2020
+201920,Academic year,National,E92000001,England,Male,One maths/science subject,57.5,67054,Final,2020
+201920,Academic year,National,E92000001,England,All students,One maths/science subject,47.9,125488,Final,2020
+201920,Academic year,National,E92000001,England,Female,Total students,100,145274,Final,2020
+201920,Academic year,National,E92000001,England,Male,Total students,100,116532,Final,2020
+201920,Academic year,National,E92000001,England,All students,Total students,100,261809,Final,2020
+201819,Academic year,National,E92000001,England,All students,Biology,23,59722,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Chemistry,19.7,51171,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Computer science,3.9,10035,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Five maths/science subjects,0,61,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Four maths/science subjects,1.9,4866,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Further maths,5,12889,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Maths,30.1,78271,Revised,2019
+201819,Academic year,National,E92000001,England,All students,One maths/science subject,47.8,124446,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Physics,13.1,34129,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Six maths/science subjects,0,1,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Three maths/science subjects,14.6,38004,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Total students,100,260208,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Two maths/science subjects,30.3,78839,Revised,2019
+201819,Academic year,National,E92000001,England,All students,Zero maths/science subjects,52.2,135762,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Biology,26.2,37647,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Chemistry,19.1,27463,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Computer science,0.9,1322,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,16,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Four maths/science subjects,0.9,1329,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Further maths,2.6,3687,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Maths,21.2,30402,Revised,2019
+201819,Academic year,National,E92000001,England,Female,One maths/science subject,40.4,58017,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Physics,5.3,7636,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Six maths/science subjects,NA,NA,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Three maths/science subjects,10.2,14625,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Total students,100,143485,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Two maths/science subjects,23.8,34170,Revised,2019
+201819,Academic year,National,E92000001,England,Female,Zero maths/science subjects,59.6,85468,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Biology,18.9,22075,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Chemistry,20.3,23708,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Computer science,7.5,8713,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Five maths/science subjects,0,45,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Four maths/science subjects,3,3537,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Further maths,7.9,9202,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Maths,41,47869,Revised,2019
+201819,Academic year,National,E92000001,England,Male,One maths/science subject,56.9,66429,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Physics,22.7,26493,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Six maths/science subjects,NA,NA,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Three maths/science subjects,20,23379,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Total students,100,116722,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Two maths/science subjects,38.3,44669,Revised,2019
+201819,Academic year,National,E92000001,England,Male,Zero maths/science subjects,43.1,50293,Revised,2019
+201718,Academic year,National,E92000001,England,All students,Biology,20.9,54000,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Chemistry,17.9,47000,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Computer science,3.5,9000,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Five maths/science subjects,0,0,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Four maths/science subjects,1.9,5000,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Further maths,5.5,14000,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Maths,31.5,82000,Revised,2018
+201718,Academic year,National,E92000001,England,All students,One maths/science subject,46.8,122000,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Physics,12.6,33000,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Three maths/science subjects,14.3,37000,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Total students,100,260494,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Two maths/science subjects,28.9,75000,Revised,2018
+201718,Academic year,National,E92000001,England,All students,Zero maths/science subjects,53.2,139000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Biology,24,35000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Chemistry,17.1,25000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Computer science,0.7,1000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,0,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Four maths/science subjects,0.9,1000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Further maths,2.8,4000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Maths,22.6,33000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,One maths/science subject,39.1,56000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Physics,5,7000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Three maths/science subjects,9.9,14000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Total students,100,143875,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Two maths/science subjects,22.3,32000,Revised,2018
+201718,Academic year,National,E92000001,England,Female,Zero maths/science subjects,60.9,88000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Biology,17,20000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Chemistry,18.9,22000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Computer science,7,8000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Five maths/science subjects,0.1,0,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Four maths/science subjects,3,4000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Further maths,8.8,10000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Maths,42.4,49000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,One maths/science subject,56.1,65000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Physics,22,26000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Three maths/science subjects,19.8,23000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Total students,100,116617,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Two maths/science subjects,37,43000,Revised,2018
+201718,Academic year,National,E92000001,England,Male,Zero maths/science subjects,43.9,51000,Revised,2018
+201617,Academic year,National,E92000001,England,All students,Biology,19.6,52000,Final,2017
+201617,Academic year,National,E92000001,England,All students,Chemistry,16.7,44000,Final,2017
+201617,Academic year,National,E92000001,England,All students,Computer science,2.8,7000,Final,2017
+201617,Academic year,National,E92000001,England,All students,Five maths/science subjects,0,0,Final,2017
+201617,Academic year,National,E92000001,England,All students,Four maths/science subjects,1.7,5000,Final,2017
+201617,Academic year,National,E92000001,England,All students,Further maths,5.4,14000,Final,2017
+201617,Academic year,National,E92000001,England,All students,Maths,30,79000,Final,2017
+201617,Academic year,National,E92000001,England,All students,One maths/science subject,44.3,116000,Final,2017
+201617,Academic year,National,E92000001,England,All students,Physics,11.8,31000,Final,2017
+201617,Academic year,National,E92000001,England,All students,Three maths/science subjects,13.2,35000,Final,2017
+201617,Academic year,National,E92000001,England,All students,Total students,100,263095,Final,2017
+201617,Academic year,National,E92000001,England,All students,Two maths/science subjects,26.9,71000,Final,2017
+201617,Academic year,National,E92000001,England,All students,Zero maths/science subjects,55.7,147000,Final,2017
+201617,Academic year,National,E92000001,England,Female,Biology,22,32000,Final,2017
+201617,Academic year,National,E92000001,England,Female,Chemistry,15.3,22000,Final,2017
+201617,Academic year,National,E92000001,England,Female,Computer science,0.5,1000,Final,2017
+201617,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,0,Final,2017
+201617,Academic year,National,E92000001,England,Female,Four maths/science subjects,0.8,1000,Final,2017
+201617,Academic year,National,E92000001,England,Female,Further maths,2.7,4000,Final,2017
+201617,Academic year,National,E92000001,England,Female,Maths,21.3,31000,Final,2017
+201617,Academic year,National,E92000001,England,Female,One maths/science subject,36.3,53000,Final,2017
+201617,Academic year,National,E92000001,England,Female,Physics,4.5,7000,Final,2017
+201617,Academic year,National,E92000001,England,Female,Three maths/science subjects,8.9,13000,Final,2017
+201617,Academic year,National,E92000001,England,Female,Total students,100,145572,Final,2017
+201617,Academic year,National,E92000001,England,Female,Two maths/science subjects,20.3,30000,Final,2017
+201617,Academic year,National,E92000001,England,Female,Zero maths/science subjects,63.7,93000,Final,2017
+201617,Academic year,National,E92000001,England,Male,Biology,16.6,20000,Final,2017
+201617,Academic year,National,E92000001,England,Male,Chemistry,18.4,22000,Final,2017
+201617,Academic year,National,E92000001,England,Male,Computer science,5.6,7000,Final,2017
+201617,Academic year,National,E92000001,England,Male,Five maths/science subjects,0.1,0,Final,2017
+201617,Academic year,National,E92000001,England,Male,Four maths/science subjects,2.8,3000,Final,2017
+201617,Academic year,National,E92000001,England,Male,Further maths,8.7,10000,Final,2017
+201617,Academic year,National,E92000001,England,Male,Maths,40.7,48000,Final,2017
+201617,Academic year,National,E92000001,England,Male,One maths/science subject,54.1,64000,Final,2017
+201617,Academic year,National,E92000001,England,Male,Physics,20.8,24000,Final,2017
+201617,Academic year,National,E92000001,England,Male,Three maths/science subjects,18.6,22000,Final,2017
+201617,Academic year,National,E92000001,England,Male,Total students,100,117523,Final,2017
+201617,Academic year,National,E92000001,England,Male,Two maths/science subjects,35.1,41000,Final,2017
+201617,Academic year,National,E92000001,England,Male,Zero maths/science subjects,45.9,54000,Final,2017
+201516,Academic year,National,E92000001,England,All students,Biology,19.5,52000,Final,2016
+201516,Academic year,National,E92000001,England,All students,Chemistry,16.3,43000,Final,2016
+201516,Academic year,National,E92000001,England,All students,Computer science,2.1,5000,Final,2016
+201516,Academic year,National,E92000001,England,All students,Five maths/science subjects,0,0,Final,2016
+201516,Academic year,National,E92000001,England,All students,Four maths/science subjects,1.7,5000,Final,2016
+201516,Academic year,National,E92000001,England,All students,Further maths,5.2,14000,Final,2016
+201516,Academic year,National,E92000001,England,All students,Maths,29,77000,Final,2016
+201516,Academic year,National,E92000001,England,All students,One maths/science subject,42.8,113000,Final,2016
+201516,Academic year,National,E92000001,England,All students,Physics,11.3,30000,Final,2016
+201516,Academic year,National,E92000001,England,All students,Three maths/science subjects,12.7,34000,Final,2016
+201516,Academic year,National,E92000001,England,All students,Total students,100,264807,Final,2016
+201516,Academic year,National,E92000001,England,All students,Two maths/science subjects,26,69000,Final,2016
+201516,Academic year,National,E92000001,England,All students,Zero maths/science subjects,57.2,151000,Final,2016
+201516,Academic year,National,E92000001,England,Female,Biology,21.5,32000,Final,2016
+201516,Academic year,National,E92000001,England,Female,Chemistry,14.6,22000,Final,2016
+201516,Academic year,National,E92000001,England,Female,Computer science,0.4,1000,Final,2016
+201516,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,0,Final,2016
+201516,Academic year,National,E92000001,England,Female,Four maths/science subjects,0.9,1000,Final,2016
+201516,Academic year,National,E92000001,England,Female,Further maths,2.6,4000,Final,2016
+201516,Academic year,National,E92000001,England,Female,Maths,20.3,30000,Final,2016
+201516,Academic year,National,E92000001,England,Female,One maths/science subject,35.1,52000,Final,2016
+201516,Academic year,National,E92000001,England,Female,Physics,4.4,6000,Final,2016
+201516,Academic year,National,E92000001,England,Female,Three maths/science subjects,8.3,12000,Final,2016
+201516,Academic year,National,E92000001,England,Female,Total students,100,147208,Final,2016
+201516,Academic year,National,E92000001,England,Female,Two maths/science subjects,19.4,29000,Final,2016
+201516,Academic year,National,E92000001,England,Female,Zero maths/science subjects,64.9,96000,Final,2016
+201516,Academic year,National,E92000001,England,Male,Biology,17,20000,Final,2016
+201516,Academic year,National,E92000001,England,Male,Chemistry,18.4,22000,Final,2016
+201516,Academic year,National,E92000001,England,Male,Computer science,4.2,5000,Final,2016
+201516,Academic year,National,E92000001,England,Male,Five maths/science subjects,0.1,0,Final,2016
+201516,Academic year,National,E92000001,England,Male,Four maths/science subjects,2.8,3000,Final,2016
+201516,Academic year,National,E92000001,England,Male,Further maths,8.4,10000,Final,2016
+201516,Academic year,National,E92000001,England,Male,Maths,39.9,47000,Final,2016
+201516,Academic year,National,E92000001,England,Male,One maths/science subject,52.5,62000,Final,2016
+201516,Academic year,National,E92000001,England,Male,Physics,20,23000,Final,2016
+201516,Academic year,National,E92000001,England,Male,Three maths/science subjects,18.2,21000,Final,2016
+201516,Academic year,National,E92000001,England,Male,Total students,100,117599,Final,2016
+201516,Academic year,National,E92000001,England,Male,Two maths/science subjects,34.2,40000,Final,2016
+201516,Academic year,National,E92000001,England,Male,Zero maths/science subjects,47.5,56000,Final,2016
+201415,Academic year,National,E92000001,England,All students,Biology,19.4,52000,Final,2015
+201415,Academic year,National,E92000001,England,All students,Chemistry,16.4,44000,Final,2015
+201415,Academic year,National,E92000001,England,All students,Computer science,1.8,5000,Final,2015
+201415,Academic year,National,E92000001,England,All students,Five maths/science subjects,0.1,0,Final,2015
+201415,Academic year,National,E92000001,England,All students,Four maths/science subjects,1.9,5000,Final,2015
+201415,Academic year,National,E92000001,England,All students,Further maths,4.9,13000,Final,2015
+201415,Academic year,National,E92000001,England,All students,Maths,28.6,76000,Final,2015
+201415,Academic year,National,E92000001,England,All students,One maths/science subject,42.2,112000,Final,2015
+201415,Academic year,National,E92000001,England,All students,Physics,11.4,30000,Final,2015
+201415,Academic year,National,E92000001,England,All students,Three maths/science subjects,12.7,34000,Final,2015
+201415,Academic year,National,E92000001,England,All students,Total students,100,266138,Final,2015
+201415,Academic year,National,E92000001,England,All students,Two maths/science subjects,25.5,68000,Final,2015
+201415,Academic year,National,E92000001,England,All students,Zero maths/science subjects,57.8,154000,Final,2015
+201415,Academic year,National,E92000001,England,Female,Biology,21.2,31000,Final,2015
+201415,Academic year,National,E92000001,England,Female,Chemistry,14.5,21000,Final,2015
+201415,Academic year,National,E92000001,England,Female,Computer science,0.3,0,Final,2015
+201415,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,0,Final,2015
+201415,Academic year,National,E92000001,England,Female,Four maths/science subjects,0.9,1000,Final,2015
+201415,Academic year,National,E92000001,England,Female,Further maths,2.5,4000,Final,2015
+201415,Academic year,National,E92000001,England,Female,Maths,20.2,30000,Final,2015
+201415,Academic year,National,E92000001,England,Female,One maths/science subject,34.7,51000,Final,2015
+201415,Academic year,National,E92000001,England,Female,Physics,4.4,6000,Final,2015
+201415,Academic year,National,E92000001,England,Female,Three maths/science subjects,8.3,12000,Final,2015
+201415,Academic year,National,E92000001,England,Female,Total students,100,147737,Final,2015
+201415,Academic year,National,E92000001,England,Female,Two maths/science subjects,19,28000,Final,2015
+201415,Academic year,National,E92000001,England,Female,Zero maths/science subjects,65.3,96000,Final,2015
+201415,Academic year,National,E92000001,England,Male,Biology,17,20000,Final,2015
+201415,Academic year,National,E92000001,England,Male,Chemistry,18.7,22000,Final,2015
+201415,Academic year,National,E92000001,England,Male,Computer science,3.6,4000,Final,2015
+201415,Academic year,National,E92000001,England,Male,Five maths/science subjects,0.1,0,Final,2015
+201415,Academic year,National,E92000001,England,Male,Four maths/science subjects,3.1,4000,Final,2015
+201415,Academic year,National,E92000001,England,Male,Further maths,8,9000,Final,2015
+201415,Academic year,National,E92000001,England,Male,Maths,39,46000,Final,2015
+201415,Academic year,National,E92000001,England,Male,One maths/science subject,51.6,61000,Final,2015
+201415,Academic year,National,E92000001,England,Male,Physics,20.1,24000,Final,2015
+201415,Academic year,National,E92000001,England,Male,Three maths/science subjects,18.2,22000,Final,2015
+201415,Academic year,National,E92000001,England,Male,Total students,100,118401,Final,2015
+201415,Academic year,National,E92000001,England,Male,Two maths/science subjects,33.5,40000,Final,2015
+201415,Academic year,National,E92000001,England,Male,Zero maths/science subjects,48.4,57000,Final,2015
+201314,Academic year,National,E92000001,England,All students,Biology,20.3,52000,Final,2014
+201314,Academic year,National,E92000001,England,All students,Chemistry,17.1,44000,Final,2014
+201314,Academic year,National,E92000001,England,All students,Computer science,1.4,4000,Final,2014
+201314,Academic year,National,E92000001,England,All students,Five maths/science subjects,0.1,0,Final,2014
+201314,Academic year,National,E92000001,England,All students,Four maths/science subjects,2,5000,Final,2014
+201314,Academic year,National,E92000001,England,All students,Further maths,4.8,12000,Final,2014
+201314,Academic year,National,E92000001,England,All students,Maths,28.4,73000,Final,2014
+201314,Academic year,National,E92000001,England,All students,One maths/science subject,42.5,109000,Final,2014
+201314,Academic year,National,E92000001,England,All students,Physics,11.9,31000,Final,2014
+201314,Academic year,National,E92000001,England,All students,Three maths/science subjects,13.3,34000,Final,2014
+201314,Academic year,National,E92000001,England,All students,Total students,100,257390,Final,2014
+201314,Academic year,National,E92000001,England,All students,Two maths/science subjects,26.2,67000,Final,2014
+201314,Academic year,National,E92000001,England,All students,Zero maths/science subjects,57.5,148000,Final,2014
+201314,Academic year,National,E92000001,England,Female,Biology,21.9,31000,Final,2014
+201314,Academic year,National,E92000001,England,Female,Chemistry,15.1,21000,Final,2014
+201314,Academic year,National,E92000001,England,Female,Computer science,0.2,0,Final,2014
+201314,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,0,Final,2014
+201314,Academic year,National,E92000001,England,Female,Four maths/science subjects,1,1000,Final,2014
+201314,Academic year,National,E92000001,England,Female,Further maths,2.5,4000,Final,2014
+201314,Academic year,National,E92000001,England,Female,Maths,20.3,29000,Final,2014
+201314,Academic year,National,E92000001,England,Female,One maths/science subject,35,50000,Final,2014
+201314,Academic year,National,E92000001,England,Female,Physics,4.5,6000,Final,2014
+201314,Academic year,National,E92000001,England,Female,Three maths/science subjects,8.9,13000,Final,2014
+201314,Academic year,National,E92000001,England,Female,Total students,100,141657,Final,2014
+201314,Academic year,National,E92000001,England,Female,Two maths/science subjects,19.6,28000,Final,2014
+201314,Academic year,National,E92000001,England,Female,Zero maths/science subjects,65,92000,Final,2014
+201314,Academic year,National,E92000001,England,Male,Biology,18.3,21000,Final,2014
+201314,Academic year,National,E92000001,England,Male,Chemistry,19.7,23000,Final,2014
+201314,Academic year,National,E92000001,England,Male,Computer science,2.9,3000,Final,2014
+201314,Academic year,National,E92000001,England,Male,Five maths/science subjects,0.1,0,Final,2014
+201314,Academic year,National,E92000001,England,Male,Four maths/science subjects,3.2,4000,Final,2014
+201314,Academic year,National,E92000001,England,Male,Further maths,7.7,9000,Final,2014
+201314,Academic year,National,E92000001,England,Male,Maths,38.3,44000,Final,2014
+201314,Academic year,National,E92000001,England,Male,One maths/science subject,51.6,60000,Final,2014
+201314,Academic year,National,E92000001,England,Male,Physics,20.9,24000,Final,2014
+201314,Academic year,National,E92000001,England,Male,Three maths/science subjects,18.6,22000,Final,2014
+201314,Academic year,National,E92000001,England,Male,Total students,100,115733,Final,2014
+201314,Academic year,National,E92000001,England,Male,Two maths/science subjects,34.3,40000,Final,2014
+201314,Academic year,National,E92000001,England,Male,Zero maths/science subjects,48.4,56000,Final,2014
+201213,Academic year,National,E92000001,England,All students,Biology,20.3,53000,Final,2013
+201213,Academic year,National,E92000001,England,All students,Chemistry,16.8,44000,Final,2013
+201213,Academic year,National,E92000001,England,All students,Computer science,1.2,3000,Final,2013
+201213,Academic year,National,E92000001,England,All students,Five maths/science subjects,0.1,0,Final,2013
+201213,Academic year,National,E92000001,England,All students,Four maths/science subjects,2.1,5000,Final,2013
+201213,Academic year,National,E92000001,England,All students,Further maths,4.7,12000,Final,2013
+201213,Academic year,National,E92000001,England,All students,Maths,28.1,73000,Final,2013
+201213,Academic year,National,E92000001,England,All students,One maths/science subject,42.3,111000,Final,2013
+201213,Academic year,National,E92000001,England,All students,Physics,11.5,30000,Final,2013
+201213,Academic year,National,E92000001,England,All students,Three maths/science subjects,12.8,33000,Final,2013
+201213,Academic year,National,E92000001,England,All students,Total students,100,261468,Final,2013
+201213,Academic year,National,E92000001,England,All students,Two maths/science subjects,25.5,67000,Final,2013
+201213,Academic year,National,E92000001,England,All students,Zero maths/science subjects,57.7,151000,Final,2013
+201213,Academic year,National,E92000001,England,Female,Biology,21.6,31000,Final,2013
+201213,Academic year,National,E92000001,England,Female,Chemistry,14.8,21000,Final,2013
+201213,Academic year,National,E92000001,England,Female,Computer science,0.1,0,Final,2013
+201213,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,0,Final,2013
+201213,Academic year,National,E92000001,England,Female,Four maths/science subjects,1.1,2000,Final,2013
+201213,Academic year,National,E92000001,England,Female,Further maths,2.4,3000,Final,2013
+201213,Academic year,National,E92000001,England,Female,Maths,20.4,29000,Final,2013
+201213,Academic year,National,E92000001,England,Female,One maths/science subject,34.9,50000,Final,2013
+201213,Academic year,National,E92000001,England,Female,Physics,4.4,6000,Final,2013
+201213,Academic year,National,E92000001,England,Female,Three maths/science subjects,8.6,12000,Final,2013
+201213,Academic year,National,E92000001,England,Female,Total students,100,143303,Final,2013
+201213,Academic year,National,E92000001,England,Female,Two maths/science subjects,19.1,27000,Final,2013
+201213,Academic year,National,E92000001,England,Female,Zero maths/science subjects,65.1,93000,Final,2013
+201213,Academic year,National,E92000001,England,Male,Biology,18.8,22000,Final,2013
+201213,Academic year,National,E92000001,England,Male,Chemistry,19.3,23000,Final,2013
+201213,Academic year,National,E92000001,England,Male,Computer science,2.6,3000,Final,2013
+201213,Academic year,National,E92000001,England,Male,Five maths/science subjects,0.2,0,Final,2013
+201213,Academic year,National,E92000001,England,Male,Four maths/science subjects,3.3,4000,Final,2013
+201213,Academic year,National,E92000001,England,Male,Further maths,7.4,9000,Final,2013
+201213,Academic year,National,E92000001,England,Male,Maths,37.4,44000,Final,2013
+201213,Academic year,National,E92000001,England,Male,One maths/science subject,51.2,60000,Final,2013
+201213,Academic year,National,E92000001,England,Male,Physics,20.1,24000,Final,2013
+201213,Academic year,National,E92000001,England,Male,Three maths/science subjects,17.8,21000,Final,2013
+201213,Academic year,National,E92000001,England,Male,Total students,100,118165,Final,2013
+201213,Academic year,National,E92000001,England,Male,Two maths/science subjects,33.2,39000,Final,2013
+201213,Academic year,National,E92000001,England,Male,Zero maths/science subjects,48.8,58000,Final,2013
+201112,Academic year,National,E92000001,England,All students,Biology,19.9,52000,Final,2012
+201112,Academic year,National,E92000001,England,All students,Chemistry,15.8,41000,Final,2012
+201112,Academic year,National,E92000001,England,All students,Computer science,1.3,3000,Final,2012
+201112,Academic year,National,E92000001,England,All students,Five maths/science subjects,0.1,0,Final,2012
+201112,Academic year,National,E92000001,England,All students,Four maths/science subjects,2.1,6000,Final,2012
+201112,Academic year,National,E92000001,England,All students,Further maths,4.5,12000,Final,2012
+201112,Academic year,National,E92000001,England,All students,Maths,27.3,72000,Final,2012
+201112,Academic year,National,E92000001,England,All students,One maths/science subject,41.2,108000,Final,2012
+201112,Academic year,National,E92000001,England,All students,Physics,11.1,29000,Final,2012
+201112,Academic year,National,E92000001,England,All students,Three maths/science subjects,12.1,32000,Final,2012
+201112,Academic year,National,E92000001,England,All students,Total students,100,262003,Final,2012
+201112,Academic year,National,E92000001,England,All students,Two maths/science subjects,24.4,64000,Final,2012
+201112,Academic year,National,E92000001,England,All students,Zero maths/science subjects,58.8,154000,Final,2012
+201112,Academic year,National,E92000001,England,Female,Biology,20.7,30000,Final,2012
+201112,Academic year,National,E92000001,England,Female,Chemistry,13.7,20000,Final,2012
+201112,Academic year,National,E92000001,England,Female,Computer science,0.2,0,Final,2012
+201112,Academic year,National,E92000001,England,Female,Five maths/science subjects,0.1,0,Final,2012
+201112,Academic year,National,E92000001,England,Female,Four maths/science subjects,1.1,2000,Final,2012
+201112,Academic year,National,E92000001,England,Female,Further maths,2.5,4000,Final,2012
+201112,Academic year,National,E92000001,England,Female,Maths,20.2,29000,Final,2012
+201112,Academic year,National,E92000001,England,Female,One maths/science subject,33.9,48000,Final,2012
+201112,Academic year,National,E92000001,England,Female,Physics,4.3,6000,Final,2012
+201112,Academic year,National,E92000001,England,Female,Three maths/science subjects,8.2,12000,Final,2012
+201112,Academic year,National,E92000001,England,Female,Total students,100,142979,Final,2012
+201112,Academic year,National,E92000001,England,Female,Two maths/science subjects,18.2,26000,Final,2012
+201112,Academic year,National,E92000001,England,Female,Zero maths/science subjects,66.1,95000,Final,2012
+201112,Academic year,National,E92000001,England,Male,Biology,19,23000,Final,2012
+201112,Academic year,National,E92000001,England,Male,Chemistry,18.4,22000,Final,2012
+201112,Academic year,National,E92000001,England,Male,Computer science,2.6,3000,Final,2012
+201112,Academic year,National,E92000001,England,Male,Five maths/science subjects,0.2,0,Final,2012
+201112,Academic year,National,E92000001,England,Male,Four maths/science subjects,3.3,4000,Final,2012
+201112,Academic year,National,E92000001,England,Male,Further maths,6.9,8000,Final,2012
+201112,Academic year,National,E92000001,England,Male,Maths,35.8,43000,Final,2012
+201112,Academic year,National,E92000001,England,Male,One maths/science subject,49.9,59000,Final,2012
+201112,Academic year,National,E92000001,England,Male,Physics,19.4,23000,Final,2012
+201112,Academic year,National,E92000001,England,Male,Three maths/science subjects,16.9,20000,Final,2012
+201112,Academic year,National,E92000001,England,Male,Total students,100,119024,Final,2012
+201112,Academic year,National,E92000001,England,Male,Two maths/science subjects,31.8,38000,Final,2012
+201112,Academic year,National,E92000001,England,Male,Zero maths/science subjects,50.1,60000,Final,2012
+201011,Academic year,National,E92000001,England,All students,Biology,19.6,51000,Final,2011
+201011,Academic year,National,E92000001,England,All students,Chemistry,15.4,40000,Final,2011
+201011,Academic year,National,E92000001,England,All students,Computer science,1.3,3000,Final,2011
+201011,Academic year,National,E92000001,England,All students,Five maths/science subjects,0.1,0,Final,2011
+201011,Academic year,National,E92000001,England,All students,Four maths/science subjects,2,5000,Final,2011
+201011,Academic year,National,E92000001,England,All students,Further maths,4.1,11000,Final,2011
+201011,Academic year,National,E92000001,England,All students,Maths,26.4,68000,Final,2011
+201011,Academic year,National,E92000001,England,All students,One maths/science subject,40.5,105000,Final,2011
+201011,Academic year,National,E92000001,England,All students,Physics,10.6,27000,Final,2011
+201011,Academic year,National,E92000001,England,All students,Three maths/science subjects,11.3,29000,Final,2011
+201011,Academic year,National,E92000001,England,All students,Total students,100,258892,Final,2011
+201011,Academic year,National,E92000001,England,All students,Two maths/science subjects,23.5,61000,Final,2011
+201011,Academic year,National,E92000001,England,All students,Zero maths/science subjects,59.5,154000,Final,2011
+201011,Academic year,National,E92000001,England,Female,Biology,20.5,29000,Final,2011
+201011,Academic year,National,E92000001,England,Female,Chemistry,13.4,19000,Final,2011
+201011,Academic year,National,E92000001,England,Female,Computer science,0.2,0,Final,2011
+201011,Academic year,National,E92000001,England,Female,Five maths/science subjects,0,0,Final,2011
+201011,Academic year,National,E92000001,England,Female,Four maths/science subjects,1,1000,Final,2011
+201011,Academic year,National,E92000001,England,Female,Further maths,2.4,3000,Final,2011
+201011,Academic year,National,E92000001,England,Female,Maths,19.7,28000,Final,2011
+201011,Academic year,National,E92000001,England,Female,One maths/science subject,33.6,47000,Final,2011
+201011,Academic year,National,E92000001,England,Female,Physics,4,6000,Final,2011
+201011,Academic year,National,E92000001,England,Female,Three maths/science subjects,7.9,11000,Final,2011
+201011,Academic year,National,E92000001,England,Female,Total students,100,140582,Final,2011
+201011,Academic year,National,E92000001,England,Female,Two maths/science subjects,17.6,25000,Final,2011
+201011,Academic year,National,E92000001,England,Female,Zero maths/science subjects,66.4,93000,Final,2011
+201011,Academic year,National,E92000001,England,Male,Biology,18.4,22000,Final,2011
+201011,Academic year,National,E92000001,England,Male,Chemistry,17.9,21000,Final,2011
+201011,Academic year,National,E92000001,England,Male,Computer science,2.6,3000,Final,2011
+201011,Academic year,National,E92000001,England,Male,Five maths/science subjects,0.2,0,Final,2011
+201011,Academic year,National,E92000001,England,Male,Four maths/science subjects,3.1,4000,Final,2011
+201011,Academic year,National,E92000001,England,Male,Further maths,6.2,7000,Final,2011
+201011,Academic year,National,E92000001,England,Male,Maths,34.3,41000,Final,2011
+201011,Academic year,National,E92000001,England,Male,One maths/science subject,48.6,57000,Final,2011
+201011,Academic year,National,E92000001,England,Male,Physics,18.3,22000,Final,2011
+201011,Academic year,National,E92000001,England,Male,Three maths/science subjects,15.5,18000,Final,2011
+201011,Academic year,National,E92000001,England,Male,Total students,100,118310,Final,2011
+201011,Academic year,National,E92000001,England,Male,Two maths/science subjects,30.4,36000,Final,2011
+201011,Academic year,National,E92000001,England,Male,Zero maths/science subjects,51.4,61000,Final,2011
+200910,Academic year,National,E92000001,England,All students,Biology,18.9,51000,Final,2010
+200910,Academic year,National,E92000001,England,All students,Chemistry,14.5,39000,Final,2010
+200910,Academic year,National,E92000001,England,All students,Computer science,1.3,3000,Final,2010
+200910,Academic year,National,E92000001,England,All students,Five maths/science subjects,0.1,0,Final,2010
+200910,Academic year,National,E92000001,England,All students,Four maths/science subjects,1.8,5000,Final,2010
+200910,Academic year,National,E92000001,England,All students,Further maths,3.9,10000,Final,2010
+200910,Academic year,National,E92000001,England,All students,Maths,24.7,66000,Final,2010
+200910,Academic year,National,E92000001,England,All students,One maths/science subject,39,104000,Final,2010
+200910,Academic year,National,E92000001,England,All students,Physics,10.1,27000,Final,2010
+200910,Academic year,National,E92000001,England,All students,Three maths/science subjects,10.4,28000,Final,2010
+200910,Academic year,National,E92000001,England,All students,Total students,100,267345,Final,2010
+200910,Academic year,National,E92000001,England,All students,Two maths/science subjects,22.1,59000,Final,2010
+200910,Academic year,National,E92000001,England,All students,Zero maths/science subjects,61,163000,Final,2010
+200910,Academic year,National,E92000001,England,Female,Biology,19.7,28000,Final,2010
+200910,Academic year,National,E92000001,England,Female,Chemistry,12.7,18000,Final,2010
+200910,Academic year,National,E92000001,England,Female,Computer science,0.2,0,Final,2010
+200910,Academic year,National,E92000001,England,Female,Five maths/science subjects,0.1,0,Final,2010
+200910,Academic year,National,E92000001,England,Female,Four maths/science subjects,1,1000,Final,2010
+200910,Academic year,National,E92000001,England,Female,Further maths,2.3,3000,Final,2010
+200910,Academic year,National,E92000001,England,Female,Maths,18.6,27000,Final,2010
+200910,Academic year,National,E92000001,England,Female,One maths/science subject,32.4,47000,Final,2010
+200910,Academic year,National,E92000001,England,Female,Physics,3.9,6000,Final,2010
+200910,Academic year,National,E92000001,England,Female,Three maths/science subjects,7.2,10000,Final,2010
+200910,Academic year,National,E92000001,England,Female,Total students,100,144447,Final,2010
+200910,Academic year,National,E92000001,England,Female,Two maths/science subjects,16.7,24000,Final,2010
+200910,Academic year,National,E92000001,England,Female,Zero maths/science subjects,67.6,98000,Final,2010
+200910,Academic year,National,E92000001,England,Male,Biology,18,22000,Final,2010
+200910,Academic year,National,E92000001,England,Male,Chemistry,16.5,20000,Final,2010
+200910,Academic year,National,E92000001,England,Male,Computer science,2.7,3000,Final,2010
+200910,Academic year,National,E92000001,England,Male,Five maths/science subjects,0.2,0,Final,2010
+200910,Academic year,National,E92000001,England,Male,Four maths/science subjects,2.8,3000,Final,2010
+200910,Academic year,National,E92000001,England,Male,Further maths,5.8,7000,Final,2010
+200910,Academic year,National,E92000001,England,Male,Maths,31.8,39000,Final,2010
+200910,Academic year,National,E92000001,England,Male,One maths/science subject,46.8,58000,Final,2010
+200910,Academic year,National,E92000001,England,Male,Physics,17.4,21000,Final,2010
+200910,Academic year,National,E92000001,England,Male,Three maths/science subjects,14.1,17000,Final,2010
+200910,Academic year,National,E92000001,England,Male,Total students,100,122898,Final,2010
+200910,Academic year,National,E92000001,England,Male,Two maths/science subjects,28.5,35000,Final,2010
+200910,Academic year,National,E92000001,England,Male,Zero maths/science subjects,53.2,65000,Final,2010

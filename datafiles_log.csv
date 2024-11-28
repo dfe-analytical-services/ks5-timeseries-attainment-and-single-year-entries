@@ -1,6 +1,6 @@
 filename,status
-data/alevel_attainment_with_rev2023.csv,published
-data/all_attainment_with_rev2023.csv,published
-data/all_alevel_timeseries_data_1996_to_2023rev.csv,published
-data/aps_gender_gap_with_rev2023.csv,published
-data/maths_science_2010_2023rev.csv,published
+data/all_attainment_with_2024_redacted.csv,published
+data/maths_science_2010_2024.csv,published
+data/all_alevel_timeseries_data_1996_to_2024.csv,published
+data/aps_gender_gap_with_2024.csv,published
+data/alevel_attainment_with_2024.csv,published

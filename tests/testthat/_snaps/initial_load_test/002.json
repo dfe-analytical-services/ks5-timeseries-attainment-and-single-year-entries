@@ -4,14 +4,13 @@
       "All FE sector colleges",
       "All state-funded schools"
     ],
-    "allGender": "All students",
     "cookieAccept": 0,
     "cookieLink": 0,
     "cookieReject": 0,
     "ees_1": 0,
     "ees_2a": 0,
     "ees_2b": 0,
-    "headlineAps": "All Institutions",
+    "headlineAps": "All FE sector colleges",
     "hideAccept": 0,
     "hideReject": 0,
     "link_to_alevelAllSubject_tab": 0,
@@ -32,27 +31,15 @@
     "tabsetpanels": "headline",
     "tabsetpanels2a": "alevelAllSubject",
     "tabsetpanels2b": "alevelFmSubject",
-    "year_end": "2023",
-    "year_end_fm": "2023",
+    "year_end": "2024",
+    "year_end_fm": "2024",
     "year_start": "1996",
     "year_start_fm": "1996"
   },
   "output": {
     "dropdown_label": "Click to download full dataset",
     "headBox1": {
-      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>B-<\/h3>\n    <p>Average A level result  equivalent to 35.16 points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
-      "deps": [
-
-      ]
-    },
-    "headBox2": {
-      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Merit+<\/h3>\n    <p>Average applied general result equivalent to 29.56  points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
-      "deps": [
-
-      ]
-    },
-    "headBox3": {
-      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Merit+<\/h3>\n    <p>Average tech level result equivalent to 28.51  points:   All Institutions<\/p>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>C+<\/h3>\n    <p>Average A level result  equivalent to 32.47 points:   All FE sector colleges<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
@@ -69,27 +56,30 @@
               2020,
               2021,
               2022,
-              2023
+              2023,
+              2024
             ],
             "y": [
-              31.789999999999999,
-              32.390000000000001,
-              33.329999999999998,
-              34.009999999999998,
-              39.640000000000001,
-              41.659999999999997,
-              38.869999999999997,
-              35.159999999999997
+              29.210000000000001,
+              30.030000000000001,
+              31.129999999999999,
+              31.920000000000002,
+              36.740000000000002,
+              38.600000000000001,
+              36.289999999999999,
+              32.460000000000001,
+              32.469999999999999
             ],
             "text": [
-              "Year: 2016<br />APS: 31.79<br />Qualification: A level",
-              "Year: 2017<br />APS: 32.39<br />Qualification: A level",
-              "Year: 2018<br />APS: 33.33<br />Qualification: A level",
-              "Year: 2019<br />APS: 34.01<br />Qualification: A level",
-              "Year: 2020<br />APS: 39.64<br />Qualification: A level",
-              "Year: 2021<br />APS: 41.66<br />Qualification: A level",
-              "Year: 2022<br />APS: 38.87<br />Qualification: A level",
-              "Year: 2023<br />APS: 35.16<br />Qualification: A level"
+              "Year: 2016<br />APS: 29.21<br />Qualification: A level",
+              "Year: 2017<br />APS: 30.03<br />Qualification: A level",
+              "Year: 2018<br />APS: 31.13<br />Qualification: A level",
+              "Year: 2019<br />APS: 31.92<br />Qualification: A level",
+              "Year: 2020<br />APS: 36.74<br />Qualification: A level",
+              "Year: 2021<br />APS: 38.60<br />Qualification: A level",
+              "Year: 2022<br />APS: 36.29<br />Qualification: A level",
+              "Year: 2023<br />APS: 32.46<br />Qualification: A level",
+              "Year: 2024<br />APS: 32.47<br />Qualification: A level"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -116,27 +106,30 @@
               2020,
               2021,
               2022,
-              2023
+              2023,
+              2024
             ],
             "y": [
-              34.689999999999998,
-              35.719999999999999,
-              28.449999999999999,
-              28.91,
-              31.25,
-              32.689999999999998,
-              31.98,
-              29.559999999999999
+              32.600000000000001,
+              33.530000000000001,
+              26.25,
+              27.199999999999999,
+              28.210000000000001,
+              30.079999999999998,
+              30.440000000000001,
+              27.989999999999998,
+              null
             ],
             "text": [
-              "Year: 2016<br />APS: 34.69<br />Qualification: Applied general",
-              "Year: 2017<br />APS: 35.72<br />Qualification: Applied general",
-              "Year: 2018<br />APS: 28.45<br />Qualification: Applied general",
-              "Year: 2019<br />APS: 28.91<br />Qualification: Applied general",
-              "Year: 2020<br />APS: 31.25<br />Qualification: Applied general",
-              "Year: 2021<br />APS: 32.69<br />Qualification: Applied general",
-              "Year: 2022<br />APS: 31.98<br />Qualification: Applied general",
-              "Year: 2023<br />APS: 29.56<br />Qualification: Applied general"
+              "Year: 2016<br />APS: 32.60<br />Qualification: Applied general",
+              "Year: 2017<br />APS: 33.53<br />Qualification: Applied general",
+              "Year: 2018<br />APS: 26.25<br />Qualification: Applied general",
+              "Year: 2019<br />APS: 27.20<br />Qualification: Applied general",
+              "Year: 2020<br />APS: 28.21<br />Qualification: Applied general",
+              "Year: 2021<br />APS: 30.08<br />Qualification: Applied general",
+              "Year: 2022<br />APS: 30.44<br />Qualification: Applied general",
+              "Year: 2023<br />APS: 27.99<br />Qualification: Applied general",
+              "Year: 2024<br />APS:    NA<br />Qualification: Applied general"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -163,27 +156,30 @@
               2020,
               2021,
               2022,
-              2023
+              2023,
+              2024
             ],
             "y": [
-              30.77,
-              32.259999999999998,
-              28.100000000000001,
-              28.640000000000001,
-              29.93,
-              31.68,
-              30.559999999999999,
-              28.510000000000002
+              29.73,
+              31.129999999999999,
+              25.600000000000001,
+              26.920000000000002,
+              27.890000000000001,
+              29.870000000000001,
+              29.100000000000001,
+              26.84,
+              null
             ],
             "text": [
-              "Year: 2016<br />APS: 30.77<br />Qualification: Tech level",
-              "Year: 2017<br />APS: 32.26<br />Qualification: Tech level",
-              "Year: 2018<br />APS: 28.10<br />Qualification: Tech level",
-              "Year: 2019<br />APS: 28.64<br />Qualification: Tech level",
-              "Year: 2020<br />APS: 29.93<br />Qualification: Tech level",
-              "Year: 2021<br />APS: 31.68<br />Qualification: Tech level",
-              "Year: 2022<br />APS: 30.56<br />Qualification: Tech level",
-              "Year: 2023<br />APS: 28.51<br />Qualification: Tech level"
+              "Year: 2016<br />APS: 29.73<br />Qualification: Tech level",
+              "Year: 2017<br />APS: 31.13<br />Qualification: Tech level",
+              "Year: 2018<br />APS: 25.60<br />Qualification: Tech level",
+              "Year: 2019<br />APS: 26.92<br />Qualification: Tech level",
+              "Year: 2020<br />APS: 27.89<br />Qualification: Tech level",
+              "Year: 2021<br />APS: 29.87<br />Qualification: Tech level",
+              "Year: 2022<br />APS: 29.10<br />Qualification: Tech level",
+              "Year: 2023<br />APS: 26.84<br />Qualification: Tech level",
+              "Year: 2024<br />APS:    NA<br />Qualification: Tech level"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -225,7 +221,7 @@
             "size": 15.940224159402243
           },
           "title": {
-            "text": "<br /> Average point score:   All Institutions",
+            "text": "<br /> Average point score (All students) :   All FE sector colleges",
             "font": {
               "color": "rgba(0,0,0,1)",
               "family": "",
@@ -243,8 +239,8 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              2015.6500000000001,
-              2023.3499999999999
+              2015.5999999999999,
+              2024.4000000000001
             ],
             "tickmode": "array",
             "ticktext": [
@@ -255,7 +251,8 @@
               "2020",
               "2021",
               "2022",
-              "2023"
+              "2023",
+              "2024"
             ],
             "tickvals": [
               2016,
@@ -265,7 +262,8 @@
               2020,
               2021,
               2022,
-              2023
+              2023,
+              2024
             ],
             "categoryorder": "array",
             "categoryarray": [
@@ -276,7 +274,8 @@
               "2020",
               "2021",
               "2022",
-              "2023"
+              "2023",
+              "2024"
             ],
             "nticks": null,
             "ticks": "outside",
@@ -518,9 +517,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -564,7 +563,7 @@
         "extensions": [
           "Buttons"
         ],
-        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Academic year<\/th>\n      <th>Institution type<\/th>\n      <th>Number of students<\/th>\n      <th>APS per entry<\/th>\n      <th>APS per entry grade<\/th>\n      <th>Qualification<\/th>\n      <th>Version<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Academic year<\/th>\n      <th>Establishment type<\/th>\n      <th>Number of students<\/th>\n      <th>APS per entry<\/th>\n      <th>APS per entry grade<\/th>\n      <th>Qualification<\/th>\n      <th>Version<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "infor": false,
           "paging": false,
@@ -590,6 +589,38 @@
                 3,
                 4
               ]
+            },
+            {
+              "name": "Year",
+              "targets": 0
+            },
+            {
+              "name": "Academic year",
+              "targets": 1
+            },
+            {
+              "name": "Establishment type",
+              "targets": 2
+            },
+            {
+              "name": "Number of students",
+              "targets": 3
+            },
+            {
+              "name": "APS per entry",
+              "targets": 4
+            },
+            {
+              "name": "APS per entry grade",
+              "targets": 5
+            },
+            {
+              "name": "Qualification",
+              "targets": 6
+            },
+            {
+              "name": "Version",
+              "targets": 7
             }
           ],
           "order": [
@@ -633,9 +664,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-1.13.4"
+            "href": "dt-core-1.13.6"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -650,9 +681,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "jszip-1.13.4"
+            "href": "jszip-1.13.6"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -664,9 +695,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-1.13.4"
+            "href": "dt-ext-buttons-1.13.6"
           },
           "meta": null,
           "script": [
@@ -683,9 +714,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -696,6 +727,6 @@
         }
       ]
     },
-    "textHeadline": "The boxes display the latest provisional average results in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general\n    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.\n    Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.\n\n    The chart shows the APS from 2015/16 to 2022/23 for  All Institutions  in England. To view results, click on the drop-down box and select one institution type."
+    "textHeadline": "The box displays the latest revised average grade in 2023/24 for A level result. The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.\n    In 2018, there was a large drop in the number of applied general and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.\n    Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.\n\n    The chart shows the APS from 2015/16 to 2023/24 for  All FE sector colleges  in England. To view results, click on the drop-down box and select one institution type."
   }
 }

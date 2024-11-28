@@ -47,7 +47,7 @@ server <- function(input, output, session) {
         paste0(
           # site_title, " - ",
           input$alevelInstitute, ", ",
-          input$allGender
+          input$allSex
         )
       )
     } else {
@@ -157,7 +157,7 @@ server <- function(input, output, session) {
   reactiveHeadline <- reactive({
     headlineData <- dfAttainment %>%
       filter(
-        school_type == input$headlineAps
+        establishment_type == input$headlineAps
       )
   })
 
@@ -179,9 +179,9 @@ server <- function(input, output, session) {
   # Add value box for A level
   output$headBox1 <- renderValueBox({
     latest <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps
+      filter(year == max(year), cert_type == "A level", establishment_type == input$headlineAps))$aps
     grade <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "A level", school_type == input$headlineAps))$aps_grade
+      filter(year == max(year), cert_type == "A level", establishment_type == input$headlineAps))$aps_grade
 
     valueBox(
       value = grade, subtitle = paste0("Average A level result  equivalent to ", latest, " points:   ", input$headlineAps), # width = 12,
@@ -189,33 +189,33 @@ server <- function(input, output, session) {
     )
   })
 
-
-  # Add value box for Applied general
-  output$headBox2 <- renderValueBox({
-    latest <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps
-    # result <- "Average applied general result"
-    grade <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Applied general", school_type == input$headlineAps))$aps_grade
-    valueBox(
-      value = grade, subtitle = paste0("Average applied general result equivalent to ", latest, "  points:   ", input$headlineAps),
-      color = "blue"
-    )
-  })
-
-
-  #  Add Value box for Tech level
-
-  output$headBox3 <- renderValueBox({
-    latest <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps
-    grade <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Tech level", school_type == input$headlineAps))$aps_grade
-    valueBox(
-      value = grade, subtitle = paste0("Average tech level result equivalent to ", latest, "  points:   ", input$headlineAps),
-      color = "blue"
-    )
-  })
+  #
+  #   # Add value box for Applied general
+  #   output$headBox2 <- renderValueBox({
+  #     latest <- (reactiveHeadline() %>%
+  #       filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps
+  #     # result <- "Average applied general result"
+  #     grade <- (reactiveHeadline() %>%
+  #       filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps_grade
+  #     valueBox(
+  #       value = grade, subtitle = paste0("Average applied general result equivalent to ", latest, "  points:   ", input$headlineAps),
+  #       color = "blue"
+  #     )
+  #   })
+  #
+  #
+  #   #  Add Value box for Tech level
+  #
+  #   output$headBox3 <- renderValueBox({
+  #     latest <- (reactiveHeadline() %>%
+  #       filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps
+  #     grade <- (reactiveHeadline() %>%
+  #       filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps_grade
+  #     valueBox(
+  #       value = grade, subtitle = paste0("Average tech level result equivalent to ", latest, "  points:   ", input$headlineAps),
+  #       color = "blue"
+  #     )
+  #   })
 
   # Create reactive for Headline data
 
@@ -223,12 +223,12 @@ server <- function(input, output, session) {
     headlineData <- dfAttainment
     headlineData <- subset(
       headlineData,
-      school_type == input$headlineAps
+      establishment_type == input$headlineAps
     ) %>%
       select(
         Year = year,
         `Academic year` = time_period,
-        `Institution type` = school_type,
+        `Establishment type` = establishment_type,
         `Number of students` = number_of_students,
         `APS per entry` = aps,
         `APS per entry grade` = aps_grade,
@@ -274,9 +274,9 @@ server <- function(input, output, session) {
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
     if (input$tabsetpanels == "headline") {
-      hide("allGender")
+      hide("allSex")
     } else {
-      show("allGender")
+      show("allSex")
     }
   })
 
@@ -292,9 +292,9 @@ server <- function(input, output, session) {
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
     if (input$tabsetpanels == "alevel_fm" || input$tabsetpanels == "ggap") {
-      disable("allGender")
+      disable("allSex")
     } else {
-      enable("allGender")
+      enable("allSex")
     }
   })
 
@@ -307,9 +307,9 @@ server <- function(input, output, session) {
 
     inType <- subset(
       inType,
-      school_type %in% input$alevelInstitute &
+      establishment_type %in% input$alevelInstitute &
 
-        characteristic_gender == input$allGender
+        characteristic_sex == input$allSex
     )
 
 
@@ -320,12 +320,12 @@ server <- function(input, output, session) {
 
   observeEvent(input$resetApsAll, {
     updateSelectizeInput(session, "alevelInstitute", selected = c("All FE sector colleges", "All state-funded schools"))
-    updateSelectizeInput(session, "allGender", selected = "All students")
+    updateSelectizeInput(session, "allSex", selected = "All students")
   })
 
   output$plotAlevelAps <- renderPlot({
     createApsTimeSeries(reactiveType(),
-      allGender = input$allGender,
+      allSex = input$allSex,
       instType = input$alevelInstitute
     )
   })
@@ -338,7 +338,7 @@ server <- function(input, output, session) {
     inType <- dfAlevelAps
     inType <- subset(
       inType,
-      school_type %in% input$alevelInstitute
+      establishment_type %in% input$alevelInstitute
     )
     inType
   })
@@ -347,8 +347,8 @@ server <- function(input, output, session) {
   output$plotFemaleAlAPS <- renderPlot({
     createApsFmTimeSeries(
       reactiveFmAps() %>%
-        filter(characteristic_gender == "Female" & year > 2015),
-      fmGender = "Female",
+        filter(characteristic_sex == "Female" & year > 2015),
+      fmSex = "Female",
       instType = input$alevelInstitute
     )
   })
@@ -357,8 +357,8 @@ server <- function(input, output, session) {
   output$plotMaleAlAPS <- renderPlot({
     createApsFmTimeSeries(
       reactiveFmAps() %>%
-        filter(characteristic_gender == "Male" & year > 2015),
-      fmGender = "Male",
+        filter(characteristic_sex == "Male" & year > 2015),
+      fmSex = "Male",
       instType = input$alevelInstitute
     )
   })
@@ -366,37 +366,37 @@ server <- function(input, output, session) {
 
 
 
-  # Reactive for difference between female and male  gender gap APS  A level
+  # Reactive for difference between female and male  sex gap APS  A level
   # This is based on female male average result
 
   reactiveGgap <- reactive({
     gGap <- fmDiff
     gGap <- subset(
       gGap,
-      school_type %in% input$alevelInstitute
+      establishment_type %in% input$alevelInstitute
     )
     gGap
   })
 
 
   output$plotGgap <- renderPlotly({
-    createGenderGap(reactiveGgap(),
+    createSexGap(reactiveGgap(),
       instType = input$alevelInstitute
     )
   })
 
   selectedGgapData <- reactive({
     gGap <- dfAlevelAps %>%
-      filter(characteristic_gender != "All students" & year >= 2016)
-    gGap <- subset(gGap, school_type %in% input$alevelInstitute) %>%
+      filter(characteristic_sex != "All students" & year >= 2016)
+    gGap <- subset(gGap, establishment_type %in% input$alevelInstitute) %>%
       select(
         Year = year,
         `Academic year` = time_period,
-        `Institution type` = school_type,
-        `Characteristic gender` = characteristic_gender,
+        `Establishment type` = establishment_type,
+        `Characteristic sex` = characteristic_sex,
         `Number of students` = number_of_students,
-        `APS per entry` = aps_2016_2023,
-        `APS per entry grade` = aps_grade_2016_2023,
+        `APS per entry` = aps_2016_2024,
+        `APS per entry grade` = aps_grade_2016_2024,
         Version = version
       )
   })
@@ -431,19 +431,19 @@ server <- function(input, output, session) {
 
   output$textHeadline <- renderText({
     val <- paste(input$headlineAps, collapse = ",")
-    # val1<-paste(input$allGender, collapse=", ")
+    # val1<-paste(input$allSex, collapse=", ")
 
-    paste("The boxes display the latest revised average grades in 2022/23 for A level, applied general and tech level. In 2018, there was a large drop in the number of applied general
-    and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
+    paste("The box displays the latest revised average grade in 2023/24 for A level result. The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.
+    In 2018, there was a large drop in the number of applied general and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
     Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.
 
-    The chart shows the APS from 2015/16 to 2022/23 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
+    The chart shows the APS from 2015/16 to 2023/24 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
 ")
   })
 
   output$textApsAll <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
-    val1 <- paste(input$allGender, collapse = ", ")
+    val1 <- paste(input$allSex, collapse = ", ")
     HTML(paste("A level average point score (APS) per entry was first published in 2012/13 with a scale of 0-300.
     The points changed to 0-60 scale in 2015/16, but average grade remains consistent. APS is presented across 2 charts,
     scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).", br(), "
@@ -455,7 +455,7 @@ server <- function(input, output, session) {
   output$textGgap <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
 
-    paste("The line chart shows the female - male average points difference (gender gap) from 2015/16 to 2022/23  for ", val, " in England from 2015/16 to 2022/23.
+    paste("The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2023/24  for ", val, " in England from 2015/16 to 2023/24.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.")
   })
@@ -463,9 +463,9 @@ server <- function(input, output, session) {
 
   output$textApsFm <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
-    val1 <- paste(input$allGender, collapse = ", ")
+    val1 <- paste(input$allSex, collapse = ", ")
 
-    paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England from 2015/16 to 2022/23.
+    paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England from 2015/16 to 2023/24.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.  For breakdown of institution types, see flow diagram on left panel.")
   })
@@ -485,7 +485,7 @@ server <- function(input, output, session) {
     subjName <- subset(
       subjName,
       subject_name %in% input$subCompareAll &
-        characteristic_gender == input$subByAll &
+        characteristic_value == input$subByAll &
         # grade == input$resByAll &
         between(year, as.numeric(input$year_start), as.numeric(input$year_end))
     )
@@ -534,11 +534,11 @@ server <- function(input, output, session) {
   })
 
 
-  ## Reactive and output for A level subject by gender ###########
+  ## Reactive and output for A level subject by sex ###########
 
 
   reactiveSubjectFm <- reactive({
-    subjNameFm <- subjectByGender # dfMs
+    subjNameFm <- subjectBySex # dfMs
 
     subjNameFm <- subset(
       subjNameFm,
@@ -644,12 +644,12 @@ server <- function(input, output, session) {
     subjName <- subjectByAll %>%
       select(
         year, time_period, subject_name,
-        characteristic_gender, entry_count, version
+        characteristic_value, entry_count, version
       )
     subjName <- subset(
       subjName,
       subject_name %in% input$subCompareAll &
-        characteristic_gender == input$subByAll &
+        characteristic_value == input$subByAll &
         between(year, as.numeric(input$year_start), as.numeric(input$year_end))
     )
 
@@ -672,13 +672,13 @@ server <- function(input, output, session) {
     subjName <- subjectByAll %>%
       select(
         year, time_period, subject_name,
-        characteristic_gender, entry_count, `A*-A`, `A*-B`,
+        characteristic_value, entry_count, `A*-A`, `A*-B`,
         `A*-C`, `A*-D`, `A*-E`, version
       )
     subjName <- subset(
       subjName,
       subject_name %in% input$subCompareAll &
-        characteristic_gender == input$subByAll &
+        characteristic_value == input$subByAll &
         between(year, as.numeric(input$year_start), as.numeric(input$year_end))
     )
 
@@ -727,12 +727,12 @@ server <- function(input, output, session) {
 
 
 
-  # Download  selected subject entries by gender
+  # Download  selected subject entries by value
   selectedSubFm <- reactive({
-    subjName <- subjectByGender %>%
+    subjName <- subjectBySex %>%
       select(
         year, time_period, subject_name,
-        characteristic_gender, entry_count, version
+        characteristic_value, entry_count, version
       )
     subjName <- subset(
       subjName,
@@ -745,7 +745,7 @@ server <- function(input, output, session) {
   })
 
   output$downloadSubFm <- downloadHandler(
-    filename = "alevel_subject_gender_data.csv",
+    filename = "alevel_subject_sex_data.csv",
     content = function(file) {
       data <- selectedSubFm()
       write.csv(data, file, row.names = FALSE)
@@ -753,13 +753,13 @@ server <- function(input, output, session) {
   )
 
 
-  # Download selected subject entry and all cumulative result for gender
+  # Download selected subject entry and all cumulative result for sex
 
   selectedResFm <- reactive({
-    subjName <- subjectByGender %>%
+    subjName <- subjectBySex %>%
       select(
         year, time_period, subject_name,
-        characteristic_gender, entry_count, `A*-A`, `A*-B`,
+        characteristic_value, entry_count, `A*-A`, `A*-B`,
         `A*-C`, `A*-D`, `A*-E`, version
       )
 
@@ -792,12 +792,12 @@ server <- function(input, output, session) {
         select(
           Year = year,
           `Academic year` = time_period,
-          # `Institution group`  = school_type_group,
-          `Institution type` = school_type,
-          `Characteristic gender` = characteristic_gender,
+          # `Institution group`  = establishment_type_group,
+          `Establishment type` = establishment_type,
+          `Characteristic sex` = characteristic_sex,
           `Number of students` = number_of_students,
-          `APS per entry` = aps_2016_2023,
-          `APS per entry grade` = aps_grade_2016_2023,
+          `APS per entry` = aps_2016_2024,
+          `APS per entry grade` = aps_grade_2016_2024,
           `APS per entry 2013-2015` = aps_2013_2015,
           `APS per entry grade 2013-2015` = aps_grade_2013_2015,
           Version = version
@@ -933,12 +933,12 @@ server <- function(input, output, session) {
 
 
 
-  # Download  selected subject entries by gender
+  # Download  selected subject entries by sex
   selectedSubMs <- reactive({
     subjName <- dfMs %>%
       select(
         year, time_period, subject,
-        characteristic_gender, percent_entered, number_of_students, version
+        characteristic_value, percent_entered, number_of_students, version
       )
     subjName <- subset(
       subjName,
@@ -962,7 +962,7 @@ server <- function(input, output, session) {
       select(
         Year = year,
         `Time period` = time_period,
-        `Characteristic gender` = characteristic_gender,
+        `Characteristic value` = characteristic_value,
         Subject = subject,
         `Proportion of students` = percent_entered,
         `Number of students` = number_of_students,
@@ -1053,9 +1053,9 @@ server <- function(input, output, session) {
     filename = "attainment_data.csv",
     content = function(file) {
       if (input$tabsetpanels == "headline") {
-        write.csv(dfAttainment, file, row.names = FALSE)
+        write.csv(headline_download, file, row.names = FALSE)
       } else {
-        write.csv(dfAlevelAps, file, row.names = FALSE)
+        write.csv(alevel_attain_download, file, row.names = FALSE)
       }
     }
   )
