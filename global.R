@@ -171,6 +171,8 @@ homeEconomics <- dfAlevelSubject %>%
 
 
 
+alevel_attain_download <- read_alevel_aps_data()
+
 data <- read_alevel_aps_data()
 dfAlevelAps <- data %>%
   rename(
@@ -222,6 +224,25 @@ fmDiff <- dfApsSexGap %>%
 
 
 # Read in attainment data for alevel, applied general and techlevel
+
+
+headline_download <- read_all_attainment_data()
+
+headline_download <- headline_download %>%
+  mutate(
+    time_identifier = "Academic year",
+    geographic_level = "National",
+    country_code = "E92000001",
+    country_name = "England"
+  ) %>%
+  select(time_period, time_identifier, geographic_level, country_code, country_name, version,
+    establishment_type, establishment_type_group, characteristic_sex, number_of_students,
+    aps_per_entry = aps,
+    aps_per_entry_grade = aps_grade, version, qualification_type = cert_type, year
+  ) %>%
+  arrange(desc(time_period))
+
+
 
 dfAttainmentRaw <- read_all_attainment_data()
 
