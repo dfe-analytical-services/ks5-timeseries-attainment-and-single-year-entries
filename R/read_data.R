@@ -45,7 +45,7 @@ read_alevel_aps_sexgap_data <- function(file = "data/aps_gender_gap_with_2024.cs
 
 # This is the full attainment dataset  comprising of Alevel, applied general and tech level
 
-read_all_attainment_data <- function(file = "data/all_attainment_with_2024_redacted.csv") {
+read_all_attainment_data <- function(file = "data/all_attainment_with_2024.csv") {
   dfAttainment <- read_csv(file, show_col_types = FALSE)
   dfAttainment <- dfAttainment
 

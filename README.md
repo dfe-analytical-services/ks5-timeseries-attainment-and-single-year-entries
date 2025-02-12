@@ -29,7 +29,7 @@ It brings together figures compiled from the current and previous versions of th
 
 ### i. Software requirements (for running locally)
 
-- Installation of R Studio 2023.12.0+369 or higher
+- Installation of R Studio 2024.12.0 build 467
 
 - Installation of R 4.4.2 or higher
 

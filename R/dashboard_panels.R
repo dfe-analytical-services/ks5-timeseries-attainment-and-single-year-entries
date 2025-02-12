@@ -1,12 +1,12 @@
 homepage_panel <- function() {
   tabPanel(
     "Homepage",
-    modalDialog(
-      title = "Missing data",
-      "The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.",
-      size = "l",
-      easyClose = FALSE
-    ),
+    # modalDialog(
+    #  title = "Missing data",
+    #  "The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.",
+    #  size = "l",
+    #  easyClose = FALSE
+    # ),
     gov_main_layout(
       gov_row(
         column(
@@ -40,7 +40,7 @@ homepage_panel <- function() {
                 tags$div(
                   title = "Headline attainment and A level time series by institution type",
                   h3(actionLink("link_to_headline_tab", "Headline attainment and A level result by institution type")),
-                  p(" The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication."),
+                  # p(" The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication."),
                   p("The year in tables/charts is the academic year in which students completed 16-18 study (i.e. 2024 means 2023/24). 16-18 study normally lasts either 2 or 3 years and attainment accounts for all entries during that period."),
                   p("Drop-down box within the chart area allows for selection of one institution type.  To view latest results and trend, click on the drop-down box and  select institution type required."),
                   h4("APS for A level by all & sex"),
@@ -55,11 +55,11 @@ homepage_panel <- function() {
                   tags$div(
                     title = "(A level subject entry and grade: comparison by subject",
                     h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and grade: comparison by subject")),
-                    p("The line charts for subject entries and cumulative percentage grades display the yearly trend from 1995/96 to 2023/24.
+                    p("A level data on subject entry refers to all entries by 16-18 year olds in the year stated (where 2024 means 2023/24 academic year)."),
+                    p("The line charts and cumulative percentage grades display the yearly trend from 1995/96 to 2023/24.
                  Drop-down menus at the top of the page allows for the selection and comparison of up to four subjects
                   and cumulative grades.
-                    "),
-                    p("The data refers to all entries by 16-18 year olds in the year stated (where 2024 means 2023/24 academic year).")
+                    ")
                   ),
                   tags$div(
                     title = "A level subject entry and result: comparison by sex",
@@ -240,12 +240,12 @@ dashboard_panel_aps <- function() {
                   width = 12,
                   h3(" 2024 Average results and time series for level 3 attainment, all students"),
                   fluidRow(
-                    valueBoxOutput("headBox1", width = 12),
-                    bsTooltip("headBox1", "Average result - A level", placement = "top", trigger = "hover", options = NULL)
-                    # valueBoxOutput("headBox2", width = 4),
-                    # bsTooltip("headBox2", "Average result - Applied general", placement = "top", trigger = "hover", options = NULL),
-                    # valueBoxOutput("headBox3", width = 4),
-                    # bsTooltip("headBox3", "Average result - Tech Level", placement = "top", trigger = "hover", options = NULL)
+                    valueBoxOutput("headBox1", width = 4),
+                    bsTooltip("headBox1", "Average result - A level", placement = "top", trigger = "hover", options = NULL),
+                    valueBoxOutput("headBox2", width = 4),
+                    bsTooltip("headBox2", "Average result - Applied general", placement = "top", trigger = "hover", options = NULL),
+                    valueBoxOutput("headBox3", width = 4),
+                    bsTooltip("headBox3", "Average result - Tech Level", placement = "top", trigger = "hover", options = NULL)
                   ),
                   column(
                     width = 9, textOutput("textHeadline")
@@ -312,7 +312,7 @@ dashboard_panel_aps <- function() {
               fluidRow(
                 column(
                   width = 12,
-                  h3("A level female - male average points difference by institution type from 2015/16 to 2023/24 in England"),
+                  h3("A level female - male average points difference by institution type in England"),
                   textOutput("textGgap"),
 
                   # htmlOutput("boxapsAlevel", width = 2),

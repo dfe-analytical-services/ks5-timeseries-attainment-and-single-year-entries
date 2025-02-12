@@ -191,31 +191,31 @@ server <- function(input, output, session) {
 
   #
   #   # Add value box for Applied general
-  #   output$headBox2 <- renderValueBox({
-  #     latest <- (reactiveHeadline() %>%
-  #       filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps
-  #     # result <- "Average applied general result"
-  #     grade <- (reactiveHeadline() %>%
-  #       filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps_grade
-  #     valueBox(
-  #       value = grade, subtitle = paste0("Average applied general result equivalent to ", latest, "  points:   ", input$headlineAps),
-  #       color = "blue"
-  #     )
-  #   })
+  output$headBox2 <- renderValueBox({
+    latest <- (reactiveHeadline() %>%
+      filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps
+    # result <- "Average applied general result"
+    grade <- (reactiveHeadline() %>%
+      filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps_grade
+    valueBox(
+      value = grade, subtitle = paste0("Average applied general result equivalent to ", latest, "  points:   ", input$headlineAps),
+      color = "blue"
+    )
+  })
   #
   #
   #   #  Add Value box for Tech level
   #
-  #   output$headBox3 <- renderValueBox({
-  #     latest <- (reactiveHeadline() %>%
-  #       filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps
-  #     grade <- (reactiveHeadline() %>%
-  #       filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps_grade
-  #     valueBox(
-  #       value = grade, subtitle = paste0("Average tech level result equivalent to ", latest, "  points:   ", input$headlineAps),
-  #       color = "blue"
-  #     )
-  #   })
+  output$headBox3 <- renderValueBox({
+    latest <- (reactiveHeadline() %>%
+      filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps
+    grade <- (reactiveHeadline() %>%
+      filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps_grade
+    valueBox(
+      value = grade, subtitle = paste0("Average tech level result equivalent to ", latest, "  points:   ", input$headlineAps),
+      color = "blue"
+    )
+  })
 
   # Create reactive for Headline data
 
@@ -433,8 +433,8 @@ server <- function(input, output, session) {
     val <- paste(input$headlineAps, collapse = ",")
     # val1<-paste(input$allSex, collapse=", ")
 
-    paste("The box displays the latest revised average grade in 2023/24 for A level result. The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.
-    In 2018, there was a large drop in the number of applied general and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
+    paste("The box displays the latest average results for A level, Applied general and Tech level.
+    In 2018, there was a drop in the number of applied general and tech level students for most institution types. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
     Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.
 
     The chart shows the APS from 2015/16 to 2023/24 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
@@ -455,7 +455,7 @@ server <- function(input, output, session) {
   output$textGgap <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
 
-    paste("The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2023/24  for ", val, " in England from 2015/16 to 2023/24.
+    paste("The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2023/24  for ", val, " in England.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.")
   })
@@ -510,7 +510,7 @@ server <- function(input, output, session) {
   observeEvent(input$year_end, {
     updateSelectInput(session, "year_start",
       label = NULL,
-      choices = seq(1996, ifelse(input$year_end == 1996, 1996, as.integer(2019)), 1),
+      choices = seq(1996, ifelse(input$year_end == 1996, 1996, as.integer(2020)), 1),
       selected = input$year_start
     )
   })
@@ -569,7 +569,7 @@ server <- function(input, output, session) {
   observeEvent(input$year_end_fm, {
     updateSelectInput(session, "year_start_fm",
       label = NULL,
-      choices = seq(1996, ifelse(input$year_end_fm == 1996, 1996, as.integer(2019)), 1),
+      choices = seq(1996, ifelse(input$year_end_fm == 1996, 1996, as.integer(2020)), 1),
       selected = input$year_start_fm
     )
   })
@@ -871,7 +871,7 @@ server <- function(input, output, session) {
   observeEvent(input$year_end_ms, {
     updateSelectInput(session, "year_start_ms",
       label = NULL,
-      choices = seq(2010, ifelse(input$year_end_ms == 2010, 2010, as.integer(2018)), 1),
+      choices = seq(2010, ifelse(input$year_end_ms == 2010, 2010, as.integer(2020)), 1),
       selected = input$year_start_ms
     )
   })
@@ -1065,7 +1065,7 @@ server <- function(input, output, session) {
     if (input$tabsetpanels == "headline") {
       paste0("Click to download full dataset") # )input$downloadDataAps)
     } else {
-      paste0("Click to select up to 4 institution types from the drop-down menu and further options") # input$alevelInstitute, )
+      paste0("Click to select further options and up to 4 institution types from the drop-down menu") # input$alevelInstitute, )
     }
   })
 
