@@ -90,17 +90,10 @@ ui <- function(input, output, session) {
       )
     ),
     shinyGovstyle::cookieBanner(site_title),
-    shinyGovstyle::header(
-      main_text = "",
-      main_link = "https://www.gov.uk/government/organisations/department-for-education",
-      secondary_text = site_title,
-      logo = "images/DfE_logo_landscape.png",
-      logo_width = 150,
-      logo_height = 32
-    ),
+    dfeshiny::header(header = site_title),
     shinyGovstyle::banner(
       "beta banner",
-      "beta",
+      "Beta",
       "This Dashboard is in beta phase and we are still reviewing performance and reliability. "
     ),
     shiny::navlistPanel(
