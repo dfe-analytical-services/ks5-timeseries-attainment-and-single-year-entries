@@ -191,31 +191,31 @@ server <- function(input, output, session) {
 
   #
   #   # Add value box for Applied general
-  #   output$headBox2 <- renderValueBox({
-  #     latest <- (reactiveHeadline() %>%
-  #       filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps
-  #     # result <- "Average applied general result"
-  #     grade <- (reactiveHeadline() %>%
-  #       filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps_grade
-  #     valueBox(
-  #       value = grade, subtitle = paste0("Average applied general result equivalent to ", latest, "  points:   ", input$headlineAps),
-  #       color = "blue"
-  #     )
-  #   })
+  output$headBox2 <- renderValueBox({
+    latest <- (reactiveHeadline() %>%
+      filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps
+    # result <- "Average applied general result"
+    grade <- (reactiveHeadline() %>%
+      filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps_grade
+    valueBox(
+      value = grade, subtitle = paste0("Average applied general result equivalent to ", latest, "  points:   ", input$headlineAps),
+      color = "blue"
+    )
+  })
   #
   #
   #   #  Add Value box for Tech level
   #
-  #   output$headBox3 <- renderValueBox({
-  #     latest <- (reactiveHeadline() %>%
-  #       filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps
-  #     grade <- (reactiveHeadline() %>%
-  #       filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps_grade
-  #     valueBox(
-  #       value = grade, subtitle = paste0("Average tech level result equivalent to ", latest, "  points:   ", input$headlineAps),
-  #       color = "blue"
-  #     )
-  #   })
+  output$headBox3 <- renderValueBox({
+    latest <- (reactiveHeadline() %>%
+      filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps
+    grade <- (reactiveHeadline() %>%
+      filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps_grade
+    valueBox(
+      value = grade, subtitle = paste0("Average tech level result equivalent to ", latest, "  points:   ", input$headlineAps),
+      color = "blue"
+    )
+  })
 
   # Create reactive for Headline data
 
@@ -429,16 +429,20 @@ server <- function(input, output, session) {
 
   # Create textOutput for APS Alevel
 
+
   output$textHeadline <- renderText({
-    val <- paste(input$headlineAps, collapse = ",")
-    # val1<-paste(input$allSex, collapse=", ")
+    # val <- glue::glue_collapse(input$headlineAps, ", ", last = " and ")
+    val <- paste(input$headlineAps, collapse = " , ")
+    HTML(paste0("The boxes display the latest average results for A level, Applied general and Tech level for  ", val, " in England. The
+    chart shows the APS from 2015/16 to 2023/24. To view results, click on the drop-down box and select one institution type.
 
-    paste("The box displays the latest revised average grade in 2023/24 for A level result. The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication.
-    In 2018, there was a large drop in the number of applied general and tech level students. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
+    The concept of qualifications approved for reporting has been applied since 2015/16 following Professor Alison Wolf's Review of vocational education.
+    From 2017/18 the quality threshold for vocational and technical qualifications to be included in performance
+    measures further increased. The later reforms include criteria relating to the size, content, and assessment, including a requirement
+    that a proportion of a qualification's content is subject to external assessment.
+
     Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.
-
-    The chart shows the APS from 2015/16 to 2023/24 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
-")
+    "))
   })
 
   output$textApsAll <- renderText({
@@ -446,7 +450,7 @@ server <- function(input, output, session) {
     val1 <- paste(input$allSex, collapse = ", ")
     HTML(paste("A level average point score (APS) per entry was first published in 2012/13 with a scale of 0-300.
     The points changed to 0-60 scale in 2015/16, but average grade remains consistent. APS is presented across 2 charts,
-    scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).", br(), "
+    scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).", br(), br(), "
     The charts display the APS and grades achieved by students throughout 16 to 18 study for  ", val, " in England.
     Up to four institution types can be selected from the drop-down menu. Care should be taken when comparing across institution types due to significant differences in cohort sizes.
            For breakdown of institution types, see flow diagram on left panel.  "))
@@ -455,7 +459,7 @@ server <- function(input, output, session) {
   output$textGgap <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
 
-    paste("The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2023/24  for ", val, " in England from 2015/16 to 2023/24.
+    paste("The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2023/24  for ", val, " in England.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.")
   })
@@ -510,7 +514,7 @@ server <- function(input, output, session) {
   observeEvent(input$year_end, {
     updateSelectInput(session, "year_start",
       label = NULL,
-      choices = seq(1996, ifelse(input$year_end == 1996, 1996, as.integer(2019)), 1),
+      choices = seq(1996, ifelse(input$year_end == 1996, 1996, as.integer(2020)), 1),
       selected = input$year_start
     )
   })
@@ -569,7 +573,7 @@ server <- function(input, output, session) {
   observeEvent(input$year_end_fm, {
     updateSelectInput(session, "year_start_fm",
       label = NULL,
-      choices = seq(1996, ifelse(input$year_end_fm == 1996, 1996, as.integer(2019)), 1),
+      choices = seq(1996, ifelse(input$year_end_fm == 1996, 1996, as.integer(2020)), 1),
       selected = input$year_start_fm
     )
   })
@@ -871,7 +875,7 @@ server <- function(input, output, session) {
   observeEvent(input$year_end_ms, {
     updateSelectInput(session, "year_start_ms",
       label = NULL,
-      choices = seq(2010, ifelse(input$year_end_ms == 2010, 2010, as.integer(2018)), 1),
+      choices = seq(2010, ifelse(input$year_end_ms == 2010, 2010, as.integer(2020)), 1),
       selected = input$year_start_ms
     )
   })
@@ -1065,7 +1069,7 @@ server <- function(input, output, session) {
     if (input$tabsetpanels == "headline") {
       paste0("Click to download full dataset") # )input$downloadDataAps)
     } else {
-      paste0("Click to select up to 4 institution types from the drop-down menu and further options") # input$alevelInstitute, )
+      paste0("Click to select further options and up to 4 institution types from the drop-down menu") # input$alevelInstitute, )
     }
   })
 
