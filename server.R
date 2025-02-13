@@ -429,16 +429,20 @@ server <- function(input, output, session) {
 
   # Create textOutput for APS Alevel
 
+
   output$textHeadline <- renderText({
-    val <- paste(input$headlineAps, collapse = ",")
-    # val1<-paste(input$allSex, collapse=", ")
+    # val <- glue::glue_collapse(input$headlineAps, ", ", last = " and ")
+    val <- paste(input$headlineAps, collapse = " , ")
+    HTML(paste0("The boxes display the latest average results for A level, Applied general and Tech level for  ", val, " in England. The
+    chart shows the APS from 2015/16 to 2023/24. To view results, click on the drop-down box and select one institution type.
 
-    paste("The box displays the latest average results for A level, Applied general and Tech level.
-    In 2018, there was a drop in the number of applied general and tech level students for most institution types. This was due to the change in the list of tech level and applied general qualifications eligible for reporting in the performance tables.
+    The concept of qualifications approved for reporting has been applied since 2015/16 following Professor Alison Wolf's Review of vocational education.
+    From 2017/18 the quality threshold for vocational and technical qualifications to be included in performance
+    measures further increased. The later reforms include criteria relating to the size, content, and assessment, including a requirement
+    that a proportion of a qualification's content is subject to external assessment.
+
     Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.
-
-    The chart shows the APS from 2015/16 to 2023/24 for ", val, " in England. To view results, click on the drop-down box and select one institution type.
-")
+    "))
   })
 
   output$textApsAll <- renderText({
@@ -446,7 +450,7 @@ server <- function(input, output, session) {
     val1 <- paste(input$allSex, collapse = ", ")
     HTML(paste("A level average point score (APS) per entry was first published in 2012/13 with a scale of 0-300.
     The points changed to 0-60 scale in 2015/16, but average grade remains consistent. APS is presented across 2 charts,
-    scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).", br(), "
+    scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).", br(), br(), "
     The charts display the APS and grades achieved by students throughout 16 to 18 study for  ", val, " in England.
     Up to four institution types can be selected from the drop-down menu. Care should be taken when comparing across institution types due to significant differences in cohort sizes.
            For breakdown of institution types, see flow diagram on left panel.  "))

@@ -124,7 +124,7 @@ homepage_panel <- function() {
                   h3("A level subject entry and cumulative grade"),
                   p("The subject entries and cumulative grades covered on the dashboard are based on
                   subjects grouped from 1995/96 to 2023/24. More detailed breakdowns of some subjects from 2015/16
-                  are available via the full dataset download  button at the top of the page."),
+                  are available via the full dataset download, at the top of the page."),
                   h4("Subject definitions"),
                   p("Total English covers English literature, English language, English language and literature. "),
                   p("Total Maths covers Maths, Pure maths, Statistics, Use of maths and Other maths"),
