@@ -1,0 +1,42 @@
+{
+  "input": {
+    "alevelInstitute": [
+      "All FE sector colleges",
+      "All state-funded schools"
+    ],
+    "cookieAccept": 0,
+    "cookieLink": 0,
+    "cookieReject": 0,
+    "ees_1": 0,
+    "ees_2a": 0,
+    "ees_2b": 0,
+    "headlineAps": "All FE sector colleges",
+    "hideAccept": 0,
+    "hideReject": 0,
+    "link_to_alevelAllSubject_tab": 0,
+    "link_to_alevelFmSubject_tab": 0,
+    "link_to_headline_tab": 0,
+    "navlistPanel": "Homepage",
+    "resByAll": "`A*-A`",
+    "resByFm": "`A*-A`",
+    "resetApsAll": 0,
+    "resetEntries": 0,
+    "resetSubFm": 0,
+    "subByAll": "All students",
+    "subCompareAll": [
+      "Total English",
+      "Total Maths"
+    ],
+    "subjectFm": "Total English",
+    "tabsetpanels": "headline",
+    "tabsetpanels2a": "alevelAllSubject",
+    "tabsetpanels2b": "alevelFmSubject",
+    "year_end": "2024",
+    "year_end_fm": "2024",
+    "year_start": "1996",
+    "year_start_fm": "1996"
+  },
+  "output": {
+
+  }
+}
