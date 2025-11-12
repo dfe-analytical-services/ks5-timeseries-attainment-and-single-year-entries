@@ -35,7 +35,6 @@ shhh(library(readr))
 shhh(library(dfeshiny))
 
 
-
 # Functions ---------------------------------------------------------------------------------
 
 # Here's an example function for simplifying the code needed to commas separate numbers:
@@ -75,6 +74,15 @@ spinner <- function(output) {
 }
 
 
+# round data
+round2 <- function(x, n) {
+  posneg <- sign(x)
+  z <- abs(x) * 10^n
+  z <- z + 0.5
+  z <- trunc(z)
+  z <- z / 10^n
+  z * posneg
+}
 
 
 # Source scripts ---------------------------------------------------------------------------------
@@ -114,15 +122,13 @@ source("R/read_data.R")
 
 ############################  Read A level subject entries - single academic year ####################################################
 # Read in A level data for subject entries and results
-# Filter out 'Total subjects' and data greater than 7 years
-# Create new column for thousand entries
 
+#  The latest year is mainly used by A level subject entries and Maths and Science to allow selection of year
 
-latest_year <- 2024 # this is mainly used by A level subject entries and Maths and Science to allow selection of year
+latest_year <- 2025
 
 dfAlevelSubjectRaw <- read_alevel_subject_data()
 
-# dfAlevelSubject$subject_name<-first_xter_up(dfAlevelSubject$subject_name)
 
 dfAlevelSubject <- dfAlevelSubjectRaw %>%
   rename(
@@ -148,11 +154,12 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
     version = as.factor(version)
   )
 
-
+## intention here is to select timeseries data from 1996 to date.
+# Some subjects have filtered out inlcuding subjects greater or equal to 10 years
 subjectByAll <- dfAlevelSubject %>%
   group_by(subject_name, characteristic_value) %>%
   arrange(year, .by_group = TRUE) %>%
-  filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics"), n() > 9) %>%
+  filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics", "ICT"), n() > 10) %>%
   ungroup()
 
 # Filter out female and male
@@ -171,37 +178,32 @@ homeEconomics <- dfAlevelSubject %>%
 # Read in  A level aggregate APS and grade by institution type
 
 
-
 alevel_attain_download <- read_alevel_aps_data()
 
 data <- read_alevel_aps_data()
 dfAlevelAps <- data %>%
   rename(
-    aps_2016_2024 = "aps_per_entry", aps_grade_2016_2024 = "aps_per_entry_grade", aps_2013_2015 = "aps_per_entry_2013_2015",
+    aps_2013_2015 = "aps_per_entry_2013_2015",
     aps_grade_2013_2015 = "aps_per_entry_grade_2013_2015"
   ) %>%
   select(
-    time_period, year, establishment_type, establishment_type_group, number_of_students, aps_2016_2024, aps_2013_2015, aps_grade_2016_2024, aps_grade_2013_2015,
+    time_period, year, establishment_type, establishment_type_group, number_of_students, aps_per_entry, aps_2013_2015, aps_per_entry_grade, aps_grade_2013_2015,
     characteristic_sex, time_period, year, year_2013_2015, version
   ) %>%
+  mutate(establishment_type = case_match(
+    establishment_type, "All state-funded schools and colleges" ~ "All state-funded",
+    .default = establishment_type
+  )) %>%
   mutate(
-    aps_grade_2016_2024 = as.factor(aps_grade_2016_2024),
+    aps_2013_2015 = round2(as.numeric(aps_2013_2015), 2),
     aps_grade_2013_2015 = as.factor(aps_grade_2013_2015),
-    aps_2016_2024 = round(as.numeric(aps_2016_2024), 2),
-    aps_2013_2015 = round(as.numeric(aps_2013_2015), 2),
+    aps_per_entry = round2(as.numeric(aps_per_entry), 2),
+    aps_per_entry_grade = as.factor(aps_per_entry_grade),
     characteristic_sex = as.factor(characteristic_sex),
     establishment_type = as.factor(establishment_type),
     establishment_type_group = as.factor(establishment_type_group),
-    version = as.factor(version),
-    establishment_type = as.factor(recode(establishment_type,
-      #  "All schools and FE sector colleges" = "All institutions",
-      "All state-funded schools and colleges" = "All state-funded"
-    ))
+    version = as.factor(version)
   )
-
-# choicesestablishment_type_group <- unique(dfAlevelAps$establishment_type_group)
-# choicesestablishment_type <- unique(dfAlevelAps$establishment_type_type)
-# choicessex <- unique(dfAlevelAps$characteristic_sex)
 
 
 # Create sex gap between female and male using long width
@@ -209,16 +211,19 @@ dfAlevelAps <- data %>%
 # Use data from 2015/16
 
 
-dfApsSexGap <- read_alevel_aps_sexgap_data()
+dfApsSexGap <- read_alevel_aps_sexgap_data() %>%
+  mutate(establishment_type = case_match(
+    establishment_type, "All state-funded schools and colleges" ~ "All state-funded",
+    .default = establishment_type
+  ))
+
 fmDiff <- dfApsSexGap %>%
   mutate(
-    sex_gap = round(as.numeric(sex_gap), 1),
-    establishment_type = as.factor(recode(establishment_type,
-      #  "All schools and FE sector colleges" = "All institutions",
-      "All state-funded schools and colleges" = "All state-funded"
-    ))
+    sex_gap = round2(as.numeric(sex_gap), 1),
+    establishment_type = as.factor(establishment_type)
+    #  "All schools and FE sector colleges" = "All institutions",
+    # "All state-funded schools and colleges" = "All state-funded"
   )
-
 
 
 ########################################################################################################
@@ -244,8 +249,11 @@ headline_download <- headline_download %>%
   arrange(desc(time_period))
 
 
-
-dfAttainmentRaw <- read_all_attainment_data()
+dfAttainmentRaw <- read_all_attainment_data() %>%
+  mutate(establishment_type = case_match(
+    establishment_type, "All state-funded schools and colleges" ~ "All state-funded",
+    .default = establishment_type
+  ))
 
 # Select  all students and data to factors and numeric
 dfAttainment <- dfAttainmentRaw %>%
@@ -255,15 +263,11 @@ dfAttainment <- dfAttainmentRaw %>%
     establishment_type_group = as.factor(establishment_type_group),
     number_of_students = as.integer(number_of_students),
     aps = as.numeric(aps),
-    aps = round(aps, 2),
+    aps = round2(aps, 2),
     aps_grade = as.factor(aps_grade),
     characteristic_sex = as.factor(characteristic_sex),
     version = as.factor(version),
     cert_type = as.factor(cert_type),
-    establishment_type = as.factor(recode(establishment_type,
-      # "All schools and FE sector colleges" = "All Institutions",
-      "All state-funded schools and colleges" = "All state-funded"
-    )),
     cert_type = as.factor(recode(cert_type, "Alevel" = "A level"))
   ) %>%
   group_by(establishment_type, cert_type) %>%

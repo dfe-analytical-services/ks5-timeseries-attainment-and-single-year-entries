@@ -152,6 +152,7 @@ server <- function(input, output, session) {
   })
 
 
+  ## The headline attainment reactive starts here
   # Reactive for headline attainment
 
   reactiveHeadline <- reactive({
@@ -169,11 +170,8 @@ server <- function(input, output, session) {
   })
 
 
-
-
   #  Disable top panel on institution type and group for headline
   #  Disable top panel on type of students for Female and Male
-
 
 
   # Add value box for A level
@@ -238,7 +236,6 @@ server <- function(input, output, session) {
   })
 
 
-
   # Data table for headline page
   output$tabHeadline <- renderDataTable({
     datatable(selectedHeadlineData(),
@@ -260,7 +257,7 @@ server <- function(input, output, session) {
     )
   })
 
-  # Hide the tabpanel that are not relevant
+  # Hide the tab-panels that are not relevant
 
   observe({
     validate(need(!is.null(input$tabsetpanels), ""))
@@ -299,7 +296,6 @@ server <- function(input, output, session) {
   })
 
 
-
   #  Reactive for A level APS -----------------------------------------------
 
   reactiveType <- reactive({
@@ -317,7 +313,6 @@ server <- function(input, output, session) {
   })
 
 
-
   observeEvent(input$resetApsAll, {
     updateSelectizeInput(session, "alevelInstitute", selected = c("All FE sector colleges", "All state-funded schools"))
     updateSelectizeInput(session, "allSex", selected = "All students")
@@ -329,7 +324,6 @@ server <- function(input, output, session) {
       instType = input$alevelInstitute
     )
   })
-
 
 
   # Alevel Aps for female and male
@@ -347,7 +341,8 @@ server <- function(input, output, session) {
   output$plotFemaleAlAPS <- renderPlot({
     createApsFmTimeSeries(
       reactiveFmAps() %>%
-        filter(characteristic_sex == "Female" & year > 2015),
+        filter(characteristic_sex == "Female" & year > 2015), # %>%
+      # mutate(aps_per_entry=as.numeric(aps_per_entry)),
       fmSex = "Female",
       instType = input$alevelInstitute
     )
@@ -357,13 +352,12 @@ server <- function(input, output, session) {
   output$plotMaleAlAPS <- renderPlot({
     createApsFmTimeSeries(
       reactiveFmAps() %>%
-        filter(characteristic_sex == "Male" & year > 2015),
+        filter(characteristic_sex == "Male" & year > 2015), # %>%
+      # mutate(aps_per_entry=as.numeric(aps_per_entry)),
       fmSex = "Male",
       instType = input$alevelInstitute
     )
   })
-
-
 
 
   # Reactive for difference between female and male  sex gap APS  A level
@@ -395,15 +389,14 @@ server <- function(input, output, session) {
         `Establishment type` = establishment_type,
         `Characteristic sex` = characteristic_sex,
         `Number of students` = number_of_students,
-        `APS per entry` = aps_2016_2024,
-        `APS per entry grade` = aps_grade_2016_2024,
+        `APS per entry` = aps_per_entry,
+        `APS per entry grade` = aps_per_entry_grade,
         Version = version
       )
   })
 
 
-
-  # Data table for headline page
+  # Data table for gap
   output$tabFm <- renderDataTable({
     datatable(selectedGgapData(),
       extens = "Buttons",
@@ -425,8 +418,6 @@ server <- function(input, output, session) {
   })
 
 
-
-
   # Create textOutput for APS Alevel
 
 
@@ -434,7 +425,7 @@ server <- function(input, output, session) {
     # val <- glue::glue_collapse(input$headlineAps, ", ", last = " and ")
     val <- paste(input$headlineAps, collapse = " , ")
     HTML(paste0("The boxes display the latest average results for A level, Applied general and Tech level for  ", val, " in England. The
-    chart shows the APS from 2015/16 to 2023/24. To view results, click on the drop-down box and select one institution type.
+    chart shows the APS from 2015/16 to 2024/25. To view results, click on the drop-down box and select one institution type.
 
     The concept of qualifications approved for reporting has been applied since 2015/16 following Professor Alison Wolf's Review of vocational education.
     From 2017/18 the quality threshold for vocational and technical qualifications to be included in performance
@@ -459,7 +450,7 @@ server <- function(input, output, session) {
   output$textGgap <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
 
-    paste("The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2023/24  for ", val, " in England.
+    paste("The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2024/25  for ", val, " in England.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.")
   })
@@ -469,7 +460,7 @@ server <- function(input, output, session) {
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
     val1 <- paste(input$allSex, collapse = ", ")
 
-    paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England from 2015/16 to 2023/24.
+    paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England from 2015/16 to 2024/25.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.  For breakdown of institution types, see flow diagram on left panel.")
   })
@@ -479,8 +470,6 @@ server <- function(input, output, session) {
 
   # create reactive for subject entries
   # create observe event and output for plot
-
-
 
 
   reactiveSubject <- reactive({
@@ -496,8 +485,6 @@ server <- function(input, output, session) {
 
     subjName
   })
-
-
 
 
   observeEvent(input$resetEntries, {
@@ -526,7 +513,6 @@ server <- function(input, output, session) {
       subAll = input$subByAll
     )
   })
-
 
 
   output$plotResultAll <- renderPlotly({
@@ -612,10 +598,6 @@ server <- function(input, output, session) {
   })
 
 
-
-
-
-
   output$textSubFm <- renderText({
     val <- paste(input$subjectFm, collapse = ",")
     val1 <- paste(input$year_start_fm, collapse = ", ")
@@ -639,7 +621,6 @@ server <- function(input, output, session) {
           awarded in 2019/20 and 2020/21 respectively."
     )
   })
-
 
 
   # Download selected subjects
@@ -667,7 +648,6 @@ server <- function(input, output, session) {
       write.csv(data, file, row.names = FALSE)
     }
   )
-
 
 
   # Download selected subjects and all cumulative grades
@@ -708,9 +688,6 @@ server <- function(input, output, session) {
   )
 
 
-
-
-
   # Download  subject entry and cumulative result for all subject from top panel
 
   output$downloadDataSubject <- downloadHandler(
@@ -728,7 +705,6 @@ server <- function(input, output, session) {
       write.csv(data, file, row.names = FALSE)
     }
   )
-
 
 
   # Download  selected subject entries by value
@@ -787,8 +763,6 @@ server <- function(input, output, session) {
   )
 
 
-
-
   # Data table for headline page
   output$tabApsAll <- renderDataTable({
     datatable(
@@ -796,12 +770,13 @@ server <- function(input, output, session) {
         select(
           Year = year,
           `Academic year` = time_period,
+          `Establishment type group` = establishment_type_group,
           # `Institution group`  = establishment_type_group,
           `Establishment type` = establishment_type,
           `Characteristic sex` = characteristic_sex,
           `Number of students` = number_of_students,
-          `APS per entry` = aps_2016_2024,
-          `APS per entry grade` = aps_grade_2016_2024,
+          `APS per entry` = aps_per_entry,
+          `APS per entry grade` = aps_per_entry_grade,
           `APS per entry 2013-2015` = aps_2013_2015,
           `APS per entry grade 2013-2015` = aps_grade_2013_2015,
           Version = version
@@ -825,7 +800,6 @@ server <- function(input, output, session) {
   })
 
 
-
   output$resall <- renderDataTable({
     datatable(selected_subAll(),
       options = list(
@@ -842,8 +816,6 @@ server <- function(input, output, session) {
       )
     )
   })
-
-
 
 
   #######  Maths and science
@@ -887,7 +859,6 @@ server <- function(input, output, session) {
   })
 
 
-
   output$textSubMs <- renderText({
     val <- paste(input$subjectMs, collapse = ",")
     val1 <- paste(input$year_start_ms, collapse = ", ")
@@ -897,7 +868,6 @@ server <- function(input, output, session) {
       "The line chart shows the proportion of A level students that entered   ", val, " from ", val1, "to ", val2, "for female, male and all students in England."
     )
   })
-
 
 
   #
@@ -918,13 +888,7 @@ server <- function(input, output, session) {
   # Download selected subjects
 
 
-
-
-
-
-
   # Download  subject entry and cumulative result for all subject from top panel
-
 
 
   output$downloadDataSubjectMs <- downloadHandler(
@@ -934,7 +898,6 @@ server <- function(input, output, session) {
       write.csv(data, file, row.names = FALSE)
     }
   )
-
 
 
   # Download  selected subject entries by sex
@@ -953,7 +916,6 @@ server <- function(input, output, session) {
 
     subjName
   })
-
 
 
   selectedMsData <- reactive({
@@ -996,7 +958,6 @@ server <- function(input, output, session) {
   })
 
 
-
   #
   #
   # output$resall <- renderDataTable({
@@ -1015,20 +976,6 @@ server <- function(input, output, session) {
   #             )
   #   )
   # })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   # Navigation with links
@@ -1051,7 +998,6 @@ server <- function(input, output, session) {
   })
 
 
-
   # Download the underlying data button
   output$downloadDataAps <- downloadHandler(
     filename = "attainment_data.csv",
@@ -1072,8 +1018,6 @@ server <- function(input, output, session) {
       paste0("Click to select further options and up to 4 institution types from the drop-down menu") # input$alevelInstitute, )
     }
   })
-
-
 
 
   # Stop app ---------------------------------------------------------------------------------
