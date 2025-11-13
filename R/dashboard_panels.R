@@ -261,7 +261,7 @@ dashboard_panel_aps <- function() {
                           selectInput(
                             inputId = "headlineAps",
                             "Select institution type",
-                            choices = sort(unique(dfAttainment$establishment_type)), selected = c("All Institutions")
+                            choices = sort(unique(dfAttainment$establishment_type)), selected = c("All institutions")
                           )
                         )
                       )

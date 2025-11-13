@@ -18,7 +18,7 @@
 ## Introduction 
 
 This dashboard allows users to explore time series data for 16 to 18 qualifications in England, with breakdowns by institution type 
-(for average result/grade) and gender (for both A level average result/grade, and A level entries and grades in individual subjects).
+(for average result/grade) and sex (for both A level average result/grade, and A level entries and grades in individual subjects).
 
 It brings together figures compiled from the current and previous versions of the ‘A level and other 16 to 18 results’ statistical release.
 
@@ -33,7 +33,7 @@ It brings together figures compiled from the current and previous versions of th
 
 - Installation of R 4.5.0 or higher
 
-- Installation of RTools44 or higher
+- Installation of RTools45 or higher
 
 ### ii. Programming skills required (for editing or troubleshooting)
 
