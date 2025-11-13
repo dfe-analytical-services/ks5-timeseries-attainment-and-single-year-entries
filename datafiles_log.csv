@@ -1,6 +1,12 @@
 filename,status
-data/all_attainment_with_2024.csv,published
-data/maths_science_2010_2024.csv,published
-data/all_alevel_timeseries_data_1996_to_2024.csv,published
-data/aps_gender_gap_with_2024.csv,published
-data/alevel_attainment_with_2024.csv,published
+data/data_2024/all_attainment_with_2024.csv,published
+data/data_2024/maths_science_2010_2024.csv,published
+data/data_2024/all_alevel_timeseries_data_1996_to_2024.csv,published
+data/data_2024/aps_gender_gap_with_2024.csv,published
+data/data_2024/alevel_attainment_with_2024.csv,published
+,
+data/all_attainment_with_2025.csv,published
+data/maths_science_2010_2025.csv,published
+data/all_alevel_timeseries_data_1996_to_2025.csv,published
+data/aps_gender_gap_with_2025.csv,published
+data/alevel_attainment_with_2025.csv,published
