@@ -581,7 +581,7 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end, collapse = ", ")
     val3 <- paste(input$subByAll, collapse = ",")
 
-    paste("The line chart shows the A level exam entries for ", val, "from  ", val1, "to ", val2, " for ", val3, " in England. ")
+    paste("The line chart shows the A level exam entries for ", val, "from  ", val1, " for ", val3, " in England. ")
   })
 
 
@@ -591,7 +591,7 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end, collapse = ", ")
     val3 <- paste(input$subByAll, collapse = ",")
     paste(
-      "The line chart shows the A level cumulative percentage grades for", val, "\n from ", val1, "to ", val2, " for ",
+      "The line chart shows the A level cumulative percentage grades for", val, "\n from ", val1, " for ",
       val3, " in England.   The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
           awarded in 2019/20 and 2020/21 respectively."
     )
@@ -604,7 +604,7 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end_fm, collapse = ", ")
 
     paste(
-      "The line chart shows the A level  exam entries on ", val, " from ", val1, "to ", val2,
+      "The line chart shows the A level  exam entries on ", val, " from ", val1,
       " for female, male and all students in England. "
     )
   })
@@ -616,7 +616,7 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end_fm, collapse = ", ")
 
     paste(
-      "The line chart shows the A level cumulative percentage grades on ", val, "\n from ", val1, " to ", val2,
+      "The line chart shows the A level cumulative percentage grades on ", val, "\n from ", val1,
       " for female, male and all students in England.  The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
           awarded in 2019/20 and 2020/21 respectively."
     )
@@ -865,7 +865,7 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end_ms, collapse = ", ")
 
     paste(
-      "The line chart shows the proportion of A level students that entered   ", val, " from ", val1, "to ", val2, "for female, male and all students in England."
+      "The line chart shows the proportion of A level students that entered   ", val, " from ", val1, "for female, male and all students in England."
     )
   })
 

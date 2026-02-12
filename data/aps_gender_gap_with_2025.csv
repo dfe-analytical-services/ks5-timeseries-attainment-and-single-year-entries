@@ -8,7 +8,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,All FE sector colleges,All FE sector colleges,1.7,Revised
 2023,202223,All FE sector colleges,All FE sector colleges,1.4,Revised
 2024,202324,All FE sector colleges,All FE sector colleges,1.4,Revised
-2025,202425,All FE sector colleges,All FE sector colleges,1.4,Provisional
+2025,202425,All FE sector colleges,All FE sector colleges,1.4,Revised
 2016,201516,Other FE sector colleges,All FE sector colleges,2.5,Revised
 2017,201617,Other FE sector colleges,All FE sector colleges,1.8,Revised
 2018,201718,Other FE sector colleges,All FE sector colleges,1.3,Revised
@@ -18,7 +18,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,Other FE sector colleges,All FE sector colleges,1.6,Revised
 2023,202223,Other FE sector colleges,All FE sector colleges,1.4,Revised
 2024,202324,Other FE sector colleges,All FE sector colleges,1.6,Revised
-2025,202425,Other FE sector colleges,All FE sector colleges,1.8,Provisional
+2025,202425,Other FE sector colleges,All FE sector colleges,1.8,Revised
 2016,201516,Sixth form colleges,All FE sector colleges,2.9,Revised
 2017,201617,Sixth form colleges,All FE sector colleges,2.4,Revised
 2018,201718,Sixth form colleges,All FE sector colleges,2.2,Revised
@@ -28,7 +28,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,Sixth form colleges,All FE sector colleges,2.1,Revised
 2023,202223,Sixth form colleges,All FE sector colleges,1.8,Revised
 2024,202324,Sixth form colleges,All FE sector colleges,1.6,Revised
-2025,202425,Sixth form colleges,All FE sector colleges,1.6,Provisional
+2025,202425,Sixth form colleges,All FE sector colleges,1.6,Revised
 2016,201516,All institutions,All Institutions,1.9,Revised
 2017,201617,All institutions,All Institutions,1.6,Revised
 2018,201718,All institutions,All Institutions,1.4,Revised
@@ -38,7 +38,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,All institutions,All Institutions,1.4,Revised
 2023,202223,All institutions,All Institutions,1.2,Revised
 2024,202324,All institutions,All Institutions,1.2,Revised
-2025,202425,All institutions,All Institutions,0.9,Provisional
+2025,202425,All institutions,All Institutions,0.9,Revised
 2016,201516,All independent schools,All independent schools,1.6,Revised
 2017,201617,All independent schools,All independent schools,1.3,Revised
 2018,201718,All independent schools,All independent schools,1.7,Revised
@@ -48,7 +48,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,All independent schools,All independent schools,1.7,Revised
 2023,202223,All independent schools,All independent schools,1,Revised
 2024,202324,All independent schools,All independent schools,1.2,Revised
-2025,202425,All independent schools,All independent schools,1.1,Provisional
+2025,202425,All independent schools,All independent schools,1.1,Revised
 2016,201516,Independent schools,All independent schools,1.6,Revised
 2017,201617,Independent schools,All independent schools,1.3,Revised
 2018,201718,Independent schools,All independent schools,1.7,Revised
@@ -58,7 +58,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,Independent schools,All independent schools,1.6,Revised
 2023,202223,Independent schools,All independent schools,1,Revised
 2024,202324,Independent schools,All independent schools,1.1,Revised
-2025,202425,Independent schools,All independent schools,1.1,Provisional
+2025,202425,Independent schools,All independent schools,1.1,Revised
 2016,201516,Independent special schools,All independent schools,-4.8,Revised
 2017,201617,Independent special schools,All independent schools,-1.4,Revised
 2018,201718,Independent special schools,All independent schools,-0,Revised
@@ -68,7 +68,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,Independent special schools,All independent schools,-2,Revised
 2023,202223,Independent special schools,All independent schools,2.2,Revised
 2024,202324,Independent special schools,All independent schools,5.9,Revised
-2025,202425,Independent special schools,All independent schools,0.2,Provisional
+2025,202425,Independent special schools,All independent schools,0.3,Revised
 2016,201516,All schools,All schools,1.8,Revised
 2017,201617,All schools,All schools,1.6,Revised
 2018,201718,All schools,All schools,1.4,Revised
@@ -78,17 +78,17 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,All schools,All schools,1.5,Revised
 2023,202223,All schools,All schools,1.3,Revised
 2024,202324,All schools,All schools,1.4,Revised
-2025,202425,All schools,All schools,0.9,Provisional
+2025,202425,All schools,All schools,0.9,Revised
+2021,202021,All state-funded,All state-funded,2.2,Final
+2022,202122,All state-funded,All state-funded,1.6,Revised
+2023,202223,All state-funded,All state-funded,1.4,Revised
+2024,202324,All state-funded,All state-funded,1.4,Revised
+2025,202425,All state-funded,All state-funded,1.1,Revised
 2016,201516,All state-funded schools and colleges,All state-funded,2.3,Revised
 2017,201617,All state-funded schools and colleges,All state-funded,1.9,Revised
 2018,201718,All state-funded schools and colleges,All state-funded,1.6,Revised
 2019,201819,All state-funded schools and colleges,All state-funded,1.4,Revised
 2020,201920,All state-funded schools and colleges,All state-funded,1.7,Final
-2021,202021,All state-funded schools and colleges,All state-funded,2.2,Final
-2022,202122,All state-funded schools and colleges,All state-funded,1.6,Revised
-2023,202223,All state-funded schools and colleges,All state-funded,1.4,Revised
-2024,202324,All state-funded schools and colleges,All state-funded,1.4,Revised
-2025,202425,All state-funded schools and colleges,All state-funded,1.1,Provisional
 2016,201516,All state-funded schools,All state-funded schools,2.2,Revised
 2017,201617,All state-funded schools,All state-funded schools,2,Revised
 2018,201718,All state-funded schools,All state-funded schools,1.6,Revised
@@ -98,7 +98,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,All state-funded schools,All state-funded schools,1.7,Revised
 2023,202223,All state-funded schools,All state-funded schools,1.5,Revised
 2024,202324,All state-funded schools,All state-funded schools,1.6,Revised
-2025,202425,All state-funded schools,All state-funded schools,1.1,Provisional
+2025,202425,All state-funded schools,All state-funded schools,1.1,Revised
 2016,201516,Converter academies - mainstream,All state-funded schools,2.1,Revised
 2017,201617,Converter academies - mainstream,All state-funded schools,1.9,Revised
 2018,201718,Converter academies - mainstream,All state-funded schools,1.4,Revised
@@ -108,7 +108,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,Converter academies - mainstream,All state-funded schools,1.7,Revised
 2023,202223,Converter academies - mainstream,All state-funded schools,1.4,Revised
 2024,202324,Converter academies - mainstream,All state-funded schools,1.6,Revised
-2025,202425,Converter academies - mainstream,All state-funded schools,1.1,Provisional
+2025,202425,Converter academies - mainstream,All state-funded schools,1.1,Revised
 2016,201516,Free schools,All state-funded schools,2.8,Revised
 2017,201617,Free schools,All state-funded schools,1.2,Revised
 2018,201718,Free schools,All state-funded schools,-0.5,Revised
@@ -118,7 +118,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,Free schools,All state-funded schools,1.8,Revised
 2023,202223,Free schools,All state-funded schools,1.6,Revised
 2024,202324,Free schools,All state-funded schools,1,Revised
-2025,202425,Free schools,All state-funded schools,1.5,Provisional
+2025,202425,Free schools,All state-funded schools,1.6,Revised
 2016,201516,Free schools 16-19,All state-funded schools,0.5,Revised
 2017,201617,Free schools 16-19,All state-funded schools,-0.2,Revised
 2018,201718,Free schools 16-19,All state-funded schools,-0.8,Revised
@@ -128,7 +128,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,Free schools 16-19,All state-funded schools,0.1,Revised
 2023,202223,Free schools 16-19,All state-funded schools,-0,Revised
 2024,202324,Free schools 16-19,All state-funded schools,0.6,Revised
-2025,202425,Free schools 16-19,All state-funded schools,-0.2,Provisional
+2025,202425,Free schools 16-19,All state-funded schools,-0.3,Revised
 2016,201516,LA maintained mainstream schools,All state-funded schools,2.4,Revised
 2017,201617,LA maintained mainstream schools,All state-funded schools,2,Revised
 2018,201718,LA maintained mainstream schools,All state-funded schools,1.9,Revised
@@ -138,7 +138,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,LA maintained mainstream schools,All state-funded schools,1.5,Revised
 2023,202223,LA maintained mainstream schools,All state-funded schools,1.5,Revised
 2024,202324,LA maintained mainstream schools,All state-funded schools,1.6,Revised
-2025,202425,LA maintained mainstream schools,All state-funded schools,0.8,Provisional
+2025,202425,LA maintained mainstream schools,All state-funded schools,0.8,Revised
 2016,201516,Sponsored academies - mainstream,All state-funded schools,1.9,Revised
 2017,201617,Sponsored academies - mainstream,All state-funded schools,2.4,Revised
 2018,201718,Sponsored academies - mainstream,All state-funded schools,2.2,Revised
@@ -148,7 +148,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,Sponsored academies - mainstream,All state-funded schools,1.8,Revised
 2023,202223,Sponsored academies - mainstream,All state-funded schools,1.8,Revised
 2024,202324,Sponsored academies - mainstream,All state-funded schools,1.6,Revised
-2025,202425,Sponsored academies - mainstream,All state-funded schools,1.3,Provisional
+2025,202425,Sponsored academies - mainstream,All state-funded schools,1.3,Revised
 2016,201516,Studio schools,All state-funded schools,3,Revised
 2017,201617,Studio schools,All state-funded schools,4.5,Revised
 2018,201718,Studio schools,All state-funded schools,3.7,Revised
@@ -158,7 +158,7 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,Studio schools,All state-funded schools,0.4,Revised
 2023,202223,Studio schools,All state-funded schools,3.7,Revised
 2024,202324,Studio schools,All state-funded schools,3.4,Revised
-2025,202425,Studio schools,All state-funded schools,0.3,Provisional
+2025,202425,Studio schools,All state-funded schools,0.2,Revised
 2016,201516,University technical colleges (UTCs),All state-funded schools,5.4,Revised
 2017,201617,University technical colleges (UTCs),All state-funded schools,2,Revised
 2018,201718,University technical colleges (UTCs),All state-funded schools,0.8,Revised
@@ -168,4 +168,4 @@ year,time_period,establishment_type,establishment_type_group,sex_gap,version
 2022,202122,University technical colleges (UTCs),All state-funded schools,0.7,Revised
 2023,202223,University technical colleges (UTCs),All state-funded schools,-0.4,Revised
 2024,202324,University technical colleges (UTCs),All state-funded schools,-0.2,Revised
-2025,202425,University technical colleges (UTCs),All state-funded schools,1.4,Provisional
+2025,202425,University technical colleges (UTCs),All state-funded schools,1.4,Revised
