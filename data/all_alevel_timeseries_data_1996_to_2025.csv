@@ -28,7 +28,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Accounting and finance,All students,6.2,21.5,44,68.3,86.1,95.8,2220
 2023,202223,Academic year,National,E92000001,England,Revised,Accounting and finance,All students,1.7,14.2,35.4,59.9,79.9,94.4,2150
 2024,202324,Academic year,National,E92000001,England,Revised,Accounting and finance,All students,1.8,14.7,33.1,58,81.5,94.1,2329
-2025,202425,Academic year,National,E92000001,England,Provisional,Accounting and finance,All students,1.8,14.2,36.7,60.9,81.2,94.2,2231
+2025,202425,Academic year,National,E92000001,England,Revised,Accounting and finance,All students,1.8,14.5,37,61.1,81.3,94.3,2231
 1996,199596,Academic year,National,E92000001,England,Final,Accounting and finance,Female,z,9,24,36,50,63,786
 1997,199697,Academic year,National,E92000001,England,Final,Accounting and finance,Female,z,9,23,39,52,65,739
 1998,199798,Academic year,National,E92000001,England,Final,Accounting and finance,Female,z,12,28,40,52,65,720
@@ -58,7 +58,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Accounting and finance,Female,7.5,25.5,47,70.5,85.2,96.6,643
 2023,202223,Academic year,National,E92000001,England,Revised,Accounting and finance,Female,2,16,37.7,57.7,79.4,93.7,586
 2024,202324,Academic year,National,E92000001,England,Revised,Accounting and finance,Female,2.7,16.1,33.8,57,79.8,93.2,665
-2025,202425,Academic year,National,E92000001,England,Provisional,Accounting and finance,Female,2.9,14.4,34.7,58.7,81,93.4,591
+2025,202425,Academic year,National,E92000001,England,Revised,Accounting and finance,Female,2.9,14.6,34.9,59.2,81,93.4,591
 1996,199596,Academic year,National,E92000001,England,Final,Accounting and finance,Male,z,10,25,37,51,62,1256
 1997,199697,Academic year,National,E92000001,England,Final,Accounting and finance,Male,z,9,23,35,48,63,1184
 1998,199798,Academic year,National,E92000001,England,Final,Accounting and finance,Male,z,8,22,38,52,66,1149
@@ -88,7 +88,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Accounting and finance,Male,5.7,19.8,42.7,67.4,86.4,95.5,1577
 2023,202223,Academic year,National,E92000001,England,Revised,Accounting and finance,Male,1.5,13.6,34.6,60.7,80.1,94.6,1564
 2024,202324,Academic year,National,E92000001,England,Revised,Accounting and finance,Male,1.4,14.2,32.9,58.4,82.1,94.5,1664
-2025,202425,Academic year,National,E92000001,England,Provisional,Accounting and finance,Male,1.4,14.1,37.4,61.7,81.2,94.5,1640
+2025,202425,Academic year,National,E92000001,England,Revised,Accounting and finance,Male,1.4,14.5,37.7,61.8,81.3,94.6,1640
 1996,199596,Academic year,National,E92000001,England,Final,Art & design,All students,z,19,38,62,80,92,29796
 1997,199697,Academic year,National,E92000001,England,Final,Art & design,All students,z,20,40,63,82,92,31742
 1998,199798,Academic year,National,E92000001,England,Final,Art & design,All students,z,22,42,65,83,93,33815
@@ -118,7 +118,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Art & design,All students,18.9,38.8,70.3,90.2,97.1,99.2,41793
 2023,202223,Academic year,National,E92000001,England,Revised,Art & design,All students,13,31,62.4,84.9,95.1,98.7,40500
 2024,202324,Academic year,National,E92000001,England,Revised,Art & design,All students,14.2,32.3,63.9,86.1,95.6,98.9,40630
-2025,202425,Academic year,National,E92000001,England,Provisional,Art & design,All students,15.9,35.4,67.2,88.5,96.5,99.2,40147
+2025,202425,Academic year,National,E92000001,England,Revised,Art & design,All students,16,35.6,67.3,88.5,96.6,99.2,40146
 1996,199596,Academic year,National,E92000001,England,Final,Art & design,Female,z,20,41,64,82,93,18052
 1997,199697,Academic year,National,E92000001,England,Final,Art & design,Female,z,21,42,66,85,94,19224
 1998,199798,Academic year,National,E92000001,England,Final,Art & design,Female,z,24,44,68,86,94,20877
@@ -148,7 +148,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Art & design,Female,20.4,41.7,73.5,91.8,97.7,99.3,30955
 2023,202223,Academic year,National,E92000001,England,Revised,Art & design,Female,14.1,33.6,66.2,87.6,96.3,99,30315
 2024,202324,Academic year,National,E92000001,England,Revised,Art & design,Female,15.1,34.5,67.1,88.3,96.5,99.1,30460
-2025,202425,Academic year,National,E92000001,England,Provisional,Art & design,Female,17,37.8,70.1,90.3,97.3,99.3,30303
+2025,202425,Academic year,National,E92000001,England,Revised,Art & design,Female,17.1,38,70.2,90.4,97.3,99.3,30303
 1996,199596,Academic year,National,E92000001,England,Final,Art & design,Male,z,17,35,57,76,89,11744
 1997,199697,Academic year,National,E92000001,England,Final,Art & design,Male,z,18,36,58,78,90,12518
 1998,199798,Academic year,National,E92000001,England,Final,Art & design,Male,z,19,37,60,79,91,12938
@@ -178,7 +178,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Art & design,Male,14.6,30.3,61.1,85.4,95.3,98.8,10838
 2023,202223,Academic year,National,E92000001,England,Revised,Art & design,Male,9.7,23.2,51.2,77,91.5,97.7,10185
 2024,202324,Academic year,National,E92000001,England,Revised,Art & design,Male,11.3,25.7,54.3,79.3,93,98.2,10167
-2025,202425,Academic year,National,E92000001,England,Provisional,Art & design,Male,12.6,28.1,58.3,82.8,94.2,98.8,9844
+2025,202425,Academic year,National,E92000001,England,Revised,Art & design,Male,12.7,28.3,58.4,82.9,94.2,98.8,9843
 1996,199596,Academic year,National,E92000001,England,Final,Biology,All students,z,14,33,52,70,85,43398
 1997,199697,Academic year,National,E92000001,England,Final,Biology,All students,z,15,34,54,72,86,47598
 1998,199798,Academic year,National,E92000001,England,Final,Biology,All students,z,16,36,55,73,87,48897
@@ -208,7 +208,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Biology,All students,13.2,34.4,55.8,75.4,89.7,97.6,64325
 2023,202223,Academic year,National,E92000001,England,Revised,Biology,All students,8.8,26.6,48,67.9,84.7,95.5,66827
 2024,202324,Academic year,National,E92000001,England,Revised,Biology,All students,9.4,28.2,49.2,69.8,85.7,95.4,67071
-2025,202425,Academic year,National,E92000001,England,Provisional,Biology,All students,9.1,28.4,50.9,72.1,87.4,96.1,63518
+2025,202425,Academic year,National,E92000001,England,Revised,Biology,All students,9.4,28.8,51.2,72.3,87.5,96.1,63514
 1996,199596,Academic year,National,E92000001,England,Final,Biology,Female,z,15,34,54,71,86,25643
 1997,199697,Academic year,National,E92000001,England,Final,Biology,Female,z,16,36,55,73,87,28138
 1998,199798,Academic year,National,E92000001,England,Final,Biology,Female,z,17,37,57,75,88,29073
@@ -238,7 +238,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Biology,Female,13.4,34.9,56.5,76.2,90.1,97.6,40940
 2023,202223,Academic year,National,E92000001,England,Revised,Biology,Female,9,26.9,48.8,68.7,85.3,95.6,42444
 2024,202324,Academic year,National,E92000001,England,Revised,Biology,Female,9.9,29.1,50.3,70.8,86.3,95.6,42486
-2025,202425,Academic year,National,E92000001,England,Provisional,Biology,Female,9.4,29,51.8,72.9,88.1,96.3,40822
+2025,202425,Academic year,National,E92000001,England,Revised,Biology,Female,9.7,29.3,52,73.1,88.1,96.4,40820
 1996,199596,Academic year,National,E92000001,England,Final,Biology,Male,z,13,31,49,68,84,17755
 1997,199697,Academic year,National,E92000001,England,Final,Biology,Male,z,14,32,51,70,85,19460
 1998,199798,Academic year,National,E92000001,England,Final,Biology,Male,z,15,33,52,70,86,19824
@@ -268,7 +268,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Biology,Male,12.8,33.6,54.4,74,89.2,97.4,23383
 2023,202223,Academic year,National,E92000001,England,Revised,Biology,Male,8.6,26.1,46.7,66.6,83.6,95.4,24383
 2024,202324,Academic year,National,E92000001,England,Revised,Biology,Male,8.8,26.7,47.1,68.2,84.8,95.1,24577
-2025,202425,Academic year,National,E92000001,England,Provisional,Biology,Male,8.6,27.5,49.3,70.6,86.3,95.7,22687
+2025,202425,Academic year,National,E92000001,England,Revised,Biology,Male,8.9,27.9,49.6,70.8,86.4,95.7,22685
 1996,199596,Academic year,National,E92000001,England,Final,Business studies,All students,z,8,23,45,66,82,24721
 1997,199697,Academic year,National,E92000001,England,Final,Business studies,All students,z,8,27,51,72,86,27313
 1998,199798,Academic year,National,E92000001,England,Final,Business studies,All students,z,8,28,53,74,87,29646
@@ -298,7 +298,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Business studies,All students,7.5,25,59.7,83.3,94.5,98.4,38485
 2023,202223,Academic year,National,E92000001,England,Revised,Business studies,All students,4,15.8,46.3,74.8,91.3,97.5,40592
 2024,202324,Academic year,National,E92000001,England,Revised,Business studies,All students,4.3,16.2,45.9,74.7,91.4,97.6,40531
-2025,202425,Academic year,National,E92000001,England,Provisional,Business studies,All students,4.2,16.3,48.2,77,92.3,97.8,41175
+2025,202425,Academic year,National,E92000001,England,Revised,Business studies,All students,4.4,16.9,48.8,77.3,92.4,97.9,41171
 1996,199596,Academic year,National,E92000001,England,Final,Business studies,Female,z,8,23,45,66,82,11445
 1997,199697,Academic year,National,E92000001,England,Final,Business studies,Female,z,8,28,52,73,87,12461
 1998,199798,Academic year,National,E92000001,England,Final,Business studies,Female,z,9,30,54,74,87,13584
@@ -328,7 +328,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Business studies,Female,8.8,26.9,60.2,83,94.2,98.3,15484
 2023,202223,Academic year,National,E92000001,England,Revised,Business studies,Female,4.8,17.9,48,75.3,91.1,97.4,16111
 2024,202324,Academic year,National,E92000001,England,Revised,Business studies,Female,5.3,19.1,48.4,75.5,91.7,97.6,15872
-2025,202425,Academic year,National,E92000001,England,Provisional,Business studies,Female,4.9,18.2,50,77.5,92.3,97.9,16249
+2025,202425,Academic year,National,E92000001,England,Revised,Business studies,Female,5.1,18.8,50.6,77.6,92.3,98,16249
 1996,199596,Academic year,National,E92000001,England,Final,Business studies,Male,z,8,23,45,67,83,13276
 1997,199697,Academic year,National,E92000001,England,Final,Business studies,Male,z,7,26,50,71,86,14852
 1998,199798,Academic year,National,E92000001,England,Final,Business studies,Male,z,8,27,52,73,87,16062
@@ -358,7 +358,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Business studies,Male,6.7,23.7,59.4,83.5,94.6,98.4,23001
 2023,202223,Academic year,National,E92000001,England,Revised,Business studies,Male,3.5,14.4,45.2,74.5,91.4,97.5,24481
 2024,202324,Academic year,National,E92000001,England,Revised,Business studies,Male,3.6,14.4,44.3,74.1,91.3,97.6,24657
-2025,202425,Academic year,National,E92000001,England,Provisional,Business studies,Male,3.8,15.2,47.1,76.7,92.4,97.8,24926
+2025,202425,Academic year,National,E92000001,England,Revised,Business studies,Male,4,15.8,47.6,77,92.4,97.8,24922
 1996,199596,Academic year,National,E92000001,England,Final,Chemistry,All students,z,20,41,60,75,87,34677
 1997,199697,Academic year,National,E92000001,England,Final,Chemistry,All students,z,21,43,61,76,88,36429
 1998,199798,Academic year,National,E92000001,England,Final,Chemistry,All students,z,24,45,63,78,89,37103
@@ -388,7 +388,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Chemistry,All students,14,38.6,58.9,75.8,89,97.3,53152
 2023,202223,Academic year,National,E92000001,England,Revised,Chemistry,All students,9.3,31.7,53.4,71.3,85.8,95.7,55517
 2024,202324,Academic year,National,E92000001,England,Revised,Chemistry,All students,9.9,33,55.7,73.7,86.9,95.7,56808
-2025,202425,Academic year,National,E92000001,England,Provisional,Chemistry,All students,9.5,32.8,55.8,74.2,87.7,95.9,57250
+2025,202425,Academic year,National,E92000001,England,Revised,Chemistry,All students,9.7,32.9,55.9,74.3,87.7,95.9,57248
 1996,199596,Academic year,National,E92000001,England,Final,Chemistry,Female,z,21,42,61,76,87,15127
 1997,199697,Academic year,National,E92000001,England,Final,Chemistry,Female,z,22,43,62,77,89,16148
 1998,199798,Academic year,National,E92000001,England,Final,Chemistry,Female,z,24,46,64,79,90,16971
@@ -418,7 +418,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Chemistry,Female,12.7,36.9,57.7,75.3,89,97.4,29448
 2023,202223,Academic year,National,E92000001,England,Revised,Chemistry,Female,7.7,29.2,51.2,69.9,85.1,95.5,30894
 2024,202324,Academic year,National,E92000001,England,Revised,Chemistry,Female,9.1,31.8,54.9,73.3,86.7,95.7,31772
-2025,202425,Academic year,National,E92000001,England,Provisional,Chemistry,Female,8.1,30.5,54.2,73.4,87.3,95.8,31938
+2025,202425,Academic year,National,E92000001,England,Revised,Chemistry,Female,8.2,30.6,54.3,73.5,87.4,95.9,31936
 1996,199596,Academic year,National,E92000001,England,Final,Chemistry,Male,z,20,41,59,73,86,19550
 1997,199697,Academic year,National,E92000001,England,Final,Chemistry,Male,z,21,42,60,75,87,20281
 1998,199798,Academic year,National,E92000001,England,Final,Chemistry,Male,z,24,44,62,77,88,20132
@@ -448,7 +448,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Chemistry,Male,15.6,40.8,60.3,76.5,88.9,97.2,23702
 2023,202223,Academic year,National,E92000001,England,Revised,Chemistry,Male,11.2,34.8,56.1,73,86.6,96.1,24623
 2024,202324,Academic year,National,E92000001,England,Revised,Chemistry,Male,10.9,34.5,56.8,74.2,87.2,95.6,25023
-2025,202425,Academic year,National,E92000001,England,Provisional,Chemistry,Male,11.3,35.6,57.9,75.3,88.1,96,25304
+2025,202425,Academic year,National,E92000001,England,Revised,Chemistry,Male,11.5,35.8,58,75.3,88.1,96,25304
 2016,201516,Academic year,National,E92000001,England,Final,Chinese,All students,4,44,85,97,99,100,2445
 2017,201617,Academic year,National,E92000001,England,Final,Chinese,All students,4,44,86,97,99,99,2517
 2018,201718,Academic year,National,E92000001,England,Revised,Chinese,All students,5.2,44,84.7,96.4,98.2,99.3,2816
@@ -458,7 +458,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Chinese,All students,36.5,70.7,93.8,97.9,98.9,99.4,1120
 2023,202223,Academic year,National,E92000001,England,Revised,Chinese,All students,4.1,45.9,87.5,96.3,98.1,98.6,1231
 2024,202324,Academic year,National,E92000001,England,Revised,Chinese,All students,22.5,63.9,90.1,95.8,97.3,98.8,1464
-2025,202425,Academic year,National,E92000001,England,Provisional,Chinese,All students,41.3,74.6,91.6,96.2,98.2,98.7,1460
+2025,202425,Academic year,National,E92000001,England,Revised,Chinese,All students,41.6,75,91.9,96.4,98.2,98.7,1460
 2016,201516,Academic year,National,E92000001,England,Final,Chinese,Female,5,52,89,97,99,100,1346
 2017,201617,Academic year,National,E92000001,England,Final,Chinese,Female,6,55,92,98,99,100,1380
 2018,201718,Academic year,National,E92000001,England,Revised,Chinese,Female,7.3,53.5,89.6,98.1,98.8,99.6,1543
@@ -468,7 +468,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Chinese,Female,45.1,79.5,95.3,98.1,99.2,99.3,594
 2023,202223,Academic year,National,E92000001,England,Revised,Chinese,Female,5.2,54.6,90.7,96,97.7,98.3,658
 2024,202324,Academic year,National,E92000001,England,Revised,Chinese,Female,28.4,71.7,90,95.9,97.5,99.3,814
-2025,202425,Academic year,National,E92000001,England,Provisional,Chinese,Female,47.9,79.9,91.7,96.2,98.1,98.7,824
+2025,202425,Academic year,National,E92000001,England,Revised,Chinese,Female,48.3,80.2,92.1,96.4,98.1,98.7,824
 2016,201516,Academic year,National,E92000001,England,Final,Chinese,Male,3,36,80,95,98,100,1099
 2017,201617,Academic year,National,E92000001,England,Final,Chinese,Male,2,32,80,96,98,99,1137
 2018,201718,Academic year,National,E92000001,England,Revised,Chinese,Male,2.7,32.5,78.8,94.3,97.3,98.8,1273
@@ -478,7 +478,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Chinese,Male,26.9,60.8,92.2,97.7,98.7,99.4,525
 2023,202223,Academic year,National,E92000001,England,Revised,Chinese,Male,3,36,83.8,96.5,98.6,99,573
 2024,202324,Academic year,National,E92000001,England,Revised,Chinese,Male,15.1,54.2,90.2,95.5,96.9,98.3,650
-2025,202425,Academic year,National,E92000001,England,Provisional,Chinese,Male,32.6,67.7,91.3,96.2,98.3,98.7,634
+2025,202425,Academic year,National,E92000001,England,Revised,Chinese,Male,32.8,68.1,91.6,96.4,98.4,98.7,634
 2016,201516,Academic year,National,E92000001,England,Final,Classical greek,All students,34,91,99,z,z,z,213
 2017,201617,Academic year,National,E92000001,England,Final,Classical greek,All students,33,90,z,z,z,100,211
 2018,201718,Academic year,National,E92000001,England,Revised,Classical greek,All students,25.6,76.9,88.9,95.3,97.9,99.6,234
@@ -488,7 +488,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Classical greek,All students,58.8,93,98.9,100,100,100,187
 2023,202223,Academic year,National,E92000001,England,Revised,Classical greek,All students,51.9,91.2,96.9,98.1,99.4,99.4,160
 2024,202324,Academic year,National,E92000001,England,Revised,Classical greek,All students,56.1,91.5,96.8,99.5,99.5,100,189
-2025,202425,Academic year,National,E92000001,England,Provisional,Classical greek,All students,52,88.8,96.4,99.5,100,100,196
+2025,202425,Academic year,National,E92000001,England,Revised,Classical greek,All students,52,88.8,96.9,99.5,100,100,196
 2016,201516,Academic year,National,E92000001,England,Final,Classical greek,Female,33,89,z,z,z,z,85
 2017,201617,Academic year,National,E92000001,England,Final,Classical greek,Female,20,85,z,z,z,100,93
 2018,201718,Academic year,National,E92000001,England,Revised,Classical greek,Female,22.2,71.8,87.2,95.7,98.3,100,117
@@ -498,7 +498,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Classical greek,Female,58.9,92.2,98.9,100,100,100,90
 2023,202223,Academic year,National,E92000001,England,Revised,Classical greek,Female,44.6,89.2,97.3,97.3,98.6,98.6,74
 2024,202324,Academic year,National,E92000001,England,Revised,Classical greek,Female,54.4,91.1,95.6,98.9,98.9,100,90
-2025,202425,Academic year,National,E92000001,England,Provisional,Classical greek,Female,54.7,91.9,96.5,100,100,100,86
+2025,202425,Academic year,National,E92000001,England,Revised,Classical greek,Female,54.7,91.9,97.7,100,100,100,86
 2016,201516,Academic year,National,E92000001,England,Final,Classical greek,Male,35,92,z,z,z,z,128
 2017,201617,Academic year,National,E92000001,England,Final,Classical greek,Male,42,93,100,100,100,100,118
 2018,201718,Academic year,National,E92000001,England,Revised,Classical greek,Male,29.1,82.1,90.6,94.9,97.4,99.1,117
@@ -508,7 +508,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Classical greek,Male,58.8,93.8,99,100,100,100,97
 2023,202223,Academic year,National,E92000001,England,Revised,Classical greek,Male,58.1,93,96.5,98.8,100,100,86
 2024,202324,Academic year,National,E92000001,England,Revised,Classical greek,Male,57.6,91.9,98,100,100,100,99
-2025,202425,Academic year,National,E92000001,England,Provisional,Classical greek,Male,50,86.4,96.4,99.1,100,100,110
+2025,202425,Academic year,National,E92000001,England,Revised,Classical greek,Male,50,86.4,96.4,99.1,100,100,110
 1996,199596,Academic year,National,E92000001,England,Final,Computer science,All students,z,10,23,40,59,75,8550
 1997,199697,Academic year,National,E92000001,England,Final,Computer science,All students,z,10,22,39,59,76,10118
 1998,199798,Academic year,National,E92000001,England,Final,Computer science,All students,z,8,21,42,62,79,12529
@@ -538,7 +538,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Computer science,All students,14.6,35.2,57.4,75.7,90,96.8,15003
 2023,202223,Academic year,National,E92000001,England,Revised,Computer science,All students,5.3,22.1,44.2,65.4,83.1,94.6,17205
 2024,202324,Academic year,National,E92000001,England,Revised,Computer science,All students,6,24.3,46.1,67.1,84.6,95,19433
-2025,202425,Academic year,National,E92000001,England,Provisional,Computer science,All students,6.2,25.2,48.8,70,86.3,95.5,18682
+2025,202425,Academic year,National,E92000001,England,Revised,Computer science,All students,6.4,25.5,49,70.1,86.4,95.6,18682
 1996,199596,Academic year,National,E92000001,England,Final,Computer science,Female,z,6,17,32,54,74,1266
 1997,199697,Academic year,National,E92000001,England,Final,Computer science,Female,z,6,18,34,55,75,1543
 1998,199798,Academic year,National,E92000001,England,Final,Computer science,Female,z,5,18,38,60,78,2276
@@ -568,7 +568,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Computer science,Female,16.8,38.9,61.4,79.1,92.3,97.4,2273
 2023,202223,Academic year,National,E92000001,England,Revised,Computer science,Female,6.1,24.6,47.4,69.8,86.1,95.9,2605
 2024,202324,Academic year,National,E92000001,England,Revised,Computer science,Female,7,26.5,49.2,70.4,86.4,95.9,3394
-2025,202425,Academic year,National,E92000001,England,Provisional,Computer science,Female,7.2,27.8,51.6,72,87.9,96.4,3487
+2025,202425,Academic year,National,E92000001,England,Revised,Computer science,Female,7.5,28,51.6,72,88,96.4,3487
 1996,199596,Academic year,National,E92000001,England,Final,Computer science,Male,z,11,24,41,60,76,7284
 1997,199697,Academic year,National,E92000001,England,Final,Computer science,Male,z,10,23,40,60,77,8575
 1998,199798,Academic year,National,E92000001,England,Final,Computer science,Male,z,9,22,43,63,80,10253
@@ -598,7 +598,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Computer science,Male,14.2,34.6,56.7,75.1,89.6,96.7,12730
 2023,202223,Academic year,National,E92000001,England,Revised,Computer science,Male,5.1,21.6,43.6,64.7,82.5,94.4,14600
 2024,202324,Academic year,National,E92000001,England,Revised,Computer science,Male,5.8,23.8,45.4,66.4,84.2,94.8,16037
-2025,202425,Academic year,National,E92000001,England,Provisional,Computer science,Male,5.9,24.6,48.1,69.5,86,95.3,15195
+2025,202425,Academic year,National,E92000001,England,Revised,Computer science,Male,6.1,24.9,48.4,69.6,86,95.4,15195
 1996,199596,Academic year,National,E92000001,England,Final,Design & technology,All students,z,12,27,50,73,87,8986
 1997,199697,Academic year,National,E92000001,England,Final,Design & technology,All students,z,13,28,52,75,89,9493
 1998,199798,Academic year,National,E92000001,England,Final,Design & technology,All students,z,12,26,49,72,88,10986
@@ -628,7 +628,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Design & technology,All students,12.9,30.7,57.2,80.7,93.4,98,9643
 2023,202223,Academic year,National,E92000001,England,Revised,Design & technology,All students,5.8,17.5,41.2,67.7,86.9,96.4,9015
 2024,202324,Academic year,National,E92000001,England,Revised,Design & technology,All students,6.8,19.9,46.1,71.4,88.3,96.8,9008
-2025,202425,Academic year,National,E92000001,England,Provisional,Design & technology,All students,6.2,19.5,45.4,71.8,88.8,97,9013
+2025,202425,Academic year,National,E92000001,England,Revised,Design & technology,All students,6.5,19.8,45.8,72,88.9,97,9013
 1996,199596,Academic year,National,E92000001,England,Final,Design & technology,Female,z,15,32,58,79,92,1797
 1997,199697,Academic year,National,E92000001,England,Final,Design & technology,Female,z,13,30,58,80,92,2346
 1998,199798,Academic year,National,E92000001,England,Final,Design & technology,Female,z,14,31,56,78,91,2603
@@ -658,7 +658,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Design & technology,Female,17.2,39.1,66.5,86.7,95.4,98.8,2832
 2023,202223,Academic year,National,E92000001,England,Revised,Design & technology,Female,8,23.6,50.9,76.2,91.7,98,2731
 2024,202324,Academic year,National,E92000001,England,Revised,Design & technology,Female,8.7,25.7,55.7,78.2,91.7,98.1,2830
-2025,202425,Academic year,National,E92000001,England,Provisional,Design & technology,Female,8.3,25.1,54.1,78.1,92.4,98.3,2983
+2025,202425,Academic year,National,E92000001,England,Revised,Design & technology,Female,8.6,25.5,54.4,78.3,92.5,98.3,2983
 1996,199596,Academic year,National,E92000001,England,Final,Design & technology,Male,z,12,25,48,71,86,7189
 1997,199697,Academic year,National,E92000001,England,Final,Design & technology,Male,z,12,27,50,73,88,7147
 1998,199798,Academic year,National,E92000001,England,Final,Design & technology,Male,z,11,24,47,70,87,8383
@@ -688,7 +688,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Design & technology,Male,11.2,27.3,53.3,78.3,92.6,97.7,6811
 2023,202223,Academic year,National,E92000001,England,Revised,Design & technology,Male,4.9,14.8,37,64,84.8,95.7,6284
 2024,202324,Academic year,National,E92000001,England,Revised,Design & technology,Male,5.9,17.3,41.7,68.3,86.8,96.2,6177
-2025,202425,Academic year,National,E92000001,England,Provisional,Design & technology,Male,5.2,16.7,41.1,68.7,87,96.4,6030
+2025,202425,Academic year,National,E92000001,England,Revised,Design & technology,Male,5.4,17,41.5,68.9,87.1,96.4,6030
 1996,199596,Academic year,National,E92000001,England,Final,Drama,All students,z,11,26,46,67,84,7897
 1997,199697,Academic year,National,E92000001,England,Final,Drama,All students,z,12,27,48,69,86,8754
 1998,199798,Academic year,National,E92000001,England,Final,Drama,All students,z,12,28,53,75,88,9860
@@ -718,7 +718,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Drama,All students,15.3,39.2,72,91.2,97.8,99.5,8930
 2023,202223,Academic year,National,E92000001,England,Revised,Drama,All students,5.7,21.6,56.2,83.1,96,99.2,8334
 2024,202324,Academic year,National,E92000001,England,Revised,Drama,All students,6.4,22.9,60.1,86.6,96.6,99.3,7863
-2025,202425,Academic year,National,E92000001,England,Provisional,Drama,All students,6.3,23.1,62.4,89.3,97.9,99.6,7372
+2025,202425,Academic year,National,E92000001,England,Revised,Drama,All students,6.4,23.8,62.9,89.5,97.9,99.6,7372
 1996,199596,Academic year,National,E92000001,England,Final,Drama,Female,z,12,28,49,69,85,5820
 1997,199697,Academic year,National,E92000001,England,Final,Drama,Female,z,13,28,50,71,87,6422
 1998,199798,Academic year,National,E92000001,England,Final,Drama,Female,z,13,30,56,78,90,7243
@@ -748,7 +748,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Drama,Female,16.3,41.5,74.6,93,98.4,99.6,6480
 2023,202223,Academic year,National,E92000001,England,Revised,Drama,Female,6.1,23.4,59.7,85.8,96.8,99.3,6069
 2024,202324,Academic year,National,E92000001,England,Revised,Drama,Female,7,24.7,63.2,88.2,97.2,99.5,5794
-2025,202425,Academic year,National,E92000001,England,Provisional,Drama,Female,6.6,24.4,65,90.6,98.2,99.6,5470
+2025,202425,Academic year,National,E92000001,England,Revised,Drama,Female,6.8,25,65.4,90.9,98.2,99.6,5470
 1996,199596,Academic year,National,E92000001,England,Final,Drama,Male,z,9,22,40,60,78,2077
 1997,199697,Academic year,National,E92000001,England,Final,Drama,Male,z,10,24,43,63,81,2332
 1998,199798,Academic year,National,E92000001,England,Final,Drama,Male,z,10,24,46,68,84,2617
@@ -778,7 +778,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Drama,Male,12.6,33,65.3,86.3,96.2,99.1,2449
 2023,202223,Academic year,National,E92000001,England,Revised,Drama,Male,4.7,16.6,46.8,75.9,93.9,98.8,2265
 2024,202324,Academic year,National,E92000001,England,Revised,Drama,Male,4.5,17.9,51.3,82.1,94.7,98.7,2067
-2025,202425,Academic year,National,E92000001,England,Provisional,Drama,Male,5.4,19.5,55,85.3,97,99.4,1902
+2025,202425,Academic year,National,E92000001,England,Revised,Drama,Male,5.4,20.1,55.5,85.4,97,99.4,1902
 1996,199596,Academic year,National,E92000001,England,Final,Economics,All students,z,16,32,50,67,82,20751
 1997,199697,Academic year,National,E92000001,England,Final,Economics,All students,z,16,33,52,70,84,19384
 1998,199798,Academic year,National,E92000001,England,Final,Economics,All students,z,18,36,56,73,85,18150
@@ -808,7 +808,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Economics,All students,14.2,39.1,67.2,86.1,95.3,98.6,35257
 2023,202223,Academic year,National,E92000001,England,Revised,Economics,All students,8.1,30.4,58.8,80.5,92.7,97.9,37710
 2024,202324,Academic year,National,E92000001,England,Revised,Economics,All students,8.6,31.8,60.4,81.8,93.3,98.1,38850
-2025,202425,Academic year,National,E92000001,England,Provisional,Economics,All students,7.7,30.1,61.1,82.8,93.7,98.2,41013
+2025,202425,Academic year,National,E92000001,England,Revised,Economics,All students,8.5,31.1,61.6,82.9,93.8,98.2,41008
 1996,199596,Academic year,National,E92000001,England,Final,Economics,Female,z,14,30,48,65,80,7070
 1997,199697,Academic year,National,E92000001,England,Final,Economics,Female,z,16,33,51,69,83,6712
 1998,199798,Academic year,National,E92000001,England,Final,Economics,Female,z,18,36,56,72,85,6457
@@ -838,7 +838,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Economics,Female,16.7,42.3,70,87.1,95.6,98.7,10881
 2023,202223,Academic year,National,E92000001,England,Revised,Economics,Female,9.3,33.1,61.2,81.8,93.2,98,11214
 2024,202324,Academic year,National,E92000001,England,Revised,Economics,Female,10.2,35,63.2,83.2,93.6,98,11786
-2025,202425,Academic year,National,E92000001,England,Provisional,Economics,Female,8.9,32.3,63.1,83.4,93.5,98,12420
+2025,202425,Academic year,National,E92000001,England,Revised,Economics,Female,9.7,33.4,63.6,83.6,93.6,98,12419
 1996,199596,Academic year,National,E92000001,England,Final,Economics,Male,z,16,33,51,68,82,13681
 1997,199697,Academic year,National,E92000001,England,Final,Economics,Male,z,16,33,52,70,84,12672
 1998,199798,Academic year,National,E92000001,England,Final,Economics,Male,z,18,36,55,73,86,11693
@@ -868,7 +868,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Economics,Male,13.2,37.6,65.9,85.6,95.1,98.5,24376
 2023,202223,Academic year,National,E92000001,England,Revised,Economics,Male,7.6,29.2,57.7,80,92.5,97.9,26496
 2024,202324,Academic year,National,E92000001,England,Revised,Economics,Male,7.9,30.4,59.1,81.2,93.2,98.2,27061
-2025,202425,Academic year,National,E92000001,England,Provisional,Economics,Male,7.2,29.1,60.2,82.5,93.8,98.3,28593
+2025,202425,Academic year,National,E92000001,England,Revised,Economics,Male,8,30.1,60.8,82.7,93.9,98.3,28589
 2016,201516,Academic year,National,E92000001,England,Final,English language,All students,1,11,40,79,97,100,21176
 2017,201617,Academic year,National,E92000001,England,Final,English language,All students,1,10,38,75,94,99,18802
 2018,201718,Academic year,National,E92000001,England,Revised,English language,All students,1.6,11.1,39,75.3,94.8,99.1,16141
@@ -878,7 +878,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,English language,All students,6.4,22.9,58.1,85.8,96.7,99.1,14046
 2023,202223,Academic year,National,E92000001,England,Revised,English language,All students,2.5,12.8,44.9,79.5,95.7,99.1,12949
 2024,202324,Academic year,National,E92000001,England,Revised,English language,All students,2.5,12.1,43,76.8,94.4,99,12811
-2025,202425,Academic year,National,E92000001,England,Provisional,English language,All students,2.6,13.2,45.1,79.1,95.7,99.3,12219
+2025,202425,Academic year,National,E92000001,England,Revised,English language,All students,2.7,13.5,45.5,79.4,95.8,99.3,12219
 2016,201516,Academic year,National,E92000001,England,Final,English language,Female,2,12,43,82,98,100,14635
 2017,201617,Academic year,National,E92000001,England,Final,English language,Female,2,11,40,77,95,99,13015
 2018,201718,Academic year,National,E92000001,England,Revised,English language,Female,1.8,12,41.2,77.3,95.7,99.2,11086
@@ -888,7 +888,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,English language,Female,6.9,24.6,60.6,87.5,97.2,99.3,10176
 2023,202223,Academic year,National,E92000001,England,Revised,English language,Female,2.9,14.4,47.8,81.9,96.4,99.3,9149
 2024,202324,Academic year,National,E92000001,England,Revised,English language,Female,2.7,13.1,45.5,78.7,95.3,99.2,9111
-2025,202425,Academic year,National,E92000001,England,Provisional,English language,Female,2.9,14.5,47.7,80.5,96.3,99.5,9046
+2025,202425,Academic year,National,E92000001,England,Revised,English language,Female,3,14.8,48,80.8,96.3,99.5,9046
 2016,201516,Academic year,National,E92000001,England,Final,English language,Male,1,8,34,74,95,100,6541
 2017,201617,Academic year,National,E92000001,England,Final,English language,Male,1,8,31,69,92,99,5787
 2018,201718,Academic year,National,E92000001,England,Revised,English language,Male,1.1,9.1,34.3,70.7,93,98.9,5055
@@ -898,7 +898,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,English language,Male,5,18.3,51.3,81.4,95.3,98.7,3870
 2023,202223,Academic year,National,E92000001,England,Revised,English language,Male,1.6,8.8,38.1,73.7,93.9,98.5,3800
 2024,202324,Academic year,National,E92000001,England,Revised,English language,Male,1.8,9.6,37,72.2,92.4,98.5,3700
-2025,202425,Academic year,National,E92000001,England,Provisional,English language,Male,1.6,9.7,37.9,75.2,94.2,98.7,3173
+2025,202425,Academic year,National,E92000001,England,Revised,English language,Male,1.7,9.8,38.3,75.4,94.3,98.7,3173
 2016,201516,Academic year,National,E92000001,England,Final,English language & literature,All students,3,13,40,77,96,100,11260
 2017,201617,Academic year,National,E92000001,England,Final,English language & literature,All students,3,12,40,75,95,99,10203
 2018,201718,Academic year,National,E92000001,England,Revised,English language & literature,All students,3,12.7,39.3,73,93.8,99,8760
@@ -908,7 +908,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,English language & literature,All students,9.3,25.7,60.3,86.4,96.3,99,6680
 2023,202223,Academic year,National,E92000001,England,Revised,English language & literature,All students,4.3,15.1,45.7,79,94.9,99,6624
 2024,202324,Academic year,National,E92000001,England,Revised,English language & literature,All students,4.3,14.9,44.8,77.2,94.9,99,7021
-2025,202425,Academic year,National,E92000001,England,Provisional,English language & literature,All students,4.1,15.1,47.8,80.8,96.1,99.4,6540
+2025,202425,Academic year,National,E92000001,England,Revised,English language & literature,All students,4.2,15.9,48.4,81.1,96.1,99.4,6540
 2016,201516,Academic year,National,E92000001,England,Final,English language & literature,Female,3,13,42,78,97,100,8131
 2017,201617,Academic year,National,E92000001,England,Final,English language & literature,Female,3,12,41,76,95,99,7351
 2018,201718,Academic year,National,E92000001,England,Revised,English language & literature,Female,2.9,13.4,41.2,75,94.7,99.2,6315
@@ -918,7 +918,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,English language & literature,Female,10.1,27,62.4,87.9,96.9,99.2,4949
 2023,202223,Academic year,National,E92000001,England,Revised,English language & literature,Female,4.5,16.2,47.5,80.9,95.6,99.2,4866
 2024,202324,Academic year,National,E92000001,England,Revised,English language & literature,Female,4.3,15.5,46.7,78.9,95.5,99.2,5323
-2025,202425,Academic year,National,E92000001,England,Provisional,English language & literature,Female,4.3,15.9,49.5,82.3,96.4,99.5,4962
+2025,202425,Academic year,National,E92000001,England,Revised,English language & literature,Female,4.4,16.7,50.1,82.5,96.4,99.5,4962
 2016,201516,Academic year,National,E92000001,England,Final,English language & literature,Male,3,11,36,73,95,99,3129
 2017,201617,Academic year,National,E92000001,England,Final,English language & literature,Male,3,12,38,71,93,99,2852
 2018,201718,Academic year,National,E92000001,England,Revised,English language & literature,Male,3.1,10.9,34.3,67.9,91.3,98.5,2445
@@ -928,7 +928,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,English language & literature,Male,7.1,22,54.5,82.1,94.5,98.6,1731
 2023,202223,Academic year,National,E92000001,England,Revised,English language & literature,Male,3.8,12.3,40.7,73.8,92.9,98.4,1758
 2024,202324,Academic year,National,E92000001,England,Revised,English language & literature,Male,4.4,13,38.7,71.8,92.7,98.4,1698
-2025,202425,Academic year,National,E92000001,England,Provisional,English language & literature,Male,3.5,12.8,42.5,76.2,95,99.2,1578
+2025,202425,Academic year,National,E92000001,England,Revised,English language & literature,Male,3.7,13.5,43,76.6,95.1,99.2,1578
 2016,201516,Academic year,National,E92000001,England,Final,English literature,All students,9,26,55,84,97,100,43739
 2017,201617,Academic year,National,E92000001,England,Final,English literature,All students,9,26,54,81,96,99,42033
 2018,201718,Academic year,National,E92000001,England,Revised,English literature,All students,9.1,24.7,53.2,79.9,95,99.2,40267
@@ -938,7 +938,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,English literature,All students,17.1,37.6,67.7,88.3,97,99.2,32361
 2023,202223,Academic year,National,E92000001,England,Revised,English literature,All students,10.5,26.4,58.1,83.1,95.5,99.1,33450
 2024,202324,Academic year,National,E92000001,England,Revised,English literature,All students,10.3,26.1,57.9,83,95.4,98.9,36491
-2025,202425,Academic year,National,E92000001,England,Provisional,English literature,All students,9.6,25.2,56,82,95.5,99.3,34418
+2025,202425,Academic year,National,E92000001,England,Revised,English literature,All students,10,26,56.5,82.2,95.5,99.3,34416
 2016,201516,Academic year,National,E92000001,England,Final,English literature,Female,8,26,56,84,98,100,32810
 2017,201617,Academic year,National,E92000001,England,Final,English literature,Female,9,25,54,81,96,99,31754
 2018,201718,Academic year,National,E92000001,England,Revised,English literature,Female,8.8,24.6,53.5,80.3,95.3,99.3,30830
@@ -948,7 +948,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,English literature,Female,17.1,38.1,68.6,88.9,97.3,99.3,24958
 2023,202223,Academic year,National,E92000001,England,Revised,English literature,Female,10.4,26.5,58.8,83.8,95.9,99.2,26064
 2024,202324,Academic year,National,E92000001,England,Revised,English literature,Female,10.2,26.1,58.2,83.3,95.6,99,28953
-2025,202425,Academic year,National,E92000001,England,Provisional,English literature,Female,9.4,25,56.2,82.4,95.7,99.4,27481
+2025,202425,Academic year,National,E92000001,England,Revised,English literature,Female,9.8,25.9,56.7,82.6,95.8,99.4,27480
 2016,201516,Academic year,National,E92000001,England,Final,English literature,Male,10,26,53,82,97,100,10929
 2017,201617,Academic year,National,E92000001,England,Final,English literature,Male,10,26,54,80,94,99,10279
 2018,201718,Academic year,National,E92000001,England,Revised,English literature,Male,10.1,24.9,52.4,78.3,94.1,98.8,9437
@@ -958,7 +958,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,English literature,Male,16.8,36.2,64.6,86.4,96,98.9,7403
 2023,202223,Academic year,National,E92000001,England,Revised,English literature,Male,10.6,26,55.7,80.7,94.2,98.8,7386
 2024,202324,Academic year,National,E92000001,England,Revised,English literature,Male,10.7,26.2,56.8,81.9,94.5,98.7,7531
-2025,202425,Academic year,National,E92000001,England,Provisional,English literature,Male,10.3,25.7,54.9,80.3,94.6,98.9,6937
+2025,202425,Academic year,National,E92000001,England,Revised,English literature,Male,10.7,26.5,55.5,80.5,94.6,99,6936
 1996,199596,Academic year,National,E92000001,England,Final,French,All students,z,21,38,58,75,88,22718
 1997,199697,Academic year,National,E92000001,England,Final,French,All students,z,20,40,60,77,89,21364
 1998,199798,Academic year,National,E92000001,England,Final,French,All students,z,22,43,62,80,92,19629
@@ -988,7 +988,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,French,All students,20.5,50.9,74.5,89,96.7,99.2,7293
 2023,202223,Academic year,National,E92000001,England,Revised,French,All students,11.1,38.4,66.6,84.3,94.7,98.5,6370
 2024,202324,Academic year,National,E92000001,England,Revised,French,All students,12.9,40.6,69.2,87,95.3,98.6,6887
-2025,202425,Academic year,National,E92000001,England,Provisional,French,All students,11.7,39.9,67,84.9,95.1,98.7,6310
+2025,202425,Academic year,National,E92000001,England,Revised,French,All students,12.2,40.4,67.3,85.2,95.1,98.7,6309
 1996,199596,Academic year,National,E92000001,England,Final,French,Female,z,20,37,57,74,87,15859
 1997,199697,Academic year,National,E92000001,England,Final,French,Female,z,20,40,60,77,89,14951
 1998,199798,Academic year,National,E92000001,England,Final,French,Female,z,21,41,61,78,91,13730
@@ -1018,7 +1018,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,French,Female,19.4,50,73.7,88.7,96.7,99.2,5152
 2023,202223,Academic year,National,E92000001,England,Revised,French,Female,10.9,37.9,65.9,84.3,94.8,98.7,4419
 2024,202324,Academic year,National,E92000001,England,Revised,French,Female,12.4,39.9,68.8,86.7,95.3,98.8,4776
-2025,202425,Academic year,National,E92000001,England,Provisional,French,Female,11.4,38.6,65.8,84.2,95,98.5,4339
+2025,202425,Academic year,National,E92000001,England,Revised,French,Female,11.8,39,66.1,84.5,95.1,98.6,4338
 1996,199596,Academic year,National,E92000001,England,Final,French,Male,z,22,40,60,77,90,6859
 1997,199697,Academic year,National,E92000001,England,Final,French,Male,z,22,42,61,78,90,6413
 1998,199798,Academic year,National,E92000001,England,Final,French,Male,z,25,46,66,83,93,5899
@@ -1048,7 +1048,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,French,Male,23,53.1,76.5,89.8,96.8,99.3,2140
 2023,202223,Academic year,National,E92000001,England,Revised,French,Male,11.6,39.4,68.2,84.3,94.4,98.3,1951
 2024,202324,Academic year,National,E92000001,England,Revised,French,Male,13.9,42,70.1,87.5,95.5,98.4,2110
-2025,202425,Academic year,National,E92000001,England,Provisional,French,Male,12.3,42.6,69.5,86.5,95.2,99,1971
+2025,202425,Academic year,National,E92000001,England,Revised,French,Male,13.1,43.3,70,86.6,95.2,99,1971
 1996,199596,Academic year,National,E92000001,England,Final,Further mathematics,All students,z,46,67,81,90,95,4913
 1997,199697,Academic year,National,E92000001,England,Final,Further mathematics,All students,z,47,68,82,91,96,4999
 1998,199798,Academic year,National,E92000001,England,Final,Further mathematics,All students,z,49,69,82,91,96,5211
@@ -1078,7 +1078,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Further mathematics,All students,40.5,67.8,83.1,92.2,97.1,99,14103
 2023,202223,Academic year,National,E92000001,England,Revised,Further mathematics,All students,29.1,59,77.6,89.1,95.1,98.2,14025
 2024,202324,Academic year,National,E92000001,England,Revised,Further mathematics,All students,29.4,59.3,79.6,90.3,95.7,98.4,16816
-2025,202425,Academic year,National,E92000001,England,Provisional,Further mathematics,All students,29,58.7,79.5,90.2,95.6,98.4,18079
+2025,202425,Academic year,National,E92000001,England,Revised,Further mathematics,All students,29.6,59.2,79.7,90.2,95.7,98.4,18078
 1996,199596,Academic year,National,E92000001,England,Final,Further mathematics,Female,z,47,68,83,91,96,1231
 1997,199697,Academic year,National,E92000001,England,Final,Further mathematics,Female,z,46,67,83,92,97,1243
 1998,199798,Academic year,National,E92000001,England,Final,Further mathematics,Female,z,48,68,82,93,97,1322
@@ -1108,7 +1108,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Further mathematics,Female,37.7,65.3,82.3,92.6,97.3,99.1,3978
 2023,202223,Academic year,National,E92000001,England,Revised,Further mathematics,Female,25.3,55.6,75.4,87.6,94.3,98,3951
 2024,202324,Academic year,National,E92000001,England,Revised,Further mathematics,Female,27.3,58.1,78.6,89.8,95.6,98.6,4551
-2025,202425,Academic year,National,E92000001,England,Provisional,Further mathematics,Female,26.8,56.6,78,89.7,95.3,98.4,4875
+2025,202425,Academic year,National,E92000001,England,Revised,Further mathematics,Female,27.4,57,78.2,89.8,95.3,98.5,4875
 1996,199596,Academic year,National,E92000001,England,Final,Further mathematics,Male,z,46,67,80,89,95,3682
 1997,199697,Academic year,National,E92000001,England,Final,Further mathematics,Male,z,48,68,82,90,96,3756
 1998,199798,Academic year,National,E92000001,England,Final,Further mathematics,Male,z,49,70,82,91,96,3889
@@ -1138,7 +1138,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Further mathematics,Male,41.6,68.8,83.4,92.1,97,99,10125
 2023,202223,Academic year,National,E92000001,England,Revised,Further mathematics,Male,30.7,60.4,78.4,89.6,95.4,98.3,10074
 2024,202324,Academic year,National,E92000001,England,Revised,Further mathematics,Male,30.2,59.8,80,90.4,95.7,98.3,12261
-2025,202425,Academic year,National,E92000001,England,Provisional,Further mathematics,Male,29.8,59.5,80.1,90.3,95.8,98.3,13203
+2025,202425,Academic year,National,E92000001,England,Revised,Further mathematics,Male,30.4,60.1,80.2,90.4,95.8,98.4,13202
 1996,199596,Academic year,National,E92000001,England,Final,General studies,All students,z,14,30,49,68,84,62020
 1997,199697,Academic year,National,E92000001,England,Final,General studies,All students,z,14,30,49,68,84,71742
 1998,199798,Academic year,National,E92000001,England,Final,General studies,All students,z,13,30,50,70,85,78806
@@ -1240,7 +1240,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Geography,All students,11.3,33.7,64,85.5,95.4,98.7,34064
 2023,202223,Academic year,National,E92000001,England,Revised,Geography,All students,6.3,24.4,53.9,79.3,93.1,98.2,34651
 2024,202324,Academic year,National,E92000001,England,Revised,Geography,All students,6.5,25.1,54.2,79,92.8,98.2,33493
-2025,202425,Academic year,National,E92000001,England,Provisional,Geography,All students,6.3,24.5,54,79.8,93.7,98.4,31155
+2025,202425,Academic year,National,E92000001,England,Revised,Geography,All students,6.6,25,54.4,80,93.8,98.4,31152
 1996,199596,Academic year,National,E92000001,England,Final,Geography,Female,z,16,35,54,71,84,16664
 1997,199697,Academic year,National,E92000001,England,Final,Geography,Female,z,14,38,61,79,91,17115
 1998,199798,Academic year,National,E92000001,England,Final,Geography,Female,z,18,41,64,81,92,17829
@@ -1270,7 +1270,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Geography,Female,15.7,42.1,71.9,89.4,96.8,99,16119
 2023,202223,Academic year,National,E92000001,England,Revised,Geography,Female,9,31.6,62.7,85.1,95.5,98.9,15878
 2024,202324,Academic year,National,E92000001,England,Revised,Geography,Female,9.5,32.9,63.3,84.9,95.1,98.8,15323
-2025,202425,Academic year,National,E92000001,England,Provisional,Geography,Female,8.7,31.2,62.1,84.8,95.6,98.8,14600
+2025,202425,Academic year,National,E92000001,England,Revised,Geography,Female,9.1,31.7,62.5,85,95.6,98.9,14598
 1996,199596,Academic year,National,E92000001,England,Final,Geography,Male,z,12,29,48,67,82,20498
 1997,199697,Academic year,National,E92000001,England,Final,Geography,Male,z,10,30,53,74,89,20864
 1998,199798,Academic year,National,E92000001,England,Final,Geography,Male,z,13,34,58,78,91,21003
@@ -1300,7 +1300,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Geography,Male,7.4,26.1,56.9,81.9,94.1,98.4,17944
 2023,202223,Academic year,National,E92000001,England,Revised,Geography,Male,3.9,18.4,46.5,74.4,91,97.6,18773
 2024,202324,Academic year,National,E92000001,England,Revised,Geography,Male,3.9,18.5,46.6,74,90.9,97.7,18165
-2025,202425,Academic year,National,E92000001,England,Provisional,Geography,Male,4.2,18.6,46.8,75.4,92.1,98,16554
+2025,202425,Academic year,National,E92000001,England,Revised,Geography,Male,4.4,19,47.2,75.6,92.2,98,16553
 1996,199596,Academic year,National,E92000001,England,Final,German,All students,z,23,41,59,76,89,9306
 1997,199697,Academic year,National,E92000001,England,Final,German,All students,z,23,42,61,78,90,8984
 1998,199798,Academic year,National,E92000001,England,Final,German,All students,z,27,46,66,81,92,8903
@@ -1330,7 +1330,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,German,All students,26.3,58,78.2,91.4,97.7,99.6,2614
 2023,202223,Academic year,National,E92000001,England,Revised,German,All students,14.4,44.4,70.3,87.3,95.9,99.4,2160
 2024,202324,Academic year,National,E92000001,England,Revised,German,All students,16.4,47.6,73.2,88.2,96.7,99.3,2225
-2025,202425,Academic year,National,E92000001,England,Provisional,German,All students,16,47.1,72.6,89,96.2,99.6,2062
+2025,202425,Academic year,National,E92000001,England,Revised,German,All students,16.5,47.6,72.8,89,96.2,99.6,2062
 1996,199596,Academic year,National,E92000001,England,Final,German,Female,z,22,40,58,76,89,6451
 1997,199697,Academic year,National,E92000001,England,Final,German,Female,z,22,41,60,77,90,6139
 1998,199798,Academic year,National,E92000001,England,Final,German,Female,z,25,44,64,80,92,6239
@@ -1360,7 +1360,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,German,Female,24.8,55.1,76.2,90.4,97.9,99.8,1546
 2023,202223,Academic year,National,E92000001,England,Revised,German,Female,13.3,41.6,68.6,86.5,95.9,99.4,1314
 2024,202324,Academic year,National,E92000001,England,Revised,German,Female,16.4,46.3,71.7,87.5,96.5,99.3,1308
-2025,202425,Academic year,National,E92000001,England,Provisional,German,Female,15.1,46.3,72.1,88.9,95.6,99.4,1150
+2025,202425,Academic year,National,E92000001,England,Revised,German,Female,15.5,46.9,72.2,88.9,95.6,99.4,1150
 1996,199596,Academic year,National,E92000001,England,Final,German,Male,z,26,44,62,78,89,2855
 1997,199697,Academic year,National,E92000001,England,Final,German,Male,z,27,45,63,78,90,2845
 1998,199798,Academic year,National,E92000001,England,Final,German,Male,z,31,51,70,83,94,2664
@@ -1390,7 +1390,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,German,Male,28.6,62.2,81.1,92.7,97.3,99.3,1068
 2023,202223,Academic year,National,E92000001,England,Revised,German,Male,16.1,48.8,72.8,88.7,96,99.3,846
 2024,202324,Academic year,National,E92000001,England,Revised,German,Male,16.5,49.6,75.2,89.1,96.9,99.3,917
-2025,202425,Academic year,National,E92000001,England,Provisional,German,Male,17.1,48.1,73.2,89.1,96.9,99.8,912
+2025,202425,Academic year,National,E92000001,England,Revised,German,Male,17.8,48.6,73.6,89.1,96.9,99.8,912
 1996,199596,Academic year,National,E92000001,England,Final,Government and politics,All students,z,16,37,57,75,87,8671
 1997,199697,Academic year,National,E92000001,England,Final,Government and politics,All students,z,15,40,62,80,91,8332
 1998,199798,Academic year,National,E92000001,England,Final,Government and politics,All students,z,20,42,65,82,91,7749
@@ -1420,7 +1420,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Government and politics,All students,15.8,40.3,68.8,87.1,95.6,98.4,18837
 2023,202223,Academic year,National,E92000001,England,Revised,Government and politics,All students,8.7,28.6,56.9,79.3,91.8,97.6,20302
 2024,202324,Academic year,National,E92000001,England,Revised,Government and politics,All students,9.3,29.6,57.8,79.1,91.9,97.6,20030
-2025,202425,Academic year,National,E92000001,England,Provisional,Government and politics,All students,8.4,28.3,58.5,81.3,93.4,97.8,20373
+2025,202425,Academic year,National,E92000001,England,Revised,Government and politics,All students,9,29.4,59,81.5,93.5,97.8,20373
 1996,199596,Academic year,National,E92000001,England,Final,Government and politics,Female,z,16,38,58,75,88,3580
 1997,199697,Academic year,National,E92000001,England,Final,Government and politics,Female,z,15,40,61,80,90,3460
 1998,199798,Academic year,National,E92000001,England,Final,Government and politics,Female,z,19,42,65,82,91,3301
@@ -1450,7 +1450,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Government and politics,Female,16.7,41.3,68.7,86.4,95.2,98.3,9512
 2023,202223,Academic year,National,E92000001,England,Revised,Government and politics,Female,9.4,30.2,57.8,79.5,91.5,97.6,10593
 2024,202324,Academic year,National,E92000001,England,Revised,Government and politics,Female,9.6,30.6,58.1,78.5,91.6,97.4,10341
-2025,202425,Academic year,National,E92000001,England,Provisional,Government and politics,Female,8.8,30,59.7,81.8,93.3,97.8,10519
+2025,202425,Academic year,National,E92000001,England,Revised,Government and politics,Female,9.5,31,60.3,81.9,93.4,97.9,10518
 1996,199596,Academic year,National,E92000001,England,Final,Government and politics,Male,z,15,36,56,75,87,5091
 1997,199697,Academic year,National,E92000001,England,Final,Government and politics,Male,z,16,40,63,80,91,4872
 1998,199798,Academic year,National,E92000001,England,Final,Government and politics,Male,z,20,42,65,82,91,4448
@@ -1480,7 +1480,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Government and politics,Male,14.8,39.2,69,87.7,96,98.6,9324
 2023,202223,Academic year,National,E92000001,England,Revised,Government and politics,Male,8,26.9,55.9,79.1,92,97.6,9709
 2024,202324,Academic year,National,E92000001,England,Revised,Government and politics,Male,8.9,28.6,57.5,79.7,92.2,97.8,9684
-2025,202425,Academic year,National,E92000001,England,Provisional,Government and politics,Male,8,26.5,57.2,80.8,93.5,97.8,9854
+2025,202425,Academic year,National,E92000001,England,Revised,Government and politics,Male,8.6,27.6,57.7,81,93.5,97.8,9855
 1996,199596,Academic year,National,E92000001,England,Final,History,All students,z,15,32,53,72,86,36294
 1997,199697,Academic year,National,E92000001,England,Final,History,All students,z,15,34,55,73,87,36078
 1998,199798,Academic year,National,E92000001,England,Final,History,All students,z,16,35,56,75,88,34437
@@ -1510,7 +1510,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,History,All students,12.5,35.5,66.7,87.5,96.4,98.9,42411
 2023,202223,Academic year,National,E92000001,England,Revised,History,All students,5.9,25,56.2,80.5,93.9,98.6,43944
 2024,202324,Academic year,National,E92000001,England,Revised,History,All students,6.2,25.2,56.2,81.5,94.6,98.7,42870
-2025,202425,Academic year,National,E92000001,England,Provisional,History,All students,6.2,25.3,58.7,84,95.7,99,40384
+2025,202425,Academic year,National,E92000001,England,Revised,History,All students,6.6,26.1,59.1,84.3,95.9,99.1,40384
 1996,199596,Academic year,National,E92000001,England,Final,History,Female,z,15,32,52,71,85,19975
 1997,199697,Academic year,National,E92000001,England,Final,History,Female,z,14,33,53,72,86,19812
 1998,199798,Academic year,National,E92000001,England,Final,History,Female,z,15,34,55,74,87,18954
@@ -1540,7 +1540,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,History,Female,13.6,38.7,69.8,88.9,96.8,99.1,22777
 2023,202223,Academic year,National,E92000001,England,Revised,History,Female,6.6,26.8,58.9,82.1,94.3,98.7,23299
 2024,202324,Academic year,National,E92000001,England,Revised,History,Female,6.7,27.1,58.7,82.8,95,98.8,23320
-2025,202425,Academic year,National,E92000001,England,Provisional,History,Female,6.9,27.3,61,85.2,96,99,21840
+2025,202425,Academic year,National,E92000001,England,Revised,History,Female,7.3,28.1,61.4,85.4,96.1,99.1,21840
 1996,199596,Academic year,National,E92000001,England,Final,History,Male,z,15,33,54,73,87,16319
 1997,199697,Academic year,National,E92000001,England,Final,History,Male,z,16,35,56,74,87,16266
 1998,199798,Academic year,National,E92000001,England,Final,History,Male,z,16,36,57,76,88,15483
@@ -1570,7 +1570,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,History,Male,11.2,31.8,63.2,85.9,95.9,98.7,19634
 2023,202223,Academic year,National,E92000001,England,Revised,History,Male,5.1,22.9,53.1,78.8,93.4,98.4,20644
 2024,202324,Academic year,National,E92000001,England,Revised,History,Male,5.5,23,53.2,79.8,94.1,98.6,19548
-2025,202425,Academic year,National,E92000001,England,Provisional,History,Male,5.5,23,55.9,82.7,95.5,98.9,18544
+2025,202425,Academic year,National,E92000001,England,Revised,History,Male,5.8,23.8,56.4,82.9,95.6,99.1,18544
 1999,199899,Academic year,National,E92000001,England,Final,ICT,All students,z,6,21,45,73,91,4264
 2000,199900,Academic year,National,E92000001,England,Final,ICT,All students,z,5,20,45,73,90,6287
 2001,200001,Academic year,National,E92000001,England,Final,ICT,All students,z,5,20,45,72,90,9216
@@ -1643,7 +1643,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Italian,All students,49.4,78.5,93.7,98,98.2,98.8,741
 2023,202223,Academic year,National,E92000001,England,Revised,Italian,All students,38.2,71.6,87.5,94.1,98.2,99.5,735
 2024,202324,Academic year,National,E92000001,England,Revised,Italian,All students,40.8,76.1,90.4,95.9,97.8,98.1,628
-2025,202425,Academic year,National,E92000001,England,Provisional,Italian,All students,38.8,78.4,95.9,98.1,99.4,99.8,536
+2025,202425,Academic year,National,E92000001,England,Revised,Italian,All students,39,78.4,95.9,98.1,99.4,99.8,536
 2016,201516,Academic year,National,E92000001,England,Final,Italian,Female,12,49,80,95,z,z,467
 2017,201617,Academic year,National,E92000001,England,Final,Italian,Female,10,45,81,95,99,z,526
 2018,201718,Academic year,National,E92000001,England,Revised,Italian,Female,10.6,49,79.5,92.1,97.8,99,508
@@ -1653,7 +1653,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Italian,Female,47.8,78.7,93.5,97.6,97.8,98.5,464
 2023,202223,Academic year,National,E92000001,England,Revised,Italian,Female,40.6,71.7,88.9,95,98.6,99.3,441
 2024,202324,Academic year,National,E92000001,England,Revised,Italian,Female,39.4,76.3,91.3,97.2,99.7,100,358
-2025,202425,Academic year,National,E92000001,England,Provisional,Italian,Female,42.9,79.6,97.8,98.5,99.4,99.7,324
+2025,202425,Academic year,National,E92000001,England,Revised,Italian,Female,43.2,79.6,97.8,98.5,99.4,99.7,324
 2016,201516,Academic year,National,E92000001,England,Final,Italian,Male,8,46,78,92,z,z,324
 2017,201617,Academic year,National,E92000001,England,Final,Italian,Male,7,47,79,93,96,z,292
 2018,201718,Academic year,National,E92000001,England,Revised,Italian,Male,5.6,38.1,71.1,88.8,97.3,99.4,339
@@ -1663,7 +1663,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Italian,Male,52,78.3,93.9,98.6,98.9,99.3,277
 2023,202223,Academic year,National,E92000001,England,Revised,Italian,Male,34.7,71.4,85.4,92.9,97.6,99.7,294
 2024,202324,Academic year,National,E92000001,England,Revised,Italian,Male,42.6,75.9,89.3,94.1,95.2,95.6,270
-2025,202425,Academic year,National,E92000001,England,Provisional,Italian,Male,32.7,76.8,92.9,97.6,99.5,100,211
+2025,202425,Academic year,National,E92000001,England,Revised,Italian,Male,32.7,76.8,92.9,97.6,99.5,100,211
 2016,201516,Academic year,National,E92000001,England,Final,Latin,All students,25,67,90,z,z,z,1108
 2017,201617,Academic year,National,E92000001,England,Final,Latin,All students,29,69,z,z,z,100,1173
 2018,201718,Academic year,National,E92000001,England,Revised,Latin,All students,25.2,67,87.4,96.4,99,99.5,1150
@@ -1673,7 +1673,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Latin,All students,50.9,81.4,91.1,96.5,98.8,99.7,1023
 2023,202223,Academic year,National,E92000001,England,Revised,Latin,All students,26.7,68.1,84.9,93.4,97.2,99.1,948
 2024,202324,Academic year,National,E92000001,England,Revised,Latin,All students,27.2,66.7,82.6,94,97.3,99.3,938
-2025,202425,Academic year,National,E92000001,England,Provisional,Latin,All students,25.8,67.1,83,92.3,97.3,99,941
+2025,202425,Academic year,National,E92000001,England,Revised,Latin,All students,26.1,67.5,83.2,92.3,97.3,99,941
 2016,201516,Academic year,National,E92000001,England,Final,Latin,Female,24,68,z,z,z,z,629
 2017,201617,Academic year,National,E92000001,England,Final,Latin,Female,29,68,z,z,z,100,668
 2018,201718,Academic year,National,E92000001,England,Revised,Latin,Female,23.8,67.2,88.7,97.2,99,99.6,682
@@ -1683,7 +1683,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Latin,Female,51.4,82.3,90.7,96.5,99.2,99.7,593
 2023,202223,Academic year,National,E92000001,England,Revised,Latin,Female,25.3,65.6,82.8,93.9,97.5,98.9,553
 2024,202324,Academic year,National,E92000001,England,Revised,Latin,Female,25,63.5,80.6,92.5,96.5,98.8,576
-2025,202425,Academic year,National,E92000001,England,Provisional,Latin,Female,24.6,68.4,83.8,92.3,98,99.3,544
+2025,202425,Academic year,National,E92000001,England,Revised,Latin,Female,25,68.9,84.2,92.3,98,99.3,544
 2016,201516,Academic year,National,E92000001,England,Final,Latin,Male,26,67,z,z,z,z,479
 2017,201617,Academic year,National,E92000001,England,Final,Latin,Male,28,69,90,97,99,99,505
 2018,201718,Academic year,National,E92000001,England,Revised,Latin,Male,27.4,66.9,85.5,95.3,98.9,99.4,468
@@ -1693,7 +1693,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Latin,Male,50.2,80.2,91.6,96.5,98.4,99.8,430
 2023,202223,Academic year,National,E92000001,England,Revised,Latin,Male,28.6,71.6,87.8,92.7,96.7,99.2,395
 2024,202324,Academic year,National,E92000001,England,Revised,Latin,Male,30.7,71.8,85.9,96.4,98.6,100,362
-2025,202425,Academic year,National,E92000001,England,Provisional,Latin,Male,27.5,65.2,81.9,92.4,96.5,98.7,397
+2025,202425,Academic year,National,E92000001,England,Revised,Latin,Male,27.7,65.5,81.9,92.4,96.5,98.7,397
 1996,199596,Academic year,National,E92000001,England,Final,Law,All students,z,11,22,38,55,70,7017
 1997,199697,Academic year,National,E92000001,England,Final,Law,All students,z,11,24,41,58,73,7253
 1998,199798,Academic year,National,E92000001,England,Final,Law,All students,z,11,23,40,57,73,7105
@@ -1723,7 +1723,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Law,All students,8.2,25.1,48.8,70.8,87.6,96.5,13580
 2023,202223,Academic year,National,E92000001,England,Revised,Law,All students,5,16.8,40.1,64.2,83.5,95.3,13856
 2024,202324,Academic year,National,E92000001,England,Revised,Law,All students,4.9,17.1,39.6,63.5,83.2,95.4,14109
-2025,202425,Academic year,National,E92000001,England,Provisional,Law,All students,5,17.1,39.8,64.3,84.3,96,14138
+2025,202425,Academic year,National,E92000001,England,Revised,Law,All students,5.1,17.3,40,64.4,84.3,96,14138
 1996,199596,Academic year,National,E92000001,England,Final,Law,Female,z,12,24,40,58,73,4118
 1997,199697,Academic year,National,E92000001,England,Final,Law,Female,z,11,24,41,59,74,4253
 1998,199798,Academic year,National,E92000001,England,Final,Law,Female,z,12,24,42,59,75,4174
@@ -1753,7 +1753,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Law,Female,9.2,27.5,51.2,72.6,88.7,96.9,8901
 2023,202223,Academic year,National,E92000001,England,Revised,Law,Female,5.5,18.2,41.8,65.8,84.6,95.7,8943
 2024,202324,Academic year,National,E92000001,England,Revised,Law,Female,5.6,18.8,41.7,65.6,84.7,95.8,9046
-2025,202425,Academic year,National,E92000001,England,Provisional,Law,Female,5.4,18.6,42,66.5,85.5,96.6,9049
+2025,202425,Academic year,National,E92000001,England,Revised,Law,Female,5.5,18.8,42.2,66.6,85.5,96.6,9049
 1996,199596,Academic year,National,E92000001,England,Final,Law,Male,z,9,20,34,52,67,2899
 1997,199697,Academic year,National,E92000001,England,Final,Law,Male,z,12,23,40,56,70,3000
 1998,199798,Academic year,National,E92000001,England,Final,Law,Male,z,10,21,37,55,71,2931
@@ -1783,7 +1783,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Law,Male,6.2,20.6,44.1,67.3,85.5,95.7,4679
 2023,202223,Academic year,National,E92000001,England,Revised,Law,Male,4.1,14.3,37,61.2,81.6,94.6,4913
 2024,202324,Academic year,National,E92000001,England,Revised,Law,Male,3.7,14.1,35.7,59.8,80.5,94.6,5063
-2025,202425,Academic year,National,E92000001,England,Provisional,Law,Male,4.2,14.5,35.7,60.4,82.1,94.9,5089
+2025,202425,Academic year,National,E92000001,England,Revised,Law,Male,4.3,14.7,36,60.6,82.1,94.9,5089
 2016,201516,Academic year,National,E92000001,England,Final,Maths,All students,19,44,66,82,93,99,79097
 2017,201617,Academic year,National,E92000001,England,Final,Maths,All students,19,44,66,82,93,99,81893
 2018,201718,Academic year,National,E92000001,England,Revised,Maths,All students,16.8,44.1,66.8,82.7,92.7,98.1,85115
@@ -1793,7 +1793,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Maths,All students,23.3,47.9,64,78.8,90.6,97.7,86326
 2023,202223,Academic year,National,E92000001,England,Revised,Maths,All students,17.1,41.9,61,76.5,88.6,96.4,87438
 2024,202324,Academic year,National,E92000001,England,Revised,Maths,All students,17.4,42.5,61.7,76.8,88.4,96.1,97165
-2025,202425,Academic year,National,E92000001,England,Provisional,Maths,All students,17.1,42.1,62,78.7,90.4,96.6,101089
+2025,202425,Academic year,National,E92000001,England,Revised,Maths,All students,17.4,42.4,62.2,78.8,90.4,96.6,101079
 2016,201516,Academic year,National,E92000001,England,Final,Maths,Female,16,42,66,82,93,99,30680
 2017,201617,Academic year,National,E92000001,England,Final,Maths,Female,16,43,66,83,93,99,32060
 2018,201718,Academic year,National,E92000001,England,Revised,Maths,Female,14.3,42.9,66.8,83.1,93.2,98.4,33607
@@ -1803,7 +1803,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Maths,Female,21.8,48.2,65.3,80.4,92,98.2,32316
 2023,202223,Academic year,National,E92000001,England,Revised,Maths,Female,15,40.5,60.9,77.1,89.2,96.9,32684
 2024,202324,Academic year,National,E92000001,England,Revised,Maths,Female,15.4,41.5,62,77.6,89.2,96.5,35932
-2025,202425,Academic year,National,E92000001,England,Provisional,Maths,Female,14.6,40.5,61.7,79,90.9,96.9,37615
+2025,202425,Academic year,National,E92000001,England,Revised,Maths,Female,14.8,40.8,61.8,79.1,90.9,96.9,37612
 2016,201516,Academic year,National,E92000001,England,Final,Maths,Male,20,45,67,82,93,99,48417
 2017,201617,Academic year,National,E92000001,England,Final,Maths,Male,21,45,66,82,92,99,49833
 2018,201718,Academic year,National,E92000001,England,Revised,Maths,Male,18.4,44.9,66.8,82.5,92.4,97.9,51508
@@ -1813,7 +1813,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Maths,Male,24.3,47.8,63.3,77.9,89.7,97.4,54009
 2023,202223,Academic year,National,E92000001,England,Revised,Maths,Male,18.3,42.7,61,76.2,88.3,96.1,54754
 2024,202324,Academic year,National,E92000001,England,Revised,Maths,Male,18.6,43.1,61.5,76.4,87.9,95.9,61220
-2025,202425,Academic year,National,E92000001,England,Provisional,Maths,Male,18.5,43.1,62.2,78.5,90,96.4,63461
+2025,202425,Academic year,National,E92000001,England,Revised,Maths,Male,18.9,43.3,62.5,78.6,90.1,96.5,63454
 1996,199596,Academic year,National,E92000001,England,Final,Media film tv,All students,z,10,27,57,82,93,6841
 1997,199697,Academic year,National,E92000001,England,Final,Media film tv,All students,z,10,28,56,81,93,8954
 1998,199798,Academic year,National,E92000001,England,Final,Media film tv,All students,z,10,26,56,81,94,10805
@@ -1843,7 +1843,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Media film tv,All students,5.6,22.2,59.2,85.8,96.3,98.9,13774
 2023,202223,Academic year,National,E92000001,England,Revised,Media film tv,All students,1.9,12.1,45.2,78.7,94.8,98.9,14250
 2024,202324,Academic year,National,E92000001,England,Revised,Media film tv,All students,2,12.4,43.3,76.5,94,98.8,13631
-2025,202425,Academic year,National,E92000001,England,Provisional,Media film tv,All students,2.1,14.1,46,78.4,94.9,99.1,14092
+2025,202425,Academic year,National,E92000001,England,Revised,Media film tv,All students,2.2,14.4,46.3,78.6,94.9,99.2,14092
 1996,199596,Academic year,National,E92000001,England,Final,Media film tv,Female,z,10,29,59,83,94,3814
 1997,199697,Academic year,National,E92000001,England,Final,Media film tv,Female,z,11,30,58,83,94,5027
 1998,199798,Academic year,National,E92000001,England,Final,Media film tv,Female,z,11,28,59,84,95,6326
@@ -1873,7 +1873,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Media film tv,Female,7.6,27.5,66.9,90.1,97.6,99.3,7957
 2023,202223,Academic year,National,E92000001,England,Revised,Media film tv,Female,2.7,16.3,53.8,84.7,96.4,99.2,8194
 2024,202324,Academic year,National,E92000001,England,Revised,Media film tv,Female,2.8,16.1,50.4,82.3,96.1,99.3,7943
-2025,202425,Academic year,National,E92000001,England,Provisional,Media film tv,Female,2.8,17.7,53.1,84,96.6,99.5,8689
+2025,202425,Academic year,National,E92000001,England,Revised,Media film tv,Female,2.9,18.1,53.5,84.1,96.7,99.5,8689
 1996,199596,Academic year,National,E92000001,England,Final,Media film tv,Male,z,9,25,54,80,92,3027
 1997,199697,Academic year,National,E92000001,England,Final,Media film tv,Male,z,9,25,54,78,92,3927
 1998,199798,Academic year,National,E92000001,England,Final,Media film tv,Male,z,8,22,51,78,92,4479
@@ -1903,7 +1903,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Media film tv,Male,2.9,14.8,48.5,79.9,94.5,98.5,5817
 2023,202223,Academic year,National,E92000001,England,Revised,Media film tv,Male,0.8,6.6,33.6,70.5,92.6,98.6,6056
 2024,202324,Academic year,National,E92000001,England,Revised,Media film tv,Male,0.9,7.3,33.4,68.3,91.2,98.1,5688
-2025,202425,Academic year,National,E92000001,England,Provisional,Media film tv,Male,1.1,8.2,34.4,69.4,92.2,98.6,5403
+2025,202425,Academic year,National,E92000001,England,Revised,Media film tv,Male,1.2,8.4,34.7,69.6,92.2,98.7,5403
 1996,199596,Academic year,National,E92000001,England,Final,Other modern languages,All students,z,28,50,69,81,89,3435
 1997,199697,Academic year,National,E92000001,England,Final,Other modern languages,All students,z,29,53,71,82,89,3473
 1998,199798,Academic year,National,E92000001,England,Final,Other modern languages,All students,z,33,59,76,87,93,3457
@@ -1933,7 +1933,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Other modern languages,All students,39.2,71.5,88.1,93.9,96.4,97.7,4690
 2023,202223,Academic year,National,E92000001,England,Revised,Other modern languages,All students,23.1,60.3,83.4,92.1,95.8,97.6,5074
 2024,202324,Academic year,National,E92000001,England,Revised,Other modern languages,All students,38.6,68.1,86.2,93.4,96.5,97.9,5538
-2025,202425,Academic year,National,E92000001,England,Provisional,Other modern languages,All students,40.6,70.1,86.4,93.6,96.8,98,5792
+2025,202425,Academic year,National,E92000001,England,Revised,Other modern languages,All students,40.7,70.3,86.6,93.7,96.9,98,5792
 1996,199596,Academic year,National,E92000001,England,Final,Other modern languages,Female,z,28,52,72,85,92,1937
 1997,199697,Academic year,National,E92000001,England,Final,Other modern languages,Female,z,29,54,72,84,91,2025
 1998,199798,Academic year,National,E92000001,England,Final,Other modern languages,Female,z,35,61,78,89,94,1894
@@ -1963,7 +1963,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Other modern languages,Female,40.9,73.3,88.5,94.1,96.6,97.7,2737
 2023,202223,Academic year,National,E92000001,England,Revised,Other modern languages,Female,25.3,62.9,85.1,92.4,95.7,97.5,3033
 2024,202324,Academic year,National,E92000001,England,Revised,Other modern languages,Female,41,71.2,86.9,94,96.9,98.3,3209
-2025,202425,Academic year,National,E92000001,England,Provisional,Other modern languages,Female,42.5,72.1,86.8,93.9,96.9,98.2,3391
+2025,202425,Academic year,National,E92000001,England,Revised,Other modern languages,Female,42.7,72.3,87,94,97,98.2,3391
 1996,199596,Academic year,National,E92000001,England,Final,Other modern languages,Male,z,28,48,64,76,86,1498
 1997,199697,Academic year,National,E92000001,England,Final,Other modern languages,Male,z,29,52,69,80,87,1448
 1998,199798,Academic year,National,E92000001,England,Final,Other modern languages,Male,z,30,56,74,85,91,1563
@@ -1993,7 +1993,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Other modern languages,Male,36.8,69,87.7,93.6,96.2,97.7,1952
 2023,202223,Academic year,National,E92000001,England,Revised,Other modern languages,Male,19.8,56.3,80.9,91.7,96,97.9,2041
 2024,202324,Academic year,National,E92000001,England,Revised,Other modern languages,Male,35.2,63.9,85.2,92.6,95.9,97.2,2329
-2025,202425,Academic year,National,E92000001,England,Provisional,Other modern languages,Male,38,67.2,85.8,93.3,96.7,97.8,2398
+2025,202425,Academic year,National,E92000001,England,Revised,Other modern languages,Male,38,67.5,86,93.4,96.7,97.8,2398
 1996,199596,Academic year,National,E92000001,England,Final,Other sciences,All students,z,10,25,45,66,83,4194
 1997,199697,Academic year,National,E92000001,England,Final,Other sciences,All students,z,11,26,45,68,85,4301
 1998,199798,Academic year,National,E92000001,England,Final,Other sciences,All students,z,12,27,48,71,88,4325
@@ -2023,7 +2023,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Other sciences,All students,11.4,29.3,52.5,72.8,90.1,97.5,2600
 2023,202223,Academic year,National,E92000001,England,Revised,Other sciences,All students,8.2,21.8,42,65.3,84.8,95.2,3049
 2024,202324,Academic year,National,E92000001,England,Revised,Other sciences,All students,8.2,22.5,43.7,66.5,85.4,95.5,3492
-2025,202425,Academic year,National,E92000001,England,Provisional,Other sciences,All students,7.6,21,41.1,65.7,84.9,95.4,3645
+2025,202425,Academic year,National,E92000001,England,Revised,Other sciences,All students,7.7,21.3,41.4,66.2,85,95.4,3645
 1996,199596,Academic year,National,E92000001,England,Final,Other sciences,Female,z,10,26,48,69,85,1537
 1997,199697,Academic year,National,E92000001,England,Final,Other sciences,Female,z,11,28,47,70,86,1621
 1998,199798,Academic year,National,E92000001,England,Final,Other sciences,Female,z,12,28,46,69,87,1630
@@ -2053,7 +2053,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Other sciences,Female,10.8,29,54.4,73.8,90.1,97.8,981
 2023,202223,Academic year,National,E92000001,England,Revised,Other sciences,Female,6.8,19.7,40.9,65.4,85.6,95.6,1183
 2024,202324,Academic year,National,E92000001,England,Revised,Other sciences,Female,7.5,21.2,45,67,85.3,95.1,1432
-2025,202425,Academic year,National,E92000001,England,Provisional,Other sciences,Female,6.4,19.8,40.8,66.1,84.4,94.8,1512
+2025,202425,Academic year,National,E92000001,England,Revised,Other sciences,Female,6.6,20.1,41.3,66.5,84.4,94.8,1512
 1996,199596,Academic year,National,E92000001,England,Final,Other sciences,Male,z,10,24,44,65,82,2657
 1997,199697,Academic year,National,E92000001,England,Final,Other sciences,Male,z,11,25,44,67,84,2680
 1998,199798,Academic year,National,E92000001,England,Final,Other sciences,Male,z,12,27,49,72,88,2695
@@ -2083,7 +2083,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Other sciences,Male,11.7,29.5,51.3,72.3,90.1,97.3,1619
 2023,202223,Academic year,National,E92000001,England,Revised,Other sciences,Male,9.1,23.2,42.7,65.2,84.4,94.9,1866
 2024,202324,Academic year,National,E92000001,England,Revised,Other sciences,Male,8.7,23.4,42.9,66.2,85.4,95.7,2060
-2025,202425,Academic year,National,E92000001,England,Provisional,Other sciences,Male,8.4,21.8,41.4,65.5,85.3,95.8,2133
+2025,202425,Academic year,National,E92000001,England,Revised,Other sciences,Male,8.5,22.1,41.4,66,85.4,95.9,2133
 1996,199596,Academic year,National,E92000001,England,Final,Physical education,All students,z,8,22,44,70,89,9042
 1997,199697,Academic year,National,E92000001,England,Final,Physical education,All students,z,8,22,44,70,88,11696
 1998,199798,Academic year,National,E92000001,England,Final,Physical education,All students,z,9,22,44,69,88,13680
@@ -2113,7 +2113,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Physical education,All students,13.3,32.8,58.9,80.7,93,98.1,13105
 2023,202223,Academic year,National,E92000001,England,Revised,Physical education,All students,5.6,18.4,43.8,69.1,87.2,96.7,12936
 2024,202324,Academic year,National,E92000001,England,Revised,Physical education,All students,5.7,18.9,44.2,69.9,88.1,96.5,12860
-2025,202425,Academic year,National,E92000001,England,Provisional,Physical education,All students,5.6,18.6,45.7,71.2,89,97,12687
+2025,202425,Academic year,National,E92000001,England,Revised,Physical education,All students,5.7,19,46.1,71.5,89.1,97,12687
 1996,199596,Academic year,National,E92000001,England,Final,Physical education,Female,z,12,29,52,74,89,3531
 1997,199697,Academic year,National,E92000001,England,Final,Physical education,Female,z,12,30,52,75,90,4448
 1998,199798,Academic year,National,E92000001,England,Final,Physical education,Female,z,14,30,52,75,90,5365
@@ -2143,7 +2143,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Physical education,Female,19.5,42.8,68.9,86.7,95.5,98.8,6135
 2023,202223,Academic year,National,E92000001,England,Revised,Physical education,Female,8.2,24.6,52.8,76.4,90.7,97.4,5738
 2024,202324,Academic year,National,E92000001,England,Revised,Physical education,Female,8.4,26.3,54.4,77.9,92.2,97.7,5744
-2025,202425,Academic year,National,E92000001,England,Provisional,Physical education,Female,8.5,25.1,55,78.7,92.7,98,5662
+2025,202425,Academic year,National,E92000001,England,Revised,Physical education,Female,8.7,25.5,55.3,78.9,92.7,98,5662
 1996,199596,Academic year,National,E92000001,England,Final,Physical education,Male,z,5,17,39,67,88,5511
 1997,199697,Academic year,National,E92000001,England,Final,Physical education,Male,z,6,18,40,67,88,7248
 1998,199798,Academic year,National,E92000001,England,Final,Physical education,Male,z,6,17,39,66,87,8315
@@ -2173,7 +2173,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Physical education,Male,7.9,24,50,75.4,90.8,97.5,6970
 2023,202223,Academic year,National,E92000001,England,Revised,Physical education,Male,3.4,13.4,36.6,63.2,84.5,96.1,7198
 2024,202324,Academic year,National,E92000001,England,Revised,Physical education,Male,3.5,13,35.9,63.4,84.7,95.6,7115
-2025,202425,Academic year,National,E92000001,England,Provisional,Physical education,Male,3.2,13.4,38.2,65.2,86.1,96.2,7025
+2025,202425,Academic year,National,E92000001,England,Revised,Physical education,Male,3.3,13.7,38.7,65.6,86.2,96.2,7025
 1996,199596,Academic year,National,E92000001,England,Final,Physics,All students,z,21,40,58,73,86,28400
 1997,199697,Academic year,National,E92000001,England,Final,Physics,All students,z,22,43,62,77,88,28777
 1998,199798,Academic year,National,E92000001,England,Final,Physics,All students,z,23,44,62,78,89,29672
@@ -2203,7 +2203,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Physics,All students,16.8,39,59.6,77.3,90.2,97.4,35899
 2023,202223,Academic year,National,E92000001,England,Revised,Physics,All students,11.2,31.5,51,69,84.4,95.2,34834
 2024,202324,Academic year,National,E92000001,England,Revised,Physics,All students,11.7,32.3,51.7,69.9,85.5,95.5,39516
-2025,202425,Academic year,National,E92000001,England,Provisional,Physics,All students,11.4,32.5,53.1,71.9,86.1,95.6,40841
+2025,202425,Academic year,National,E92000001,England,Revised,Physics,All students,11.9,33,53.5,72.2,86.3,95.7,40837
 1996,199596,Academic year,National,E92000001,England,Final,Physics,Female,z,21,43,61,76,87,5957
 1997,199697,Academic year,National,E92000001,England,Final,Physics,Female,z,22,46,65,80,90,6147
 1998,199798,Academic year,National,E92000001,England,Final,Physics,Female,z,24,47,66,81,91,6553
@@ -2233,7 +2233,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Physics,Female,16.7,39.6,60.2,78,90.6,97.6,8231
 2023,202223,Academic year,National,E92000001,England,Revised,Physics,Female,9.8,29.7,50.7,69.5,84.9,95.7,7874
 2024,202324,Academic year,National,E92000001,England,Revised,Physics,Female,10.8,32,52.4,70.8,86.6,95.8,9097
-2025,202425,Academic year,National,E92000001,England,Provisional,Physics,Female,10,31,52.9,72.1,86.2,95.7,9786
+2025,202425,Academic year,National,E92000001,England,Revised,Physics,Female,10.4,31.5,53.2,72.5,86.4,95.8,9786
 1996,199596,Academic year,National,E92000001,England,Final,Physics,Male,z,21,39,57,73,86,22443
 1997,199697,Academic year,National,E92000001,England,Final,Physics,Male,z,21,42,60,76,88,22630
 1998,199798,Academic year,National,E92000001,England,Final,Physics,Male,z,23,43,61,77,89,23119
@@ -2263,7 +2263,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Physics,Male,16.9,38.9,59.4,77.1,90.1,97.3,27668
 2023,202223,Academic year,National,E92000001,England,Revised,Physics,Male,11.6,32.1,51.1,68.8,84.2,95.1,26960
 2024,202324,Academic year,National,E92000001,England,Revised,Physics,Male,11.9,32.4,51.4,69.6,85.2,95.3,30413
-2025,202425,Academic year,National,E92000001,England,Provisional,Physics,Male,11.9,32.9,53.2,71.8,86.1,95.6,31055
+2025,202425,Academic year,National,E92000001,England,Revised,Physics,Male,12.3,33.4,53.6,72.1,86.3,95.7,31051
 2016,201516,Academic year,National,E92000001,England,Final,Polish,All students,21,60,78,90,95,z,783
 2017,201617,Academic year,National,E92000001,England,Final,Polish,All students,21,59,78,90,97,99,773
 2018,201718,Academic year,National,E92000001,England,Revised,Polish,All students,8.2,58,80.3,92.6,97.6,98.7,745
@@ -2273,7 +2273,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Polish,All students,30.2,69.6,87.3,94.5,96.7,98,543
 2023,202223,Academic year,National,E92000001,England,Revised,Polish,All students,12.3,53.5,76.9,87.9,92.6,96,620
 2024,202324,Academic year,National,E92000001,England,Revised,Polish,All students,10.9,55,80.4,90.9,96.5,97.7,705
-2025,202425,Academic year,National,E92000001,England,Provisional,Polish,All students,10.2,55.7,79.9,92.3,97.1,98.3,862
+2025,202425,Academic year,National,E92000001,England,Revised,Polish,All students,10.2,55.8,79.9,92.3,97.1,98.3,862
 2016,201516,Academic year,National,E92000001,England,Final,Polish,Female,24,64,82,92,96,z,507
 2017,201617,Academic year,National,E92000001,England,Final,Polish,Female,23,64,81,92,98,z,470
 2018,201718,Academic year,National,E92000001,England,Revised,Polish,Female,8.9,62.9,83.9,93.3,97.5,98.9,448
@@ -2283,7 +2283,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Polish,Female,32.7,72.9,90.6,95.9,97.9,98.5,339
 2023,202223,Academic year,National,E92000001,England,Revised,Polish,Female,15.2,55.6,78.3,87.5,91.5,94.8,401
 2024,202324,Academic year,National,E92000001,England,Revised,Polish,Female,13.4,60.1,82.7,92.5,96.8,98.1,411
-2025,202425,Academic year,National,E92000001,England,Provisional,Polish,Female,11.9,59.6,81.3,93.4,96.8,97.7,530
+2025,202425,Academic year,National,E92000001,England,Revised,Polish,Female,11.9,59.8,81.3,93.4,96.8,97.7,530
 2016,201516,Academic year,National,E92000001,England,Final,Polish,Male,16,52,70,85,93,z,276
 2017,201617,Academic year,National,E92000001,England,Final,Polish,Male,17,51,73,87,96,z,303
 2018,201718,Academic year,National,E92000001,England,Revised,Polish,Male,7.1,50.5,74.7,91.6,97.6,98.3,297
@@ -2293,7 +2293,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Polish,Male,26,64.2,81.9,92.2,94.6,97.1,204
 2023,202223,Academic year,National,E92000001,England,Revised,Polish,Male,6.8,49.8,74.4,88.6,94.5,98.2,219
 2024,202324,Academic year,National,E92000001,England,Revised,Polish,Male,7.5,48,77.2,88.8,95.9,97.3,294
-2025,202425,Academic year,National,E92000001,England,Provisional,Polish,Male,7.5,49.4,77.7,90.7,97.6,99.1,332
+2025,202425,Academic year,National,E92000001,England,Revised,Polish,Male,7.5,49.4,77.7,90.7,97.6,99.1,332
 1996,199596,Academic year,National,E92000001,England,Final,Psychology,All students,z,11,28,47,64,79,18057
 1997,199697,Academic year,National,E92000001,England,Final,Psychology,All students,z,11,29,48,67,81,22262
 1998,199798,Academic year,National,E92000001,England,Final,Psychology,All students,z,12,30,51,70,85,23879
@@ -2323,7 +2323,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Psychology,All students,10.6,29,57,79.2,92.3,97.8,74943
 2023,202223,Academic year,National,E92000001,England,Revised,Psychology,All students,5.9,19.3,44.7,69.8,87.1,96.4,76539
 2024,202324,Academic year,National,E92000001,England,Revised,Psychology,All students,6.1,19.9,46.4,71.1,87.8,96.5,74676
-2025,202425,Academic year,National,E92000001,England,Provisional,Psychology,All students,5.9,19.7,47.4,72.7,88.8,97,72150
+2025,202425,Academic year,National,E92000001,England,Revised,Psychology,All students,6,19.9,47.5,72.8,88.9,97,72148
 1996,199596,Academic year,National,E92000001,England,Final,Psychology,Female,z,13,31,50,68,82,13568
 1997,199697,Academic year,National,E92000001,England,Final,Psychology,Female,z,12,32,52,70,83,16792
 1998,199798,Academic year,National,E92000001,England,Final,Psychology,Female,z,13,32,54,73,87,18205
@@ -2353,7 +2353,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Psychology,Female,12.5,32.8,61.2,82,93.6,98.2,55121
 2023,202223,Academic year,National,E92000001,England,Revised,Psychology,Female,6.8,21.9,48.6,73.2,89.1,97,55992
 2024,202324,Academic year,National,E92000001,England,Revised,Psychology,Female,7.2,22.8,50.8,75,90,97.2,54878
-2025,202425,Academic year,National,E92000001,England,Provisional,Psychology,Female,7,22.3,51.5,76.3,90.9,97.6,53185
+2025,202425,Academic year,National,E92000001,England,Revised,Psychology,Female,7.1,22.6,51.6,76.4,90.9,97.6,53185
 1996,199596,Academic year,National,E92000001,England,Final,Psychology,Male,z,8,21,38,54,70,4489
 1997,199697,Academic year,National,E92000001,England,Final,Psychology,Male,z,8,20,38,56,73,5470
 1998,199798,Academic year,National,E92000001,England,Final,Psychology,Male,z,8,22,40,60,78,5674
@@ -2383,7 +2383,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Psychology,Male,5.4,18.6,45.3,71.3,88.7,96.6,19822
 2023,202223,Academic year,National,E92000001,England,Revised,Psychology,Male,3.3,12.3,34.1,60.5,81.6,94.6,20546
 2024,202324,Academic year,National,E92000001,England,Revised,Psychology,Male,3,11.8,34.2,60.5,81.8,94.5,19792
-2025,202425,Academic year,National,E92000001,England,Provisional,Psychology,Male,2.9,12.2,35.9,62.5,83.1,95.3,18965
+2025,202425,Academic year,National,E92000001,England,Revised,Psychology,Male,3,12.4,36.1,62.6,83.2,95.3,18963
 1996,199596,Academic year,National,E92000001,England,Final,Religious studies,All students,z,14,34,58,78,90,6728
 1997,199697,Academic year,National,E92000001,England,Final,Religious studies,All students,z,15,33,58,78,91,6956
 1998,199798,Academic year,National,E92000001,England,Final,Religious studies,All students,z,16,36,59,79,90,6740
@@ -2413,7 +2413,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Religious studies,All students,12.7,36.2,67.8,87.5,95.8,98.7,15284
 2023,202223,Academic year,National,E92000001,England,Revised,Religious studies,All students,6.1,25.9,55.4,78.8,91.8,97.6,14683
 2024,202324,Academic year,National,E92000001,England,Revised,Religious studies,All students,6.2,26.1,54.7,78,91.9,97.6,14552
-2025,202425,Academic year,National,E92000001,England,Provisional,Religious studies,All students,6.2,26,56.4,80.6,93.3,98.1,14210
+2025,202425,Academic year,National,E92000001,England,Revised,Religious studies,All students,6.3,26.3,56.7,80.7,93.3,98.1,14210
 1996,199596,Academic year,National,E92000001,England,Final,Religious studies,Female,z,14,34,58,78,90,4981
 1997,199697,Academic year,National,E92000001,England,Final,Religious studies,Female,z,14,32,57,78,91,5110
 1998,199798,Academic year,National,E92000001,England,Final,Religious studies,Female,z,15,36,59,79,91,5038
@@ -2443,7 +2443,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Religious studies,Female,13.2,36.9,68.9,88.4,96,98.9,10823
 2023,202223,Academic year,National,E92000001,England,Revised,Religious studies,Female,6.1,26,56.4,79.7,92.5,97.6,10237
 2024,202324,Academic year,National,E92000001,England,Revised,Religious studies,Female,6.2,26.1,55.4,78.7,92.3,97.8,10192
-2025,202425,Academic year,National,E92000001,England,Provisional,Religious studies,Female,6,26.2,57.2,81.2,93.5,98.2,10034
+2025,202425,Academic year,National,E92000001,England,Revised,Religious studies,Female,6.1,26.5,57.5,81.3,93.5,98.2,10034
 1996,199596,Academic year,National,E92000001,England,Final,Religious studies,Male,z,15,36,59,79,90,1747
 1997,199697,Academic year,National,E92000001,England,Final,Religious studies,Male,z,18,37,60,79,90,1846
 1998,199798,Academic year,National,E92000001,England,Final,Religious studies,Male,z,16,37,59,78,89,1702
@@ -2473,7 +2473,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Religious studies,Male,11.5,34.3,65.1,85.4,95.2,98.2,4461
 2023,202223,Academic year,National,E92000001,England,Revised,Religious studies,Male,6.3,25.6,53.1,76.7,90.4,97.4,4446
 2024,202324,Academic year,National,E92000001,England,Revised,Religious studies,Male,6.4,26.1,53.1,76.4,91,97.3,4358
-2025,202425,Academic year,National,E92000001,England,Provisional,Religious studies,Male,6.7,25.6,54.6,79.3,92.8,97.8,4176
+2025,202425,Academic year,National,E92000001,England,Revised,Religious studies,Male,6.8,25.8,54.8,79.4,92.8,97.8,4176
 2016,201516,Academic year,National,E92000001,England,Final,Russian,All students,37,89,96,98,z,100,1067
 2017,201617,Academic year,National,E92000001,England,Final,Russian,All students,38,88,95,98,99,100,961
 2018,201718,Academic year,National,E92000001,England,Revised,Russian,All students,35.6,89.4,95.9,98.5,99.1,99.3,982
@@ -2483,7 +2483,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Russian,All students,59.5,90.8,97.5,98.6,98.9,98.9,649
 2023,202223,Academic year,National,E92000001,England,Revised,Russian,All students,36.7,95.1,97.9,99,99.3,99.3,713
 2024,202324,Academic year,National,E92000001,England,Revised,Russian,All students,86.4,95.5,98.1,98.9,99.2,99.3,914
-2025,202425,Academic year,National,E92000001,England,Provisional,Russian,All students,85.9,94.4,97.7,98.6,98.8,99.2,993
+2025,202425,Academic year,National,E92000001,England,Revised,Russian,All students,85.9,94.4,97.7,98.6,98.8,99.2,993
 2016,201516,Academic year,National,E92000001,England,Final,Russian,Female,37,90,96,98,z,100,567
 2017,201617,Academic year,National,E92000001,England,Final,Russian,Female,42,88,94,97,99,z,476
 2018,201718,Academic year,National,E92000001,England,Revised,Russian,Female,40.4,91.6,97.7,99.4,99.4,99.6,513
@@ -2493,7 +2493,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Russian,Female,62.4,89.6,96,97.9,98.5,98.5,327
 2023,202223,Academic year,National,E92000001,England,Revised,Russian,Female,38.8,95.2,97.6,98.7,98.9,98.9,376
 2024,202324,Academic year,National,E92000001,England,Revised,Russian,Female,87.3,96.5,98.8,99.2,99.2,99.4,481
-2025,202425,Academic year,National,E92000001,England,Provisional,Russian,Female,85.7,94.5,97.7,98.7,98.9,99,525
+2025,202425,Academic year,National,E92000001,England,Revised,Russian,Female,85.7,94.5,97.7,98.7,98.9,99,525
 2016,201516,Academic year,National,E92000001,England,Final,Russian,Male,36,88,97,99,z,100,500
 2017,201617,Academic year,National,E92000001,England,Final,Russian,Male,33,88,95,98,99,z,485
 2018,201718,Academic year,National,E92000001,England,Revised,Russian,Male,30.5,87,94,97.4,98.7,98.9,469
@@ -2503,7 +2503,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Russian,Male,56.5,91.9,99.1,99.4,99.4,99.4,322
 2023,202223,Academic year,National,E92000001,England,Revised,Russian,Male,34.4,95,98.2,99.4,99.7,99.7,337
 2024,202324,Academic year,National,E92000001,England,Revised,Russian,Male,85.5,94.5,97.5,98.6,99.3,99.3,433
-2025,202425,Academic year,National,E92000001,England,Provisional,Russian,Male,86.1,94.2,97.6,98.5,98.7,99.4,468
+2025,202425,Academic year,National,E92000001,England,Revised,Russian,Male,86.1,94.2,97.6,98.5,98.7,99.4,468
 1996,199596,Academic year,National,E92000001,England,Final,STEM subjects,All students,z,21,40,58,73,86,174063
 1997,199697,Academic year,National,E92000001,England,Final,STEM subjects,All students,z,21,41,59,75,87,183971
 1998,199798,Academic year,National,E92000001,England,Final,STEM subjects,All students,z,22,42,60,76,88,190001
@@ -2533,7 +2533,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,STEM subjects,All students,18.6,41.9,61,77.7,90.3,97.6,269557
 2023,202223,Academic year,National,E92000001,England,Revised,STEM subjects,All students,12.6,34.4,54.8,72.3,86.5,95.9,276664
 2024,202324,Academic year,National,E92000001,England,Revised,STEM subjects,All students,13.3,35.8,56.3,73.8,87.3,95.8,297710
-2025,202425,Academic year,National,E92000001,England,Provisional,STEM subjects,All students,13.2,36,57.4,75.6,88.7,96.3,300550
+2025,202425,Academic year,National,E92000001,England,Revised,STEM subjects,All students,13.5,36.3,57.6,75.7,88.7,96.3,300529
 1996,199596,Academic year,National,E92000001,England,Final,STEM subjects,Female,z,20,40,59,75,87,68342
 1997,199697,Academic year,National,E92000001,England,Final,STEM subjects,Female,z,20,41,60,76,88,73255
 1998,199798,Academic year,National,E92000001,England,Final,STEM subjects,Female,z,22,43,62,78,89,76848
@@ -2563,7 +2563,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,STEM subjects,Female,16.6,40.5,60.4,77.9,90.6,97.8,117413
 2023,202223,Academic year,National,E92000001,England,Revised,STEM subjects,Female,10.8,32.2,53.6,71.9,86.6,96,120714
 2024,202324,Academic year,National,E92000001,England,Revised,STEM subjects,Female,11.8,34.4,55.9,74,87.6,96,127487
-2025,202425,Academic year,National,E92000001,England,Provisional,STEM subjects,Female,11.2,33.9,56.3,75.3,88.8,96.4,128846
+2025,202425,Academic year,National,E92000001,England,Revised,STEM subjects,Female,11.5,34.1,56.5,75.4,88.9,96.4,128839
 1996,199596,Academic year,National,E92000001,England,Final,STEM subjects,Male,z,21,39,57,73,85,105721
 1997,199697,Academic year,National,E92000001,England,Final,STEM subjects,Male,z,21,41,58,74,86,110716
 1998,199798,Academic year,National,E92000001,England,Final,STEM subjects,Male,z,22,41,59,75,87,113153
@@ -2593,7 +2593,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,STEM subjects,Male,20.1,43.1,61.5,77.6,90,97.4,152139
 2023,202223,Academic year,National,E92000001,England,Revised,STEM subjects,Male,14,36.1,55.7,72.6,86.5,95.8,155950
 2024,202324,Academic year,National,E92000001,England,Revised,STEM subjects,Male,14.4,36.8,56.6,73.6,87.1,95.7,170177
-2025,202425,Academic year,National,E92000001,England,Provisional,STEM subjects,Male,14.6,37.6,58.3,75.8,88.6,96.2,171673
+2025,202425,Academic year,National,E92000001,England,Revised,STEM subjects,Male,15,37.9,58.5,76,88.7,96.2,171659
 1996,199596,Academic year,National,E92000001,England,Final,Sociology,All students,z,12,28,44,61,74,21361
 1997,199697,Academic year,National,E92000001,England,Final,Sociology,All students,z,12,29,45,62,76,22298
 1998,199798,Academic year,National,E92000001,England,Final,Sociology,All students,z,13,32,52,68,82,20914
@@ -2623,7 +2623,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Sociology,All students,8.8,26.5,57,81.7,93.8,97.9,42831
 2023,202223,Academic year,National,E92000001,England,Revised,Sociology,All students,5.6,19,48.5,76,91.6,97.4,44849
 2024,202324,Academic year,National,E92000001,England,Revised,Sociology,All students,5.4,18.4,46.5,74.3,90.9,97.5,41861
-2025,202425,Academic year,National,E92000001,England,Provisional,Sociology,All students,5.5,19.2,49.1,77.2,92.4,97.9,41347
+2025,202425,Academic year,National,E92000001,England,Revised,Sociology,All students,5.6,19.5,49.3,77.3,92.4,97.9,41347
 1996,199596,Academic year,National,E92000001,England,Final,Sociology,Female,z,12,29,46,62,76,16078
 1997,199697,Academic year,National,E92000001,England,Final,Sociology,Female,z,13,31,47,64,78,16937
 1998,199798,Academic year,National,E92000001,England,Final,Sociology,Female,z,14,33,53,70,83,16071
@@ -2653,7 +2653,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Sociology,Female,9.9,28.7,59.6,83.2,94.5,98.2,32575
 2023,202223,Academic year,National,E92000001,England,Revised,Sociology,Female,6.3,20.9,51.1,78,92.4,97.7,33878
 2024,202324,Academic year,National,E92000001,England,Revised,Sociology,Female,6.2,20.4,49.8,76.8,91.9,97.8,31778
-2025,202425,Academic year,National,E92000001,England,Provisional,Sociology,Female,6.1,21.1,51.9,79.3,93.3,98.1,31365
+2025,202425,Academic year,National,E92000001,England,Revised,Sociology,Female,6.2,21.4,52.1,79.4,93.3,98.2,31365
 1996,199596,Academic year,National,E92000001,England,Final,Sociology,Male,z,9,23,38,55,69,5283
 1997,199697,Academic year,National,E92000001,England,Final,Sociology,Male,z,9,24,39,56,71,5361
 1998,199798,Academic year,National,E92000001,England,Final,Sociology,Male,z,11,28,47,63,79,4843
@@ -2683,7 +2683,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Sociology,Male,5.4,19.4,48.8,77,91.8,96.9,10256
 2023,202223,Academic year,National,E92000001,England,Revised,Sociology,Male,3.7,13.2,40.4,70,89.3,96.5,10971
 2024,202324,Academic year,National,E92000001,England,Revised,Sociology,Male,3.2,11.9,36.2,66.7,87.8,96.6,10083
-2025,202425,Academic year,National,E92000001,England,Provisional,Sociology,Male,3.4,13.2,40.2,70.6,89.6,96.9,9982
+2025,202425,Academic year,National,E92000001,England,Revised,Sociology,Male,3.4,13.3,40.3,70.8,89.7,96.9,9982
 1996,199596,Academic year,National,E92000001,England,Final,Spanish,All students,z,23,44,63,78,89,4095
 1997,199697,Academic year,National,E92000001,England,Final,Spanish,All students,z,24,45,64,81,91,4328
 1998,199798,Academic year,National,E92000001,England,Final,Spanish,All students,z,25,48,68,82,92,4499
@@ -2713,7 +2713,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Spanish,All students,23,51.1,74.9,89.5,96.7,99.3,8440
 2023,202223,Academic year,National,E92000001,England,Revised,Spanish,All students,10.7,36.1,64.9,84,94.3,98.7,7319
 2024,202324,Academic year,National,E92000001,England,Revised,Spanish,All students,11.5,37.4,65.6,84.4,95,98.7,7542
-2025,202425,Academic year,National,E92000001,England,Provisional,Spanish,All students,10.6,36.3,66.8,86,95.4,98.8,7644
+2025,202425,Academic year,National,E92000001,England,Revised,Spanish,All students,11,36.8,67.1,86.1,95.5,98.9,7644
 1996,199596,Academic year,National,E92000001,England,Final,Spanish,Female,z,22,42,61,77,88,2926
 1997,199697,Academic year,National,E92000001,England,Final,Spanish,Female,z,22,42,62,79,90,3060
 1998,199798,Academic year,National,E92000001,England,Final,Spanish,Female,z,25,46,66,81,92,3214
@@ -2743,7 +2743,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Spanish,Female,22.5,50.9,74.7,89.3,96.6,99.2,5887
 2023,202223,Academic year,National,E92000001,England,Revised,Spanish,Female,11,35.8,64.5,83.9,94.5,98.8,4960
 2024,202324,Academic year,National,E92000001,England,Revised,Spanish,Female,11.6,37.3,65,84,94.8,98.7,5087
-2025,202425,Academic year,National,E92000001,England,Provisional,Spanish,Female,10.3,36.7,67.3,85.9,95.3,98.9,5123
+2025,202425,Academic year,National,E92000001,England,Revised,Spanish,Female,10.8,37.3,67.7,85.9,95.3,98.9,5123
 1996,199596,Academic year,National,E92000001,England,Final,Spanish,Male,z,25,47,67,81,90,1169
 1997,199697,Academic year,National,E92000001,England,Final,Spanish,Male,z,28,52,70,84,93,1268
 1998,199798,Academic year,National,E92000001,England,Final,Spanish,Male,z,27,51,73,86,94,1285
@@ -2773,7 +2773,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Spanish,Male,24,51.4,75.2,89.7,97,99.5,2553
 2023,202223,Academic year,National,E92000001,England,Revised,Spanish,Male,10,36.8,65.6,84.4,93.9,98.5,2359
 2024,202324,Academic year,National,E92000001,England,Revised,Spanish,Male,11.3,37.4,66.8,85.3,95.4,98.7,2454
-2025,202425,Academic year,National,E92000001,England,Provisional,Spanish,Male,11.2,35.4,65.9,86.4,95.8,98.8,2521
+2025,202425,Academic year,National,E92000001,England,Revised,Spanish,Male,11.5,36,66.1,86.5,95.8,98.8,2521
 1996,199596,Academic year,National,E92000001,England,Final,Total Classical studies,All students,z,26,47,68,83,92,6409
 1997,199697,Academic year,National,E92000001,England,Final,Total Classical studies,All students,z,26,48,69,84,93,6095
 1998,199798,Academic year,National,E92000001,England,Final,Total Classical studies,All students,z,27,50,70,84,93,5736
@@ -2803,7 +2803,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Classical studies,All students,25.3,52.9,77.9,92,97.5,99.3,4711
 2023,202223,Academic year,National,E92000001,England,Revised,Total Classical studies,All students,10.7,36.4,66.9,87,95.8,99,5688
 2024,202324,Academic year,National,E92000001,England,Revised,Total Classical studies,All students,10.5,34.8,65.4,86.8,95.9,98.9,6188
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Classical studies,All students,10.2,35.1,66,86.7,96.5,99.1,6066
+2025,202425,Academic year,National,E92000001,England,Revised,Total Classical studies,All students,10.3,35.5,66.3,86.8,96.5,99.1,6066
 1996,199596,Academic year,National,E92000001,England,Final,Total Classical studies,Female,z,25,47,69,85,93,3639
 1997,199697,Academic year,National,E92000001,England,Final,Total Classical studies,Female,z,25,48,71,85,93,3546
 1998,199798,Academic year,National,E92000001,England,Final,Total Classical studies,Female,z,27,51,71,86,94,3359
@@ -2833,7 +2833,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Classical studies,Female,25.5,54.5,79.1,92.4,97.5,99.1,2963
 2023,202223,Academic year,National,E92000001,England,Revised,Total Classical studies,Female,10.7,37.2,69,88.6,96.3,99.1,3618
 2024,202324,Academic year,National,E92000001,England,Revised,Total Classical studies,Female,10.4,35.9,66.5,86.9,95.5,98.7,4095
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Classical studies,Female,9.7,35.7,67.4,87.4,96.9,99.2,3880
+2025,202425,Academic year,National,E92000001,England,Revised,Total Classical studies,Female,9.8,36.1,67.9,87.6,96.9,99.2,3880
 1996,199596,Academic year,National,E92000001,England,Final,Total Classical studies,Male,z,27,48,66,82,91,2770
 1997,199697,Academic year,National,E92000001,England,Final,Total Classical studies,Male,z,26,47,66,82,92,2549
 1998,199798,Academic year,National,E92000001,England,Final,Total Classical studies,Male,z,28,49,68,82,92,2377
@@ -2863,7 +2863,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Classical studies,Male,24.9,50.2,75.8,91.4,97.5,99.5,1748
 2023,202223,Academic year,National,E92000001,England,Revised,Total Classical studies,Male,10.5,34.9,63.1,84.3,95,98.8,2070
 2024,202324,Academic year,National,E92000001,England,Revised,Total Classical studies,Male,10.8,32.6,63.2,86.5,96.6,99.5,2092
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Classical studies,Male,11.1,34.1,63.5,85.3,95.8,99,2186
+2025,202425,Academic year,National,E92000001,England,Revised,Total Classical studies,Male,11.1,34.4,63.6,85.4,95.9,99,2186
 1996,199596,Academic year,National,E92000001,England,Final,Total English,All students,z,15,34,56,77,91,72544
 1997,199697,Academic year,National,E92000001,England,Final,Total English,All students,z,15,34,57,78,92,80659
 1998,199798,Academic year,National,E92000001,England,Final,Total English,All students,z,15,35,58,79,92,80546
@@ -2893,7 +2893,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total English,All students,13.3,32.2,64.2,87.4,96.9,99.2,53087
 2023,202223,Academic year,National,E92000001,England,Revised,Total English,All students,7.8,21.6,53.3,81.7,95.5,99.1,53023
 2024,202324,Academic year,National,E92000001,England,Revised,Total English,All students,7.8,21.5,52.9,80.9,95.1,98.9,56323
-2025,202425,Academic year,National,E92000001,England,Provisional,Total English,All students,7.3,21.2,52.5,81.2,95.6,99.3,53177
+2025,202425,Academic year,National,E92000001,England,Revised,Total English,All students,7.6,21.9,53,81.4,95.7,99.3,53175
 1996,199596,Academic year,National,E92000001,England,Final,Total English,Female,z,14,34,56,78,92,50115
 1997,199697,Academic year,National,E92000001,England,Final,Total English,Female,z,14,33,57,78,93,55711
 1998,199798,Academic year,National,E92000001,England,Final,Total English,Female,z,15,35,58,79,92,56334
@@ -2923,7 +2923,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total English,Female,13.7,33.3,65.8,88.4,97.3,99.3,40083
 2023,202223,Academic year,National,E92000001,England,Revised,Total English,Female,8,22.4,54.9,83,96,99.2,40079
 2024,202324,Academic year,National,E92000001,England,Revised,Total English,Female,7.9,22.1,54.1,81.8,95.5,99,43387
-2025,202425,Academic year,National,E92000001,England,Provisional,Total English,Female,7.4,21.6,53.5,82,95.9,99.4,41489
+2025,202425,Academic year,National,E92000001,England,Revised,Total English,Female,7.7,22.4,54,82.2,96,99.4,41488
 1996,199596,Academic year,National,E92000001,England,Final,Total English,Male,z,16,36,57,76,90,22429
 1997,199697,Academic year,National,E92000001,England,Final,Total English,Male,z,15,34,56,77,91,24948
 1998,199798,Academic year,National,E92000001,England,Final,Total English,Male,z,15,35,57,78,91,24212
@@ -2953,7 +2953,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total English,Male,12,29,59.3,84.3,95.6,98.8,13004
 2023,202223,Academic year,National,E92000001,England,Revised,Total English,Male,7,19.1,48.5,77.7,93.9,98.6,12944
 2024,202324,Academic year,National,E92000001,England,Revised,Total English,Male,7.3,19.7,48.7,77.8,93.6,98.6,12929
-2025,202425,Academic year,National,E92000001,England,Provisional,Total English,Male,7,19.6,48.6,78.4,94.5,98.9,11688
+2025,202425,Academic year,National,E92000001,England,Revised,Total English,Male,7.3,20.2,49.2,78.6,94.6,98.9,11687
 1996,199596,Academic year,National,E92000001,England,Final,Total Maths,All students,z,25,44,62,76,88,54125
 1997,199697,Academic year,National,E92000001,England,Final,Total Maths,All students,z,26,46,63,78,88,56050
 1998,199798,Academic year,National,E92000001,England,Final,Total Maths,All students,z,27,46,63,78,89,56589
@@ -2983,7 +2983,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Maths,All students,23.2,47.7,63.8,78.7,90.5,97.7,87075
 2023,202223,Academic year,National,E92000001,England,Revised,Total Maths,All students,16.9,41.6,60.7,76.4,88.5,96.4,88256
 2024,202324,Academic year,National,E92000001,England,Revised,Total Maths,All students,17.2,42.3,61.4,76.6,88.3,96.1,98066
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Maths,All students,16.9,41.8,61.7,78.5,90.2,96.6,102180
+2025,202425,Academic year,National,E92000001,England,Revised,Total Maths,All students,17.2,42.1,61.9,78.6,90.3,96.6,102170
 1996,199596,Academic year,National,E92000001,England,Final,Total Maths,Female,z,25,46,64,79,89,19118
 1997,199697,Academic year,National,E92000001,England,Final,Total Maths,Female,z,25,47,65,80,90,20036
 1998,199798,Academic year,National,E92000001,England,Final,Total Maths,Female,z,27,48,66,80,90,20653
@@ -3013,7 +3013,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Maths,Female,21.7,48,65.2,80.3,91.9,98.2,32543
 2023,202223,Academic year,National,E92000001,England,Revised,Total Maths,Female,14.9,40.3,60.7,77,89.1,96.9,32946
 2024,202324,Academic year,National,E92000001,England,Revised,Total Maths,Female,15.3,41.4,61.9,77.5,89.1,96.6,36187
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Maths,Female,14.5,40.3,61.4,78.8,90.8,96.8,37938
+2025,202425,Academic year,National,E92000001,England,Revised,Total Maths,Female,14.7,40.6,61.6,78.9,90.8,96.9,37935
 1996,199596,Academic year,National,E92000001,England,Final,Total Maths,Male,z,25,44,61,75,87,35007
 1997,199697,Academic year,National,E92000001,England,Final,Total Maths,Male,z,26,45,62,76,87,36014
 1998,199798,Academic year,National,E92000001,England,Final,Total Maths,Male,z,26,44,61,76,88,35936
@@ -3043,7 +3043,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Maths,Male,24.1,47.5,63.1,77.8,89.7,97.4,54531
 2023,202223,Academic year,National,E92000001,England,Revised,Total Maths,Male,18.1,42.4,60.7,76,88.2,96.1,55310
 2024,202324,Academic year,National,E92000001,England,Revised,Total Maths,Male,18.4,42.8,61.1,76.2,87.9,95.9,61866
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Maths,Male,18.4,42.7,61.9,78.3,89.9,96.4,64229
+2025,202425,Academic year,National,E92000001,England,Revised,Total Maths,Male,18.7,43,62.1,78.4,90,96.4,64222
 1996,199596,Academic year,National,E92000001,England,Final,Total Modern  languages,All students,z,22,40,60,76,89,39554
 1997,199697,Academic year,National,E92000001,England,Final,Total Modern  languages,All students,z,22,43,62,78,90,38149
 1998,199798,Academic year,National,E92000001,England,Final,Total Modern  languages,All students,z,25,46,65,81,92,36488
@@ -3073,7 +3073,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Modern  languages,All students,25.9,56,77.8,90.4,96.7,99,23037
 2023,202223,Academic year,National,E92000001,England,Revised,Total Modern  languages,All students,14.2,43.5,70.5,86.4,95,98.5,20923
 2024,202324,Academic year,National,E92000001,England,Revised,Total Modern  languages,All students,19.2,47.1,72.6,87.8,95.6,98.5,22192
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Modern  languages,All students,19.4,47.3,72.6,88,95.8,98.7,21808
+2025,202425,Academic year,National,E92000001,England,Revised,Total Modern  languages,All students,19.8,47.8,72.9,88.1,95.8,98.7,21807
 1996,199596,Academic year,National,E92000001,England,Final,Total Modern  languages,Female,z,21,40,59,76,88,27173
 1997,199697,Academic year,National,E92000001,England,Final,Total Modern  languages,Female,z,21,41,61,78,90,26175
 1998,199798,Academic year,National,E92000001,England,Final,Total Modern  languages,Female,z,23,44,63,80,91,25077
@@ -3103,7 +3103,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Modern  languages,Female,25,55,77,90.1,96.7,99,15322
 2023,202223,Academic year,National,E92000001,England,Revised,Total Modern  languages,Female,14.4,43.1,69.9,86.2,95,98.5,13726
 2024,202324,Academic year,National,E92000001,England,Revised,Total Modern  languages,Female,18.9,46.5,71.8,87.5,95.6,98.7,14380
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Modern  languages,Female,18.9,46.7,72,87.5,95.6,98.6,14003
+2025,202425,Academic year,National,E92000001,England,Revised,Total Modern  languages,Female,19.2,47.1,72.2,87.7,95.7,98.7,14002
 1996,199596,Academic year,National,E92000001,England,Final,Total Modern  languages,Male,z,24,43,62,78,89,12381
 1997,199697,Academic year,National,E92000001,England,Final,Total Modern  languages,Male,z,24,45,63,79,90,11974
 1998,199798,Academic year,National,E92000001,England,Final,Total Modern  languages,Male,z,27,49,69,84,93,11411
@@ -3133,7 +3133,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Modern  languages,Male,27.6,57.8,79.5,91.1,96.8,98.9,7713
 2023,202223,Academic year,National,E92000001,England,Revised,Total Modern  languages,Male,13.9,44.4,71.5,86.9,94.9,98.3,7197
 2024,202324,Academic year,National,E92000001,England,Revised,Total Modern  languages,Male,19.7,48,74.2,88.5,95.8,98.2,7810
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Modern  languages,Male,20.4,48.5,73.8,88.8,96.1,98.7,7802
+2025,202425,Academic year,National,E92000001,England,Revised,Total Modern  languages,Male,20.8,49,74.1,89,96.1,98.7,7802
 1996,199596,Academic year,National,E92000001,England,Final,Total Music,All students,z,20,41,64,82,93,5402
 1997,199697,Academic year,National,E92000001,England,Final,Total Music,All students,z,20,40,63,82,93,5788
 1998,199798,Academic year,National,E92000001,England,Final,Total Music,All students,z,20,40,63,82,93,5996
@@ -3163,7 +3163,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Music,All students,17.8,43.1,68.3,85.9,95.4,98.8,5249
 2023,202223,Academic year,National,E92000001,England,Revised,Total Music,All students,6.8,24.3,50.4,75.2,90.1,97.5,4911
 2024,202324,Academic year,National,E92000001,England,Revised,Total Music,All students,7.4,25.2,53.4,77.4,92.5,98.1,4967
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Music,All students,7.5,25.2,52.8,77.4,92.2,97.7,4817
+2025,202425,Academic year,National,E92000001,England,Revised,Total Music,All students,7.9,26.1,53.5,77.9,92.3,97.8,4817
 1996,199596,Academic year,National,E92000001,England,Final,Total Music,Female,z,19,40,64,82,93,3363
 1997,199697,Academic year,National,E92000001,England,Final,Total Music,Female,z,19,40,64,83,94,3455
 1998,199798,Academic year,National,E92000001,England,Final,Total Music,Female,z,20,40,64,83,94,3546
@@ -3193,7 +3193,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Music,Female,16.4,42.1,67.5,86.5,95.8,98.8,2390
 2023,202223,Academic year,National,E92000001,England,Revised,Total Music,Female,6.3,22.6,50,74.8,90.8,97.5,2111
 2024,202324,Academic year,National,E92000001,England,Revised,Total Music,Female,6.2,23.3,53.1,77.5,92.6,97.9,2193
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Music,Female,5.8,22.4,50.3,75,92.1,97.9,2079
+2025,202425,Academic year,National,E92000001,England,Revised,Total Music,Female,6,23.1,51,75.5,92.2,97.9,2079
 1996,199596,Academic year,National,E92000001,England,Final,Total Music,Male,z,22,42,64,82,92,2039
 1997,199697,Academic year,National,E92000001,England,Final,Total Music,Male,z,21,41,62,80,91,2333
 1998,199798,Academic year,National,E92000001,England,Final,Total Music,Male,z,19,40,61,80,91,2450
@@ -3223,7 +3223,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total Music,Male,18.9,44,69,85.4,95,98.9,2859
 2023,202223,Academic year,National,E92000001,England,Revised,Total Music,Male,7.1,25.5,50.6,75.6,89.6,97.4,2800
 2024,202324,Academic year,National,E92000001,England,Revised,Total Music,Male,8.3,26.7,53.6,77.2,92.5,98.2,2773
-2025,202425,Academic year,National,E92000001,England,Provisional,Total Music,Male,8.8,27.2,54.7,79.3,92.3,97.6,2738
+2025,202425,Academic year,National,E92000001,England,Revised,Total Music,Male,9.3,28.3,55.4,79.8,92.3,97.8,2738
 1996,199596,Academic year,National,E92000001,England,Final,Total subjects,All students,z,16,34,54,72,86,620164
 1997,199697,Academic year,National,E92000001,England,Final,Total subjects,All students,z,16,35,55,74,87,662163
 1998,199798,Academic year,National,E92000001,England,Final,Total subjects,All students,z,17,36,57,75,88,681082
@@ -3253,7 +3253,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total subjects,All students,14.8,36.4,62.5,82.2,93.3,98.2,772597
 2023,202223,Academic year,National,E92000001,England,Revised,Total subjects,All students,8.9,27.2,53.2,75.7,90,97.1,789275
 2024,202324,Academic year,National,E92000001,England,Revised,Total subjects,All students,9.6,28.3,54.2,76.4,90.3,97.1,809181
-2025,202425,Academic year,National,E92000001,England,Provisional,Total subjects,All students,9.6,28.6,55.4,78,91.4,97.4,802338
+2025,202425,Academic year,National,E92000001,England,Revised,Total subjects,All students,9.9,29,55.7,78.2,91.4,97.5,802299
 1996,199596,Academic year,National,E92000001,England,Final,Total subjects,Female,z,16,34,55,73,86,323992
 1997,199697,Academic year,National,E92000001,England,Final,Total subjects,Female,z,16,35,56,75,88,348913
 1998,199798,Academic year,National,E92000001,England,Final,Total subjects,Female,z,17,37,58,77,89,361839
@@ -3283,7 +3283,7 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total subjects,Female,15,37.4,64.6,84,94.2,98.4,421397
 2023,202223,Academic year,National,E92000001,England,Revised,Total subjects,Female,8.7,27.3,55,77.7,91.1,97.5,427225
 2024,202324,Academic year,National,E92000001,England,Revised,Total subjects,Female,9.5,28.5,56,78.4,91.5,97.5,435363
-2025,202425,Academic year,National,E92000001,England,Provisional,Total subjects,Female,9.2,28.4,56.8,79.7,92.4,97.8,431117
+2025,202425,Academic year,National,E92000001,England,Revised,Total subjects,Female,9.5,28.9,57.1,79.8,92.5,97.9,431104
 1996,199596,Academic year,National,E92000001,England,Final,Total subjects,Male,z,17,34,53,71,85,296172
 1997,199697,Academic year,National,E92000001,England,Final,Total subjects,Male,z,16,35,55,73,86,313250
 1998,199798,Academic year,National,E92000001,England,Final,Total subjects,Male,z,17,35,56,74,87,319243
@@ -3313,4 +3313,4 @@ year,time_period,time_identifier,geographic_level,country_code,country_name,data
 2022,202122,Academic year,National,E92000001,England,Revised,Total subjects,Male,14.6,35.2,59.9,80,92.2,97.8,351190
 2023,202223,Academic year,National,E92000001,England,Revised,Total subjects,Male,9.2,26.9,51.1,73.3,88.6,96.6,362048
 2024,202324,Academic year,National,E92000001,England,Revised,Total subjects,Male,9.8,28.1,52.1,74.1,88.9,96.6,373727
-2025,202425,Academic year,National,E92000001,England,Provisional,Total subjects,Male,10,28.7,53.8,76.1,90.2,97,371186
+2025,202425,Academic year,National,E92000001,England,Revised,Total subjects,Male,10.3,29.1,54.1,76.3,90.3,97,371160
