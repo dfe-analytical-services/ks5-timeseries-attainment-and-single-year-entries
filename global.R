@@ -7,7 +7,6 @@
 #
 # ---------------------------------------------------------
 
-
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
 shhh(library(shiny))
@@ -70,7 +69,10 @@ first_xter_up <- function(x) {
 
 
 spinner <- function(output) {
-  shinycssloaders::withSpinner(output, size = getOption("spinner.size", default = 1))
+  shinycssloaders::withSpinner(
+    output,
+    size = getOption("spinner.size", default = 1)
+  )
 }
 
 
@@ -91,7 +93,6 @@ round2 <- function(x, n) {
 # It's best to do this here instead of the server file, to improve performance.
 
 # source("R/filename.r")
-
 
 # appLoadingCSS ----------------------------------------------------------------------------
 # Set up loading screen
@@ -132,14 +133,27 @@ dfAlevelSubjectRaw <- read_alevel_subject_data()
 
 dfAlevelSubject <- dfAlevelSubjectRaw %>%
   rename(
-    characteristic_value = "characteristic_value", `A*` = "perc_astar_grade_achieved",
+    characteristic_value = "characteristic_value",
+    `A*` = "perc_astar_grade_achieved",
     `A*-A` = "perc_astar_a_grade_achieved",
-    `A*-B` = "perc_astar_b_grade_achieved", `A*-C` = "perc_astar_c_grade_achieved",
-    `A*-D` = "perc_astar_d_grade_achieved", `A*-E` = "perc_astar_e_grade_achieved", version = "data_version"
+    `A*-B` = "perc_astar_b_grade_achieved",
+    `A*-C` = "perc_astar_c_grade_achieved",
+    `A*-D` = "perc_astar_d_grade_achieved",
+    `A*-E` = "perc_astar_e_grade_achieved",
+    version = "data_version"
   ) %>%
   select(
-    time_period, year, subject_name, characteristic_value, `A*-A`,
-    `A*-B`, `A*-C`, `A*-D`, `A*-E`, entry_count, version
+    time_period,
+    year,
+    subject_name,
+    characteristic_value,
+    `A*-A`,
+    `A*-B`,
+    `A*-C`,
+    `A*-D`,
+    `A*-E`,
+    entry_count,
+    version
   ) %>%
   mutate(
     entry_count = as.numeric(entry_count),
@@ -159,7 +173,16 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
 subjectByAll <- dfAlevelSubject %>%
   group_by(subject_name, characteristic_value) %>%
   arrange(year, .by_group = TRUE) %>%
-  filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics", "ICT"), n() > 10) %>%
+  filter(
+    !subject_name %in%
+      c(
+        "Other communication studies",
+        "Other social studies",
+        "Home economics",
+        "ICT"
+      ),
+    n() > 10
+  ) %>%
   ungroup()
 
 # Filter out female and male
@@ -169,14 +192,14 @@ subjectBySex <- subjectByAll # %>%
 
 # Filter home economics for all students
 homeEconomics <- dfAlevelSubject %>%
-  filter(subject_name == "Home economics" & characteristic_value == "All students")
+  filter(
+    subject_name == "Home economics" & characteristic_value == "All students"
+  )
 
 
 #####################################################################################################
 
-
 # Read in  A level aggregate APS and grade by institution type
-
 
 alevel_attain_download <- read_alevel_aps_data()
 
@@ -187,13 +210,28 @@ dfAlevelAps <- data %>%
     aps_grade_2013_2015 = "aps_per_entry_grade_2013_2015"
   ) %>%
   select(
-    time_period, year, establishment_type, establishment_type_group, number_of_students, aps_per_entry, aps_2013_2015, aps_per_entry_grade, aps_grade_2013_2015,
-    characteristic_sex, time_period, year, year_2013_2015, version
+    time_period,
+    year,
+    establishment_type,
+    establishment_type_group,
+    number_of_students,
+    aps_per_entry,
+    aps_2013_2015,
+    aps_per_entry_grade,
+    aps_grade_2013_2015,
+    characteristic_sex,
+    time_period,
+    year,
+    year_2013_2015,
+    version
   ) %>%
-  mutate(establishment_type = case_match(
-    establishment_type, "All state-funded schools and colleges" ~ "All state-funded",
-    .default = establishment_type
-  )) %>%
+  mutate(
+    establishment_type = case_match(
+      establishment_type,
+      "All state-funded schools and colleges" ~ "All state-funded",
+      .default = establishment_type
+    )
+  ) %>%
   mutate(
     aps_2013_2015 = round2(as.numeric(aps_2013_2015), 2),
     aps_grade_2013_2015 = as.factor(aps_grade_2013_2015),
@@ -210,12 +248,14 @@ dfAlevelAps <- data %>%
 # Expect similar result on sex gap column for female an male
 # Use data from 2015/16
 
-
 dfApsSexGap <- read_alevel_aps_sexgap_data() %>%
-  mutate(establishment_type = case_match(
-    establishment_type, "All state-funded schools and colleges" ~ "All state-funded",
-    .default = establishment_type
-  ))
+  mutate(
+    establishment_type = case_match(
+      establishment_type,
+      "All state-funded schools and colleges" ~ "All state-funded",
+      .default = establishment_type
+    )
+  )
 
 fmDiff <- dfApsSexGap %>%
   mutate(
@@ -228,9 +268,7 @@ fmDiff <- dfApsSexGap %>%
 
 ########################################################################################################
 
-
 # Read in attainment data for alevel, applied general and techlevel
-
 
 headline_download <- read_all_attainment_data()
 
@@ -241,19 +279,34 @@ headline_download <- headline_download %>%
     country_code = "E92000001",
     country_name = "England"
   ) %>%
-  select(time_period, time_identifier, geographic_level, country_code, country_name, version,
-    establishment_type, establishment_type_group, characteristic_sex, number_of_students,
+  select(
+    time_period,
+    time_identifier,
+    geographic_level,
+    country_code,
+    country_name,
+    version,
+    establishment_type,
+    establishment_type_group,
+    characteristic_sex,
+    number_of_students,
     aps_per_entry = aps,
-    aps_per_entry_grade = aps_grade, version, qualification_type = cert_type, year
+    aps_per_entry_grade = aps_grade,
+    version,
+    qualification_type = cert_type,
+    year
   ) %>%
   arrange(desc(time_period))
 
 
 dfAttainmentRaw <- read_all_attainment_data() %>%
-  mutate(establishment_type = case_match(
-    establishment_type, "All state-funded schools and colleges" ~ "All state-funded",
-    .default = establishment_type
-  ))
+  mutate(
+    establishment_type = case_match(
+      establishment_type,
+      "All state-funded schools and colleges" ~ "All state-funded",
+      .default = establishment_type
+    )
+  )
 
 # Select  all students and data to factors and numeric
 dfAttainment <- dfAttainmentRaw %>%
@@ -287,4 +340,11 @@ dfMs <- dfMsRaw %>%
     characteristic_value = as.factor(characteristic_value),
     version = as.factor(version)
   ) %>%
-  filter(!subject %in% c("Five Maths/Science subjects", "Six Maths/Science subjects", "Total Students"))
+  filter(
+    !subject %in%
+      c(
+        "Five Maths/Science subjects",
+        "Six Maths/Science subjects",
+        "Total Students"
+      )
+  )
