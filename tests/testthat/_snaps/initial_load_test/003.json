@@ -39,19 +39,19 @@
   "output": {
     "dropdown_label": "Click to download full dataset",
     "headBox1": {
-      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>B-<\/h3>\n    <p>Average A level result  equivalent to 35.94 points:   All institutions<\/p>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>B-<\/h3>\n    <p>Average A level result  equivalent to 36.09 points:   All institutions<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
     },
     "headBox2": {
-      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Merit+<\/h3>\n    <p>Average applied general result equivalent to 29.95  points:   All institutions<\/p>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Merit+<\/h3>\n    <p>Average applied general result equivalent to 29.97  points:   All institutions<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
     },
     "headBox3": {
-      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Merit+<\/h3>\n    <p>Average tech level result equivalent to 28.84  points:   All institutions<\/p>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>Merit+<\/h3>\n    <p>Average tech level result equivalent to 28.86  points:   All institutions<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
@@ -82,7 +82,7 @@
               38.869999999999997,
               35.289999999999999,
               35.549999999999997,
-              35.939999999999998
+              36.090000000000003
             ],
             "text": [
               "Year: 2016<br />APS: 31.79<br />Qualification: A level",
@@ -94,7 +94,7 @@
               "Year: 2022<br />APS: 38.87<br />Qualification: A level",
               "Year: 2023<br />APS: 35.29<br />Qualification: A level",
               "Year: 2024<br />APS: 35.55<br />Qualification: A level",
-              "Year: 2025<br />APS: 35.94<br />Qualification: A level"
+              "Year: 2025<br />APS: 36.09<br />Qualification: A level"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -135,7 +135,7 @@
               31.98,
               29.559999999999999,
               29.170000000000002,
-              29.949999999999999
+              29.969999999999999
             ],
             "text": [
               "Year: 2016<br />APS: 34.69<br />Qualification: Applied general",
@@ -147,7 +147,7 @@
               "Year: 2022<br />APS: 31.98<br />Qualification: Applied general",
               "Year: 2023<br />APS: 29.56<br />Qualification: Applied general",
               "Year: 2024<br />APS: 29.17<br />Qualification: Applied general",
-              "Year: 2025<br />APS: 29.95<br />Qualification: Applied general"
+              "Year: 2025<br />APS: 29.97<br />Qualification: Applied general"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -188,7 +188,7 @@
               30.559999999999999,
               28.52,
               28.140000000000001,
-              28.84
+              28.859999999999999
             ],
             "text": [
               "Year: 2016<br />APS: 30.77<br />Qualification: Tech level",
@@ -200,7 +200,7 @@
               "Year: 2022<br />APS: 30.56<br />Qualification: Tech level",
               "Year: 2023<br />APS: 28.52<br />Qualification: Tech level",
               "Year: 2024<br />APS: 28.14<br />Qualification: Tech level",
-              "Year: 2025<br />APS: 28.84<br />Qualification: Tech level"
+              "Year: 2025<br />APS: 28.86<br />Qualification: Tech level"
             ],
             "type": "scatter",
             "mode": "lines",
@@ -305,7 +305,7 @@
             "ticks": "outside",
             "tickcolor": "rgba(0,0,0,1)",
             "ticklen": 3.6529680365296811,
-            "tickwidth": 0,
+            "tickwidth": 0.66417600664176002,
             "showticklabels": true,
             "tickfont": {
               "color": "rgba(0,0,0,1)",
@@ -315,7 +315,7 @@
             "tickangle": -300,
             "showline": true,
             "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0,
+            "linewidth": 1.32835201328352,
             "showgrid": false,
             "gridcolor": null,
             "gridwidth": 0,
@@ -368,7 +368,7 @@
             "ticks": "outside",
             "tickcolor": "rgba(0,0,0,1)",
             "ticklen": 3.6529680365296811,
-            "tickwidth": 0,
+            "tickwidth": 0.66417600664176002,
             "showticklabels": true,
             "tickfont": {
               "color": "rgba(0,0,0,1)",
@@ -378,7 +378,7 @@
             "tickangle": 0,
             "showline": true,
             "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0,
+            "linewidth": 1.32835201328352,
             "showgrid": false,
             "gridcolor": null,
             "gridwidth": 0,
@@ -396,30 +396,13 @@
             "fixedrange": true
           },
           "shapes": [
-            {
-              "type": "rect",
-              "fillcolor": null,
-              "line": {
-                "color": null,
-                "width": 0,
-                "linetype": [
 
-                ]
-              },
-              "yref": "paper",
-              "xref": "paper",
-              "layer": "below",
-              "x0": 0,
-              "x1": 1,
-              "y0": 0,
-              "y1": 1
-            }
           ],
           "showlegend": true,
           "legend": {
             "bgcolor": "rgba(255,255,255,1)",
             "bordercolor": "transparent",
-            "borderwidth": 0,
+            "borderwidth": 1.8897637795275593,
             "font": {
               "color": "rgba(0,0,0,1)",
               "family": "",
@@ -555,9 +538,9 @@
         },
         {
           "name": "plotly-htmlwidgets-css",
-          "version": "2.11.1",
+          "version": "2.25.2",
           "src": {
-            "href": "plotly-htmlwidgets-css-2.11.1"
+            "href": "plotly-htmlwidgets-css-2.25.2"
           },
           "meta": null,
           "script": null,
@@ -568,9 +551,9 @@
         },
         {
           "name": "plotly-main",
-          "version": "2.11.1",
+          "version": "2.25.2",
           "src": {
-            "href": "plotly-main-2.11.1"
+            "href": "plotly-main-2.25.2"
           },
           "meta": null,
           "script": "plotly-latest.min.js",
@@ -753,6 +736,6 @@
       ]
     },
     "textHeadline": "The boxes display the latest average results for A level, Applied general and Tech level for  All institutions in England. The\n    chart shows the APS from 2015/16 to 2024/25. To view results, click on the drop-down box and select one institution type.\n\n    The concept of qualifications approved for reporting has been applied since 2015/16 following Professor Alison Wolf's Review of vocational education.\n    From 2017/18 the quality threshold for vocational and technical qualifications to be included in performance\n    measures further increased. The later reforms include criteria relating to the size, content, and assessment, including a requirement\n    that a proportion of a qualification's content is subject to external assessment.\n\n    Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.\n    ",
-    "textSubAll": "The line chart shows the A level exam entries for  Total English and Total Maths from   1996 to  2025  for  All students  in England. "
+    "textSubAll": "The line chart shows the A level exam entries for  Total English and Total Maths from   1996  for  All students  in England. "
   }
 }
