@@ -18,6 +18,7 @@
 #
 # ---------------------------------------------------------
 
+
 server <- function(input, output, session) {
   # Loading screen ---------------------------------------------------------------------------
   # Call initial loading screen
@@ -45,8 +46,7 @@ server <- function(input, output, session) {
         session,
         paste0(
           # site_title, " - ",
-          input$alevelInstitute,
-          ", ",
+          input$alevelInstitute, ", ",
           input$allSex
         )
       )
@@ -148,12 +148,9 @@ server <- function(input, output, session) {
   observeEvent(input$cookieLink, {
     # Need to link here to where further info is located.  You can
     # updateTabsetPanel to have a cookie page for instance
-    updateTabsetPanel(
-      session,
-      "navlistPanel",
-      selected = "Support and feedback"
-    )
+    updateTabsetPanel(session, "navlistPanel", selected = "Support and feedback")
   })
+
 
   ## The headline attainment reactive starts here
   # Reactive for headline attainment
@@ -165,95 +162,128 @@ server <- function(input, output, session) {
       )
   })
 
+
   output$plotHeadline <- renderPlotly({
-    createTimeSeriesHeadline(reactiveHeadline(), allAps = input$headlineAps)
+    createTimeSeriesHeadline(reactiveHeadline(),
+      allAps = input$headlineAps
+    )
   })
+
 
   #  Disable top panel on institution type and group for headline
   #  Disable top panel on type of students for Female and Male
 
+
   # Add value box for A level
-  output$headBox1 <- renderValueBox({
-    latest <- (reactiveHeadline() %>%
+
+  output$headBox1 <- renderUI({
+    latest <- reactiveHeadline() %>%
       filter(
         year == max(year),
         cert_type == "A level",
         establishment_type == input$headlineAps
-      ))$aps
-    grade <- (reactiveHeadline() %>%
+      ) %>%
+      pull(aps)
+
+    grade <- reactiveHeadline() %>%
       filter(
         year == max(year),
         cert_type == "A level",
         establishment_type == input$headlineAps
-      ))$aps_grade
+      ) %>%
+      pull(aps_grade)
 
-    valueBox(
-      value = grade,
-      subtitle = paste0(
-        "Average A level result  equivalent to ",
-        latest,
-        " points:   ",
-        input$headlineAps
-      ), # width = 12,
-      color = "blue"
+    bslib::value_box(
+      title = paste(
+        "Average A level result"
+      ),
+      value = div(
+        style = "text-align: center; white-space: nowrap",
+        grade
+      ),
+      HTML(paste0(
+        "equivalent to ",
+        latest, " points: <strong>",
+        input$headlineAps, "</strong>"
+      )),
+      theme = "primary"
     )
   })
 
-  #
-  #   # Add value box for Applied general
-  output$headBox2 <- renderValueBox({
-    latest <- (reactiveHeadline() %>%
+
+  # Add value box for Applied general
+  output$headBox2 <- renderUI({
+    latest <- reactiveHeadline() %>%
       filter(
         year == max(year),
         cert_type == "Applied general",
         establishment_type == input$headlineAps
-      ))$aps
-    # result <- "Average applied general result"
-    grade <- (reactiveHeadline() %>%
+      ) %>%
+      pull(aps)
+
+    grade <- reactiveHeadline() %>%
       filter(
         year == max(year),
         cert_type == "Applied general",
         establishment_type == input$headlineAps
-      ))$aps_grade
-    valueBox(
-      value = grade,
-      subtitle = paste0(
-        "Average applied general result equivalent to ",
-        latest,
-        "  points:   ",
-        input$headlineAps
+      ) %>%
+      pull(aps_grade)
+
+    bslib::value_box(
+      title = paste(
+        "Average Applied general  result"
       ),
-      color = "blue"
+      value = div(
+        style = "text-align: center; white-space: nowrap",
+        grade
+      ),
+      HTML(paste0(
+        "equivalent to ",
+        latest, " points: <strong>",
+        input$headlineAps, "</strong>"
+      )),
+      theme = "primary"
     )
   })
-  #
-  #
-  #   #  Add Value box for Tech level
-  #
-  output$headBox3 <- renderValueBox({
-    latest <- (reactiveHeadline() %>%
+
+
+  # #
+  # #   # Value box for Tech level
+
+  output$headBox3 <- renderUI({
+    latest <- reactiveHeadline() %>%
       filter(
         year == max(year),
         cert_type == "Tech level",
         establishment_type == input$headlineAps
-      ))$aps
-    grade <- (reactiveHeadline() %>%
+      ) %>%
+      pull(aps)
+
+    grade <- reactiveHeadline() %>%
       filter(
         year == max(year),
         cert_type == "Tech level",
         establishment_type == input$headlineAps
-      ))$aps_grade
-    valueBox(
-      value = grade,
-      subtitle = paste0(
-        "Average tech level result equivalent to ",
-        latest,
-        "  points:   ",
-        input$headlineAps
+      ) %>%
+      pull(aps_grade)
+
+    bslib::value_box(
+      title = paste(
+        "Average Tech level result"
       ),
-      color = "blue"
+      value = div(
+        style = "text-align: center; white-space: nowrap",
+        grade
+      ),
+      HTML(paste0(
+        "equivalent to ",
+        latest, " points: <strong>",
+        input$headlineAps, "</strong>"
+      )),
+      theme = "primary"
     )
   })
+
 
   # Create reactive for Headline data
 
@@ -275,23 +305,23 @@ server <- function(input, output, session) {
       )
   })
 
+
   # Data table for headline page
   output$tabHeadline <- renderDataTable({
-    datatable(
-      selectedHeadlineData(),
+    datatable(selectedHeadlineData(),
       extens = "Buttons",
-      options = (list(
-        infor = F,
-        paging = F,
-        searching = F,
-        stripClasses = F,
-        lengthChange = F,
-        scrollY = "260px",
-        scrollX = T,
-        scrollCollapse = T,
-        dom = "Bfrtip",
-        buttons = (c("copy", "csv", "excel")),
-        class = "display"
+      options = (
+        list(
+          infor = F, paging = F,
+          searching = F,
+          stripClasses = F,
+          lengthChange = F,
+          scrollY = "260px",
+          scrollX = T,
+          scrollCollapse = T,
+          dom = "Bfrtip",
+          buttons = (c("copy", "csv", "excel")),
+          class = "display"
       )),
       rownames = FALSE
     )
@@ -335,6 +365,7 @@ server <- function(input, output, session) {
     }
   })
 
+
   #  Reactive for A level APS -----------------------------------------------
 
   reactiveType <- reactive({
@@ -342,31 +373,28 @@ server <- function(input, output, session) {
 
     inType <- subset(
       inType,
-      establishment_type %in%
-        input$alevelInstitute &
+      establishment_type %in% input$alevelInstitute &
 
         characteristic_sex == input$allSex
     )
 
+
     inType
   })
 
+
   observeEvent(input$resetApsAll, {
-    updateSelectizeInput(
-      session,
-      "alevelInstitute",
-      selected = c("All FE sector colleges", "All state-funded schools")
-    )
+    updateSelectizeInput(session, "alevelInstitute", selected = c("All FE sector colleges", "All state-funded schools"))
     updateSelectizeInput(session, "allSex", selected = "All students")
   })
 
   output$plotAlevelAps <- renderPlot({
-    createApsTimeSeries(
-      reactiveType(),
+    createApsTimeSeries(reactiveType(),
       allSex = input$allSex,
       instType = input$alevelInstitute
     )
   })
+
 
   # Alevel Aps for female and male
 
@@ -379,6 +407,7 @@ server <- function(input, output, session) {
     inType
   })
 
+
   output$plotFemaleAlAPS <- renderPlot({
     createApsFmTimeSeries(
       reactiveFmAps() %>%
@@ -389,6 +418,7 @@ server <- function(input, output, session) {
     )
   })
 
+
   output$plotMaleAlAPS <- renderPlot({
     createApsFmTimeSeries(
       reactiveFmAps() %>%
@@ -398,6 +428,7 @@ server <- function(input, output, session) {
       instType = input$alevelInstitute
     )
   })
+
 
   # Reactive for difference between female and male  sex gap APS  A level
   # This is based on female male average result
@@ -411,8 +442,11 @@ server <- function(input, output, session) {
     gGap
   })
 
+
   output$plotGgap <- renderPlotly({
-    createSexGap(reactiveGgap(), instType = input$alevelInstitute)
+    createSexGap(reactiveGgap(),
+      instType = input$alevelInstitute
+    )
   })
 
   selectedGgapData <- reactive({
@@ -431,37 +465,36 @@ server <- function(input, output, session) {
       )
   })
 
+
   # Data table for gap
   output$tabFm <- renderDataTable({
-    datatable(
-      selectedGgapData(),
+    datatable(selectedGgapData(),
       extens = "Buttons",
-      options = (list(
-        infor = F,
-        paging = F,
-        searching = F,
-        stripClasses = F,
-        lengthChange = F,
-        scrollY = "260px",
-        scrollX = T,
-        scrollCollapse = T,
-        dom = "Bfrtip",
-        buttons = (c("copy", "csv", "excel")),
-        class = "display"
+      options = (
+        list(
+          infor = F, paging = F,
+          searching = F,
+          stripClasses = F,
+          lengthChange = F,
+          scrollY = "260px",
+          scrollX = T,
+          scrollCollapse = T,
+          dom = "Bfrtip",
+          buttons = (c("copy", "csv", "excel")),
+          class = "display"
       )),
       rownames = FALSE
     )
   })
 
+
   # Create textOutput for APS Alevel
+
 
   output$textHeadline <- renderText({
     # val <- glue::glue_collapse(input$headlineAps, ", ", last = " and ")
     val <- paste(input$headlineAps, collapse = " , ")
-    HTML(paste0(
-      "The boxes display the latest average results for A level, Applied general and Tech level for  ",
-      val,
-      " in England. The
+    HTML(paste0("The boxes display the latest average results for A level, Applied general and Tech level for  ", val, " in England. The
     chart shows the APS from 2015/16 to 2024/25. To view results, click on the drop-down box and select one institution type.
 
     The concept of qualifications approved for reporting has been applied since 2015/16 following Professor Alison Wolf's Review of vocational education.
@@ -470,65 +503,51 @@ server <- function(input, output, session) {
     that a proportion of a qualification's content is subject to external assessment.
 
     Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.
-    "
-    ))
+    "))
   })
 
   output$textApsAll <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
     val1 <- paste(input$allSex, collapse = ", ")
-    HTML(paste(
-      "A level average point score (APS) per entry was first published in 2012/13 with a scale of 0-300.
+    HTML(paste("A level average point score (APS) per entry was first published in 2012/13 with a scale of 0-300.
     The points changed to 0-60 scale in 2015/16, but average grade remains consistent. APS is presented across 2 charts,
-    scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).",
-      br(),
-      br(),
-      "
-    The charts display the APS and grades achieved by students throughout 16 to 18 study for  ",
-      val,
-      " in England.
+    scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).", br(), br(), "
+    The charts display the APS and grades achieved by students throughout 16 to 18 study for  ", val, " in England.
     Up to four institution types can be selected from the drop-down menu. Care should be taken when comparing across institution types due to significant differences in cohort sizes.
-           For breakdown of institution types, see flow diagram on left panel.  "
-    ))
+           For breakdown of institution types, see flow diagram on left panel.  "))
   })
 
   output$textGgap <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
 
-    paste(
-      "The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2024/25  for ",
-      val,
-      " in England.
+    paste("The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2024/25  for ", val, " in England.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
-                  differences in cohort sizes."
-    )
+                  differences in cohort sizes.")
   })
+
 
   output$textApsFm <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
     val1 <- paste(input$allSex, collapse = ", ")
 
-    paste(
-      "The line charts display the average points and grades achieved  by female and male students for ",
-      val,
-      " in England from 2015/16 to 2024/25.
+    paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England from 2015/16 to 2024/25.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
-                  differences in cohort sizes.  For breakdown of institution types, see flow diagram on left panel."
-    )
+                  differences in cohort sizes.  For breakdown of institution types, see flow diagram on left panel.")
   })
+
 
   #  A level single entry subject
 
   # create reactive for subject entries
   # create observe event and output for plot
 
+
   reactiveSubject <- reactive({
     subjName <- subjectByAll
 
     subjName <- subset(
       subjName,
-      subject_name %in%
-        input$subCompareAll &
+      subject_name %in% input$subCompareAll &
         characteristic_value == input$subByAll &
         # grade == input$resByAll &
         between(year, as.numeric(input$year_start), as.numeric(input$year_end))
@@ -537,14 +556,11 @@ server <- function(input, output, session) {
     subjName
   })
 
+
   observeEvent(input$resetEntries, {
     updateSelectInput(session, "year_start", selected = 1996)
     updateSelectInput(session, "year_end", selected = latest_year)
-    updateSelectizeInput(
-      session,
-      "subCompareAll",
-      selected = c("Total Maths", "Total English")
-    )
+    updateSelectizeInput(session, "subCompareAll", selected = c("Total Maths", "Total English"))
     updateSelectInput(session, "subByAll", selected = "All students")
     updateSelectInput(session, "resByAll", selected = "A*-A")
   })
@@ -553,37 +569,33 @@ server <- function(input, output, session) {
   #                                                   choices = seq(ifelse(input$year_start == latest_year, latest_year, as.numeric(input$year_start)), latest_year, 1),
   #                                                   selected = input$year_end) })
   observeEvent(input$year_end, {
-    updateSelectInput(
-      session,
-      "year_start",
+    updateSelectInput(session, "year_start",
       label = NULL,
-      choices = seq(
-        1996,
-        ifelse(input$year_end == 1996, 1996, as.integer(2020)),
-        1
-      ),
+      choices = seq(1996, ifelse(input$year_end == 1996, 1996, as.integer(2020)), 1),
       selected = input$year_start
     )
   })
 
+
   output$plotAlevelSubject <- renderPlotly({
-    createTimeSeriesSubject(
-      reactiveSubject(), #
+    createTimeSeriesSubject(reactiveSubject(), #
       subName = input$subCompareAll,
       subAll = input$subByAll
     )
   })
 
+
   output$plotResultAll <- renderPlotly({
-    createTimeSeriesResult(
-      reactiveSubject(),
+    createTimeSeriesResult(reactiveSubject(),
       subName = input$subCompareAll,
       subAll = input$subByAll,
       resAll = input$resByAll
     )
   })
 
+
   ## Reactive and output for A level subject by sex ###########
+
 
   reactiveSubjectFm <- reactive({
     subjNameFm <- subjectBySex # dfMs
@@ -592,23 +604,20 @@ server <- function(input, output, session) {
       subjNameFm,
       subject_name == input$subjectFm & # subjectMs
 
-        between(
-          year,
-          as.numeric(input$year_start_fm),
-          as.numeric(input$year_end_fm)
-        )
+        between(year, as.numeric(input$year_start_fm), as.numeric(input$year_end_fm))
     )
 
     subjNameFm
   })
 
   output$plotSubjectFm <- renderPlotly({
-    createTimeSeriesSubjectFm(reactiveSubjectFm(), subByFm = input$subjectFm)
+    createTimeSeriesSubjectFm(reactiveSubjectFm(),
+      subByFm = input$subjectFm
+    )
   })
 
   output$plotResultFm <- renderPlotly({
-    createTimeSeriesResultFm(
-      reactiveSubjectFm(),
+    createTimeSeriesResultFm(reactiveSubjectFm(),
       resByFm = input$resByFm,
       subByFm = input$subjectFm
     )
@@ -618,15 +627,9 @@ server <- function(input, output, session) {
   #                                                   choices = seq(ifelse(input$year_start_fm == latest_year, latest_year, as.numeric(input$year_start_fm)), latest_year, 1),
   #                                                   selected = input$year_end_fm) })
   observeEvent(input$year_end_fm, {
-    updateSelectInput(
-      session,
-      "year_start_fm",
+    updateSelectInput(session, "year_start_fm",
       label = NULL,
-      choices = seq(
-        1996,
-        ifelse(input$year_end_fm == 1996, 1996, as.integer(2020)),
-        1
-      ),
+      choices = seq(1996, ifelse(input$year_end_fm == 1996, 1996, as.integer(2020)), 1),
       selected = input$year_start_fm
     )
   })
@@ -638,7 +641,9 @@ server <- function(input, output, session) {
     updateSelectInput(session, "resByFm", selected = "A*-A")
   })
 
+
   # Text output for subject entries and results
+
 
   output$textSubAll <- renderText({
     val <- glue::glue_collapse(input$subCompareAll, ", ", last = " and ")
@@ -646,16 +651,9 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end, collapse = ", ")
     val3 <- paste(input$subByAll, collapse = ",")
 
-    paste(
-      "The line chart shows the A level exam entries for ",
-      val,
-      "from  ",
-      val1,
-      " for ",
-      val3,
-      " in England. "
-    )
+    paste("The line chart shows the A level exam entries for ", val, "from  ", val1, " for ", val3, " in England. ")
   })
+
 
   output$textSubResultAll <- renderText({
     val <- glue::glue_collapse(input$subCompareAll, ", ", last = " and ")
@@ -663,16 +661,12 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end, collapse = ", ")
     val3 <- paste(input$subByAll, collapse = ",")
     paste(
-      "The line chart shows the A level cumulative percentage grades for",
-      val,
-      "\n from ",
-      val1,
-      " for ",
-      val3,
-      " in England.   The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
+      "The line chart shows the A level cumulative percentage grades for", val, "\n from ", val1, " for ",
+      val3, " in England.   The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
           awarded in 2019/20 and 2020/21 respectively."
     )
   })
+
 
   output$textSubFm <- renderText({
     val <- paste(input$subjectFm, collapse = ",")
@@ -680,13 +674,11 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end_fm, collapse = ", ")
 
     paste(
-      "The line chart shows the A level  exam entries on ",
-      val,
-      " from ",
-      val1,
+      "The line chart shows the A level  exam entries on ", val, " from ", val1,
       " for female, male and all students in England. "
     )
   })
+
 
   output$textResFm <- renderText({
     val <- paste(input$subjectFm, collapse = ", ")
@@ -694,31 +686,24 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end_fm, collapse = ", ")
 
     paste(
-      "The line chart shows the A level cumulative percentage grades on ",
-      val,
-      "\n from ",
-      val1,
+      "The line chart shows the A level cumulative percentage grades on ", val, "\n from ", val1,
       " for female, male and all students in England.  The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
           awarded in 2019/20 and 2020/21 respectively."
     )
   })
+
 
   # Download selected subjects
 
   selectedSubAll <- reactive({
     subjName <- subjectByAll %>%
       select(
-        year,
-        time_period,
-        subject_name,
-        characteristic_value,
-        entry_count,
-        version
+        year, time_period, subject_name,
+        characteristic_value, entry_count, version
       )
     subjName <- subset(
       subjName,
-      subject_name %in%
-        input$subCompareAll &
+      subject_name %in% input$subCompareAll &
         characteristic_value == input$subByAll &
         between(year, as.numeric(input$year_start), as.numeric(input$year_end))
     )
@@ -734,33 +719,26 @@ server <- function(input, output, session) {
     }
   )
 
+
   # Download selected subjects and all cumulative grades
 
   selectedResAll <- reactive({
     subjName <- subjectByAll %>%
       select(
-        year,
-        time_period,
-        subject_name,
-        characteristic_value,
-        entry_count,
-        `A*-A`,
-        `A*-B`,
-        `A*-C`,
-        `A*-D`,
-        `A*-E`,
-        version
+        year, time_period, subject_name,
+        characteristic_value, entry_count, `A*-A`, `A*-B`,
+        `A*-C`, `A*-D`, `A*-E`, version
       )
     subjName <- subset(
       subjName,
-      subject_name %in%
-        input$subCompareAll &
+      subject_name %in% input$subCompareAll &
         characteristic_value == input$subByAll &
         between(year, as.numeric(input$year_start), as.numeric(input$year_end))
     )
 
     subjName
   })
+
 
   output$downloadResAll <- downloadHandler(
     filename = "aleve_subject_result_data.csv",
@@ -770,6 +748,7 @@ server <- function(input, output, session) {
     }
   )
 
+
   output$downloadSubjectAll <- downloadHandler(
     filename = "alevel_subject_all_data.csv",
     content = function(file) {
@@ -777,6 +756,7 @@ server <- function(input, output, session) {
       write.csv(data, file, row.names = FALSE)
     }
   )
+
 
   # Download  subject entry and cumulative result for all subject from top panel
 
@@ -796,26 +776,19 @@ server <- function(input, output, session) {
     }
   )
 
+
   # Download  selected subject entries by value
   selectedSubFm <- reactive({
     subjName <- subjectBySex %>%
       select(
-        year,
-        time_period,
-        subject_name,
-        characteristic_value,
-        entry_count,
-        version
+        year, time_period, subject_name,
+        characteristic_value, entry_count, version
       )
     subjName <- subset(
       subjName,
       subject_name == input$subjectFm &
 
-        between(
-          year,
-          as.numeric(input$year_start_fm),
-          as.numeric(input$year_end_fm)
-        )
+        between(year, as.numeric(input$year_start_fm), as.numeric(input$year_end_fm))
     )
 
     subjName
@@ -829,37 +802,27 @@ server <- function(input, output, session) {
     }
   )
 
+
   # Download selected subject entry and all cumulative result for sex
 
   selectedResFm <- reactive({
     subjName <- subjectBySex %>%
       select(
-        year,
-        time_period,
-        subject_name,
-        characteristic_value,
-        entry_count,
-        `A*-A`,
-        `A*-B`,
-        `A*-C`,
-        `A*-D`,
-        `A*-E`,
-        version
+        year, time_period, subject_name,
+        characteristic_value, entry_count, `A*-A`, `A*-B`,
+        `A*-C`, `A*-D`, `A*-E`, version
       )
 
     subjName <- subset(
       subjName,
       subject_name == input$subjectFm &
 
-        between(
-          year,
-          as.numeric(input$year_start_fm),
-          as.numeric(input$year_end_fm)
-        )
+        between(year, as.numeric(input$year_start_fm), as.numeric(input$year_end_fm))
     )
 
     subjName
   })
+
 
   output$downloadResFm <- downloadHandler(
     filename = "alevel_subject_and_allresults.csv",
@@ -868,6 +831,7 @@ server <- function(input, output, session) {
       write.csv(data, file, row.names = FALSE)
     }
   )
+
 
   # Data table for headline page
   output$tabApsAll <- renderDataTable({
@@ -888,29 +852,28 @@ server <- function(input, output, session) {
           Version = version
         ),
       extens = "Buttons",
-      options = (list(
-        infor = F,
-        paging = F,
-        searching = F,
-        stripClasses = F,
-        lengthChange = F,
-        scrollY = "260px",
-        scrollX = T,
-        scrollCollapse = T,
-        dom = "Bfrtip",
-        buttons = (c("copy", "csv", "excel")),
-        class = "display"
+      options = (
+        list(
+          infor = F, paging = F,
+          searching = F,
+          stripClasses = F,
+          lengthChange = F,
+          scrollY = "260px",
+          scrollX = T,
+          scrollCollapse = T,
+          dom = "Bfrtip",
+          buttons = (c("copy", "csv", "excel")),
+          class = "display"
       )),
       rownames = FALSE
     )
   })
 
+
   output$resall <- renderDataTable({
-    datatable(
-      selected_subAll(),
+    datatable(selected_subAll(),
       options = list(
-        infor = T,
-        paging = F,
+        infor = T, paging = F,
         searching = F,
         stripClasses = F,
         lengthChange = F,
@@ -924,7 +887,9 @@ server <- function(input, output, session) {
     )
   })
 
+
   #######  Maths and science
+
 
   reactiveSubjectMs <- reactive({
     subjNameMs <- dfMs
@@ -933,33 +898,26 @@ server <- function(input, output, session) {
       subjNameMs,
       subject == input$subjectMs & # subjectMs
 
-        between(
-          year,
-          as.numeric(input$year_start_ms),
-          as.numeric(input$year_end_ms)
-        )
+        between(year, as.numeric(input$year_start_ms), as.numeric(input$year_end_ms))
     )
 
     subjNameMs
   })
 
   output$plotSubjectMs <- renderPlotly({
-    createTimeSeriesSubjectMs(reactiveSubjectMs(), subByMs = input$subjectMs)
+    createTimeSeriesSubjectMs(reactiveSubjectMs(),
+      subByMs = input$subjectMs
+    )
   })
+
 
   # observeEvent(input$year_start_fm, {updateSelectInput(session, "year_end_fm", label = NULL,
   #                                                   choices = seq(ifelse(input$year_start_fm == latest_year, latest_year, as.numeric(input$year_start_fm)), latest_year, 1),
   #                                                   selected = input$year_end_fm) })
   observeEvent(input$year_end_ms, {
-    updateSelectInput(
-      session,
-      "year_start_ms",
+    updateSelectInput(session, "year_start_ms",
       label = NULL,
-      choices = seq(
-        2010,
-        ifelse(input$year_end_ms == 2010, 2010, as.integer(2020)),
-        1
-      ),
+      choices = seq(2010, ifelse(input$year_end_ms == 2010, 2010, as.integer(2020)), 1),
       selected = input$year_start_ms
     )
   })
@@ -970,19 +928,17 @@ server <- function(input, output, session) {
     updateSelectInput(session, "year_end_ms", selected = latest_year)
   })
 
+
   output$textSubMs <- renderText({
     val <- paste(input$subjectMs, collapse = ",")
     val1 <- paste(input$year_start_ms, collapse = ", ")
     val2 <- paste(input$year_end_ms, collapse = ", ")
 
     paste(
-      "The line chart shows the proportion of A level students that entered   ",
-      val,
-      " from ",
-      val1,
-      "for female, male and all students in England."
+      "The line chart shows the proportion of A level students that entered   ", val, " from ", val1, "for female, male and all students in England."
     )
   })
+
 
   #
   # output$textResFm <- renderText({
@@ -998,9 +954,12 @@ server <- function(input, output, session) {
   # })
   #
 
+
   # Download selected subjects
 
+
   # Download  subject entry and cumulative result for all subject from top panel
+
 
   output$downloadDataSubjectMs <- downloadHandler(
     filename = "alevel_maths_science_data.csv",
@@ -1010,31 +969,24 @@ server <- function(input, output, session) {
     }
   )
 
+
   # Download  selected subject entries by sex
   selectedSubMs <- reactive({
     subjName <- dfMs %>%
       select(
-        year,
-        time_period,
-        subject,
-        characteristic_value,
-        percent_entered,
-        number_of_students,
-        version
+        year, time_period, subject,
+        characteristic_value, percent_entered, number_of_students, version
       )
     subjName <- subset(
       subjName,
       subject_name == input$subjectMs &
 
-        between(
-          year,
-          as.numeric(input$year_start_ms),
-          as.numeric(input$year_end_ms)
-        )
+        between(year, as.numeric(input$year_start_ms), as.numeric(input$year_end_ms))
     )
 
     subjName
   })
+
 
   selectedMsData <- reactive({
     # msData <- dfMs
@@ -1054,26 +1006,27 @@ server <- function(input, output, session) {
       )
   })
 
+
   output$tabMs <- renderDataTable({
-    datatable(
-      selectedMsData(),
+    datatable(selectedMsData(),
       extens = "Buttons",
-      options = (list(
-        infor = F,
-        paging = F,
-        searching = F,
-        stripClasses = F,
-        lengthChange = F,
-        scrollY = "260px",
-        scrollX = T,
-        scrollCollapse = T,
-        dom = "Bfrtip",
-        buttons = (c("copy", "csv", "excel")),
-        class = "display"
+      options = (
+        list(
+          infor = F, paging = F,
+          searching = F,
+          stripClasses = F,
+          lengthChange = F,
+          scrollY = "260px",
+          scrollX = T,
+          scrollCollapse = T,
+          dom = "Bfrtip",
+          buttons = (c("copy", "csv", "excel")),
+          class = "display"
       )),
       rownames = FALSE
     )
   })
+
 
   #
   #
@@ -1094,14 +1047,17 @@ server <- function(input, output, session) {
   #   )
   # })
 
+
   # Navigation with links
   observeEvent(input$link_to_headline_tab, {
     updateTabsetPanel(session, "navlistPanel", selected = "dashboard")
   })
 
+
   observeEvent(input$link_to_alevelFmSubject_tab, {
     updateTabsetPanel(session, "navlistPanel", selected = "dashboard_fm")
   })
+
 
   observeEvent(input$link_to_alevelAllSubject_tab, {
     updateTabsetPanel(session, "navlistPanel", selected = "dashboard_alse")
@@ -1110,6 +1066,7 @@ server <- function(input, output, session) {
   observeEvent(input$link_to_alevelMathsScience_tab, {
     updateTabsetPanel(session, "navlistPanel", selected = "dashboard_ms")
   })
+
 
   # Download the underlying data button
   output$downloadDataAps <- downloadHandler(
@@ -1128,11 +1085,138 @@ server <- function(input, output, session) {
     if (input$tabsetpanels == "headline") {
       paste0("Click to download full dataset") # )input$downloadDataAps)
     } else {
-      paste0(
-        "Click to select further options and up to 4 institution types from the drop-down menu"
-      ) # input$alevelInstitute, )
+      paste0("Click to select further options and up to 4 institution types from the drop-down menu") # input$alevelInstitute, )
     }
   })
+
+  # wrap a plot with a larger spinner
+
+  # # Wrap a plot with a larger spinner
+  # with_gov_spinner <- function(
+  #   ui_element,
+  #   spinner_type = 6,
+  #   size = 1,
+  #   color = "#1d70b8"
+  # ) {
+  #   shinycssloaders::withSpinner(
+  #     ui_element,
+  #     type = spinner_type,
+  #     color = color,
+  #     size = size,
+  #     proxy.height = paste0(250 * size, "px")
+  #   )
+  # }
+
+  # footer links -----------------------
+  # shiny::observeEvent(input$accessibility_statement, {
+  #   nav_select(
+  #     "pages",
+  #     "a11y_panel"
+  #   )
+  # })
+  #
+  # shiny::observeEvent(input$use_of_cookies, {
+  #   nav_select(
+  #     "pages",
+  #     "cookies_panel_ui"
+  #   )
+  # })
+  #
+  # shiny::observeEvent(input$support_and_feedback, {
+  #   nav_select(
+  #     "pages",
+  #     "support_panel_ui"
+  #   )
+  # })
+  #
+  # # ## Back links to main dashboard ---------------------------------------------
+  # observeEvent(
+  #   input$support_to_dashboard |
+  #     input$cookies_to_dashboard |
+  #     input$accessibility_to_dashboard,
+  #   {
+  #     nav_select("pages", "main_panel")
+  #   }
+  # )
+  # #
+  # shiny::observeEvent(input$privacy_notice, {
+  #   showModal(modalDialog(
+  #     external_link(
+  #       "https://www.gov.uk/government/organisations/department-for-education/about/personal-information-charter", # nolint
+  #       "Privacy notice",
+  #       add_warning = FALSE
+  #     ),
+  #     easyClose = TRUE,
+  #     footer = NULL
+  #   ))
+  #
+  #   # JavaScript to auto-click the link and close the modal
+  #   shinyjs::runjs(
+  #     "
+  #     setTimeout(function() {
+  #       var link = document.querySelector('.modal a');
+  #       if (link) {
+  #         link.click();
+  #         setTimeout(function() {
+  #           $('.modal').modal('hide');
+  #         }, 20); // Extra delay to avoid any race conditions
+  #       }
+  #     }, 400);
+  #   "
+  #   )
+  # })
+  #
+  # shiny::observeEvent(input$external_link, {
+  #   showModal(modalDialog(
+  #     external_link(
+  #       "https://shiny.posit.co/",
+  #       "External Link",
+  #       add_warning = FALSE
+  #     ),
+  #     easyClose = TRUE,
+  #     footer = NULL
+  #   ))
+  #
+  #   # JavaScript to auto-click the link and close the modal
+  #   shinyjs::runjs(
+  #     "
+  #     setTimeout(function() {
+  #       var link = document.querySelector('.modal a');
+  #       if (link) {
+  #         link.click();
+  #         setTimeout(function() {
+  #           $('.modal').modal('hide');
+  #         }, 20); // Extra delay to avoid any race conditions
+  #       }
+  #     }, 400);
+  #   "
+  #   )
+
+  # footer links -----------------------
+  shiny::observeEvent(input$accessibility_statement, {
+    nav_select(
+      "pages",
+      "a11y_panel"
+    )
+  })
+
+  shiny::observeEvent(input$support_and_feedback, {
+    nav_select(
+      "pages",
+      "support_panel_ui"
+    )
+  })
+
+  ## Back links to main dashboard ---------------------------------------------
+  observeEvent(
+    input$support_to_dashboard |
+      input$cookies_to_dashboard |
+      input$accessibility_to_dashboard,
+    {
+      nav_select("pages", "main_panel")
+    }
+  )
+
 
   # Stop app ---------------------------------------------------------------------------------
 

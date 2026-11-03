@@ -1,7 +1,7 @@
 # ---------------------------------------------------------
 # This is the global file.
 # Use it to store functions, library calls, source files etc.
-# Moving these out of the server file and into here improves performance
+
 # The global file is run only once when the app launches and stays consistent across users
 # whereas the server and UI files are constantly interacting and responsive to user input.
 #
@@ -9,119 +9,96 @@
 
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
+# Core shiny and R packages
 shhh(library(shiny))
-# shhh(library(shinya11y))
-shhh(library(shinyjs))
-# shhh(library(tools))
-shhh(library(testthat))
-shhh(library(shinytest2))
-shhh(library(shinydashboard))
-shhh(library(shinytitle))
-shhh(library(shinyWidgets))
+shhh(library(bslib))
+shhh(library(rstudioapi))
+# Custom packages
+shhh(library(dfeR))
+shhh(library(dfeshiny))
 shhh(library(shinyGovstyle))
-shhh(library(shinycssloaders))
-shhh(library(shinyBS))
+# Data and string manipulation
+shhh(library(readr))
 shhh(library(dplyr))
-shhh(library(tidyr))
+shhh(library(stringr))
+
+# Creating charts and tables
 shhh(library(ggplot2))
+shhh(library(ggiraph))
+shhh(library(sf))
 shhh(library(plotly))
 shhh(library(DT))
-shhh(library(xfun))
+shhh(library(tidyr))
 shhh(library(hrbrthemes))
 shhh(library(forcats))
 shhh(library(patchwork))
-shhh(library(readr))
-shhh(library(dfeshiny))
+shhh(library(htmltools))
+shhh(library(reactable))
+shhh(library(svglite))
+shhh(library(afcharts))
+shhh(library(ggrepel))
+shhh(library(showtext))
+shhh(library(openxlsx))
 
 
+# shiny extensions
+shhh(library(shinyjs))
+shhh(library(shinytitle))
+shhh(library(xfun))
+shhh(library(shinyWidgets))
+shhh(library(shinycssloaders))
+shhh(library(shinyBS))
+
+# Dependencies needed for testing or CI but not for the app -------------------
+# Including them here keeps them in renv but avoids the app needlessly loading
+# them, saving on load time.
+if (FALSE) {
+  shhh(library(rsconnect))
+  shhh(library(shinytest2))
+  shhh(library(chromote))
+  shhh(library(testthat))
+}
+
+
+# Source scripts -------------------------------------------------------------------------
+# Source script for loading in data
+
+source("R/read_data.R")
+
+# Source custom function script
+
+source("R/helper_functions.R")
 # Functions ---------------------------------------------------------------------------------
 
-# Here's an example function for simplifying the code needed to commas separate numbers:
-
-# cs_num ----------------------------------------------------------------------------
-# Comma separating function
-
-cs_num <- function(value) {
-  format(value, big.mark = ",", trim = TRUE)
-}
-# Code to convert data to numeric
-to_numeric <- function(df, variables) {
-  for (variable in variables) {
-    df[[variable]] <- (suppressWarnings(as.numeric(df[[variable]])))
-  }
-  return(df)
-}
-
-# Code to convert data to factor
-to_factor <- function(df, variables) {
-  for (variable in variables) {
-    df[[variable]] <- (suppressWarnings(as.factor(df[[variable]])))
-  }
-  return(df)
-}
-
-# Code to convert first character to capital letter
-first_xter_up <- function(x) {
-  x <- tolower(x)
-  substr(x, 1, 1) <- toupper(substr(x, 1, 1))
-  x
-}
-
-
-spinner <- function(output) {
-  shinycssloaders::withSpinner(
-    output,
-    size = getOption("spinner.size", default = 1)
-  )
-}
-
-
-# round data
-round2 <- function(x, n) {
-  posneg <- sign(x)
-  z <- abs(x) * 10^n
-  z <- z + 0.5
-  z <- trunc(z)
-  z <- z / 10^n
-  z * posneg
-}
-
-
-# Source scripts ---------------------------------------------------------------------------------
-
-# Source any scripts here. Scripts may be needed to process data before it gets to the server file.
-# It's best to do this here instead of the server file, to improve performance.
-
-# source("R/filename.r")
 
 # appLoadingCSS ----------------------------------------------------------------------------
 # Set up loading screen
 
-appLoadingCSS <- "
-#loading-content {
-  position: absolute;
-  background: #000000;
-  opacity: 0.9;
-  z-index: 100;
-  left: 0;
-  right: 0;
-  height: 100%;
-  text-align: center;
-  color: #FFFFFF;
-}
-"
+# appLoadingCSS <- "
+# #loading-content {
+#   position: absolute;
+#   background: #000000;
+#   opacity: 0.9;
+#   z-index: 100;
+#   left: 0;
+#   right: 0;
+#   height: 100%;
+#   text-align: center;
+#   color: #FFFFFF;
+# }
+# "
 
-site_title <- "16 to 18 time series attainment and single year entry"
+site_title <- "16 to 19 time series attainment and single year entry"
 site_primary <- "https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries/"
 site_overflow <- "https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries-overflow/"
 sites_list <- c(site_primary, site_overflow) # We can add further mirrors where necessary. Each one can generally handle about 2,500 users simultaneously
-ees_pub_name <- "A level and other 16 to 18 results" # Update this with your parent publication name (e.g. the EES publication)
+ees_pub_name <- "A level and other 16 to 19 results" # Update this with your parent publication name (e.g. the EES publication)
 ees_publication <- "https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results" # Update with parent publication link
 google_analytics_key <- "C9DQ5CPBCR"
-source("R/read_data.R")
 
 
-############################  Read A level subject entries - single academic year ####################################################
+
+## --------- Read A level subject entries - single academic year -------------------------------------------
 # Read in A level data for subject entries and results
 
 #  The latest year is mainly used by A level subject entries and Maths and Science to allow selection of year
@@ -226,10 +203,9 @@ dfAlevelAps <- data %>%
     version
   ) %>%
   mutate(
-    establishment_type = case_match(
+    establishment_type = recode(
       establishment_type,
-      "All state-funded schools and colleges" ~ "All state-funded",
-      .default = establishment_type
+      "All state-funded schools and colleges" = "All state-funded"
     )
   ) %>%
   mutate(
@@ -250,10 +226,9 @@ dfAlevelAps <- data %>%
 
 dfApsSexGap <- read_alevel_aps_sexgap_data() %>%
   mutate(
-    establishment_type = case_match(
+    establishment_type = recode(
       establishment_type,
-      "All state-funded schools and colleges" ~ "All state-funded",
-      .default = establishment_type
+      "All state-funded schools and colleges" = "All state-funded"
     )
   )
 
@@ -301,10 +276,9 @@ headline_download <- headline_download %>%
 
 dfAttainmentRaw <- read_all_attainment_data() %>%
   mutate(
-    establishment_type = case_match(
+    establishment_type = recode(
       establishment_type,
-      "All state-funded schools and colleges" ~ "All state-funded",
-      .default = establishment_type
+      "All state-funded schools and colleges" = "All state-funded"
     )
   )
 

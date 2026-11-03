@@ -7,7 +7,7 @@ a11y_panel <- function() {
           width = 12,
           h1("Accessibility statement"),
           br(
-            "This accessibility statement applies to the 16 to 18  time series attainment and single year entries.
+            "This accessibility statement applies to the 16 to 19  time series attainment and single year entries.
             This application is run by the Department for Education. We want as many people as possible to be able to use this application,
             and have actively developed this application with accessibilty in mind."
           ),
@@ -70,7 +70,7 @@ a11y_panel <- function() {
   )
 }
 
-support_links <- function() {
+support_panel <- function() {
   tabPanel(
     "Support and feedback",
     gov_main_layout(
