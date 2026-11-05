@@ -1,0 +1,2 @@
+dashboard_name: "ks5-timeseries-attainment-and-single-year-entries"
+deploy_target: "shinyapps"

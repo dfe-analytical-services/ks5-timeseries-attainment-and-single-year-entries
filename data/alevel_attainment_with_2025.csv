@@ -1,61 +1,112 @@
 time_period,time_identifier,geographic_level,country_code,country_name,version,establishment_type,establishment_type_group,characteristic_sex,number_of_students,aps_per_entry,aps_per_entry_2013_2015,aps_per_entry_grade,aps_per_entry_grade_2013_2015,year_2013_2015,year
-202324,Academic year,National,E92000001,England,Provisional,All FE sector colleges,All FE sector colleges,Female,35863,33.0646,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All independent schools,All independent schools,Female,18658,43.3592,NA,B+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All schools,All schools,Female,125481,36.8277,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All institutions,All Institutions,Female,161094,36.0529,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All state-funded schools,All state-funded schools,Female,106803,35.5823,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All state-funded schools and colleges,All state-funded,Female,142488,34.9894,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Converter academies - mainstream,All state-funded schools,Female,74258,36.2259,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Free schools,All state-funded schools,Female,2047,33.4817,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Free schools 16-19,All state-funded schools,Female,3642,37.7422,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Independent schools,All independent schools,Female,18608,43.3807,NA,B+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Independent special schools,All independent schools,Female,50,28.8272,NA,C, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,LA maintained mainstream schools,All state-funded schools,Female,15605,34.9721,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Other FE sector colleges,All FE sector colleges,Female,15708,29.7601,NA,C, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Sixth form colleges,All FE sector colleges,Female,20155,35.5485,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Sponsored academies - mainstream,All state-funded schools,Female,10344,31.6181,NA,C, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Studio schools,All state-funded schools,Female,90,30.962,NA,C, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,University technical colleges (UTCs),All state-funded schools,Female,554,25.9699,NA,C-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All FE sector colleges,All FE sector colleges,Male,24501,31.6369,NA,C, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All independent schools,All independent schools,Male,18412,42.2664,NA,B+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All schools,All schools,Male,110704,35.4873,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All institutions,All Institutions,Male,135009,34.8342,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All state-funded schools,All state-funded schools,Male,92265,34.0363,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All state-funded schools and colleges,All state-funded,Male,116623,33.5603,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Converter academies - mainstream,All state-funded schools,Male,63525,34.667,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Free schools,All state-funded schools,Male,2314,32.506,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Free schools 16-19,All state-funded schools,Male,2810,37.1074,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Independent schools,All independent schools,Male,18342,42.3102,NA,B+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Independent special schools,All independent schools,Male,70,22.4686,NA,D+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,LA maintained mainstream schools,All state-funded schools,Male,13685,33.3693,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Other FE sector colleges,All FE sector colleges,Male,9896,28.1396,NA,C-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Sixth form colleges,All FE sector colleges,Male,14605,33.9214,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Sponsored academies - mainstream,All state-funded schools,Male,8685,30.0849,NA,C, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Studio schools,All state-funded schools,Male,120,27.8236,NA,C-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,University technical colleges (UTCs),All state-funded schools,Male,949,26.3698,NA,C-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All FE sector colleges,All FE sector colleges,All students,60366,32.4739,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All independent schools,All independent schools,All students,37099,42.8187,NA,B+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All schools,All schools,All students,236215,36.1957,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All institutions,All Institutions,All students,296135,35.4919,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All state-funded schools,All state-funded schools,All students,199069,34.8595,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,All state-funded schools and colleges,All state-funded,All students,259114,34.3381,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Converter academies - mainstream,All state-funded schools,All students,137784,35.5003,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Free schools,All state-funded schools,All students,4361,32.9631,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Free schools 16-19,All state-funded schools,All students,6452,37.4553,NA,B-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Independent schools,All independent schools,All students,36979,42.8514,NA,B+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Independent special schools,All independent schools,All students,120,25.0374,NA,C-, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,LA maintained mainstream schools,All state-funded schools,All students,29290,34.2158,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Other FE sector colleges,All FE sector colleges,All students,25605,29.1219,NA,C, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Sixth form colleges,All FE sector colleges,All students,34761,34.8523,NA,C+, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Sponsored academies - mainstream,All state-funded schools,All students,19029,30.9193,NA,C, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,Studio schools,All state-funded schools,All students,210,29.1595,NA,C, ,NA,2024
-202324,Academic year,National,E92000001,England,Provisional,University technical colleges (UTCs),All state-funded schools,All students,1503,26.2192,NA,C-, ,NA,2024
+202425,Academic year,National,E92000001,England,Revised,All FE sector colleges,All FE sector colleges,Female,33617,33.5911,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All independent schools,All independent schools,Female,18435,43.632,NA,B+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All schools,All schools,Female,128870,37.1767,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,Female,162235,36.4909,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,Female,110414,35.9904,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,Female,143837,35.4677,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,Female,77931,36.5379,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,Female,2582,35.2586,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,Female,3743,38.1043,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Independent schools,All independent schools,Female,18370,43.6585,NA,B+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Independent special schools,All independent schools,Female,65,26.7456,NA,C-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,LA maintained mainstream schools,All state-funded schools,Female,14699,35.4567,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Other FE sector colleges,All FE sector colleges,Female,14977,30.1585,NA,C, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Sixth form colleges,All FE sector colleges,Female,18640,36.2357,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Sponsored academies - mainstream,All state-funded schools,Female,10425,32.0792,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Studio schools,All state-funded schools,Female,134,31.5146,NA,C, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,University technical colleges (UTCs),All state-funded schools,Female,619,27.9083,NA,C-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All FE sector colleges,All FE sector colleges,Male,23514,32.1839,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All independent schools,All independent schools,Male,18904,42.5298,NA,B+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All schools,All schools,Male,113197,36.273,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,Male,136464,35.6211,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,Male,94271,34.9248,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,Male,117608,34.4132,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,Male,65570,35.433,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,Male,2764,33.7003,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,Male,3151,38.3691,NA,B, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Independent schools,All independent schools,Male,18815,42.5767,NA,B+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Independent special schools,All independent schools,Male,89,26.4688,NA,C-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,LA maintained mainstream schools,All state-funded schools,Male,12724,34.6771,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Other FE sector colleges,All FE sector colleges,Male,9510,28.3914,NA,C, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Sixth form colleges,All FE sector colleges,Male,14004,34.6722,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Sponsored academies - mainstream,All state-funded schools,Male,8771,30.7844,NA,C, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Studio schools,All state-funded schools,Male,103,31.2679,NA,C, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,University technical colleges (UTCs),All state-funded schools,Male,986,26.5556,NA,C-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All FE sector colleges,All FE sector colleges,All students,57132,33.0027,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All independent schools,All independent schools,All students,37351,43.0702,NA,B+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All schools,All schools,All students,242079,36.7497,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,All students,298713,36.0884,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,All students,204685,35.4947,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,All students,261447,34.9873,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,All students,143501,36.0279,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,All students,5346,34.4469,NA,C+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,All students,6894,38.2289,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Independent schools,All independent schools,All students,37196,43.1072,NA,B+, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Independent special schools,All independent schools,All students,155,26.7546,NA,C-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,LA maintained mainstream schools,All state-funded schools,All students,27423,35.0899,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Other FE sector colleges,All FE sector colleges,All students,24488,29.4597,NA,C, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Sixth form colleges,All FE sector colleges,All students,32644,35.5566,NA,B-, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Sponsored academies - mainstream,All state-funded schools,All students,19196,31.486,NA,C, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,Studio schools,All state-funded schools,All students,237,31.4079,NA,C, ,NA,2025
+202425,Academic year,National,E92000001,England,Revised,University technical colleges (UTCs),All state-funded schools,All students,1605,27.0987,NA,C-, ,NA,2025
+202324,Academic year,National,E92000001,England,Revised,All FE sector colleges,All FE sector colleges,Female,36050,33.1105,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All independent schools,All independent schools,Female,18550,43.615,NA,B+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All schools,All schools,Female,126856,36.8945,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,Female,162680,36.1168,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,Female,108285,35.6256,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,Female,144166,35.035,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,Female,75106,36.2781,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,Female,2056,33.5206,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,Female,3688,37.785,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Independent schools,All independent schools,Female,18500,43.6368,NA,B+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Independent special schools,All independent schools,Female,50,28.8125,NA,C, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,LA maintained mainstream schools,All state-funded schools,Female,15803,35.0393,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Other FE sector colleges,All FE sector colleges,Female,15714,29.783,NA,C, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Sixth form colleges,All FE sector colleges,Female,20336,35.59,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Sponsored academies - mainstream,All state-funded schools,Female,10689,31.5898,NA,C, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Studio schools,All state-funded schools,Female,97,30.9828,NA,C, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,University technical colleges (UTCs),All state-funded schools,Female,574,26.0186,NA,C-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All FE sector colleges,All FE sector colleges,Male,24741,31.6822,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All independent schools,All independent schools,Male,18389,42.4559,NA,B+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All schools,All schools,Male,112065,35.5309,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,Male,136623,34.8784,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,Male,93648,34.0613,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,Male,118252,33.5901,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,Male,64335,34.7047,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,Male,2330,32.5694,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,Male,2827,37.1644,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Independent schools,All independent schools,Male,18316,42.5001,NA,B+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Independent special schools,All independent schools,Male,73,22.9218,NA,D+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,LA maintained mainstream schools,All state-funded schools,Male,13906,33.4234,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Other FE sector colleges,All FE sector colleges,Male,9945,28.1736,NA,C-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Sixth form colleges,All FE sector colleges,Male,14796,33.9583,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Sponsored academies - mainstream,All state-funded schools,Male,8963,29.9906,NA,C, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Studio schools,All state-funded schools,Male,126,27.578,NA,C-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,University technical colleges (UTCs),All state-funded schools,Male,982,26.2269,NA,C-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All FE sector colleges,All FE sector colleges,All students,60793,32.5188,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All independent schools,All independent schools,All students,36968,43.0409,NA,B+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All schools,All schools,All students,238951,36.2514,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,All students,299335,35.5464,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,All students,201934,34.8941,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,All students,262421,34.3762,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,All students,139442,35.5457,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,All students,4386,33.015,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,All students,6515,37.505,NA,B-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Independent schools,All independent schools,All students,36845,43.074,NA,B+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Independent special schools,All independent schools,All students,123,25.2605,NA,C-, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,LA maintained mainstream schools,All state-funded schools,All students,29709,34.2761,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Other FE sector colleges,All FE sector colleges,All students,25660,29.148,NA,C, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Sixth form colleges,All FE sector colleges,All students,35133,34.8914,NA,C+, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Sponsored academies - mainstream,All state-funded schools,All students,19652,30.8613,NA,C, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,Studio schools,All state-funded schools,All students,223,29.0336,NA,C, ,NA,2024
+202324,Academic year,National,E92000001,England,Revised,University technical colleges (UTCs),All state-funded schools,All students,1556,26.1483,NA,C-, ,NA,2024
 202223,Academic year,National,E92000001,England,Revised,All FE sector colleges,All FE sector colleges,Female,34001,33.0556,NA,C+, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,All independent schools,All independent schools,Female,18163,43.052,NA,B+, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,All schools,All schools,Female,125143,36.5325,NA,B-, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,Female,159064,35.8306,NA,B-, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,Female,106957,35.3155,NA,B-, ,NA,2023
-202223,Academic year,National,E92000001,England,Revised,All state-funded schools and colleges,All state-funded,Female,140912,34.7939,NA,C+, ,NA,2023
+202223,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,Female,140912,34.7939,NA,C+, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,Female,73561,35.9947,NA,B-, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,Female,1833,33.2421,NA,C+, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,Female,3178,36.8112,NA,B-, ,NA,2023
@@ -72,7 +123,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,version,e
 202223,Academic year,National,E92000001,England,Revised,All schools,All schools,Male,109744,35.2629,NA,B-, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,Male,133134,34.6502,NA,C+, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,Male,91655,33.83,NA,C+, ,NA,2023
-202223,Academic year,National,E92000001,England,Revised,All state-funded schools and colleges,All state-funded,Male,115079,33.3942,NA,C+, ,NA,2023
+202223,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,Male,115079,33.3942,NA,C+, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,Male,62437,34.5562,NA,C+, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,Male,1952,31.6873,NA,C+, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,Male,2349,36.85,NA,B-, ,NA,2023
@@ -89,7 +140,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,version,e
 202223,Academic year,National,E92000001,England,Revised,All schools,All schools,All students,234890,35.9367,NA,B-, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,All students,292201,35.289,NA,B-, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,All students,198613,34.6264,NA,C+, ,NA,2023
-202223,Academic year,National,E92000001,England,Revised,All state-funded schools and colleges,All state-funded,All students,255992,34.1598,NA,C+, ,NA,2023
+202223,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,All students,255992,34.1598,NA,C+, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,All students,135998,35.33,NA,B-, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,All students,3785,32.4468,NA,C+, ,NA,2023
 202223,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,All students,5527,36.8283,NA,B-, ,NA,2023
@@ -106,7 +157,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,version,e
 202122,Academic year,National,E92000001,England,Revised,All schools,All schools,Female,123695,40.145,NA,B, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,Female,156137,39.5202,NA,B, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,Female,106605,39.0472,NA,B, ,NA,2022
-202122,Academic year,National,E92000001,England,Revised,All state-funded schools and colleges,All state-funded,Female,139047,38.5856,NA,B, ,NA,2022
+202122,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,Female,139047,38.5856,NA,B, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,Female,73791,39.8071,NA,B, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,Female,1458,36.3657,NA,B-, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,Female,2961,40.075,NA,B, ,NA,2022
@@ -123,7 +174,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,version,e
 202122,Academic year,National,E92000001,England,Revised,All schools,All schools,Male,106217,38.6587,NA,B, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,Male,128240,38.0966,NA,B-, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,Male,88653,37.3755,NA,B-, ,NA,2022
-202122,Academic year,National,E92000001,England,Revised,All state-funded schools and colleges,All state-funded,Male,110676,36.9659,NA,B-, ,NA,2022
+202122,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,Male,110676,36.9659,NA,B-, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,Male,60663,38.1533,NA,B-, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,Male,1563,34.5317,NA,C+, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,Male,2178,39.937,NA,B, ,NA,2022
@@ -140,7 +191,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,version,e
 202122,Academic year,National,E92000001,England,Revised,All schools,All schools,All students,229915,39.4551,NA,B, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,All institutions,All Institutions,All students,284380,38.8739,NA,B, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,All state-funded schools,All state-funded schools,All students,195258,38.2834,NA,B-, ,NA,2022
-202122,Academic year,National,E92000001,England,Revised,All state-funded schools and colleges,All state-funded,All students,249723,37.8621,NA,B-, ,NA,2022
+202122,Academic year,National,E92000001,England,Revised,All state-funded,All state-funded,All students,249723,37.8621,NA,B-, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,Converter academies - mainstream,All state-funded schools,All students,134454,39.0556,NA,B, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,Free schools,All state-funded schools,All students,3021,35.4211,NA,B-, ,NA,2022
 202122,Academic year,National,E92000001,England,Revised,Free schools 16-19,All state-funded schools,All students,5139,40.0147,NA,B, ,NA,2022
@@ -157,7 +208,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,version,e
 202021,Academic year,National,E92000001,England,Final,All schools,All schools,Female,117932,43.3437,NA,B+, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,All institutions,All Institutions,Female,149730,42.5788,NA,B+, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,All state-funded schools,All state-funded schools,Female,100756,42.0083,NA,B+, ,NA,2021
-202021,Academic year,National,E92000001,England,Final,All state-funded schools and colleges,All state-funded,Female,132601,41.4497,NA,B, ,NA,2021
+202021,Academic year,National,E92000001,England,Final,All state-funded,All state-funded,Female,132601,41.4497,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,Converter academies - mainstream,All state-funded schools,Female,69017,42.4325,NA,B+, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,Free schools,All state-funded schools,Female,1350,41.5583,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,Free schools 16-19,All state-funded schools,Female,2321,42.863,NA,B+, ,NA,2021
@@ -174,7 +225,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,version,e
 202021,Academic year,National,E92000001,England,Final,All schools,All schools,Male,100066,41.2466,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,All institutions,All Institutions,Male,121740,40.546,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,All state-funded schools,All state-funded schools,Male,82587,39.7289,NA,B, ,NA,2021
-202021,Academic year,National,E92000001,England,Final,All state-funded schools and colleges,All state-funded,Male,104326,39.2162,NA,B, ,NA,2021
+202021,Academic year,National,E92000001,England,Final,All state-funded,All state-funded,Male,104326,39.2162,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,Converter academies - mainstream,All state-funded schools,Male,56519,40.0159,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,Free schools,All state-funded schools,Male,1278,39.9524,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,Free schools 16-19,All state-funded schools,Male,1828,42.3069,NA,B+, ,NA,2021
@@ -191,7 +242,7 @@ time_period,time_identifier,geographic_level,country_code,country_name,version,e
 202021,Academic year,National,E92000001,England,Final,All schools,All schools,All students,217999,42.3779,NA,B+, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,All institutions,All Institutions,All students,271471,41.6626,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,All state-funded schools,All state-funded schools,All students,183343,40.9747,NA,B, ,NA,2021
-202021,Academic year,National,E92000001,England,Final,All state-funded schools and colleges,All state-funded,All students,236927,40.4587,NA,B, ,NA,2021
+202021,Academic year,National,E92000001,England,Final,All state-funded,All state-funded,All students,236927,40.4587,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,Converter academies - mainstream,All state-funded schools,All students,125536,41.3369,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,Free schools,All state-funded schools,All students,2628,40.7731,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,Free schools 16-19,All state-funded schools,All students,4149,42.6105,NA,B+, ,NA,2021
@@ -203,57 +254,57 @@ time_period,time_identifier,geographic_level,country_code,country_name,version,e
 202021,Academic year,National,E92000001,England,Final,Sponsored academies - mainstream,All state-funded schools,All students,17761,38.5624,NA,B, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,Studio schools,All state-funded schools,All students,255,37.9067,NA,B-, ,NA,2021
 202021,Academic year,National,E92000001,England,Final,University technical colleges (UTCs),All state-funded schools,All students,1261,36.0379,NA,B-, ,NA,2021
-201920,Academic year,National,E92000001,England,Final,All FE sector colleges,All FE sector colleges,Female,34303,37.5194,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All independent schools,All independent schools,Female,17666,47.5223,NA,A-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All schools,All schools,Female,117107,41.073,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All institutions,All Institutions,Female,150650,40.3303,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All state-funded schools,All state-funded schools,Female,99423,39.8363,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All state-funded schools and colleges,All state-funded,Female,133074,39.2881,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Converter academies - mainstream,All state-funded schools,Female,67847,40.3158,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Free schools,All state-funded schools,Female,984,38.3253,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Free schools 16-19,All state-funded schools,Female,1827,41.5532,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Independent schools,All independent schools,Female,17659,47.5233,NA,A-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Independent special schools,All independent schools,Female,7,42.7273,NA,B+, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,LA maintained mainstream schools,All state-funded schools,Female,17831,39.4159,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Other FE sector colleges,All FE sector colleges,Female,14221,34.9022,NA,C+, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Sixth form colleges,All FE sector colleges,Female,20082,39.281,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Sponsored academies - mainstream,All state-funded schools,Female,10180,37.0573,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Studio schools,All state-funded schools,Female,140,39.2674,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,University technical colleges (UTCs),All state-funded schools,Female,354,34.4341,NA,C+, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All FE sector colleges,All FE sector colleges,Male,23743,35.6313,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All independent schools,All independent schools,Male,17294,45.5531,NA,A-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All schools,All schools,Male,98301,39.477,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All institutions,All Institutions,Male,121362,38.7874,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All state-funded schools,All state-funded schools,Male,80988,38.1219,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All state-funded schools and colleges,All state-funded,Male,104146,37.6049,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Converter academies - mainstream,All state-funded schools,Male,55410,38.6446,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Free schools,All state-funded schools,Male,919,35.8031,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Free schools 16-19,All state-funded schools,Male,1392,40.8582,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Independent schools,All independent schools,Male,17250,45.5674,NA,A-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Independent special schools,All independent schools,Male,44,35.4412,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,LA maintained mainstream schools,All state-funded schools,Male,14178,37.623,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Other FE sector colleges,All FE sector colleges,Male,9129,32.9647,NA,C+, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Sixth form colleges,All FE sector colleges,Male,14614,37.1863,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Sponsored academies - mainstream,All state-funded schools,Male,7941,35.1094,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Studio schools,All state-funded schools,Male,131,33.6028,NA,C+, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,University technical colleges (UTCs),All state-funded schools,Male,841,33.2355,NA,C+, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All FE sector colleges,All FE sector colleges,All students,58046,36.7442,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All independent schools,All independent schools,All students,34964,46.564,NA,A-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All schools,All schools,All students,215412,40.3462,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All institutions,All Institutions,All students,272015,39.6418,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All state-funded schools,All state-funded schools,All students,180411,39.0667,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,All state-funded schools and colleges,All state-funded,All students,237220,38.5477,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Converter academies - mainstream,All state-funded schools,All students,123257,39.5631,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Free schools,All state-funded schools,All students,1903,37.1087,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Free schools 16-19,All state-funded schools,All students,3219,41.247,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Independent schools,All independent schools,All students,34913,46.5721,NA,A-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Independent special schools,All independent schools,All students,51,36.4557,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,LA maintained mainstream schools,All state-funded schools,All students,32009,38.6225,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Other FE sector colleges,All FE sector colleges,All students,23350,34.1477,NA,C+, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Sixth form colleges,All FE sector colleges,All students,34696,38.3928,NA,B, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Sponsored academies - mainstream,All state-funded schools,All students,18121,36.2132,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,Studio schools,All state-funded schools,All students,271,36.762,NA,B-, ,NA,2020
-201920,Academic year,National,E92000001,England,Final,University technical colleges (UTCs),All state-funded schools,All students,1195,33.5746,NA,C+, ,NA,2020
+201920,Academic year,National,E92000001,England,Final,All FE sector colleges,All FE sector colleges,Female,34303,37.5194,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All independent schools,All independent schools,Female,17666,47.5223,NA,A-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All schools,All schools,Female,117107,41.073,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All institutions,All Institutions,Female,150650,40.3303,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All state-funded schools,All state-funded schools,Female,99423,39.8363,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All state-funded schools and colleges,All state-funded,Female,133074,39.2881,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Converter academies - mainstream,All state-funded schools,Female,67847,40.3158,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Free schools,All state-funded schools,Female,984,38.3253,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Free schools 16-19,All state-funded schools,Female,1827,41.5532,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Independent schools,All independent schools,Female,17659,47.5233,NA,A-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Independent special schools,All independent schools,Female,7,42.7273,NA,B+,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,LA maintained mainstream schools,All state-funded schools,Female,17831,39.4159,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Other FE sector colleges,All FE sector colleges,Female,14221,34.9022,NA,C+,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Sixth form colleges,All FE sector colleges,Female,20082,39.281,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Sponsored academies - mainstream,All state-funded schools,Female,10180,37.0573,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Studio schools,All state-funded schools,Female,140,39.2674,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,University technical colleges (UTCs),All state-funded schools,Female,354,34.4341,NA,C+,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All FE sector colleges,All FE sector colleges,Male,23743,35.6313,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All independent schools,All independent schools,Male,17294,45.5531,NA,A-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All schools,All schools,Male,98301,39.477,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All institutions,All Institutions,Male,121362,38.7874,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All state-funded schools,All state-funded schools,Male,80988,38.1219,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All state-funded schools and colleges,All state-funded,Male,104146,37.6049,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Converter academies - mainstream,All state-funded schools,Male,55410,38.6446,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Free schools,All state-funded schools,Male,919,35.8031,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Free schools 16-19,All state-funded schools,Male,1392,40.8582,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Independent schools,All independent schools,Male,17250,45.5674,NA,A-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Independent special schools,All independent schools,Male,44,35.4412,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,LA maintained mainstream schools,All state-funded schools,Male,14178,37.623,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Other FE sector colleges,All FE sector colleges,Male,9129,32.9647,NA,C+,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Sixth form colleges,All FE sector colleges,Male,14614,37.1863,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Sponsored academies - mainstream,All state-funded schools,Male,7941,35.1094,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Studio schools,All state-funded schools,Male,131,33.6028,NA,C+,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,University technical colleges (UTCs),All state-funded schools,Male,841,33.2355,NA,C+,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All FE sector colleges,All FE sector colleges,All students,58046,36.7442,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All independent schools,All independent schools,All students,34964,46.564,NA,A-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All schools,All schools,All students,215412,40.3462,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All institutions,All Institutions,All students,272015,39.6418,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All state-funded schools,All state-funded schools,All students,180411,39.0667,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,All state-funded schools and colleges,All state-funded,All students,237220,38.5477,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Converter academies - mainstream,All state-funded schools,All students,123257,39.5631,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Free schools,All state-funded schools,All students,1903,37.1087,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Free schools 16-19,All state-funded schools,All students,3219,41.247,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Independent schools,All independent schools,All students,34913,46.5721,NA,A-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Independent special schools,All independent schools,All students,51,36.4557,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,LA maintained mainstream schools,All state-funded schools,All students,32009,38.6225,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Other FE sector colleges,All FE sector colleges,All students,23350,34.1477,NA,C+,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Sixth form colleges,All FE sector colleges,All students,34696,38.3928,NA,B,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Sponsored academies - mainstream,All state-funded schools,All students,18121,36.2132,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,Studio schools,All state-funded schools,All students,271,36.762,NA,B-,NA,NA,2020
+201920,Academic year,National,E92000001,England,Final,University technical colleges (UTCs),All state-funded schools,All students,1195,33.5746,NA,C+,NA,NA,2020
 201819,Academic year,National,E92000001,England,Revised,All FE sector colleges,All FE sector colleges,Female,37094,32.5294,NA,C+,NA,NA,2019
 201819,Academic year,National,E92000001,England,Revised,All independent schools,All independent schools,Female,17761,42.1206,NA,B+,NA,NA,2019
 201819,Academic year,National,E92000001,England,Revised,All schools,All schools,Female,120224,35.1001,NA,B-,NA,NA,2019

@@ -8,7 +8,8 @@ gss_colour_pallette <- c("#12436D", "#F46A25", "#801650", "#28A197") # ,'#3D3D3D
 
 expandable <- function(inputId, label, contents) {
   govDetails <- shiny::tags$details(
-    class = "govuk-details", id = inputId,
+    class = "govuk-details",
+    id = inputId,
     shiny::tags$summary(
       class = "govuk-details__summary",
       shiny::tags$span(

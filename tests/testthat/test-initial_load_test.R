@@ -34,13 +34,11 @@ test_that("Migrated shinytest test: initial_load_test.R", {
     "year_start_fm"
   )
 
-
   outputs <- c(
     "dropdown_label",
     "headBox1",
     "headBox2",
     "headBox3",
-    "plotAlevelSubject",
     "plotHeadline",
     "plotSubjectFm",
     "tabHeadline",
