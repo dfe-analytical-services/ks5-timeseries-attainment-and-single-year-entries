@@ -20,15 +20,30 @@
 
 
 server <- function(input, output, session) {
-  # Loading screen ---------------------------------------------------------------------------
-  # Call initial loading screen
-
-  hide(id = "loading-content", anim = TRUE, animType = "fade")
-  show("app-content")
-
+  # Bookmarking ---------------------------------------------------------------
   # The template uses bookmarking to store input choices in the url. You can
-  # exclude specific inputs using the list here:
-  setBookmarkExclude(c("cookies", "link_to_app_content_tab"))
+  # exclude specific inputs (for example extra info created for a datatable
+  # or plotly chart) using the list below, but it will need updating to match
+  # any entries in your own dashboard's bookmarking url that you don't want
+  # including.
+  setBookmarkExclude(c(
+    "cookies",
+    "link_to_app_content_tab",
+    "tabBenchmark_rows_current",
+    "tabBenchmark_rows_all",
+    "tabBenchmark_columns_selected",
+    "tabBenchmark_cell_clicked",
+    "tabBenchmark_cells_selected",
+    "tabBenchmark_search",
+    "tabBenchmark_rows_selected",
+    "tabBenchmark_row_last_clicked",
+    "tabBenchmark_state",
+    "plotly_relayout-A",
+    "plotly_click-A",
+    "plotly_hover-A",
+    "plotly_afterplot-A",
+    ".clientValue-default-plotlyCrosstalkOpts"
+  ))
 
   observe({
     # Trigger this observer every time an input changes
@@ -40,119 +55,154 @@ server <- function(input, output, session) {
     updateQueryString(url)
   })
 
-  observe({
-    if (input$navlistPanel == "dashboard") {
-      change_window_title(
-        session,
-        paste0(
-          # site_title, " - ",
-          input$alevelInstitute, ", ",
-          input$allSex
-        )
-      )
-    } else {
-      change_window_title(
-        session,
-        paste0(
-          # site_title, " - ",
-          input$navlistPanel
-        )
-      )
-    }
-  })
 
-  observeEvent(input$cookies, {
-    if (!is.null(input$cookies)) {
-      if (!("dfe_analytics" %in% names(input$cookies))) {
-        shinyjs::show(id = "cookieMain")
-      } else {
-        shinyjs::hide(id = "cookieMain")
-        msg <- list(
-          name = "dfe_analytics",
-          value = input$cookies$dfe_analytics
-        )
-        session$sendCustomMessage("analytics-consent", msg)
-        if ("cookies" %in% names(input)) {
-          if ("dfe_analytics" %in% names(input$cookies)) {
-            if (input$cookies$dfe_analytics == "denied") {
-              ga_msg <- list(name = paste0("_ga_", google_analytics_key))
-              session$sendCustomMessage("cookie-remove", ga_msg)
-            }
-          }
-        }
-      }
-    } else {
-      shinyjs::hide(id = "cookieMain")
-    }
-  })
+  # Cookies logic -------------------------------------------------------------
+  output$cookies_status <- dfeshiny::cookies_banner_server(
+    input_cookies = shiny::reactive(input$cookies),
+    parent_session = session,
+    google_analytics_key = google_analytics_key
+  )
 
-  # Need these set of observeEvent to create a path through the cookie banner
-  observeEvent(input$cookieAccept, {
-    msg <- list(
-      name = "dfe_analytics",
-      value = "granted"
-    )
-    session$sendCustomMessage("cookie-set", msg)
-    session$sendCustomMessage("analytics-consent", msg)
-    shinyjs::show(id = "cookieAcceptDiv")
-    shinyjs::hide(id = "cookieMain")
-  })
+  dfeshiny::cookies_panel_server(
+    input_cookies = shiny::reactive(input$cookies),
+    google_analytics_key = google_analytics_key
+  )
+  # # Loading screen ---------------------------------------------------------------------------
+  # # Call initial loading screen
+  #
+  # hide(id = "loading-content", anim = TRUE, animType = "fade")
+  # show("app-content")
+  #
+  # # The template uses bookmarking to store input choices in the url. You can
+  # # exclude specific inputs using the list here:
+  # setBookmarkExclude(c("cookies", "link_to_app_content_tab"))
+  #
+  # observe({
+  #   # Trigger this observer every time an input changes
+  #   reactiveValuesToList(input)
+  #   session$doBookmark()
+  # })
+  #
+  # onBookmarked(function(url) {
+  #   updateQueryString(url)
+  # })
+  #
+  # observe({
+  #   if (input$navlistPanel == "dashboard") {
+  #     change_window_title(
+  #       session,
+  #       paste0(
+  #         # site_title, " - ",
+  #         input$alevelInstitute, ", ",
+  #         input$allSex
+  #       )
+  #     )
+  #   } else {
+  #     change_window_title(
+  #       session,
+  #       paste0(
+  #         # site_title, " - ",
+  #         input$navlistPanel
+  #       )
+  #     )
+  #   }
+  # })
+  #
+  # observeEvent(input$cookies, {
+  #   if (!is.null(input$cookies)) {
+  #     if (!("dfe_analytics" %in% names(input$cookies))) {
+  #       shinyjs::show(id = "cookieMain")
+  #     } else {
+  #       shinyjs::hide(id = "cookieMain")
+  #       msg <- list(
+  #         name = "dfe_analytics",
+  #         value = input$cookies$dfe_analytics
+  #       )
+  #       session$sendCustomMessage("analytics-consent", msg)
+  #       if ("cookies" %in% names(input)) {
+  #         if ("dfe_analytics" %in% names(input$cookies)) {
+  #           if (input$cookies$dfe_analytics == "denied") {
+  #             ga_msg <- list(name = paste0("_ga_", google_analytics_key))
+  #             session$sendCustomMessage("cookie-remove", ga_msg)
+  #           }
+  #         }
+  #       }
+  #     }
+  #   } else {
+  #     shinyjs::hide(id = "cookieMain")
+  #   }
+  # })
+  #
+  # # Need these set of observeEvent to create a path through the cookie banner
+  # observeEvent(input$cookieAccept, {
+  #   msg <- list(
+  #     name = "dfe_analytics",
+  #     value = "granted"
+  #   )
+  #   session$sendCustomMessage("cookie-set", msg)
+  #   session$sendCustomMessage("analytics-consent", msg)
+  #   shinyjs::show(id = "cookieAcceptDiv")
+  #   shinyjs::hide(id = "cookieMain")
+  # })
+  #
+  # observeEvent(input$cookieReject, {
+  #   msg <- list(
+  #     name = "dfe_analytics",
+  #     value = "denied"
+  #   )
+  #   session$sendCustomMessage("cookie-set", msg)
+  #   session$sendCustomMessage("analytics-consent", msg)
+  #   shinyjs::show(id = "cookieRejectDiv")
+  #   shinyjs::hide(id = "cookieMain")
+  # })
+  #
+  # observeEvent(input$hideAccept, {
+  #   shinyjs::toggle(id = "cookieDiv")
+  # })
+  #
+  # observeEvent(input$hideReject, {
+  #   shinyjs::toggle(id = "cookieDiv")
+  # })
+  #
+  # observeEvent(input$remove, {
+  #   shinyjs::toggle(id = "cookieMain")
+  #   msg <- list(name = "dfe_analytics", value = "denied")
+  #   session$sendCustomMessage("cookie-remove", msg)
+  #   session$sendCustomMessage("analytics-consent", msg)
+  #   print(input$cookies)
+  # })
+  #
+  # cookies_data <- reactive({
+  #   input$cookies
+  # })
+  #
+  # output$cookie_status <- renderText({
+  #   cookie_text_stem <- "To better understand the reach of our dashboard tools, this site uses cookies to identify numbers of unique users as part of Google Analytics. You have chosen to"
+  #   cookie_text_tail <- "the use of cookies on this website."
+  #   if ("cookies" %in% names(input)) {
+  #     if ("dfe_analytics" %in% names(input$cookies)) {
+  #       if (input$cookies$dfe_analytics == "granted") {
+  #         paste(cookie_text_stem, "accept", cookie_text_tail)
+  #       } else {
+  #         paste(cookie_text_stem, "reject", cookie_text_tail)
+  #       }
+  #     }
+  #   } else {
+  #     "Cookies consent has not been confirmed."
+  #   }
+  # })
+  #
+  # observeEvent(input$cookieLink, {
+  #   # Need to link here to where further info is located.  You can
+  #   # updateTabsetPanel to have a cookie page for instance
+  #   updateTabsetPanel(session, "navlistPanel", selected = "Support and feedback")
+  # })
 
-  observeEvent(input$cookieReject, {
-    msg <- list(
-      name = "dfe_analytics",
-      value = "denied"
-    )
-    session$sendCustomMessage("cookie-set", msg)
-    session$sendCustomMessage("analytics-consent", msg)
-    shinyjs::show(id = "cookieRejectDiv")
-    shinyjs::hide(id = "cookieMain")
-  })
 
-  observeEvent(input$hideAccept, {
-    shinyjs::toggle(id = "cookieDiv")
-  })
+  #------------------------------------------------------------------------------------------------------
 
-  observeEvent(input$hideReject, {
-    shinyjs::toggle(id = "cookieDiv")
-  })
-
-  observeEvent(input$remove, {
-    shinyjs::toggle(id = "cookieMain")
-    msg <- list(name = "dfe_analytics", value = "denied")
-    session$sendCustomMessage("cookie-remove", msg)
-    session$sendCustomMessage("analytics-consent", msg)
-    print(input$cookies)
-  })
-
-  cookies_data <- reactive({
-    input$cookies
-  })
-
-  output$cookie_status <- renderText({
-    cookie_text_stem <- "To better understand the reach of our dashboard tools, this site uses cookies to identify numbers of unique users as part of Google Analytics. You have chosen to"
-    cookie_text_tail <- "the use of cookies on this website."
-    if ("cookies" %in% names(input)) {
-      if ("dfe_analytics" %in% names(input$cookies)) {
-        if (input$cookies$dfe_analytics == "granted") {
-          paste(cookie_text_stem, "accept", cookie_text_tail)
-        } else {
-          paste(cookie_text_stem, "reject", cookie_text_tail)
-        }
-      }
-    } else {
-      "Cookies consent has not been confirmed."
-    }
-  })
-
-  observeEvent(input$cookieLink, {
-    # Need to link here to where further info is located.  You can
-    # updateTabsetPanel to have a cookie page for instance
-    updateTabsetPanel(session, "navlistPanel", selected = "Support and feedback")
-  })
-
-
-  ## The headline attainment reactive starts here
+  ## The headline attainment reactive starts here -------------------------------------------------------
+  #------------------------------------------------------------------------------------------------------
   # Reactive for headline attainment
 
   reactiveHeadline <- reactive({
@@ -175,45 +225,115 @@ server <- function(input, output, session) {
 
 
   # Add value box for A level
-  output$headBox1 <- renderValueBox({
-    latest <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "A level", establishment_type == input$headlineAps))$aps
-    grade <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "A level", establishment_type == input$headlineAps))$aps_grade
 
-    valueBox(
-      value = grade, subtitle = paste0("Average A level result  equivalent to ", latest, " points:   ", input$headlineAps), # width = 12,
-      color = "blue"
+  output$headBox1 <- renderUI({
+    latest <- reactiveHeadline() %>%
+      filter(
+        year == max(year),
+        cert_type == "A level",
+        establishment_type == input$headlineAps
+      ) %>%
+      pull(aps)
+
+    grade <- reactiveHeadline() %>%
+      filter(
+        year == max(year),
+        cert_type == "A level",
+        establishment_type == input$headlineAps
+      ) %>%
+      pull(aps_grade)
+
+    bslib::value_box(
+      title = paste(
+        "Average A level result"
+      ),
+      value = div(
+        style = "text-align: center; white-space: nowrap",
+        grade
+      ),
+      HTML(paste0(
+        "equivalent to ",
+        latest, " points: <strong>",
+        input$headlineAps, "</strong>"
+      )),
+      theme = "primary"
     )
   })
 
-  #
-  #   # Add value box for Applied general
-  output$headBox2 <- renderValueBox({
-    latest <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps
-    # result <- "Average applied general result"
-    grade <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Applied general", establishment_type == input$headlineAps))$aps_grade
-    valueBox(
-      value = grade, subtitle = paste0("Average applied general result equivalent to ", latest, "  points:   ", input$headlineAps),
-      color = "blue"
+
+  # Add value box for Applied general
+  output$headBox2 <- renderUI({
+    latest <- reactiveHeadline() %>%
+      filter(
+        year == max(year),
+        cert_type == "Applied general",
+        establishment_type == input$headlineAps
+      ) %>%
+      pull(aps)
+
+    grade <- reactiveHeadline() %>%
+      filter(
+        year == max(year),
+        cert_type == "Applied general",
+        establishment_type == input$headlineAps
+      ) %>%
+      pull(aps_grade)
+
+    bslib::value_box(
+      title = paste(
+        "Average Applied general  result"
+      ),
+      value = div(
+        style = "text-align: center; white-space: nowrap",
+        grade
+      ),
+      HTML(paste0(
+        "equivalent to ",
+        latest, " points: <strong>",
+        input$headlineAps, "</strong>"
+      )),
+      theme = "primary"
     )
   })
-  #
-  #
-  #   #  Add Value box for Tech level
-  #
-  output$headBox3 <- renderValueBox({
-    latest <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps
-    grade <- (reactiveHeadline() %>%
-      filter(year == max(year), cert_type == "Tech level", establishment_type == input$headlineAps))$aps_grade
-    valueBox(
-      value = grade, subtitle = paste0("Average tech level result equivalent to ", latest, "  points:   ", input$headlineAps),
-      color = "blue"
+
+
+  # #
+  # #   # Value box for Tech level
+
+  output$headBox3 <- renderUI({
+    latest <- reactiveHeadline() %>%
+      filter(
+        year == max(year),
+        cert_type == "Tech level",
+        establishment_type == input$headlineAps
+      ) %>%
+      pull(aps)
+
+    grade <- reactiveHeadline() %>%
+      filter(
+        year == max(year),
+        cert_type == "Tech level",
+        establishment_type == input$headlineAps
+      ) %>%
+      pull(aps_grade)
+
+    bslib::value_box(
+      title = paste(
+        "Average Tech level result"
+      ),
+      value = div(
+        style = "text-align: center; white-space: nowrap",
+        grade
+      ),
+      HTML(paste0(
+        "equivalent to ",
+        latest, " points: <strong>",
+        input$headlineAps, "</strong>"
+      )),
+      theme = "primary"
     )
   })
+
 
   # Create reactive for Headline data
 
@@ -978,26 +1098,6 @@ server <- function(input, output, session) {
   # })
 
 
-  # Navigation with links
-  observeEvent(input$link_to_headline_tab, {
-    updateTabsetPanel(session, "navlistPanel", selected = "dashboard")
-  })
-
-
-  observeEvent(input$link_to_alevelFmSubject_tab, {
-    updateTabsetPanel(session, "navlistPanel", selected = "dashboard_fm")
-  })
-
-
-  observeEvent(input$link_to_alevelAllSubject_tab, {
-    updateTabsetPanel(session, "navlistPanel", selected = "dashboard_alse")
-  })
-
-  observeEvent(input$link_to_alevelMathsScience_tab, {
-    updateTabsetPanel(session, "navlistPanel", selected = "dashboard_ms")
-  })
-
-
   # Download the underlying data button
   output$downloadDataAps <- downloadHandler(
     filename = "attainment_data.csv",
@@ -1019,10 +1119,148 @@ server <- function(input, output, session) {
     }
   })
 
+  # wrap a plot with a larger spinner
 
-  # Stop app ---------------------------------------------------------------------------------
+  # # Wrap a plot with a larger spinner
+  # with_gov_spinner <- function(
+  #   ui_element,
+  #   spinner_type = 6,
+  #   size = 1,
+  #   color = "#1d70b8"
+  # ) {
+  #   shinycssloaders::withSpinner(
+  #     ui_element,
+  #     type = spinner_type,
+  #     color = color,
+  #     size = size,
+  #     proxy.height = paste0(250 * size, "px")
+  #   )
+  # }
 
-  session$onSessionEnded(function() {
-    stopApp()
+
+  #
+  #   # footer links -----------------------
+  # #
+  #   # # ## Back links to main dashboard ---------------------------------------------
+  #   observeEvent(
+  #     input$support_to_dashboard |
+  #       input$cookies_to_dashboard |
+  #       input$accessibility_to_dashboard,
+  #     {
+  #       nav_select("pages", "main_panel")
+  #     }
+  #   )
+  #
+  #
+  #
+  #   shiny::observeEvent(input$accessibility_statement, {
+  #     nav_select(
+  #       "pages",
+  #       "a11y_panel"
+  #     )
+  #   })
+  #
+  #   shiny::observeEvent(input$use_of_cookies, {
+  #     nav_select(
+  #       "pages",
+  #       "cookies_panel_ui"
+  #     )
+  #   })
+  #
+  #   shiny::observeEvent(input$support_and_feedback, {
+  #     nav_select(
+  #       "pages",
+  #       "support_panel"
+  #     )
+  #   })
+  #
+  #   ## Back links to main dashboard ---------------------------------------------
+  #   observeEvent(
+  #     input$support_to_dashboard |
+  #       input$cookies_to_dashboard |
+  #       input$accessibility_to_dashboard,
+  #     {
+  #       nav_select("pages", "main_panel")
+  #     }
+  #   )
+  #
+  # Navigation links -------------------------------------------------------------
+
+
+  # Navigation with links
+  observeEvent(input$link_to_headline_tab, {
+    updateTabsetPanel(session, "navlistPanel", selected = "dashboard")
+  })
+
+
+  observeEvent(input$link_to_alevelFmSubject_tab, {
+    updateTabsetPanel(session, "navlistPanel", selected = "dashboard_fm")
+  })
+
+
+  observeEvent(input$link_to_alevelAllSubject_tab, {
+    updateTabsetPanel(session, "navlistPanel", selected = "dashboard_alse")
+  })
+
+  observeEvent(input$link_to_alevelMathsScience_tab, {
+    updateTabsetPanel(session, "navlistPanel", selected = "dashboard_ms")
+  })
+
+
+  # Footer links --------------------------------------------------------------
+
+  observeEvent(input$dashboard, nav_select("pages", "dashboard"))
+  observeEvent(input$support_and_feedback, {
+    nav_select("pages", "support_panel")
+  })
+  observeEvent(input$accessibility_statement, {
+    nav_select("pages", "accessibility_statement")
+  })
+  observeEvent(input$use_of_cookies, {
+    nav_select("pages", "cookies_panel_ui")
+  })
+
+  ## Back links to main dashboard ---------------------------------------------
+  observeEvent(input$footnotes_to_dashboard, nav_select("pages", "dashboard"))
+  observeEvent(input$support_to_dashboard, nav_select("pages", "dashboard"))
+  observeEvent(input$cookies_to_dashboard, nav_select("pages", "dashboard"))
+  observeEvent(
+    input$accessibility_to_dashboard,
+    nav_select("pages", "dashboard")
+  )
+
+
+  shiny::observeEvent(input$external_link, {
+    showModal(modalDialog(
+      external_link(
+        "https://shiny.posit.co/",
+        "External Link",
+        add_warning = FALSE
+      ),
+      easyClose = TRUE,
+      footer = NULL
+    ))
+
+    # JavaScript to auto-click the link and close the modal
+    shinyjs::runjs(
+      "
+      setTimeout(function() {
+        var link = document.querySelector('.modal a');
+        if (link) {
+          link.click();
+          setTimeout(function() {
+            $('.modal').modal('hide');
+          }, 20); // Extra delay to avoid any race conditions
+        }
+      }, 400);
+    "
+    )
   })
 }
+
+#   # Stop app ---------------------------------------------------------------------------------
+#
+#   session$onSessionEnded(function() {
+#     stopApp()
+#   })
+# }

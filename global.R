@@ -1,126 +1,125 @@
 # ---------------------------------------------------------
 # This is the global file.
 # Use it to store functions, library calls, source files etc.
-# Moving these out of the server file and into here improves performance
+
 # The global file is run only once when the app launches and stays consistent across users
 # whereas the server and UI files are constantly interacting and responsive to user input.
 #
 # ---------------------------------------------------------
 
-
 # Library calls ---------------------------------------------------------------------------------
 shhh <- suppressPackageStartupMessages # It's a library, so shhh!
+# Core shiny and R packages
 shhh(library(shiny))
-# shhh(library(shinya11y))
-shhh(library(shinyjs))
-# shhh(library(tools))
-shhh(library(testthat))
-shhh(library(shinytest2))
-shhh(library(shinydashboard))
-shhh(library(shinytitle))
-shhh(library(shinyWidgets))
+shhh(library(bslib))
+shhh(library(rstudioapi))
+# Custom packages
+shhh(library(dfeR))
+shhh(library(dfeshiny))
 shhh(library(shinyGovstyle))
-shhh(library(shinycssloaders))
-shhh(library(shinyBS))
+# Data and string manipulation
+shhh(library(readr))
 shhh(library(dplyr))
-shhh(library(tidyr))
+shhh(library(stringr))
+
+# Creating charts and tables
 shhh(library(ggplot2))
 shhh(library(plotly))
+shhh(library(ggiraph))
+shhh(library(sf))
 shhh(library(DT))
-shhh(library(xfun))
+shhh(library(tidyr))
 shhh(library(hrbrthemes))
 shhh(library(forcats))
 shhh(library(patchwork))
-shhh(library(readr))
-shhh(library(dfeshiny))
+shhh(library(htmltools))
+shhh(library(reactable))
+shhh(library(svglite))
+shhh(library(afcharts))
+
+shhh(library(ggrepel))
+shhh(library(showtext))
+shhh(library(openxlsx))
 
 
-# Functions ---------------------------------------------------------------------------------
+# shiny extensions
+shhh(library(shinyjs))
+shhh(library(shinytitle))
+shhh(library(xfun))
+shhh(library(metathis))
+shhh(library(shinyalert))
+shhh(library(shinyWidgets))
+shhh(library(shinycssloaders))
+shhh(library(shinyBS))
 
-# Here's an example function for simplifying the code needed to commas separate numbers:
-
-# cs_num ----------------------------------------------------------------------------
-# Comma separating function
-
-cs_num <- function(value) {
-  format(value, big.mark = ",", trim = TRUE)
-}
-# Code to convert data to numeric
-to_numeric <- function(df, variables) {
-  for (variable in variables) {
-    df[[variable]] <- (suppressWarnings(as.numeric(df[[variable]])))
-  }
-  return(df)
-}
-
-# Code to convert data to factor
-to_factor <- function(df, variables) {
-  for (variable in variables) {
-    df[[variable]] <- (suppressWarnings(as.factor(df[[variable]])))
-  }
-  return(df)
-}
-
-# Code to convert first character to capital letter
-first_xter_up <- function(x) {
-  x <- tolower(x)
-  substr(x, 1, 1) <- toupper(substr(x, 1, 1))
-  x
+# Dependencies needed for testing or CI but not for the app ---------------------------------
+# Including them here keeps them in renv but avoids the app needlessly loading
+# them, saving on load time.
+if (FALSE) {
+  shhh(library(rsconnect))
+  shhh(library(shinytest2))
+  shhh(library(chromote))
+  shhh(library(testthat))
 }
 
 
-spinner <- function(output) {
-  shinycssloaders::withSpinner(output, size = getOption("spinner.size", default = 1))
-}
+# Source scripts ----------------------------------------------------------------------------
+# Source script for loading in data
 
+source("R/read_data.R")
 
-# round data
-round2 <- function(x, n) {
-  posneg <- sign(x)
-  z <- abs(x) * 10^n
-  z <- z + 0.5
-  z <- trunc(z)
-  z <- z / 10^n
-  z * posneg
-}
+# Source custom function script
 
+source("R/helper_functions.R")
 
-# Source scripts ---------------------------------------------------------------------------------
-
-# Source any scripts here. Scripts may be needed to process data before it gets to the server file.
-# It's best to do this here instead of the server file, to improve performance.
-
-# source("R/filename.r")
-
+# gbp <- enc2utf8("\u00A3")
 
 # appLoadingCSS ----------------------------------------------------------------------------
 # Set up loading screen
 
-appLoadingCSS <- "
-#loading-content {
-  position: absolute;
-  background: #000000;
-  opacity: 0.9;
-  z-index: 100;
-  left: 0;
-  right: 0;
-  height: 100%;
-  text-align: center;
-  color: #FFFFFF;
-}
-"
+# appLoadingCSS <- "
+# #loading-content {
+#   position: absolute;
+#   background: #000000;
+#   opacity: 0.9;
+#   z-index: 100;
+#   left: 0;
+#   right: 0;
+#   height: 100%;
+#   text-align: center;
+#   color: #FFFFFF;
+# }
+# "
 
-site_title <- "16 to 18 time series attainment and single year entry"
+# Set global variables --------------------------------------------------------------------
+
+site_title <- "16 to 19 time series attainment and single year entry"
 site_primary <- "https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries/"
 site_overflow <- "https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries-overflow/"
 sites_list <- c(site_primary, site_overflow) # We can add further mirrors where necessary. Each one can generally handle about 2,500 users simultaneously
-ees_pub_name <- "A level and other 16 to 18 results" # Update this with your parent publication name (e.g. the EES publication)
+ees_pub_name <- "A level and other 16 to 19 results" # Update this with your parent publication name (e.g. the EES publication)
 ees_publication <- "https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results" # Update with parent publication link
+
+# Set the key for Google Analytics tracking
 google_analytics_key <- "C9DQ5CPBCR"
-source("R/read_data.R")
 
 
-############################  Read A level subject entries - single academic year ####################################################
+# Enable bookmarking so that input choices are shown in the url ------------------------------
+enableBookmarking("url")
+
+# Fonts for charts ---------------------------------------------------------------------------
+font_add("dejavu", "www/fonts/DejaVuSans.ttf")
+register_font(
+  "dejavu",
+  plain = "www/fonts/DejaVuSans.ttf",
+  bold = "www/fonts/DejaVuSans-Bold.ttf",
+  italic = "www/fonts/DejaVuSans-Oblique.ttf",
+  bolditalic = "www/fonts/DejaVuSans-BoldOblique.ttf"
+)
+showtext_auto()
+
+
+# A level subject entries - single academic year -------------------------------------------
 # Read in A level data for subject entries and results
 
 #  The latest year is mainly used by A level subject entries and Maths and Science to allow selection of year
@@ -132,34 +131,56 @@ dfAlevelSubjectRaw <- read_alevel_subject_data()
 
 dfAlevelSubject <- dfAlevelSubjectRaw %>%
   rename(
-    characteristic_value = "characteristic_value", `A*` = "perc_astar_grade_achieved",
+    characteristic_value = "characteristic_value",
+    `A*` = "perc_astar_grade_achieved",
     `A*-A` = "perc_astar_a_grade_achieved",
-    `A*-B` = "perc_astar_b_grade_achieved", `A*-C` = "perc_astar_c_grade_achieved",
-    `A*-D` = "perc_astar_d_grade_achieved", `A*-E` = "perc_astar_e_grade_achieved", version = "data_version"
+    `A*-B` = "perc_astar_b_grade_achieved",
+    `A*-C` = "perc_astar_c_grade_achieved",
+    `A*-D` = "perc_astar_d_grade_achieved",
+    `A*-E` = "perc_astar_e_grade_achieved",
+    version = "data_version"
   ) %>%
   select(
-    time_period, year, subject_name, characteristic_value, `A*-A`,
-    `A*-B`, `A*-C`, `A*-D`, `A*-E`, entry_count, version
+    time_period,
+    year,
+    subject_name,
+    characteristic_value,
+    `A*-A`,
+    `A*-B`,
+    `A*-C`,
+    `A*-D`,
+    `A*-E`,
+    entry_count,
+    version
   ) %>%
   mutate(
-    entry_count = as.numeric(entry_count),
+    entry_count = as.numeric(entry_count, na.rm = TRUE),
     thousand_entries = as.numeric(entry_count / 1000),
-    `A*-A` = as.numeric(`A*-A`),
-    `A*-B` = as.numeric(`A*-B`),
-    `A*-C` = as.numeric(`A*-C`),
-    `A*-D` = as.numeric(`A*-D`),
-    `A*-E` = as.numeric(`A*-E`),
+    `A*-A` = suppressWarnings(as.numeric(`A*-A`)),
+    `A*-B` = suppressWarnings(as.numeric(`A*-B`)),
+    `A*-C` = suppressWarnings(as.numeric(`A*-C`)),
+    `A*-D` = suppressWarnings(as.numeric(`A*-D`)),
+    `A*-E` = suppressWarnings(as.numeric(`A*-E`)),
     subject_name = as.factor(subject_name),
     characteristic_value = as.factor(characteristic_value),
     version = as.factor(version)
   )
 
-## intention here is to select timeseries data from 1996 to date.
+## intention here is to select time-series data from 1996 to date.
 # Some subjects have filtered out inlcuding subjects greater or equal to 10 years
 subjectByAll <- dfAlevelSubject %>%
   group_by(subject_name, characteristic_value) %>%
   arrange(year, .by_group = TRUE) %>%
-  filter(!subject_name %in% c("Other communication studies", "Other social studies", "Home economics", "ICT"), n() > 10) %>%
+  filter(
+    !subject_name %in%
+      c(
+        "Other communication studies",
+        "Other social studies",
+        "Home economics",
+        "ICT"
+      ),
+    n() > 10
+  ) %>%
   ungroup()
 
 # Filter out female and male
@@ -169,14 +190,14 @@ subjectBySex <- subjectByAll # %>%
 
 # Filter home economics for all students
 homeEconomics <- dfAlevelSubject %>%
-  filter(subject_name == "Home economics" & characteristic_value == "All students")
+  filter(
+    subject_name == "Home economics" & characteristic_value == "All students"
+  )
 
 
-#####################################################################################################
+# A level attainment  by institution type ----------------------------------------
 
-
-# Read in  A level aggregate APS and grade by institution type
-
+# Read in
 
 alevel_attain_download <- read_alevel_aps_data()
 
@@ -187,13 +208,27 @@ dfAlevelAps <- data %>%
     aps_grade_2013_2015 = "aps_per_entry_grade_2013_2015"
   ) %>%
   select(
-    time_period, year, establishment_type, establishment_type_group, number_of_students, aps_per_entry, aps_2013_2015, aps_per_entry_grade, aps_grade_2013_2015,
-    characteristic_sex, time_period, year, year_2013_2015, version
+    time_period,
+    year,
+    establishment_type,
+    establishment_type_group,
+    number_of_students,
+    aps_per_entry,
+    aps_2013_2015,
+    aps_per_entry_grade,
+    aps_grade_2013_2015,
+    characteristic_sex,
+    time_period,
+    year,
+    year_2013_2015,
+    version
   ) %>%
-  mutate(establishment_type = case_match(
-    establishment_type, "All state-funded schools and colleges" ~ "All state-funded",
-    .default = establishment_type
-  )) %>%
+  mutate(
+    establishment_type = recode(
+      establishment_type,
+      "All state-funded schools and colleges" = "All state-funded"
+    )
+  ) %>%
   mutate(
     aps_2013_2015 = round2(as.numeric(aps_2013_2015), 2),
     aps_grade_2013_2015 = as.factor(aps_grade_2013_2015),
@@ -210,12 +245,13 @@ dfAlevelAps <- data %>%
 # Expect similar result on sex gap column for female an male
 # Use data from 2015/16
 
-
 dfApsSexGap <- read_alevel_aps_sexgap_data() %>%
-  mutate(establishment_type = case_match(
-    establishment_type, "All state-funded schools and colleges" ~ "All state-funded",
-    .default = establishment_type
-  ))
+  mutate(
+    establishment_type = recode(
+      establishment_type,
+      "All state-funded schools and colleges" = "All state-funded"
+    )
+  )
 
 fmDiff <- dfApsSexGap %>%
   mutate(
@@ -226,11 +262,9 @@ fmDiff <- dfApsSexGap %>%
   )
 
 
-########################################################################################################
-
+# Headline attainment --------------------------------------------------------------------------------------------
 
 # Read in attainment data for alevel, applied general and techlevel
-
 
 headline_download <- read_all_attainment_data()
 
@@ -241,19 +275,33 @@ headline_download <- headline_download %>%
     country_code = "E92000001",
     country_name = "England"
   ) %>%
-  select(time_period, time_identifier, geographic_level, country_code, country_name, version,
-    establishment_type, establishment_type_group, characteristic_sex, number_of_students,
+  select(
+    time_period,
+    time_identifier,
+    geographic_level,
+    country_code,
+    country_name,
+    version,
+    establishment_type,
+    establishment_type_group,
+    characteristic_sex,
+    number_of_students,
     aps_per_entry = aps,
-    aps_per_entry_grade = aps_grade, version, qualification_type = cert_type, year
+    aps_per_entry_grade = aps_grade,
+    version,
+    qualification_type = cert_type,
+    year
   ) %>%
   arrange(desc(time_period))
 
 
 dfAttainmentRaw <- read_all_attainment_data() %>%
-  mutate(establishment_type = case_match(
-    establishment_type, "All state-funded schools and colleges" ~ "All state-funded",
-    .default = establishment_type
-  ))
+  mutate(
+    establishment_type = recode(
+      establishment_type,
+      "All state-funded schools and colleges" = "All state-funded"
+    )
+  )
 
 # Select  all students and data to factors and numeric
 dfAttainment <- dfAttainmentRaw %>%
@@ -275,8 +323,8 @@ dfAttainment <- dfAttainmentRaw %>%
   ungroup()
 
 
-#############################################################################################################
-# Maths Science attainment
+
+# Maths Science attainment -----------------------------------------------------------------
 #
 #
 dfMsRaw <- read_all_ms_data()
@@ -287,4 +335,11 @@ dfMs <- dfMsRaw %>%
     characteristic_value = as.factor(characteristic_value),
     version = as.factor(version)
   ) %>%
-  filter(!subject %in% c("Five Maths/Science subjects", "Six Maths/Science subjects", "Total Students"))
+  filter(
+    !subject %in%
+      c(
+        "Five Maths/Science subjects",
+        "Six Maths/Science subjects",
+        "Total Students"
+      )
+  )
