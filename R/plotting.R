@@ -12,10 +12,10 @@ createTimeSeriesHeadline <- function(dfAps, allAps) {
   ) +
     geom_line(stat = "identity", linewidth = 1) +
     scale_color_manual(values = c("#12436D", "#28A197", "#801650")) +
-    # scale_x_log10(breaks = seq(2016, 2023, 2)) +
+    # scale_x_continuous(breaks = seq(2016, 2023, 2)) +
     labs(x = "", y = "", color = "") +
     coord_cartesian(ylim = c(0, 60)) +
-    scale_x_continuous(breaks = seq(2016, 2025, 1)) +
+    scale_x_log10(breaks = seq(2016, 2025, 1)) +
     theme_classic() +
     theme(
       legend.position = "",
@@ -91,7 +91,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allSex) {
     # ggtitle("\nAPS & grade\n2012/13 to 2014/15\n") +
     coord_cartesian(ylim = c(150, 300)) +
     scale_y_continuous(limits = c(150, 300)) +
-    scale_x_continuous(breaks = seq(2013, 2015, 1)) +
+    scale_x_log10(breaks = seq(2013, 2015, 1)) +
     scale_colour_manual(
       "",
       breaks = unique(dfAps$establishment_type),
@@ -105,7 +105,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allSex) {
       axis.text.x = element_text(angle = 300),
       axis.title.x = element_blank(),
       axis.title.y = element_blank(),
-      axis.line = element_line(size = 1.0)
+      axis.line = element_line(linewidth = 1.0)
     )
 
   fig2 <- ggplot(
@@ -144,7 +144,7 @@ createApsTimeSeries <- function(dfAps, instGroup, instType, allSex) {
     ggtitle(paste0("\n APS & grade 2015/16 to 2024/25:  ", allSex)) +
     coord_cartesian(ylim = c(10, 60)) +
     scale_y_continuous(limits = c(10, 60)) +
-    scale_x_continuous(breaks = seq(2016, 2025, 1)) +
+    scale_x_log10(breaks = seq(2016, 2025, 1)) +
     scale_colour_manual(
       "",
       breaks = unique(dfAps$establishment_type),
@@ -251,7 +251,7 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmSex) {
     ) +
     ggtitle(paste0("Average point score and grade:  ", fmSex)) +
     coord_cartesian(ylim = c(10, 60)) +
-    scale_x_continuous(breaks = seq(2016, 2025, 1)) +
+    scale_x_log10(breaks = seq(2016, 2025, 1)) +
     scale_colour_manual(
       # "establishment type",
       breaks = unique(dfApsFm$establishment_type),
@@ -291,9 +291,7 @@ createApsFmTimeSeries <- function(dfApsFm, instGroup, instType, fmSex) {
       axis.text = element_text(size = 14),
       axis.title = element_text(size = 12),
       legend.text = element_text(size = 12),
-      axis.text.x = element_text(angle = 300) # ,
-      #  axis.line = element_line(linewidth = 1.0) +
-      #   expand_limits(x = 0, y = 0)
+      axis.text.x = element_text(angle = 300)
     )
   fmFig
 }
@@ -321,11 +319,9 @@ createSexGap <- function(dfApsGap, instGroup, instType) {
     )
   ) +
     geom_line(stat = "identity", linewidth = 1) +
-    scale_x_continuous(breaks = seq(2016, 2025, 1)) +
+    scale_x_log10(breaks = seq(2016, 2025, 1)) +
     scale_y_continuous(labels = scales::comma) +
     scale_colour_manual(
-      # "establishment type",
-      # breaks = unique(dfApsGap$establishment_type),
       values = gss_colour_pallette
     ) +
     labs(x = "", y = "", color = "") +
@@ -333,7 +329,6 @@ createSexGap <- function(dfApsGap, instGroup, instType) {
     ggtitle(paste0("\nFemale-male average points difference (Sex gap)")) +
     theme_classic() +
     theme(
-      # legend.position ="bottom",
       text = element_text(size = 12),
       legend.direction = "vertical",
       plot.title = element_text(size = 10),
@@ -376,7 +371,8 @@ createTimeSeriesSubject <- function(dfSubjectA, subAll, subName) {
   ))
 
   fig <- dfSubjectA %>%
-    rename(Year = "year", Entry_count = "entry_count", Subject = "subject_name")
+    rename(Year = "year", Entry_count = "entry_count", Subject = "subject_name") %>%
+    mutate(Year = as.numeric(Year))
 
   fig <- ggplot(
     fig,
@@ -388,8 +384,6 @@ createTimeSeriesSubject <- function(dfSubjectA, subAll, subName) {
     )
   ) +
     geom_line(stat = "identity", linewidth = 1) +
-    # geom_point(stat="identity", size=1.5, show.legend=F)+
-
     scale_x_log10(breaks = seq(1996, 2025, 2)) +
     scale_y_continuous(labels = scales::comma) +
     scale_colour_manual(
@@ -435,11 +429,9 @@ createTimeSeriesResult <- function(dfSubjectA, subAll, resAll, subName) {
 
   fig <- ggplot(fig, aes_string(x = "Year", y = resAll, color = "Subject")) +
     geom_line(stat = "identity", linewidth = 1, show.legend = F) +
-    #   geom_point(stat= "identity", size=1.5, show.legend=F)+
     scale_x_log10(breaks = seq(1996, 2025, 2)) +
     scale_y_continuous(labels = scales::comma) +
     scale_colour_manual(
-      # breaks = unique(dfSubjectA$Subject),
       values = gss_colour_pallette
     ) +
     labs(x = "", y = "", color = "") +
@@ -508,6 +500,7 @@ createTimeSeriesSubjectFm <- function(dfSubjectG, subByFm) {
       Subject = "subject_name",
       Sex = "characteristic_value"
     )
+
   fig <- ggplot(
     fig,
     aes(

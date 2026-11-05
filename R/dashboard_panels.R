@@ -138,7 +138,7 @@ dashboard_panel_aps <- function() {
           inputId = "details", label = textOutput("dropdown_label"),
           contents =
             card(
-              # class = "border-0 shadow-none",
+              class = "border-0 shadow-none",
               layout_columns(
                 col_widths = c(4, 8),
                 selectizeInput(
@@ -237,7 +237,7 @@ dashboard_panel_aps <- function() {
                     plotlyOutput("plotHeadline") %>% spinner()
                   )
                 ),
-                DTOutput("tabHeadline")
+                dataTableOutput("tabHeadline")
               )
             )
           ),
@@ -312,7 +312,7 @@ dashboard_panel_sub_all <- function() {
       ),
       card(
         card_body(
-          # class = "border-0 shadow-none",
+          class = "border-0 shadow-none",
           layout_columns(
             selectInput(
               inputId = "subByAll",
@@ -364,76 +364,76 @@ dashboard_panel_sub_all <- function() {
             ),
             col_widths = c(3, 6, 3)
           )
-        ),
-        gov_main_layout(
-          tabsetPanel(
-            id = "tabsetpanels2a",
-            tabPanel(
-              value = "alevelAllSubject",
-              "Subject entries by all",
-              h3("A level single academic year:  Comparison by subject"),
-              layout_columns(
-                col_widths = c(8, 4),
-                textOutput("textSubAll"),
-                div(
-                  gov_text("Download chart data:"),
-                  br(),
-                  downloadButton(
-                    outputId = "downloadSubAll",
-                    label = "Download data",
-                    icon = shiny::icon("download"),
-                    class = "downloadButton"
-                  )
+        )
+      ),
+      gov_main_layout(
+        tabsetPanel(
+          id = "tabsetpanels2a",
+          tabPanel(
+            value = "alevelAllSubject",
+            "Subject entries by all",
+            h3("A level single academic year:  Comparison by subject"),
+            layout_columns(
+              col_widths = c(8, 4),
+              textOutput("textSubAll"),
+              div(
+                # gov_text("Download chart data:"),
+                # br(),
+                downloadButton(
+                  outputId = "downloadSubAll",
+                  label = "Download data",
+                  icon = shiny::icon("download"),
+                  class = "downloadButton"
                 )
-              ),
-              card(
-                plotlyOutput("plotAlevelSubject") %>% spinner(),
-                gov_text("Notes:
+              )
+            ),
+            card(
+              plotlyOutput("plotAlevelSubject") %>% spinner(),
+              gov_text("Notes:
                               - Total English covers English literature, English language, English language and literature.
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths.
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages.
                                   - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies.
                                   - STEM subjects cover Biology, Chemistry, Physics, Total maths, Further mathematics and Computer science.
                                   - Total Music includes Music and Music technology.")
+            )
+          ),
+          tabPanel(
+            "Cumulative results by all",
+            h3("A level cumulative percentage grade"),
+            layout_columns(
+              col_widths = c(9, 3),
+              textOutput("textSubResultAll"),
+              selectInput(
+                inputId = "resByAll",
+                "Select cumulative result",
+                choices = list(
+                  "A*-A" = "`A*-A`",
+                  "A*-B" = "`A*-B`",
+                  "A*-C" = "`A*-C`",
+                  "A*-D" = "`A*-D`",
+                  "A*-E" = "`A*-E`"
+                )
               )
             ),
-            tabPanel(
-              "Cumulative results by all",
-              h3("A level cumulative percentage grade"),
-              layout_columns(
-                col_widths = c(9, 3),
-                textOutput("textSubResultAll"),
-                selectInput(
-                  inputId = "resByAll",
-                  "Select cumulative result",
-                  choices = list(
-                    "A*-A" = "`A*-A`",
-                    "A*-B" = "`A*-B`",
-                    "A*-C" = "`A*-C`",
-                    "A*-D" = "`A*-D`",
-                    "A*-E" = "`A*-E`"
-                  )
-                )
-              ),
-              br(),
-              div(
-                gov_text("Download chart data & results:"), br(),
-                downloadButton(
-                  outputId = "downloadResAll",
-                  label = "Download data",
-                  icon = shiny::icon("download"),
-                  class = "downloadButton"
-                )
-              ),
-              card(
-                plotlyOutput("plotResultAll") %>% spinner(),
-                gov_text("Notes: A* grade was first awarded in 2010. - Total English covers English literature, English language, English language and literature.
+            br(),
+            div(
+              # gov_text("Download chart data & results:"), br(),
+              downloadButton(
+                outputId = "downloadResAll",
+                label = "Download data",
+                icon = shiny::icon("download"),
+                class = "downloadButton"
+              )
+            ),
+            card(
+              plotlyOutput("plotResultAll") %>% spinner(),
+              gov_text("Notes: A* grade was first awarded in 2010. - Total English covers English literature, English language, English language and literature.
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths.
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages.
                                   - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies.
                                   - STEM subjects cover Biology, Chemistry, Physics, Total maths, Further mathematics and Computer science.
                                   - Total Music includes Music and Music technology.")
-              )
             )
           )
         )
@@ -456,7 +456,7 @@ dashboard_panel_sub_fm <- function() {
     ),
     card(
       card_body(
-        # class = "border-0 shadow-none",
+        class = "border-0 shadow-none",
         layout_columns(
           selectizeInput(
             inputId = "subjectFm", label = "Select a subject:",
@@ -499,7 +499,7 @@ dashboard_panel_sub_fm <- function() {
             )
           ),
           div(
-            p(strong("Reset chart selection")),
+            p("Reset chart selection"),
             actionButton(inputId = "resetSubFm", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
           ),
           col_widths = c(3, 6, 3)
@@ -517,8 +517,8 @@ dashboard_panel_sub_fm <- function() {
             col_widths = c(8, 4),
             textOutput("textSubFm"), br(),
             div(
-              gov_text("Download chart data:"),
-              br(),
+              # gov_text("Download chart data:"),
+              # br(),
               downloadButton(
                 outputId = "downloadSubFm",
                 label = "Download data",
@@ -558,7 +558,7 @@ dashboard_panel_sub_fm <- function() {
           ),
           br(),
           div(
-            p("Download chart data & results:"), br(),
+            # p("Download chart data & results:"), br(),
             downloadButton(
               outputId = "downloadResFm",
               label = "Download data",
@@ -596,22 +596,27 @@ dashboard_panel_ms <- function() {
       ),
       card(
         card_body(
-          # class = "border-0 shadow-none",
+          class = "border-0 shadow-none",
           layout_columns(
-            # col_widths = c(6,3,3),
             selectizeInput(
-              "subjectMs", "Select one subject or combination",
+              inputId = "subjectMs", label = "Select one subject or combination",
               choices = list(
                 `Single subject` = list(
-                  "Biology", "Chemistry", "Computer science", "Further maths", "Maths",
+                  "Biology",
+                  "Chemistry",
+                  "Computer science",
+                  "Further maths",
+                  "Maths",
                   "Physics"
                 ),
                 `Combination` = list(
-                  "One maths/science subject", "Two maths/science subjects",
-                  "Three maths/science subjects", "Four maths/science subjects", "Zero maths/science subjects"
-                )
-              ),
-              selected = c("Maths")
+                  "One maths/science subject",
+                  "Two maths/science subjects",
+                  "Three maths/science subjects",
+                  "Four maths/science subjects",
+                  "Zero maths/science subjects"
+                ), selected = c("Maths")
+              )
             ),
             selectInput(
               inputId = "year_start_ms",
@@ -627,34 +632,34 @@ dashboard_panel_ms <- function() {
               selected = latest_year
             ),
             col_widths = c(6, 3, 3)
+          ),
+          layout_columns(
+            div(
+              p("Download full dataset"),
+              downloadButton(
+                outputId = "downloadDataSubjectMs",
+                label = "Download data",
+                icon = shiny::icon("download")
+                # class = "downloadButton"
+              )
+            ),
+            div(
+              p(strong("For more tables and metadata")),
+              actionButton(
+                inputId = "ees_3",
+                label = "Visit Explore Education Statistics",
+                icon = icon("table-cells"),
+                onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2024-25', '_blank')",
+                style = "width:100%;white-space:normal;"
+              )
+            ),
+            div(
+              p(strong("Reset chart selection")),
+              align = "right",
+              actionButton(inputId = "resetSubMs", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
+            ),
+            col_widths = c(4, 4, 4)
           )
-        ),
-        layout_columns(
-          div(
-            p("Download full dataset"),
-            downloadButton(
-              outputId = "downloadDataSubjectMs",
-              label = "Download data",
-              icon = shiny::icon("download")
-              # class = "downloadButton"
-            )
-          ),
-          div(
-            p(strong("For more tables and metadata")),
-            actionButton(
-              inputId = "ees_3",
-              label = "Visit Explore Education Statistics",
-              icon = icon("table-cells"),
-              onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2024-25', '_blank')",
-              style = "width:100%;white-space:normal;"
-            )
-          ),
-          div(
-            p(strong("Reset chart selection")),
-            align = "right",
-            actionButton(inputId = "resetSubMs", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
-          ),
-          col_widths = c(4, 4, 4)
         )
       ),
       column(

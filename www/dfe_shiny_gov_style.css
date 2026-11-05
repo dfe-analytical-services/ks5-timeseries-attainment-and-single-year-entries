@@ -86,9 +86,7 @@ a:focus {
 
 /* This line sets the main area width. Originally set to 66.667% in the GDS 
 template. 80% works well here to reduce white space on the right hand side.*/
-.col-sm-8 {
-  width: 80%
-}
+.col-sm-8{ width: 80%}
 
 .container-fluid {
   padding: 0px;
@@ -97,6 +95,7 @@ template. 80% works well here to reduce white space on the right hand side.*/
 .row {
   margin-right: 0px;
 }
+
 
 /* GOV.UK cookies ---------------------------------------------------------- */
 .govuk-cookie-banner {
@@ -108,6 +107,7 @@ template. 80% works well here to reduce white space on the right hand side.*/
 .govuk-header__logo {
   box-sizing: border-box
 }
+
 
 .govuk-header__logo {
   margin-bottom: 10px;
@@ -225,19 +225,10 @@ html {
   color: #fff;
 }
 
+
 /* Custom value boxes CSS -------------------------------------------------- */
 /* Set the font sizes */
-#vboxhead-small {
-  text-align: left;
-  font-weight: bold;
-  font-size: 36px;
-}
 
-#vboxdetail-small {
-  text-align: left;
-  font-weight: bold;
-  font-size: 24px;
-}
 
 #vboxhead-medium {
   text-align: left;
@@ -251,53 +242,13 @@ html {
   font-size: 26px;
 }
 
-#vboxhead-large {
-  text-align: left;
-  font-weight: bold;
-  font-size: 56px;
-}
-
-#vboxdetail-large {
-  text-align: left;
-  font-weight: bold;
-  font-size: 28px;
-}
-
 /* Set the colours for the value boxes */
-.small-box.bg-purple {
-  background-color: #801650 !important;
-  color: #ffffff !important;
-}
-
-.small-box.bg-white {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
 
 .small-box.bg-blue {
   background-color: #1d70b8 !important;
   color: #ffffff !important;
 }
 
-.small-box.bg-orange {
-  background-color: #F46A25 !important;
-  color: #ffffff !important;
-}
-
-.small-box.bg-red {
-  background-color: #f499be !important;
-  color: #ffffff !important;
-}
-
-.small-box.bg-green {
-  background-color: #00703c !important;
-  color: #ffffff !important;
-}
-
-.small-box.bg-dark-blue {
-  background-color: #12436D !important;
-  color: #ffffff !important;
-}
 
 /* Set default reactable styles */
 .reactable {
@@ -398,4 +349,18 @@ html {
 .selectize-dropdown-content .option.active {
     background-color: #fd0 !important;
     color: black !important;
+}
+
+
+
+/* DataTables export buttons */
+.dt-buttons .btn.btn-secondary {
+    background-color: #1d70b8 !important;
+    border-color:  #1d70b8  !important;
+    color: #ffffff !important;
+}
+
+.dt-buttons .btn.btn-secondary:hover {
+    background-color:  #1d70b8  !important;
+    border-color:  #1d70b8  !important;
 }

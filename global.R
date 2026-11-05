@@ -24,9 +24,9 @@ shhh(library(stringr))
 
 # Creating charts and tables
 shhh(library(ggplot2))
+shhh(library(plotly))
 shhh(library(ggiraph))
 shhh(library(sf))
-shhh(library(plotly))
 shhh(library(DT))
 shhh(library(tidyr))
 shhh(library(hrbrthemes))
@@ -36,6 +36,7 @@ shhh(library(htmltools))
 shhh(library(reactable))
 shhh(library(svglite))
 shhh(library(afcharts))
+
 shhh(library(ggrepel))
 shhh(library(showtext))
 shhh(library(openxlsx))
@@ -45,11 +46,13 @@ shhh(library(openxlsx))
 shhh(library(shinyjs))
 shhh(library(shinytitle))
 shhh(library(xfun))
+shhh(library(metathis))
+shhh(library(shinyalert))
 shhh(library(shinyWidgets))
 shhh(library(shinycssloaders))
 shhh(library(shinyBS))
 
-# Dependencies needed for testing or CI but not for the app -------------------
+# Dependencies needed for testing or CI but not for the app ---------------------------------
 # Including them here keeps them in renv but avoids the app needlessly loading
 # them, saving on load time.
 if (FALSE) {
@@ -60,7 +63,7 @@ if (FALSE) {
 }
 
 
-# Source scripts -------------------------------------------------------------------------
+# Source scripts ----------------------------------------------------------------------------
 # Source script for loading in data
 
 source("R/read_data.R")
@@ -68,8 +71,8 @@ source("R/read_data.R")
 # Source custom function script
 
 source("R/helper_functions.R")
-# Functions ---------------------------------------------------------------------------------
 
+# gbp <- enc2utf8("\u00A3")
 
 # appLoadingCSS ----------------------------------------------------------------------------
 # Set up loading screen
@@ -88,17 +91,35 @@ source("R/helper_functions.R")
 # }
 # "
 
+# Set global variables --------------------------------------------------------------------
+
 site_title <- "16 to 19 time series attainment and single year entry"
 site_primary <- "https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries/"
 site_overflow <- "https://department-for-education.shinyapps.io/ks5-timeseries-attainment-and-single-year-entries-overflow/"
 sites_list <- c(site_primary, site_overflow) # We can add further mirrors where necessary. Each one can generally handle about 2,500 users simultaneously
 ees_pub_name <- "A level and other 16 to 19 results" # Update this with your parent publication name (e.g. the EES publication)
 ees_publication <- "https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results" # Update with parent publication link
+
+# Set the key for Google Analytics tracking
 google_analytics_key <- "C9DQ5CPBCR"
 
 
+# Enable bookmarking so that input choices are shown in the url ------------------------------
+enableBookmarking("url")
 
-## --------- Read A level subject entries - single academic year -------------------------------------------
+# Fonts for charts ---------------------------------------------------------------------------
+font_add("dejavu", "www/fonts/DejaVuSans.ttf")
+register_font(
+  "dejavu",
+  plain = "www/fonts/DejaVuSans.ttf",
+  bold = "www/fonts/DejaVuSans-Bold.ttf",
+  italic = "www/fonts/DejaVuSans-Oblique.ttf",
+  bolditalic = "www/fonts/DejaVuSans-BoldOblique.ttf"
+)
+showtext_auto()
+
+
+# A level subject entries - single academic year -------------------------------------------
 # Read in A level data for subject entries and results
 
 #  The latest year is mainly used by A level subject entries and Maths and Science to allow selection of year
@@ -133,19 +154,19 @@ dfAlevelSubject <- dfAlevelSubjectRaw %>%
     version
   ) %>%
   mutate(
-    entry_count = as.numeric(entry_count),
+    entry_count = as.numeric(entry_count, na.rm = TRUE),
     thousand_entries = as.numeric(entry_count / 1000),
-    `A*-A` = as.numeric(`A*-A`),
-    `A*-B` = as.numeric(`A*-B`),
-    `A*-C` = as.numeric(`A*-C`),
-    `A*-D` = as.numeric(`A*-D`),
-    `A*-E` = as.numeric(`A*-E`),
+    `A*-A` = suppressWarnings(as.numeric(`A*-A`)),
+    `A*-B` = suppressWarnings(as.numeric(`A*-B`)),
+    `A*-C` = suppressWarnings(as.numeric(`A*-C`)),
+    `A*-D` = suppressWarnings(as.numeric(`A*-D`)),
+    `A*-E` = suppressWarnings(as.numeric(`A*-E`)),
     subject_name = as.factor(subject_name),
     characteristic_value = as.factor(characteristic_value),
     version = as.factor(version)
   )
 
-## intention here is to select timeseries data from 1996 to date.
+## intention here is to select time-series data from 1996 to date.
 # Some subjects have filtered out inlcuding subjects greater or equal to 10 years
 subjectByAll <- dfAlevelSubject %>%
   group_by(subject_name, characteristic_value) %>%
@@ -174,9 +195,9 @@ homeEconomics <- dfAlevelSubject %>%
   )
 
 
-#####################################################################################################
+# A level attainment  by institution type ----------------------------------------
 
-# Read in  A level aggregate APS and grade by institution type
+# Read in
 
 alevel_attain_download <- read_alevel_aps_data()
 
@@ -241,7 +262,7 @@ fmDiff <- dfApsSexGap %>%
   )
 
 
-########################################################################################################
+# Headline attainment --------------------------------------------------------------------------------------------
 
 # Read in attainment data for alevel, applied general and techlevel
 
@@ -302,8 +323,8 @@ dfAttainment <- dfAttainmentRaw %>%
   ungroup()
 
 
-#############################################################################################################
-# Maths Science attainment
+
+# Maths Science attainment -----------------------------------------------------------------
 #
 #
 dfMsRaw <- read_all_ms_data()

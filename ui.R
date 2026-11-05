@@ -26,33 +26,30 @@ ui <- function(input, output, session) {
   gov_page(
     width = "full",
     bslib::page_fluid(
-      tags$head(HTML(paste0("<title>", site_title, "</title>"))),
+      # shina11y::use_totally(),
+      tags$head(HTML("<title> site_title </title>")),
       tags$head(tags$link(rel = "shortcut icon", href = "dfefavicon.png")),
       use_shiny_title(),
       useShinyjs(),
       tags$html(lang = "en"),
-      #  bs_theme(version=5, primary = "#1D70B8"),
-
-      tags$head(
-        tags$link(
-          rel = "stylesheet",
-          type = "text/css",
-          href = "gov_table_style.css"
-        )
-      ),
+      tags$head(tags$style(HTML(".dt-buttons .btn.btn-secondary {
+        background-color: #1d70b8 !important;
+        border-color: #1d70b8 !important;
+        color: #ffffff !important;
+      } "))),
 
 
-      # # Add meta description for search engines
-      # meta()%>%
-      #   meta_general(
-      #   application_name = site_title,
-      #     description = site_title,
-      #     robots = "index,follow",
-      #     generator = "R-Shiny",
-      #     subject = "16 to 19 statistics",
-      #     rating = "General",
-      #     referrer = "no-referrer"
-      #   ),
+      # Add meta description for search engines
+      meta() %>%
+        meta_general(
+          application_name = site_title,
+          description = site_title,
+          robots = "index,follow",
+          generator = "R-Shiny",
+          subject = "16 to 18 statistics",
+          rating = "General",
+          referrer = "no-referrer"
+        ),
 
       # Custom disconnect function ----------------------------------------------
       # Variables used here are set in the global.R file
@@ -85,8 +82,11 @@ ui <- function(input, output, session) {
       # Header ------------------------------------------------------------------
 
       shinyGovstyle::header(
-        site_title # "16 to 19 time-series attainment and single year entry"
+        org_name = "",
+        service_name = site_title # "16 to 19 time-series attainment and single year entry"
       ),
+
+      # Beta banner
       shinyGovstyle::banner(
         "beta banner",
         "Beta",
@@ -94,41 +94,34 @@ ui <- function(input, output, session) {
           "This Dashboard is in beta phase and we are still reviewing performance and reliability."
         )
       ),
-      # see dashboard_panels for for coverage
+      # see dashboard_panels for coverage
 
-      bslib::navset_hidden(
-        id = "pages",
-        nav_panel(
-          "dashboard",
-          shiny::navlistPanel(
-            "",
-            id = "navlistPanel",
-            widths = c(2, 7),
-            well = FALSE,
-            homepage_panel(),
-            dashboard_panel_aps(),
-            dashboard_panel_ms(),
-            dashboard_panel_sub_all(),
-            dashboard_panel_sub_fm(),
-            flow_panel(),
-            a11y_panel(),
-            support_panel()
-          )
-        ),
-        nav_panel(
-          value = "a11_panel",
-          "Accessibility",
-          layout_columns(
-            # col_widths = c(-2, 8, -2),
-            gov_main_layout(
-              width = "standard",
-              # Add in back link
-              actionLink(
-                class = "govuk-back-link",
-                style = "margin: 0",
-                "accessibility_to_dashboard",
-                "Back to dashboard"
-              ),
+      gov_main_layout(
+        bslib::navset_hidden(
+          id = "pages",
+          nav_panel(
+            "dashboard",
+            # Dashboard nav_panels -----------------------------------------------
+            shiny::navlistPanel(
+              "",
+              id = "navlistPanel",
+              widths = c(2, 7),
+              well = FALSE,
+              homepage_panel(),
+              dashboard_panel_aps(),
+              dashboard_panel_ms(),
+              dashboard_panel_sub_all(),
+              dashboard_panel_sub_fm(),
+              flow_panel()
+              # a11y_panel(),
+              # support_panel()
+            )
+          ),
+          nav_panel(
+            value = "accessibility_statement",
+            "Accessibility",
+            layout_columns(
+              col_widths = c(-2, 8, -2),
               actionLink(
                 class = "govuk-back-link",
                 style = "margin: 0",
@@ -147,55 +140,57 @@ ui <- function(input, output, session) {
                 non_accessible_components = c(
                   ""
                 ),
-                specific_issues = c(
-                  ""
-                )
+                specific_issues = c("Keyboard navigation through the interactive charts is
+                                    currently limited, and some features are unavailable for keyboard only users,
+                                    Line colours on charts may not line up with legends.")
               )
             )
-          )
-        ),
-        nav_panel(
-          value = "cookies_panel_ui",
-          "Cookies",
-          gov_main_layout(
-            width = "standard",
+          ),
+          nav_panel(
+            value = "cookies_panel_ui",
+            "use of cookies",
+            layout_columns(
+              col_widths = c(-2, 8, -2),
 
-            # Add backlink
-            actionLink(
-              class = "govuk-back-link",
-              style = "margin: 0",
-              "cookies_to_dashboard",
-              "Back to dashboard"
-            ),
-            cookies_panel_ui(google_analytics_key = google_analytics_key)
-          )
-        ),
-        nav_panel(
-          value = "support_panel",
-          "Support and feedback",
-          gov_main_layout(
-            width = "standard",
+              # Add backlink
+              actionLink(
+                class = "govuk-back-link",
+                style = "margin: 0",
+                "cookies_to_dashboard",
+                "Back to dashboard"
+              ),
+              cookies_panel_ui(google_analytics_key = google_analytics_key)
+            )
+          ),
+          nav_panel(
+            value = "support_panel",
+            "Support and feedback",
+            # Set up column layout to center it ---------------------------------------
+            layout_columns(
+              col_widths = c(-2, 8, -2),
 
-            # Add in back link
-            actionLink(
-              class = "govuk-back-link",
-              style = "margin: 0",
-              "support_to_dashboard",
-              "Back to dashboard"
-            ),
-            support_panel()
+              # Add in back link
+              actionLink(
+                class = "govuk-back-link",
+                style = "margin: 0",
+                "support_to_dashboard",
+                "Back to dashboard"
+              ),
+              support_panel()
+            )
           )
         )
-      )
-    ),
+        # )
+      ),
 
-    # Footer ------------------------------------------------------------------
-    shinyGovstyle::footer(
-      full = TRUE,
-      links = c(
-        "Accessibility statement",
-        "Use of cookies",
-        "Support"
+      # Footer ------------------------------------------------------------------
+      shinyGovstyle::footer(
+        full = TRUE,
+        links = c(
+          "Support and feedback",
+          "Accessibility statement",
+          "Use of cookies"
+        )
       )
     )
   )
