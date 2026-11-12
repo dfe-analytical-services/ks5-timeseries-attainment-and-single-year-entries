@@ -1899,34 +1899,32 @@
       "description": {
         "Package": "gdtools",
         "Title": "Font Metrics and Font Management Utilities for R Graphics",
-        "Version": "0.5.2",
-        "Authors@R": "c(\n    person(\"David\", \"Gohel\", , \"david.gohel@ardata.fr\", role = c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = \"aut\"),\n    person(\"Lionel\", \"Henry\", , \"lionel@rstudio.com\", role = \"aut\"),\n    person(\"Jeroen\", \"Ooms\", , \"jeroen@berkeley.edu\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Yixuan\", \"Qiu\", role = \"ctb\"),\n    person(\"R Core Team\", role = \"cph\",\n           comment = \"Cairo code from X11 device\"),\n    person(\"ArData\", role = \"cph\"),\n    person(\"RStudio\", role = \"cph\")\n  )",
-        "Description": "Compute text metrics (width, ascent, descent) using 'Cairo'\n    and 'FreeType', independently of the active graphic device. Font\n    lookup is delegated to 'systemfonts'. Additional utilities let users\n    register 'Google Fonts' or bundled 'Liberation' fonts, check font\n    availability, and assemble 'htmlDependency' objects so that fonts are\n    correctly embedded in 'Shiny' applications, 'R Markdown' documents,\n    and 'htmlwidgets' outputs such as 'ggiraph'.",
+        "Version": "0.5.3",
+        "Authors@R": "c(\n    person(\"David\", \"Gohel\", , \"david.gohel@ardata.fr\", role = c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = \"aut\"),\n    person(\"Lionel\", \"Henry\", , \"lionel@rstudio.com\", role = \"aut\"),\n    person(\"Jeroen\", \"Ooms\", , \"jeroen@berkeley.edu\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Yixuan\", \"Qiu\", role = \"ctb\"),\n    person(\"ArData\", role = \"cph\"),\n    person(\"RStudio\", role = \"cph\")\n  )",
+        "Description": "Compute text metrics (width, ascent, descent) from font\n    files with 'FreeType', independently of the active graphic device.\n    Font lookup is delegated to 'systemfonts'. Additional utilities let users\n    register 'Google Fonts' or bundled 'Liberation' fonts, check font\n    availability, and assemble 'htmlDependency' objects so that fonts are\n    correctly embedded in 'Shiny' applications, 'R Markdown' documents,\n    and 'htmlwidgets' outputs such as 'ggiraph'.",
         "License": "GPL-3 | file LICENSE",
         "URL": "https://davidgohel.github.io/gdtools/",
         "BugReports": "https://github.com/davidgohel/gdtools/issues",
         "Depends": "R (>= 4.0.0)",
-        "Imports": "fontquiver (>= 0.2.0), htmltools, Rcpp (>= 0.12.12),\nsystemfonts (>= 1.3.1), tools",
+        "Imports": "fontquiver (>= 0.2.0), htmltools, Rcpp (>= 0.12.16),\nsystemfonts (>= 1.3.1), tools",
         "Suggests": "curl, gfonts, testthat",
         "LinkingTo": "Rcpp",
         "Config/roxygen2/version": "8.1.1",
         "Encoding": "UTF-8",
-        "SystemRequirements": "cairo, freetype2, fontconfig",
+        "SystemRequirements": "freetype2",
         "NeedsCompilation": "yes",
-        "Packaged": "2026-10-15 16:51:47 UTC; davidgohel",
-        "Author": "David Gohel [aut, cre],\n  Hadley Wickham [aut],\n  Lionel Henry [aut],\n  Jeroen Ooms [aut] (ORCID: <https://orcid.org/0000-0002-4035-0289>),\n  Yixuan Qiu [ctb],\n  R Core Team [cph] (Cairo code from X11 device),\n  ArData [cph],\n  RStudio [cph]",
+        "Packaged": "2026-11-05 13:28:14 UTC; davidgohel",
+        "Author": "David Gohel [aut, cre],\n  Hadley Wickham [aut],\n  Lionel Henry [aut],\n  Jeroen Ooms [aut] (ORCID: <https://orcid.org/0000-0002-4035-0289>),\n  Yixuan Qiu [ctb],\n  ArData [cph],\n  RStudio [cph]",
         "Maintainer": "David Gohel <david.gohel@ardata.fr>",
         "Repository": "CRAN",
-        "Date/Publication": "2026-10-15 18:50:02 UTC",
-        "Built": "R 4.5.3; x86_64-w64-mingw32; 2026-10-26 02:23:31 UTC; windows",
+        "Date/Publication": "2026-11-05 14:10:02 UTC",
+        "Built": "R 4.5.3; x86_64-w64-mingw32; 2026-11-06 16:42:11 UTC; windows",
         "Archs": "x64",
         "RemoteType": "standard",
-        "RemoteRef": "gdtools",
         "RemotePkgRef": "gdtools",
+        "RemoteRef": "gdtools",
         "RemoteRepos": "https://cran.rstudio.com",
-        "RemoteReposName": "CRAN",
-        "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "0.5.2"
+        "RemoteSha.Version": "0.5.3"
       }
     },
     "generics": {
@@ -6043,7 +6041,10 @@
       "checksum": "915d2a79beebb4b8fbd314efda0062b0"
     },
     ".Rprofile": {
-      "checksum": "8cb6e612238a1a12e5e750800a15752d"
+      "checksum": "ce402c40995b02781e3462ec67f8dfe7"
+    },
+    "0/renv.lock": {
+      "checksum": "f0579c0facd6f9f3d37d9f1981174e73"
     },
     "CODE_OF_CONDUCT.md": {
       "checksum": "7dcf9b0b5bac78fc7d7fe45f8c5102b1"
@@ -6051,38 +6052,23 @@
     "CONTRIBUTING.md": {
       "checksum": "c5bc7101071d618f7a18344ac099692c"
     },
-    "data/alevel_attainment_with_2025.csv": {
-      "checksum": "3c83d4184b01ca4ef790d427d68f4f75"
-    },
     "data/alevel_attainment_with_2026.csv": {
       "checksum": "62ee9c73651ca7667dfaccc2da8c83ff"
-    },
-    "data/all_alevel_timeseries_data_1996_to_2025.csv": {
-      "checksum": "2c0d1d5958f725c301e4382d6a5cd07d"
     },
     "data/all_alevel_timeseries_data_1996_to_2026.csv": {
       "checksum": "c2ffeaf355b01e1c3cb28da16db54340"
     },
-    "data/all_attainment_with_2025.csv": {
-      "checksum": "e166c137e162bef899fc79efd07ac0d8"
-    },
     "data/all_attainment_with_2026.csv": {
       "checksum": "184fdd4d01d6849b08058ada41c359d5"
     },
-    "data/aps_gender_gap_with_2025.csv": {
-      "checksum": "3ff4f57c648b8fea5453ed1cb9ae1240"
-    },
     "data/aps_gender_gap_with_2026.csv": {
       "checksum": "aadb34af19f521d3bafa117f25088a19"
-    },
-    "data/maths_science_2010_2025.csv": {
-      "checksum": "1f5bcbb4ded0863a8819af319b397a4f"
     },
     "data/maths_science_2010_2026.csv": {
       "checksum": "7d4b77e7b705bd965c97828a30fa005f"
     },
     "datafiles_log.csv": {
-      "checksum": "85bbda9f837c016477e8ec8ed0c4c0cb"
+      "checksum": "fec2653f0633541905b2c8650eddcc85"
     },
     "deploy-parameters.yaml": {
       "checksum": "1a9804b66481773443d42cea1b7385a6"
@@ -6094,7 +6080,7 @@
       "checksum": "8ec293c34e23ac3b9507ce2ffadcd080"
     },
     "global.R": {
-      "checksum": "8d0dc2e7dfb24f8b28fc9b5a8e5a1619"
+      "checksum": "e14e1c221347528d3ea6a87a620ba763"
     },
     "google-analytics.html": {
       "checksum": "ed3f1cc354d42a4a3e5a3c58af3be0cf"
@@ -6106,7 +6092,7 @@
       "checksum": "33bce00050768810c97392bb0bb418da"
     },
     "R/dashboard_panels.R": {
-      "checksum": "488361fa05716c2d21c8ad2e1c835140"
+      "checksum": "32c27a34450df69488a1317ff2fe8d35"
     },
     "R/dfe_resources.R": {
       "checksum": "a63f2fc6a5851aeef11840b2a70c9201"
@@ -6115,10 +6101,10 @@
       "checksum": "7f93457e2c831dba2429acf654cb9436"
     },
     "R/map_institution_type.R": {
-      "checksum": "292425a0ffc76bb037e468b963c5612a"
+      "checksum": "2001ee8340fd1a9db5a22b7f1aaa19b0"
     },
     "R/plotting.R": {
-      "checksum": "adbe77e16cdca07869a1963f616ee268"
+      "checksum": "99dd020d24e7faf16e493cfaf37ba455"
     },
     "R/read_data.R": {
       "checksum": "22a8e3174685d3b324be2ad5857b1cd7"
@@ -6130,13 +6116,13 @@
       "checksum": "d41d8cd98f00b204e9800998ecf8427e"
     },
     "README.md": {
-      "checksum": "2f2d5028bde03a79b96e105d4be1ecd4"
+      "checksum": "a08837208beee0cce60e6d315248231a"
     },
     "renv.lock": {
-      "checksum": "103eddec65c1930063ebe1224a9203e3"
+      "checksum": "bba496ea2dd6d8090fd0705456275a62"
     },
     "server.R": {
-      "checksum": "8391ea88c2907a9e90c2307b679b85e8"
+      "checksum": "828bee813bbce93a9fc378c95b2e0e75"
     },
     "tests/profvis/profvis_output_example.Rprofvis": {
       "checksum": "dbdef7689b6abf6badea68c19d5be303"
@@ -6160,7 +6146,7 @@
       "checksum": "1ac97465d482a9fe57715d8b6d9d9adb"
     },
     "ui.R": {
-      "checksum": "76b726bf5e4f4cb9ba30a2d8a5152f5d"
+      "checksum": "cb91a618fc48ebf7b218c180c121e3a2"
     },
     "www/cookie-consent.js": {
       "checksum": "942789aa3ef2153ae6e6236579b53a2e"
