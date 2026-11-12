@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-16 to 18 Time series attainment and single year entry dashboard
+16 to 19 Time series attainment and single year entry dashboard
   <br>
 </h1>
 
@@ -17,10 +17,10 @@
 
 ## Introduction 
 
-This dashboard allows users to explore time series data for 16 to 18 qualifications in England, with breakdowns by institution type 
-(for average result/grade) and sex (for both A level average result/grade, and A level entries and grades in individual subjects).
+This dashboard allows users to explore time series data for 16 to 19 qualifications in England, with breakdowns by institution type 
+(for average result/grade) and sex (for A level average result/grade, A level entries and grades in individual subjects, and Maths and Science).
 
-It brings together figures compiled from the current and previous versions of the ‘A level and other 16 to 18 results’ statistical release.
+It brings together figures compiled from the current and previous versions of the ‘A level and other 16 to 19 results’ statistical release.
 
 
 ---
@@ -31,7 +31,7 @@ It brings together figures compiled from the current and previous versions of th
 
 - Installation of R Studio 2025.09.2 Build 418
 
-- Installation of R 4.5.0 or higher
+- Installation of R 4.5.3 or higher
 
 - Installation of RTools45 or higher
 
@@ -94,7 +94,7 @@ If you spot any issues with the application, please flag it in the "Issues" tab 
 
 ### Merging pull requests
 
-Only members of the 16-18 accountability data and development team can merge pull requests. Add patithomas, cjrace, and rmbielby as a requested reviewers, and the team will review before merging.
+Only members of the 16-19 accountability data and development team can merge pull requests. Add patithomas, cjrace, and rmbielby as a requested reviewers, and the team will review before merging.
 
 ---
 

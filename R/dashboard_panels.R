@@ -1,8 +1,11 @@
 homepage_panel <- function() {
-  tabPanel(
-    "Homepage",
+  nav_panel(
+    value = "homepage",
+    "homepage",
     gov_main_layout(
+      width = "standard",
       gov_row(
+        full = TRUE,
         column(
           12,
           heading_text(
@@ -26,38 +29,45 @@ homepage_panel <- function() {
             heading_text("Contents", size = "m", level = 2)
           ),
           card_body(
-            gov_text("This dashboard allows users to explore time series data for 16 to 18 qualifications in England.
-                    It brings together figures compiled from the current and previous versions of the (A level and other 16 to 18 results) statistical release with focus on:"),
+            gov_text("This dashboard allows users to explore time series data for 16 to 19 qualifications in England.
+                    It brings together figures compiled from the current and previous versions of the (A level and other 16 to 19 results) statistical release with focus on:"),
             tags$div(
               title = "Headline attainment and A level time series by institution type",
-              h3(actionLink("link_to_headline_tab", "Headline attainment and A level result by institution type")),
-              # p(" The headline attainment does not include vocational and technical qualifications for 2024 provisional data due to a data collection issue. This will be resolved in the revised publication."),
-              gov_text("The year in tables/charts is the academic year in which students completed 16-18 study (i.e. 2025 means 2024/25). 16-18 study normally lasts either 2 or 3 years and attainment accounts for all entries during that period."),
+              # h3(actionLink("link_to_headline_tab", "Headline attainment and A level result by institution type")),
+              heading_text("Attainment:
+                           Headline attainment and A level result by institution type", size = "s", level = 3),
+              gov_text("Headline attainment shows entry count and result for A level, applied general and tech level by institution type.
+                       The year in tables/charts is the academic year in which students completed 16-19 study (i.e. 2026 means 2025/26). 16-19 study normally lasts either 2 or 3 years and attainment accounts for all entries during that period."),
               gov_text("Drop-down box within the chart area allows for selection of one institution type.  To view latest results and trend, click on the drop-down box and  select institution type required."),
-              h4("APS for A level by all & sex"),
+              heading_text("APS for A level by all & sex", size = "s", level = 3),
               gov_text("The line charts display the yearly trend and grades for all students and by sex, while the female - male sex gap shows the difference in average point score.
                    To view and explore trend select up to four institution types from the drop-down menu at the top of the page."),
               tags$div(
-                title = "(A level students entering maths and science by sex",
-                h3(actionLink("link_to_alevelMathsScience_tab", "A level students entering maths and science by sex")),
-                gov_text("The line chart shows the yearly trend in the proportion of A level students entering maths and science  from 2009/10 to 2024/25 (end of 16-18 study).
-                  Select one subject or combination from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available).")
-              ),
-              tags$div(
-                title = "(A level subject entry and grade: comparison by subject",
-                h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and grade: comparison by subject")),
-                gov_text("A level data on subject entry refers to all entries by 16-18 year olds in the year stated (where 2025 means 2024/25 academic year)."),
-                gov_text("The line charts and cumulative percentage grades display the yearly trend from 1995/96 to 2024/25.
+                title = "(Maths and Science",
+                # h3(actionLink("link_to_alevelMathsScience_tab", "A level students entering maths and science by sex")),
+                heading_text("Maths and Science", size = "s", level = 3),
+                gov_text("This covers the number and proportion of students that entered each maths/science subject along with each combination
+                broken down by sex.  The line chart shows the yearly trend in the proportion of A level students entering maths and science from 2009/10 to 2025/26 (end of 16-19 study).
+                  Select one subject or combination from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available)."),
+                tags$div(
+                  title = "(Subject entry and grade",
+                  # h3(actionLink("link_to_alevelAllSubject_tab", "A level subject entry and grade: comparison by subject")),
+                  heading_text("Subject entry and grade:", size = "s", level = 3),
+                  gov_text("Subject entry and grade shows A level subject entry and grade distribution for all students (single academic year).
+                         Data refers to all entries by 16-19 year olds in the year stated (where 2026 means 2025/26 academic year)."),
+                  gov_text("The line charts and cumulative percentage grades display the yearly trend from 1995/96 to 2025/26.
                  Drop-down menus at the top of the page allows for the selection and comparison of up to four subjects
                   and cumulative grades.
-                    ")
-              ),
-              tags$div(
-                title = "A level subject entry and result: comparison by sex",
-                h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result: comparison by sex")),
-                gov_text("The line charts for subject entries and cumulative percentage grades display the yearly trend for female and male from 1995/96 to 2024/25.
+                    "),
+                  tags$div(
+                    title = "Subject entry and grade by sex:",
+                    # h3(actionLink("link_to_alevelFmSubject_tab", "A level subject entry and result: comparison by sex")),
+                    heading_text("Subject entry and grade by sex", size = "s", level = 3),
+                    gov_text("This covers A level subject entry and grade distribution by sex (single academic year).  The line charts display the yearly trend for female and male from 1995/96 to 2025/26.
 
                   Select one subject from the dropdown menu at the top of the page, followed by the start year to view changes over time (end year is fixed at the latest year available).")
+                  )
+                )
               )
             )
           )
@@ -72,7 +82,7 @@ homepage_panel <- function() {
           card_body(
             tags$div(
               title = "Attainment by institution type",
-              h3("Attainment by institution type"),
+              heading_text("Attainment by institution type", size = "s", level = 3),
               gov_text("Headline attainment is the average point score (APS) per entry also expressed as a grade.
                   Coverage includes A level, applied general and tech level qualifications.  A level APS per entry started in 2012/13 with
                   a points scale between 0-300 where grade A* was 300 points and a grade E was equal to 150 points.
@@ -89,7 +99,7 @@ homepage_panel <- function() {
             ),
             tags$div(
               title = "Comparing institution types",
-              h3("Comparing institution types"),
+              heading_text("Comparing institution types", size = "s", level = 3),
               gov_text("The dropdown menu at the top of the page for A level APS per entry allows for the selection of up to four
                   institution types.  Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes, for example there are very low numbers of students in free schools,
@@ -97,18 +107,19 @@ homepage_panel <- function() {
             ),
             tags$div(
               title = "A level subject entry and cumulative grade",
-              h3("A level subject entry and cumulative grade"),
+              heading_text("A level subject entry and cumulative grade", size = "s", level = 3),
               gov_text("The subject entries and cumulative grades covered on the dashboard are based on
-                  subjects grouped from 1995/96 to 2024/25. More detailed breakdowns of some subjects from 2015/16
+                  subjects grouped from 1995/96 to 2025/26. More detailed breakdowns of some subjects from 2015/16
                   are available via the full dataset download, at the top of the page."),
-              h4("Subject definitions"),
+              # h4("Subject definitions"),
+              heading_text("Subject definitions", size = "s", level = 3),
               gov_text("Total English covers English literature, English language, English language and literature. "),
               gov_text("Total Maths covers Maths, Pure maths, Statistics, Use of maths and Other maths"),
               gov_text("Total Modern languages cover French, German, Spanish and other foreign modern languages. "),
               gov_text("Total Classical studies covers Latin, Greek, Classical civilisation, and Other classical studies"),
               gov_text("STEM subjects cover Biology, Chemistry, Physics, Total maths, Further mathematics and Computer science. "),
               gov_text("Total Music includes Music and Music technology."),
-              gov_text("The data refers to all entries by 16-18 year olds in the year stated (where 2025 means 2024/25 academic year).")
+              gov_text("The data refers to all entries by 16-19 year olds in the year stated (where 2026 means 2025/26 academic year).")
             )
           )
         )
@@ -120,19 +131,18 @@ homepage_panel <- function() {
 # --------------- Headline APS and A level APS Panel -------------------------------
 
 dashboard_panel_aps <- function() {
-  tabPanel(
+  nav_panel(
     value = "dashboard",
     "Attainment: APS per entry & average result (end of 16-19 study)",
     gov_main_layout(
       width = "standard",
       gov_row(
-        column(
-          width = 12,
-          heading_text(
-            level = 2,
-            size = "m",
-            "Headline attainment and A level time series by institution type in England"
-          )
+        full = TRUE,
+        heading_text(
+          level = 2,
+          size = "m",
+          "Headline attainment and A level time series by institution type in England"
+          # )
         ),
         expandable(
           inputId = "details", label = textOutput("dropdown_label"),
@@ -144,7 +154,7 @@ dashboard_panel_aps <- function() {
                 selectizeInput(
                   inputId = "allSex",
                   label = "Select students",
-                  choices = unique(dfAlevelAps$characteristic_sex) %>%
+                  choices = unique(dfAlevelAps$sex) %>%
                     sort(), selected = "All students", width = "100%"
                 ),
                 selectizeInput("alevelInstitute", "Select up to 4 institution types",
@@ -167,7 +177,7 @@ dashboard_panel_aps <- function() {
               fluidRow(
                 column(
                   width = 4,
-                  gov_text(strong("Download full dataset")),
+                  gov_text("Download full dataset"),
                   downloadButton(
                     outputId = "downloadDataAps",
                     label = "Download data",
@@ -177,18 +187,18 @@ dashboard_panel_aps <- function() {
                 ),
                 column(
                   width = 4,
-                  gov_text(strong("For more tables and metadata")),
+                  gov_text("For more tables and metadata"),
                   actionButton(
                     inputId = "ees_1",
                     label = "Visit Explore Education Statistics",
                     icon = icon("table-cells"),
-                    onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2024-25', '_blank')",
+                    onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/16-to-19-performance/', '_blank')",
                     style = "width:100%;white-space:normal;"
                   )
                 ),
                 column(
                   width = 4,
-                  gov_text(strong("Reset chart selection")),
+                  gov_text("Reset chart selection"),
                   align = "right",
                   actionButton(inputId = "resetApsAll", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
                 )
@@ -206,7 +216,7 @@ dashboard_panel_aps <- function() {
             gov_main_layout(
               column(
                 width = 12,
-                h3(" 2025 Average results and time series for level 3 attainment, all students"),
+                heading_text(" 2026 Average results and time series for level 3 attainment - all students", size = "s", level = 3),
 
                 # The uiOutput cover information for value box.  Value boxes are covered in the server.
                 fluidRow(
@@ -245,7 +255,7 @@ dashboard_panel_aps <- function() {
             "A level APS by all",
             value = "alevel_all",
             gov_main_layout(
-              h3("A level average point score (APS) per entry and grade by institution type"),
+              heading_text("A level average point score (APS) per entry and grade by institution type", size = "s", level = 3),
               htmlOutput("textApsAll"),
               column(
                 width = 12,
@@ -261,7 +271,7 @@ dashboard_panel_aps <- function() {
             "A level APS sex gap",
             value = "ggap",
             gov_main_layout(
-              h3("A level female - male average points difference by institution type in England"),
+              heading_text("A level female - male average points difference by institution type in England", size = "s", level = 3),
               textOutput("textGgap"),
               card(
                 width = 12,
@@ -273,7 +283,7 @@ dashboard_panel_aps <- function() {
             "A level APS by sex",
             value = "alevel_fm",
             gov_main_layout(
-              h3("A level average point score and grade for female and male by Institution type"),
+              heading_text("A level average point score and grade for female and male by Institution type", size = "s", level = 3),
               column(
                 width = 12,
                 textOutput("textApsFm")
@@ -301,68 +311,75 @@ dashboard_panel_aps <- function() {
 
 
 dashboard_panel_sub_all <- function() {
-  tabPanel(
+  nav_panel(
     value = "dashboard_alse",
     "A level subject entry & grade: comparison by subject (single academic year)",
     gov_main_layout(
-      heading_text(
-        "A level single entry and grade distribution:  Comparison by subject, England from 1995/96 to 2024/25",
-        level = 2,
-        size = "m"
-      ),
-      card(
-        card_body(
-          class = "border-0 shadow-none",
-          layout_columns(
-            selectInput(
-              inputId = "subByAll",
-              label = "Select students",
-              choices = unique(subjectByAll$characteristic_value) %>%
-                sort(), selected = "All students"
+      width = "standard",
+      gov_row(
+        full = TRUE,
+        # column(width=12,
+        heading_text(
+          "A level single entry and grade distribution:  Comparison by subject, England from 1995/96 to 2025/26",
+          level = 2,
+          size = "m"
+        ),
+        card(
+          card_body(
+            style = "overflow: visible;",
+            class = "border-0 shadow-none",
+            layout_columns(
+              selectInput(
+                inputId = "subByAll",
+                label = "Select students",
+                choices = unique(subjectByAll$characteristic_value) %>%
+                  sort(), selected = "All students"
+              ),
+              selectizeInput(
+                inputId = "subCompareAll", label = "Select up to 4 subjects to compare:",
+                choices = sort(unique(subjectByAll$subject_name)),
+                multiple = T,
+                options = list(maxItems = 4), selected = c("Total Maths", "Total English")
+              ),
+              selectInput(
+                inputId = "year_start",
+                label = "Start year",
+                choices = seq(1996, 2018, 1),
+                selected = 1996
+              ),
+              selectInput(
+                inputId = "year_end",
+                label = " End year",
+                choices = latest_year
+              ),
+              col_widths = c(3, 5, 2, 2)
             ),
-            selectizeInput(
-              inputId = "subCompareAll", label = "Select up to 4 subjects to compare:",
-              choices = sort(unique(subjectByAll$subject_name)),
-              multiple = T,
-              options = list(maxItems = 4), selected = c("Total Maths", "Total English")
-            ),
-            selectInput(
-              inputId = "year_start",
-              label = "Start year",
-              choices = seq(1996, 2018, 1),
-              selected = 1996
-            ),
-            selectInput(
-              inputId = "year_end",
-              label = " End year",
-              choices = latest_year
-            ),
-            col_widths = c(3, 5, 2, 2)
-          ),
-          layout_columns(
-            div(
-              p("Download full dataset"),
-              downloadButton(
-                outputId = "downloadDataSubject",
-                label = "Download data",
-                icon = shiny::icon("download")
-              )
-            ),
-            div(
-              p("For more tables and metadata"),
-              actionButton(
-                inputId = "ees_2a",
-                label = "Visit Explore Education Statistics",
-                icon = icon("table-cells"),
-                onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2024-25', '_blank')",
-                style = "width:100%;"
-              )
-            ),
-            div(
-              p("Reset chart selection"),
-              actionButton(inputId = "resetEntries", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
-            ),
-            col_widths = c(3, 6, 3)
+            layout_columns(
+              div(
+                p("Download full dataset"),
+                downloadButton(
+                  outputId = "downloadDataSubject",
+                  label = "Download data",
+                  icon = shiny::icon("download")
+                )
+              ),
+              div(
+                p("For more tables and metadata"),
+                actionButton(
+                  inputId = "ees_2a",
+                  label = "Visit Explore Education Statistics",
+                  icon = icon("table-cells"),
+                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/16-to-19-performance/', '_blank')",
+                  style = "width:100%;"
+                )
+              ),
+              div(
+                p("Reset chart selection"),
+                actionButton(inputId = "resetEntries", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
+              ),
+              col_widths = c(3, 6, 3)
+            )
+            # )
           )
         )
       ),
@@ -372,7 +389,7 @@ dashboard_panel_sub_all <- function() {
           tabPanel(
             value = "alevelAllSubject",
             "Subject entries by all",
-            h3("A level single academic year:  Comparison by subject"),
+            heading_text("A level single academic year:  Comparison by subject", size = "s", level = 3),
             layout_columns(
               col_widths = c(8, 4),
               textOutput("textSubAll"),
@@ -389,7 +406,7 @@ dashboard_panel_sub_all <- function() {
             ),
             card(
               plotlyOutput("plotAlevelSubject") %>% spinner(),
-              gov_text("Notes:
+              p("Notes:
                               - Total English covers English literature, English language, English language and literature.
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths.
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages.
@@ -400,7 +417,7 @@ dashboard_panel_sub_all <- function() {
           ),
           tabPanel(
             "Cumulative results by all",
-            h3("A level cumulative percentage grade"),
+            heading_text("A level cumulative percentage grade", size = "s", level = 3),
             layout_columns(
               col_widths = c(9, 3),
               textOutput("textSubResultAll"),
@@ -428,7 +445,7 @@ dashboard_panel_sub_all <- function() {
             ),
             card(
               plotlyOutput("plotResultAll") %>% spinner(),
-              gov_text("Notes: A* grade was first awarded in 2010. - Total English covers English literature, English language, English language and literature.
+              p("Notes: A* grade was first awarded in 2010. - Total English covers English literature, English language, English language and literature.
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths.
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages.
                                   - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies.
@@ -445,135 +462,144 @@ dashboard_panel_sub_all <- function() {
 # ---------------------- Subject entries and results for Female, Male and all -----------------
 
 dashboard_panel_sub_fm <- function() {
-  tabPanel(
+  nav_panel(
     value = "dashboard_fm",
-    "A level subject entry & result: comparison by sex (single academic year)",
+    "A level subject entry & grade: comparison by sex (single academic year)",
     gov_main_layout(
-      heading_text("A level subject entry and grade distribution: comparison by sex, England from 1995/96 to 2024/25",
-        level = 2,
-        size = "m"
-      )
-    ),
-    card(
-      card_body(
-        class = "border-0 shadow-none",
-        layout_columns(
-          selectizeInput(
-            inputId = "subjectFm", label = "Select a subject:",
-            choices = sort(unique(subjectBySex$subject_name)),
-            multiple = F,
-            selected = c("Total English")
-          ),
-          selectInput(
-            inputId = "year_start_fm",
-            label = "Select start year",
-            choices = seq(1996, latest_year, 1),
-            selected = 1996
-          ),
-          selectInput(
-            inputId = "year_end_fm",
-            label = " End year",
-            choices = latest_year,
-            selected = latest_year
-          ),
-          col_widths = c(6, 3, 3)
+      width = "standard",
+      gov_row(
+        full = TRUE,
+
+        # column(
+        # width = 12,
+        heading_text("A level single entry and grade distribution: comparison by sex, England from 1995/96 to 2025/26",
+          level = 2,
+          size = "m"
         ),
-        layout_columns(
-          div(
-            p("Download full dataset"),
-            downloadButton(
-              outputId = "downloadDataSubjectFm",
-              label = "Download data",
-              icon = shiny::icon("download"),
-              class = "downloadButton"
+        card(
+          card_body(
+            style = "overflow: visible;",
+            class = "border-0 shadow-none",
+            layout_columns(
+              selectizeInput(
+                inputId = "subjectFm", label = "Select a subject:",
+                choices = sort(unique(subjectBySex$subject_name)),
+                multiple = F,
+                selected = c("Total English")
+              ),
+              selectInput(
+                inputId = "year_start_fm",
+                label = "Select start year",
+                choices = seq(1996, latest_year, 1),
+                selected = 1996
+              ),
+              selectInput(
+                inputId = "year_end_fm",
+                label = " End year",
+                choices = latest_year,
+                selected = latest_year
+              ),
+              col_widths = c(6, 3, 3)
+            ),
+            layout_columns(
+              div(
+                p("Download full dataset"),
+                downloadButton(
+                  outputId = "downloadDataSubjectFm",
+                  label = "Download data",
+                  icon = shiny::icon("download"),
+                  class = "downloadButton"
+                )
+              ),
+              div(
+                p("For more tables and metadata"),
+                actionButton(
+                  inputId = "ees_2b",
+                  label = "Visit Explore Education Statistics",
+                  icon = icon("table-cells"),
+                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/16-to-19-performance/', '_blank')",
+                  style = "width:100%;white-space:normal;"
+                )
+              ),
+              div(
+                p("Reset chart selection"),
+                actionButton(inputId = "resetSubFm", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
+              ),
+              col_widths = c(3, 6, 3)
             )
-          ),
-          div(
-            p("For more tables and metadata"),
-            actionButton(
-              inputId = "ees_2b",
-              label = "Visit Explore Education Statistics",
-              icon = icon("table-cells"),
-              onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2024-25', '_blank')",
-              style = "width:100%;white-space:normal;"
-            )
-          ),
-          div(
-            p("Reset chart selection"),
-            actionButton(inputId = "resetSubFm", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
-          ),
-          col_widths = c(3, 6, 3)
+            # )
+          )
         )
-      )
-    ),
-    gov_main_layout(
-      tabsetPanel(
-        id = "tabsetpanels2b",
-        tabPanel(
-          value = "alevelFmSubject",
-          "Subject entries by sex",
-          h3("A level subject: Comparison by sex"),
-          layout_columns(
-            col_widths = c(8, 4),
-            textOutput("textSubFm"), br(),
-            div(
-              # gov_text("Download chart data:"),
-              # br(),
-              downloadButton(
-                outputId = "downloadSubFm",
-                label = "Download data",
-                icon = shiny::icon("download"),
-                class = "downloadButton"
+      ),
+      gov_main_layout(
+        tabsetPanel(
+          id = "tabsetpanels2b",
+          tabPanel(
+            value = "alevelFmSubject",
+            "Subject entries by sex",
+            heading_text("A level subject: Comparison by sex", size = "s", level = 3),
+            layout_columns(
+              col_widths = c(10, 2),
+              textOutput("textSubFm"), br(),
+              div(
+                # gov_text("Download chart data:"),
+                # br(),
+                downloadButton(
+                  outputId = "downloadSubFm",
+                  label = "Download data",
+                  icon = shiny::icon("download"),
+                  class = "downloadButton"
+                )
               )
-            )
-          ),
-          card(
-            plotlyOutput("plotSubjectFm") %>% spinner(),
-            gov_text("Notes:
+            ),
+            card(
+              plotlyOutput("plotSubjectFm") %>% spinner(),
+              p("Notes:
                                   - Total English covers English literature, English language, English language and literature.
                                   - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths.
                                   - Total Modern languages cover French, German, Spanish and Other foreign modern languages.
                                   - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies.
                                   - STEM subjects cover Biology, Chemistry, Physics, Total maths, Further mathematics and Computer science.
                                   - Total Music includes Music and Music technology.")
-          )
-        ),
-        tabPanel(
-          "Cumulative results by sex",
-          h3("A level cumulative percentage grade by subject and sex"),
-          layout_columns(
-            col_widths = c(9, 3),
-            textOutput("textResFm"),
-            selectInput(
-              inputId = "resByFm",
-              "Select cumulative result",
-              choices = list(
-                "A*-A" = "`A*-A`",
-                "A*-B" = "`A*-B`",
-                "A*-C" = "`A*-C`",
-                "A*-D" = "`A*-D`",
-                "A*-E" = "`A*-E`"
+            )
+          ),
+          tabPanel(
+            "Cumulative results by sex",
+            heading_text("A level cumulative percentage grade by subject and sex", size = "s", level = 3),
+            layout_columns(
+              col_widths = c(9, 3),
+              textOutput("textResFm"),
+              selectInput(
+                inputId = "resByFm",
+                "Select cumulative result",
+                choices = list(
+                  "A*-A" = "`A*-A`",
+                  "A*-B" = "`A*-B`",
+                  "A*-C" = "`A*-C`",
+                  "A*-D" = "`A*-D`",
+                  "A*-E" = "`A*-E`"
+                )
               )
-            )
-          ),
-          br(),
-          div(
-            # p("Download chart data & results:"), br(),
-            downloadButton(
-              outputId = "downloadResFm",
-              label = "Download data",
-              icon = shiny::icon("download"),
-              class = "downloadButton"
-            )
-          ),
-          card(
-            plotlyOutput("plotResultFm") %>% spinner(),
-            gov_text("Notes: A* grade was first awarded  in 2010. - Total English covers English literature, English language,  English language and literature.
+            ),
+            br(),
+            div(
+              # p("Download chart data & results:"), br(),
+              downloadButton(
+                outputId = "downloadResFm",
+                label = "Download data",
+                icon = shiny::icon("download"),
+                class = "downloadButton"
+              )
+            ),
+            card(
+              plotlyOutput("plotResultFm") %>% spinner(),
+              p("Notes: A* grade was first awarded  in 2010. - Total English covers English literature, English language,  English language and literature.
                                 - Total Maths covers Maths, Pure maths, statistics, Use of maths and Other maths.
                                 - Total Modern languages cover French, German, Spanish and Other foreign modern languages.
                                 - Total Classical studies covers Latin, Greek, Classical civilisation and Other classical studies.
                                 - STEM subjects cover Biology, Chemistry, Physics, Total maths, Further mathematics and Computer science.
                                 - Total Music includes Music and Music technology.")
+            )
           )
         )
       )
@@ -585,80 +611,86 @@ dashboard_panel_sub_fm <- function() {
 # -------------------------  Maths and science  ----------------------------------
 
 dashboard_panel_ms <- function() {
-  tabPanel(
+  nav_panel(
     value = "dashboard_ms",
-    "A level maths & science: comparison by sex (end of 16-18 study)",
+    "A level maths & science: comparison by sex (end of 16-19 study)",
     gov_main_layout(
-      heading_text(
-        "A level maths and science entry (end of 16 to 18 study): comparison by sex, England from 2009/10 to 2024/25",
-        level = 2,
-        size = "m"
-      ),
-      card(
-        card_body(
-          class = "border-0 shadow-none",
-          layout_columns(
-            selectizeInput(
-              inputId = "subjectMs", label = "Select one subject or combination",
-              choices = list(
-                `Single subject` = list(
-                  "Biology",
-                  "Chemistry",
-                  "Computer science",
-                  "Further maths",
-                  "Maths",
-                  "Physics"
-                ),
-                `Combination` = list(
-                  "One maths/science subject",
-                  "Two maths/science subjects",
-                  "Three maths/science subjects",
-                  "Four maths/science subjects",
-                  "Zero maths/science subjects"
-                ), selected = c("Maths")
-              )
+      width = "standard",
+      gov_row(
+        full = TRUE,
+        heading_text(
+          "A level maths and science entry (end of 16 to 19 study): comparison by sex, England from 2009/10 to 2025/26",
+          level = 2,
+          size = "m"
+        ),
+        card(
+          card_body(
+            style = "overflow: visible;",
+            class = "border-0 shadow-none",
+            layout_columns(
+              selectizeInput(
+                inputId = "subjectMs", label = "Select one subject or combination",
+                choices = list(
+                  `Single subject` = list(
+                    "Biology",
+                    "Chemistry",
+                    "Computer science",
+                    "Further maths",
+                    "Maths",
+                    "Physics"
+                  ),
+                  `Combination` = list(
+                    "One maths/science subject",
+                    "Two maths/science subjects",
+                    "Three maths/science subjects",
+                    "Four maths/science subjects",
+                    "Zero maths/science subjects"
+                  ), selected = c("Maths")
+                )
+              ),
+              selectInput(
+                inputId = "year_start_ms",
+                label = "Select start year",
+                choices = seq(2010, latest_year, 1),
+                selected = 2010
+              ),
+              selectInput(
+                inputId = "year_end_ms",
+                label = " End year",
+                choices = latest_year,
+
+                # choices = seq(1996, latest_year, 1),
+                selected = latest_year
+              ),
+              col_widths = c(6, 3, 3)
             ),
-            selectInput(
-              inputId = "year_start_ms",
-              label = "Select start year",
-              choices = seq(2010, latest_year, 1),
-              selected = 2010
-            ),
-            selectInput(
-              inputId = "year_end_ms",
-              label = " End year",
-              choices = latest_year,
-              # choices = seq(1996, latest_year, 1),
-              selected = latest_year
-            ),
-            col_widths = c(6, 3, 3)
-          ),
-          layout_columns(
-            div(
-              p("Download full dataset"),
-              downloadButton(
-                outputId = "downloadDataSubjectMs",
-                label = "Download data",
-                icon = shiny::icon("download")
-                # class = "downloadButton"
-              )
-            ),
-            div(
-              p(strong("For more tables and metadata")),
-              actionButton(
-                inputId = "ees_3",
-                label = "Visit Explore Education Statistics",
-                icon = icon("table-cells"),
-                onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/a-level-and-other-16-to-18-results/2024-25', '_blank')",
-                style = "width:100%;white-space:normal;"
-              )
-            ),
-            div(
-              p(strong("Reset chart selection")),
-              align = "right",
-              actionButton(inputId = "resetSubMs", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
-            ),
-            col_widths = c(4, 4, 4)
+            layout_columns(
+              div(
+                p("Download full dataset"),
+                downloadButton(
+                  outputId = "downloadDataSubjectMs",
+                  label = "Download data",
+                  icon = shiny::icon("download")
+                  # class = "downloadButton"
+                )
+              ),
+              div(
+                p("For more tables and metadata"),
+                actionButton(
+                  inputId = "ees_3",
+                  label = "Visit Explore Education Statistics",
+                  icon = icon("table-cells"),
+                  onclick = "window.open('https://explore-education-statistics.service.gov.uk/find-statistics/16-to-19-performance/', '_blank')",
+                  style = "width:100%;white-space:normal;"
+                )
+              ),
+              div(
+                p("Reset chart selection"),
+                align = "right",
+                actionButton(inputId = "resetSubMs", label = "Reset selections", icon = icon("fas fa-arrows-rotate"))
+              ),
+              col_widths = c(4, 4, 4)
+            )
           )
         )
       ),
@@ -669,7 +701,7 @@ dashboard_panel_ms <- function() {
           tabPanel(
             value = "alevelMsSubject",
             "Maths and Science",
-            h3("A level maths and science: Comparison by sex"),
+            heading_text("A level maths and science: Comparison by sex", size = "s", level = 3),
             gov_main_layout(
               textOutput("textSubMs"),
               column(
@@ -677,8 +709,8 @@ dashboard_panel_ms <- function() {
                 card(
                   width = 12,
                   plotlyOutput("plotSubjectMs") %>% spinner(),
-                  gov_text("Note: The number of students from 2009/10 to 2017/18 has been calculated from rounded data, so less precise than the number of students
-                  from 2018/19 to 2024/25")
+                  p("Note: The number of students from 2009/10 to 2017/18 has been calculated from rounded data, so less precise than the number of students
+                  from 2018/19 to 2025/26")
                 )
               ),
               DTOutput("tabMs")

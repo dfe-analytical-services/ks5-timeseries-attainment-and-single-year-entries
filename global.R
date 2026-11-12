@@ -74,23 +74,6 @@ source("R/helper_functions.R")
 
 # gbp <- enc2utf8("\u00A3")
 
-# appLoadingCSS ----------------------------------------------------------------------------
-# Set up loading screen
-
-# appLoadingCSS <- "
-# #loading-content {
-#   position: absolute;
-#   background: #000000;
-#   opacity: 0.9;
-#   z-index: 100;
-#   left: 0;
-#   right: 0;
-#   height: 100%;
-#   text-align: center;
-#   color: #FFFFFF;
-# }
-# "
-
 # Set global variables --------------------------------------------------------------------
 
 site_title <- "16 to 19 time series attainment and single year entry"
@@ -124,7 +107,8 @@ showtext_auto()
 
 #  The latest year is mainly used by A level subject entries and Maths and Science to allow selection of year
 
-latest_year <- 2025
+# update to latest year
+latest_year <- 2026
 
 dfAlevelSubjectRaw <- read_alevel_subject_data()
 
@@ -179,7 +163,7 @@ subjectByAll <- dfAlevelSubject %>%
         "Home economics",
         "ICT"
       ),
-    n() > 10
+    n() > 11
   ) %>%
   ungroup()
 
@@ -205,19 +189,20 @@ data <- read_alevel_aps_data()
 dfAlevelAps <- data %>%
   rename(
     aps_2013_2015 = "aps_per_entry_2013_2015",
-    aps_grade_2013_2015 = "aps_per_entry_grade_2013_2015"
+    aps_grade_2013_2015 = "aps_per_entry_grade_2013_2015",
+    entry_count = "aps_per_entry_student_count"
   ) %>%
   select(
     time_period,
     year,
     establishment_type,
     establishment_type_group,
-    number_of_students,
+    entry_count,
     aps_per_entry,
     aps_2013_2015,
     aps_per_entry_grade,
     aps_grade_2013_2015,
-    characteristic_sex,
+    sex,
     time_period,
     year,
     year_2013_2015,
@@ -234,7 +219,7 @@ dfAlevelAps <- data %>%
     aps_grade_2013_2015 = as.factor(aps_grade_2013_2015),
     aps_per_entry = round2(as.numeric(aps_per_entry), 2),
     aps_per_entry_grade = as.factor(aps_per_entry_grade),
-    characteristic_sex = as.factor(characteristic_sex),
+    sex = as.factor(sex),
     establishment_type = as.factor(establishment_type),
     establishment_type_group = as.factor(establishment_type_group),
     version = as.factor(version)
@@ -269,6 +254,11 @@ fmDiff <- dfApsSexGap %>%
 headline_download <- read_all_attainment_data()
 
 headline_download <- headline_download %>%
+  rename(
+    entry_count = "aps_per_entry_student_count",
+    aps = "aps_per_entry",
+    aps_grade = "aps_per_entry_grade"
+  ) %>%
   mutate(
     time_identifier = "Academic year",
     geographic_level = "National",
@@ -284,18 +274,23 @@ headline_download <- headline_download %>%
     version,
     establishment_type,
     establishment_type_group,
-    characteristic_sex,
-    number_of_students,
-    aps_per_entry = aps,
-    aps_per_entry_grade = aps_grade,
+    sex,
+    entry_count,
+    aps, # = aps_per_entry,
+    aps_grade, # = aps_per_entry_grade,
     version,
-    qualification_type = cert_type,
+    exam_cohort,
     year
   ) %>%
   arrange(desc(time_period))
 
 
 dfAttainmentRaw <- read_all_attainment_data() %>%
+  rename(
+    entry_count = "aps_per_entry_student_count",
+    aps = "aps_per_entry",
+    aps_grade = "aps_per_entry_grade"
+  ) %>%
   mutate(
     establishment_type = recode(
       establishment_type,
@@ -305,23 +300,22 @@ dfAttainmentRaw <- read_all_attainment_data() %>%
 
 # Select  all students and data to factors and numeric
 dfAttainment <- dfAttainmentRaw %>%
-  filter(characteristic_sex == "All students") %>%
+  filter(sex == "All students") %>%
   mutate(
     establishment_type = as.factor(establishment_type),
     establishment_type_group = as.factor(establishment_type_group),
-    number_of_students = as.integer(number_of_students),
+    entry_count = as.integer(entry_count),
     aps = as.numeric(aps),
     aps = round2(aps, 2),
     aps_grade = as.factor(aps_grade),
-    characteristic_sex = as.factor(characteristic_sex),
+    sex = as.factor(sex),
     version = as.factor(version),
-    cert_type = as.factor(cert_type),
-    cert_type = as.factor(recode(cert_type, "Alevel" = "A level"))
+    exam_cohort = as.factor(exam_cohort),
+    exam_cohort = as.factor(recode(exam_cohort, "Alevel" = "A level"))
   ) %>%
-  group_by(establishment_type, cert_type) %>%
+  group_by(establishment_type, exam_cohort) %>%
   arrange(desc(year), .by_group = TRUE) %>%
   ungroup()
-
 
 
 # Maths Science attainment -----------------------------------------------------------------
@@ -332,7 +326,7 @@ dfMsRaw <- read_all_ms_data()
 dfMs <- dfMsRaw %>%
   mutate(
     subject = as.factor(subject),
-    characteristic_value = as.factor(characteristic_value),
+    breakdown = as.factor(breakdown),
     version = as.factor(version)
   ) %>%
   filter(
