@@ -67,136 +67,48 @@ server <- function(input, output, session) {
     input_cookies = shiny::reactive(input$cookies),
     google_analytics_key = google_analytics_key
   )
-  # # Loading screen ---------------------------------------------------------------------------
-  # # Call initial loading screen
-  #
-  # hide(id = "loading-content", anim = TRUE, animType = "fade")
-  # show("app-content")
-  #
-  # # The template uses bookmarking to store input choices in the url. You can
-  # # exclude specific inputs using the list here:
-  # setBookmarkExclude(c("cookies", "link_to_app_content_tab"))
-  #
-  # observe({
-  #   # Trigger this observer every time an input changes
-  #   reactiveValuesToList(input)
-  #   session$doBookmark()
-  # })
-  #
-  # onBookmarked(function(url) {
-  #   updateQueryString(url)
-  # })
-  #
-  # observe({
-  #   if (input$navlistPanel == "dashboard") {
-  #     change_window_title(
-  #       session,
-  #       paste0(
-  #         # site_title, " - ",
-  #         input$alevelInstitute, ", ",
-  #         input$allSex
-  #       )
-  #     )
-  #   } else {
-  #     change_window_title(
-  #       session,
-  #       paste0(
-  #         # site_title, " - ",
-  #         input$navlistPanel
-  #       )
-  #     )
-  #   }
-  # })
-  #
-  # observeEvent(input$cookies, {
-  #   if (!is.null(input$cookies)) {
-  #     if (!("dfe_analytics" %in% names(input$cookies))) {
-  #       shinyjs::show(id = "cookieMain")
-  #     } else {
-  #       shinyjs::hide(id = "cookieMain")
-  #       msg <- list(
-  #         name = "dfe_analytics",
-  #         value = input$cookies$dfe_analytics
-  #       )
-  #       session$sendCustomMessage("analytics-consent", msg)
-  #       if ("cookies" %in% names(input)) {
-  #         if ("dfe_analytics" %in% names(input$cookies)) {
-  #           if (input$cookies$dfe_analytics == "denied") {
-  #             ga_msg <- list(name = paste0("_ga_", google_analytics_key))
-  #             session$sendCustomMessage("cookie-remove", ga_msg)
-  #           }
-  #         }
-  #       }
-  #     }
-  #   } else {
-  #     shinyjs::hide(id = "cookieMain")
-  #   }
-  # })
-  #
-  # # Need these set of observeEvent to create a path through the cookie banner
-  # observeEvent(input$cookieAccept, {
-  #   msg <- list(
-  #     name = "dfe_analytics",
-  #     value = "granted"
-  #   )
-  #   session$sendCustomMessage("cookie-set", msg)
-  #   session$sendCustomMessage("analytics-consent", msg)
-  #   shinyjs::show(id = "cookieAcceptDiv")
-  #   shinyjs::hide(id = "cookieMain")
-  # })
-  #
-  # observeEvent(input$cookieReject, {
-  #   msg <- list(
-  #     name = "dfe_analytics",
-  #     value = "denied"
-  #   )
-  #   session$sendCustomMessage("cookie-set", msg)
-  #   session$sendCustomMessage("analytics-consent", msg)
-  #   shinyjs::show(id = "cookieRejectDiv")
-  #   shinyjs::hide(id = "cookieMain")
-  # })
-  #
-  # observeEvent(input$hideAccept, {
-  #   shinyjs::toggle(id = "cookieDiv")
-  # })
-  #
-  # observeEvent(input$hideReject, {
-  #   shinyjs::toggle(id = "cookieDiv")
-  # })
-  #
-  # observeEvent(input$remove, {
-  #   shinyjs::toggle(id = "cookieMain")
-  #   msg <- list(name = "dfe_analytics", value = "denied")
-  #   session$sendCustomMessage("cookie-remove", msg)
-  #   session$sendCustomMessage("analytics-consent", msg)
-  #   print(input$cookies)
-  # })
-  #
-  # cookies_data <- reactive({
-  #   input$cookies
-  # })
-  #
-  # output$cookie_status <- renderText({
-  #   cookie_text_stem <- "To better understand the reach of our dashboard tools, this site uses cookies to identify numbers of unique users as part of Google Analytics. You have chosen to"
-  #   cookie_text_tail <- "the use of cookies on this website."
-  #   if ("cookies" %in% names(input)) {
-  #     if ("dfe_analytics" %in% names(input$cookies)) {
-  #       if (input$cookies$dfe_analytics == "granted") {
-  #         paste(cookie_text_stem, "accept", cookie_text_tail)
-  #       } else {
-  #         paste(cookie_text_stem, "reject", cookie_text_tail)
-  #       }
-  #     }
-  #   } else {
-  #     "Cookies consent has not been confirmed."
-  #   }
-  # })
-  #
-  # observeEvent(input$cookieLink, {
-  #   # Need to link here to where further info is located.  You can
-  #   # updateTabsetPanel to have a cookie page for instance
-  #   updateTabsetPanel(session, "navlistPanel", selected = "Support and feedback")
-  # })
+
+
+  # Top level service navigation actions
+
+  # Navigation links -------------------------------------------------------------
+
+
+  # Navigation with links
+  observeEvent(input$home_page, {
+    bslib::nav_select("pages", "dashboard")
+    bslib::nav_select("navlistPanel", "homepage")
+  })
+
+
+  observeEvent(input$attainment, {
+    bslib::nav_select("pages", "dashboard")
+    bslib::nav_select("navlistPanel", "dashboard")
+  })
+
+
+  observeEvent(input$maths_and_science, {
+    bslib::nav_select("pages", "dashboard")
+    bslib::nav_select("navlistPanel", "dashboard_ms")
+  })
+
+
+  observeEvent(input$subject_entry_and_grade, {
+    bslib::nav_select("pages", "dashboard")
+    bslib::nav_select("navlistPanel", "dashboard_alse")
+  })
+
+
+  observeEvent(input$subject_entry_and_grade_by_sex, {
+    bslib::nav_select("pages", "dashboard")
+    bslib::nav_select("navlistPanel", "dashboard_fm")
+  })
+
+
+  observeEvent(input$institution_flow_diagram, {
+    bslib::nav_select("pages", "dashboard")
+    bslib::nav_select("navlistPanel", "flow_panel")
+  })
 
 
   #------------------------------------------------------------------------------------------------------
@@ -230,7 +142,7 @@ server <- function(input, output, session) {
     latest <- reactiveHeadline() %>%
       filter(
         year == max(year),
-        cert_type == "A level",
+        exam_cohort == "A level",
         establishment_type == input$headlineAps
       ) %>%
       pull(aps)
@@ -238,7 +150,7 @@ server <- function(input, output, session) {
     grade <- reactiveHeadline() %>%
       filter(
         year == max(year),
-        cert_type == "A level",
+        exam_cohort == "A level",
         establishment_type == input$headlineAps
       ) %>%
       pull(aps_grade)
@@ -266,7 +178,7 @@ server <- function(input, output, session) {
     latest <- reactiveHeadline() %>%
       filter(
         year == max(year),
-        cert_type == "Applied general",
+        exam_cohort == "Applied general",
         establishment_type == input$headlineAps
       ) %>%
       pull(aps)
@@ -274,7 +186,7 @@ server <- function(input, output, session) {
     grade <- reactiveHeadline() %>%
       filter(
         year == max(year),
-        cert_type == "Applied general",
+        exam_cohort == "Applied general",
         establishment_type == input$headlineAps
       ) %>%
       pull(aps_grade)
@@ -304,7 +216,7 @@ server <- function(input, output, session) {
     latest <- reactiveHeadline() %>%
       filter(
         year == max(year),
-        cert_type == "Tech level",
+        exam_cohort == "Tech level",
         establishment_type == input$headlineAps
       ) %>%
       pull(aps)
@@ -312,7 +224,7 @@ server <- function(input, output, session) {
     grade <- reactiveHeadline() %>%
       filter(
         year == max(year),
-        cert_type == "Tech level",
+        exam_cohort == "Tech level",
         establishment_type == input$headlineAps
       ) %>%
       pull(aps_grade)
@@ -347,10 +259,10 @@ server <- function(input, output, session) {
         Year = year,
         `Academic year` = time_period,
         `Establishment type` = establishment_type,
-        `Number of students` = number_of_students,
+        `Entry count` = entry_count,
         `APS per entry` = aps,
         `APS per entry grade` = aps_grade,
-        Qualification = cert_type,
+        `Exam cohort` = exam_cohort,
         Version = version
       )
   })
@@ -425,7 +337,7 @@ server <- function(input, output, session) {
       inType,
       establishment_type %in% input$alevelInstitute &
 
-        characteristic_sex == input$allSex
+        sex == input$allSex
     )
 
 
@@ -461,7 +373,7 @@ server <- function(input, output, session) {
   output$plotFemaleAlAPS <- renderPlot({
     createApsFmTimeSeries(
       reactiveFmAps() %>%
-        filter(characteristic_sex == "Female" & year > 2015), # %>%
+        filter(sex == "Female" & year > 2015), # %>%
       # mutate(aps_per_entry=as.numeric(aps_per_entry)),
       fmSex = "Female",
       instType = input$alevelInstitute
@@ -472,7 +384,7 @@ server <- function(input, output, session) {
   output$plotMaleAlAPS <- renderPlot({
     createApsFmTimeSeries(
       reactiveFmAps() %>%
-        filter(characteristic_sex == "Male" & year > 2015), # %>%
+        filter(sex == "Male" & year > 2015), # %>%
       # mutate(aps_per_entry=as.numeric(aps_per_entry)),
       fmSex = "Male",
       instType = input$alevelInstitute
@@ -501,14 +413,14 @@ server <- function(input, output, session) {
 
   selectedGgapData <- reactive({
     gGap <- dfAlevelAps %>%
-      filter(characteristic_sex != "All students" & year >= 2016)
+      filter(sex != "All students" & year >= 2016)
     gGap <- subset(gGap, establishment_type %in% input$alevelInstitute) %>%
       select(
         Year = year,
         `Academic year` = time_period,
         `Establishment type` = establishment_type,
-        `Characteristic sex` = characteristic_sex,
-        `Number of students` = number_of_students,
+        Sex = sex,
+        `Entry count` = entry_count,
         `APS per entry` = aps_per_entry,
         `APS per entry grade` = aps_per_entry_grade,
         Version = version
@@ -544,16 +456,12 @@ server <- function(input, output, session) {
   output$textHeadline <- renderText({
     # val <- glue::glue_collapse(input$headlineAps, ", ", last = " and ")
     val <- paste(input$headlineAps, collapse = " , ")
-    HTML(paste0("The boxes display the latest average results for A level, Applied general and Tech level for  ", val, " in England. The
-    chart shows the APS from 2015/16 to 2024/25. To view results, click on the drop-down box and select one institution type.
-
+    HTML(paste("The boxes display the latest average results for A level, Applied general and Tech level for  ", val, " in England. The
+    chart shows the APS from 2015/16 to 2025/26. Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.", "
     The concept of qualifications approved for reporting has been applied since 2015/16 following Professor Alison Wolf's Review of vocational education.
     From 2017/18 the quality threshold for vocational and technical qualifications to be included in performance
     measures further increased. The later reforms include criteria relating to the size, content, and assessment, including a requirement
-    that a proportion of a qualification's content is subject to external assessment.
-
-    Point scores for 2020 and 2021 are based on Centre assessment grade and Teacher assessed grade respectively.
-    "))
+    that a proportion of a qualification's content is subject to external assessment.", "To view results, click on the drop-down box and select one institution type."))
   })
 
   output$textApsAll <- renderText({
@@ -564,13 +472,13 @@ server <- function(input, output, session) {
     scales truncated so a change of one grade appears the same for both the old and current points scale (i.e. you can read left to right across the two charts).", br(), br(), "
     The charts display the APS and grades achieved by students throughout 16 to 18 study for  ", val, " in England.
     Up to four institution types can be selected from the drop-down menu. Care should be taken when comparing across institution types due to significant differences in cohort sizes.
-           For breakdown of institution types, see flow diagram on left panel.  "))
+           For breakdown of institution types, see institution flow diagram on top panel. "))
   })
 
   output$textGgap <- renderText({
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
 
-    paste("The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2024/25  for ", val, " in England.
+    paste("The line chart shows the female - male average points difference (sex gap) from 2015/16 to 2025/26  for ", val, " in England.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
                   differences in cohort sizes.")
   })
@@ -580,9 +488,9 @@ server <- function(input, output, session) {
     val <- glue::glue_collapse(input$alevelInstitute, ", ", last = " and ")
     val1 <- paste(input$allSex, collapse = ", ")
 
-    paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England from 2015/16 to 2024/25.
+    paste("The line charts display the average points and grades achieved  by female and male students for ", val, " in England from 2015/16 to 2025/26.
           Up to four institution types can be selected from the drop-down menu.  Care should be taken when comparing across institution types due to significant
-                  differences in cohort sizes.  For breakdown of institution types, see flow diagram on left panel.")
+                  differences in cohort sizes.  For breakdown of institution types, see institution flow diagram on top panel.")
   })
 
 
@@ -701,7 +609,7 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end, collapse = ", ")
     val3 <- paste(input$subByAll, collapse = ",")
 
-    paste("The line chart shows the A level exam entries for ", val, "from  ", val1, " for ", val3, " in England. ")
+    paste("The line chart shows the A level exam entries for ", val, "from  ", val1, " to ", val2, " for ", val3, " in England. ")
   })
 
 
@@ -711,7 +619,7 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end, collapse = ", ")
     val3 <- paste(input$subByAll, collapse = ",")
     paste(
-      "The line chart shows the A level cumulative percentage grades for", val, "\n from ", val1, " for ",
+      "The line chart shows the A level cumulative percentage grades for", val, "\n from ", val1, " to ", val2, " for ",
       val3, " in England.   The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
           awarded in 2019/20 and 2020/21 respectively."
     )
@@ -724,7 +632,7 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end_fm, collapse = ", ")
 
     paste(
-      "The line chart shows the A level  exam entries on ", val, " from ", val1,
+      "The line chart shows the A level  exam entries on ", val, " from ", val1, " to ", val2,
       " for female, male and all students in England. "
     )
   })
@@ -736,7 +644,7 @@ server <- function(input, output, session) {
     val2 <- paste(input$year_end_fm, collapse = ", ")
 
     paste(
-      "The line chart shows the A level cumulative percentage grades on ", val, "\n from ", val1,
+      "The line chart shows the A level cumulative percentage grades on ", val, "\n from ", val1, " to ", val2,
       " for female, male and all students in England.  The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
           awarded in 2019/20 and 2020/21 respectively."
     )
@@ -893,8 +801,8 @@ server <- function(input, output, session) {
           `Establishment type group` = establishment_type_group,
           # `Institution group`  = establishment_type_group,
           `Establishment type` = establishment_type,
-          `Characteristic sex` = characteristic_sex,
-          `Number of students` = number_of_students,
+          sex = sex,
+          `Entry count` = entry_count,
           `APS per entry` = aps_per_entry,
           `APS per entry grade` = aps_per_entry_grade,
           `APS per entry 2013-2015` = aps_2013_2015,
@@ -961,9 +869,6 @@ server <- function(input, output, session) {
   })
 
 
-  # observeEvent(input$year_start_fm, {updateSelectInput(session, "year_end_fm", label = NULL,
-  #                                                   choices = seq(ifelse(input$year_start_fm == latest_year, latest_year, as.numeric(input$year_start_fm)), latest_year, 1),
-  #                                                   selected = input$year_end_fm) })
   observeEvent(input$year_end_ms, {
     updateSelectInput(session, "year_start_ms",
       label = NULL,
@@ -984,25 +889,11 @@ server <- function(input, output, session) {
     val1 <- paste(input$year_start_ms, collapse = ", ")
     val2 <- paste(input$year_end_ms, collapse = ", ")
 
+
     paste(
-      "The line chart shows the proportion of A level students that entered   ", val, " from ", val1, "for female, male and all students in England."
+      "The line chart shows the proportion of A level students that entered   ", val, " from ", val1, " to ", val2, "for female, male and all students in England."
     )
   })
-
-
-  #
-  # output$textResFm <- renderText({
-  #   val <- paste(input$subjectFm, collapse = ", ")
-  #   val1 <- paste(input$year_start_fm, collapse = ", ")
-  #   val2 <- paste(input$year_end_fm, collapse = ", ")
-  #
-  #   paste(
-  #     "The line chart shows the A level cumulative percentage grades for female and male on ", val, "\n from ", val1, " to ", val2,
-  #     " in England.  The shaded area on chart shows the Centre Assessment Grade (CAG) and Teacher Assessed Grade (TAG)
-  #         awarded in 2019/20 and 2020/21 respectively."
-  #   )
-  # })
-  #
 
 
   # Download selected subjects
@@ -1025,7 +916,7 @@ server <- function(input, output, session) {
     subjName <- dfMs %>%
       select(
         year, time_period, subject,
-        characteristic_value, percent_entered, number_of_students, version
+        breakdown, percent_entered, subject_count, version
       )
     subjName <- subset(
       subjName,
@@ -1048,10 +939,10 @@ server <- function(input, output, session) {
       select(
         Year = year,
         `Time period` = time_period,
-        `Characteristic value` = characteristic_value,
+        breakdown = breakdown,
         Subject = subject,
         `Proportion of students` = percent_entered,
-        `Number of students` = number_of_students,
+        `Subject count` = subject_count,
         Version = version
       )
   })
@@ -1078,26 +969,6 @@ server <- function(input, output, session) {
   })
 
 
-  #
-  #
-  # output$resall <- renderDataTable({
-  #   datatable(selected_subAll(),
-  #             options = list(
-  #               infor = T, paging = F,
-  #               searching = F,
-  #               stripClasses = F,
-  #               lengthChange = F,
-  #               scrollY = "260px",
-  #               scrollX = T,
-  #               scrollCollapse = T,
-  #               rownames = FALSE,
-  #               autoWidth = TRUE,
-  #               server = TRUE
-  #             )
-  #   )
-  # })
-
-
   # Download the underlying data button
   output$downloadDataAps <- downloadHandler(
     filename = "attainment_data.csv",
@@ -1119,92 +990,28 @@ server <- function(input, output, session) {
     }
   })
 
-  # wrap a plot with a larger spinner
 
-  # # Wrap a plot with a larger spinner
-  # with_gov_spinner <- function(
-  #   ui_element,
-  #   spinner_type = 6,
-  #   size = 1,
-  #   color = "#1d70b8"
-  # ) {
-  #   shinycssloaders::withSpinner(
-  #     ui_element,
-  #     type = spinner_type,
-  #     color = color,
-  #     size = size,
-  #     proxy.height = paste0(250 * size, "px")
-  #   )
-  # }
-
-
-  #
-  #   # footer links -----------------------
-  # #
-  #   # # ## Back links to main dashboard ---------------------------------------------
-  #   observeEvent(
-  #     input$support_to_dashboard |
-  #       input$cookies_to_dashboard |
-  #       input$accessibility_to_dashboard,
-  #     {
-  #       nav_select("pages", "main_panel")
-  #     }
-  #   )
-  #
-  #
-  #
-  #   shiny::observeEvent(input$accessibility_statement, {
-  #     nav_select(
-  #       "pages",
-  #       "a11y_panel"
-  #     )
-  #   })
-  #
-  #   shiny::observeEvent(input$use_of_cookies, {
-  #     nav_select(
-  #       "pages",
-  #       "cookies_panel_ui"
-  #     )
-  #   })
-  #
-  #   shiny::observeEvent(input$support_and_feedback, {
-  #     nav_select(
-  #       "pages",
-  #       "support_panel"
-  #     )
-  #   })
-  #
-  #   ## Back links to main dashboard ---------------------------------------------
-  #   observeEvent(
-  #     input$support_to_dashboard |
-  #       input$cookies_to_dashboard |
-  #       input$accessibility_to_dashboard,
-  #     {
-  #       nav_select("pages", "main_panel")
-  #     }
-  #   )
-  #
-  # Navigation links -------------------------------------------------------------
+  # Navigation links for side bar-------------------------------------------------------------
 
 
   # Navigation with links
-  observeEvent(input$link_to_headline_tab, {
-    updateTabsetPanel(session, "navlistPanel", selected = "dashboard")
-  })
-
-
-  observeEvent(input$link_to_alevelFmSubject_tab, {
-    updateTabsetPanel(session, "navlistPanel", selected = "dashboard_fm")
-  })
-
-
-  observeEvent(input$link_to_alevelAllSubject_tab, {
-    updateTabsetPanel(session, "navlistPanel", selected = "dashboard_alse")
-  })
-
-  observeEvent(input$link_to_alevelMathsScience_tab, {
-    updateTabsetPanel(session, "navlistPanel", selected = "dashboard_ms")
-  })
+  # observeEvent(input$link_to_headline_tab, {
+  #   updateTabsetPanel(session, "navlistPanel", selected = "dashboard")
+  # })
+  #
+  #
+  # observeEvent(input$link_to_alevelFmSubject_tab, {
+  #   updateTabsetPanel(session, "navlistPanel", selected = "dashboard_fm")
+  # })
+  #
+  #
+  # observeEvent(input$link_to_alevelAllSubject_tab, {
+  #   updateTabsetPanel(session, "navlistPanel", selected = "dashboard_alse")
+  # })
+  #
+  # observeEvent(input$link_to_alevelMathsScience_tab, {
+  #   updateTabsetPanel(session, "navlistPanel", selected = "dashboard_ms")
+  # })
 
 
   # Footer links --------------------------------------------------------------

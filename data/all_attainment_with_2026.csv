@@ -1,0 +1,562 @@
+year,time_period,version,establishment_type_group,establishment_type,sex,exam_cohort,aps_per_entry_student_count,aps_per_entry,aps_per_entry_grade
+2016,201516,Revised,All FE sector colleges,All FE sector colleges,All students,A level,94459,29.21,C
+2016,201516,Revised,All FE sector colleges,All FE sector colleges,All students,Applied general,72416,32.6,Dist-
+2016,201516,Revised,All FE sector colleges,All FE sector colleges,All students,Tech level,57020,29.73,Merit+
+2016,201516,Revised,All FE sector colleges,Other FE sector colleges,All students,A level,30206,26.28,C-
+2016,201516,Revised,All FE sector colleges,Other FE sector colleges,All students,Applied general,52463,31.17,Dist-
+2016,201516,Revised,All FE sector colleges,Other FE sector colleges,All students,Tech level,50395,28.98,Merit+
+2016,201516,Revised,All FE sector colleges,Sixth form colleges,All students,A level,64253,30.4,C
+2016,201516,Revised,All FE sector colleges,Sixth form colleges,All students,Applied general,19953,37.33,Dist+
+2016,201516,Revised,All FE sector colleges,Sixth form colleges,All students,Tech level,6625,36.43,Dist
+2016,201516,Revised,All Institutions,All institutions,All students,A level,323273,31.79,C+
+2016,201516,Revised,All Institutions,All institutions,All students,Applied general,125325,34.69,Dist
+2016,201516,Revised,All Institutions,All institutions,All students,Tech level,69318,30.77,Dist-
+2016,201516,Revised,All independent schools,All independent schools,All students,A level,37867,40.76,B
+2016,201516,Revised,All independent schools,All independent schools,All students,Applied general,1068,38.16,Dist+
+2016,201516,Revised,All independent schools,All independent schools,All students,Tech level,193,36.86,Dist+
+2016,201516,Revised,All independent schools,Independent schools,All students,A level,37744,40.79,B
+2016,201516,Revised,All independent schools,Independent schools,All students,Applied general,1019,38.48,Dist+
+2016,201516,Revised,All independent schools,Independent schools,All students,Tech level,163,38.07,Dist+
+2016,201516,Revised,All independent schools,Independent special schools,All students,A level,123,24.73,D+
+2016,201516,Revised,All independent schools,Independent special schools,All students,Applied general,49,29.52,Merit+
+2016,201516,Revised,All independent schools,Independent special schools,All students,Tech level,30,29.48,Merit+
+2016,201516,Revised,All schools,All schools,All students,A level,239749,32.58,C+
+2016,201516,Revised,All schools,All schools,All students,Applied general,54880,37.99,Dist+
+2016,201516,Revised,All schools,All schools,All students,Tech level,12620,36.89,Dist+
+2016,201516,Revised,All state-funded,All state-funded,All students,A level,286399,30.44,C
+2016,201516,Revised,All state-funded,All state-funded,All students,Applied general,124269,34.66,Dist
+2016,201516,Revised,All state-funded,All state-funded,All students,Tech level,69129,30.76,Dist-
+2016,201516,Revised,All state-funded schools,All state-funded schools,All students,A level,201871,30.84,C
+2016,201516,Revised,All state-funded schools,All state-funded schools,All students,Applied general,53810,37.99,Dist+
+2016,201516,Revised,All state-funded schools,All state-funded schools,All students,Tech level,12427,36.89,Dist+
+2016,201516,Revised,All state-funded schools,Converter academies - mainstream,All students,A level,118274,32.07,C+
+2016,201516,Revised,All state-funded schools,Converter academies - mainstream,All students,Applied general,23272,38.3,Dist+
+2016,201516,Revised,All state-funded schools,Converter academies - mainstream,All students,Tech level,4636,37.22,Dist+
+2016,201516,Revised,All state-funded schools,Free schools,All students,A level,602,26.23,C-
+2016,201516,Revised,All state-funded schools,Free schools,All students,Applied general,146,33.35,Dist
+2016,201516,Revised,All state-funded schools,Free schools,All students,Tech level,98,33.45,Dist
+2016,201516,Revised,All state-funded schools,Free schools 16-19,All students,A level,1100,33.89,C+
+2016,201516,Revised,All state-funded schools,Free schools 16-19,All students,Applied general,355,32.49,Dist-
+2016,201516,Revised,All state-funded schools,Free schools 16-19,All students,Tech level,127,30,Dist-
+2016,201516,Revised,All state-funded schools,LA maintained mainstream schools,All students,A level,58737,29.63,C
+2016,201516,Revised,All state-funded schools,LA maintained mainstream schools,All students,Applied general,16541,38.5,Dist+
+2016,201516,Revised,All state-funded schools,LA maintained mainstream schools,All students,Tech level,3412,37.56,Dist+
+2016,201516,Revised,All state-funded schools,Sponsored academies - mainstream,All students,A level,21259,26.18,C-
+2016,201516,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,12331,37.22,Dist+
+2016,201516,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,2878,36.84,Dist+
+2016,201516,Revised,All state-funded schools,Studio schools,All students,A level,292,24.73,D+
+2016,201516,Revised,All state-funded schools,Studio schools,All students,Applied general,378,32.43,Dist-
+2016,201516,Revised,All state-funded schools,Studio schools,All students,Tech level,268,32.73,Dist-
+2016,201516,Revised,All state-funded schools,University technical colleges (UTCs),All students,A level,1059,20.22,D
+2016,201516,Revised,All state-funded schools,University technical colleges (UTCs),All students,Applied general,400,32.32,Dist-
+2016,201516,Revised,All state-funded schools,University technical colleges (UTCs),All students,Tech level,848,35.73,Dist
+2017,201617,Revised,All FE sector colleges,All FE sector colleges,All students,A level,91729,30.03,C
+2017,201617,Revised,All FE sector colleges,All FE sector colleges,All students,Applied general,75637,33.53,Dist
+2017,201617,Revised,All FE sector colleges,All FE sector colleges,All students,Tech level,52225,31.13,Dist-
+2017,201617,Revised,All FE sector colleges,Other FE sector colleges,All students,A level,28120,26.99,C-
+2017,201617,Revised,All FE sector colleges,Other FE sector colleges,All students,Applied general,54300,31.97,Dist-
+2017,201617,Revised,All FE sector colleges,Other FE sector colleges,All students,Tech level,45088,30.29,Dist-
+2017,201617,Revised,All FE sector colleges,Sixth form colleges,All students,A level,63609,31.24,C
+2017,201617,Revised,All FE sector colleges,Sixth form colleges,All students,Applied general,21337,38.64,Dist+
+2017,201617,Revised,All FE sector colleges,Sixth form colleges,All students,Tech level,7137,37.62,Dist+
+2017,201617,Revised,All Institutions,All institutions,All students,A level,316202,32.39,C+
+2017,201617,Revised,All Institutions,All institutions,All students,Applied general,123715,35.72,Dist
+2017,201617,Revised,All Institutions,All institutions,All students,Tech level,64453,32.26,Dist-
+2017,201617,Revised,All independent schools,All independent schools,All students,A level,38168,40.69,B
+2017,201617,Revised,All independent schools,All independent schools,All students,Applied general,1419,39.31,Dist+
+2017,201617,Revised,All independent schools,All independent schools,All students,Tech level,211,36.22,Dist
+2017,201617,Revised,All independent schools,Independent schools,All students,A level,38110,40.7,B
+2017,201617,Revised,All independent schools,Independent schools,All students,Applied general,1397,39.34,Dist+
+2017,201617,Revised,All independent schools,Independent schools,All students,Tech level,194,36.36,Dist
+2017,201617,Revised,All independent schools,Independent special schools,All students,A level,58,26.44,C-
+2017,201617,Revised,All independent schools,Independent special schools,All students,Applied general,22,36.73,Dist+
+2017,201617,Revised,All independent schools,Independent special schools,All students,Tech level,17,33.95,Dist
+2017,201617,Revised,All schools,All schools,All students,A level,235654,33.07,C+
+2017,201617,Revised,All schools,All schools,All students,Applied general,50864,39.59,Dist+
+2017,201617,Revised,All schools,All schools,All students,Tech level,12781,38.43,Dist+
+2017,201617,Revised,All state-funded,All state-funded,All students,A level,278897,31.13,C
+2017,201617,Revised,All state-funded,All state-funded,All students,Applied general,122282,35.69,Dist
+2017,201617,Revised,All state-funded,All state-funded,All students,Tech level,64244,32.25,Dist-
+2017,201617,Revised,All state-funded schools,All state-funded schools,All students,A level,197423,31.45,C
+2017,201617,Revised,All state-funded schools,All state-funded schools,All students,Applied general,49424,39.6,Dist+
+2017,201617,Revised,All state-funded schools,All state-funded schools,All students,Tech level,12568,38.47,Dist+
+2017,201617,Revised,All state-funded schools,Converter academies - mainstream,All students,A level,119639,32.55,C+
+2017,201617,Revised,All state-funded schools,Converter academies - mainstream,All students,Applied general,22241,39.9,Dist+
+2017,201617,Revised,All state-funded schools,Converter academies - mainstream,All students,Tech level,4854,38.82,Dist+
+2017,201617,Revised,All state-funded schools,Free schools,All students,A level,947,28.6,C
+2017,201617,Revised,All state-funded schools,Free schools,All students,Applied general,146,38.28,Dist+
+2017,201617,Revised,All state-funded schools,Free schools,All students,Tech level,126,43.85,Dist*-
+2017,201617,Revised,All state-funded schools,Free schools 16-19,All students,A level,1654,34.94,C+
+2017,201617,Revised,All state-funded schools,Free schools 16-19,All students,Applied general,385,34.92,Dist
+2017,201617,Revised,All state-funded schools,Free schools 16-19,All students,Tech level,122,32.38,Dist-
+2017,201617,Revised,All state-funded schools,LA maintained mainstream schools,All students,A level,51824,30.38,C
+2017,201617,Revised,All state-funded schools,LA maintained mainstream schools,All students,Applied general,13887,39.87,Dist+
+2017,201617,Revised,All state-funded schools,LA maintained mainstream schools,All students,Tech level,3229,39.27,Dist+
+2017,201617,Revised,All state-funded schools,Sponsored academies - mainstream,All students,A level,21029,27,C-
+2017,201617,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,11504,39.08,Dist+
+2017,201617,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,2640,38.34,Dist+
+2017,201617,Revised,All state-funded schools,Studio schools,All students,A level,349,23.41,D+
+2017,201617,Revised,All state-funded schools,Studio schools,All students,Applied general,389,35.83,Dist
+2017,201617,Revised,All state-funded schools,Studio schools,All students,Tech level,222,33.69,Dist
+2017,201617,Revised,All state-funded schools,University technical colleges (UTCs),All students,A level,1525,21.16,D
+2017,201617,Revised,All state-funded schools,University technical colleges (UTCs),All students,Applied general,501,36.43,Dist
+2017,201617,Revised,All state-funded schools,University technical colleges (UTCs),All students,Tech level,1218,36.47,Dist
+2018,201718,Revised,All FE sector colleges,All FE sector colleges,All students,A level,76552,31.13,C
+2018,201718,Revised,All FE sector colleges,All FE sector colleges,All students,Applied general,10667,26.25,Merit
+2018,201718,Revised,All FE sector colleges,All FE sector colleges,All students,Tech level,7017,25.6,Merit
+2018,201718,Revised,All FE sector colleges,Other FE sector colleges,All students,A level,26517,28.06,C-
+2018,201718,Revised,All FE sector colleges,Other FE sector colleges,All students,Applied general,6175,25.19,Merit
+2018,201718,Revised,All FE sector colleges,Other FE sector colleges,All students,Tech level,6678,25.2,Merit
+2018,201718,Revised,All FE sector colleges,Sixth form colleges,All students,A level,50035,32.68,C+
+2018,201718,Revised,All FE sector colleges,Sixth form colleges,All students,Applied general,4492,28.41,Merit+
+2018,201718,Revised,All FE sector colleges,Sixth form colleges,All students,Tech level,339,32.63,Dist-
+2018,201718,Revised,All Institutions,All institutions,All students,A level,299420,33.33,C+
+2018,201718,Revised,All Institutions,All institutions,All students,Applied general,45797,28.45,Merit+
+2018,201718,Revised,All Institutions,All institutions,All students,Tech level,12829,28.1,Merit+
+2018,201718,Revised,All independent schools,All independent schools,All students,A level,36532,41.31,B
+2018,201718,Revised,All independent schools,All independent schools,All students,Applied general,551,30.46,Dist-
+2018,201718,Revised,All independent schools,All independent schools,All students,Tech level,29,24.9,Merit
+2018,201718,Revised,All independent schools,Independent schools,All students,A level,36470,41.32,B
+2018,201718,Revised,All independent schools,Independent schools,All students,Applied general,544,30.43,Dist-
+2018,201718,Revised,All independent schools,Independent schools,All students,Tech level,29,24.9,Merit
+2018,201718,Revised,All independent schools,Independent special schools,All students,A level,62,26.21,C-
+2018,201718,Revised,All independent schools,Independent special schools,All students,Applied general,7,32.7,Dist-
+2018,201718,Revised,All independent schools,Independent special schools,All students,Tech level,0,NA,z
+2018,201718,Revised,All schools,All schools,All students,A level,232035,33.87,C+
+2018,201718,Revised,All schools,All schools,All students,Applied general,35335,29.1,Merit+
+2018,201718,Revised,All schools,All schools,All students,Tech level,5881,31.46,Dist-
+2018,201718,Revised,All state-funded,All state-funded,All students,A level,263436,32.12,C+
+2018,201718,Revised,All state-funded,All state-funded,All students,Applied general,45245,28.43,Merit+
+2018,201718,Revised,All state-funded,All state-funded,All students,Tech level,12800,28.11,Merit+
+2018,201718,Revised,All state-funded schools,All state-funded schools,All students,A level,195454,32.35,C+
+2018,201718,Revised,All state-funded schools,All state-funded schools,All students,Applied general,34782,29.09,Merit+
+2018,201718,Revised,All state-funded schools,All state-funded schools,All students,Tech level,5852,31.49,Dist-
+2018,201718,Revised,All state-funded schools,Converter academies - mainstream,All students,A level,125956,33.31,C+
+2018,201718,Revised,All state-funded schools,Converter academies - mainstream,All students,Applied general,17422,29.2,Merit+
+2018,201718,Revised,All state-funded schools,Converter academies - mainstream,All students,Tech level,2566,32.23,Dist-
+2018,201718,Revised,All state-funded schools,Free schools,All students,A level,1094,29.57,C
+2018,201718,Revised,All state-funded schools,Free schools,All students,Applied general,77,29.82,Merit+
+2018,201718,Revised,All state-funded schools,Free schools,All students,Tech level,34,38.67,Dist+
+2018,201718,Revised,All state-funded schools,Free schools 16-19,All students,A level,1746,36.53,B-
+2018,201718,Revised,All state-funded schools,Free schools 16-19,All students,Applied general,80,33.52,Dist
+2018,201718,Revised,All state-funded schools,Free schools 16-19,All students,Tech level,6,36.19,Dist
+2018,201718,Revised,All state-funded schools,LA maintained mainstream schools,All students,A level,44273,31.46,C
+2018,201718,Revised,All state-funded schools,LA maintained mainstream schools,All students,Applied general,8813,28.99,Merit+
+2018,201718,Revised,All state-funded schools,LA maintained mainstream schools,All students,Tech level,1186,31.5,Dist-
+2018,201718,Revised,All state-funded schools,Sponsored academies - mainstream,All students,A level,20082,27.76,C-
+2018,201718,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,7510,28.84,Merit+
+2018,201718,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,1178,30.93,Dist-
+2018,201718,Revised,All state-funded schools,Studio schools,All students,A level,366,21.61,D
+2018,201718,Revised,All state-funded schools,Studio schools,All students,Applied general,267,29.26,Merit+
+2018,201718,Revised,All state-funded schools,Studio schools,All students,Tech level,133,27.29,Merit+
+2018,201718,Revised,All state-funded schools,University technical colleges (UTCs),All students,A level,1501,20.19,D
+2018,201718,Revised,All state-funded schools,University technical colleges (UTCs),All students,Applied general,537,29.94,Merit+
+2018,201718,Revised,All state-funded schools,University technical colleges (UTCs),All students,Tech level,734,30.41,Dist-
+2019,201819,Revised,All FE sector colleges,All FE sector colleges,All students,A level,63507,31.92,C+
+2019,201819,Revised,All FE sector colleges,All FE sector colleges,All students,Applied general,21219,27.2,Merit+
+2019,201819,Revised,All FE sector colleges,All FE sector colleges,All students,Tech level,12417,26.92,Merit+
+2019,201819,Revised,All FE sector colleges,Other FE sector colleges,All students,A level,23312,28.57,C
+2019,201819,Revised,All FE sector colleges,Other FE sector colleges,All students,Applied general,14643,26.47,Merit
+2019,201819,Revised,All FE sector colleges,Other FE sector colleges,All students,Tech level,11708,26.48,Merit
+2019,201819,Revised,All FE sector colleges,Sixth form colleges,All students,A level,40195,33.76,C+
+2019,201819,Revised,All FE sector colleges,Sixth form colleges,All students,Applied general,6576,29.57,Merit+
+2019,201819,Revised,All FE sector colleges,Sixth form colleges,All students,Tech level,709,34.46,Dist
+2019,201819,Revised,All Institutions,All institutions,All students,A level,283532,34.01,C+
+2019,201819,Revised,All Institutions,All institutions,All students,Applied general,68772,28.91,Merit+
+2019,201819,Revised,All Institutions,All institutions,All students,Tech level,19485,28.64,Merit+
+2019,201819,Revised,All independent schools,All independent schools,All students,A level,35751,41.24,B
+2019,201819,Revised,All independent schools,All independent schools,All students,Applied general,1054,31,Dist-
+2019,201819,Revised,All independent schools,All independent schools,All students,Tech level,51,30.65,Dist-
+2019,201819,Revised,All independent schools,Independent schools,All students,A level,35705,41.25,B
+2019,201819,Revised,All independent schools,Independent schools,All students,Applied general,1046,30.99,Dist-
+2019,201819,Revised,All independent schools,Independent schools,All students,Tech level,50,31.32,Dist-
+2019,201819,Revised,All independent schools,Independent special schools,All students,A level,46,26.38,C-
+2019,201819,Revised,All independent schools,Independent special schools,All students,Applied general,8,33.04,Dist-
+2019,201819,Revised,All independent schools,Independent special schools,All students,Tech level,1,0,U
+2019,201819,Revised,All schools,All schools,All students,A level,224966,34.48,C+
+2019,201819,Revised,All schools,All schools,All students,Applied general,48340,29.72,Merit+
+2019,201819,Revised,All schools,All schools,All students,Tech level,7279,32.31,Dist-
+2019,201819,Revised,All state-funded,All state-funded,All students,A level,247994,32.87,C+
+2019,201819,Revised,All state-funded,All state-funded,All students,Applied general,67709,28.89,Merit+
+2019,201819,Revised,All state-funded,All state-funded,All students,Tech level,19431,28.64,Merit+
+2019,201819,Revised,All state-funded schools,All state-funded schools,All students,A level,189176,33.09,C+
+2019,201819,Revised,All state-funded schools,All state-funded schools,All students,Applied general,47276,29.7,Merit+
+2019,201819,Revised,All state-funded schools,All state-funded schools,All students,Tech level,7224,32.32,Dist-
+2019,201819,Revised,All state-funded schools,Converter academies - mainstream,All students,A level,125612,33.97,C+
+2019,201819,Revised,All state-funded schools,Converter academies - mainstream,All students,Applied general,25474,29.85,Merit+
+2019,201819,Revised,All state-funded schools,Converter academies - mainstream,All students,Tech level,3241,33.17,Dist-
+2019,201819,Revised,All state-funded schools,Free schools,All students,A level,1494,29.78,C
+2019,201819,Revised,All state-funded schools,Free schools,All students,Applied general,78,29.54,Merit+
+2019,201819,Revised,All state-funded schools,Free schools,All students,Tech level,37,37.01,Dist+
+2019,201819,Revised,All state-funded schools,Free schools 16-19,All students,A level,2930,38.12,B-
+2019,201819,Revised,All state-funded schools,Free schools 16-19,All students,Applied general,269,31.33,Dist-
+2019,201819,Revised,All state-funded schools,Free schools 16-19,All students,Tech level,33,30.27,Dist-
+2019,201819,Revised,All state-funded schools,LA maintained mainstream schools,All students,A level,37286,32.25,C+
+2019,201819,Revised,All state-funded schools,LA maintained mainstream schools,All students,Applied general,10622,29.2,Merit+
+2019,201819,Revised,All state-funded schools,LA maintained mainstream schools,All students,Tech level,1320,32.06,Dist-
+2019,201819,Revised,All state-funded schools,Sponsored academies - mainstream,All students,A level,19777,28.36,C
+2019,201819,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,9676,29.75,Merit+
+2019,201819,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,1500,31.3,Dist-
+2019,201819,Revised,All state-funded schools,Studio schools,All students,A level,351,25.37,C-
+2019,201819,Revised,All state-funded schools,Studio schools,All students,Applied general,311,27.56,Merit+
+2019,201819,Revised,All state-funded schools,Studio schools,All students,Tech level,159,30.42,Dist-
+2019,201819,Revised,All state-funded schools,University technical colleges (UTCs),All students,A level,1283,23.06,D+
+2019,201819,Revised,All state-funded schools,University technical colleges (UTCs),All students,Applied general,728,30.48,Dist-
+2019,201819,Revised,All state-funded schools,University technical colleges (UTCs),All students,Tech level,920,31.45,Dist-
+2020,201920,Final,All FE sector colleges,All FE sector colleges,All students,A level,58046,36.74,B-
+2020,201920,Final,All FE sector colleges,All FE sector colleges,All students,Applied general,26254,28.21,Merit+
+2020,201920,Final,All FE sector colleges,All FE sector colleges,All students,Tech level,15107,27.89,Merit+
+2020,201920,Final,All FE sector colleges,Other FE sector colleges,All students,A level,23350,34.15,C+
+2020,201920,Final,All FE sector colleges,Other FE sector colleges,All students,Applied general,18888,27.33,Merit+
+2020,201920,Final,All FE sector colleges,Other FE sector colleges,All students,Tech level,14334,27.5,Merit+
+2020,201920,Final,All FE sector colleges,Sixth form colleges,All students,A level,34696,38.39,B
+2020,201920,Final,All FE sector colleges,Sixth form colleges,All students,Applied general,7366,31.48,Dist-
+2020,201920,Final,All FE sector colleges,Sixth form colleges,All students,Tech level,773,35.98,Dist
+2020,201920,Final,All Institutions,All institutions,All students,A level,272015,39.64,B
+2020,201920,Final,All Institutions,All institutions,All students,Applied general,79374,31.25,Dist-
+2020,201920,Final,All Institutions,All institutions,All students,Tech level,22946,29.93,Merit+
+2020,201920,Final,All independent schools,All independent schools,All students,A level,34964,46.56,A-
+2020,201920,Final,All independent schools,All independent schools,All students,Applied general,1545,33.23,Dist-
+2020,201920,Final,All independent schools,All independent schools,All students,Tech level,85,32.66,Dist-
+2020,201920,Final,All independent schools,Independent schools,All students,A level,34913,46.57,A-
+2020,201920,Final,All independent schools,Independent schools,All students,Applied general,1526,33.31,Dist-
+2020,201920,Final,All independent schools,Independent schools,All students,Tech level,84,32.93,Dist-
+2020,201920,Final,All independent schools,Independent special schools,All students,A level,51,36.46,B-
+2020,201920,Final,All independent schools,Independent special schools,All students,Applied general,19,23.9,Merit
+2020,201920,Final,All independent schools,Independent special schools,All students,Tech level,1,10,Pass-
+2020,201920,Final,All schools,All schools,All students,A level,215412,40.35,B
+2020,201920,Final,All schools,All schools,All students,Applied general,54269,32.76,Dist-
+2020,201920,Final,All schools,All schools,All students,Tech level,8216,34.57,Dist
+2020,201920,Final,All state-funded,All state-funded,All students,A level,237220,38.55,B
+2020,201920,Final,All state-funded,All state-funded,All students,Applied general,77818,31.22,Dist-
+2020,201920,Final,All state-funded,All state-funded,All students,Tech level,22854,29.92,Merit+
+2020,201920,Final,All state-funded schools,All state-funded schools,All students,A level,180411,39.07,B
+2020,201920,Final,All state-funded schools,All state-funded schools,All students,Applied general,52710,32.75,Dist-
+2020,201920,Final,All state-funded schools,All state-funded schools,All students,Tech level,8124,34.59,Dist
+2020,201920,Final,All state-funded schools,Converter academies - mainstream,All students,A level,123257,39.56,B
+2020,201920,Final,All state-funded schools,Converter academies - mainstream,All students,Applied general,30574,32.57,Dist-
+2020,201920,Final,All state-funded schools,Converter academies - mainstream,All students,Tech level,3796,35.6,Dist
+2020,201920,Final,All state-funded schools,Free schools,All students,A level,1903,37.11,B-
+2020,201920,Final,All state-funded schools,Free schools,All students,Applied general,223,32.16,Dist-
+2020,201920,Final,All state-funded schools,Free schools,All students,Tech level,44,37.92,Dist+
+2020,201920,Final,All state-funded schools,Free schools 16-19,All students,A level,3219,41.25,B
+2020,201920,Final,All state-funded schools,Free schools 16-19,All students,Applied general,480,31.9,Dist-
+2020,201920,Final,All state-funded schools,Free schools 16-19,All students,Tech level,49,32.76,Dist-
+2020,201920,Final,All state-funded schools,LA maintained mainstream schools,All students,A level,32009,38.62,B
+2020,201920,Final,All state-funded schools,LA maintained mainstream schools,All students,Applied general,10188,32.49,Dist-
+2020,201920,Final,All state-funded schools,LA maintained mainstream schools,All students,Tech level,1409,34.41,Dist
+2020,201920,Final,All state-funded schools,Sponsored academies - mainstream,All students,A level,18121,36.21,B-
+2020,201920,Final,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,10065,33.58,Dist
+2020,201920,Final,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,1521,34.54,Dist
+2020,201920,Final,All state-funded schools,Studio schools,All students,A level,271,36.76,B-
+2020,201920,Final,All state-funded schools,Studio schools,All students,Applied general,320,31.9,Dist-
+2020,201920,Final,All state-funded schools,Studio schools,All students,Tech level,154,31.46,Dist-
+2020,201920,Final,All state-funded schools,University technical colleges (UTCs),All students,A level,1195,33.57,C+
+2020,201920,Final,All state-funded schools,University technical colleges (UTCs),All students,Applied general,701,30.87,Dist-
+2020,201920,Final,All state-funded schools,University technical colleges (UTCs),All students,Tech level,1135,32.49,Dist-
+2021,202021,Final,All FE sector colleges,All FE sector colleges,All students,A level,54161,38.6,B
+2021,202021,Final,All FE sector colleges,All FE sector colleges,All students,Applied general,30167,30.08,Dist-
+2021,202021,Final,All FE sector colleges,All FE sector colleges,All students,Tech level,12894,29.87,Merit+
+2021,202021,Final,All FE sector colleges,Other FE sector colleges,All students,A level,20390,37.08,B-
+2021,202021,Final,All FE sector colleges,Other FE sector colleges,All students,Applied general,21466,29.16,Merit+
+2021,202021,Final,All FE sector colleges,Other FE sector colleges,All students,Tech level,12113,29.4,Merit+
+2021,202021,Final,All FE sector colleges,Sixth form colleges,All students,A level,33771,39.51,B
+2021,202021,Final,All FE sector colleges,Sixth form colleges,All students,Applied general,8701,33.47,Dist
+2021,202021,Final,All FE sector colleges,Sixth form colleges,All students,Tech level,781,38.43,Dist+
+2021,202021,Final,All Institutions,All institutions,All students,A level,271471,41.66,B
+2021,202021,Final,All Institutions,All institutions,All students,Applied general,89784,32.69,Dist-
+2021,202021,Final,All Institutions,All institutions,All students,Tech level,20929,31.68,Dist-
+2021,202021,Final,All independent schools,All independent schools,All students,A level,34623,49.4,A
+2021,202021,Final,All independent schools,All independent schools,All students,Applied general,1940,35.8,Dist
+2021,202021,Final,All independent schools,All independent schools,All students,Tech level,121,37.07,Dist+
+2021,202021,Final,All independent schools,Independent schools,All students,A level,34578,49.41,A
+2021,202021,Final,All independent schools,Independent schools,All students,Applied general,1927,35.81,Dist
+2021,202021,Final,All independent schools,Independent schools,All students,Tech level,121,37.07,Dist+
+2021,202021,Final,All independent schools,Independent special schools,All students,A level,45,36.54,B-
+2021,202021,Final,All independent schools,Independent special schools,All students,Applied general,13,33.46,Dist
+2021,202021,Final,All independent schools,Independent special schools,All students,Tech level,0,NA,z
+2021,202021,Final,All schools,All schools,All students,A level,217999,42.38,B+
+2021,202021,Final,All schools,All schools,All students,Applied general,60116,34.19,Dist
+2021,202021,Final,All schools,All schools,All students,Tech level,8172,35.72,Dist
+2021,202021,Final,All state-funded,All state-funded,All students,A level,236927,40.46,B
+2021,202021,Final,All state-funded,All state-funded,All students,Applied general,87850,32.63,Dist-
+2021,202021,Final,All state-funded,All state-funded,All students,Tech level,20807,31.65,Dist-
+2021,202021,Final,All state-funded schools,All state-funded schools,All students,A level,183343,40.97,B
+2021,202021,Final,All state-funded schools,All state-funded schools,All students,Applied general,58167,34.14,Dist
+2021,202021,Final,All state-funded schools,All state-funded schools,All students,Tech level,8050,35.71,Dist
+2021,202021,Final,All state-funded schools,Converter academies - mainstream,All students,A level,125536,41.34,B
+2021,202021,Final,All state-funded schools,Converter academies - mainstream,All students,Applied general,34112,34.27,Dist
+2021,202021,Final,All state-funded schools,Converter academies - mainstream,All students,Tech level,3754,37.01,Dist+
+2021,202021,Final,All state-funded schools,Free schools,All students,A level,2628,40.77,B
+2021,202021,Final,All state-funded schools,Free schools,All students,Applied general,392,33.56,Dist
+2021,202021,Final,All state-funded schools,Free schools,All students,Tech level,90,38.03,Dist+
+2021,202021,Final,All state-funded schools,Free schools 16-19,All students,A level,4149,42.61,B+
+2021,202021,Final,All state-funded schools,Free schools 16-19,All students,Applied general,831,35.58,Dist
+2021,202021,Final,All state-funded schools,Free schools 16-19,All students,Tech level,70,34.1,Dist
+2021,202021,Final,All state-funded schools,LA maintained mainstream schools,All students,A level,31327,40.65,B
+2021,202021,Final,All state-funded schools,LA maintained mainstream schools,All students,Applied general,10789,33.89,Dist
+2021,202021,Final,All state-funded schools,LA maintained mainstream schools,All students,Tech level,1314,36.24,Dist
+2021,202021,Final,All state-funded schools,Sponsored academies - mainstream,All students,A level,17761,38.56,B
+2021,202021,Final,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,10718,34.11,Dist
+2021,202021,Final,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,1594,34.9,Dist
+2021,202021,Final,All state-funded schools,Studio schools,All students,A level,255,37.91,B-
+2021,202021,Final,All state-funded schools,Studio schools,All students,Applied general,333,31.63,Dist-
+2021,202021,Final,All state-funded schools,Studio schools,All students,Tech level,139,31.2,Dist-
+2021,202021,Final,All state-funded schools,University technical colleges (UTCs),All students,A level,1261,36.04,B-
+2021,202021,Final,All state-funded schools,University technical colleges (UTCs),All students,Applied general,861,32.61,Dist-
+2021,202021,Final,All state-funded schools,University technical colleges (UTCs),All students,Tech level,1080,33.07,Dist-
+2022,202122,Revised,All FE sector colleges,All FE sector colleges,All students,A level,54465,36.29,B-
+2022,202122,Revised,All FE sector colleges,All FE sector colleges,All students,Applied general,49574,30.44,Dist-
+2022,202122,Revised,All FE sector colleges,All FE sector colleges,All students,Tech level,19104,29.1,Merit+
+2022,202122,Revised,All FE sector colleges,Other FE sector colleges,All students,A level,21374,33.37,C+
+2022,202122,Revised,All FE sector colleges,Other FE sector colleges,All students,Applied general,32037,29.05,Merit+
+2022,202122,Revised,All FE sector colleges,Other FE sector colleges,All students,Tech level,17470,28.65,Merit+
+2022,202122,Revised,All FE sector colleges,Sixth form colleges,All students,A level,33091,38.19,B-
+2022,202122,Revised,All FE sector colleges,Sixth form colleges,All students,Applied general,17537,33.7,Dist
+2022,202122,Revised,All FE sector colleges,Sixth form colleges,All students,Tech level,1634,35.17,Dist
+2022,202122,Revised,All Institutions,All institutions,All students,A level,284380,38.87,B
+2022,202122,Revised,All Institutions,All institutions,All students,Applied general,119853,31.98,Dist-
+2022,202122,Revised,All Institutions,All institutions,All students,Tech level,28535,30.56,Dist-
+2022,202122,Revised,All independent schools,All independent schools,All students,A level,34618,45.61,A-
+2022,202122,Revised,All independent schools,All independent schools,All students,Applied general,2178,36.56,Dist
+2022,202122,Revised,All independent schools,All independent schools,All students,Tech level,180,34.79,Dist
+2022,202122,Revised,All independent schools,Independent schools,All students,A level,34552,45.62,A-
+2022,202122,Revised,All independent schools,Independent schools,All students,Applied general,2161,36.6,Dist
+2022,202122,Revised,All independent schools,Independent schools,All students,Tech level,176,35.09,Dist
+2022,202122,Revised,All independent schools,Independent special schools,All students,A level,66,30.37,C
+2022,202122,Revised,All independent schools,Independent special schools,All students,Applied general,17,30.11,Dist-
+2022,202122,Revised,All independent schools,Independent special schools,All students,Tech level,4,19.44,Pass+
+2022,202122,Revised,All schools,All schools,All students,A level,229915,39.46,B
+2022,202122,Revised,All schools,All schools,All students,Applied general,70282,33.4,Dist
+2022,202122,Revised,All schools,All schools,All students,Tech level,9432,34.82,Dist
+2022,202122,Revised,All state-funded,All state-funded,All students,A level,249723,37.86,B-
+2022,202122,Revised,All state-funded,All state-funded,All students,Applied general,117666,31.91,Dist-
+2022,202122,Revised,All state-funded,All state-funded,All students,Tech level,28350,30.54,Dist-
+2022,202122,Revised,All state-funded schools,All state-funded schools,All students,A level,195258,38.28,B-
+2022,202122,Revised,All state-funded schools,All state-funded schools,All students,Applied general,68095,33.31,Dist-
+2022,202122,Revised,All state-funded schools,All state-funded schools,All students,Tech level,9247,34.82,Dist
+2022,202122,Revised,All state-funded schools,Converter academies - mainstream,All students,A level,134454,39.06,B
+2022,202122,Revised,All state-funded schools,Converter academies - mainstream,All students,Applied general,40418,33.43,Dist
+2022,202122,Revised,All state-funded schools,Converter academies - mainstream,All students,Tech level,4296,36.17,Dist
+2022,202122,Revised,All state-funded schools,Free schools,All students,A level,3021,35.42,B-
+2022,202122,Revised,All state-funded schools,Free schools,All students,Applied general,499,32.85,Dist-
+2022,202122,Revised,All state-funded schools,Free schools,All students,Tech level,131,38.22,Dist+
+2022,202122,Revised,All state-funded schools,Free schools 16-19,All students,A level,5139,40.01,B
+2022,202122,Revised,All state-funded schools,Free schools 16-19,All students,Applied general,1760,35.05,Dist
+2022,202122,Revised,All state-funded schools,Free schools 16-19,All students,Tech level,204,33.27,Dist-
+2022,202122,Revised,All state-funded schools,LA maintained mainstream schools,All students,A level,31346,37.62,B-
+2022,202122,Revised,All state-funded schools,LA maintained mainstream schools,All students,Applied general,11908,33.13,Dist-
+2022,202122,Revised,All state-funded schools,LA maintained mainstream schools,All students,Tech level,1472,35.01,Dist
+2022,202122,Revised,All state-funded schools,Sponsored academies - mainstream,All students,A level,19127,34.05,C+
+2022,202122,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,11978,32.94,Dist-
+2022,202122,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,1656,33.6,Dist
+2022,202122,Revised,All state-funded schools,Studio schools,All students,A level,286,30.13,C
+2022,202122,Revised,All state-funded schools,Studio schools,All students,Applied general,380,30.13,Dist-
+2022,202122,Revised,All state-funded schools,Studio schools,All students,Tech level,141,30.28,Dist-
+2022,202122,Revised,All state-funded schools,University technical colleges (UTCs),All students,A level,1467,27.8,C-
+2022,202122,Revised,All state-funded schools,University technical colleges (UTCs),All students,Applied general,985,32.62,Dist-
+2022,202122,Revised,All state-funded schools,University technical colleges (UTCs),All students,Tech level,1327,32.81,Dist-
+2023,202223,Revised,All FE sector colleges,All FE sector colleges,All students,A level,57469,32.46,C+
+2023,202223,Revised,All FE sector colleges,All FE sector colleges,All students,Applied general,51201,27.99,Merit+
+2023,202223,Revised,All FE sector colleges,All FE sector colleges,All students,Tech level,19006,26.84,Merit+
+2023,202223,Revised,All FE sector colleges,Other FE sector colleges,All students,A level,23441,29.3,C
+2023,202223,Revised,All FE sector colleges,Other FE sector colleges,All students,Applied general,33523,26.52,Merit
+2023,202223,Revised,All FE sector colleges,Other FE sector colleges,All students,Tech level,17550,26.31,Merit
+2023,202223,Revised,All FE sector colleges,Sixth form colleges,All students,A level,34028,34.61,C+
+2023,202223,Revised,All FE sector colleges,Sixth form colleges,All students,Applied general,17678,31.52,Dist-
+2023,202223,Revised,All FE sector colleges,Sixth form colleges,All students,Tech level,1456,34.65,Dist
+2023,202223,Revised,All Institutions,All institutions,All students,A level,292201,35.29,B-
+2023,202223,Revised,All Institutions,All institutions,All students,Applied general,123265,29.56,Merit+
+2023,202223,Revised,All Institutions,All institutions,All students,Tech level,28023,28.52,Merit+
+2023,202223,Revised,All independent schools,All independent schools,All students,A level,36220,42.53,B+
+2023,202223,Revised,All independent schools,All independent schools,All students,Applied general,2307,32.66,Dist-
+2023,202223,Revised,All independent schools,All independent schools,All students,Tech level,148,35.51,Dist
+2023,202223,Revised,All independent schools,Independent schools,All students,A level,36134,42.56,B+
+2023,202223,Revised,All independent schools,Independent schools,All students,Applied general,2274,32.79,Dist-
+2023,202223,Revised,All independent schools,Independent schools,All students,Tech level,147,35.62,Dist
+2023,202223,Revised,All independent schools,Independent special schools,All students,A level,86,24.44,D+
+2023,202223,Revised,All independent schools,Independent special schools,All students,Applied general,33,22.05,Merit-
+2023,202223,Revised,All independent schools,Independent special schools,All students,Tech level,1,15,Pass
+2023,202223,Revised,All schools,All schools,All students,A level,234890,35.94,B-
+2023,202223,Revised,All schools,All schools,All students,Applied general,72415,30.98,Dist-
+2023,202223,Revised,All schools,All schools,All students,Tech level,9199,33.19,Dist-
+2023,202223,Revised,All state-funded,All state-funded,All students,A level,255992,34.16,C+
+2023,202223,Revised,All state-funded,All state-funded,All students,Applied general,120950,29.52,Merit+
+2023,202223,Revised,All state-funded,All state-funded,All students,Tech level,27869,28.5,Merit+
+2023,202223,Revised,All state-funded schools,All state-funded schools,All students,A level,198613,34.63,C+
+2023,202223,Revised,All state-funded schools,All state-funded schools,All students,Applied general,70098,30.93,Dist-
+2023,202223,Revised,All state-funded schools,All state-funded schools,All students,Tech level,9044,33.17,Dist-
+2023,202223,Revised,All state-funded schools,Converter academies - mainstream,All students,A level,135998,35.33,B-
+2023,202223,Revised,All state-funded schools,Converter academies - mainstream,All students,Applied general,41885,31.04,Dist-
+2023,202223,Revised,All state-funded schools,Converter academies - mainstream,All students,Tech level,4264,33.83,Dist
+2023,202223,Revised,All state-funded schools,Free schools,All students,A level,3785,32.45,C+
+2023,202223,Revised,All state-funded schools,Free schools,All students,Applied general,647,29.74,Merit+
+2023,202223,Revised,All state-funded schools,Free schools,All students,Tech level,129,33.32,Dist-
+2023,202223,Revised,All state-funded schools,Free schools 16-19,All students,A level,5527,36.83,B-
+2023,202223,Revised,All state-funded schools,Free schools 16-19,All students,Applied general,1988,33.36,Dist
+2023,202223,Revised,All state-funded schools,Free schools 16-19,All students,Tech level,272,35.14,Dist
+2023,202223,Revised,All state-funded schools,LA maintained mainstream schools,All students,A level,31494,34.19,C+
+2023,202223,Revised,All state-funded schools,LA maintained mainstream schools,All students,Applied general,11535,31.01,Dist-
+2023,202223,Revised,All state-funded schools,LA maintained mainstream schools,All students,Tech level,1344,33.15,Dist-
+2023,202223,Revised,All state-funded schools,Sponsored academies - mainstream,All students,A level,19655,30.26,C
+2023,202223,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,12446,30.14,Dist-
+2023,202223,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,1694,33.35,Dist
+2023,202223,Revised,All state-funded schools,Studio schools,All students,A level,292,28.06,C-
+2023,202223,Revised,All state-funded schools,Studio schools,All students,Applied general,382,30.53,Dist-
+2023,202223,Revised,All state-funded schools,Studio schools,All students,Tech level,121,27.74,Merit+
+2023,202223,Revised,All state-funded schools,University technical colleges (UTCs),All students,A level,1392,25.47,C-
+2023,202223,Revised,All state-funded schools,University technical colleges (UTCs),All students,Applied general,1064,30.81,Dist-
+2023,202223,Revised,All state-funded schools,University technical colleges (UTCs),All students,Tech level,1201,31.27,Dist-
+2024,202324,Revised,All FE sector colleges,All FE sector colleges,All students,A level,60793,32.52,C+
+2024,202324,Revised,All FE sector colleges,All FE sector colleges,All students,Applied general,58191,27.32,Merit+
+2024,202324,Revised,All FE sector colleges,All FE sector colleges,All students,Tech level,18883,26.44,Merit
+2024,202324,Revised,All FE sector colleges,Other FE sector colleges,All students,A level,25660,29.15,C
+2024,202324,Revised,All FE sector colleges,Other FE sector colleges,All students,Applied general,40035,25.66,Merit
+2024,202324,Revised,All FE sector colleges,Other FE sector colleges,All students,Tech level,17412,25.83,Merit
+2024,202324,Revised,All FE sector colleges,Sixth form colleges,All students,A level,35133,34.89,C+
+2024,202324,Revised,All FE sector colleges,Sixth form colleges,All students,Applied general,18156,31.79,Dist-
+2024,202324,Revised,All FE sector colleges,Sixth form colleges,All students,Tech level,1471,35.46,Dist
+2024,202324,Revised,All Institutions,All institutions,All students,A level,299335,35.55,B-
+2024,202324,Revised,All Institutions,All institutions,All students,Applied general,131270,29.17,Merit+
+2024,202324,Revised,All Institutions,All institutions,All students,Tech level,27354,28.14,Merit+
+2024,202324,Revised,All independent schools,All independent schools,All students,A level,36968,43.04,B+
+2024,202324,Revised,All independent schools,All independent schools,All students,Applied general,2638,33.96,Dist
+2024,202324,Revised,All independent schools,All independent schools,All students,Tech level,178,35.91,Dist
+2024,202324,Revised,All independent schools,Independent schools,All students,A level,36845,43.07,B+
+2024,202324,Revised,All independent schools,Independent schools,All students,Applied general,2598,34.08,Dist
+2024,202324,Revised,All independent schools,Independent schools,All students,Tech level,178,35.91,Dist
+2024,202324,Revised,All independent schools,Independent special schools,All students,A level,123,25.26,C-
+2024,202324,Revised,All independent schools,Independent special schools,All students,Applied general,40,22.76,Merit-
+2024,202324,Revised,All independent schools,Independent special schools,All students,Tech level,0,NA,z
+2024,202324,Revised,All schools,All schools,All students,A level,238951,36.25,B-
+2024,202324,Revised,All schools,All schools,All students,Applied general,74207,30.95,Dist-
+2024,202324,Revised,All schools,All schools,All students,Tech level,8593,33.05,Dist-
+2024,202324,Revised,All state-funded,All state-funded,All students,A level,262421,34.38,C+
+2024,202324,Revised,All state-funded,All state-funded,All students,Applied general,128634,29.09,Merit+
+2024,202324,Revised,All state-funded,All state-funded,All students,Tech level,27170,28.11,Merit+
+2024,202324,Revised,All state-funded schools,All state-funded schools,All students,A level,201934,34.89,C+
+2024,202324,Revised,All state-funded schools,All state-funded schools,All students,Applied general,71553,30.85,Dist-
+2024,202324,Revised,All state-funded schools,All state-funded schools,All students,Tech level,8408,33.02,Dist-
+2024,202324,Revised,All state-funded schools,Converter academies - mainstream,All students,A level,139442,35.55,B-
+2024,202324,Revised,All state-funded schools,Converter academies - mainstream,All students,Applied general,43523,30.98,Dist-
+2024,202324,Revised,All state-funded schools,Converter academies - mainstream,All students,Tech level,4041,33.36,Dist
+2024,202324,Revised,All state-funded schools,Free schools,All students,A level,4386,33.02,C+
+2024,202324,Revised,All state-funded schools,Free schools,All students,Applied general,823,30.34,Dist-
+2024,202324,Revised,All state-funded schools,Free schools,All students,Tech level,151,33.65,Dist
+2024,202324,Revised,All state-funded schools,Free schools 16-19,All students,A level,6515,37.51,B-
+2024,202324,Revised,All state-funded schools,Free schools 16-19,All students,Applied general,2407,33.68,Dist
+2024,202324,Revised,All state-funded schools,Free schools 16-19,All students,Tech level,246,34.23,Dist
+2024,202324,Revised,All state-funded schools,LA maintained mainstream schools,All students,A level,29709,34.28,C+
+2024,202324,Revised,All state-funded schools,LA maintained mainstream schools,All students,Applied general,11229,30.85,Dist-
+2024,202324,Revised,All state-funded schools,LA maintained mainstream schools,All students,Tech level,1194,33.56,Dist
+2024,202324,Revised,All state-funded schools,Sponsored academies - mainstream,All students,A level,19652,30.86,C
+2024,202324,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,12116,29.91,Merit+
+2024,202324,Revised,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,1507,32.83,Dist-
+2024,202324,Revised,All state-funded schools,Studio schools,All students,A level,223,29.03,C
+2024,202324,Revised,All state-funded schools,Studio schools,All students,Applied general,279,29.54,Merit+
+2024,202324,Revised,All state-funded schools,Studio schools,All students,Tech level,121,26.72,Merit+
+2024,202324,Revised,All state-funded schools,University technical colleges (UTCs),All students,A level,1556,26.15,C-
+2024,202324,Revised,All state-funded schools,University technical colleges (UTCs),All students,Applied general,994,30.2,Dist-
+2024,202324,Revised,All state-funded schools,University technical colleges (UTCs),All students,Tech level,1135,32.21,Dist-
+2025,202425,Final,All FE sector colleges,All FE sector colleges,All students,A level,57107,33.01,C+
+2025,202425,Final,All FE sector colleges,All FE sector colleges,All students,Applied general,57167,28.28,Merit+
+2025,202425,Final,All FE sector colleges,All FE sector colleges,All students,Tech level,16589,26.98,Merit+
+2025,202425,Final,All FE sector colleges,Other FE sector colleges,All students,A level,24476,29.47,C
+2025,202425,Final,All FE sector colleges,Other FE sector colleges,All students,Applied general,39309,26.57,Merit
+2025,202425,Final,All FE sector colleges,Other FE sector colleges,All students,Tech level,15287,26.32,Merit
+2025,202425,Final,All FE sector colleges,Sixth form colleges,All students,A level,32631,35.57,B-
+2025,202425,Final,All FE sector colleges,Sixth form colleges,All students,Applied general,17858,32.79,Dist-
+2025,202425,Final,All FE sector colleges,Sixth form colleges,All students,Tech level,1302,37.01,Dist+
+2025,202425,Final,All Institutions,All institutions,All students,A level,298604,36.1,B-
+2025,202425,Final,All Institutions,All institutions,All students,Applied general,135843,29.99,Merit+
+2025,202425,Final,All Institutions,All institutions,All students,Tech level,24833,28.88,Merit+
+2025,202425,Final,All independent schools,All independent schools,All students,A level,37344,43.09,B+
+2025,202425,Final,All independent schools,All independent schools,All students,Applied general,3072,34.47,Dist
+2025,202425,Final,All independent schools,All independent schools,All students,Tech level,182,35.75,Dist
+2025,202425,Final,All independent schools,Independent schools,All students,A level,37189,43.13,B+
+2025,202425,Final,All independent schools,Independent schools,All students,Applied general,3028,34.6,Dist
+2025,202425,Final,All independent schools,Independent schools,All students,Tech level,181,35.7,Dist
+2025,202425,Final,All independent schools,Independent special schools,All students,A level,155,26.86,C-
+2025,202425,Final,All independent schools,Independent special schools,All students,Applied general,44,24.45,Merit
+2025,202425,Final,All independent schools,Independent special schools,All students,Tech level,1,50,Dist*
+2025,202425,Final,All schools,All schools,All students,A level,241988,36.77,B-
+2025,202425,Final,All schools,All schools,All students,Applied general,79347,31.53,Dist-
+2025,202425,Final,All schools,All schools,All students,Tech level,8336,34.04,Dist
+2025,202425,Final,All state-funded,All state-funded,All students,A level,261341,35,B-
+2025,202425,Final,All state-funded,All state-funded,All students,Applied general,132774,29.91,Merit+
+2025,202425,Final,All state-funded,All state-funded,All students,Tech level,24648,28.84,Merit+
+2025,202425,Final,All state-funded schools,All state-funded schools,All students,A level,204601,35.51,B-
+2025,202425,Final,All state-funded schools,All state-funded schools,All students,Applied general,76266,31.43,Dist-
+2025,202425,Final,All state-funded schools,All state-funded schools,All students,Tech level,8151,34.01,Dist
+2025,202425,Final,All state-funded schools,Converter academies - mainstream,All students,A level,143452,36.04,B-
+2025,202425,Final,All state-funded schools,Converter academies - mainstream,All students,Applied general,48152,31.55,Dist-
+2025,202425,Final,All state-funded schools,Converter academies - mainstream,All students,Tech level,4053,34.43,Dist
+2025,202425,Final,All state-funded schools,Free schools,All students,A level,5345,34.45,C+
+2025,202425,Final,All state-funded schools,Free schools,All students,Applied general,1088,30.19,Dist-
+2025,202425,Final,All state-funded schools,Free schools,All students,Tech level,120,34.6,Dist
+2025,202425,Final,All state-funded schools,Free schools 16-19,All students,A level,6892,38.23,B-
+2025,202425,Final,All state-funded schools,Free schools 16-19,All students,Applied general,2675,34.43,Dist
+2025,202425,Final,All state-funded schools,Free schools 16-19,All students,Tech level,270,34.8,Dist
+2025,202425,Final,All state-funded schools,LA maintained mainstream schools,All students,A level,27407,35.11,B-
+2025,202425,Final,All state-funded schools,LA maintained mainstream schools,All students,Applied general,10483,31.24,Dist-
+2025,202425,Final,All state-funded schools,LA maintained mainstream schools,All students,Tech level,1027,34.95,Dist
+2025,202425,Final,All state-funded schools,Sponsored academies - mainstream,All students,A level,19187,31.52,C
+2025,202425,Final,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,12354,30.72,Dist-
+2025,202425,Final,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,1515,33.68,Dist
+2025,202425,Final,All state-funded schools,Studio schools,All students,A level,237,31.45,C
+2025,202425,Final,All state-funded schools,Studio schools,All students,Applied general,328,30.39,Dist-
+2025,202425,Final,All state-funded schools,Studio schools,All students,Tech level,117,26.44,Merit
+2025,202425,Final,All state-funded schools,University technical colleges (UTCs),All students,A level,1598,27.18,C-
+2025,202425,Final,All state-funded schools,University technical colleges (UTCs),All students,Applied general,1018,30.45,Dist-
+2025,202425,Final,All state-funded schools,University technical colleges (UTCs),All students,Tech level,1027,33.09,Dist-
+2026,202526,Provisional,All FE sector colleges,All FE sector colleges,All students,A level,55521,32.68,C+
+2026,202526,Provisional,All FE sector colleges,All FE sector colleges,All students,Applied general,56701,28.83,Merit+
+2026,202526,Provisional,All FE sector colleges,All FE sector colleges,All students,Tech level,13386,27.34,Merit+
+2026,202526,Provisional,All FE sector colleges,Other FE sector colleges,All students,A level,25116,29.08,C
+2026,202526,Provisional,All FE sector colleges,Other FE sector colleges,All students,Applied general,39451,27.31,Merit+
+2026,202526,Provisional,All FE sector colleges,Other FE sector colleges,All students,Tech level,12112,26.53,Merit
+2026,202526,Provisional,All FE sector colleges,Sixth form colleges,All students,A level,30405,35.62,B-
+2026,202526,Provisional,All FE sector colleges,Sixth form colleges,All students,Applied general,17250,33.09,Dist-
+2026,202526,Provisional,All FE sector colleges,Sixth form colleges,All students,Tech level,1274,37.52,Dist+
+2026,202526,Provisional,All Institutions,All institutions,All students,A level,305264,36.18,B-
+2026,202526,Provisional,All Institutions,All institutions,All students,Applied general,132489,30.46,Dist-
+2026,202526,Provisional,All Institutions,All institutions,All students,Tech level,21023,29.51,Merit+
+2026,202526,Provisional,All independent schools,All independent schools,All students,A level,37273,43.05,B+
+2026,202526,Provisional,All independent schools,All independent schools,All students,Applied general,2973,34.57,Dist
+2026,202526,Provisional,All independent schools,All independent schools,All students,Tech level,183,36.1,Dist
+2026,202526,Provisional,All independent schools,Independent schools,All students,A level,37121,43.09,B+
+2026,202526,Provisional,All independent schools,Independent schools,All students,Applied general,2931,34.72,Dist
+2026,202526,Provisional,All independent schools,Independent schools,All students,Tech level,183,36.1,Dist
+2026,202526,Provisional,All independent schools,Independent special schools,All students,A level,152,26.64,C-
+2026,202526,Provisional,All independent schools,Independent special schools,All students,Applied general,42,20.43,Merit-
+2026,202526,Provisional,All independent schools,Independent special schools,All students,Tech level,0,NA,z
+2026,202526,Provisional,All schools,All schools,All students,A level,250302,36.89,B-
+2026,202526,Provisional,All schools,All schools,All students,Applied general,76775,31.95,Dist-
+2026,202526,Provisional,All schools,All schools,All students,Tech level,7733,34.68,Dist
+2026,202526,Provisional,All state-funded,All state-funded,All students,A level,268183,35.14,B-
+2026,202526,Provisional,All state-funded,All state-funded,All students,Applied general,129530,30.38,Dist-
+2026,202526,Provisional,All state-funded,All state-funded,All students,Tech level,20840,29.48,Merit+
+2026,202526,Provisional,All state-funded schools,All state-funded schools,All students,A level,212995,35.73,B-
+2026,202526,Provisional,All state-funded schools,All state-funded schools,All students,Applied general,73793,31.86,Dist-
+2026,202526,Provisional,All state-funded schools,All state-funded schools,All students,Tech level,7550,34.65,Dist
+2026,202526,Provisional,All state-funded schools,Converter academies - mainstream,All students,A level,150020,36.11,B-
+2026,202526,Provisional,All state-funded schools,Converter academies - mainstream,All students,Applied general,46816,31.84,Dist-
+2026,202526,Provisional,All state-funded schools,Converter academies - mainstream,All students,Tech level,3816,35,Dist
+2026,202526,Provisional,All state-funded schools,Free schools,All students,A level,6431,34.77,C+
+2026,202526,Provisional,All state-funded schools,Free schools,All students,Applied general,1345,31.84,Dist-
+2026,202526,Provisional,All state-funded schools,Free schools,All students,Tech level,139,37.31,Dist+
+2026,202526,Provisional,All state-funded schools,Free schools 16-19,All students,A level,7518,39.36,B
+2026,202526,Provisional,All state-funded schools,Free schools 16-19,All students,Applied general,2719,35.41,Dist
+2026,202526,Provisional,All state-funded schools,Free schools 16-19,All students,Tech level,229,35.67,Dist
+2026,202526,Provisional,All state-funded schools,LA maintained mainstream schools,All students,A level,27127,35.35,B-
+2026,202526,Provisional,All state-funded schools,LA maintained mainstream schools,All students,Applied general,10016,31.65,Dist-
+2026,202526,Provisional,All state-funded schools,LA maintained mainstream schools,All students,Tech level,1033,35.13,Dist
+2026,202526,Provisional,All state-funded schools,Sponsored academies - mainstream,All students,A level,19512,32.41,C+
+2026,202526,Provisional,All state-funded schools,Sponsored academies - mainstream,All students,Applied general,11448,31.18,Dist-
+2026,202526,Provisional,All state-funded schools,Sponsored academies - mainstream,All students,Tech level,1311,34.24,Dist
+2026,202526,Provisional,All state-funded schools,Studio schools,All students,A level,248,29.62,C
+2026,202526,Provisional,All state-funded schools,Studio schools,All students,Applied general,303,30.68,Dist-
+2026,202526,Provisional,All state-funded schools,Studio schools,All students,Tech level,101,29.2,Merit+
+2026,202526,Provisional,All state-funded schools,University technical colleges (UTCs),All students,A level,1665,29.37,C
+2026,202526,Provisional,All state-funded schools,University technical colleges (UTCs),All students,Applied general,965,31.75,Dist-
+2026,202526,Provisional,All state-funded schools,University technical colleges (UTCs),All students,Tech level,909,33.74,Dist

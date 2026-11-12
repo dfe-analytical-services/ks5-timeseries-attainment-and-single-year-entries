@@ -82,10 +82,22 @@ ui <- function(input, output, session) {
       # Header ------------------------------------------------------------------
 
       shinyGovstyle::header(
-        org_name = "",
-        service_name = site_title # "16 to 19 time-series attainment and single year entry"
+        org_name = "Department for Education"
       ),
-
+      tags$style(HTML(".govuk-service-navigation__item a {
+      white-space: normal !important;word-wrap: break-word;
+      line-height: 1.2;}")),
+      shinyGovstyle::service_navigation(
+        service_name = site_title,
+        c(
+          "Home page",
+          "Attainment",
+          "Maths and Science",
+          "Subject entry and grade",
+          "Subject entry and grade by sex",
+          "Institution flow diagram"
+        )
+      ),
       # Beta banner
       shinyGovstyle::banner(
         "beta banner",
@@ -102,26 +114,23 @@ ui <- function(input, output, session) {
           nav_panel(
             "dashboard",
             # Dashboard nav_panels -----------------------------------------------
-            shiny::navlistPanel(
-              "",
+            # shiny::navlistPanel(
+            bslib::navset_hidden(
+              # "",
               id = "navlistPanel",
-              widths = c(2, 7),
-              well = FALSE,
               homepage_panel(),
               dashboard_panel_aps(),
               dashboard_panel_ms(),
               dashboard_panel_sub_all(),
               dashboard_panel_sub_fm(),
               flow_panel()
-              # a11y_panel(),
-              # support_panel()
             )
           ),
           nav_panel(
             value = "accessibility_statement",
             "Accessibility",
-            layout_columns(
-              col_widths = c(-2, 8, -2),
+            gov_main_layout(
+              width = "standard",
               actionLink(
                 class = "govuk-back-link",
                 style = "margin: 0",
@@ -138,10 +147,10 @@ ui <- function(input, output, session) {
                 publication_name = "A level and other 16 to 18 results",
                 publication_slug = "a-level-and-other-16-to-18-results",
                 non_accessible_components = c(
-                  ""
+                  "Some features are unavailable for keyboard only users."
                 ),
                 specific_issues = c("Keyboard navigation through the interactive charts is
-                                    currently limited, and some features are unavailable for keyboard only users,
+                                    currently limited.
                                     Line colours on charts may not line up with legends.")
               )
             )
@@ -149,8 +158,8 @@ ui <- function(input, output, session) {
           nav_panel(
             value = "cookies_panel_ui",
             "use of cookies",
-            layout_columns(
-              col_widths = c(-2, 8, -2),
+            gov_main_layout(
+              width = "standard",
 
               # Add backlink
               actionLink(
@@ -166,8 +175,8 @@ ui <- function(input, output, session) {
             value = "support_panel",
             "Support and feedback",
             # Set up column layout to center it ---------------------------------------
-            layout_columns(
-              col_widths = c(-2, 8, -2),
+            gov_main_layout(
+              width = "standard",
 
               # Add in back link
               actionLink(

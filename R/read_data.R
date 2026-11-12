@@ -11,12 +11,16 @@
 # to either add the file to .gitignore or add an entry for the file into
 # datafiles_log.csv.
 
+
+#-------------------------------------------------------------------------------
+# Data files for dashboard -----------------------------------------------------
+#-------------------------------------------------------------------------------
+
 # This data is for a level subject single entry - academic year
-# Select the columns to be used
-# Filter out total subjects
+
 
 read_alevel_subject_data <- function(
-  file = "data/all_alevel_timeseries_data_1996_to_2025.csv"
+  file = "data/all_alevel_timeseries_data_1996_to_2026.csv"
 ) {
   dfSubject <- read_csv(file, show_col_types = FALSE)
   dfSubject <- dfSubject
@@ -26,7 +30,7 @@ read_alevel_subject_data <- function(
 
 # This data is for Aggregate A level APS and grade by institution type
 read_alevel_aps_data <- function(
-  file = "data/alevel_attainment_with_2025.csv"
+  file = "data/alevel_attainment_with_2026.csv"
 ) {
   dfAlevelAps <- read_csv(file, show_col_types = FALSE)
   dfAlevelAps <- dfAlevelAps
@@ -36,7 +40,7 @@ read_alevel_aps_data <- function(
 
 # This data is for A level APS gender gap by institution type
 read_alevel_aps_sexgap_data <- function(
-  file = "data/aps_gender_gap_with_2025.csv"
+  file = "data/aps_gender_gap_with_2026.csv"
 ) {
   dfApsGenderGap <- read_csv(file, show_col_types = FALSE)
   dfApsGenderGap <- dfApsGenderGap
@@ -47,7 +51,7 @@ read_alevel_aps_sexgap_data <- function(
 # This is the full attainment dataset  comprising of Alevel, applied general and tech level
 
 read_all_attainment_data <- function(
-  file = "data/all_attainment_with_2025.csv"
+  file = "data/all_attainment_with_2026.csv"
 ) {
   dfAttainment <- read_csv(file, show_col_types = FALSE)
   dfAttainment <- dfAttainment
@@ -55,7 +59,7 @@ read_all_attainment_data <- function(
   return(dfAttainment)
 }
 
-read_all_ms_data <- function(file = "data/maths_science_2010_2025.csv") {
+read_all_ms_data <- function(file = "data/maths_science_2010_2026.csv") {
   dfMsRaw <- read_csv(file, show_col_types = FALSE)
   dfMsRaw <- dfMsRaw
 }
