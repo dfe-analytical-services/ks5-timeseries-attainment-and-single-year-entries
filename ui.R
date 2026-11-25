@@ -82,13 +82,14 @@ ui <- function(input, output, session) {
       # Header ------------------------------------------------------------------
 
       shinyGovstyle::header(
-        org_name = "Department for Education"
+        org_name = "Department for Education",
+        site_title
       ),
       tags$style(HTML(".govuk-service-navigation__item a {
       white-space: normal !important;word-wrap: break-word;
       line-height: 1.2;}")),
       shinyGovstyle::service_navigation(
-        service_name = site_title,
+        # service_name = site_title,
         c(
           "Home page",
           "Attainment",
