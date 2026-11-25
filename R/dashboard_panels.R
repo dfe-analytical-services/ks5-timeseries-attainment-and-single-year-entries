@@ -240,12 +240,9 @@ dashboard_panel_aps <- function() {
                     )
                   )
                 ),
-                column(
+                card(
                   width = 12,
-                  card(
-                    width = 12,
-                    plotlyOutput("plotHeadline") %>% spinner()
-                  )
+                  plotlyOutput("plotHeadline") %>% spinner()
                 ),
                 dataTableOutput("tabHeadline")
               )
@@ -704,14 +701,11 @@ dashboard_panel_ms <- function() {
             heading_text("A level maths and science: Comparison by sex", size = "s", level = 3),
             gov_main_layout(
               textOutput("textSubMs"),
-              column(
+              card(
                 width = 12,
-                card(
-                  width = 12,
-                  plotlyOutput("plotSubjectMs") %>% spinner(),
-                  p("Note: The number of students from 2009/10 to 2017/18 has been calculated from rounded data, so less precise than the number of students
+                plotlyOutput("plotSubjectMs") %>% spinner(),
+                p("Note: The number of students from 2009/10 to 2017/18 has been calculated from rounded data, so less precise than the number of students
                   from 2018/19 to 2025/26")
-                )
               ),
               DTOutput("tabMs")
             )
